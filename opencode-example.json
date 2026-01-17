@@ -5,12 +5,8 @@
         "opencode-sessions",
         "./Overpowers/.opencode/plugin/Overpowers.js",
         "opencode-optimal-model-temps",
-        "opencode-dynamic-context-pruning",
-        "subtask2",
         "envsitter-guard",
-        "opencode-background-agents",
-        "claude-code-safety-net",
-        "opencode-morph-fast-apply"
+        "opencode-windsurf-codeium@beta"
     ],
     "mcp": {
         "context7": {
