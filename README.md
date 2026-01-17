@@ -1,3 +1,5 @@
+[<img width="3168" height="1344" alt="Gemini_Generated_Image_e9pigpe9pigpe9pi" src="https://github.com/user-attachments/assets/0ebf9eaa-3226-4be3-b012-589f6d5ea6e0" />](https://www.youtube.com/watch?v=M_XwzBMTJaM)
+
 # Overpowers 🚀
 
 **Overpowers** is a consolidated, opinionated, and massively expanded toolkit for OpenCode/Claude Code. Built upon the foundation of [Superpowers](https://github.com/obra/superpowers) by [Jesse Vincent](https://github.com/obra), it centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, highly capable repository.
