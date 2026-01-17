@@ -1,0 +1,183 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "plugin": [
+        "opencode-skills",
+        "opencode-sessions",
+        "./Overpowers/.opencode/plugin/Overpowers.js",
+        "opencode-optimal-model-temps",
+        "opencode-dynamic-context-pruning",
+        "subtask2",
+        "envsitter-guard",
+        "opencode-background-agents",
+        "claude-code-safety-net",
+        "opencode-morph-fast-apply"
+    ],
+    "mcp": {
+        "context7": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@upstash/context7-mcp"
+            ],
+            "environment": {
+                "CONTEXT7_API_KEY": "YOUR_CONTEXT7_API_KEY"
+            },
+            "enabled": true
+        },
+        "serena": {
+            "type": "local",
+            "command": [
+                "uvx",
+                "--from",
+                "git+https://github.com/oraios/serena",
+                "serena",
+                "start-mcp-server",
+                "--context",
+                "ide-assistant"
+            ],
+            "enabled": true
+        },
+        "vibe-check": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@pv-bhat/vibe-check-mcp",
+                "start",
+                "--stdio"
+            ],
+            "environment": {
+                "GEMINI_API_KEY": "YOUR_GEMINI_API_KEY"
+            },
+            "enabled": true
+        },
+        "think-tank": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "mcp-think-tank@2.0.7"
+            ],
+            "environment": {
+                "MEMORY_PATH": "/path/to/your/memory.jsonl",
+                "EXA_API_KEY": "YOUR_EXA_API_KEY"
+            },
+            "enabled": true
+        },
+        "mult-fetch": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@lmcc-dev/mult-fetch-mcp-server"
+            ],
+            "enabled": true
+        },
+        "deepwiki": {
+            "type": "remote",
+            "url": "https://mcp.deepwiki.com/mcp",
+            "enabled": true
+        }
+    },
+    "provider": {
+        "google": {
+            "models": {
+                "antigravity-claude-sonnet-4-5-thinking": {
+                    "name": "Claude Sonnet 4.5 Thinking (Antigravity)",
+                    "limit": {
+                        "context": 200000,
+                        "output": 64000
+                    },
+                    "modalities": {
+                        "input": [
+                            "text",
+                            "image",
+                            "pdf"
+                        ],
+                        "output": [
+                            "text"
+                        ]
+                    },
+                    "variants": {
+                        "low": {
+                            "thinkingConfig": {
+                                "thinkingBudget": 8192
+                            }
+                        },
+                        "max": {
+                            "thinkingConfig": {
+                                "thinkingBudget": 32768
+                            }
+                        }
+                    }
+                },
+                "antigravity-claude-sonnet-4-5": {
+                    "name": "Claude Sonnet 4.5 (Antigravity)",
+                    "limit": {
+                        "context": 200000,
+                        "output": 64000
+                    }
+                },
+                "antigravity-claude-opus-4-5": {
+                    "name": "Claude Opus 4.5 (Antigravity)",
+                    "limit": {
+                        "context": 200000,
+                        "output": 64000
+                    }
+                },
+                "antigravity-gemini-3-pro-preview": {
+                    "name": "Gemini 3 Pro (Antigravity)",
+                    "limit": {
+                        "context": 1048576,
+                        "output": 65535
+                    }
+                },
+                "antigravity-gemini-3-flash-preview": {
+                    "name": "Gemini 3 Flash (Antigravity)",
+                    "limit": {
+                        "context": 1048576,
+                        "output": 65536
+                    }
+                }
+            }
+        }
+    },
+    "agent": {
+        "build": {
+            "model": "google/gemini-3-flash-preview"
+        },
+        "task-decomposition-expert": {
+            "mode": "primary",
+            "description": "Breaks complex tasks into parallelizable sub-tasks for swarm coordination"
+        },
+        "architect-review": {
+            "mode": "subagent",
+            "description": "Architecture decisions, system design, and technical planning"
+        },
+        "code-reviewer": {
+            "mode": "subagent",
+            "description": "Code quality, security review, and best practices enforcement"
+        },
+        "security-auditor": {
+            "mode": "subagent",
+            "description": "Security vulnerability detection and remediation guidance"
+        },
+        "deployment-engineer": {
+            "mode": "subagent",
+            "description": "Deployment coordination, release management, and DevOps"
+        },
+        "test-automator": {
+            "mode": "subagent",
+            "description": "Test strategy, implementation, and coverage optimization"
+        },
+        "comprehensive-researcher": {
+            "mode": "subagent",
+            "description": "Deep research, competitive analysis, and technical exploration"
+        },
+        "feedback-synthesizer": {
+            "mode": "subagent",
+            "description": "Synthesizes findings from multiple sources into actionable insights"
+        }
+    }
+}
