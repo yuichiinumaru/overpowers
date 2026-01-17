@@ -1,6 +1,8 @@
 # Overpowers 🚀
 
-**Overpowers** is a consolidated, optimized, and enhanced toolkit for OpenCode. It centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, massively capable repository.
+**Overpowers** is a consolidated, opinionated, and massively expanded toolkit for OpenCode/Claude Code. Built upon the foundation of [Superpowers](https://github.com/obra/superpowers) by [Jesse Vincent](https://github.com/obra), it centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, highly capable repository.
+
+> **Note**: This is a fork with personal touches, curated integrations, and additional components based on my own workflow and preferences. The original Superpowers is an excellent starting point—this version adds opinionated expansions.
 
 ## 📊 Inventory
 
@@ -16,32 +18,56 @@
 
 **Total: 900+ components!**
 
-## ✨ Credits
+## 🙏 Credits & Attribution
 
-This project is built upon the foundation of the original **OpenCode Superpowers** toolkit. We extend our deepest gratitude to the creators and community of Superpowers for establishing the patterns and capabilities that make this enhanced version possible.
+### Original Superpowers
+This project is based on [**Superpowers**](https://github.com/obra/superpowers) by **Jesse Vincent** ([@obra](https://github.com/obra)), an agentic skills framework and software development methodology. We extend our deepest gratitude for establishing the patterns and architecture that make this enhanced version possible.
 
-## 🌟 Key Features
+### Jules Swarm
+The Jules integration is powered by [**jules-swarm**](https://github.com/yuichiinumaru/jules-swarm), included as a submodule for seamless task distribution across multiple Google Jules accounts.
 
-### Agent Categories
-- **Engineering**: `backend-architect`, `frontend-developer`, `nodejs-specialist`, `react-guru`, `vue3-specialist`
-- **Security**: `security-auditor`, `api-security-audit`, `incident-responder`
-- **Research**: `comprehensive-researcher`, `academic-researcher`, `technical-researcher`
-- **Design**: `ui-ux-designer`, `visual-storyteller`, `whimsy-injector`
-- **Marketing**: `growth-hacker`, `tiktok-strategist`, `reddit-community-builder`
-- **DevOps**: `deployment-engineer`, `ci-cd-specialist`, `docker-specialist`
-- **Quality**: `code-reviewer`, `test-automator`, `qa-engineer`
+### Additional Sources
+Components were curated and integrated from various open-source projects in the Claude Code/OpenCode ecosystem, including:
+- [buildwithclaude](https://github.com/anthropics/buildwithclaude) - Additional agents, commands, and hooks
+- [claude-flow](https://github.com/ruvnet/claude-flow) - Advanced swarm and orchestration skills
+- [awesome-legal-skills](https://github.com/malik-taier/awesome-legal-skills) - Multi-language legal document skills
+- And many more from the awesome Claude Code community
 
-### Skill Highlights
-- **Jules Swarm**: 4-stage workflow (`dispatch → harvest → triage → integrate`)
-- **Legal**: Multi-language NDA review (EN, ES, PT-BR, FR)
-- **DevOps**: GitHub workflow automation, swarm orchestration
-- **Research**: Web research, ArXiv search, LangSmith debugging
+## 🌟 What's Different from Superpowers?
 
-### Workflow Examples
-- `swarm-development` - Parallel multi-agent coordination
-- `security-hardening` - Complete security audit
-- `marketing-launch` - Product launch coordination
-- `jules-orchestration` - Jules account management
+| Feature | Superpowers | Overpowers |
+|---------|-------------|------------|
+| Agents | ~50 | 390+ |
+| Skills | ~30 | 149+ |
+| Commands | ~30 | 228+ |
+| Hooks | ❌ | 29 |
+| Scripts | ❌ | 90 |
+| Workflows | ❌ | 16 |
+| Services | ❌ | 13 |
+| Jules Integration | ❌ | Full Swarm (4-stage) |
+| Legal Skills | ❌ | 9 (multi-language) |
+
+## 🔧 Jules Swarm Integration
+
+The [jules-swarm](https://github.com/yuichiinumaru/jules-swarm) submodule enables parallel task processing with multiple Google Jules accounts.
+
+### Setup
+
+```bash
+# Initialize the submodule after cloning
+git submodule update --init --recursive
+```
+
+### Usage
+
+The Jules Swarm provides a 4-stage workflow:
+
+1. **`/skill jules-dispatch`** - Send tasks to Jules accounts with prompt optimization
+2. **`/skill jules-harvest`** - Fetch completed branches into local worktrees
+3. **`/skill jules-triage`** - Parallel review and rating of branches
+4. **`/skill jules-integrate`** - Selective merge with attribution
+
+See `workflows/jules-orchestration.md` for the complete workflow guide.
 
 ## 🛠 Structure
 
@@ -50,20 +76,29 @@ Overpowers/
 ├── agents/           # 390+ specialized AI agents
 ├── commands/         # 228+ shorthand operations
 ├── skills/           # 149+ workflow automations
+│   ├── jules-dispatch/
+│   ├── jules-harvest/
+│   ├── jules-triage/
+│   └── jules-integrate/
 ├── hooks/            # 29 notification integrations
 ├── scripts/          # 90 DevOps/automation helpers
 ├── workflows/        # 16 complete process guides
 ├── services/         # 13 external service configs
-├── packages/         # Submodules (jules-swarm)
+├── packages/         # Submodules
+│   └── jules-swarm/  # Jules integration SDK
 └── .opencode/        # Plugin configuration
 ```
 
 ## 🚀 Getting Started
 
-### 1. Install Overpowers
+### 1. Clone with Submodules
 
 ```bash
-git clone https://github.com/yuichiinumaru/overpowers.git ~/.config/opencode/Overpowers
+git clone --recursive https://github.com/yuichiinumaru/overpowers.git ~/.config/opencode/Overpowers
+
+# Or if already cloned:
+cd ~/.config/opencode/Overpowers
+git submodule update --init --recursive
 ```
 
 ### 2. Configure OpenCode
@@ -83,12 +118,6 @@ See `opencode-example.json` for a complete configuration reference with recommen
 ### 3. Quick Commands
 
 ```bash
-# List available agents
-ls ~/.config/opencode/Overpowers/agents/
-
-# List available skills
-/skills:list
-
 # Invoke an agent
 /invoke code-reviewer
 
@@ -97,6 +126,9 @@ ls ~/.config/opencode/Overpowers/agents/
 
 # Follow a workflow
 /workflow security-hardening
+
+# List available skills
+/skills:list
 ```
 
 ## 🔧 Recommended Configuration
@@ -145,16 +177,6 @@ For optimal multi-agent coordination, configure these in your `opencode.json`:
 
 ## 📖 Usage Tips
 
-### Finding the Right Agent
-
-```bash
-# Search by name
-ls ~/.config/opencode/Overpowers/agents/ | grep "security"
-
-# Search by content
-grep -r "API" ~/.config/opencode/Overpowers/agents/*/
-```
-
 ### Agent Chaining Patterns
 
 ```
@@ -168,12 +190,19 @@ Full Stack Feature:
   database-optimizer → backend-architect → frontend-developer → test-automator → deployment-engineer
 ```
 
-### Jules Swarm Workflow
+### Finding Agents & Skills
 
-1. `/skill jules-dispatch` - Send tasks to Jules accounts
-2. `/skill jules-harvest` - Fetch completed branches
-3. `/skill jules-triage` - Review and rate branches
-4. `/skill jules-integrate` - Merge selected work
+```bash
+# Search agents by name
+ls ~/.config/opencode/Overpowers/agents/ | grep "security"
+
+# Search skills
+ls ~/.config/opencode/Overpowers/skills/
+
+# Count totals
+echo "Agents: $(ls Overpowers/agents/ | wc -l)"
+echo "Skills: $(ls Overpowers/skills/ | wc -l)"
+```
 
 ## 🤝 Contributing
 
@@ -184,7 +213,9 @@ Contributions are welcome! Please:
 
 ## 📜 License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License - Based on [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent.
+
+See [LICENSE](LICENSE) for details.
 
 ---
-*Empowering your OpenCode environment with agentic excellence.*
+*Built with 💜 upon the foundation of Superpowers by Jesse Vincent*
