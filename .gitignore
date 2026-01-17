@@ -1,0 +1,26 @@
+# Overpowers .gitignore
+
+# Local State & Caches
+.beads/
+.codemap/
+.jules/pending/
+.jules/harvested/
+.jules/triage/
+
+# Logs
+*.log
+logs/
+
+# Dependencies
+node_modules/
+bun.lock*
+pnpm-lock.yaml
+
+# Environmental Variables
+.env
+.env.*
+!.env.example
+
+# OS Files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,6 @@
+[submodule "references/jules-swarm"]
+	path = references/jules-swarm
+	url = https://github.com/yuichiinumaru/jules-swarm
+[submodule "packages/jules-swarm"]
+	path = packages/jules-swarm
+	url = https://github.com/yuichiinumaru/jules-swarm
