@@ -7,7 +7,7 @@ Complete guide for using Overpowers with [OpenCode.ai](https://opencode.ai).
 Tell OpenCode:
 
 ```
-Clone https://github.com/obra/Overpowers to ~/.config/opencode/Overpowers, then create directory ~/.config/opencode/plugin, then symlink ~/.config/opencode/Overpowers/.opencode/plugin/Overpowers.js to ~/.config/opencode/plugin/Overpowers.js, then restart opencode.
+Clone https://github.com/yuichiinumaru/overpowers to ~/.config/opencode/Overpowers, then create directory ~/.config/opencode/plugin, then symlink ~/.config/opencode/Overpowers/.opencode/plugin/Overpowers.js to ~/.config/opencode/plugin/Overpowers.js, then restart opencode.
 ```
 
 ## Manual Installation
@@ -24,7 +24,7 @@ Clone https://github.com/obra/Overpowers to ~/.config/opencode/Overpowers, then 
 
 ```bash
 mkdir -p ~/.config/opencode/Overpowers
-git clone https://github.com/obra/Overpowers.git ~/.config/opencode/Overpowers
+git clone https://github.com/yuichiinumaru/overpowers.git ~/.config/opencode/Overpowers
 ```
 
 #### 2. Register the Plugin
@@ -210,8 +210,8 @@ Restart OpenCode to load the updates.
 
 ## Getting Help
 
-- Report issues: https://github.com/obra/Overpowers/issues
-- Main documentation: https://github.com/obra/Overpowers
+- Report issues: https://github.com/yuichiinumaru/overpowers/issues
+- Main documentation: https://github.com/yuichiinumaru/overpowers
 - OpenCode docs: https://opencode.ai/docs/
 
 ## Testing

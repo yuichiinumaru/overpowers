@@ -1,5 +1,5 @@
 ---
-name: nda-review
+name: nda-review-en-jamie-tso
 description: Reviews incoming one-way (unilateral) commercial NDAs in a jurisdiction-agnostic way, from either a Recipient or Discloser perspective (user-selected), producing a clause-by-clause issue log with preferred redlines, fallbacks, rationales, owners, and deadlines.
 ---
 

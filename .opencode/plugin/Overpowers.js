@@ -23,7 +23,7 @@ export const OverpowersPlugin = async ({ client, directory }) => {
 
   // Helper to generate bootstrap content
   const getBootstrapContent = (compact = false) => {
-    const usingOverpowersPath = skillsCore.resolveSkillPath('using-Overpowers', OverpowersSkillsDir, personalSkillsDir);
+    const usingOverpowersPath = skillsCore.resolveSkillPath('using-overpowers', OverpowersSkillsDir, personalSkillsDir);
     if (!usingOverpowersPath) return null;
 
     const fullContent = fs.readFileSync(usingOverpowersPath.skillFile, 'utf8');

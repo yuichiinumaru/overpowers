@@ -1,5 +1,5 @@
 ---
-name: politique-confidentialite
+name: privacy-policy-fr-malik-taiar
 description: Guide complet pour la rédaction de politiques de confidentialité conformes au RGPD. Contient les recommandations CNIL 2020, un template de référence et les bonnes pratiques. À utiliser lors de la rédaction ou révision d'une politique de confidentialité pour un site web ou une application.
 ---
 

@@ -774,7 +774,7 @@ npx ruv-swarm github register-agent \
 
 ```yaml
 # .github/workflows/build-and-review.yml
-name: Build and Review
+name: github-code-review
 on: [pull_request]
 
 jobs:

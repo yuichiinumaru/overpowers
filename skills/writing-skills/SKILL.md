@@ -104,7 +104,7 @@ skills/
 
 ```markdown
 ---
-name: Skill-Name-With-Hyphens
+name: writing-skills
 description: Use when [specific triggering conditions and symptoms]
 ---
 

@@ -385,7 +385,7 @@ digraph when_flowchart {
 - Linear instructions → Numbered lists
 - Labels without semantic meaning (step1, helper2)
 
-See [graphviz-conventions.dot](https://github.com/obra/Overpowers/blob/main/skills/writing-skills/graphviz-conventions.dot) for graphviz style rules.
+See [graphviz-conventions.dot](https://github.com/yuichiinumaru/overpowers/blob/main/skills/writing-skills/graphviz-conventions.dot) for graphviz style rules.
 
 ## Code Examples
 

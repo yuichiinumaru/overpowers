@@ -8,7 +8,7 @@ Quick setup to enable Overpowers skills in Codex.
    ```bash
    mkdir -p ~/.codex/Overpowers
    cd ~/.codex/Overpowers
-   git clone https://github.com/obra/Overpowers.git .
+   git clone https://github.com/yuichiinumaru/Overpowers.git .
    ```
 
 2. **Create personal skills directory**:

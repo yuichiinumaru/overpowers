@@ -7,7 +7,7 @@ Complete guide for using Overpowers with OpenAI Codex.
 Tell Codex:
 
 ```
-Fetch and follow instructions from https://raw.githubusercontent.com/obra/Overpowers/refs/heads/main/.codex/INSTALL.md
+Fetch and follow instructions from https://raw.githubusercontent.com/yuichiinumaru/overpowers/refs/heads/main/.codex/INSTALL.md
 ```
 
 ## Manual Installation
@@ -23,7 +23,7 @@ Fetch and follow instructions from https://raw.githubusercontent.com/obra/Overpo
 
 ```bash
 mkdir -p ~/.codex/Overpowers
-git clone https://github.com/obra/Overpowers.git ~/.codex/Overpowers
+git clone https://github.com/yuichiinumaru/overpowers.git ~/.codex/Overpowers
 ```
 
 #### 2. Install Bootstrap
@@ -144,9 +144,8 @@ Should show v14 or higher (v18+ recommended for ES module support).
 
 ## Getting Help
 
-- Report issues: https://github.com/obra/Overpowers/issues
-- Main documentation: https://github.com/obra/Overpowers
-- Blog post: https://blog.fsck.com/2025/10/27/skills-for-openai-codex/
+- Report issues: https://github.com/yuichiinumaru/overpowers/issues
+- Main documentation: https://github.com/yuichiinumaru/overpowers
 
 ## Note
 

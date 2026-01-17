@@ -31,7 +31,7 @@ skill-name/
 
 ```markdown
 ---
-name: my-skill-name
+name: skill-creator
 description: A clear description of what this skill does and when to use it
 ---
 

@@ -977,7 +977,7 @@ body:
 
 ```yaml
 # .github/workflows/issue-swarm.yml
-name: Issue Swarm Handler
+name: github-project-management
 on:
   issues:
     types: [opened, labeled, commented]
