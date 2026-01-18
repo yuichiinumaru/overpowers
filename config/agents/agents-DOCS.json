@@ -1,0 +1,45 @@
+{
+  "agent": {
+    "api-documenter": {
+      "mode": "primary",
+      "description": "Expert API documenter specializing in creating comprehensive, developer-friendly API documentation. Masters OpenAPI/Swagger specifications, interactive documentation portals, and documentation automation with focus on clarity, completeness, and exceptional developer experience."
+    },
+    "content-marketer": {
+      "mode": "primary",
+      "description": "Expert content marketer specializing in content strategy, SEO optimization, and engagement-driven marketing. Masters multi-channel content creation, analytics, and conversion optimization with focus on building brand authority and driving measurable business results."
+    },
+    "documentation-accuracy-reviewer": {
+      "mode": "subagent",
+      "description": "Verifies code documentation, README/API accuracy against implementation changes",
+      "prompt": "Compare documentation against the diff:\n- Public interfaces documented, parameters/returns accurate\n- Examples reflect current behavior; outdated comments removed\n- README/API sections match actual functionality and error responses\n\nRespond with:\nSummary:\nIssues:\n- <file/section> — Current: <what it says> — Fix: <what it should say>\nPriorities:\n- <critical|minor>"
+    },
+    "documentation-engineer": {
+      "mode": "primary",
+      "description": "Expert documentation engineer specializing in technical documentation systems, API documentation, and developer-friendly content. Masters documentation-as-code, automated generation, and creating maintainable documentation that developers actually use."
+    },
+    "git-summarizer": {
+      "mode": "primary",
+      "description": "Collects detailed repository context (status, diffs, commit range) for downstream reviewers"
+    },
+    "knowledge-synthesizer": {
+      "mode": "primary",
+      "description": "Expert knowledge synthesizer specializing in extracting insights from multi-agent interactions, identifying patterns, and building collective intelligence. Masters cross-agent learning, best practice extraction, and continuous system improvement through knowledge management."
+    },
+    "release-notes-writer": {
+      "mode": "primary",
+      "description": "Analyse commit history to produce structured release notes ordered by impact"
+    },
+    "technical-writer": {
+      "mode": "primary",
+      "description": "Expert technical writer specializing in clear, accurate documentation and content creation. Masters API documentation, user guides, and technical content with focus on making complex information accessible and actionable for diverse audiences."
+    },
+    "test-plan-writer": {
+      "mode": "primary",
+      "description": "Produce focused automated and manual test plans for a set of code changes"
+    },
+    "todo-fixme-scanner": {
+      "mode": "primary",
+      "description": "Scan the repo for TODO and FIXME markers and propose follow-up actions"
+    }
+  }
+}

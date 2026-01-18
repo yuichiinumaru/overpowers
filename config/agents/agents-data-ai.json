@@ -1,0 +1,16 @@
+{
+  "agent": {
+    "hackathon-ai-strategist": {
+      "mode": "primary",
+      "description": "Expert guidance on hackathon strategy, AI solution ideation, and project evaluation. Provides judge-perspective feedback, brainstorms winning AI concepts, and assesses project feasibility for tight timeframes."
+    },
+    "llms-maintainer": {
+      "mode": "primary",
+      "description": "Generates and maintains llms.txt roadmap files for AI crawler navigation. Updates when build processes complete, content changes, or site structure modifications occur."
+    },
+    "task-decomposition-expert": {
+      "mode": "primary",
+      "description": "Break down complex user goals into actionable tasks and identify optimal combinations of tools, agents, and workflows for system integration."
+    }
+  }
+}

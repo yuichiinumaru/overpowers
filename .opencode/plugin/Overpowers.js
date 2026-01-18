@@ -20,8 +20,10 @@ export const OverpowersPlugin = async ({ client, directory }) => {
   // Derive Overpowers skills dir from plugin location (works for both symlinked and local installs)
   const OverpowersSkillsDir = path.resolve(__dirname, '../../skills');
   const personalSkillsDir = path.join(homeDir, '.config/opencode/skills');
+  const OverpowersAgentsDir = path.resolve(__dirname, '../../agents');
 
   // Helper to generate bootstrap content
+
   const getBootstrapContent = (compact = false) => {
     const usingOverpowersPath = skillsCore.resolveSkillPath('using-overpowers', OverpowersSkillsDir, personalSkillsDir);
     if (!usingOverpowersPath) return null;
@@ -187,7 +189,25 @@ ${toolMapping}
         }
       })
     },
+    agent: () => {
+      const agents = skillsCore.findAgentsInDir(OverpowersAgentsDir, 1);
+      const agentConfigs = {};
+
+      for (const agent of agents) {
+        const data = skillsCore.extractAgentData(agent.path);
+        if (data) {
+          agentConfigs[data.name] = {
+            mode: "primary", // Allow multi-agent coordination
+            description: data.description,
+            prompt: data.prompt
+          };
+        }
+      }
+
+      return agentConfigs;
+    },
     event: async ({ event }) => {
+
       // Extract sessionID from various event structures
       const getSessionID = () => {
         return event.properties?.info?.id ||
