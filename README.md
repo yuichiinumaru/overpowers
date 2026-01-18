@@ -103,6 +103,35 @@ cd ~/.config/opencode/Overpowers
 git submodule update --init --recursive
 ```
 
+## 🎯 Antigravity Skills Installer
+
+Install Overpowers skills directly into **Google Antigravity IDE**!
+
+### Quick Install
+
+```bash
+bash ~/.config/opencode/Overpowers/install-antigravity-skills.sh
+```
+
+### Features
+
+- 🌐 **Multi-language**: English / Português (BR)
+- 📦 **Curated profiles**: Essential, Productivity, Advanced, Developer
+- ☢️ **Nuclear Mode**: Install ALL 500+ components (skills, agents, workflows)
+- 🔄 **Auto-conversion**: 392 OpenCode agents → Antigravity skills
+- 📋 **Workflows included**: 16 complete process guides
+
+### Installation Profiles
+
+| Profile | Components | Best For |
+|---------|------------|----------|
+| Essential | 6 skills | Core development |
+| Productivity | 5 skills | Research & docs |
+| Advanced Agents | 5 skills | Multi-agent orchestration |
+| Developer | 5 skills | Language-specific |
+| All Curated | 21 skills | Recommended |
+| **Nuclear** | 500+ | Everything! |
+
 ### 2. Configure OpenCode
 
 Add to your `opencode.json`:

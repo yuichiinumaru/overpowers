@@ -8,6 +8,32 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-18] - Antigravity Skills Installer & Subagent Orchestration
+
+### Added
+- **`install-antigravity-skills.sh`** - Interactive installer for deploying Overpowers skills to Google Antigravity IDE
+  - 🌐 Multi-language support (English / Português BR)
+  - ☢️ **Nuclear Mode** - Install ALL 500+ components with confirmation ("TEM CERTEZA DISSO, BICHO? OLOKO!")
+  - 📋 Automatic workflows installation
+  - 🔄 Agent-to-skill conversion (392 agents converted inline)
+  - 🔍 Local Overpowers detection before downloading
+  
+- **`skills/subagent-orchestration/`** - New skill for OpenCode subagent orchestration
+  - `run-subagent.sh` - Run single subagent with auto-permissions
+  - `parallel-tasks.sh` - Run multiple subagents in parallel
+  - `batch-analyze.sh` - Analyze multiple repositories in batch
+  - Uses `OPENCODE_PERMISSION='"allow"'` for non-interactive mode
+  
+- **`scripts/convert-agents-to-skills.py`** - Python script to convert OpenCode agents to Antigravity-compatible skills
+
+### Discovered
+- OpenCode subagents cannot access `.config/opencode/` directory in non-interactive mode (security restriction)
+- Workaround: Run scripts from regular directories like `~/work`
+
+**Author**: Antigravity + Yuichi Inumaru
+
+---
+
 ## [2026-01-18] - Claude Identity Issue Resolution
 
 ### Discovered
