@@ -103,6 +103,46 @@ cd ~/.config/opencode/Overpowers
 git submodule update --init --recursive
 ```
 
+## 🎭 Personas (NEW!)
+
+**Personas** are pre-configured MCP bundles that automatically load the right tools for your role. Each persona consolidates multiple agents into a role-specific configuration with **YAAMCPL-validated MCP winners**.
+
+### Quick Install
+
+```bash
+# List available personas
+./install-personas.sh
+
+# Install a specific persona
+./install-personas.sh devops-engineer
+```
+
+### Available Personas
+
+| Persona | Agents | MCPs | Best For |
+|---------|--------|------|----------|
+| **devops-engineer** | 14 | 7 | K8s, Docker, CI/CD, monitoring |
+| **fullstack-developer** | 39 | 6 | Web dev, GitHub, filesystem |
+| **security-auditor** | 11 | 4 | Pentesting, vulnerability assessment |
+| **ai-ml-engineer** | 21 | 5 | ML pipelines, vector memory |
+| **database-specialist** | 15 | 5 | MySQL, Redis, universal gateway |
+| **comprehensive-researcher** | 23 | 6 | Research, web scraping, memory |
+| **qa-engineer** | 14 | 4 | Testing, coverage analysis |
+| **system-architect** | 16 | 4 | Design, architecture review |
+| **documentation-writer** | 9 | 4 | Technical writing, API docs |
+| **mobile-developer** | 8 | 4 | iOS, Android, Flutter |
+| **product-manager** | 9 | 4 | Planning, agile, research |
+| **language-specialist** | 19 | 4 | Language-specific development |
+| **general-assistant** | 198 | 2 | General purpose |
+
+### With HyperTool
+
+```bash
+npx -y @toolprint/hypertool-mcp mcp run --persona devops-engineer
+```
+
+---
+
 ## 🎯 Antigravity Skills Installer
 
 Install Overpowers skills directly into **Google Antigravity IDE**!
