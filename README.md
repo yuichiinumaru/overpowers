@@ -11,6 +11,7 @@
 | Component | Count | Description |
 |-----------|-------|-------------|
 | **Agents** | 396+ | Specialized AI personas for every task |
+| **Personas** | 13 | Pre-configured MCP bundles by role |
 | **Commands** | 230+ | Shorthand operations for common tasks |
 | **Skills** | 173+ | Complex workflow automation |
 | **Hooks** | 29 | Pre/post action notifications |
@@ -18,7 +19,7 @@
 | **Workflows** | 21+ | Complete process guides |
 | **Services** | 13 | External service integrations |
 
-**Total: 950+ components!**
+**Total: 960+ components!**
 
 ## 🙏 Credits & Attribution
 
