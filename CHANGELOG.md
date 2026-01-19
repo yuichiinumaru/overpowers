@@ -8,6 +8,26 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - Skill Frontmatter Validation Fixes
+
+### Fixed
+- **41 SKILL.md files** with frontmatter validation errors after Phase 2 integration
+  - Removed `allowed-tools` field (15 files) - OpenCode subagent config not used by Antigravity
+  - Added missing `---` YAML delimiter (8 files)
+  - Normalized skill names to lowercase-alphanumeric-with-hyphens (17 security skills)
+  - Added complete frontmatter to `multi-agent-file-coordination/SKILL.md`
+
+### Added
+- **`scripts/fix-skill-frontmatter.py`** - Reusable script to validate and fix SKILL.md frontmatter
+
+### Discovered
+- Distinction between OpenCode/Claude Code "skills" (which are actually subagent profiles with `allowed-tools`) and true Antigravity skills (just `name` + `description`)
+- Many community "skills" were subagent profiles disguised as skills
+
+**Author**: Antigravity + Yuichi Inumaru
+
+---
+
 ## [2026-01-18] - Antigravity Skills Installer & Subagent Orchestration
 
 ### Added

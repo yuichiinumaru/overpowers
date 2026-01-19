@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Evaluation Case",
+  "description": "A schema for defining evaluation cases for agent skills",
+  "type": "object",
+  "required": ["id", "skills", "query", "expected_behavior"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the evaluation case"
+    },
+    "skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of skills expected to be activated"
+    },
+    "query": {
+      "type": "string",
+      "description": "The user input or scenario to test"
+    },
+    "expected_behavior": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of specific actions or explanations the agent should perform"
+    },
+    "expected_content": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Specific strings or patterns that must be present in the response"
+    },
+    "priority": {
+      "enum": ["low", "medium", "high"],
+      "default": "medium"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

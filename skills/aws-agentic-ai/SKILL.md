@@ -8,16 +8,6 @@ context: fork
 model: sonnet
 skills:
   - aws-mcp-setup
-allowed-tools:
-  - mcp__aws-mcp__*
-  - mcp__awsdocs__*
-  - Bash(aws bedrock-agentcore-control *)
-  - Bash(aws bedrock-agentcore-runtime *)
-  - Bash(aws bedrock *)
-  - Bash(aws s3 cp *)
-  - Bash(aws s3 ls *)
-  - Bash(aws secretsmanager *)
-  - Bash(aws sts get-caller-identity)
 hooks:
   PreToolUse:
     - matcher: Bash(aws bedrock-agentcore-control create-*)

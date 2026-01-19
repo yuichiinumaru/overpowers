@@ -4,15 +4,6 @@ description: AWS Cloud Development Kit (CDK) expert for building cloud infrastru
 context: fork
 skills:
   - aws-mcp-setup
-allowed-tools:
-  - mcp__cdk__*
-  - mcp__aws-mcp__*
-  - mcp__awsdocs__*
-  - Bash(cdk *)
-  - Bash(npm *)
-  - Bash(npx *)
-  - Bash(aws cloudformation *)
-  - Bash(aws sts get-caller-identity)
 hooks:
   PreToolUse:
     - matcher: Bash(cdk deploy*)

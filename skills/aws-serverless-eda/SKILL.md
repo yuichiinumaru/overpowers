@@ -5,20 +5,6 @@ context: fork
 skills:
   - aws-mcp-setup
   - aws-cdk-development
-allowed-tools:
-  - mcp__aws-mcp__*
-  - mcp__awsdocs__*
-  - mcp__cdk__*
-  - Bash(sam *)
-  - Bash(aws lambda *)
-  - Bash(aws apigateway *)
-  - Bash(aws apigatewayv2 *)
-  - Bash(aws dynamodb *)
-  - Bash(aws stepfunctions *)
-  - Bash(aws events *)
-  - Bash(aws sqs *)
-  - Bash(aws sns *)
-  - Bash(aws sts get-caller-identity)
 hooks:
   PreToolUse:
     - matcher: Bash(sam deploy*)

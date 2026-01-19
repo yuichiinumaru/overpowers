@@ -5,6 +5,29 @@ description: Use when implementing any feature or bugfix, before writing impleme
 
 # Test-Driven Development (TDD)
 
+**The Iron Law**: NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST.
+
+## 1. Red - Write Failing Test
+- [ ] Write one minimal test showing what should happen.
+- [ ] **Run the test** and watch it fail. (`verify_red`)
+    - Confirm it fails implies the feature is missing, not a syntax error.
+    - If it passes, rewrite the test (you are testing existing behavior).
+
+## 2. Green - Minimal Code
+- [ ] Write the simplest code to pass the test.
+- [ ] Don't add features, refactor, or "improve" beyond the test requirements.
+- [ ] **Run the test** and watch it pass. (`verify_green`)
+    - Confirm other tests still pass.
+
+## 3. Refactor - Clean Up
+- [ ] Remove duplication.
+- [ ] Improve names.
+- [ ] Extract helpers.
+- [ ] **Verify** tests still pass after refactoring.
+
+## 4. Repeat
+- [ ] Pick the next behavior and repeat the cycle.
+
 ## Overview
 
 Write the test first. Watch it fail. Write minimal code to pass.

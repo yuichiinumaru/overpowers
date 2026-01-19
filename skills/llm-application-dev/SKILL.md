@@ -1,11 +1,19 @@
 ---
 name: llm-application-dev
-description: Building applications with Large Language Models - prompt engineering, RAG patterns, and LLM integration. Use for AI-powered features, chatbots, or LLM-based automation.
-source: wshobson/agents
-license: MIT
+description: Building applications with Large Language Models - prompt engineering, RAG patterns, and LLM integration. Use for AI-powered features, chatbots, or LLM-based automation. Includes Advanced RAG and Evaluation patterns.
 ---
 
 # LLM Application Development
+
+## Sub-Skills
+- [Embedding Strategies](skills/embedding-strategies/SKILL.md)
+- [Hybrid Search Implementation](skills/hybrid-search-implementation/SKILL.md)
+- [LangChain Architecture](skills/langchain-architecture/SKILL.md)
+- [LLM Evaluation](skills/llm-evaluation/SKILL.md)
+- [Prompt Engineering Patterns](skills/prompt-engineering-patterns/SKILL.md)
+- [RAG Implementation](skills/rag-implementation/SKILL.md)
+- [Similarity Search Patterns](skills/similarity-search-patterns/SKILL.md)
+- [Vector Index Tuning](skills/vector-index-tuning/SKILL.md)
 
 ## Prompt Engineering
 

@@ -1,0 +1,7 @@
+{
+  "name": "auto-sync-plan-to-github",
+  "trigger": "file_edit",
+  "condition": "echo \"$FILE_PATH\" | grep \"PLAN.md\"",
+  "action": "git add \"$FILE_PATH\" && git commit -m \"Update plan: $FILE_PATH\" && git push",
+  "description": "Automatically commit and push changes to PLAN.md files to keep GitHub in sync."
+}

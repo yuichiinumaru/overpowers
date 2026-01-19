@@ -1,0 +1,36 @@
+name: fullstack-developer
+description: Full-stack web development across frontend and backend technologies
+version: '1.0'
+toolsets:
+- name: coding
+  toolIds:
+  - serena.find_symbol
+  - serena.get_symbols_overview
+  - serena.replace_symbol_body
+  - context7.query-docs
+- name: debugging
+  toolIds:
+  - serena.search_for_pattern
+  - serena.find_referencing_symbols
+- name: docs
+  toolIds:
+  - deepwiki.query
+  - context7.resolve-library-id
+defaultToolset: coding
+metadata:
+  author: Overpowers
+  tags:
+  - fullstack
+  - auto-generated
+  created: '2026-01-19T14:32:46.305014Z'
+  agents:
+  - angular-architect
+  - backend-developer
+  - blockchain-developer
+  - cli-developer
+  - csharp-developer
+  - django-developer
+  - frontend-developer
+  - fullstack-developer
+  - game-developer
+  - mcp-developer

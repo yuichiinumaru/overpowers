@@ -1,0 +1,35 @@
+name: ai-ml-engineer
+description: AI/ML engineering, model development, and data science
+version: '1.0'
+toolsets:
+- name: development
+  toolIds:
+  - serena.find_symbol
+  - serena.replace_symbol_body
+  - deepwiki.query
+- name: research
+  toolIds:
+  - think-tank.search
+  - think-tank.remember
+- name: analysis
+  toolIds:
+  - serena.search_for_pattern
+  - serena.get_symbols_overview
+defaultToolset: development
+metadata:
+  author: Overpowers
+  tags:
+  - ai
+  - auto-generated
+  created: '2026-01-19T14:32:46.303999Z'
+  agents:
+  - ai-engineer
+  - data-scientist
+  - machine-learning-engineer
+  - ml-engineer
+  - mlops-engineer
+  - nlp-engineer
+  - rails-expert
+  - hackathon-ai-strategist
+  - llms-maintainer
+  - twitter-ai-influencer-manager

@@ -17,6 +17,13 @@ Before coding, understand the context and commit to a BOLD aesthetic direction:
 - **Constraints**: Technical requirements (framework, performance, accessibility).
 - **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
 
+**VISUAL COLLABORATION (Show Before You Code)**:
+Always offer visual feedback before implementing. Use ASCII diagrams or visual mockups to show:
+1. **Positioning Decisions**: Show 2-3 placement options for elements.
+2. **Color Choices**: Provide palette variations.
+3. **Layout Options**: Compare grid/flex alternatives.
+4. **Component Styling**: Show variations of buttons, cards, etc.
+
 **CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
 
 Then implement working code (HTML/CSS/JS, React, Vue, etc.) that is:

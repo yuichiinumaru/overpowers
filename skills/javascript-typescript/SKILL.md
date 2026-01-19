@@ -1,11 +1,15 @@
 ---
 name: javascript-typescript
 description: JavaScript and TypeScript development with ES6+, Node.js, React, and modern web frameworks. Use for frontend, backend, or full-stack JavaScript/TypeScript projects.
-source: wshobson/agents
-license: MIT
 ---
 
 # JavaScript/TypeScript Development
+
+## Sub-Skills
+- [JavaScript Testing Patterns](skills/javascript-testing-patterns/SKILL.md)
+- [Modern JavaScript Patterns](skills/modern-javascript-patterns/SKILL.md)
+- [Node.js Backend Patterns](skills/nodejs-backend-patterns/SKILL.md)
+- [TypeScript Advanced Types](skills/typescript-advanced-types/SKILL.md)
 
 ## TypeScript Configuration
 

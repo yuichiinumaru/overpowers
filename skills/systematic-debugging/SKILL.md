@@ -5,6 +5,31 @@ description: Use when encountering any bug, test failure, or unexpected behavior
 
 # Systematic Debugging
 
+**The Iron Law**: NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST.
+
+## Phase 1: Root Cause Investigation
+- [ ] **Read Error Messages**: Don't skip. Read stack traces completely.
+- [ ] **Reproduce Consistently**: Find the exact steps to trigger the issue reliably.
+- [ ] **Check Recent Changes**: Git diff, new dependencies.
+- [ ] **Gather Evidence**: Add logging/instrumentation at component boundaries.
+- [ ] **Trace Data Flow**: Trace backward from the error to the source.
+
+**Output**: identify the specific component or line causing the failure.
+
+## Phase 2: Hypothesis and Testing
+- [ ] **Form Hypothesis**: "I think X is the root cause because Y".
+- [ ] **Test Minimally**: Make the smallest change to test the hypothesis.
+- [ ] **Verify**: Did it work? If not, form a NEW hypothesis. Do not layer fixes.
+
+## Phase 3: Implementation
+- [ ] **Create Failing Test Case**: Automated test that reproduces the bug (Red).
+- [ ] **Implement Fix**: Address the root cause (Green).
+- [ ] **Verify Fix**: Ensure test passes and no regressions.
+
+## Phase 4. Execution Limits
+- [ ] If 3 fixes fail, STOP. Question the architecture.
+- [ ] Do not guess. If you don't know, research more.
+
 ## Overview
 
 Random fixes waste time and create new bugs. Quick patches mask underlying issues.

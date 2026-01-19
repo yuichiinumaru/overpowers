@@ -7,13 +7,13 @@
 
 | Category | Count |
 |----------|-------|
-| Agents | 389 |
-| Skills | 148 |
+| Agents | 396 |
+| Skills | 166 |
 | Scripts | 0 |
-| Workflows | 16 |
-| Hooks | 0 |
+| Workflows | 20 |
+| Hooks | 5 |
 | Services | 3 |
-| Commands | 227 |
+| Commands | 230 |
 
 ---
 

@@ -10,15 +10,15 @@
 
 | Component | Count | Description |
 |-----------|-------|-------------|
-| **Agents** | 390+ | Specialized AI personas for every task |
-| **Commands** | 228+ | Shorthand operations for common tasks |
-| **Skills** | 149+ | Complex workflow automation |
+| **Agents** | 396+ | Specialized AI personas for every task |
+| **Commands** | 230+ | Shorthand operations for common tasks |
+| **Skills** | 173+ | Complex workflow automation |
 | **Hooks** | 29 | Pre/post action notifications |
 | **Scripts** | 90 | DevOps & automation helpers |
-| **Workflows** | 16 | Complete process guides |
+| **Workflows** | 21+ | Complete process guides |
 | **Services** | 13 | External service integrations |
 
-**Total: 900+ components!**
+**Total: 950+ components!**
 
 ## 🙏 Credits & Attribution
 

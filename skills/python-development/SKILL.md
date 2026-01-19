@@ -1,11 +1,16 @@
 ---
 name: python-development
 description: Modern Python development with Python 3.12+, Django, FastAPI, async patterns, and production best practices. Use for Python projects, APIs, data processing, or automation scripts.
-source: wshobson/agents
-license: MIT
 ---
 
 # Python Development
+
+## Sub-Skills
+- [Async Python Patterns](skills/async-python-patterns/SKILL.md)
+- [Python Packaging](skills/python-packaging/SKILL.md)
+- [Python Performance Optimization](skills/python-performance-optimization/SKILL.md)
+- [Python Testing Patterns](skills/python-testing-patterns/SKILL.md)
+- [UV Package Manager](skills/uv-package-manager/SKILL.md)
 
 ## Project Setup
 

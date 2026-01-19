@@ -1,11 +1,20 @@
 ---
 name: backend-development
-description: Backend API design, database architecture, microservices patterns, and test-driven development. Use for designing APIs, database schemas, or backend system architecture.
-source: wshobson/agents
-license: MIT
+description: Backend API design, database architecture, microservices patterns, and test-driven development. Use for designing APIs, database schemas, or backend system architecture. Supports CQRS, Event Sourcing, and Workflow Orchestration.
 ---
 
 # Backend Development
+
+## Sub-Skills
+- [API Design Principles](skills/api-design-principles/SKILL.md)
+- [Architecture Patterns](skills/architecture-patterns/SKILL.md)
+- [CQRS Implementation](skills/cqrs-implementation/SKILL.md)
+- [Event Store Design](skills/event-store-design/SKILL.md)
+- [Microservices Patterns](skills/microservices-patterns/SKILL.md)
+- [Projection Patterns](skills/projection-patterns/SKILL.md)
+- [Saga Orchestration](skills/saga-orchestration/SKILL.md)
+- [Temporal Python Testing](skills/temporal-python-testing/SKILL.md)
+- [Workflow Orchestration Patterns](skills/workflow-orchestration-patterns/SKILL.md)
 
 ## API Design
 
