@@ -8,6 +8,34 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - YAAMCPL Integration & Persona Generation
+
+### Added
+- **13 Personas** generated from 396 agents in `personas/` directory
+  - Each persona includes: `persona.yaml`, `mcp.json`, `README.md`
+  - Categories: devops-engineer, security-auditor, fullstack-developer, ai-ml-engineer, comprehensive-researcher, database-specialist, qa-engineer, documentation-writer, system-architect, language-specialist, mobile-developer, product-manager, general-assistant
+  
+- **`install-personas.sh`** - Interactive script to install persona MCP configs
+  - Lists available personas with descriptions
+  - Backs up existing `.mcp.json` before installing
+  - Shows configured MCPs with YAAMCPL source notes
+
+- **YAAMCPL Winners** integrated into `ROLE_MCPS`:
+  - developer: `github` (kurdin, 89 tools), `filesystem` (mark3labs)
+  - devops: `terminal` (mcp-shell), `docker`, `kubernetes`, `grafana`
+  - researcher: `memory` (chroma), `browser` (playwright)
+  - security: `terminal` (mcp-shell with audit)
+  - database: `mysql` (f4ww4z), `gateway` (centralmind), `redis`
+  - ai-ml: `memory` (chroma)
+
+### Changed
+- **`scripts/sync-agents-to-personas.py`** - Updated with YAAMCPL validated MCPs
+- **`database-specialist`** persona now uses `database` role instead of `developer`
+
+**Author**: Antigravity + Yuichi Inumaru
+
+---
+
 ## [2026-01-19] - Skill Frontmatter Validation Fixes
 
 ### Fixed

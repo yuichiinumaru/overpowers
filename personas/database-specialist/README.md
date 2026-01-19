@@ -2,10 +2,11 @@
 
 Database administration, optimization, and data modeling
 
-## Included Agents (14)
+## Included Agents (15)
 
 - `database-administrator`
 - `database-optimizer`
+- `data-engineer`
 - `postgres-pro`
 - `sql-pro`
 - `database-admin`
@@ -23,6 +24,7 @@ Database administration, optimization, and data modeling
 
 | Toolset | Purpose |
 |---------|---------|
+| `querying` | Querying workflow |
 | `analysis` | Analysis workflow |
 | `optimization` | Optimization workflow |
 | `docs` | Docs workflow |

@@ -259,10 +259,11 @@ PERSONA_CATEGORIES = {
         ]
     },
     "database-specialist": {
-        "patterns": ["database", "sql", "postgres", "mysql", "mongo", "redis"],
-        "role_mcps": ["developer"],
+        "patterns": ["database", "sql", "postgres", "mysql", "mongo", "redis", "data-engineer", "etl"],
+        "role_mcps": ["database"],
         "description": "Database administration, optimization, and data modeling",
         "toolsets": [
+            {"name": "querying", "tools": ["mysql.query", "mysql.list_tables", "gateway.query"]},
             {"name": "analysis", "tools": ["serena.search_for_pattern", "serena.find_symbol"]},
             {"name": "optimization", "tools": ["serena.get_symbols_overview", "context7.query-docs"]},
             {"name": "docs", "tools": ["serena.write_memory", "deepwiki.query"]}

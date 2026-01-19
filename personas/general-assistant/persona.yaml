@@ -12,7 +12,7 @@ metadata:
   tags:
   - general
   - auto-generated
-  created: '2026-01-19T14:32:46.301780Z'
+  created: '2026-01-19T14:38:23.955624Z'
   agents:
   - code-reviewer
   - agent-organizer
@@ -21,6 +21,6 @@ metadata:
   - content-marketer
   - context-manager
   - customer-success-manager
-  - data-engineer
   - debugger
   - dependency-manager
+  - dotnet-core-expert

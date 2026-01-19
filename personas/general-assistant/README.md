@@ -2,7 +2,7 @@
 
 General assistant
 
-## Included Agents (199)
+## Included Agents (198)
 
 - `code-reviewer`
 - `agent-organizer`
@@ -11,7 +11,6 @@ General assistant
 - `content-marketer`
 - `context-manager`
 - `customer-success-manager`
-- `data-engineer`
 - `debugger`
 - `dependency-manager`
 - `dotnet-core-expert`
@@ -24,7 +23,8 @@ General assistant
 - `fintech-engineer`
 - `git-summarizer`
 - `git-workflow-manager`
-- ... and 179 more
+- `iot-engineer`
+- ... and 178 more
 
 ## Toolsets
 

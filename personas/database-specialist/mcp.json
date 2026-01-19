@@ -27,44 +27,39 @@
       },
       "enabled": true
     },
-    "context7": {
+    "mysql": {
       "type": "local",
       "command": [
-        "npx",
-        "-y",
-        "@upstash/context7-mcp"
+        "node",
+        "/path/to/mcp-mysql-server/build/index.js"
       ],
-      "environment": {
-        "CONTEXT7_API_KEY": "<YOUR_CONTEXT7_API_KEY>"
-      },
-      "enabled": true
-    },
-    "deepwiki": {
-      "type": "remote",
-      "url": "https://mcp.deepwiki.com/mcp",
-      "enabled": true
-    },
-    "github": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "github-repos-manager-mcp"
-      ],
-      "environment": {
-        "GH_TOKEN": "${GH_TOKEN}"
-      },
       "enabled": true,
-      "note": "YAAMCPL Winner: Full GitHub management (89 tools)"
+      "note": "YAAMCPL Winner: f4ww4z/mcp-mysql-server (dynamic connect)"
     },
-    "filesystem": {
+    "gateway": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "ghcr.io/centralmind/gateway:latest",
+        "start",
+        "--connection-string",
+        "${DATABASE_URL}",
+        "mcp-stdio"
+      ],
+      "enabled": true,
+      "note": "YAAMCPL Winner: centralmind/gateway (universal DB)"
+    },
+    "redis": {
       "type": "local",
       "command": [
         "uvx",
-        "mcp-filesystem-server"
+        "mcp-redis"
       ],
       "enabled": true,
-      "note": "YAAMCPL Winner: mark3labs/mcp-filesystem-server"
+      "note": "YAAMCPL Winner: redis/mcp-redis"
     }
   }
 }
