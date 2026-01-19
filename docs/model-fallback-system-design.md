@@ -34,7 +34,7 @@ Add fallback logic directly to `run-subagent.sh`:
 MODELS=(
     "google/antigravity-claude-opus-4-5-thinking"
     "google/antigravity-claude-sonnet-4-5-thinking"
-    "google/opencode-glm-4-7-zen"        # GLM fallback
+    "windsurf/glm-4.7"        # GLM fallback
     "google/opencode-gemini-pro"          # Gemini fallback
 )
 
@@ -81,7 +81,7 @@ STATE_FILE="/tmp/model_rotation_state"
 MODELS=(
     "google/antigravity-claude-opus-4-5-thinking"
     "google/antigravity-claude-sonnet-4-5-thinking"
-    "google/opencode-glm-4-7-zen"
+    "windsurf/glm-4.7"
 )
 
 # Get current index
@@ -147,7 +147,7 @@ MODEL_STATUS_FILE = Path.home() / ".config/opencode/model_status.json"
 MODEL_PRIORITIES = {
     "google/antigravity-claude-opus-4-5-thinking": 100,
     "google/antigravity-claude-sonnet-4-5-thinking": 80,
-    "google/opencode-glm-4-7-zen": 50,
+    "windsurf/glm-4.7": 50,
     "google/opencode-gemini-pro": 40,
 }
 
@@ -230,7 +230,7 @@ Update `run-subagent.sh` with simple fallback chain including GLM 4.7:
 # Add to skills/subagent-orchestration/scripts/run-subagent.sh
 FALLBACK_MODELS=(
     "$MODEL"
-    "google/opencode-glm-4-7-zen"
+    "windsurf/glm-4.7"
 )
 ```
 
@@ -267,7 +267,7 @@ Add to ALL agent configs as last fallback:
     "primary": "google/antigravity-claude-sonnet-4-5-thinking",
     "fallback": [
       "google/antigravity-claude-opus-4-5-thinking",
-      "google/opencode-glm-4-7-zen"
+      "windsurf/glm-4.7"
     ]
   }
 }
@@ -282,7 +282,7 @@ Update personas to include fallback configuration in `mcp.json`.
 ```bash
 # Default and fallback models
 export SUBAGENT_MODEL="google/antigravity-claude-sonnet-4-5-thinking"
-export SUBAGENT_FALLBACK="google/opencode-glm-4-7-zen"
+export SUBAGENT_FALLBACK="windsurf/glm-4.7"
 
 # Quota preservation
 export PRESERVE_OPUS_QUOTA=true  # Use Opus only for complex tasks

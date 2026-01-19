@@ -11,7 +11,7 @@ set -e
 
 # Defaults
 DEFAULT_MODEL="${SUBAGENT_MODEL:-google/antigravity-claude-sonnet-4-5-thinking}"
-FALLBACK_MODEL="${SUBAGENT_FALLBACK:-google/opencode-glm-4-7-zen}"
+FALLBACK_MODEL="${SUBAGENT_FALLBACK:-windsurf/glm-4.7}"
 DEFAULT_TIMEOUT="${SUBAGENT_TIMEOUT:-300}"
 ENABLE_FALLBACK="${SUBAGENT_ENABLE_FALLBACK:-true}"
 
