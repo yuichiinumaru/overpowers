@@ -142,6 +142,27 @@ git submodule update --init --recursive
 npx -y @toolprint/hypertool-mcp mcp run --persona devops-engineer
 ```
 
+### Advanced Configuration
+
+For granular control over which MCPs are enabled (security-conscious users):
+
+```bash
+./configure-persona.sh devops-engineer
+```
+
+This interactive wizard:
+- 🔒 Shows **risk levels** for each MCP (HIGH/MEDIUM/LOW)
+- ✅ Lets you **enable/disable** individual MCPs
+- 🔑 Prompts for **API keys** and environment variables
+- 💾 Saves custom config with disabled MCPs preserved
+
+**Risk Levels:**
+| Level | MCPs | Description |
+|-------|------|-------------|
+| 🔴 HIGH | `filesystem`, `terminal` | Direct system access |
+| 🟡 MEDIUM | `github`, `docker`, `kubernetes`, `mysql` | External service access |
+| 🟢 LOW | `serena`, `vibe-check`, `context7`, etc. | Read-only or sandboxed |
+
 ---
 
 ## 🎯 Antigravity Skills Installer
