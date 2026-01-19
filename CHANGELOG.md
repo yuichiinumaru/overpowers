@@ -8,6 +8,34 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - CEO Agent & Model Fallback System
+
+### Added
+- **`agents/000-ceo-orchestrator.md`** - Chief Executive Orchestrator agent
+  - Delegation-focused master coordinator (does NOT execute, only delegates)
+  - Task decomposition framework with complexity classification
+  - When to use Jules vs subagents vs direct agents
+  - Correct skill documentation for subagent dispatch
+  
+- **`configure-persona.sh`** - Interactive MCP configuration wizard
+  - Risk levels (HIGH/MEDIUM/LOW) for each MCP
+  - Enable/disable individual MCPs
+  - API key prompts for required env vars
+  - Security-conscious defaults (filesystem/terminal default OFF)
+
+- **GLM 4.7 Fallback** in `run-subagent.sh`
+  - Auto-fallback to `glm-4-7-zen` on rate limit detection
+  - Configurable via `SUBAGENT_FALLBACK` env var
+  - Can disable with `SUBAGENT_ENABLE_FALLBACK=false`
+
+- **`docs/model-fallback-system-design.md`** - Future design document
+  - 4 implementation options (script, round-robin, task-based, health queue)
+  - Phase-based roadmap for quota management
+
+**Author**: Antigravity + Yuichi Inumaru
+
+---
+
 ## [2026-01-19] - YAAMCPL Integration & Persona Generation
 
 ### Added
