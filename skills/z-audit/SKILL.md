@@ -1,3 +1,8 @@
+---
+name: "z-audit"
+description: "Security audit for vibe-coded apps (Vercel, Supabase, Cloudflare Workers, Firebase, Lovable)."
+---
+
 # Z-Audit: Security Audit for Vibe-Coded Projects
 
 > "2026 is the year of vibe-coding. Ship fast, audit faster."
