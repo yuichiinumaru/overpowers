@@ -1,5 +1,5 @@
 ---
-name: swarm-advanced
+name: swarm_advanced
 description: Advanced swarm orchestration patterns for research, development, testing, and complex distributed workflows
 version: 2.0.0
 category: orchestration

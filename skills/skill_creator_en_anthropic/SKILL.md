@@ -1,5 +1,5 @@
 ---
-name: skill-creator-en-anthropic
+name: skill_creator_en_anthropic
 description: Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.
 license: Complete terms in LICENSE.txt
 ---

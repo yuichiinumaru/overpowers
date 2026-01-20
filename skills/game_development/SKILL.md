@@ -1,5 +1,5 @@
 ---
-name: game-development
+name: game_development
 description: "Unity ECS, Godot GDScript, and game architecture patterns. Use when developing 2D/3D games, implementing game logic, or optimizing game performance."
 ---
 

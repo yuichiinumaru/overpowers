@@ -1,5 +1,5 @@
 ---
-name: code-auditor
+name: code_auditor
 description: Performs comprehensive codebase analysis covering architecture, code quality, security, performance, testing, and maintainability. Use when user wants to audit code quality, identify technical debt, find security issues, assess test coverage, or get a codebase health check.
 ---
 

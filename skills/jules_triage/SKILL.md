@@ -1,5 +1,5 @@
 ---
-name: jules-triage
+name: jules_triage
 description: Use when you have harvested Jules branches and need to analyze them in parallel to determine value and integration strategy
 ---
 

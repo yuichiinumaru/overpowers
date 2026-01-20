@@ -1,5 +1,5 @@
 ---
-name: expo-app-design
+name: expo_app_design
 description: Build beautiful cross-platform mobile apps with Expo Router, NativeWind, and React Native.
 author: expo
 category: development

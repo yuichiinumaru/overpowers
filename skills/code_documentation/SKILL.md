@@ -1,5 +1,5 @@
 ---
-name: code-documentation
+name: code_documentation
 description: Writing effective code documentation - API docs, README files, inline comments, and technical guides. Use for documenting codebases, APIs, or writing developer guides.
 source: wshobson/agents
 license: MIT

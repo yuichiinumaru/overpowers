@@ -1,5 +1,5 @@
 ---
-name: github-workflow-automation
+name: github_workflow_automation
 version: 1.0.0
 category: github
 description: Advanced GitHub Actions workflow automation with AI swarm coordination, intelligent CI/CD pipelines, and comprehensive repository management

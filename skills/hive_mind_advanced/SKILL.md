@@ -1,5 +1,5 @@
 ---
-name: hive-mind-advanced
+name: hive_mind_advanced
 description: Advanced Hive Mind collective intelligence system for queen-led multi-agent coordination with consensus mechanisms and persistent memory
 version: 1.0.0
 category: coordination

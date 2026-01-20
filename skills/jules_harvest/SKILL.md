@@ -1,5 +1,5 @@
 ---
-name: jules-harvest
+name: jules_harvest
 description: Use when Jules has completed work and you need to fetch and catalog branches for analysis
 ---
 

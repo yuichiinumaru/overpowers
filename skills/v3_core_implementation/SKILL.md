@@ -1,5 +1,5 @@
 ---
-name: v3-core-implementation
+name: v3_core_implementation
 description: "Core module implementation for claude-flow v3. Implements DDD domains, clean architecture patterns, dependency injection, and modular TypeScript codebase with comprehensive testing."
 ---
 

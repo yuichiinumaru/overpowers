@@ -1,5 +1,5 @@
 ---
-name: x-search
+name: x_search
 description: X（旧Twitter）上の投稿を検索してSNSでの反応やトレンドを調べる。ツイート、SNS、トレンド、炎上、話題、反応などのキーワードが含まれる質問に使用。
 ---
 

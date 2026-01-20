@@ -1,5 +1,5 @@
 ---
-name: jules-dispatch
+name: jules_dispatch
 description: Use when you need to prepare and dispatch tasks to Jules (Google's async AI coding agent)
 ---
 

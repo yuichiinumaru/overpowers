@@ -1,5 +1,5 @@
 ---
-name: mobile-developer
+name: mobile_developer
 description: iOS and Android development expert. Covers Swift, Kotlin, SwiftUI, Jetpack Compose, React Native, Flutter, and app store guidelines.
 ---
 

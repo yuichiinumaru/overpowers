@@ -1,5 +1,5 @@
 ---
-name: code-execution
+name: code_execution
 description: Execute Python code locally with marketplace API access for 90%+ token savings on bulk operations. Activates when user requests bulk operations (10+ files), complex multi-step workflows, iterative processing, or mentions efficiency/performance.
 ---
 

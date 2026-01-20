@@ -1,5 +1,5 @@
 ---
-name: machine-learning-ops
+name: machine_learning_ops
 description: "ML pipeline methodology, automation, and model lifecycle management. Use when designing, deploying, or maintaining machine learning workflows and pipelines."
 ---
 

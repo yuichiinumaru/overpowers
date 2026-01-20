@@ -1,5 +1,5 @@
 ---
-name: langsmith-fetch
+name: langsmith_fetch
 description: Debug LangChain and LangGraph agents by fetching execution traces from LangSmith Studio. Use when debugging agent behavior, investigating errors, analyzing tool calls, checking memory operations, or examining agent performance. Automatically fetches recent traces and analyzes execution patterns. Requires langsmith_fetch CLI installed.
 ---
 

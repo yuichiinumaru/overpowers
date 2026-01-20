@@ -1,5 +1,5 @@
 ---
-name: agentic-jujutsu
+name: agentic_jujutsu
 version: 2.3.2
 description: Quantum-resistant, self-learning version control for AI agents with ReasoningBank intelligence and multi-agent coordination
 ---

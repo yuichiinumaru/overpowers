@@ -1,5 +1,5 @@
 ---
-name: frontend-ui-ux
+name: frontend_ui_ux
 description: Beautiful UI development with modern design patterns, responsive layouts, and accessibility best practices. Use for any frontend work requiring visual excellence.
 ---
 

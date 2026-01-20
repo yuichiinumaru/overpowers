@@ -1,5 +1,5 @@
 ---
-name: arxiv-search
+name: arxiv_search
 description: Search arXiv preprint repository for papers in physics, mathematics, computer science, quantitative biology, and related fields.
 ---
 

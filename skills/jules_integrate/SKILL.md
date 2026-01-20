@@ -1,5 +1,5 @@
 ---
-name: jules-integrate
+name: jules_integrate
 description: Use when triage is complete and you're ready to selectively integrate Jules work into the project
 ---
 

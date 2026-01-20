@@ -1,5 +1,5 @@
 ---
-name: aws-agentic-ai
+name: aws_agentic_ai
 aliases:
   - bedrock-agentcore
   - aws-agentic-ai

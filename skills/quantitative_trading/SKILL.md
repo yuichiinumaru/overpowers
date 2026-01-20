@@ -1,5 +1,5 @@
 ---
-name: quantitative-trading
+name: quantitative_trading
 description: "Backtesting frameworks and risk metrics calculation. Use when building algorithmic trading systems, analyzing market data, or calculating financial risk."
 ---
 

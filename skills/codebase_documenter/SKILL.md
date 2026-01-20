@@ -1,5 +1,5 @@
 ---
-name: codebase-documenter
+name: codebase_documenter
 description: Generates comprehensive documentation explaining how a codebase works, including architecture, key components, data flow, and development guidelines. Use when user wants to understand unfamiliar code, create onboarding docs, document architecture, or explain how the system works.
 ---
 

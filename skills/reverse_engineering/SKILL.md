@@ -1,5 +1,5 @@
 ---
-name: reverse-engineering
+name: reverse_engineering
 description: "Binary analysis, memory forensics, and protocol reverse engineering. Use when analyzing malware, auditing closed-source software, or investigating network protocols."
 ---
 

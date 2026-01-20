@@ -1,5 +1,5 @@
 ---
-name: github-multi-repo
+name: github_multi_repo
 version: 1.0.0
 description: Multi-repository coordination, synchronization, and architecture management with AI swarm orchestration
 category: github-integration

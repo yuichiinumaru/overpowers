@@ -1,5 +1,5 @@
 ---
-name: payment-processing
+name: payment_processing
 description: "Stripe, PayPal, PCI compliance, and billing automation. Use when implementing payment systems, managing subscriptions, or ensuring financial security compliance."
 ---
 

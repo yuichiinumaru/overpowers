@@ -1,5 +1,5 @@
 ---
-name: github-project-management
+name: github_project_management
 title: GitHub Project Management
 version: 2.0.0
 category: github

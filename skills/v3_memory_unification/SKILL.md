@@ -1,5 +1,5 @@
 ---
-name: v3-memory-unification
+name: v3_memory_unification
 description: "Unify 6+ memory systems into AgentDB with HNSW indexing for 150x-12,500x search improvements. Implements ADR-006 (Unified Memory Service) and ADR-009 (Hybrid Memory Backend)."
 ---
 

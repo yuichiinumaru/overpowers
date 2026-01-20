@@ -1,5 +1,5 @@
 ---
-name: data-engineering
+name: data_engineering
 description: "Airflow, dbt, Spark, and data quality frameworks. Use when building data pipelines, ETL processes, or optimizing data warehouse performance."
 ---
 

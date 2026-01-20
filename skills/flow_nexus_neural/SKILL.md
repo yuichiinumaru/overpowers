@@ -1,5 +1,5 @@
 ---
-name: flow-nexus-neural
+name: flow_nexus_neural
 description: Train and deploy neural networks in distributed E2B sandboxes with Flow Nexus
 version: 1.0.0
 category: ai-ml

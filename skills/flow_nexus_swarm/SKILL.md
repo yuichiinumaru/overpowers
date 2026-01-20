@@ -1,5 +1,5 @@
 ---
-name: flow-nexus-swarm
+name: flow_nexus_swarm
 description: Cloud-based AI swarm deployment and event-driven workflow automation with Flow Nexus platform
 category: orchestration
 tags: [swarm, workflow, cloud, agents, automation, message-queue]

@@ -1,5 +1,5 @@
 ---
-name: ensemble-solving
+name: ensemble_solving
 description: Generate multiple diverse solutions in parallel and select the best. Use for architecture decisions, code generation with multiple valid approaches, or creative tasks where exploring alternatives improves quality.
 ---
 

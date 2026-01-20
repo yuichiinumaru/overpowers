@@ -1,5 +1,5 @@
 ---
-name: web-design-guidelines
+name: web_design_guidelines
 description: Modern web design principles for responsive layouts, accessibility, and visual hierarchy.
 author: vercel
 category: development

@@ -1,5 +1,5 @@
 ---
-name: react-best-practices
+name: react_best_practices
 description: React development guidelines with hooks, component patterns, state management, and performance optimization.
 author: vercel
 category: development

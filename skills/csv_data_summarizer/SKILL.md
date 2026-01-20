@@ -1,5 +1,5 @@
 ---
-name: csv-data-summarizer
+name: csv_data_summarizer
 description: Analyzes CSV files, generates summary stats, and plots quick visualizations using Python and pandas.
 ---
 

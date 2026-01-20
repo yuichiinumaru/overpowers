@@ -1,5 +1,5 @@
 ---
-name: javascript-typescript
+name: javascript_typescript
 description: JavaScript and TypeScript development with ES6+, Node.js, React, and modern web frameworks. Use for frontend, backend, or full-stack JavaScript/TypeScript projects.
 ---
 

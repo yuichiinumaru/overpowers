@@ -1,5 +1,5 @@
 ---
-name: cookie-policy-fr-malik-taiar
+name: cookie_policy_fr_malik_taiar
 description: Guide complet pour la rédaction de politiques cookies conformes au RGPD et à la directive ePrivacy. Contient les recommandations CNIL 2020, un template de référence et les bonnes pratiques. À utiliser lors de la rédaction ou révision d'une politique cookies pour un site web ou une application.
 ---
 

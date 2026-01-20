@@ -1,5 +1,5 @@
 ---
-name: aws-mcp-setup
+name: aws_mcp_setup
 description: Configure AWS Documentation MCP server to query up-to-date AWS knowledge, APIs, and best practices
 ---
 

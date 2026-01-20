@@ -1,5 +1,5 @@
 ---
-name: multi-agent-file-coordination
+name: multi_agent_file_coordination
 description: Protocol for multiple agents to work on the same codebase simultaneously without conflicts using a lock-based system. Use when coordinating parallel agent work on shared files.
 ---
 

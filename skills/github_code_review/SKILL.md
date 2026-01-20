@@ -1,5 +1,5 @@
 ---
-name: github-code-review
+name: github_code_review
 version: 1.0.0
 description: Comprehensive GitHub code review with AI-powered swarm coordination
 category: github

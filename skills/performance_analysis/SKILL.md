@@ -1,5 +1,5 @@
 ---
-name: performance-analysis
+name: performance_analysis
 version: 1.0.0
 description: Comprehensive performance analysis, bottleneck detection, and optimization recommendations for Claude Flow swarms
 category: monitoring

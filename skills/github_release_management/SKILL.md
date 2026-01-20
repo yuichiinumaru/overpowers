@@ -1,5 +1,5 @@
 ---
-name: github-release-management
+name: github_release_management
 version: 2.0.0
 description: Comprehensive GitHub release orchestration with AI swarm coordination for automated versioning, testing, deployment, and rollback management
 category: github

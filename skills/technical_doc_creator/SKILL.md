@@ -1,5 +1,5 @@
 ---
-name: technical-doc-creator
+name: technical_doc_creator
 description: Create HTML technical documentation with code blocks, API workflows, system architecture diagrams, and syntax highlighting. Use when users request technical documentation, API docs, API references, code examples, or developer documentation.
 ---
 

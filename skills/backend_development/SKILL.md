@@ -1,5 +1,5 @@
 ---
-name: backend-development
+name: backend_development
 description: Backend API design, database architecture, microservices patterns, and test-driven development. Use for designing APIs, database schemas, or backend system architecture. Supports CQRS, Event Sourcing, and Workflow Orchestration.
 ---
 

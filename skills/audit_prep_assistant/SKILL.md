@@ -1,5 +1,5 @@
 ---
-name: audit-prep-assistant
+name: audit_prep_assistant
 description: Prepare your codebase for security review using Trail of Bits' checklist. Helps set review goals, runs static analysis tools, increases test coverage, removes dead code, ensures accessibility, and generates comprehensive documentation (flowcharts, user stories, inline comments). (project, gitignored)
 ---
 

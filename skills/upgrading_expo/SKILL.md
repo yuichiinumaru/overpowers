@@ -1,5 +1,5 @@
 ---
-name: upgrading-expo
+name: upgrading_expo
 description: Guidelines for upgrading Expo SDK versions and fixing dependency issues.
 author: expo
 category: development

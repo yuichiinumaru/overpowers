@@ -1,5 +1,5 @@
 ---
-name: brand-guidelines
+name: brand_guidelines
 description: Apply brand colors and typography to artifacts. Use when brand colors, style guidelines, visual formatting, or company design standards apply. Ensures consistency across branded content.
 source: anthropics/skills
 license: Apache-2.0

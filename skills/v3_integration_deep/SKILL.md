@@ -1,5 +1,5 @@
 ---
-name: v3-integration-deep
+name: v3_integration_deep
 description: "Deep agentic-flow@alpha integration implementing ADR-001. Eliminates 10,000+ duplicate lines by building claude-flow as specialized extension rather than parallel implementation."
 ---
 

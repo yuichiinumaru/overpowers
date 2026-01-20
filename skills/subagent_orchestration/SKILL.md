@@ -1,5 +1,5 @@
 ---
-name: subagent-orchestration
+name: subagent_orchestration
 description: Launch parallel subagents via OpenCode CLI for distributed task execution
 ---
 

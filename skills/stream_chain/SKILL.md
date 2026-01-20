@@ -1,5 +1,5 @@
 ---
-name: stream-chain
+name: stream_chain
 description: Stream-JSON chaining for multi-agent pipelines, data transformation, and sequential workflows
 version: 1.0.0
 category: workflow

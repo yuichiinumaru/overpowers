@@ -1,5 +1,5 @@
 ---
-name: flow-nexus-platform
+name: flow_nexus_platform
 description: Comprehensive Flow Nexus platform management - authentication, sandboxes, app deployment, payments, and challenges
 category: platform
 version: 1.0.0

@@ -1,5 +1,5 @@
 ---
-name: sparc-methodology
+name: sparc_methodology
 description: SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) comprehensive development methodology with multi-agent orchestration
 version: 2.7.0
 category: development
