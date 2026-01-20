@@ -35,5 +35,5 @@ npx -y @toolprint/hypertool-mcp mcp run --persona security-auditor
 ### Quick Start
 
 ```bash
-cp personas/security-auditor/mcp.json ~/.config/opencode/.mcp.json
+cp personas/security_auditor/mcp.json ~/.config/opencode/.mcp.json
 ```

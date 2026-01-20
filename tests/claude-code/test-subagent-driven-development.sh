@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-# Test: subagent-driven-development skill
+# Test: subagent_driven_development skill
 # Verifies that the skill is loaded and follows correct workflow
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 source "$SCRIPT_DIR/test-helpers.sh"
 
-echo "=== Test: subagent-driven-development skill ==="
+echo "=== Test: subagent_driven_development skill ==="
 echo ""
 
 # Test 1: Verify skill can be loaded
 echo "Test 1: Skill loading..."
 
-output=$(run_claude "What is the subagent-driven-development skill? Describe its key steps briefly." 30)
+output=$(run_claude "What is the subagent_driven_development skill? Describe its key steps briefly." 30)
 
-if assert_contains "$output" "subagent-driven-development" "Skill is recognized"; then
+if assert_contains "$output" "subagent_driven_development" "Skill is recognized"; then
     : # pass
 else
     exit 1
@@ -31,7 +31,7 @@ echo ""
 # Test 2: Verify skill describes correct workflow order
 echo "Test 2: Workflow ordering..."
 
-output=$(run_claude "In the subagent-driven-development skill, what comes first: spec compliance review or code quality review? Be specific about the order." 30)
+output=$(run_claude "In the subagent_driven_development skill, what comes first: spec compliance review or code quality review? Be specific about the order." 30)
 
 if assert_order "$output" "spec.*compliance" "code.*quality" "Spec compliance before code quality"; then
     : # pass
@@ -44,7 +44,7 @@ echo ""
 # Test 3: Verify self-review is mentioned
 echo "Test 3: Self-review requirement..."
 
-output=$(run_claude "Does the subagent-driven-development skill require implementers to do self-review? What should they check?" 30)
+output=$(run_claude "Does the subagent_driven_development skill require implementers to do self-review? What should they check?" 30)
 
 if assert_contains "$output" "self-review\|self review" "Mentions self-review"; then
     : # pass
@@ -136,4 +136,4 @@ fi
 
 echo ""
 
-echo "=== All subagent-driven-development skill tests passed ==="
+echo "=== All subagent_driven_development skill tests passed ==="

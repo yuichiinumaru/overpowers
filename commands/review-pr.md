@@ -61,7 +61,7 @@ Note: Default option is to run **all** applicable review agents.
 Based on changes summary from phase 1 and their complexity, determine which review agents are applicable:
 
 - **If code or configuration changes, except purely cosmetic changes**: bug-hunter, security-auditor
-- **if code changes, including business or infrastructure logic, formating, etc.**: code-quality-reviewer (general quality)
+- **if code changes, including business or infrastructure logic, formating, etc.**: code_quality_reviewer (general quality)
 - **If test files changed**: test-coverage-reviewer
 - **If types, API, data modeling changed**: contracts-reviewer
 - **If complexity of changes is high or historical context is needed**: historical-context-reviewer

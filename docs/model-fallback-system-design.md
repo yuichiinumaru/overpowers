@@ -227,7 +227,7 @@ def select_best_model(task_complexity: str = "medium") -> str:
 Update `run-subagent.sh` with simple fallback chain including GLM 4.7:
 
 ```bash
-# Add to skills/subagent-orchestration/scripts/run-subagent.sh
+# Add to skills/subagent_orchestration/scripts/run-subagent.sh
 FALLBACK_MODELS=(
     "$MODEL"
     "windsurf/glm-4.7"
@@ -292,8 +292,8 @@ export PRESERVE_OPUS_QUOTA=true  # Use Opus only for complex tasks
 
 ## Related Files
 
-- `/home/sephiroth/.config/opencode/Overpowers/skills/subagent-orchestration/`
-- `/home/sephiroth/.config/opencode/Overpowers/agents/000-ceo-orchestrator.md`
+- `/home/sephiroth/.config/opencode/Overpowers/skills/subagent_orchestration/`
+- `/home/sephiroth/.config/opencode/Overpowers/agents/000_ceo_orchestrator.md`
 - `/home/sephiroth/.config/opencode/Overpowers/configure-persona.sh`
 
 ---

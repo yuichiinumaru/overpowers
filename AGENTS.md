@@ -98,7 +98,7 @@ Every modification to this repository **MUST** be accompanied by an entry in `CH
 
 ### III. The Law of Documentation
 * All new features must be documented in the appropriate guide:
-  - `docs/hooks-guide.md`
+  - `docs/hooks_guide.md`
   - `docs/scripts-guide.md`
   - `docs/workflows-guide.md`
   - `docs/services-guide.md`

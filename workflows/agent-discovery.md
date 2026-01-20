@@ -35,40 +35,40 @@ Navigate our **390+ agents and 149 skills** to find the right tool for any task.
 
 **"I need to build/implement..."**
 ```
-→ backend-architect (APIs)
-→ frontend-developer (UI)
-→ database-optimizer (data layer)
-→ devops-troubleshooter (infrastructure)
+→ backend_architect (APIs)
+→ frontend_developer (UI)
+→ database_optimizer (data layer)
+→ devops_troubleshooter (infrastructure)
 ```
 
 **"I need to review/audit..."**
 ```
-→ code-reviewer (code quality)
-→ security-auditor (vulnerabilities)
-→ architect-review (architecture)
-→ api-security-audit (API security)
+→ code_reviewer (code quality)
+→ security_auditor (vulnerabilities)
+→ architect_review (architecture)
+→ api_security_audit (API security)
 ```
 
 **"I need to research/analyze..."**
 ```
-→ comprehensive-researcher (broad)
-→ technical-researcher (docs/tutorials)
-→ market-research-analyst (competition)
-→ trend-researcher (industry)
+→ comprehensive_researcher (broad)
+→ technical_researcher (docs/tutorials)
+→ market_research_analyst (competition)
+→ trend_researcher (industry)
 ```
 
 **"I need to test..."**
 ```
-→ test-automator (write tests)
+→ test_automator (write tests)
 → qa-engineer (quality assurance)
-→ performance-engineer (benchmarks)
+→ performance_engineer (benchmarks)
 ```
 
 **"I need to deploy..."**
 ```
-→ deployment-engineer (releases)
+→ deployment_engineer (releases)
 → ci-cd-specialist (pipelines)
-→ devops-troubleshooter (issues)
+→ devops_troubleshooter (issues)
 ```
 
 ### By Technology
@@ -119,22 +119,22 @@ grep -r "keyword" ~/.config/opencode/Overpowers/skills/*/SKILL.md
 
 ### Research → Implementation
 ```
-comprehensive-researcher → task-decomposition-expert → backend-architect → code-reviewer
+comprehensive-researcher → task_decomposition_expert → backend_architect → code-reviewer
 ```
 
 ### Idea → Launch
 ```
-brainstorming → rapid-prototyper → test-automator → deployment-engineer → growth-hacker
+brainstorming → rapid_prototyper → test_automator → deployment_engineer → growth-hacker
 ```
 
 ### Bug → Fix → Deploy
 ```
-qa-engineer → devops-troubleshooter → code-reviewer → deployment-engineer
+qa-engineer → devops_troubleshooter → code_reviewer → deployment-engineer
 ```
 
 ### Security Audit
 ```
-security-auditor → api-security-audit → incident-responder → code-reviewer
+security-auditor → api_security_audit → incident_responder → code-reviewer
 ```
 
 ## Best Practices
@@ -143,7 +143,7 @@ security-auditor → api-security-audit → incident-responder → code-reviewer
 2. **Use specialized agents** - Don't use generic when specific exists
 3. **Chain agents logically** - Follow natural flow: research → plan → build → test → deploy
 4. **Leverage skills for repetitive tasks** - Skills are optimized for specific operations
-5. **Review before deploying** - Always include code-reviewer or security-auditor
+5. **Review before deploying** - Always include code_reviewer or security-auditor
 
 ## Quick Commands
 

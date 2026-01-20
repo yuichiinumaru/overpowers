@@ -178,7 +178,7 @@ ROLE_MCPS = {
 
 # Persona categories with agent patterns
 PERSONA_CATEGORIES = {
-    "security-auditor": {
+    "security_auditor": {
         "patterns": ["security", "penetration", "audit", "vulnerability", "incident"],
         "role_mcps": ["security"],
         "description": "Security testing, vulnerability assessment, and incident response",
@@ -188,7 +188,7 @@ PERSONA_CATEGORIES = {
             {"name": "reporting", "tools": ["serena.write_memory", "serena.list_memories"]}
         ]
     },
-    "fullstack-developer": {
+    "fullstack_developer": {
         "patterns": ["developer", "frontend", "backend", "fullstack", "web", "react", "vue", "angular", "nextjs"],
         "role_mcps": ["developer"],
         "description": "Full-stack web development across frontend and backend technologies",
@@ -198,7 +198,7 @@ PERSONA_CATEGORIES = {
             {"name": "docs", "tools": ["deepwiki.query", "context7.resolve-library-id"]}
         ]
     },
-    "comprehensive-researcher": {
+    "comprehensive_researcher": {
         "patterns": ["research", "analyst", "synthesizer", "knowledge"],
         "role_mcps": ["researcher"],
         "description": "Research, analysis, and knowledge synthesis across domains",
@@ -208,7 +208,7 @@ PERSONA_CATEGORIES = {
             {"name": "synthesis", "tools": ["serena.write_memory", "think-tank.remember"]}
         ]
     },
-    "devops-engineer": {
+    "devops_engineer": {
         "patterns": ["devops", "sre", "infrastructure", "kubernetes", "docker", "terraform", "cicd", "deployment"],
         "role_mcps": ["devops"],
         "description": "Infrastructure, CI/CD, and deployment automation",
@@ -249,7 +249,7 @@ PERSONA_CATEGORIES = {
         ]
     },
     "documentation-writer": {
-        "patterns": ["document", "writer", "technical-writer", "api-doc"],
+        "patterns": ["document", "writer", "technical_writer", "api-doc"],
         "role_mcps": ["researcher"],
         "description": "Technical documentation and API documentation creation",
         "toolsets": [
@@ -259,7 +259,7 @@ PERSONA_CATEGORIES = {
         ]
     },
     "database-specialist": {
-        "patterns": ["database", "sql", "postgres", "mysql", "mongo", "redis", "data-engineer", "etl"],
+        "patterns": ["database", "sql", "postgres", "mysql", "mongo", "redis", "data_engineer", "etl"],
         "role_mcps": ["database"],
         "description": "Database administration, optimization, and data modeling",
         "toolsets": [
@@ -269,7 +269,7 @@ PERSONA_CATEGORIES = {
             {"name": "docs", "tools": ["serena.write_memory", "deepwiki.query"]}
         ]
     },
-    "mobile-developer": {
+    "mobile_developer": {
         "patterns": ["mobile", "ios", "android", "flutter", "react-native", "swift", "kotlin"],
         "role_mcps": ["developer"],
         "description": "Mobile app development for iOS and Android platforms",
@@ -279,7 +279,7 @@ PERSONA_CATEGORIES = {
             {"name": "docs", "tools": ["deepwiki.query", "serena.get_symbols_overview"]}
         ]
     },
-    "product-manager": {
+    "product_manager": {
         "patterns": ["product", "project", "scrum", "agile", "sprint"],
         "role_mcps": ["researcher"],
         "description": "Product management, project planning, and agile methodologies",

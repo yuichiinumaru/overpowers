@@ -12,45 +12,45 @@ SKILL_DIR = Path("/home/sephiroth/.config/opencode/skill")
 # Skills adicionais de alto valor (não pegas na primeira passada)
 ADDITIONAL_SKILLS = [
     # Desenvolvimento
-    ("10/skills/python-development", "python-development"),
-    ("10/skills/javascript-typescript", "javascript-typescript"),
-    ("10/skills/backend-development", "backend-development"),
-    ("10/skills/image-enhancer", "image-enhancer"),
-    ("10/skills/invoice-organizer", "invoice-organizer"),
-    ("10/skills/ask-questions-if-underspecified", "ask-questions-if-underspecified"),
-    ("10/skills/jira-issues", "jira-issues"),
+    ("10/skills/python_development", "python_development"),
+    ("10/skills/javascript_typescript", "javascript_typescript"),
+    ("10/skills/backend_development", "backend_development"),
+    ("10/skills/image_enhancer", "image_enhancer"),
+    ("10/skills/invoice_organizer", "invoice_organizer"),
+    ("10/skills/ask_questions_if_underspecified", "ask_questions_if_underspecified"),
+    ("10/skills/jira_issues", "jira_issues"),
     
     # Visual Documentation (repo 20)
-    ("20/visual-documentation-plugin/skills/flowchart-creator", "flowchart-creator"),
-    ("20/visual-documentation-plugin/skills/architecture-diagram-creator", "architecture-diagram-creator"),
-    ("20/visual-documentation-plugin/skills/dashboard-creator", "dashboard-creator"),
-    ("20/visual-documentation-plugin/skills/technical-doc-creator", "technical-doc-creator"),
-    ("20/visual-documentation-plugin/skills/timeline-creator", "timeline-creator"),
+    ("20/visual-documentation-plugin/skills/flowchart_creator", "flowchart_creator"),
+    ("20/visual-documentation-plugin/skills/architecture_diagram_creator", "architecture_diagram_creator"),
+    ("20/visual-documentation-plugin/skills/dashboard_creator", "dashboard_creator"),
+    ("20/visual-documentation-plugin/skills/technical_doc_creator", "technical_doc_creator"),
+    ("20/visual-documentation-plugin/skills/timeline_creator", "timeline_creator"),
     
     # Engineering Workflow (repo 20)
-    ("20/engineering-workflow-plugin/skills/test-fixing", "test-fixing"),
-    ("20/engineering-workflow-plugin/skills/ensemble-solving", "ensemble-solving"),
+    ("20/engineering-workflow-plugin/skills/test_fixing", "test_fixing"),
+    ("20/engineering-workflow-plugin/skills/ensemble_solving", "ensemble_solving"),
     
     # Code Operations (repo 20)
-    ("20/code-operations-plugin/skills/code-execution", "code-execution"),
+    ("20/code-operations-plugin/skills/code_execution", "code_execution"),
     
     # Pydantic/DSPy úteis (repo 14, 15)
-    ("14/examples/skills/web-research", "web-research"),
-    ("14/examples/skills/arxiv-search", "arxiv-search"),
+    ("14/examples/skills/web_research", "web_research"),
+    ("14/examples/skills/arxiv_search", "arxiv_search"),
     
     # Prompt/skill tools (repo 17, 19)
-    ("17/prompt-optimizer", "prompt-optimizer"),
-    ("19/.skills/experimental/skill-evaluator", "skill-evaluator"),
+    ("17/prompt_optimizer", "prompt_optimizer"),
+    ("19/.skills/experimental/skill_evaluator", "skill_evaluator"),
     
     # Outros úteis
-    ("10/skills/domain-name-brainstormer", "domain-name-brainstormer"),
-    ("10/skills/lead-research-assistant", "lead-research-assistant"),
-    ("10/skills/developer-growth-analysis", "developer-growth-analysis"),
-    ("10/skills/slack-gif-creator", "slack-gif-creator"),
-    ("10/skills/video-downloader", "video-downloader"),
+    ("10/skills/domain_name_brainstormer", "domain_name_brainstormer"),
+    ("10/skills/lead_research_assistant", "lead_research_assistant"),
+    ("10/skills/developer_growth_analysis", "developer_growth_analysis"),
+    ("10/skills/slack_gif_creator", "slack_gif_creator"),
+    ("10/skills/video_downloader", "video_downloader"),
     
     # Sentry skills (se existirem)
-    ("51/plugins/sentry-skills/skills/code-review", "sentry-code-review"),
+    ("51/plugins/sentry-skills/skills/code_review", "sentry-code-review"),
     ("51/plugins/sentry-skills/skills/find-bugs", "find-bugs"),
     ("51/plugins/sentry-skills/skills/deslop", "deslop"),
     
@@ -60,14 +60,14 @@ ADDITIONAL_SKILLS = [
     ("45/plugins/property-based-testing", "property-based-testing"),
     
     # Overpowers skills (yuichiinumaru/overpowers)
-    ("48/skills/test-driven-development", "test-driven-development"),
-    ("48/skills/systematic-debugging", "systematic-debugging"),
+    ("48/skills/test_driven_development", "test_driven_development"),
+    ("48/skills/systematic_debugging", "systematic_debugging"),
     ("48/skills/root-cause-tracing", "root-cause-tracing"),
     ("48/skills/brainstorming", "brainstorming"),
-    ("48/skills/writing-plans", "writing-plans"),
-    ("48/skills/executing-plans", "executing-plans"),
-    ("48/skills/dispatching-parallel-agents", "dispatching-parallel-agents"),
-    ("48/skills/verification-before-completion", "verification-before-completion"),
+    ("48/skills/writing_plans", "writing_plans"),
+    ("48/skills/executing_plans", "executing_plans"),
+    ("48/skills/dispatching_parallel_agents", "dispatching_parallel_agents"),
+    ("48/skills/verification_before_completion", "verification_before_completion"),
 ]
 
 

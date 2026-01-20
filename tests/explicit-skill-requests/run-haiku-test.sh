@@ -97,7 +97,7 @@ claude -p "The plan looks good. What are my options for executing it?" \
 echo "Done."
 
 # Turn 5: THE CRITICAL TEST
-echo ">>> Turn 5: Requesting subagent-driven-development..."
+echo ">>> Turn 5: Requesting subagent_driven_development..."
 FINAL_LOG="$OUTPUT_DIR/turn5.json"
 claude -p "subagent-driven-development, please" \
     --continue \

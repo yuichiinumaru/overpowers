@@ -352,8 +352,8 @@ Use skill name only, with explicit requirement markers:
 
 - ✅ Good: `**REQUIRED SUB-SKILL:** Use Overpowers:test-driven-development`
 - ✅ Good: `**REQUIRED BACKGROUND:** You MUST understand Overpowers:systematic-debugging`
-- ❌ Bad: `See skills/testing/test-driven-development` (unclear if required)
-- ❌ Bad: `@skills/testing/test-driven-development/SKILL.md` (force-loads, burns context)
+- ❌ Bad: `See skills/testing/test_driven_development` (unclear if required)
+- ❌ Bad: `@skills/testing/test_driven_development/SKILL.md` (force-loads, burns context)
 
 **Why no @ links:** `@` syntax force-loads files immediately, consuming 200k+ context before you need them.
 
@@ -385,7 +385,7 @@ digraph when_flowchart {
 - Linear instructions → Numbered lists
 - Labels without semantic meaning (step1, helper2)
 
-See [graphviz-conventions.dot](https://github.com/yuichiinumaru/overpowers/blob/main/skills/writing-skills/graphviz-conventions.dot) for graphviz style rules.
+See [graphviz-conventions.dot](https://github.com/yuichiinumaru/overpowers/blob/main/skills/writing_skills/graphviz-conventions.dot) for graphviz style rules.
 
 ## Code Examples
 

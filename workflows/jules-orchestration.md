@@ -72,9 +72,9 @@ Use local agents to review branches in parallel:
 /skill jules-triage
 
 For each branch:
-- /invoke code-reviewer → Code quality
-- /invoke security-auditor → Security check
-- /invoke test-automator → Test coverage
+- /invoke code_reviewer → Code quality
+- /invoke security_auditor → Security check
+- /invoke test_automator → Test coverage
 
 Output: .jules/triage-report.md with ratings
 ```

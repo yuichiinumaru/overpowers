@@ -16,7 +16,7 @@ RESULTS=""
 
 # Test: subagent-driven-development, please
 echo ">>> Test 1: subagent-driven-development-please"
-if "$SCRIPT_DIR/run-test.sh" "subagent-driven-development" "$PROMPTS_DIR/subagent-driven-development-please.txt"; then
+if "$SCRIPT_DIR/run-test.sh" "subagent_driven_development" "$PROMPTS_DIR/subagent_driven_development-please.txt"; then
     PASSED=$((PASSED + 1))
     RESULTS="$RESULTS\nPASS: subagent-driven-development-please"
 else
@@ -27,7 +27,7 @@ echo ""
 
 # Test: use systematic-debugging
 echo ">>> Test 2: use-systematic-debugging"
-if "$SCRIPT_DIR/run-test.sh" "systematic-debugging" "$PROMPTS_DIR/use-systematic-debugging.txt"; then
+if "$SCRIPT_DIR/run-test.sh" "systematic_debugging" "$PROMPTS_DIR/use-systematic-debugging.txt"; then
     PASSED=$((PASSED + 1))
     RESULTS="$RESULTS\nPASS: use-systematic-debugging"
 else
@@ -49,7 +49,7 @@ echo ""
 
 # Test: mid-conversation execute plan
 echo ">>> Test 4: mid-conversation-execute-plan"
-if "$SCRIPT_DIR/run-test.sh" "subagent-driven-development" "$PROMPTS_DIR/mid-conversation-execute-plan.txt"; then
+if "$SCRIPT_DIR/run-test.sh" "subagent_driven_development" "$PROMPTS_DIR/mid-conversation-execute-plan.txt"; then
     PASSED=$((PASSED + 1))
     RESULTS="$RESULTS\nPASS: mid-conversation-execute-plan"
 else

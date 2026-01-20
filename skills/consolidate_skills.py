@@ -18,29 +18,29 @@ REPORT_FILE = SKILL_DIR / "skills_report.json"
 # Skills prioritárias (Top 40)
 PRIORITY_SKILLS = {
     # Dev
-    "code-review", "code-refactoring", "code-documentation", "refactoring",
+    "code_review", "code_refactoring", "code_documentation", "refactoring",
     # Testing
-    "playwright", "webapp-testing", "qa-regression",
+    "playwright", "webapp_testing", "qa_regression",
     # Docs
-    "pdf", "docx", "pptx", "xlsx", "doc-coauthoring",
+    "pdf", "docx", "pptx", "xlsx", "doc_coauthoring",
     # Cloud/Infra
-    "aws", "terraform", "kubernetes", "mcp-builder",
+    "aws", "terraform", "kubernetes", "mcp_builder",
     # Design
-    "brand-guidelines", "frontend-design", "canvas-design", "theme-factory", "web-design-guidelines",
+    "brand_guidelines", "frontend_design", "canvas_design", "theme_factory", "web_design_guidelines",
     # Productivity
-    "skill-creator", "changelog-generator", "file-organizer",
+    "skill_creator", "changelog_generator", "file_organizer",
     # Mobile
-    "expo-app-design", "expo-deployment", "upgrading-expo", "ios-simulator",
+    "expo_app_design", "expo_deployment", "upgrading_expo", "ios-simulator",
     # Security
     "security", "audit",
     # Data
-    "database-design", "csv", "data",
+    "database_design", "csv", "data",
     # AI/LLM
-    "llm-application-dev", "algorithmic-art",
+    "llm_application_dev", "algorithmic_art",
     # React/Web
-    "react-best-practices", "web-artifacts-builder", "vercel-deploy",
+    "react_best_practices", "web_artifacts_builder", "vercel_deploy",
     # Misc
-    "internal-comms", "content-research-writer", "meeting-insights-analyzer",
+    "internal_comms", "content_research_writer", "meeting_insights_analyzer",
 }
 
 

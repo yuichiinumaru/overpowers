@@ -11,7 +11,7 @@ All notable changes to the Overpowers toolkit are documented in this file.
 ## [2026-01-19] - CEO Agent & Model Fallback System
 
 ### Added
-- **`agents/000-ceo-orchestrator.md`** - Chief Executive Orchestrator agent
+- **`agents/000_ceo_orchestrator.md`** - Chief Executive Orchestrator agent
   - Delegation-focused master coordinator (does NOT execute, only delegates)
   - Task decomposition framework with complexity classification
   - When to use Jules vs subagents vs direct agents
@@ -94,7 +94,7 @@ All notable changes to the Overpowers toolkit are documented in this file.
   - 🔄 Agent-to-skill conversion (392 agents converted inline)
   - 🔍 Local Overpowers detection before downloading
   
-- **`skills/subagent-orchestration/`** - New skill for OpenCode subagent orchestration
+- **`skills/subagent_orchestration/`** - New skill for OpenCode subagent orchestration
   - `run-subagent.sh` - Run single subagent with auto-permissions
   - `parallel-tasks.sh` - Run multiple subagents in parallel
   - `batch-analyze.sh` - Analyze multiple repositories in batch
@@ -162,7 +162,7 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ### Added
 - `docs/README.md` - Installation guides for OpenCode, Claude Code, and Codex
-- `docs/hooks-guide.md` - Documentation for 29 event-driven hooks
+- `docs/hooks_guide.md` - Documentation for 29 event-driven hooks
 - `docs/scripts-guide.md` - Documentation for 89 DevOps scripts
 - `docs/workflows-guide.md` - Documentation for 16 multi-step workflows
 - `docs/services-guide.md` - Documentation for 13 external service integrations
@@ -218,30 +218,30 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ### Added
 - Jules Swarm skills:
-  - `skills/jules-dispatch/SKILL.md`
-  - `skills/jules-harvest/SKILL.md`
-  - `skills/jules-triage/SKILL.md`
-  - `skills/jules-integrate/SKILL.md`
+  - `skills/jules_dispatch/SKILL.md`
+  - `skills/jules_harvest/SKILL.md`
+  - `skills/jules_triage/SKILL.md`
+  - `skills/jules_integrate/SKILL.md`
 - `packages/jules-swarm/` submodule for parallel task orchestration
 
 ### Added
 - Marketing agents:
-  - `agents/growth-hacker.md`
-  - `agents/app-store-optimizer.md`
-  - `agents/tiktok-strategist.md`
-  - `agents/reddit-community-builder.md`
+  - `agents/growth_hacker.md`
+  - `agents/app_store_optimizer.md`
+  - `agents/tiktok_strategist.md`
+  - `agents/reddit_community_builder.md`
 - Product agents:
-  - `agents/feedback-synthesizer.md`
-  - `agents/sprint-prioritizer.md`
-  - `agents/trend-researcher.md`
+  - `agents/feedback_synthesizer.md`
+  - `agents/sprint_prioritizer.md`
+  - `agents/trend_researcher.md`
 - Design agents:
-  - `agents/whimsy-injector.md`
-  - `agents/visual-storyteller.md`
+  - `agents/whimsy_injector.md`
+  - `agents/visual_storyteller.md`
 - Engineering agents:
-  - `agents/rapid-prototyper.md`
-  - `agents/workflow-optimizer.md`
+  - `agents/rapid_prototyper.md`
+  - `agents/workflow_optimizer.md`
 - Other agents:
-  - `agents/project-shipper.md`
+  - `agents/project_shipper.md`
   - `agents/joker.md`
 
 **Author**: Yuichi Inumaru

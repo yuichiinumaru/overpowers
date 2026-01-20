@@ -33,5 +33,5 @@ npx -y @toolprint/hypertool-mcp mcp run --persona product-manager
 ### Quick Start
 
 ```bash
-cp personas/product-manager/mcp.json ~/.config/opencode/.mcp.json
+cp personas/product_manager/mcp.json ~/.config/opencode/.mcp.json
 ```

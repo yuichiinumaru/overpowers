@@ -38,5 +38,5 @@ npx -y @toolprint/hypertool-mcp mcp run --persona devops-engineer
 ### Quick Start
 
 ```bash
-cp personas/devops-engineer/mcp.json ~/.config/opencode/.mcp.json
+cp personas/devops_engineer/mcp.json ~/.config/opencode/.mcp.json
 ```

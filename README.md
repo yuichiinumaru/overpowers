@@ -233,19 +233,19 @@ For optimal multi-agent coordination, configure these in your `opencode.json`:
 ```json
 {
   "agent": {
-    "task-decomposition-expert": {
+    "task_decomposition_expert": {
       "mode": "primary",
       "description": "Breaks complex tasks into parallelizable sub-tasks"
     },
-    "code-reviewer": {
+    "code_reviewer": {
       "mode": "subagent",
       "description": "Code quality and security review"
     },
-    "security-auditor": {
+    "security_auditor": {
       "mode": "subagent",
       "description": "Security vulnerability detection"
     },
-    "deployment-engineer": {
+    "deployment_engineer": {
       "mode": "subagent",
       "description": "Deployment and release coordination"
     }
@@ -274,13 +274,13 @@ For optimal multi-agent coordination, configure these in your `opencode.json`:
 
 ```
 Research → Implementation:
-  comprehensive-researcher → task-decomposition-expert → backend-architect → code-reviewer
+  comprehensive_researcher → task_decomposition_expert → backend_architect → code-reviewer
 
 Security Audit:
-  security-auditor → api-security-audit → incident-responder → code-reviewer
+  security_auditor → api_security_audit → incident_responder → code-reviewer
 
 Full Stack Feature:
-  database-optimizer → backend-architect → frontend-developer → test-automator → deployment-engineer
+  database_optimizer → backend_architect → frontend_developer → test_automator → deployment-engineer
 ```
 
 ### Finding Agents & Skills

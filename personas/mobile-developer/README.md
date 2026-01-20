@@ -32,5 +32,5 @@ npx -y @toolprint/hypertool-mcp mcp run --persona mobile-developer
 ### Quick Start
 
 ```bash
-cp personas/mobile-developer/mcp.json ~/.config/opencode/.mcp.json
+cp personas/mobile_developer/mcp.json ~/.config/opencode/.mcp.json
 ```

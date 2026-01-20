@@ -92,7 +92,7 @@ Load file from this url <https://raw.githubusercontent.com/github/spec-kit/7e568
 
 ### Checklists Template
 
-Load file from this url <https://raw.githubusercontent.com/NeoLabHQ/context-engineering-kit/refs/heads/master/plugins/sdd/templates/spec-checklist.md> and write it to `specs/templates/spec-checklist.md` using `curl` or `wget` command.
+Load file from this url <https://raw.githubusercontent.com/NeoLabHQ/context_engineering-kit/refs/heads/master/plugins/sdd/templates/spec-checklist.md> and write it to `specs/templates/spec-checklist.md` using `curl` or `wget` command.
 
 ### Tasks Template
 

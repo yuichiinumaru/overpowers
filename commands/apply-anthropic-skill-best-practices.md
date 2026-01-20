@@ -894,7 +894,7 @@ Skills run in the code execution environment with platform-specific limitations:
 - **claude.ai**: Can install packages from npm and PyPI and pull from GitHub repositories
 - **Anthropic API**: Has no network access and no runtime package installation
 
-List required packages in your SKILL.md and verify they're available in the [code execution tool documentation](docs.claude.com/en/docs/agents-and-tools/tool-use/code-execution-tool).
+List required packages in your SKILL.md and verify they're available in the [code execution tool documentation](docs.claude.com/en/docs/agents-and-tools/tool-use/code_execution-tool).
 
 ### Runtime environment
 

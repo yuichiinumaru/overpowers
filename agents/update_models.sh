@@ -18,10 +18,10 @@ update_model() {
 echo "═══════════════════════════════════════════════════════════════"
 echo "🧠 TIER 1 - Gemini 3 Pro High (Brainstorm & Criatividade)"
 echo "═══════════════════════════════════════════════════════════════"
-for f in ai-engineer architect-reviewer business-analyst cloud-architect \
-         competitive-analyst llm-architect market-researcher microservices-architect \
-         multi-agent-coordinator platform-engineer product-manager prompt-engineer \
-         research-analyst trend-analyst ux-researcher workflow-orchestrator; do
+for f in ai_engineer architect_reviewer business_analyst cloud_architect \
+         competitive_analyst llm_architect market_researcher microservices_architect \
+         multi_agent_coordinator platform_engineer product_manager prompt_engineer \
+         research_analyst trend_analyst ux_researcher workflow-orchestrator; do
     update_model "${f}.md" "gemini-3-pro-preview"
 done
 
@@ -29,10 +29,10 @@ echo ""
 echo "═══════════════════════════════════════════════════════════════"
 echo "🔍 TIER 2 - Claude Opus 4.5 (Revisão & Planejamento)"
 echo "═══════════════════════════════════════════════════════════════"
-for f in code-reviewer code-quality-reviewer performance-reviewer security-code-reviewer \
-         security-auditor compliance-auditor refactoring-specialist legacy-modernizer \
-         risk-manager context-manager dependency-manager error-detective error-coordinator \
-         debugger incident-responder pr-readiness-reviewer test-coverage-reviewer; do
+for f in code_reviewer code_quality_reviewer performance_reviewer security_code_reviewer \
+         security_auditor compliance_auditor refactoring_specialist legacy_modernizer \
+         risk_manager context_manager dependency_manager error_detective error_coordinator \
+         debugger incident_responder pr_readiness_reviewer test-coverage-reviewer; do
     update_model "${f}.md" "claude-opus-4-5"
 done
 
@@ -40,17 +40,17 @@ echo ""
 echo "═══════════════════════════════════════════════════════════════"
 echo "✍️ TIER 3 - Claude 4.5 Sonnet (Documentação & Código Geral)"
 echo "═══════════════════════════════════════════════════════════════"
-for f in technical-writer documentation-engineer api-documenter release-notes-writer \
-         knowledge-synthesizer git-summarizer test-plan-writer todo-fixme-scanner \
-         seo-specialist content-marketer documentation-accuracy-reviewer \
-         python-pro django-developer backend-developer api-designer \
-         java-architect kotlin-specialist spring-boot-engineer \
-         csharp-developer dotnet-core-expert dotnet-framework-4-8-expert \
-         frontend-developer react-specialist vue-expert angular-architect nextjs-developer \
-         fullstack-developer graphql-architect \
-         mobile-developer mobile-app-developer flutter-expert swift-expert \
-         database-administrator database-optimizer postgres-pro sql-pro \
-         mcp-developer websocket-engineer data-engineer; do
+for f in technical_writer documentation_engineer api_documenter release_notes_writer \
+         knowledge_synthesizer git_summarizer test_plan_writer todo_fixme_scanner \
+         seo_specialist content_marketer documentation_accuracy_reviewer \
+         python_pro django_developer backend_developer api_designer \
+         java_architect kotlin_specialist spring_boot_engineer \
+         csharp_developer dotnet_core_expert dotnet_framework_4_8_expert \
+         frontend_developer react_specialist vue_expert angular_architect nextjs_developer \
+         fullstack_developer graphql_architect \
+         mobile_developer mobile_app_developer flutter_expert swift_expert \
+         database_administrator database_optimizer postgres_pro sql_pro \
+         mcp_developer websocket_engineer data-engineer; do
     update_model "${f}.md" "claude-sonnet-4-5"
 done
 
@@ -58,13 +58,13 @@ echo ""
 echo "═══════════════════════════════════════════════════════════════"
 echo "⚡ TIER 4 - Gemini 3 Flash High (Performance & Debug)"
 echo "═══════════════════════════════════════════════════════════════"
-for f in performance-engineer performance-monitor chaos-engineer sre-engineer \
-         rust-engineer cpp-pro golang-pro embedded-systems \
-         kubernetes-specialist terraform-engineer devops-engineer security-engineer \
-         machine-learning-engineer ml-engineer mlops-engineer data-scientist nlp-engineer \
-         qa-expert test-automator devops-incident-responder \
-         fintech-engineer payment-integration penetration-tester scrum-master \
-         project-manager legal-advisor customer-success-manager sales-engineer; do
+for f in performance_engineer performance_monitor chaos_engineer sre_engineer \
+         rust_engineer cpp_pro golang_pro embedded_systems \
+         kubernetes_specialist terraform_engineer devops_engineer security_engineer \
+         machine_learning_engineer ml_engineer mlops_engineer data_scientist nlp_engineer \
+         qa_expert test_automator devops_incident_responder \
+         fintech_engineer payment_integration penetration_tester scrum_master \
+         project_manager legal_advisor customer_success_manager sales-engineer; do
     update_model "${f}.md" "gemini-3-flash-preview"
 done
 
@@ -72,8 +72,8 @@ echo ""
 echo "═══════════════════════════════════════════════════════════════"
 echo "🆓 TIER 5a - grok-code (JS/TS Ecosystem)"
 echo "═══════════════════════════════════════════════════════════════"
-for f in javascript-pro typescript-pro electron-pro cli-developer \
-         search-specialist accessibility-tester; do
+for f in javascript_pro typescript_pro electron_pro cli_developer \
+         search_specialist accessibility-tester; do
     update_model "${f}.md" "grok-code"
 done
 
@@ -81,7 +81,7 @@ echo ""
 echo "═══════════════════════════════════════════════════════════════"
 echo "🆓 TIER 5b - glm-4.7-free (PHP/WordPress)"
 echo "═══════════════════════════════════════════════════════════════"
-for f in php-pro laravel-specialist wordpress-master git-workflow-manager \
+for f in php_pro laravel_specialist wordpress_master git_workflow_manager \
          tooling-engineer; do
     update_model "${f}.md" "glm-4.7-free"
 done
@@ -90,8 +90,8 @@ echo ""
 echo "═══════════════════════════════════════════════════════════════"
 echo "🆓 TIER 5c - big-pickle (Ruby/Rails & Misc)"
 echo "═══════════════════════════════════════════════════════════════"
-for f in rails-expert blockchain-developer game-developer task-distributor \
-         agent-organizer quant-analyst; do
+for f in rails_expert blockchain_developer game_developer task_distributor \
+         agent_organizer quant-analyst; do
     update_model "${f}.md" "big-pickle"
 done
 
@@ -99,8 +99,8 @@ echo ""
 echo "═══════════════════════════════════════════════════════════════"
 echo "🆓 TIER 5d - minimax-m2.1-free (Operacional)"
 echo "═══════════════════════════════════════════════════════════════"
-for f in iot-engineer network-engineer build-engineer deployment-engineer \
-         dx-optimizer data-analyst data-researcher ui-designer; do
+for f in iot_engineer network_engineer build_engineer deployment_engineer \
+         dx_optimizer data_analyst data_researcher ui-designer; do
     update_model "${f}.md" "minimax-m2.1-free"
 done
 

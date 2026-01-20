@@ -71,7 +71,7 @@ echo "Turn 2 complete."
 echo ""
 
 # Turn 3: The critical test - ask for subagent-driven-development
-echo ">>> Turn 3: Requesting subagent-driven-development..."
+echo ">>> Turn 3: Requesting subagent_driven_development..."
 TURN3_LOG="$OUTPUT_DIR/turn3.json"
 claude -p "subagent-driven-development, please" \
     --continue \
@@ -89,10 +89,10 @@ echo "=== Results ==="
 # Check if skill was triggered in Turn 3
 SKILL_PATTERN='"skill":"([^"]*:)?subagent-driven-development"'
 if grep -q '"name":"Skill"' "$TURN3_LOG" && grep -qE "$SKILL_PATTERN" "$TURN3_LOG"; then
-    echo "PASS: Skill 'subagent-driven-development' was triggered in Turn 3"
+    echo "PASS: Skill 'subagent_driven_development' was triggered in Turn 3"
     TRIGGERED=true
 else
-    echo "FAIL: Skill 'subagent-driven-development' was NOT triggered in Turn 3"
+    echo "FAIL: Skill 'subagent_driven_development' was NOT triggered in Turn 3"
     TRIGGERED=false
 fi
 

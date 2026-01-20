@@ -109,7 +109,7 @@ Read and follow Overpowers/workflows/feature-development.md
 
 **Sequential execution:**
 ```
-1. Follow step 1 of the code-review workflow
+1. Follow step 1 of the code_review workflow
 2. Wait for my feedback
 3. Continue with step 2
 ```

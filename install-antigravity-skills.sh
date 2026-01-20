@@ -171,36 +171,36 @@ select_language() {
 
 # Selected skills to install (curated best-of)
 CORE_SKILLS=(
-    "subagent-orchestration"
-    "code-review"
-    "code-refactoring"
-    "test-driven-development"
-    "systematic-debugging"
-    "verification-quality"
+    "subagent_orchestration"
+    "code_review"
+    "code_refactoring"
+    "test_driven_development"
+    "systematic_debugging"
+    "verification_quality"
 )
 
 PRODUCTIVITY_SKILLS=(
     "brainstorming"
-    "changelog-generator"
-    "codebase-documenter"
-    "technical-doc-creator"
-    "web-research"
+    "changelog_generator"
+    "codebase_documenter"
+    "technical_doc_creator"
+    "web_research"
 )
 
 ADVANCED_SKILLS=(
-    "dispatching-parallel-agents"
-    "ensemble-solving"
-    "swarm-orchestration"
-    "flow-nexus-swarm"
-    "v3-swarm-coordination"
+    "dispatching_parallel_agents"
+    "ensemble_solving"
+    "swarm_orchestration"
+    "flow_nexus_swarm"
+    "v3_swarm_coordination"
 )
 
 DEV_SKILLS=(
-    "backend-development"
-    "database-design"
-    "python-development"
-    "javascript-typescript"
-    "react-best-practices"
+    "backend_development"
+    "database_design"
+    "python_development"
+    "javascript_typescript"
+    "react_best_practices"
 )
 
 # ============================================================================

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run a subagent-driven-development test
+# Run a subagent_driven_development test
 # Usage: ./run-test.sh <test-name> [--plugin-dir <path>]
 #
 # Example:
@@ -43,7 +43,7 @@ fi
 
 # Create timestamped output directory
 TIMESTAMP=$(date +%s)
-OUTPUT_BASE="/tmp/Overpowers-tests/$TIMESTAMP/subagent-driven-development"
+OUTPUT_BASE="/tmp/Overpowers-tests/$TIMESTAMP/subagent_driven_development"
 OUTPUT_DIR="$OUTPUT_BASE/$TEST_NAME"
 mkdir -p "$OUTPUT_DIR"
 

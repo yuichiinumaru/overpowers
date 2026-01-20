@@ -4,53 +4,53 @@
   "total_consolidated": 48,
   "consolidated_skills": [
     "docx",
-    "database-design",
-    "skill-creator",
-    "canvas-design",
+    "database_design",
+    "skill_creator",
+    "canvas_design",
     "xlsx",
-    "theme-factory",
-    "brand-guidelines",
-    "llm-application-dev",
-    "mcp-builder",
-    "internal-comms",
-    "algorithmic-art",
-    "code-review",
-    "qa-regression",
-    "changelog-generator",
+    "theme_factory",
+    "brand_guidelines",
+    "llm_application_dev",
+    "mcp_builder",
+    "internal_comms",
+    "algorithmic_art",
+    "code_review",
+    "qa_regression",
+    "changelog_generator",
     "pdf",
-    "web-design-guidelines",
-    "content-research-writer",
-    "vercel-deploy",
-    "expo-app-design",
-    "file-organizer",
-    "react-best-practices",
-    "expo-deployment",
-    "code-documentation",
-    "webapp-testing",
+    "web_design_guidelines",
+    "content_research_writer",
+    "vercel_deploy",
+    "expo_app_design",
+    "file_organizer",
+    "react_best_practices",
+    "expo_deployment",
+    "code_documentation",
+    "webapp_testing",
     "pptx",
-    "meeting-insights-analyzer",
-    "frontend-design",
-    "doc-coauthoring",
-    "code-refactoring",
-    "upgrading-expo",
-    "code-auditor",
-    "aws-mcp-setup",
-    "aws-cost-operations",
-    "aws-serverless-eda",
-    "aws-cdk-development",
-    "aws-agentic-ai",
-    "playwright-skill",
-    "ios-simulator-skill",
-    "csv-data-summarizer",
-    "claude-settings-audit",
-    "vercel-react-best-practices",
-    "audit-prep-assistant",
-    "audit-context-building",
-    "receiving-code-review",
-    "requesting-code-review",
-    "data-fetching",
-    "hugging-face-datasets",
-    "web-artifacts-builder"
+    "meeting_insights_analyzer",
+    "frontend_design",
+    "doc_coauthoring",
+    "code_refactoring",
+    "upgrading_expo",
+    "code_auditor",
+    "aws_mcp_setup",
+    "aws_cost_operations",
+    "aws_serverless_eda",
+    "aws_cdk_development",
+    "aws_agentic_ai",
+    "playwright_skill",
+    "ios_simulator_skill",
+    "csv_data_summarizer",
+    "claude_settings_audit",
+    "vercel_react_best_practices",
+    "audit_prep_assistant",
+    "audit_context_building",
+    "receiving_code_review",
+    "requesting_code_review",
+    "data_fetching",
+    "hugging_face_datasets",
+    "web_artifacts_builder"
   ],
   "all_skills": [
     {
@@ -64,9 +64,9 @@
       "priority": true
     },
     {
-      "name": "image-enhancer",
+      "name": "image_enhancer",
       "description": "Improves the quality of images, especially screenshots, by enhancing resolution, sharpness, and clarity. Perfect for preparing images for presentations, documentation, or social media posts.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/image-enhancer",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/image_enhancer",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -74,9 +74,9 @@
       "priority": false
     },
     {
-      "name": "python-development",
+      "name": "python_development",
       "description": "Modern Python development with Python 3.12+, Django, FastAPI, async patterns, and production best practices. Use for Python projects, APIs, data processing, or automation scripts.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/python-development",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/python_development",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -84,9 +84,9 @@
       "priority": false
     },
     {
-      "name": "database-design",
+      "name": "database_design",
       "description": "Database schema design, optimization, and migration patterns for PostgreSQL, MySQL, and NoSQL databases. Use for designing schemas, writing migrations, or optimizing queries.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/database-design",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/database_design",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -94,9 +94,9 @@
       "priority": true
     },
     {
-      "name": "javascript-typescript",
+      "name": "javascript_typescript",
       "description": "JavaScript and TypeScript development with ES6+, Node.js, React, and modern web frameworks. Use for frontend, backend, or full-stack JavaScript/TypeScript projects.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/javascript-typescript",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/javascript_typescript",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -104,9 +104,9 @@
       "priority": false
     },
     {
-      "name": "skill-creator",
+      "name": "skill_creator",
       "description": "Guide for creating effective skills. Use when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrati",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/skill-creator",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/skill_creator",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -114,9 +114,9 @@
       "priority": true
     },
     {
-      "name": "canvas-design",
+      "name": "canvas_design",
       "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. Use when the user asks to create a poster, piece of art, design, or other static visual piece. Creates original visual d",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/canvas-design",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/canvas_design",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -134,9 +134,9 @@
       "priority": true
     },
     {
-      "name": "theme-factory",
+      "name": "theme_factory",
       "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact t",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/theme-factory",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/theme_factory",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -144,9 +144,9 @@
       "priority": true
     },
     {
-      "name": "brand-guidelines",
+      "name": "brand_guidelines",
       "description": "Apply brand colors and typography to artifacts. Use when brand colors, style guidelines, visual formatting, or company design standards apply. Ensures consistency across branded content.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/brand-guidelines",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/brand_guidelines",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -154,9 +154,9 @@
       "priority": true
     },
     {
-      "name": "llm-application-dev",
+      "name": "llm_application_dev",
       "description": "Building applications with Large Language Models - prompt engineering, RAG patterns, and LLM integration. Use for AI-powered features, chatbots, or LLM-based automation.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/llm-application-dev",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/llm_application_dev",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -164,9 +164,9 @@
       "priority": true
     },
     {
-      "name": "mcp-builder",
+      "name": "mcp_builder",
       "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate externa",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/mcp-builder",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/mcp_builder",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -174,9 +174,9 @@
       "priority": true
     },
     {
-      "name": "invoice-organizer",
+      "name": "invoice_organizer",
       "description": "Automatically organizes invoices and receipts for tax preparation by reading messy files, extracting key information, renaming them consistently, and sorting them into logical folders. Turns hours of ",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/invoice-organizer",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/invoice_organizer",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -184,9 +184,9 @@
       "priority": false
     },
     {
-      "name": "internal-comms",
+      "name": "internal_comms",
       "description": "Write internal communications using company formats. Use when writing status reports, leadership updates, company newsletters, FAQs, incident reports, project updates, or any internal communications.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/internal-comms",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/internal_comms",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -194,9 +194,9 @@
       "priority": true
     },
     {
-      "name": "algorithmic-art",
+      "name": "algorithmic_art",
       "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use when users request creating art using code, generative art, algorithmic art, flow fields, or part",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/algorithmic-art",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/algorithmic_art",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -204,9 +204,9 @@
       "priority": true
     },
     {
-      "name": "code-review",
+      "name": "code_review",
       "description": "Automated code review for pull requests using specialized review patterns. Analyzes code for quality, security, performance, and best practices. Use when reviewing code changes, PRs, or doing code aud",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/code-review",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/code_review",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -214,9 +214,9 @@
       "priority": true
     },
     {
-      "name": "qa-regression",
+      "name": "qa_regression",
       "description": "Automate QA regression testing with reusable test skills. Create login flows, dashboard checks, user creation, and other common test scenarios that run consistently.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/qa-regression",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/qa_regression",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -224,9 +224,9 @@
       "priority": true
     },
     {
-      "name": "changelog-generator",
+      "name": "changelog_generator",
       "description": "Automatically creates user-facing changelogs from git commits by analyzing commit history, categorizing changes, and transforming technical commits into clear, customer-friendly release notes. Turns h",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/changelog-generator",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/changelog_generator",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -234,9 +234,9 @@
       "priority": true
     },
     {
-      "name": "domain-name-brainstormer",
+      "name": "domain_name_brainstormer",
       "description": "Generates creative domain name ideas for your project and checks availability across multiple TLDs (.com, .io, .dev, .ai, etc.). Saves hours of brainstorming and manual checking.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/domain-name-brainstormer",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/domain_name_brainstormer",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -244,9 +244,9 @@
       "priority": false
     },
     {
-      "name": "developer-growth-analysis",
+      "name": "developer_growth_analysis",
       "description": "Analyzes your recent Claude Code chat history to identify coding patterns, development gaps, and areas for improvement, curates relevant learning resources from HackerNews, and automatically sends a p",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/developer-growth-analysis",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/developer_growth_analysis",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -254,9 +254,9 @@
       "priority": false
     },
     {
-      "name": "artifacts-builder",
+      "name": "artifacts_builder",
       "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state manag",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/artifacts-builder",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/artifacts_builder",
       "repo": "10",
       "has_scripts": true,
       "has_references": false,
@@ -284,9 +284,9 @@
       "priority": false
     },
     {
-      "name": "web-design-guidelines",
+      "name": "web_design_guidelines",
       "description": "Modern web design principles for responsive layouts, accessibility, and visual hierarchy.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/web-design-guidelines",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/web_design_guidelines",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -294,9 +294,9 @@
       "priority": true
     },
     {
-      "name": "content-research-writer",
+      "name": "content_research_writer",
       "description": "Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing proc",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/content-research-writer",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/content_research_writer",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -304,9 +304,9 @@
       "priority": true
     },
     {
-      "name": "lead-research-assistant",
+      "name": "lead_research_assistant",
       "description": "Identifies high-quality leads for your product or service by analyzing your business, searching for target companies, and providing actionable contact strategies. Perfect for sales, business developme",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/lead-research-assistant",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/lead_research_assistant",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -314,9 +314,9 @@
       "priority": false
     },
     {
-      "name": "backend-development",
+      "name": "backend_development",
       "description": "Backend API design, database architecture, microservices patterns, and test-driven development. Use for designing APIs, database schemas, or backend system architecture.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/backend-development",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/backend_development",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -324,9 +324,9 @@
       "priority": false
     },
     {
-      "name": "vercel-deploy",
+      "name": "vercel_deploy",
       "description": "Deploy applications to Vercel with edge functions, serverless, and ISR.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/vercel-deploy",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/vercel_deploy",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -334,9 +334,9 @@
       "priority": true
     },
     {
-      "name": "expo-app-design",
+      "name": "expo_app_design",
       "description": "Build beautiful cross-platform mobile apps with Expo Router, NativeWind, and React Native.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/expo-app-design",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/expo_app_design",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -344,9 +344,9 @@
       "priority": true
     },
     {
-      "name": "file-organizer",
+      "name": "file_organizer",
       "description": "Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/file-organizer",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/file_organizer",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -354,9 +354,9 @@
       "priority": true
     },
     {
-      "name": "slack-gif-creator",
+      "name": "slack_gif_creator",
       "description": "Toolkit for creating animated GIFs optimized for Slack, with validators for size constraints and composable animation primitives. This skill applies when users request animated GIFs or emoji animation",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/slack-gif-creator",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/slack_gif_creator",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -364,9 +364,9 @@
       "priority": false
     },
     {
-      "name": "react-best-practices",
+      "name": "react_best_practices",
       "description": "React development guidelines with hooks, component patterns, state management, and performance optimization.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/react-best-practices",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/react_best_practices",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -374,9 +374,9 @@
       "priority": true
     },
     {
-      "name": "expo-deployment",
+      "name": "expo_deployment",
       "description": "Deploy Expo apps to iOS App Store, Android Play Store, and web.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/expo-deployment",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/expo_deployment",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -384,9 +384,9 @@
       "priority": true
     },
     {
-      "name": "competitive-ads-extractor",
+      "name": "competitive_ads_extractor",
       "description": "Extracts and analyzes competitors' ads from ad libraries (Facebook, LinkedIn, etc.) to understand what messaging, problems, and creative approaches are working. Helps inspire and improve your own ad c",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/competitive-ads-extractor",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/competitive_ads_extractor",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -394,9 +394,9 @@
       "priority": false
     },
     {
-      "name": "code-documentation",
+      "name": "code_documentation",
       "description": "Writing effective code documentation - API docs, README files, inline comments, and technical guides. Use for documenting codebases, APIs, or writing developer guides.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/code-documentation",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/code_documentation",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -404,9 +404,9 @@
       "priority": true
     },
     {
-      "name": "ask-questions-if-underspecified",
+      "name": "ask_questions_if_underspecified",
       "description": "Clarify requirements before implementing. Do not use automatically, only when invoked explicitly.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/ask-questions-if-underspecified",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/ask_questions_if_underspecified",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -414,9 +414,9 @@
       "priority": false
     },
     {
-      "name": "webapp-testing",
+      "name": "webapp_testing",
       "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser l",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/webapp-testing",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/webapp_testing",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -434,9 +434,9 @@
       "priority": true
     },
     {
-      "name": "meeting-insights-analyzer",
+      "name": "meeting_insights_analyzer",
       "description": "Analyzes meeting transcripts and recordings to uncover behavioral patterns, communication insights, and actionable feedback. Identifies when you avoid conflict, use filler words, dominate conversation",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/meeting-insights-analyzer",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/meeting_insights_analyzer",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -444,9 +444,9 @@
       "priority": true
     },
     {
-      "name": "frontend-design",
+      "name": "frontend_design",
       "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples inclu",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/frontend-design",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/frontend_design",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -454,9 +454,9 @@
       "priority": true
     },
     {
-      "name": "doc-coauthoring",
+      "name": "doc_coauthoring",
       "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This wor",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/doc-coauthoring",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/doc_coauthoring",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -464,9 +464,9 @@
       "priority": true
     },
     {
-      "name": "code-refactoring",
+      "name": "code_refactoring",
       "description": "Code refactoring patterns and techniques for improving code quality without changing behavior. Use for cleaning up legacy code, reducing complexity, or improving maintainability.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/code-refactoring",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/code_refactoring",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -474,9 +474,9 @@
       "priority": true
     },
     {
-      "name": "video-downloader",
+      "name": "video_downloader",
       "description": "Downloads videos from YouTube and other platforms for offline viewing, editing, or archival. Handles various formats and quality options.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/video-downloader",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/video_downloader",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -494,9 +494,9 @@
       "priority": false
     },
     {
-      "name": "jira-issues",
+      "name": "jira_issues",
       "description": "Create, update, and manage Jira issues from natural language. Use when the user wants to log bugs, create tickets, update issue status, or manage their Jira backlog.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/jira-issues",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/jira_issues",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -504,9 +504,9 @@
       "priority": false
     },
     {
-      "name": "upgrading-expo",
+      "name": "upgrading_expo",
       "description": "Guidelines for upgrading Expo SDK versions and fixing dependency issues.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/upgrading-expo",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/10/skills/upgrading_expo",
       "repo": "10",
       "has_scripts": false,
       "has_references": false,
@@ -534,9 +534,9 @@
       "priority": false
     },
     {
-      "name": "arxiv-search",
+      "name": "arxiv_search",
       "description": "Search arXiv preprint repository for papers in physics, mathematics, computer science, quantitative biology, and related fields.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/14/examples/skills/arxiv-search",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/14/examples/skills/arxiv_search",
       "repo": "14",
       "has_scripts": true,
       "has_references": false,
@@ -544,9 +544,9 @@
       "priority": false
     },
     {
-      "name": "web-research",
+      "name": "web_research",
       "description": "Use this skill for requests related to web research; it provides a structured approach to conducting comprehensive web research.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/14/examples/skills/web-research",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/14/examples/skills/web_research",
       "repo": "14",
       "has_scripts": false,
       "has_references": false,
@@ -644,9 +644,9 @@
       "priority": false
     },
     {
-      "name": "prompt-optimizer",
+      "name": "prompt_optimizer",
       "description": "This skill should be used when users request help optimizing, improving, or refining their prompts or instructions for AI models. Use this skill when users provide vague, unclear, or poorly structured",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/17/prompt-optimizer",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/17/prompt_optimizer",
       "repo": "17",
       "has_scripts": false,
       "has_references": true,
@@ -664,9 +664,9 @@
       "priority": false
     },
     {
-      "name": "skill-evaluator",
+      "name": "skill_evaluator",
       "description": "Evaluates agent skills against Anthropic's best practices. Use when asked to review, evaluate, assess, or audit a skill for quality. Analyzes SKILL.md structure, naming conventions, description qualit",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/19/.skills/experimental/skill-evaluator",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/19/.skills/experimental/skill_evaluator",
       "repo": "19",
       "has_scripts": true,
       "has_references": true,
@@ -694,9 +694,9 @@
       "priority": false
     },
     {
-      "name": "file-operations",
+      "name": "file_operations",
       "description": "Analyze files and get detailed metadata including size, line counts, modification times, and content statistics. Use when users request file information, statistics, or analysis without modifying file",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/code-operations-plugin/skills/file-operations",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/code-operations-plugin/skills/file_operations",
       "repo": "20",
       "has_scripts": false,
       "has_references": false,
@@ -704,9 +704,9 @@
       "priority": false
     },
     {
-      "name": "code-execution",
+      "name": "code_execution",
       "description": "Execute Python code locally with marketplace API access for 90%+ token savings on bulk operations. Activates when user requests bulk operations (10+ files), complex multi-step workflows, iterative pro",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/code-operations-plugin/skills/code-execution",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/code-operations-plugin/skills/code_execution",
       "repo": "20",
       "has_scripts": false,
       "has_references": false,
@@ -714,9 +714,9 @@
       "priority": false
     },
     {
-      "name": "code-transfer",
+      "name": "code_transfer",
       "description": "Transfer code between files with line-based precision. Use when users request copying code from one location to another, moving functions or classes between files, extracting code blocks, or inserting",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/code-operations-plugin/skills/code-transfer",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/code-operations-plugin/skills/code_transfer",
       "repo": "20",
       "has_scripts": true,
       "has_references": false,
@@ -724,9 +724,9 @@
       "priority": false
     },
     {
-      "name": "code-refactor",
+      "name": "code_refactor",
       "description": "Perform bulk code refactoring operations like renaming variables/functions across files, replacing patterns, and updating API calls. Use when users request renaming identifiers, replacing deprecated c",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/code-operations-plugin/skills/code-refactor",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/code-operations-plugin/skills/code_refactor",
       "repo": "20",
       "has_scripts": false,
       "has_references": false,
@@ -734,9 +734,9 @@
       "priority": false
     },
     {
-      "name": "flowchart-creator",
+      "name": "flowchart_creator",
       "description": "Create HTML flowcharts and process diagrams with decision trees, color-coded stages, arrows, and swimlanes. Use when users request flowcharts, process diagrams, workflow visualizations, or decision tr",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/visual-documentation-plugin/skills/flowchart-creator",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/visual-documentation-plugin/skills/flowchart_creator",
       "repo": "20",
       "has_scripts": false,
       "has_references": true,
@@ -744,9 +744,9 @@
       "priority": false
     },
     {
-      "name": "architecture-diagram-creator",
+      "name": "architecture_diagram_creator",
       "description": "Create comprehensive HTML architecture diagrams showing data flows, business objectives, features, technical architecture, and deployment. Use when users request system architecture, project documenta",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/visual-documentation-plugin/skills/architecture-diagram-creator",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/visual-documentation-plugin/skills/architecture_diagram_creator",
       "repo": "20",
       "has_scripts": false,
       "has_references": true,
@@ -754,9 +754,9 @@
       "priority": false
     },
     {
-      "name": "dashboard-creator",
+      "name": "dashboard_creator",
       "description": "Create HTML dashboards with KPI metric cards, bar/pie/line charts, progress indicators, and data visualizations. Use when users request dashboards, metrics displays, KPI visualizations, data charts, o",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/visual-documentation-plugin/skills/dashboard-creator",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/visual-documentation-plugin/skills/dashboard_creator",
       "repo": "20",
       "has_scripts": false,
       "has_references": true,
@@ -764,9 +764,9 @@
       "priority": false
     },
     {
-      "name": "technical-doc-creator",
+      "name": "technical_doc_creator",
       "description": "Create HTML technical documentation with code blocks, API workflows, system architecture diagrams, and syntax highlighting. Use when users request technical documentation, API docs, API references, co",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/visual-documentation-plugin/skills/technical-doc-creator",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/visual-documentation-plugin/skills/technical_doc_creator",
       "repo": "20",
       "has_scripts": false,
       "has_references": true,
@@ -774,9 +774,9 @@
       "priority": false
     },
     {
-      "name": "timeline-creator",
+      "name": "timeline_creator",
       "description": "Create HTML timelines and project roadmaps with Gantt charts, milestones, phase groupings, and progress indicators. Use when users request timelines, roadmaps, Gantt charts, project schedules, or mile",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/visual-documentation-plugin/skills/timeline-creator",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/visual-documentation-plugin/skills/timeline_creator",
       "repo": "20",
       "has_scripts": false,
       "has_references": true,
@@ -784,9 +784,9 @@
       "priority": false
     },
     {
-      "name": "test-fixing",
+      "name": "test_fixing",
       "description": "Run tests and systematically fix all failing tests using smart error grouping. Use when user asks to fix failing tests, mentions test failures, runs test suite and failures occur, or requests to make ",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/engineering-workflow-plugin/skills/test-fixing",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/engineering-workflow-plugin/skills/test_fixing",
       "repo": "20",
       "has_scripts": false,
       "has_references": false,
@@ -794,9 +794,9 @@
       "priority": false
     },
     {
-      "name": "ensemble-solving",
+      "name": "ensemble_solving",
       "description": "Generate multiple diverse solutions in parallel and select the best. Use for architecture decisions, code generation with multiple valid approaches, or creative tasks where exploring alternatives impr",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/engineering-workflow-plugin/skills/ensemble-solving",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/engineering-workflow-plugin/skills/ensemble_solving",
       "repo": "20",
       "has_scripts": false,
       "has_references": true,
@@ -804,9 +804,9 @@
       "priority": false
     },
     {
-      "name": "git-pushing",
+      "name": "git_pushing",
       "description": "Stage, commit, and push git changes with conventional commit messages. Use when user wants to commit and push changes, mentions pushing to remote, or asks to save and push their work. Also activates w",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/engineering-workflow-plugin/skills/git-pushing",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/engineering-workflow-plugin/skills/git_pushing",
       "repo": "20",
       "has_scripts": true,
       "has_references": false,
@@ -814,9 +814,9 @@
       "priority": false
     },
     {
-      "name": "feature-planning",
+      "name": "feature_planning",
       "description": "Break down feature requests into detailed, implementable plans with clear tasks. Use when user requests a new feature, enhancement, or complex change.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/engineering-workflow-plugin/skills/feature-planning",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/engineering-workflow-plugin/skills/feature_planning",
       "repo": "20",
       "has_scripts": false,
       "has_references": true,
@@ -824,9 +824,9 @@
       "priority": false
     },
     {
-      "name": "review-implementing",
+      "name": "review_implementing",
       "description": "Process and implement code review feedback systematically. Use when user provides reviewer comments, PR feedback, code review notes, or asks to implement suggestions from reviews.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/engineering-workflow-plugin/skills/review-implementing",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/engineering-workflow-plugin/skills/review_implementing",
       "repo": "20",
       "has_scripts": false,
       "has_references": false,
@@ -834,9 +834,9 @@
       "priority": false
     },
     {
-      "name": "conversation-analyzer",
+      "name": "conversation_analyzer",
       "description": "Analyzes your Claude Code conversation history to identify patterns, common mistakes, and opportunities for workflow improvement. Use when user wants to understand usage patterns, optimize workflow, i",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/productivity-skills-plugin/skills/conversation-analyzer",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/productivity-skills-plugin/skills/conversation_analyzer",
       "repo": "20",
       "has_scripts": true,
       "has_references": false,
@@ -844,9 +844,9 @@
       "priority": false
     },
     {
-      "name": "code-auditor",
+      "name": "code_auditor",
       "description": "Performs comprehensive codebase analysis covering architecture, code quality, security, performance, testing, and maintainability. Use when user wants to audit code quality, identify technical debt, f",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/productivity-skills-plugin/skills/code-auditor",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/productivity-skills-plugin/skills/code_auditor",
       "repo": "20",
       "has_scripts": false,
       "has_references": false,
@@ -854,9 +854,9 @@
       "priority": true
     },
     {
-      "name": "codebase-documenter",
+      "name": "codebase_documenter",
       "description": "Generates comprehensive documentation explaining how a codebase works, including architecture, key components, data flow, and development guidelines. Use when user wants to understand unfamiliar code,",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/productivity-skills-plugin/skills/codebase-documenter",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/productivity-skills-plugin/skills/codebase_documenter",
       "repo": "20",
       "has_scripts": false,
       "has_references": false,
@@ -864,9 +864,9 @@
       "priority": false
     },
     {
-      "name": "project-bootstrapper",
+      "name": "project_bootstrapper",
       "description": "Sets up new projects or improves existing projects with development best practices, tooling, documentation, and workflow automation. Use when user wants to start a new project, improve project structu",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/20/productivity-skills-plugin/skills/project-bootstrapper",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/20/productivity-skills-plugin/skills/project_bootstrapper",
       "repo": "20",
       "has_scripts": false,
       "has_references": false,
@@ -884,9 +884,9 @@
       "priority": false
     },
     {
-      "name": "aws-mcp-setup",
+      "name": "aws_mcp_setup",
       "description": "Configure AWS Documentation MCP server to query up-to-date AWS knowledge, APIs, and best practices",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/22/plugins/aws-common/skills/aws-mcp-setup",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/22/plugins/aws-common/skills/aws_mcp_setup",
       "repo": "22",
       "has_scripts": false,
       "has_references": false,
@@ -894,9 +894,9 @@
       "priority": true
     },
     {
-      "name": "aws-cost-operations",
+      "name": "aws_cost_operations",
       "description": "This skill provides AWS cost optimization, monitoring, and operational best practices with integrated MCP servers for billing analysis, cost estimation, observability, and security assessment.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/22/plugins/aws-cost-ops/skills/aws-cost-operations",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/22/plugins/aws-cost-ops/skills/aws_cost_operations",
       "repo": "22",
       "has_scripts": false,
       "has_references": true,
@@ -904,9 +904,9 @@
       "priority": true
     },
     {
-      "name": "aws-serverless-eda",
+      "name": "aws_serverless_eda",
       "description": "AWS serverless and event-driven architecture expert based on Well-Architected Framework. Use when building serverless APIs, Lambda functions, REST APIs, microservices, or async workflows. Covers Lambd",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/22/plugins/serverless-eda/skills/aws-serverless-eda",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/22/plugins/serverless-eda/skills/aws_serverless_eda",
       "repo": "22",
       "has_scripts": false,
       "has_references": true,
@@ -914,9 +914,9 @@
       "priority": true
     },
     {
-      "name": "aws-cdk-development",
+      "name": "aws_cdk_development",
       "description": "AWS Cloud Development Kit (CDK) expert for building cloud infrastructure with TypeScript/Python. Use when creating CDK stacks, defining CDK constructs, implementing infrastructure as code, or when the",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/22/plugins/aws-cdk/skills/aws-cdk-development",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/22/plugins/aws-cdk/skills/aws_cdk_development",
       "repo": "22",
       "has_scripts": true,
       "has_references": true,
@@ -924,9 +924,9 @@
       "priority": true
     },
     {
-      "name": "aws-agentic-ai",
+      "name": "aws_agentic_ai",
       "description": "AWS Bedrock AgentCore comprehensive expert for deploying and managing all AgentCore services. Use when working with Gateway, Runtime, Memory, Identity, or any AgentCore component. Covers MCP target de",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/22/plugins/aws-agentic-ai/skills/aws-agentic-ai",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/22/plugins/aws_agentic_ai/skills/aws_agentic_ai",
       "repo": "22",
       "has_scripts": false,
       "has_references": false,
@@ -944,9 +944,9 @@
       "priority": false
     },
     {
-      "name": "playwright-skill",
+      "name": "playwright_skill",
       "description": "Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check responsive design, validate UX, test login flo",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/24/skills/playwright-skill",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/24/skills/playwright_skill",
       "repo": "24",
       "has_scripts": false,
       "has_references": false,
@@ -954,9 +954,9 @@
       "priority": true
     },
     {
-      "name": "ios-simulator-skill",
+      "name": "ios_simulator_skill",
       "description": "21 production-ready scripts for iOS app testing, building, and automation. Provides semantic UI navigation, build automation, accessibility testing, and simulator lifecycle management. Optimized for A",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/25/ios-simulator-skill",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/25/ios_simulator_skill",
       "repo": "25",
       "has_scripts": true,
       "has_references": false,
@@ -994,7 +994,7 @@
       "priority": false
     },
     {
-      "name": "csv-data-summarizer",
+      "name": "csv_data_summarizer",
       "description": "Analyzes CSV files, generates summary stats, and plots quick visualizations using Python and pandas.",
       "source_dir": "/home/sephiroth/.config/opencode/skill/29",
       "repo": "29",
@@ -1024,9 +1024,9 @@
       "priority": false
     },
     {
-      "name": "langsmith-fetch",
+      "name": "langsmith_fetch",
       "description": "Debug LangChain and LangGraph agents by fetching execution traces from LangSmith Studio. Use when debugging agent behavior, investigating errors, analyzing tool calls, checking memory operations, or e",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/3/langsmith-fetch",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/3/langsmith_fetch",
       "repo": "3",
       "has_scripts": false,
       "has_references": false,
@@ -1034,9 +1034,9 @@
       "priority": false
     },
     {
-      "name": "tailored-resume-generator",
+      "name": "tailored_resume_generator",
       "description": "Analyzes job descriptions and generates tailored resumes that highlight relevant experience, skills, and achievements to maximize interview chances",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/3/tailored-resume-generator",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/3/tailored_resume_generator",
       "repo": "3",
       "has_scripts": false,
       "has_references": false,
@@ -1046,7 +1046,7 @@
     {
       "name": "youtube-downloader",
       "description": "Download YouTube videos with customizable quality and format options. Use this skill when the user asks to download, save, or grab YouTube videos. Supports various quality settings (best, 1080p, 720p,",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/3/video-downloader",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/3/video_downloader",
       "repo": "3",
       "has_scripts": true,
       "has_references": false,
@@ -1064,9 +1064,9 @@
       "priority": false
     },
     {
-      "name": "dev-browser",
+      "name": "dev_browser",
       "description": "Browser automation with persistent page state. Use when users ask to navigate websites, fill forms, take screenshots, extract web data, test web apps, or automate browser workflows. Trigger phrases in",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/30/skills/dev-browser",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/30/skills/dev_browser",
       "repo": "30",
       "has_scripts": true,
       "has_references": true,
@@ -1074,7 +1074,7 @@
       "priority": false
     },
     {
-      "name": "sheets-cli",
+      "name": "sheets_cli",
       "description": "Read, write, and update Google Sheets data via CLI. Use when the user asks to read spreadsheet data, update cells, append rows, or work with Google Sheets. Triggers on mentions of spreadsheets, sheets",
       "source_dir": "/home/sephiroth/.config/opencode/skill/31",
       "repo": "31",
@@ -1124,9 +1124,9 @@
       "priority": false
     },
     {
-      "name": "claude-settings-audit",
+      "name": "claude_settings_audit",
       "description": "Analyze a repository to generate recommended Claude Code settings.json permissions. Use when setting up a new project, auditing existing settings, or determining which read-only bash commands to allow",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/49/plugins/sentry-skills/skills/claude-settings-audit",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/49/plugins/sentry-skills/skills/claude_settings_audit",
       "repo": "49",
       "has_scripts": false,
       "has_references": false,
@@ -1154,9 +1154,9 @@
       "priority": false
     },
     {
-      "name": "vercel-react-best-practices",
+      "name": "vercel_react_best_practices",
       "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patter",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/5/skills/react-best-practices",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/5/skills/react_best_practices",
       "repo": "5",
       "has_scripts": false,
       "has_references": false,
@@ -1454,9 +1454,9 @@
       "priority": false
     },
     {
-      "name": "audit-prep-assistant",
+      "name": "audit_prep_assistant",
       "description": "Prepare your codebase for security review using Trail of Bits' checklist. Helps set review goals, runs static analysis tools, increases test coverage, removes dead code, ensures accessibility, and gen",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/50/plugins/building-secure-contracts/skills/development-guidelines/audit-prep-assistant",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/50/plugins/building-secure-contracts/skills/development-guidelines/audit_prep_assistant",
       "repo": "50",
       "has_scripts": false,
       "has_references": false,
@@ -1484,9 +1484,9 @@
       "priority": false
     },
     {
-      "name": "audit-context-building",
+      "name": "audit_context_building",
       "description": "Enables ultra-granular, line-by-line code analysis to build deep architectural context before vulnerability or bug finding.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/50/plugins/audit-context-building/skills/audit-context-building",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/50/plugins/audit_context_building/skills/audit_context_building",
       "repo": "50",
       "has_scripts": false,
       "has_references": false,
@@ -1604,9 +1604,9 @@
       "priority": false
     },
     {
-      "name": "receiving-code-review",
+      "name": "receiving_code_review",
       "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/receiving-code-review",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/receiving_code_review",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1614,9 +1614,9 @@
       "priority": true
     },
     {
-      "name": "finishing-a-development-branch",
+      "name": "finishing_a_development_branch",
       "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/finishing-a-development-branch",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/finishing_a_development_branch",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1634,9 +1634,9 @@
       "priority": false
     },
     {
-      "name": "subagent-driven-development",
+      "name": "subagent_driven_development",
       "description": "Use when executing implementation plans with independent tasks in the current session",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/subagent-driven-development",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/subagent_driven_development",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1644,9 +1644,9 @@
       "priority": false
     },
     {
-      "name": "writing-skills",
+      "name": "writing_skills",
       "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/writing-skills",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/writing_skills",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1654,9 +1654,9 @@
       "priority": false
     },
     {
-      "name": "using-git-worktrees",
+      "name": "using_git_worktrees",
       "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection and safety verificat",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/using-git-worktrees",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/using_git_worktrees",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1664,9 +1664,9 @@
       "priority": false
     },
     {
-      "name": "dispatching-parallel-agents",
+      "name": "dispatching_parallel_agents",
       "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/dispatching-parallel-agents",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/dispatching_parallel_agents",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1674,9 +1674,9 @@
       "priority": false
     },
     {
-      "name": "executing-plans",
+      "name": "executing_plans",
       "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/executing-plans",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/executing_plans",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1684,9 +1684,9 @@
       "priority": false
     },
     {
-      "name": "writing-plans",
+      "name": "writing_plans",
       "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/writing-plans",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/writing_plans",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1694,9 +1694,9 @@
       "priority": false
     },
     {
-      "name": "requesting-code-review",
+      "name": "requesting_code_review",
       "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/requesting-code-review",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/requesting_code_review",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1704,9 +1704,9 @@
       "priority": true
     },
     {
-      "name": "test-driven-development",
+      "name": "test_driven_development",
       "description": "Use when implementing any feature or bugfix, before writing implementation code",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/test-driven-development",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/test_driven_development",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1714,9 +1714,9 @@
       "priority": false
     },
     {
-      "name": "systematic-debugging",
+      "name": "systematic_debugging",
       "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/systematic-debugging",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/systematic_debugging",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1724,9 +1724,9 @@
       "priority": false
     },
     {
-      "name": "verification-before-completion",
+      "name": "verification_before_completion",
       "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/verification-before-completion",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/verification_before_completion",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,
@@ -1756,7 +1756,7 @@
     {
       "name": "cicd-workflows",
       "description": "Helps understand and write EAS workflow YAML files for Expo projects. Use this skill when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/, or wants help with",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo-deployment/skills/cicd-workflows",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo_deployment/skills/cicd-workflows",
       "repo": "55",
       "has_scripts": true,
       "has_references": false,
@@ -1766,7 +1766,7 @@
     {
       "name": "deployment",
       "description": "Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo-deployment/skills/deployment",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo_deployment/skills/deployment",
       "repo": "55",
       "has_scripts": false,
       "has_references": true,
@@ -1776,7 +1776,7 @@
     {
       "name": "tailwind-setup",
       "description": "Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal styling",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo-app-design/skills/tailwind-setup",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo_app_design/skills/tailwind-setup",
       "repo": "55",
       "has_scripts": false,
       "has_references": false,
@@ -1786,7 +1786,7 @@
     {
       "name": "dev-client",
       "description": "Build and distribute Expo development clients locally or via TestFlight",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo-app-design/skills/dev-client",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo_app_design/skills/dev-client",
       "repo": "55",
       "has_scripts": false,
       "has_references": false,
@@ -1796,7 +1796,7 @@
     {
       "name": "api-routes",
       "description": "Guidelines for creating API routes in Expo Router with EAS Hosting",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo-app-design/skills/api-routes",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo_app_design/skills/api-routes",
       "repo": "55",
       "has_scripts": false,
       "has_references": false,
@@ -1804,9 +1804,9 @@
       "priority": false
     },
     {
-      "name": "data-fetching",
+      "name": "data_fetching",
       "description": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, axios, React Query, SWR, error handling, caching strategies, offline support.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo-app-design/skills/data-fetching",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo_app_design/skills/data_fetching",
       "repo": "55",
       "has_scripts": false,
       "has_references": false,
@@ -1816,7 +1816,7 @@
     {
       "name": "building-ui",
       "description": "Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling, components, navigation, animations, patterns, and native tabs.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo-app-design/skills/building-ui",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo_app_design/skills/building-ui",
       "repo": "55",
       "has_scripts": false,
       "has_references": true,
@@ -1826,7 +1826,7 @@
     {
       "name": "use-dom",
       "description": "Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate web code to native incrementally.",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo-app-design/skills/use-dom",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/55/plugins/expo_app_design/skills/use-dom",
       "repo": "55",
       "has_scripts": false,
       "has_references": false,
@@ -1834,9 +1834,9 @@
       "priority": false
     },
     {
-      "name": "hugging-face-datasets",
+      "name": "hugging_face_datasets",
       "description": "Create and manage datasets on Hugging Face Hub. Supports initializing repos, defining configs/system prompts, streaming row updates, and SQL-based dataset querying/transformation. Designed to work alo",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/7/skills/hugging-face-datasets",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/7/skills/hugging_face_datasets",
       "repo": "7",
       "has_scripts": true,
       "has_references": false,
@@ -1914,9 +1914,9 @@
       "priority": false
     },
     {
-      "name": "web-artifacts-builder",
+      "name": "web_artifacts_builder",
       "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state manag",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/8/skills/web-artifacts-builder",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/8/skills/web_artifacts_builder",
       "repo": "8",
       "has_scripts": true,
       "has_references": false,

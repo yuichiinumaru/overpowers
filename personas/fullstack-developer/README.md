@@ -45,5 +45,5 @@ npx -y @toolprint/hypertool-mcp mcp run --persona fullstack-developer
 ### Quick Start
 
 ```bash
-cp personas/fullstack-developer/mcp.json ~/.config/opencode/.mcp.json
+cp personas/fullstack_developer/mcp.json ~/.config/opencode/.mcp.json
 ```

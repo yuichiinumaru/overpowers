@@ -175,9 +175,9 @@ User directly asks for the agent's function.
 <example>
 Context: User wants code reviewed
 user: "Can you review my code changes?"
-assistant: "I'll use the code-reviewer agent to analyze the changes."
+assistant: "I'll use the code_reviewer agent to analyze the changes."
 <commentary>
-User explicitly requested code review, trigger the code-reviewer agent.
+User explicitly requested code review, trigger the code_reviewer agent.
 </commentary>
 </example>
 ```
@@ -418,15 +418,15 @@ assistant: "Great! Let me review it for quality."
 Code implementation complete. Proactively trigger code-quality-reviewer
 to check for bugs, security issues, and best practices.
 </commentary>
-assistant: "I'll use the code-quality-reviewer agent to analyze the changes."
+assistant: "I'll use the code_quality_reviewer agent to analyze the changes."
 </example>
 
 <example>
 Context: User explicitly requests review
 user: "Can you review PR #123 for code quality?"
-assistant: "I'll use the code-quality-reviewer agent to analyze the PR."
+assistant: "I'll use the code_quality_reviewer agent to analyze the PR."
 <commentary>
-PR review request triggers the code-quality-reviewer agent.
+PR review request triggers the code_quality_reviewer agent.
 </commentary>
 </example>
 

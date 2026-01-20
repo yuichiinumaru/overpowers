@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Integration Test: subagent-driven-development workflow
+# Integration Test: subagent_driven_development workflow
 # Actually executes a plan and verifies the new workflow behaviors
 set -euo pipefail
 
@@ -48,7 +48,7 @@ mkdir -p src test docs/plans
 cat > docs/plans/implementation-plan.md <<'EOF'
 # Test Implementation Plan
 
-This is a minimal plan to test the subagent-driven-development workflow.
+This is a minimal plan to test the subagent_driven_development workflow.
 
 ## Task 1: Create Add Function
 
@@ -121,7 +121,7 @@ OUTPUT_FILE="$TEST_PROJECT/claude-output.txt"
 
 # Create prompt file
 cat > "$TEST_PROJECT/prompt.txt" <<'EOF'
-I want you to execute the implementation plan at docs/plans/implementation-plan.md using the subagent-driven-development skill.
+I want you to execute the implementation plan at docs/plans/implementation-plan.md using the subagent_driven_development skill.
 
 IMPORTANT: Follow the skill exactly. I will be verifying that you:
 1. Read the plan once at the beginning
@@ -136,7 +136,7 @@ EOF
 # Note: We use a longer timeout since this is integration testing
 # Use --allowed-tools to enable tool usage in headless mode
 # IMPORTANT: Run from Overpowers directory so local dev skills are available
-PROMPT="Change to directory $TEST_PROJECT and then execute the implementation plan at docs/plans/implementation-plan.md using the subagent-driven-development skill.
+PROMPT="Change to directory $TEST_PROJECT and then execute the implementation plan at docs/plans/implementation-plan.md using the subagent_driven_development skill.
 
 IMPORTANT: Follow the skill exactly. I will be verifying that you:
 1. Read the plan once at the beginning
@@ -187,7 +187,7 @@ echo ""
 # Test 1: Skill was invoked
 echo "Test 1: Skill tool invoked..."
 if grep -q '"name":"Skill".*"skill":"Overpowers:subagent-driven-development"' "$SESSION_FILE"; then
-    echo "  [PASS] subagent-driven-development skill was invoked"
+    echo "  [PASS] subagent_driven_development skill was invoked"
 else
     echo "  [FAIL] Skill was not invoked"
     FAILED=$((FAILED + 1))
@@ -295,7 +295,7 @@ if [ $FAILED -eq 0 ]; then
     echo "STATUS: PASSED"
     echo "All verification tests passed!"
     echo ""
-    echo "The subagent-driven-development skill correctly:"
+    echo "The subagent_driven_development skill correctly:"
     echo "  ✓ Reads plan once at start"
     echo "  ✓ Provides full task text to subagents"
     echo "  ✓ Enforces self-review"

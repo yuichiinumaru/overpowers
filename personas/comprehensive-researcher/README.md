@@ -45,5 +45,5 @@ npx -y @toolprint/hypertool-mcp mcp run --persona comprehensive-researcher
 ### Quick Start
 
 ```bash
-cp personas/comprehensive-researcher/mcp.json ~/.config/opencode/.mcp.json
+cp personas/comprehensive_researcher/mcp.json ~/.config/opencode/.mcp.json
 ```

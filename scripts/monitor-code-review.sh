@@ -23,7 +23,7 @@ print_header() { local msg="$1"; echo -e "${PURPLE}[MONITOR]${NC} $msg"; return 
 
 # Configuration
 readonly REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-readonly MONITOR_LOG="$REPO_ROOT/.agent/tmp/code-review-monitor.log"
+readonly MONITOR_LOG="$REPO_ROOT/.agent/tmp/code_review-monitor.log"
 readonly STATUS_FILE="$REPO_ROOT/.agent/tmp/quality-status.json"
 
 # Create directories

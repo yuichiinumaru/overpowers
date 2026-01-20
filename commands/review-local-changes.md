@@ -45,7 +45,7 @@ Run a comprehensive code review of local uncommitted changes using multiple spec
 
 Determine Applicable Reviews, then launch up to 6 parallel Sonnet agents to independently code review all local changes. The agents should do the following, then return a list of issues and the reason each issue was flagged (eg. CLAUDE.md or constitution.md adherence, bug, historical git context, etc.).
 
-**Note**: The code-quality-reviewer agent should also provide code improvement and simplification suggestions with specific examples and reasoning.
+**Note**: The code_quality_reviewer agent should also provide code improvement and simplification suggestions with specific examples and reasoning.
 
 **Available Review Agents**:
 
@@ -62,7 +62,7 @@ Note: Default option is to run **all** applicable review agents.
 
 Based on changes summary from phase 1, determine which review agents are applicable:
 
-- **Always applicable**: bug-hunter, code-quality-reviewer (general quality), security-auditor, historical-context-reviewer
+- **Always applicable**: bug-hunter, code_quality_reviewer (general quality), security-auditor, historical-context-reviewer
 - **If test files changed**: test-coverage-reviewer
 - **If types, API, data modeling changed**: contracts-reviewer
 
@@ -87,7 +87,7 @@ Based on changes summary from phase 1, determine which review agents are applica
 
 3. Format and output the comprehensive review report including:
    - All confirmed issues from Phase 2
-   - Code improvement suggestions from the code-quality-reviewer agent
+   - Code improvement suggestions from the code_quality_reviewer agent
    - Prioritize improvements based on impact and alignment with project guidelines
 
 #### Examples of false positives, for Phase 3

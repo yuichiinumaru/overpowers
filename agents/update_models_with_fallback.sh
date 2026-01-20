@@ -90,71 +90,71 @@ CHAIN_FREE="${M_GLM}|${M_PICKLE}|${M_GROK_CODE}|${M_MINIMAX}"
 declare -A AGENT_CHAINS
 
 # CRITICAL (Code Review, Security, Compliance)
-for agent in code-reviewer code-quality-reviewer security-auditor security-code-reviewer \
-             compliance-auditor risk-manager penetration-tester incident-responder \
-             pr-readiness-reviewer test-coverage-reviewer performance-reviewer; do
+for agent in code_reviewer code_quality_reviewer security_auditor security_code_reviewer \
+             compliance_auditor risk_manager penetration_tester incident_responder \
+             pr_readiness_reviewer test_coverage_reviewer performance-reviewer; do
     AGENT_CHAINS["$agent"]="CRITICAL"
 done
 
 # ARCHITECTURE (Planning, Design, Research)
-for agent in architect-reviewer cloud-architect microservices-architect platform-engineer \
-             llm-architect ai-engineer business-analyst product-manager research-analyst \
-             ux-researcher trend-analyst competitive-analyst market-researcher \
-             workflow-orchestrator multi-agent-coordinator prompt-engineer; do
+for agent in architect_reviewer cloud_architect microservices_architect platform_engineer \
+             llm_architect ai_engineer business_analyst product_manager research_analyst \
+             ux_researcher trend_analyst competitive_analyst market_researcher \
+             workflow_orchestrator multi_agent_coordinator prompt-engineer; do
     AGENT_CHAINS["$agent"]="ARCHITECTURE"
 done
 
 # CODING (General Development)
-for agent in python-pro java-architect kotlin-specialist spring-boot-engineer \
-             csharp-developer dotnet-core-expert dotnet-framework-4-8-expert \
-             backend-developer fullstack-developer api-designer graphql-architect \
-             django-developer mobile-developer mobile-app-developer flutter-expert \
-             swift-expert database-administrator database-optimizer postgres-pro sql-pro \
+for agent in python_pro java_architect kotlin_specialist spring_boot_engineer \
+             csharp_developer dotnet_core_expert dotnet_framework_4_8_expert \
+             backend_developer fullstack_developer api_designer graphql_architect \
+             django_developer mobile_developer mobile_app_developer flutter_expert \
+             swift_expert database_administrator database_optimizer postgres_pro sql_pro \
              websocket-engineer; do
     AGENT_CHAINS["$agent"]="CODING"
 done
 
 # PERFORMANCE (Debug, Optimization, ML)
-for agent in performance-engineer performance-monitor chaos-engineer sre-engineer \
-             rust-engineer cpp-pro golang-pro embedded-systems debugger error-detective \
-             error-coordinator machine-learning-engineer ml-engineer mlops-engineer \
-             data-scientist nlp-engineer scrum-master project-manager; do
+for agent in performance_engineer performance_monitor chaos_engineer sre_engineer \
+             rust_engineer cpp_pro golang_pro embedded_systems debugger error_detective \
+             error_coordinator machine_learning_engineer ml_engineer mlops_engineer \
+             data_scientist nlp_engineer scrum_master project-manager; do
     AGENT_CHAINS["$agent"]="PERFORMANCE"
 done
 
 # TOOLING (API Integration, MCP, Data Pipelines)
-for agent in mcp-developer data-engineer dependency-manager legacy-modernizer \
-             refactoring-specialist context-manager kubernetes-specialist terraform-engineer; do
+for agent in mcp_developer data_engineer dependency_manager legacy_modernizer \
+             refactoring_specialist context_manager kubernetes_specialist terraform-engineer; do
     AGENT_CHAINS["$agent"]="TOOLING"
 done
 
 # CLI (Terminal, DevOps, Build)
-for agent in devops-engineer devops-incident-responder deployment-engineer build-engineer \
-             cli-developer qa-expert test-automator git-workflow-manager; do
+for agent in devops_engineer devops_incident_responder deployment_engineer build_engineer \
+             cli_developer qa_expert test_automator git-workflow-manager; do
     AGENT_CHAINS["$agent"]="CLI"
 done
 
 # FRONTEND (UI, JS/TS, Accessibility)
-for agent in frontend-developer react-specialist vue-expert angular-architect nextjs-developer \
-             javascript-pro typescript-pro electron-pro ui-designer accessibility-tester \
-             search-specialist seo-specialist; do
+for agent in frontend_developer react_specialist vue_expert angular_architect nextjs_developer \
+             javascript_pro typescript_pro electron_pro ui_designer accessibility_tester \
+             search_specialist seo-specialist; do
     AGENT_CHAINS["$agent"]="FRONTEND"
 done
 
 # DOCUMENTATION (Technical Writing)
-for agent in technical-writer documentation-engineer api-documenter release-notes-writer \
-             knowledge-synthesizer git-summarizer test-plan-writer todo-fixme-scanner \
-             documentation-accuracy-reviewer content-marketer; do
+for agent in technical_writer documentation_engineer api_documenter release_notes_writer \
+             knowledge_synthesizer git_summarizer test_plan_writer todo_fixme_scanner \
+             documentation_accuracy_reviewer content-marketer; do
     AGENT_CHAINS["$agent"]="DOCS"
 done
 
 # FREE (Cost Optimization - PHP, Ruby, Misc)
-for agent in php-pro laravel-specialist wordpress-master rails-expert \
-             blockchain-developer game-developer iot-engineer network-engineer \
-             fintech-engineer payment-integration quant-analyst \
-             customer-success-manager sales-engineer legal-advisor \
-             task-distributor agent-organizer tooling-engineer dx-optimizer \
-             data-analyst data-researcher; do
+for agent in php_pro laravel_specialist wordpress_master rails_expert \
+             blockchain_developer game_developer iot_engineer network_engineer \
+             fintech_engineer payment_integration quant_analyst \
+             customer_success_manager sales_engineer legal_advisor \
+             task_distributor agent_organizer tooling_engineer dx_optimizer \
+             data_analyst data-researcher; do
     AGENT_CHAINS["$agent"]="FREE"
 done
 

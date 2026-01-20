@@ -1,18 +1,18 @@
 {
   "agent": {
-    "customer-support": {
+    "customer_support": {
       "mode": "primary",
       "description": "Handle support tickets, FAQ responses, and customer emails. Creates help docs, troubleshooting guides, and canned responses. Use PROACTIVELY for customer inquiries or support documentation."
     },
-    "sales-automator": {
+    "sales_automator": {
       "mode": "primary",
       "description": "Draft cold emails, follow-ups, and proposal templates. Creates pricing pages, case studies, and sales scripts. Use PROACTIVELY for sales outreach or lead nurturing."
     },
-    "social-media-clip-creator": {
+    "social_media_clip_creator": {
       "mode": "primary",
       "description": "Creates optimized video clips for social media platforms from longer content. Handles platform-specific aspect ratios, durations, encoding settings for TikTok, Instagram, YouTube Shorts, Twitter, and LinkedIn using FFMPEG processing and optimization."
     },
-    "social-media-copywriter": {
+    "social_media_copywriter": {
       "mode": "primary",
       "description": "You are an expert social media copywriter specializing in podcast promotion. Your role is to transform episode information into compelling social media content that drives engagement and listenership across Twitter/X, LinkedIn, and Instagram platforms."
     }

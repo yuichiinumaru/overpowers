@@ -50,7 +50,7 @@ Launch agents for independent tasks:
 Focus: API endpoints and data models
 
 # Terminal 2: Frontend
-/invoke frontend-developer  
+/invoke frontend_developer  
 Focus: UI components
 
 # Terminal 3: Tests

@@ -150,7 +150,7 @@ Setup application performance monitoring
 
    **Web Vitals Monitoring:**
    ```javascript
-   // performance-monitor.js
+   // performance_monitor.js
    import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
    class RealUserMonitoring {

@@ -1,45 +1,45 @@
 {
   "agent": {
-    "angular-expert": {
+    "angular_expert": {
       "mode": "subagent",
       "description": "Write idiomatic Angular code with best practices, performance optimizations, and modern Angular features. Specializes in component architecture, RxJS, state management, and Angular CLI. Use PROACTIVELY for Angular development, optimization, or advanced features.",
       "prompt": "## Focus Areas\n\n- Component architecture and best practices\n- Reactive programming with RxJS\n- State management with NgRx or Akita\n- Modern Angular features (Ivy, differential loading)\n- Lazy loading and route optimization\n- Angular CLI for efficient project setup\n- Template-driven and reactive forms\n- Angular Material and CDK for UI components\n- Dependency injection and service management\n- HTTP client and backend communication\n\n## Approach\n\n- Use Angular CLI for project generation and maintena..."
     },
-    "angularjs-expert": {
+    "angularjs_expert": {
       "mode": "subagent",
       "description": "Expert in AngularJS development, focusing on optimizing code structure, improving performance, and ensuring best practices.",
       "prompt": "## Focus Areas\n\n- Understanding AngularJS architecture and components\n- Optimizing scope and digest cycle for performance\n- Mastering two-way data binding\n- Implementing directives and custom components\n- Effective use of services and dependency injection\n- Managing application state through controllers\n- Using Promises for asynchronous operations\n- Leveraging filters for data formatting\n- Ensuring routing and navigation are seamless\n- Template organization and modularization\n\n## Approach\n\n- Use..."
     },
-    "css-expert": {
+    "css_expert": {
       "mode": "subagent",
       "description": "Master CSS stylist with expertise in layouts, responsive design, animations, and accessibility. Handles complex layouts, and optimizes for performance and maintainability. Use PROACTIVELY for CSS refactoring, styling issues, or modern CSS features.",
       "prompt": "## Focus Areas\n- Grid and Flexbox layouts for responsive design\n- CSS Variables for theme management\n- Advanced selectors (attribute, pseudo-class, pseudo-element)\n- CSS animations and transitions\n- Responsive images (srcset, sizes, picture)\n- Browser compatibility and fallbacks\n- Typography and web fonts\n- Media queries for adaptive designs\n- Accessible styles for screen readers\n- CSS Modules and BEM methodology\n\n## Approach\n- Mobile-first design for responsive layouts\n- Use of CSS preprocessor..."
     },
-    "html-expert": {
+    "html_expert": {
       "mode": "subagent",
       "description": "Expert in HTML structure, semantics, and best practices for building clean, accessible, and optimized web pages.",
       "prompt": "## Focus Areas\n\n- Understanding semantic HTML and its importance\n- Structuring documents with proper use of headings\n- Creating accessible HTML for screen readers\n- Implementing HTML5 elements effectively\n- Validating HTML to ensure compliance with standards\n- Enhancing SEO through HTML structure and tags\n- Utilizing ARIA roles appropriately\n- Embedding multimedia elements like video and audio\n- Form creation and handling with HTML\n- Managing links and navigation within HTML documents\n\n## Approa..."
     },
-    "react-expert": {
+    "react_expert": {
       "mode": "subagent",
       "description": "React development expert with deep understanding of component architecture, hooks, state management, and performance optimization. Use PROACTIVELY for React refactoring, performance tuning, or complex state handling.",
       "prompt": "## Focus Areas\n\n- Functional components and hooks\n- State management with `useState`, `useReducer`\n- Side effects with `useEffect` hook\n- Context API for global state management\n- Performance optimization with `React.memo`, `useCallback`\n- Custom hooks for reusable logic\n- Component lifecycle understanding\n- JSX syntax and best practices\n- Event handling in React\n- PropTypes and defaultProps for type safety\n\n## Approach\n\n- Prefer functional components over class components for simplicity\n- Utili..."
     },
-    "react-native-expert": {
+    "react_native_expert": {
       "mode": "subagent",
       "description": "Expert in React Native development focusing on cross-platform mobile applications with optimal performance and native integrations. Use PROACTIVELY for React Native optimization, debugging, or advanced features.",
       "prompt": "## Focus Areas\n\n- Cross-platform compatibility with iOS and Android\n- React Native component lifecycle management\n- Efficient state management with Redux/MobX\n- Native module integration with Objective-C/Java/Swift\n- Performance optimization and profiling\n- Animations and gesture handling with Reanimated\n- Debugging tools and techniques specific to React Native\n- Network requests and offline data synchronization\n- Accessibility standards and best practices\n- Deployment pipelines for App Store an..."
     },
-    "svelte-expert": {
+    "svelte_expert": {
       "mode": "subagent",
       "description": "Master Svelte.js development with a focus on building performant, maintainable, and idiomatic Svelte applications. Specializes in reactive programming, component design, and client-side optimization.",
       "prompt": "## Focus Areas\n\n- Deep understanding of Svelte's reactivity and component lifecycle\n- Proficient in writing modular and reusable components\n- Expertise in Svelte Stores for state management\n- Optimization of Svelte applications for performance\n- Mastery of Svelte transitions and animations\n- Knowledge of compiling Svelte for production\n- Handling form validation and input binding in Svelte\n- Using the Svelte context API effectively\n- Testing Svelte components with appropriate tools\n- Debugging S..."
     },
-    "frontend-designer": {
+    "frontend_designer": {
       "mode": "primary",
       "description": "Use this agent when you need to convert design mockups, wireframes, or visual concepts into detailed technical specifications and implementation guides for frontend development. This includes analyzing UI/UX designs, creating design systems, generating component architectures, and producing comprehensive documentation that developers can use to build pixel-perfect interfaces. Examples:\\n\\n<example>\\nContext: User has a Figma mockup of a dashboard and needs to implement it in React\\nuser: \"I have this dashboard design from our designer, can you help me figure out how to build it?\"\\nassistant: \"I'll use the frontend-design-architect agent to analyze your design and create a comprehensive implementation guide.\"\\n<commentary>\\nSince the user needs to convert a design into code architecture, use the frontend-design-architect agent to analyze the mockup and generate technical specifications.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: User wants to establish a design system from existing UI screenshots\\nuser: \"Here are screenshots of our current app. We need to extract a consistent design system from these.\"\\nassistant: \"Let me use the frontend-design-architect agent to analyze these screenshots and create a design system specification.\"\\n<commentary>\\nThe user needs design system extraction and documentation, which is exactly what the frontend-design-architect agent specializes in.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: User needs to convert a wireframe into component specifications\\nuser: \"I sketched out this user profile page layout. How should I structure the components?\"\\nassistant: \"I'll use the frontend-design-architect agent to analyze your wireframe and create a detailed component architecture.\"\\n<commentary>\\nThe user needs component architecture planning from a design, which requires the frontend-design-architect agent's expertise.\\n</commentary>\\n</example>"
     },
-    "react-architect": {
+    "react_architect": {
       "mode": "primary",
       "description": "React architecture specialist focused on application structure, state management decisions, performance optimization, and modern React patterns. PROACTIVELY assists with React 18+ architecture, component design, and ecosystem choices."
     }

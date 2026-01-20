@@ -89,7 +89,7 @@ For each phase in `tasks.md` file perform following actions:
 
 ## Stage 9: Quality Review
 
-1. Perform `/code-review:review-local-changes` command if it is available, if not then launch 3 `developer` agent to review code quality by using provided prompt exactly, while prefiling required variables, each of them should focus on different aspect of code quality: simplicity/DRY/elegance, bugs/functional correctness, project conventions/abstractions. Prompt for each agent:
+1. Perform `/code_review:review-local-changes` command if it is available, if not then launch 3 `developer` agent to review code quality by using provided prompt exactly, while prefiling required variables, each of them should focus on different aspect of code quality: simplicity/DRY/elegance, bugs/functional correctness, project conventions/abstractions. Prompt for each agent:
 
    ```markdown
    **Goal**: Tasks.md file is implemented, review newly implemented code. Focus on {focus area}.
