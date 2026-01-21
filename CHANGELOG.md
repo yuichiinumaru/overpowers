@@ -8,6 +8,25 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-21] - Activation & Implementation
+
+### Added
+- **Scripts Implementation**:
+  - `scripts/codemaps/generate.ts`: Fully implemented with `ts-morph` to generate markdown codemaps.
+  - `scripts/docs/update.ts`: Fully implemented to update README and AGENTS.md stats.
+- **Dependencies**:
+  - Added `ts-morph` and `tsx` to `package.json`.
+
+### Changed
+- **Documentation**:
+  - Generated initial codemaps in `docs/CODEMAPS/`.
+  - Updated `README.md` architecture section.
+  - Updated `AGENTS.md` agent count (now 414+).
+- **Configuration**:
+  - Injected 11 new agents into `opencode-example.json` (and local config).
+
+**Author**: Jules
+
 ## [2026-01-19] - Integrated Agents and Commands from everything-claude-code
 
 ### Added
