@@ -8,6 +8,50 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - Oh My OpenCode Deep Extraction
+
+### Added
+- **`commands/builtin/refactor.md`** - Intelligent 6-phase refactoring command.
+- **`commands/builtin/start-work.md`** - Sisyphus session starter command.
+- **`skills/git-master/SKILL.md`** - Expert git workflows (rebase, bisect, pickaxe).
+- **`hooks/todo-continuation-enforcer.md`** - Documentation for task continuity logic.
+- **`scripts/devops/ralph-loop.sh`** - Recursive task execution script template.
+- **`commands/analysis/ast-grep.md`** - Usage guide for structural search/replace.
+- **`commands/analysis/lsp-usage.md`** - Usage guide for LSP operations.
+
+### Changed
+- **`AGENTS.md`** - Updated Knowledge Routing Table with new Sisyphus agents.
+- **`skills/frontend-ui-ux/SKILL.md`** - Enhanced with "Designer-Turned-Developer" persona.
+
+**Author**: Jules (Agent)
+
+---
+
+## [2026-01-19] - Oh My OpenCode Integration
+
+### Added
+- **`agents/sisyphus/sisyphus-orchestrator.md`** - Ported Sisyphus orchestration prompt.
+- **`agents/prometheus/prometheus-planner.md`** - Ported Prometheus planner persona.
+- **`agents/oracle/oracle-consultant.md`** - Ported Oracle advisor persona.
+- **`agents/explore/explore-grep.md`** - Ported Explore (Contextual Grep) agent.
+- **`agents/librarian/librarian-researcher.md`** - Ported Librarian (Researcher) agent.
+- **`commands/interactive/interactive-bash.md`** - New command for interactive tmux sessions.
+- **`scripts/devops/tmux-interactive.sh`** - Secure wrapper script for tmux interactions.
+- **`docs/oh-my-opencode-analysis.md`** - Detailed analysis report of the integration.
+
+**Author**: Jules (Agent)
+
+---
+
+## [2026-01-19] - Deep Analysis & Verification
+
+### Changed
+- **`continuity.md`** - Updated with results of comprehensive analysis session
+
+**Author**: Jules (Agent)
+
+---
+
 ## [2026-01-19] - CEO Agent & Model Fallback System
 
 ### Added
