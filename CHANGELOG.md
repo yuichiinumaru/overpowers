@@ -8,6 +8,25 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - Oh My OpenCode Deep Extraction
+
+### Added
+- **`commands/builtin/refactor.md`** - Intelligent 6-phase refactoring command.
+- **`commands/builtin/start-work.md`** - Sisyphus session starter command.
+- **`skills/git-master/SKILL.md`** - Expert git workflows (rebase, bisect, pickaxe).
+- **`hooks/todo-continuation-enforcer.md`** - Documentation for task continuity logic.
+- **`scripts/devops/ralph-loop.sh`** - Recursive task execution script template.
+- **`commands/analysis/ast-grep.md`** - Usage guide for structural search/replace.
+- **`commands/analysis/lsp-usage.md`** - Usage guide for LSP operations.
+
+### Changed
+- **`AGENTS.md`** - Updated Knowledge Routing Table with new Sisyphus agents.
+- **`skills/frontend-ui-ux/SKILL.md`** - Enhanced with "Designer-Turned-Developer" persona.
+
+**Author**: Jules (Agent)
+
+---
+
 ## [2026-01-19] - Oh My OpenCode Integration
 
 ### Added

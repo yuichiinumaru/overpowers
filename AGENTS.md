@@ -75,12 +75,13 @@ Every modification to this repository **MUST** be accompanied by an entry in `CH
 
 | IF you are doing... | THEN use... | Location |
 |:--------------------|:------------|:---------|
-| **Agent Selection** | Agent Discovery Workflow | `workflows/agent-discovery.md` |
-| **Complex Planning** | Brainstorming Skill | `skills/brainstorming/SKILL.md` |
+| **Orchestration** | Sisyphus Orchestrator | `@sisyphus-orchestrator` |
+| **Complex Planning** | Prometheus Planner | `@prometheus-planner` |
+| **Advice/Architecture** | Oracle Consultant | `@oracle-consultant` |
+| **Internal Search** | Explore (Grep) | `@explore-grep` |
+| **External Research** | Librarian (Docs) | `@librarian-researcher` |
 | **Code Review** | Code Reviewer Agent | `@code-reviewer` |
 | **Security Audit** | Security Auditor Agent | `@security-auditor` |
-| **Architecture** | Architect Review Agent | `@architect-review` |
-| **Task Breakdown** | Task Decomposition Expert | `@task-decomposition-expert` |
 | **Parallel Work** | Jules Orchestration Workflow | `workflows/jules-orchestration.md` |
 
 ---
