@@ -8,6 +8,50 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - Integrated Agents and Commands from everything-claude-code
+
+### Added
+- **Agents**:
+  - `architect.md`: Architecture specialist for system design and scalability.
+  - `doc-updater.md`: Documentation specialist for codemaps and docs.
+  - `tdd-expert.md`: TDD specialist enforcing write-tests-first.
+  - `build-error-resolver.md`: Specialist for fixing build and type errors.
+- **Commands**:
+  - `update-codemaps.md`: Command to generate architecture codemaps.
+- **Scripts**:
+  - `scripts/codemaps/generate.ts`: Skeleton for codemap generation.
+  - `scripts/docs/update.ts`: Skeleton for docs update.
+
+## [2026-01-19] - Integrated Marketing Agents from marketingskills
+
+### Added
+- **Agents**:
+  - `agents/marketing/seo-auditor.md`: Technical and on-page SEO audit specialist.
+  - `agents/marketing/copywriter.md`: Conversion copywriting expert.
+  - `agents/marketing/marketing-strategist.md`: Growth strategy advisor with 140+ tactics.
+
+## [2026-01-19] - Integrated Agents from claude-code-templates
+
+### Added
+- **Agents**:
+  - `agents/mcp/mcp-server-architect.md`: Specialist for MCP server design.
+  - `agents/research/research-orchestrator.md`: Coordinator for research projects.
+  - `agents/research/research-synthesizer.md`: Analyst for research synthesis.
+
+## [2026-01-19] - Integrated Monitoring Script from omnara
+
+### Added
+- **Scripts**:
+  - `scripts/monitoring/claude-monitor.py`: Python wrapper for Claude Code monitoring.
+
+## [2026-01-19] - Integrated Metis from oh-my-opencode
+
+### Added
+- **Agents**:
+  - `agents/sisyphus/metis-consultant.md`: Pre-planning consultant.
+
+**Author**: Jules
+
 ## [2026-01-19] - Oh My OpenCode Deep Extraction
 
 ### Added
