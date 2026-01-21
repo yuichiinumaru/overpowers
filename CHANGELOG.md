@@ -8,6 +8,22 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - Oh My OpenCode Integration
+
+### Added
+- **`agents/sisyphus/sisyphus-orchestrator.md`** - Ported Sisyphus orchestration prompt.
+- **`agents/prometheus/prometheus-planner.md`** - Ported Prometheus planner persona.
+- **`agents/oracle/oracle-consultant.md`** - Ported Oracle advisor persona.
+- **`agents/explore/explore-grep.md`** - Ported Explore (Contextual Grep) agent.
+- **`agents/librarian/librarian-researcher.md`** - Ported Librarian (Researcher) agent.
+- **`commands/interactive/interactive-bash.md`** - New command for interactive tmux sessions.
+- **`scripts/devops/tmux-interactive.sh`** - Secure wrapper script for tmux interactions.
+- **`docs/oh-my-opencode-analysis.md`** - Detailed analysis report of the integration.
+
+**Author**: Jules (Agent)
+
+---
+
 ## [2026-01-19] - Deep Analysis & Verification
 
 ### Changed
