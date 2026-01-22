@@ -8,6 +8,18 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - Browser Use Integration
+
+### Added
+- **`agents/browser-automator.md`** - New agent for browser automation tasks using `browser-use`.
+- **`skills/browser-use/SKILL.md`** - New skill providing CLI access to `browser-use` features.
+- **`scripts/setup-browser-use.sh`** - Setup script for installing `browser-use` and Playwright dependencies.
+- **`docs/browser-use-integration.md`** - Documentation for the new integration.
+
+**Author**: Jules (Agent)
+
+---
+
 ## [2026-01-19] - Oh My OpenCode Deep Extraction
 
 ### Added
