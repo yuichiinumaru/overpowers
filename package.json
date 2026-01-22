@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "ts-morph": "^27.0.2",
+    "tsx": "^4.21.0"
+  }
+}
