@@ -36,7 +36,11 @@ def extract_frontmatter(file_path):
     for line in match.group(1).split('\n'):
         if ':' in line:
             key, value = line.split(':', 1)
-            frontmatter[key.strip()] = value.strip()
+            val = value.strip()
+            # Strip surrounding quotes if present
+            if (val.startswith('"') and val.endswith('"')) or (val.startswith("'") and val.endswith("'")):
+                val = val[1:-1]
+            frontmatter[key.strip()] = val
     
     return frontmatter
 
@@ -131,11 +135,18 @@ def main():
         description = frontmatter.get('description', '')
         category = categorize_agent(name, frontmatter)
         mode = determine_mode(name, description)
+        model = frontmatter.get('model')
+        model_fallback = frontmatter.get('model_fallback')
         
         agent_config = {
             "mode": mode,
             "description": description
         }
+
+        if model:
+            agent_config["model"] = model
+        if model_fallback:
+            agent_config["model_fallback"] = model_fallback
         
         # Only include prompt for subagents to save space in main config
         if mode == 'subagent':

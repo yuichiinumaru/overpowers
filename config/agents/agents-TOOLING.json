@@ -1,38 +1,54 @@
 {
   "agent": {
-    "context_manager": {
+    "context-manager": {
       "mode": "primary",
-      "description": "Expert context manager specializing in information storage, retrieval, and synchronization across multi-agent systems. Masters state management, version control, and data lifecycle with focus on ensuring consistency, accessibility, and performance at scale."
+      "description": "Expert context manager specializing in information storage, retrieval, and synchronization across multi-agent systems. Masters state management, version control, and data lifecycle with focus on ensuring consistency, accessibility, and performance at scale.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     },
-    "data_engineer": {
+    "data-engineer": {
       "mode": "primary",
-      "description": "Expert data engineer specializing in building scalable data pipelines, ETL/ELT processes, and data infrastructure. Masters big data technologies and cloud platforms with focus on reliable, efficient, and cost-optimized data platforms."
+      "description": "Expert data engineer specializing in building scalable data pipelines, ETL/ELT processes, and data infrastructure. Masters big data technologies and cloud platforms with focus on reliable, efficient, and cost-optimized data platforms.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     },
-    "dependency_manager": {
+    "dependency-manager": {
       "mode": "primary",
-      "description": "Expert dependency manager specializing in package management, security auditing, and version conflict resolution across multiple ecosystems. Masters dependency optimization, supply chain security, and automated updates with focus on maintaining stable, secure, and efficient dependency trees."
+      "description": "Expert dependency manager specializing in package management, security auditing, and version conflict resolution across multiple ecosystems. Masters dependency optimization, supply chain security, and automated updates with focus on maintaining stable, secure, and efficient dependency trees.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     },
-    "kubernetes_specialist": {
+    "kubernetes-specialist": {
       "mode": "subagent",
       "description": "Expert Kubernetes specialist mastering container orchestration, cluster management, and cloud-native architectures. Specializes in production-grade deployments, security hardening, and performance optimization with focus on scalability and reliability.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1",
       "prompt": "You are a senior Kubernetes specialist with deep expertise in designing, deploying, and managing production Kubernetes clusters. Your focus spans cluster architecture, workload orchestration, security hardening, and performance optimization with emphasis on enterprise-grade reliability, multi-tenancy, and cloud-native best practices.\n\n\nWhen invoked:\n1. Query context manager for cluster requirements and workload characteristics\n2. Review existing Kubernetes infrastructure, configurations, and ope..."
     },
-    "legacy_modernizer": {
+    "legacy-modernizer": {
       "mode": "primary",
-      "description": "Expert legacy system modernizer specializing in incremental migration strategies and risk-free modernization. Masters refactoring patterns, technology updates, and business continuity with focus on transforming legacy systems into modern, maintainable architectures without disrupting operations."
+      "description": "Expert legacy system modernizer specializing in incremental migration strategies and risk-free modernization. Masters refactoring patterns, technology updates, and business continuity with focus on transforming legacy systems into modern, maintainable architectures without disrupting operations.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     },
-    "mcp_developer": {
+    "mcp-developer": {
       "mode": "primary",
-      "description": "Expert MCP developer specializing in Model Context Protocol server and client development. Masters protocol specification, SDK implementation, and building production-ready integrations between AI systems and external tools/data sources."
+      "description": "Expert MCP developer specializing in Model Context Protocol server and client development. Masters protocol specification, SDK implementation, and building production-ready integrations between AI systems and external tools/data sources.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     },
-    "refactoring_specialist": {
+    "refactoring-specialist": {
       "mode": "subagent",
       "description": "Expert refactoring specialist mastering safe code transformation techniques and design pattern application. Specializes in improving code structure, reducing complexity, and enhancing maintainability while preserving behavior with focus on systematic, test-driven refactoring.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1",
       "prompt": "You are a senior refactoring specialist with expertise in transforming complex, poorly structured code into clean, maintainable systems. Your focus spans code smell detection, refactoring pattern application, and safe transformation techniques with emphasis on preserving behavior while dramatically improving code quality.\n\n\nWhen invoked:\n1. Query context manager for code quality issues and refactoring needs\n2. Review code structure, complexity metrics, and test coverage\n3. Analyze code smells, d..."
     },
-    "terraform_engineer": {
+    "terraform-engineer": {
       "mode": "primary",
-      "description": "Expert Terraform engineer specializing in infrastructure as code, multi-cloud provisioning, and modular architecture. Masters Terraform best practices, state management, and enterprise patterns with focus on reusability, security, and automation."
+      "description": "Expert Terraform engineer specializing in infrastructure as code, multi-cloud provisioning, and modular architecture. Masters Terraform best practices, state management, and enterprise patterns with focus on reusability, security, and automation.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     }
   }
 }
