@@ -1,31 +1,28 @@
 # Overpowers Continuity Ledger
 
-## Session: 2026-01-19 - AI-Coders Context PREVC Integration
+## Session: 2026-01-19 - Awesome OpenCode References Extraction
 **Operator**: Jules (Agent)
-**Focus**: Integration of PREVC Workflow and Agents from `ai-coders-context`
+**Focus**: Extraction of references from `awesome-opencode` repository
 
 ### 🟢 Global State
-- **Agents**: Added 14 PREVC specialized agents (`prevc-code-reviewer`, etc.).
-- **Skills**: Added 10 PREVC skills (`prevc-commit-message`, etc.).
-- **Workflow**: Documented PREVC workflow in `docs/concepts/prevc-workflow.md`.
-- **Config**: Generated `config/agents/agents-prevc-context.json`.
+- **Docs**: Added `docs/references.md` with 57 curated links.
+- **Scripts**: Added `scripts/extract-awesome-references.py` for regenerating the list.
+- **Docs Index**: Updated `docs/README.md` with new links.
 
 ### 🔄 Active Contexts
 | Component | Status | Notes |
 |:----------|:-------|:------|
-| **PREVC Agents** | 🟢 Deployed | 14 agents generated with responsibilities and best practices |
-| **PREVC Skills** | 🟢 Deployed | 10 skills generated |
-| **Workflow** | 🟢 Documented | 5-phase workflow (P-R-E-V-C) documented |
+| **Awesome Refs** | 🟢 Deployed | Extracted from `data/` YAML files |
+| **PREVC Agents** | 🟢 Deployed | 14 agents generated from previous task |
+| **PREVC Skills** | 🟢 Deployed | 10 skills generated from previous task |
 
 ### ⏭️ Next Actions
-1.  **Utilization**: Experiment with `prevc-architect-specialist` for planning new features.
-2.  **Refinement**: Enhance skill content with more specific instructions if needed.
-3.  **Cross-pollination**: Compare PREVC agents with existing agents to identify gaps.
+1.  **Exploration**: Review the extracted references for potential deep integration (e.g., specific plugins or agents).
+2.  **Maintenance**: Run the extraction script periodically to keep references up to date.
 
 ### 📋 Session History
 | Date | Focus | Outcome |
 |:-----|:------|:--------|
+| 2026-01-19 | Awesome OpenCode References Extraction | Extracted 57 references to `docs/references.md`. |
 | 2026-01-19 | AI-Coders Context PREVC Integration | Full extraction of agents, skills, and workflow documentation. |
 | 2026-01-19 | Oh My OpenCode Deep Extraction | 9-cycle analysis complete. Major orchestration upgrade. |
-| 2026-01-19 | Oh My OpenCode Integration | Initial 4-cycle extraction (Agents & Tmux). |
-| 2026-01-19 | Deep Analysis & Memory Acquisition | Verified all components, scripts, and workflows. |

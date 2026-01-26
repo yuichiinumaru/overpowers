@@ -8,6 +8,20 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - Awesome OpenCode References
+
+### Added
+- **`docs/references.md`** - A curated list of 57 plugins, agents, and resources extracted from `awesome-opencode`.
+- **`scripts/extract-awesome-references.py`** - Python script to parse YAML data from `awesome-opencode` and generate the reference list.
+
+### Changed
+- **`docs/README.md`** - Added links to `references.md` and `prevc-workflow.md`.
+- **`continuity.md`** - Updated session ledger.
+
+**Author**: Jules (Agent)
+
+---
+
 ## [2026-01-19] - AI-Coders Context PREVC Integration
 
 ### Added
