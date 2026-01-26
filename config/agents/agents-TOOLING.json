@@ -12,12 +12,6 @@
       "model": "opencode/glm-4.7",
       "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     },
-    "dependency-manager": {
-      "mode": "primary",
-      "description": "Expert dependency manager specializing in package management, security auditing, and version conflict resolution across multiple ecosystems. Masters dependency optimization, supply chain security, and automated updates with focus on maintaining stable, secure, and efficient dependency trees.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
-    },
     "kubernetes-specialist": {
       "mode": "subagent",
       "description": "Expert Kubernetes specialist mastering container orchestration, cluster management, and cloud-native architectures. Specializes in production-grade deployments, security hardening, and performance optimization with focus on scalability and reliability.",
@@ -31,9 +25,9 @@
       "model": "opencode/glm-4.7",
       "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     },
-    "mcp-developer": {
+    "dependency-manager": {
       "mode": "primary",
-      "description": "Expert MCP developer specializing in Model Context Protocol server and client development. Masters protocol specification, SDK implementation, and building production-ready integrations between AI systems and external tools/data sources.",
+      "description": "Expert dependency manager specializing in package management, security auditing, and version conflict resolution across multiple ecosystems. Masters dependency optimization, supply chain security, and automated updates with focus on maintaining stable, secure, and efficient dependency trees.",
       "model": "opencode/glm-4.7",
       "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     },
@@ -43,6 +37,12 @@
       "model": "opencode/glm-4.7",
       "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1",
       "prompt": "You are a senior refactoring specialist with expertise in transforming complex, poorly structured code into clean, maintainable systems. Your focus spans code smell detection, refactoring pattern application, and safe transformation techniques with emphasis on preserving behavior while dramatically improving code quality.\n\n\nWhen invoked:\n1. Query context manager for code quality issues and refactoring needs\n2. Review code structure, complexity metrics, and test coverage\n3. Analyze code smells, d..."
+    },
+    "mcp-developer": {
+      "mode": "primary",
+      "description": "Expert MCP developer specializing in Model Context Protocol server and client development. Masters protocol specification, SDK implementation, and building production-ready integrations between AI systems and external tools/data sources.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     },
     "terraform-engineer": {
       "mode": "primary",

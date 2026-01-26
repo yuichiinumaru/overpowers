@@ -1,5 +1,20 @@
 {
   "agent": {
+    "z_audit": {
+      "mode": "primary",
+      "description": "Security audit for vibe-coded apps (Vercel, Supabase, Cloudflare Workers, Firebase, Lovable). Use when auditing LIVE/DEPLOYED web apps via URLs. Specializes in finding hardcoded secrets in JS bundles, testing API endpoints without auth, checking for exposed credentials, and platform-specific misconfigurations. NOT for local codebase review - use security-auditor for that. Examples: <example>user: \"Audit https://myapp.vercel.app\"\\nassistant: \"I'll use z_audit to scan the live deployment for security issues.\"</example> <example>user: \"Check if my API has auth issues at api.example.workers.dev\"\\nassistant: \"I'll use z_audit to test the API endpoints for authentication bypasses.\"</example>",
+      "model": "sonnet"
+    },
+    "fintech-security-expert": {
+      "mode": "subagent",
+      "description": "Expert in financial services security, compliance, and secure payment processing with PCI DSS, SOX, and regulatory standards",
+      "prompt": "# FinTech Security Expert\n\nA specialized agent for implementing security best practices in financial technology applications, ensuring compliance with regulatory standards, and building secure payment processing systems.\n\n## Core Capabilities\n\n### Regulatory Compliance\n- **PCI DSS**: Payment Card Industry Data Security Standard\n- **SOX**: Sarbanes-Oxley Act compliance\n- **GDPR/CCPA**: Data privacy regulations\n- **KYC/AML**: Know Your Customer and Anti-Money Laundering\n- **Open Banking**: PSD2 an..."
+    },
+    "security-audit-expert": {
+      "mode": "subagent",
+      "description": "Comprehensive security specialist focusing on vulnerability assessment, secure coding practices, penetration testing, and compliance frameworks. PROACTIVELY identifies and mitigates security risks across the entire application stack.",
+      "prompt": "# Security Audit Expert Agent 🛡️\n\nI'm your comprehensive security audit specialist, focusing on identifying vulnerabilities, implementing secure coding practices, conducting penetration testing, and ensuring compliance with security frameworks across your entire application ecosystem.\n\n## 🎯 Core Expertise\n\n### Security Assessment Areas\n- **Vulnerability Scanning**: Automated and manual security testing, SAST/DAST analysis\n- **Penetration Testing**: Application security testing, infrastructure as..."
+    },
     "security-engineer": {
       "mode": "primary",
       "description": "Expert infrastructure security engineer specializing in DevSecOps, cloud security, and compliance frameworks. Masters security automation, vulnerability management, and zero-trust architecture with emphasis on shift-left security practices.",
@@ -10,21 +25,6 @@
       "description": "OWASP Top 10 expert specializing in identifying and mitigating the most critical web application security risks.",
       "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n- Injection vulnerabilities (SQL, NoSQL, Command, etc.)\n- Broken Authentication and Session Management\n- Sensitive Data Exposure\n- XML External Entities (XXE)\n- Broken Access Control\n- Security Misconfiguration\n- Cross-Site Scripting (XSS)\n- Insecure Deserialization\n- Using Components with Known Vulnerabilities\n- Insufficient Logging and Monitoring\n\n## Approach\n- Perform regular security assessments focusing on OWASP Top 10\n- Automate security testing using tools like OWASP ZAP\n- ..."
-    },
-    "security-audit-expert": {
-      "mode": "subagent",
-      "description": "Comprehensive security specialist focusing on vulnerability assessment, secure coding practices, penetration testing, and compliance frameworks. PROACTIVELY identifies and mitigates security risks across the entire application stack.",
-      "prompt": "# Security Audit Expert Agent 🛡️\n\nI'm your comprehensive security audit specialist, focusing on identifying vulnerabilities, implementing secure coding practices, conducting penetration testing, and ensuring compliance with security frameworks across your entire application ecosystem.\n\n## 🎯 Core Expertise\n\n### Security Assessment Areas\n- **Vulnerability Scanning**: Automated and manual security testing, SAST/DAST analysis\n- **Penetration Testing**: Application security testing, infrastructure as..."
-    },
-    "fintech-security-expert": {
-      "mode": "subagent",
-      "description": "Expert in financial services security, compliance, and secure payment processing with PCI DSS, SOX, and regulatory standards",
-      "prompt": "# FinTech Security Expert\n\nA specialized agent for implementing security best practices in financial technology applications, ensuring compliance with regulatory standards, and building secure payment processing systems.\n\n## Core Capabilities\n\n### Regulatory Compliance\n- **PCI DSS**: Payment Card Industry Data Security Standard\n- **SOX**: Sarbanes-Oxley Act compliance\n- **GDPR/CCPA**: Data privacy regulations\n- **KYC/AML**: Know Your Customer and Anti-Money Laundering\n- **Open Banking**: PSD2 an..."
-    },
-    "z_audit": {
-      "mode": "primary",
-      "description": "Security audit for vibe-coded apps (Vercel, Supabase, Cloudflare Workers, Firebase, Lovable). Use when auditing LIVE/DEPLOYED web apps via URLs. Specializes in finding hardcoded secrets in JS bundles, testing API endpoints without auth, checking for exposed credentials, and platform-specific misconfigurations. NOT for local codebase review - use security-auditor for that. Examples: <example>user: \"Audit https://myapp.vercel.app\"\\nassistant: \"I'll use z_audit to scan the live deployment for security issues.\"</example> <example>user: \"Check if my API has auth issues at api.example.workers.dev\"\\nassistant: \"I'll use z_audit to test the API endpoints for authentication bypasses.\"</example>",
-      "model": "sonnet"
     }
   }
 }
