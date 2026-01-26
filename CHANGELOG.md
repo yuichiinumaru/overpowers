@@ -8,6 +8,23 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - Bulk Repository Extraction (Batch 1)
+
+### Added
+- **`agents/claude-subagents/`** - 10+ Meta-orchestration agents (e.g., `claude-context-manager`, `claude-task-distributor`).
+- **`agents/opencode-agents/`** - Core persona prompts (`opencode-gemini`, `opencode-gpt`, etc.).
+- **`agents/froggy/`** - Specialist agents (`froggy-architect`, `froggy-code-reviewer`).
+- **`commands/pocket-universe/`** - Subagent orchestration commands (`spawn`, `session-resume`).
+- **`docs/concepts/micode-architecture.md`** - Documentation of Micode's Mindmodel/Ledger concepts.
+
+### Changed
+- **`docs/references.md`** - Marked 5 repositories as processed (`[x]`).
+- **`opencode.json`** - Registered newly extracted agents.
+
+**Author**: Jules (Agent)
+
+---
+
 ## [2026-01-19] - Reference Processing (Pew Pew & Agentic)
 
 ### Added

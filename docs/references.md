@@ -15,10 +15,10 @@ A curated list of plugins, agents, and resources extracted from [awesome-opencod
 - [x] [Agentic](https://github.com/Cluster444/agentic) - _Modular AI agents_
   Modular AI agents and commands for structured software development with opencode.
 
-- [ ] [Claude Subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) - _Claude Code subagents_
+- [x] [Claude Subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) - _Claude Code subagents_
   Comprehensive reference repository for production-ready Claude Code subagents.
 
-- [ ] [Opencode Agents](https://github.com/darrenhinde/opencode-agents) - _Enhanced workflows_
+- [x] [Opencode Agents](https://github.com/darrenhinde/opencode-agents) - _Enhanced workflows_
   A set of opencode configurations, prompts, agents, and plugins for enhanced development workflows.
 
 - [ ] [Redstone](https://github.com/BackGwa/Redstone) - _AI-built Minecraft plugins_
@@ -65,7 +65,7 @@ A curated list of plugins, agents, and resources extracted from [awesome-opencod
 - [ ] [Envsitter Guard](https://github.com/boxpositron/envsitter-guard) - _Prevent .env leaks_
   OpenCode plugin that prevents agents/tools from reading or editing sensitive .env* files, while still allowing safe inspection via EnvSitter (keys + deterministic fingerprints; never values).
 
-- [ ] [Froggy](https://github.com/smartfrog/opencode-froggy) - _Hooks and specialized agents_
+- [x] [Froggy](https://github.com/smartfrog/opencode-froggy) - _Hooks and specialized agents_
   Plugin providing Claude Code-style hooks, specialized agents, and tools like gitingest.
 
 - [ ] [Gemini Auth](https://github.com/jenslys/opencode-gemini-auth) - _Google account auth_
@@ -77,7 +77,7 @@ A curated list of plugins, agents, and resources extracted from [awesome-opencod
 - [ ] [Handoff](https://github.com/joshuadavidthomas/opencode-handoff) - _Session handoff prompts_
   Creates focused handoff prompts for continuing work in a new session.
 
-- [ ] [Micode](https://github.com/vtemian/micode) - _Brainstorm-Plan-Implement workflow_
+- [x] [Micode](https://github.com/vtemian/micode) - _Brainstorm-Plan-Implement workflow_
   Structured workflow with session continuity, subagent orchestration, git worktree isolation, and AST-aware tools.
 
 - [ ] [Model Announcer](https://github.com/ramarivera/opencode-model-announcer) - _Model self-awareness_
@@ -149,7 +149,7 @@ A curated list of plugins, agents, and resources extracted from [awesome-opencod
 - [ ] [Plugin Template](https://github.com/zenobi-us/opencode-plugin-template) - _CICD setup for plugins_
   Focuses on providing the CICD setup with generator script, release please, bun publish, npm trusted publishing, and mise tasks.
 
-- [ ] [Pocket Universe](https://github.com/spoons-and-mirrors/pocket-universe) - _A subagent driven pocket universe for your primary agent_
+- [x] [Pocket Universe](https://github.com/spoons-and-mirrors/pocket-universe) - _A subagent driven pocket universe for your primary agent_
   Async agents can be powerful, but orchestration is at best finicky; they fire and forget, orphan work, lose context, waste time... and tokens. This plugin extends the native opencode subagent paradigm to provide closed loop, resilient, async agents, blocking main thread execution. A "pocket universe". This ships with three tools creating a robust system for parallel subagents to communicate and coordinate work
 
 - [ ] [Ralph Wiggum](https://github.com/Th0rgal/opencode-ralph-wiggum) - _Self-correcting agent loops_
