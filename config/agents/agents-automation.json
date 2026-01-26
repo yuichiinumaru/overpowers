@@ -1,0 +1,8 @@
+{
+  "agent": {
+    "browser-automator": {
+      "mode": "primary",
+      "description": "An AI agent designed to automate browser tasks using the browser-use CLI."
+    }
+  }
+}

@@ -8,6 +8,55 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-01-19] - Reference Processing (Pew Pew & Agentic)
+
+### Added
+- **`agents/pew-*.md`** - 4 agents extracted from `pew-pew-workspace` (Lead Developer, Feature Orchestrator, Roadmap Agent, Bug Orchestrator).
+- **`agents/agentic-*.md`** - 6 agents extracted from `agentic` (Codebase/Thoughts Analyzer/Locator, etc.).
+- **`commands/agentic/agentic-*.md`** - 6 commands from `agentic` (Plan, Research, Execute, etc.).
+- **`docs/concepts/mvpm-workflow.md`** - Documentation for the MVPM workflow.
+- **`docs/concepts/agentic-workflow.md`** - Documentation for the Agentic Thoughts system.
+
+### Changed
+- **`docs/references.md`** - Converted to checklist format and marked processed items.
+- **`opencode.json`** - Registered new agents.
+
+**Author**: Jules (Agent)
+
+---
+
+## [2026-01-19] - Awesome OpenCode References
+
+### Added
+- **`docs/references.md`** - A curated list of 57 plugins, agents, and resources extracted from `awesome-opencode`.
+- **`scripts/extract-awesome-references.py`** - Python script to parse YAML data from `awesome-opencode` and generate the reference list.
+
+### Changed
+- **`docs/README.md`** - Added links to `references.md` and `prevc-workflow.md`.
+- **`continuity.md`** - Updated session ledger.
+
+**Author**: Jules (Agent)
+
+---
+
+## [2026-01-19] - AI-Coders Context PREVC Integration
+
+### Added
+- **`agents/prevc-*.md`** - 14 specialized agents from the PREVC workflow (e.g., `prevc-code-reviewer.md`, `prevc-architect-specialist.md`).
+- **`skills/prevc-*/SKILL.md`** - 10 new skills supporting the PREVC workflow.
+- **`docs/concepts/prevc-workflow.md`** - Documentation for the Planning, Review, Execution, Validation, Confirmation workflow.
+- **`references/ai-coders-context/`** - Full clone of the reference repository.
+- **`references/ai-coders-context/extract_overpowers.ts`** - Script used to extract components.
+- **`config/agents/agents-prevc-context.json`** - Generated agent configuration.
+
+### Changed
+- **`opencode.json`** - Updated with new PREVC agents (via generation script).
+- **`continuity.md`** - Updated session ledger.
+
+**Author**: Jules (Agent)
+
+---
+
 ## [2026-01-19] - Browser Use Integration
 
 ### Added
