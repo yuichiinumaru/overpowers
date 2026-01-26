@@ -1,5 +1,25 @@
 {
   "agent": {
+    "ios-developer": {
+      "mode": "primary",
+      "description": "Develop native iOS applications with Swift/SwiftUI. Masters UIKit/SwiftUI, Core Data, networking, and app lifecycle. Use PROACTIVELY for iOS-specific features, App Store optimization, or native iOS development."
+    },
+    "wordpress-developer": {
+      "mode": "primary",
+      "description": "Build professional WordPress solutions with custom themes, plugins, and advanced functionality. Expert in WordPress architecture, custom post types, block development, performance optimization, and security. Use PROACTIVELY for WordPress development, custom plugin creation, or WP architecture."
+    },
+    "react-performance-optimization": {
+      "mode": "primary",
+      "description": "You are a React Performance Optimization specialist focusing on identifying, analyzing, and resolving performance bottlenecks in React applications. Your expertise covers rendering optimization, bundle analysis, memory management, and Core Web Vitals improvements."
+    },
+    "nextjs-app-router-developer": {
+      "mode": "primary",
+      "description": "Build modern Next.js applications using App Router with Server Components, Server Actions, PPR, and advanced caching strategies. Expert in Next.js 14+ features including streaming, suspense boundaries, and parallel routes. Use PROACTIVELY for Next.js App Router development, performance optimization, or migrating from Pages Router."
+    },
+    "laravel-vue-developer": {
+      "mode": "primary",
+      "description": "Build full-stack Laravel applications with Vue3 frontend. Expert in Laravel APIs, Vue3 composition API, Pinia state management, and modern full-stack patterns. Use PROACTIVELY for Laravel backend development, Vue3 frontend components, API integration, or full-stack architecture."
+    },
     "backend-architect": {
       "mode": "primary",
       "description": "Design RESTful APIs, microservice boundaries, and database schemas. Reviews system architecture for scalability and performance bottlenecks. Use PROACTIVELY when creating new backend services or APIs."
@@ -11,26 +31,6 @@
     "drupal-developer": {
       "mode": "primary",
       "description": "Build and customize Drupal applications with custom modules, themes, and integrations. Expert in Drupal architecture, content modeling, theming, and performance optimization. Use PROACTIVELY for Drupal development, module creation, or CMS architecture."
-    },
-    "ios-developer": {
-      "mode": "primary",
-      "description": "Develop native iOS applications with Swift/SwiftUI. Masters UIKit/SwiftUI, Core Data, networking, and app lifecycle. Use PROACTIVELY for iOS-specific features, App Store optimization, or native iOS development."
-    },
-    "laravel-vue-developer": {
-      "mode": "primary",
-      "description": "Build full-stack Laravel applications with Vue3 frontend. Expert in Laravel APIs, Vue3 composition API, Pinia state management, and modern full-stack patterns. Use PROACTIVELY for Laravel backend development, Vue3 frontend components, API integration, or full-stack architecture."
-    },
-    "nextjs-app-router-developer": {
-      "mode": "primary",
-      "description": "Build modern Next.js applications using App Router with Server Components, Server Actions, PPR, and advanced caching strategies. Expert in Next.js 14+ features including streaming, suspense boundaries, and parallel routes. Use PROACTIVELY for Next.js App Router development, performance optimization, or migrating from Pages Router."
-    },
-    "react-performance-optimization": {
-      "mode": "primary",
-      "description": "You are a React Performance Optimization specialist focusing on identifying, analyzing, and resolving performance bottlenecks in React applications. Your expertise covers rendering optimization, bundle analysis, memory management, and Core Web Vitals improvements."
-    },
-    "wordpress-developer": {
-      "mode": "primary",
-      "description": "Build professional WordPress solutions with custom themes, plugins, and advanced functionality. Expert in WordPress architecture, custom post types, block development, performance optimization, and security. Use PROACTIVELY for WordPress development, custom plugin creation, or WP architecture."
     }
   }
 }
