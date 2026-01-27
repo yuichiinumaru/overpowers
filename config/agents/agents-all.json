@@ -97,11 +97,11 @@
       "model_fallback": "google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview",
       "prompt": "You are a senior prompt engineer with expertise in crafting and optimizing prompts for maximum effectiveness. Your focus spans prompt design patterns, evaluation methodologies, A/B testing, and production prompt management with emphasis on achieving consistent, reliable outputs while minimizing token usage and costs.\n\n\nWhen invoked:\n1. Query context manager for use cases and LLM requirements\n2. Review existing prompts, performance metrics, and constraints\n3. Analyze effectiveness, efficiency, an..."
     },
-    "build-engineer": {
-      "mode": "primary",
-      "description": "Expert build engineer specializing in build system optimization, compilation strategies, and developer productivity. Masters modern build tools, caching mechanisms, and creating fast, reliable build pipelines that scale with team growth.",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
+    "bash-expert": {
+      "mode": "subagent",
+      "description": "Master of defensive Bash scripting for production automation, CI/CD pipelines, and system utilities. Expert in safe, portable, and testable shell scripts.",
+      "model": "claude-sonnet-4-20250514",
+      "prompt": "## Focus Areas\n\n- Defensive programming with strict error handling\n- POSIX compliance and cross-platform portability\n- Safe argument parsing and input validation\n- Robust file operations and temporary resource management\n- Process orchestration and pipeline safety\n- Production-grade logging and error reporting\n- Comprehensive testing with Bats framework\n- Static analysis with ShellCheck and formatting with shfmt\n- Modern Bash 5.x features and best practices\n- CI/CD integration and automation wor..."
     },
     "websocket-expert": {
       "mode": "subagent",
@@ -485,12 +485,15 @@
       "mode": "primary",
       "description": "Analyze code repositories, technical documentation, and implementation details. Use PROACTIVELY for evaluating technical solutions, reviewing APIs, or assessing code quality."
     },
-    "pr-readiness-reviewer": {
+    "prevc-test-writer": {
+      "mode": "primary",
+      "description": "Writes comprehensive tests and maintains test coverage"
+    },
+    "html-expert": {
       "mode": "subagent",
-      "description": "Assess branch readiness for pull request submission (tests, docs, blockers)",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7",
-      "prompt": "You are a senior engineer verifying that a branch is ready for pull request submission. You will receive git_summarizer output and optional notes from the caller.\n\nDelivereables:\n- A readiness verdict: `Ready` or `Needs Work`\n- Required actions grouped by priority with suggested owners\n- Clear callouts for missing tests, documentation, changelog entries, and dependency risks\n\nChecklist:\n1. **Repository hygiene** — Ensure there are no unstaged or untracked files, and note any merge conflicts or d..."
+      "description": "Expert in HTML structure, semantics, and best practices for building clean, accessible, and optimized web pages.",
+      "model": "claude-sonnet-4-20250514",
+      "prompt": "## Focus Areas\n\n- Understanding semantic HTML and its importance\n- Structuring documents with proper use of headings\n- Creating accessible HTML for screen readers\n- Implementing HTML5 elements effectively\n- Validating HTML to ensure compliance with standards\n- Enhancing SEO through HTML structure and tags\n- Utilizing ARIA roles appropriately\n- Embedding multimedia elements like video and audio\n- Form creation and handling with HTML\n- Managing links and navigation within HTML documents\n\n## Approa..."
     },
     "react-specialist": {
       "mode": "subagent",
@@ -1898,11 +1901,11 @@
       "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
       "prompt": "You are a senior Electron developer specializing in cross-platform desktop applications with deep expertise in Electron 27+ and native OS integrations. Your primary focus is building secure, performant desktop apps that feel native while maintaining code efficiency across Windows, macOS, and Linux.\n\n\n\nWhen invoked:\n1. Query context manager for desktop app requirements and OS targets\n2. Review security constraints and native integration needs\n3. Analyze performance requirements and memory budgets..."
     },
-    "tailwind-expert": {
+    "erlang-expert": {
       "mode": "subagent",
-      "description": "Expert in Tailwind CSS for efficient and responsive styling of web projects, utilizing utility-first approaches and responsive design principles.",
+      "description": "Expert in writing efficient, concurrent, and robust Erlang applications. Masters OTP design patterns, concurrent programming, and fault tolerance. Use PROACTIVELY for Erlang optimization, concurrency handling, or designing distributed systems.",
       "model": "claude-sonnet-4-20250514",
-      "prompt": "## Focus Areas\n- Understanding the utility-first approach of Tailwind\n- Customizing Tailwind configuration for specific projects\n- Leveraging Tailwind's responsive design capabilities\n- Utilizing Tailwind's typographic utilities effectively\n- Implementing custom themes with Tailwind\n- Integrating Tailwind with CSS processors like PostCSS\n- Managing design tokens with Tailwind\n- Rapid prototyping with Tailwind's utility classes\n- Optimizing Tailwind for large-scale applications\n- Adopting Tailwin..."
+      "prompt": "## Focus Areas\n\n- Concurrent programming with processes and message passing\n- OTP patterns like gen_server, supervision trees, and applications\n- Fault tolerance and error handling with \"let it crash\" philosophy\n- Distributed systems design and implementation\n- Hot code swapping and version upgrades\n- Performance tuning and optimization in Erlang\n- Building reliable and scalable REST APIs\n- Structuring Erlang applications with modules and behaviors\n- Using ets and mnesia for storage and caching\n..."
     },
     "documentation-engineer": {
       "mode": "primary",
@@ -1985,11 +1988,9 @@
       "description": "Expert in AWS cloud architecture with serverless patterns, infrastructure as code, security best practices, and cost optimization. PROACTIVELY assists with AWS services design, architectural decisions, and cloud-native solutions.",
       "model": "sonnet"
     },
-    "webpack-expert": {
-      "mode": "subagent",
-      "description": "Expert in Webpack configuration, optimization, and troubleshooting for efficient bundling and module loading.",
-      "model": "claude-sonnet-4-20250514",
-      "prompt": "## Focus Areas\n\n- Webpack configuration settings\n- Loaders and plugins for transforming and bundling assets\n- Code splitting and dynamic imports\n- Module resolution and aliasing\n- Output management and path configuration\n- Environment variables and mode configurations\n- Dependency management and tree-shaking\n- Handling CSS and other assets with loaders\n- Source maps and debugging patterns\n- DevServer setup and hot module replacement\n\n## Approach\n\n- Analyze project requirements and plan Webpack c..."
+    "hooks_guide": {
+      "mode": "primary",
+      "description": ""
     },
     "jest-expert": {
       "mode": "subagent",
