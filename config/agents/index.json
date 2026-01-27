@@ -36,7 +36,7 @@
     "specialized-domains",
     "testing"
   ],
-  "total_agents": 413,
+  "total_agents": 423,
   "files": [
     "agents-ARCHITECTURE.json",
     "agents-CLI.json",

@@ -11,6 +11,11 @@
     "feedback-synthesizer": {
       "mode": "primary",
       "description": "Use this agent when you need to analyze user feedback from multiple sources, identify patterns in user complaints or requests, synthesize insights from reviews, or prioritize feature development based on user input. This agent excels at turning raw feedback into actionable product insights. Examples:\\n\\n<example>\\nContext: Weekly review of user feedback"
+    },
+    "agentic-web-search-researcher": {
+      "mode": "primary",
+      "description": "Used to perform web searches from a URL and analyze the contents based on a query.",
+      "model": "anthropic/claude-3-5-haiku-20241022"
     }
   }
 }

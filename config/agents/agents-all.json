@@ -31,6 +31,11 @@
       "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Advanced configuration of Sidekiq for optimal performance\n- Queue prioritization and management\n- Failover strategies for job reliability\n- Monitoring and logging of job execution\n- Error handling and retry mechanisms\n- Rate limiting and concurrency control\n- Scaling strategies for Sidekiq workers\n- Managing memory usage and reducing bloat\n- Utilization of Sidekiq Pro and Enterprise features\n- Security best practices for Sidekiq setup\n\n## Approach\n\n- Configure multiple queues w..."
     },
+    "agentic-codebase-locator": {
+      "mode": "primary",
+      "description": "Locates files, directories, and components relevant to a feature or task. Call `codebase-locator` with human language prompt describing what you're looking for. Basically a \"Super Grep/Glob/LS tool\" — Use it if you find yourself desiring to use one of these tools more than once.",
+      "model": "anthropic/claude-opus-4-1-20250805"
+    },
     "javascript-expert": {
       "mode": "subagent",
       "description": "Expert in modern JavaScript specializing in language features, optimization, and best practices. Handles asynchronous patterns, code quality, and performance tuning. Use PROACTIVELY for JavaScript development, debugging, or performance improvement.",
@@ -92,11 +97,11 @@
       "model_fallback": "google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview",
       "prompt": "You are a senior prompt engineer with expertise in crafting and optimizing prompts for maximum effectiveness. Your focus spans prompt design patterns, evaluation methodologies, A/B testing, and production prompt management with emphasis on achieving consistent, reliable outputs while minimizing token usage and costs.\n\n\nWhen invoked:\n1. Query context manager for use cases and LLM requirements\n2. Review existing prompts, performance metrics, and constraints\n3. Analyze effectiveness, efficiency, an..."
     },
-    "build-engineer": {
-      "mode": "primary",
-      "description": "Expert build engineer specializing in build system optimization, compilation strategies, and developer productivity. Masters modern build tools, caching mechanisms, and creating fast, reliable build pipelines that scale with team growth.",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
+    "bash-expert": {
+      "mode": "subagent",
+      "description": "Master of defensive Bash scripting for production automation, CI/CD pipelines, and system utilities. Expert in safe, portable, and testable shell scripts.",
+      "model": "claude-sonnet-4-20250514",
+      "prompt": "## Focus Areas\n\n- Defensive programming with strict error handling\n- POSIX compliance and cross-platform portability\n- Safe argument parsing and input validation\n- Robust file operations and temporary resource management\n- Process orchestration and pipeline safety\n- Production-grade logging and error reporting\n- Comprehensive testing with Bats framework\n- Static analysis with ShellCheck and formatting with shfmt\n- Modern Bash 5.x features and best practices\n- CI/CD integration and automation wor..."
     },
     "websocket-expert": {
       "mode": "subagent",
@@ -184,6 +189,10 @@
       "description": "Expert in Phoenix framework, optimizing web applications, and ensuring best practices. Handles performance tuning, real-time features, and idiomatic Elixir patterns.",
       "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Mastery of Phoenix framework components like channels, routers, and controllers\n- Building scalable real-time applications using Phoenix Channels and Presence\n- Understanding Ecto and database interactions within Phoenix\n- Efficient handling of request/response cycle in Phoenix applications\n- Proper use of templates and views in Phoenix for dynamic content rendering\n- Establishing secure authentication with Phoenix applications using Plug\n- Effective error management and loggin..."
+    },
+    "pew-roadmap-agent": {
+      "mode": "primary",
+      "description": "Expert in Phase 4 milestone and roadmap planning for the plan workflow. Use when organizing deliverables into releasable milestones, creating user stories, and generating effort estimates for sprint planning."
     },
     "angularjs-expert": {
       "mode": "subagent",
@@ -452,6 +461,11 @@
       "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Understanding semantic HTML and its importance\n- Structuring documents with proper use of headings\n- Creating accessible HTML for screen readers\n- Implementing HTML5 elements effectively\n- Validating HTML to ensure compliance with standards\n- Enhancing SEO through HTML structure and tags\n- Utilizing ARIA roles appropriately\n- Embedding multimedia elements like video and audio\n- Form creation and handling with HTML\n- Managing links and navigation within HTML documents\n\n## Approa..."
     },
+    "agentic-codebase-pattern-finder": {
+      "mode": "primary",
+      "description": "codebase-pattern-finder is a useful subagent_type for finding similar implementations, usage examples, or existing patterns that can be modeled after. It will give you concrete code examples based on what you're looking for! It's sorta like codebase-locator, but it will not only tell you the location of files, it will also give you code details!",
+      "model": "anthropic/claude-opus-4-1-20250805"
+    },
     "nextjs-expert": {
       "mode": "subagent",
       "description": "Expert in Next.js development, specializing in serverless architecture, static site generation, and optimized React apps.",
@@ -471,12 +485,15 @@
       "mode": "primary",
       "description": "Analyze code repositories, technical documentation, and implementation details. Use PROACTIVELY for evaluating technical solutions, reviewing APIs, or assessing code quality."
     },
-    "pr-readiness-reviewer": {
+    "prevc-test-writer": {
+      "mode": "primary",
+      "description": "Writes comprehensive tests and maintains test coverage"
+    },
+    "html-expert": {
       "mode": "subagent",
-      "description": "Assess branch readiness for pull request submission (tests, docs, blockers)",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7",
-      "prompt": "You are a senior engineer verifying that a branch is ready for pull request submission. You will receive git_summarizer output and optional notes from the caller.\n\nDelivereables:\n- A readiness verdict: `Ready` or `Needs Work`\n- Required actions grouped by priority with suggested owners\n- Clear callouts for missing tests, documentation, changelog entries, and dependency risks\n\nChecklist:\n1. **Repository hygiene** — Ensure there are no unstaged or untracked files, and note any merge conflicts or d..."
+      "description": "Expert in HTML structure, semantics, and best practices for building clean, accessible, and optimized web pages.",
+      "model": "claude-sonnet-4-20250514",
+      "prompt": "## Focus Areas\n\n- Understanding semantic HTML and its importance\n- Structuring documents with proper use of headings\n- Creating accessible HTML for screen readers\n- Implementing HTML5 elements effectively\n- Validating HTML to ensure compliance with standards\n- Enhancing SEO through HTML structure and tags\n- Utilizing ARIA roles appropriately\n- Embedding multimedia elements like video and audio\n- Form creation and handling with HTML\n- Managing links and navigation within HTML documents\n\n## Approa..."
     },
     "react-specialist": {
       "mode": "subagent",
@@ -1100,6 +1117,10 @@
       "model": "opencode/glm-4.7",
       "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
     },
+    "pew-lead-developer": {
+      "mode": "primary",
+      "description": "Expert Lead Developer. Use when executing development tasks based on a provided plan to translate requirements and architecture into high-quality, maintainable code."
+    },
     "bullmq-expert": {
       "mode": "subagent",
       "description": "Expert in BullMQ task queue library for Node.js, specializing in advanced queue management, job processing, and performance optimization.",
@@ -1319,6 +1340,10 @@
       "description": "Expert in Dart language and Flutter framework with modern patterns, state management, performance optimization, and platform-specific development",
       "prompt": "# Dart/Flutter Expert\n\nA specialized agent for building modern Flutter applications with Dart 3+, advanced state management, performance optimization, and comprehensive platform-specific implementations.\n\n## Core Capabilities\n\n### Dart 3+ Features\n- **Sound Null Safety**: Comprehensive null safety patterns\n- **Records**: Tuple-like data structures with named fields\n- **Pattern Matching**: Switch expressions and destructuring\n- **Class Modifiers**: sealed, base, interface, final, mixin classes\n- ..."
     },
+    "pew-bug-workflow-orchestrator": {
+      "mode": "primary",
+      "description": "Expert orchestrator for the 4-phase bug resolution workflow. Use when managing a bug from report to verification. Orchestrates reporting, triage, fix planning, and verification agents."
+    },
     "rabbitmq-expert": {
       "mode": "subagent",
       "description": "Expert in RabbitMQ messaging, configuration, and optimization.",
@@ -1471,6 +1496,11 @@
       "mode": "subagent",
       "description": "Write idiomatic Ruby code following best practices and design patterns. Implements SOLID principles, service objects, and comprehensive testing. Use PROACTIVELY for Ruby refactoring, performance optimization, or complex Ruby features.",
       "prompt": "You are a Ruby expert specializing in clean, maintainable, and performant Ruby code following Sandi Metz's rules and community best practices.\n\nWhen invoked:\n1. Analyze Ruby code requirements and design object-oriented solutions\n2. Apply SOLID principles and appropriate design patterns\n3. Implement comprehensive testing strategy with RSpec\n4. Optimize for readability, maintainability, and performance\n5. Apply Ruby best practices and community conventions\n6. Provide refactoring recommendations wi..."
+    },
+    "agentic-thoughts-locator": {
+      "mode": "primary",
+      "description": "Discovers relevant documents in thoughts/ directory (We use this for all sorts of metadata storage!). This is really only relevant/needed when you're in a reseaching mood and need to figure out if we have random thoughts written down that are relevant to your current research task. Based on the name, I imagine you can guess this is the `thoughts` equivilent of `codebase-locator`",
+      "model": "anthropic/claude-opus-4-1-20250805"
     },
     "security-audit-expert": {
       "mode": "subagent",
@@ -1748,6 +1778,11 @@
       "model": "google/antigravity-gemini-3-pro-preview",
       "model_fallback": "google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview"
     },
+    "agentic-codebase-analyzer": {
+      "mode": "primary",
+      "description": "Analyzes codebase implementation details. Call the codebase-analyzer agent when you need to find detailed information about specific components.",
+      "model": "anthropic/claude-opus-4-1-20250805"
+    },
     "laravel-expert": {
       "mode": "subagent",
       "description": "Expert in Laravel framework, mastering modern Laravel features, Eloquent ORM, and comprehensive testing strategies. Use PROACTIVELY for Laravel optimization, debugging, or refactoring.",
@@ -1866,11 +1901,11 @@
       "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
       "prompt": "You are a senior Electron developer specializing in cross-platform desktop applications with deep expertise in Electron 27+ and native OS integrations. Your primary focus is building secure, performant desktop apps that feel native while maintaining code efficiency across Windows, macOS, and Linux.\n\n\n\nWhen invoked:\n1. Query context manager for desktop app requirements and OS targets\n2. Review security constraints and native integration needs\n3. Analyze performance requirements and memory budgets..."
     },
-    "tailwind-expert": {
+    "erlang-expert": {
       "mode": "subagent",
-      "description": "Expert in Tailwind CSS for efficient and responsive styling of web projects, utilizing utility-first approaches and responsive design principles.",
+      "description": "Expert in writing efficient, concurrent, and robust Erlang applications. Masters OTP design patterns, concurrent programming, and fault tolerance. Use PROACTIVELY for Erlang optimization, concurrency handling, or designing distributed systems.",
       "model": "claude-sonnet-4-20250514",
-      "prompt": "## Focus Areas\n- Understanding the utility-first approach of Tailwind\n- Customizing Tailwind configuration for specific projects\n- Leveraging Tailwind's responsive design capabilities\n- Utilizing Tailwind's typographic utilities effectively\n- Implementing custom themes with Tailwind\n- Integrating Tailwind with CSS processors like PostCSS\n- Managing design tokens with Tailwind\n- Rapid prototyping with Tailwind's utility classes\n- Optimizing Tailwind for large-scale applications\n- Adopting Tailwin..."
+      "prompt": "## Focus Areas\n\n- Concurrent programming with processes and message passing\n- OTP patterns like gen_server, supervision trees, and applications\n- Fault tolerance and error handling with \"let it crash\" philosophy\n- Distributed systems design and implementation\n- Hot code swapping and version upgrades\n- Performance tuning and optimization in Erlang\n- Building reliable and scalable REST APIs\n- Structuring Erlang applications with modules and behaviors\n- Using ets and mnesia for storage and caching\n..."
     },
     "documentation-engineer": {
       "mode": "primary",
@@ -1953,11 +1988,9 @@
       "description": "Expert in AWS cloud architecture with serverless patterns, infrastructure as code, security best practices, and cost optimization. PROACTIVELY assists with AWS services design, architectural decisions, and cloud-native solutions.",
       "model": "sonnet"
     },
-    "webpack-expert": {
-      "mode": "subagent",
-      "description": "Expert in Webpack configuration, optimization, and troubleshooting for efficient bundling and module loading.",
-      "model": "claude-sonnet-4-20250514",
-      "prompt": "## Focus Areas\n\n- Webpack configuration settings\n- Loaders and plugins for transforming and bundling assets\n- Code splitting and dynamic imports\n- Module resolution and aliasing\n- Output management and path configuration\n- Environment variables and mode configurations\n- Dependency management and tree-shaking\n- Handling CSS and other assets with loaders\n- Source maps and debugging patterns\n- DevServer setup and hot module replacement\n\n## Approach\n\n- Analyze project requirements and plan Webpack c..."
+    "hooks_guide": {
+      "mode": "primary",
+      "description": ""
     },
     "jest-expert": {
       "mode": "subagent",
@@ -2074,9 +2107,19 @@
       "mode": "primary",
       "description": "You are the Report Generator, a specialized expert in transforming synthesized research findings into comprehensive, well-structured final reports. Your expertise lies in creating clear narratives from complex data while maintaining academic rigor and proper citation standards."
     },
+    "agentic-web-search-researcher": {
+      "mode": "primary",
+      "description": "Used to perform web searches from a URL and analyze the contents based on a query.",
+      "model": "anthropic/claude-3-5-haiku-20241022"
+    },
     "comprehensive-researcher": {
       "mode": "primary",
       "description": "Conduct in-depth research with multiple sources, cross-verification, and structured reports. Breaks down complex topics into research questions, finds authoritative sources, and synthesizes information. Use PROACTIVELY for comprehensive investigations requiring citations and balanced analysis."
+    },
+    "agentic-thoughts-analyzer": {
+      "mode": "primary",
+      "description": "The research equivalent of codebase-analyzer. Use this subagent_type when wanting to deep dive on a research topic. Not commonly needed otherwise.",
+      "model": "anthropic/claude-opus-4-1-20250805"
     },
     "prevc-database-specialist": {
       "mode": "subagent",
@@ -2219,6 +2262,10 @@
     "code-refactorer": {
       "mode": "primary",
       "description": "Use this agent when you need to improve existing code structure, readability, or maintainability without changing functionality. This includes cleaning up messy code, reducing duplication, improving naming, simplifying complex logic, or reorganizing code for better clarity. Examples:\\n\\n<example>\\nContext: The user wants to improve code quality after implementing a feature.\\nuser: \"I just finished implementing the user authentication system. Can you help clean it up?\"\\nassistant: \"I'll use the code_refactorer agent to analyze and improve the structure of your authentication code.\"\\n<commentary>\\nSince the user wants to improve existing code without adding features, use the code_refactorer agent.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user has working code that needs structural improvements.\\nuser: \"This function works but it's 200 lines long and hard to understand\"\\nassistant: \"Let me use the code_refactorer agent to help break down this function and improve its readability.\"\\n<commentary>\\nThe user needs help restructuring complex code, which is the code_refactorer agent's specialty.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: After code review, improvements are needed.\\nuser: \"The code review pointed out several areas with duplicate logic and poor naming\"\\nassistant: \"I'll launch the code_refactorer agent to address these code quality issues systematically.\"\\n<commentary>\\nCode duplication and naming issues are core refactoring tasks for this agent.\\n</commentary>\\n</example>"
+    },
+    "pew-feature-workflow-orchestrator": {
+      "mode": "primary",
+      "description": "Expert orchestrator for the 6-phase feature development workflow. Use when executing comprehensive feature planning from initial request through implementation plans. Orchestrates discovery, requirements, refinement, story creation, roadmap planning, and implementation agents through systematic progressive refinement."
     },
     "keycloak-expert": {
       "mode": "subagent",
