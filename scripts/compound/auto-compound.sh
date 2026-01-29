@@ -41,7 +41,7 @@ error() {
 
 # Load config
 if [ ! -f "$CONFIG_FILE" ]; then
-  error "Config file not found: $CONFIG_FILE. Please create compound.config.json (see workflows/compound-product-cycle.md)"
+  error "Config file not found: $CONFIG_FILE. Run install.sh first or copy config.example.json"
 fi
 
 TOOL=$(jq -r '.tool // "amp"' "$CONFIG_FILE")
