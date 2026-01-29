@@ -184,6 +184,11 @@
       "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Data preprocessing and transformation techniques\n- Feature engineering and selection methods\n- Model selection and comparison\n- Hyperparameter tuning with GridSearchCV and RandomizedSearchCV\n- Evaluation metrics for regression and classification\n- Building and validating pipelines\n- Understanding and applying ensemble methods\n- Handling imbalanced datasets\n- Cross-validation techniques\n- Interpreting model performance and outputs\n\n## Approach\n\n- Start with a clear understanding..."
     },
+    "sisyphus-orchestrator": {
+      "mode": "primary",
+      "description": "Powerful AI orchestrator that plans obsessively, delegates strategically, and ensures multi-agent safety.",
+      "model": "claude-3-5-sonnet-latest"
+    },
     "phoenix-expert": {
       "mode": "subagent",
       "description": "Expert in Phoenix framework, optimizing web applications, and ensuring best practices. Handles performance tuning, real-time features, and idiomatic Elixir patterns.",
@@ -1385,6 +1390,11 @@
       "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Elasticsearch cluster setup and configuration\n- Index management and optimization\n- Logstash pipeline creation and tuning\n- Kibana visualization and dashboard design\n- Data ingestion and real-time processing\n- Query and aggregation optimization\n- Security best practices for ELK stack\n- ELK stack monitoring and alerting\n- Scaling Elasticsearch across nodes\n- Backup and restore strategies for Elasticsearch\n\n## Approach\n\n- Leverage Elasticsearch’s full-text search capabilities\n- O..."
     },
+    "metis-consultant": {
+      "mode": "primary",
+      "description": "Pre-planning consultant that analyzes requests to identify hidden intentions, ambiguities, and AI failure points.",
+      "model": "claude-3-5-sonnet-latest"
+    },
     "customer-success-manager": {
       "mode": "primary",
       "description": "Expert customer success manager specializing in customer retention, growth, and advocacy. Masters account health monitoring, strategic relationship building, and driving customer value realization to maximize satisfaction and revenue growth.",
@@ -1886,6 +1896,11 @@
       "model": "opencode/glm-4.7",
       "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
     },
+    "oracle-architect": {
+      "mode": "primary",
+      "description": "Read-only consultation agent. High-IQ reasoning specialist for debugging hard problems and high-difficulty architecture design.",
+      "model": "claude-3-5-sonnet-latest"
+    },
     "metadata-agent": {
       "mode": "primary",
       "description": "Handles frontmatter standardization and metadata addition across vault files. Ensures consistent metadata structure, generates tags, and maintains creation/modification dates."
@@ -2117,11 +2132,21 @@
       "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Development of complex pipelines in LangChain.\n- Mastery in LangChain document loaders and parsers.\n- Optimization of LangChain performance and efficiency.\n- Advanced text embedding techniques within LangChain.\n- Integration of different data sources using LangChain.\n- Implementation of custom chain components.\n- Debugging and troubleshooting LangChain pipelines.\n- Understanding and applying LangChain's API and SDK.\n- Effective use of LangChain's utility functions.\n- Scalabilit..."
     },
+    "librarian-researcher": {
+      "mode": "primary",
+      "description": "External knowledge retrieval specialist. Documentation discovery, finding correct versions, and creating permalinks.",
+      "model": "claude-3-5-sonnet-latest"
+    },
     "api-documenter": {
       "mode": "primary",
       "description": "Expert API documenter specializing in creating comprehensive, developer-friendly API documentation. Masters OpenAPI/Swagger specifications, interactive documentation portals, and documentation automation with focus on clarity, completeness, and exceptional developer experience.",
       "model": "google/antigravity-claude-sonnet-4-5",
       "model_fallback": "google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7"
+    },
+    "explorer-recon": {
+      "mode": "primary",
+      "description": "Contextual grep for codebases. Answers 'Where is X?', 'Which file has Y?', 'Find the code that does Z'.",
+      "model": "claude-3-5-sonnet-latest"
     },
     "report-generator": {
       "mode": "primary",

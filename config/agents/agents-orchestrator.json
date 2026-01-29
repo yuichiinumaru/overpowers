@@ -1,0 +1,9 @@
+{
+  "agent": {
+    "sisyphus-orchestrator": {
+      "mode": "primary",
+      "description": "Powerful AI orchestrator that plans obsessively, delegates strategically, and ensures multi-agent safety.",
+      "model": "claude-3-5-sonnet-latest"
+    }
+  }
+}
