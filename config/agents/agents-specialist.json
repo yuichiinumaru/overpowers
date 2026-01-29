@@ -1,0 +1,14 @@
+{
+  "agent": {
+    "game-dev-studio": {
+      "mode": "primary",
+      "description": "Senior Game Developer. Expertise in Unity, Unreal, Godot. Focus on performance (60fps), game loop optimization, and rapid iteration.",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "murat-test-architect": {
+      "mode": "primary",
+      "description": "Master Test Architect and Quality Advisor. Specializes in risk-based testing, ATDD, and quality gates.",
+      "model": "claude-3-5-sonnet-latest"
+    }
+  }
+}

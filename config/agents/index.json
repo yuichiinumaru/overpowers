@@ -34,11 +34,12 @@
     "research",
     "sales-marketing",
     "security",
+    "specialist",
     "specialists",
     "specialized-domains",
     "testing"
   ],
-  "total_agents": 432,
+  "total_agents": 435,
   "files": [
     "agents-ARCHITECTURE.json",
     "agents-CLI.json",
@@ -74,6 +75,7 @@
     "agents-research.json",
     "agents-sales-marketing.json",
     "agents-security.json",
+    "agents-specialist.json",
     "agents-specialists.json",
     "agents-specialized-domains.json",
     "agents-testing.json"

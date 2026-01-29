@@ -185,6 +185,17 @@ python3 fix-skill-names.py
 *   **Secrets**: Never send streaming/partial replies to external messaging surfaces (WhatsApp, Telegram).
 *   **Release**: Do not change version numbers without explicit consent.
 
+### NPM + 1Password (publish/verify)
+*   Use the `1password` skill; all `op` commands must run inside a fresh tmux session.
+*   **Sign in**: `eval "$(op signin --account my.1password.com)"`
+*   **OTP**: `op read 'op://Private/Npmjs/one-time password?attribute=otp'`
+*   **Publish**: `npm publish --access public --otp="<otp>"`
+*   **Verify**: `npm view <pkg> version --userconfig "$(mktemp)"`
+*   **Cleanup**: Kill the tmux session after publish.
+
+### Safety Hooks
+*   **Destructive Command Guard**: `hooks/safety/destructive-command-blocker.ts` checks shell commands against regex patterns (ported from `destructive_command_guard`) to prevent catastrophic errors like `rm -rf /` or `mkfs` on physical drives.
+
 ---
 
 > **FINAL REMINDER**: Read `continuity.md` now. Update `CHANGELOG.md` before committing.
