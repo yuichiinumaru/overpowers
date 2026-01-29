@@ -15,6 +15,11 @@
       "description": "",
       "prompt": "# RAG Architecture Expert Agent\n\n```yaml\n---\nname: rag-architecture-expert\ndescription: Specialist in Retrieval-Augmented Generation systems design and optimization. PROACTIVELY guides vector database selection, chunking strategies, embedding models, and retrieval workflows.\ntools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit, Task\n---\n```\n\nYou are a senior RAG (Retrieval-Augmented Generation) architect with deep expertise in designing, implementing, and optimizing retrieval-augmented systems...."
     },
+    "architect": {
+      "mode": "primary",
+      "description": "Software architecture specialist for system design, scalability, and technical decision-making. Use PROACTIVELY when planning new features, refactoring large systems, or making architectural decisions.",
+      "model": "opus"
+    },
     "aws-cloud-architect": {
       "mode": "primary",
       "description": "Expert in AWS cloud architecture with serverless patterns, infrastructure as code, security best practices, and cost optimization. PROACTIVELY assists with AWS services design, architectural decisions, and cloud-native solutions.",

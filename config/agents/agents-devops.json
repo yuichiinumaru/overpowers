@@ -74,6 +74,11 @@
       "description": "Expert in CircleCI configuration, optimization, and troubleshooting for seamless continuous integration and delivery.",
       "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Writing efficient and reusable CircleCI configuration (config.yml)\n- Configuring workflows for parallel and sequential jobs\n- Using and creating reusable orbs for better maintainability\n- Implementing caching strategies to optimize build times\n- Securing sensitive data with environment variables and contexts\n- Setting up notifications for build status and alerts\n- Using matrix jobs for testing across multiple environments\n- Optimizing Docker layer caching and setup for faster p..."
+    },
+    "build-error-resolver": {
+      "mode": "primary",
+      "description": "Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with minimal diffs, no architectural edits. Focuses on getting the build green quickly.",
+      "model": "opus"
     }
   }
 }
