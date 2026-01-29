@@ -12,6 +12,16 @@
       "mode": "primary",
       "description": "Use this agent when you need to analyze user feedback from multiple sources, identify patterns in user complaints or requests, synthesize insights from reviews, or prioritize feature development based on user input. This agent excels at turning raw feedback into actionable product insights. Examples:\\n\\n<example>\\nContext: Weekly review of user feedback"
     },
+    "librarian-researcher": {
+      "mode": "primary",
+      "description": "External knowledge retrieval specialist. Documentation discovery, finding correct versions, and creating permalinks.",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "explorer-recon": {
+      "mode": "primary",
+      "description": "Contextual grep for codebases. Answers 'Where is X?', 'Which file has Y?', 'Find the code that does Z'.",
+      "model": "claude-3-5-sonnet-latest"
+    },
     "agentic-web-search-researcher": {
       "mode": "primary",
       "description": "Used to perform web searches from a URL and analyze the contents based on a query.",

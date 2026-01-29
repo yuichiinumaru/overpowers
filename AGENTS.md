@@ -166,4 +166,25 @@ python3 fix-skill-names.py
 
 ---
 
+## 8. MULTI-AGENT SAFETY & GUARDRAILS (Inherited from Moltbot)
+
+### Multi-Agent Safety Protocol
+*   **Git Stash**: Do **not** create/apply/drop `git stash` entries unless explicitly requested. Assume other agents may be working.
+*   **Git Push/Pull**: When asked to "push", you may `git pull --rebase` to integrate changes (never discard other agents' work).
+*   **Git Worktrees**: Do **not** create/remove/modify `git worktree` checkouts unless explicitly requested.
+*   **Branching**: Do **not** switch branches unless explicitly requested.
+*   **Parallel Execution**: Running multiple agents is OK as long as each has its own session.
+*   **Unrecognized Files**: If you see unrecognized files, ignore them; focus on your changes.
+*   **Reporting**: Focus reports on your edits; avoid guard-rail disclaimers unless blocked.
+
+### General Guardrails
+*   **Lint/Format Churn**: If staged+unstaged diffs are formatting-only, auto-resolve without asking. If commit/push requested, auto-stage formatting fixes.
+*   **Bug Investigations**: Read source code of dependencies and local code before concluding.
+*   **Code Style**: Add brief comments for tricky logic. Keep files under ~500 LOC.
+*   **Tool Schema**: Avoid `Type.Union`, `anyOf`, `oneOf` in tool schemas. Use `stringEnum`.
+*   **Secrets**: Never send streaming/partial replies to external messaging surfaces (WhatsApp, Telegram).
+*   **Release**: Do not change version numbers without explicit consent.
+
+---
+
 > **FINAL REMINDER**: Read `continuity.md` now. Update `CHANGELOG.md` before committing.

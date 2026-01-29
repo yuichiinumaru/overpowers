@@ -8,6 +8,24 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-05-23] - Knowledge Absorption Integration
+
+### Added
+- **Agents**: Metis Consultant, Sisyphus Orchestrator, Explorer Recon, Oracle Architect, Librarian Researcher (from OhMyOpenCode).
+- **Skills**: Discord, Slack, Trello, Notion, 1Password, Voice Call (from Moltbot).
+- **Workflows**: Compound Product Cycle (`workflows/compound-product-cycle.md`, `scripts/compound/`).
+- **Protocols**: Intent Classification (`docs/protocols/intent-classification.md`).
+- **Templates**: `templates/compound.config.json`.
+
+### Changed
+- **AGENTS.md**: Added Multi-Agent Safety and Guardrails sections.
+- **scripts/compound/auto-compound.sh**: Updated error message for missing config.
+- **continuity.md**: Updated session details.
+
+**Author**: Jules (Agent)
+
+---
+
 ## [2026-01-21] - Activation & Implementation
 
 ### Added
