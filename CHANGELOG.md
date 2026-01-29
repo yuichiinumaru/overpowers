@@ -8,79 +8,60 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
-## [2026-01-19] - Bulk Repository Extraction (Batch 1)
+## [2026-01-21] - Activation & Implementation
 
 ### Added
-- **`agents/claude-subagents/`** - 10+ Meta-orchestration agents (e.g., `claude-context-manager`, `claude-task-distributor`).
-- **`agents/opencode-agents/`** - Core persona prompts (`opencode-gemini`, `opencode-gpt`, etc.).
-- **`agents/froggy/`** - Specialist agents (`froggy-architect`, `froggy-code-reviewer`).
-- **`commands/pocket-universe/`** - Subagent orchestration commands (`spawn`, `session-resume`).
-- **`docs/concepts/micode-architecture.md`** - Documentation of Micode's Mindmodel/Ledger concepts.
+- **Scripts Implementation**:
+  - `scripts/codemaps/generate.ts`: Fully implemented with `ts-morph` to generate markdown codemaps.
+  - `scripts/docs/update.ts`: Fully implemented to update README and AGENTS.md stats.
+- **Dependencies**:
+  - Added `ts-morph` and `tsx` to `package.json`.
 
 ### Changed
-- **`docs/references.md`** - Marked 5 repositories as processed (`[x]`).
-- **`opencode.json`** - Registered newly extracted agents.
+- **Documentation**:
+  - Generated initial codemaps in `docs/CODEMAPS/`.
+  - Updated `README.md` architecture section.
+  - Updated `AGENTS.md` agent count (now 414+).
+- **Configuration**:
+  - Injected 11 new agents into `opencode-example.json` (and local config).
 
-**Author**: Jules (Agent)
+**Author**: Jules
 
----
-
-## [2026-01-19] - Reference Processing (Pew Pew & Agentic)
+## [2026-01-19] - Mega Harvest Session & Bulk Extraction
 
 ### Added
-- **`agents/pew-*.md`** - 4 agents extracted from `pew-pew-workspace` (Lead Developer, Feature Orchestrator, Roadmap Agent, Bug Orchestrator).
-- **`agents/agentic-*.md`** - 6 agents extracted from `agentic` (Codebase/Thoughts Analyzer/Locator, etc.).
-- **`commands/agentic/agentic-*.md`** - 6 commands from `agentic` (Plan, Research, Execute, etc.).
-- **`docs/concepts/mvpm-workflow.md`** - Documentation for the MVPM workflow.
-- **`docs/concepts/agentic-workflow.md`** - Documentation for the Agentic Thoughts system.
+- **Agents**:
+  - `architect.md`: Architecture specialist for system design and scalability.
+  - `doc-updater.md`: Documentation specialist for codemaps and docs.
+  - `tdd-expert.md`: TDD specialist enforcing write-tests-first.
+  - `build-error-resolver.md`: Specialist for fixing build and type errors.
+  - `agents/marketing/*`: SEO, Copywriter, Strategist.
+  - `agents/mcp/mcp-server-architect.md`
+  - `agents/research/*`: Orchestrator, Synthesizer.
+  - `agents/sisyphus/metis-consultant.md`
+  - **`agents/claude-subagents/`** - 10+ Meta-orchestration agents.
+  - **`agents/opencode-agents/`** - Core persona prompts.
+  - **`agents/froggy/`** - Specialist agents.
+  - **`agents/pew-*.md`** - 4 agents extracted from `pew-pew-workspace`.
+  - **`agents/agentic-*.md`** - 6 agents extracted from `agentic`.
+
+- **Commands**:
+  - `update-codemaps.md`: Command to generate architecture codemaps.
+  - `pocket-universe/*`: Subagent orchestration commands.
+  - `agentic/*`: Agentic workflow commands.
+
+- **Scripts**:
+  - `scripts/codemaps/generate.ts`: Skeleton for codemap generation.
+  - `scripts/docs/update.ts`: Skeleton for docs update.
+  - `scripts/monitoring/claude-monitor.py`: Python wrapper for Claude Code monitoring.
+  - `scripts/extract-awesome-references.py`.
 
 ### Changed
-- **`docs/references.md`** - Converted to checklist format and marked processed items.
-- **`opencode.json`** - Registered new agents.
-
-**Author**: Jules (Agent)
-
----
-
-## [2026-01-19] - Awesome OpenCode References
-
-### Added
-- **`docs/references.md`** - A curated list of 57 plugins, agents, and resources extracted from `awesome-opencode`.
-- **`scripts/extract-awesome-references.py`** - Python script to parse YAML data from `awesome-opencode` and generate the reference list.
-
-### Changed
-- **`docs/README.md`** - Added links to `references.md` and `prevc-workflow.md`.
-- **`continuity.md`** - Updated session ledger.
-
-**Author**: Jules (Agent)
-
----
-
-## [2026-01-19] - AI-Coders Context PREVC Integration
-
-### Added
-- **`agents/prevc-*.md`** - 14 specialized agents from the PREVC workflow (e.g., `prevc-code-reviewer.md`, `prevc-architect-specialist.md`).
-- **`skills/prevc-*/SKILL.md`** - 10 new skills supporting the PREVC workflow.
-- **`docs/concepts/prevc-workflow.md`** - Documentation for the Planning, Review, Execution, Validation, Confirmation workflow.
-- **`references/ai-coders-context/`** - Full clone of the reference repository.
-- **`references/ai-coders-context/extract_overpowers.ts`** - Script used to extract components.
-- **`config/agents/agents-prevc-context.json`** - Generated agent configuration.
-
-### Changed
-- **`opencode.json`** - Updated with new PREVC agents (via generation script).
-- **`continuity.md`** - Updated session ledger.
-
-**Author**: Jules (Agent)
-
----
-
-## [2026-01-19] - Browser Use Integration
-
-### Added
-- **`agents/browser-automator.md`** - New agent for browser automation tasks using `browser-use`.
-- **`skills/browser-use/SKILL.md`** - New skill providing CLI access to `browser-use` features.
-- **`scripts/setup-browser-use.sh`** - Setup script for installing `browser-use` and Playwright dependencies.
-- **`docs/browser-use-integration.md`** - Documentation for the new integration.
+- **Documentation**:
+  - `docs/concepts/micode-architecture.md`
+  - `docs/concepts/mvpm-workflow.md`
+  - `docs/concepts/agentic-workflow.md`
+  - `docs/references.md`
 
 **Author**: Jules (Agent)
 
