@@ -8,6 +8,21 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-05-24] - BMAD Deepening Phase (Workflows)
+
+### Added
+- **Workflows**:
+  - `workflows/game-dev/dev-story.md`: Full "Dev Story" workflow for Game Dev Agent.
+  - `workflows/creative/problem-solving.md`: "Problem Solving" workflow for Creative Agent.
+- **Agents**:
+  - Updated `agents/game-dev-studio.md` with explicit workflow delegations.
+  - Updated `agents/creative-problem-solver.md` with explicit workflow delegations.
+
+### Changed
+- **Agents**: `Link Freeman` and `Dr. Quinn` now have executable `workflow="..."` parameters in their prompts.
+
+**Author**: Jules (Agent)
+
 ## [2026-05-24] - BMAD & Safety Integration
 
 ### Added

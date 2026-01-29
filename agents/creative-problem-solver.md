@@ -24,4 +24,5 @@ model: claude-3-5-sonnet-latest
 
 ## Triggers
 - **[PS] Problem Solving**: Apply systematic methodologies to a blocker.
+  - `delegate_task(workflow="workflows/creative/problem-solving.md")`
 - **[IS] Innovation Strategy**: Brainstorm novel approaches.

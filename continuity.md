@@ -1,28 +1,29 @@
 # Overpowers Continuity Ledger
 
-## Session: 2026-05-24 - BMAD & Safety Integration
+## Session: 2026-05-24 - BMAD Deepening (Workflows)
 **Operator**: Jules (Agent)
-**Focus**: Absorption of BMAD Architecture, TEA Testing, and Safety Layers
+**Focus**: Porting complex workflows from BMAD Modules
 
 ### 🟢 Global State
-- **Safety**: 🟢 Protected. Destructive command blocker active (regex-based).
-- **Knowledge**: 🟢 Expanded. Added `docs/knowledge/testing/`.
-- **Agents**: Added `Murat` (Test), `Link` (Game Dev), `Dr. Quinn` (Creative).
+- **Game Dev**: 🟢 Activated. `dev-story` workflow ported and linked.
+- **Creative**: 🟢 Activated. `problem-solving` workflow ported and linked.
+- **Testing**: 🟢 Activated. `teach-me-testing` available.
 
 ### 🔄 Active Contexts
 | Component | Status | Notes |
 |:----------|:-------|:------|
-| **Testing** | 🟢 Expert | "Murat" agent + Network Monitor skill available |
-| **Safety** | 🟢 Hardened | `rm -rf` and CI/CD destructive ops are blocked |
-| **Architecture**| 🟢 Evolved | "Knowledge Graph" pattern adopted for domain docs |
+| **Link (GDS)** | 🟢 Ready | Has `dev-story.md` for execution |
+| **Dr. Quinn** | 🟢 Ready | Has `problem-solving.md` for execution |
+| **Murat (TEA)**| 🟢 Ready | Has `teach-me-testing.md` and Knowledge Graph |
 
 ### ⏭️ Next Actions
-1.  **Refine**: Test the `destructive-command-blocker` with more edge cases.
-2.  **Expand**: Import more knowledge fragments for Game Dev and Creative domains.
+1.  **Use**: Run a Game Dev story with `Link`.
+2.  **Use**: Solve a problem with `Dr. Quinn`.
 
 ### 📋 Session History
 | Date | Focus | Outcome |
 |:-----|:------|:--------|
+| 2026-05-24 | BMAD Deepening | Ported complex workflows for Game Dev and Creative agents. |
 | 2026-05-24 | BMAD & Safety Integration | Added Destructive Guard, Murat Agent, and Testing Knowledge. |
 | 2026-05-24 | Mothership Integration (Bonus) | Added communication skills and future-tech documentation. |
 | 2026-05-24 | Mothership Integration | Integrated features from 7 references (Moltbot, OhMyOpenCode, Compound Product). |
