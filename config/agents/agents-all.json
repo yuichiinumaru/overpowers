@@ -186,7 +186,7 @@
     },
     "sisyphus-orchestrator": {
       "mode": "primary",
-      "description": "Powerful AI orchestrator that plans obsessively, delegates strategically, and ensures multi-agent safety.",
+      "description": "Powerful AI orchestrator from OhMyOpenCode. Plans obsessively with todos, assesses search complexity before exploration, delegates strategically via category+skills combinations.",
       "model": "claude-3-5-sonnet-latest"
     },
     "phoenix-expert": {
@@ -2134,7 +2134,7 @@
     },
     "librarian-researcher": {
       "mode": "primary",
-      "description": "External knowledge retrieval specialist. Documentation discovery, finding correct versions, and creating permalinks.",
+      "description": "Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples.",
       "model": "claude-3-5-sonnet-latest"
     },
     "api-documenter": {

@@ -1,63 +1,45 @@
-# Compound Product Cycle Workflow
+# Compound Product Cycle: Report to Code
 
-## 1. Overview
-This workflow automates the cycle of turning product reports into code.
+## Overview
+The "Compound Product Cycle" is an automated workflow that converts high-level reports into executed code. It uses an agentic loop to analyze reports, generate a PRD (Product Requirements Document), break it down into tasks, and implement them iteratively.
 
-**Cycle Steps:**
-1.  **Ingest**: Reads the latest markdown report from `reports/`.
-2.  **Analyze**: Uses an LLM to identify the #1 actionable priority (no DB migrations, low effort).
-3.  **Plan**: Creates a feature branch and a Product Requirement Document (PRD).
-4.  **Task**: Breaks the PRD into atomic tasks (`prd.json`).
-5.  **Execute**: Runs a loop to implement tasks one by one, verifying each step.
-6.  **Submit**: Creates a Pull Request with a summary of changes.
+## Workflow Steps
 
----
+1.  **Report Generation**:
+    *   Place a markdown report in `reports/`.
+    *   Format: Detailed analysis or feature request.
 
-## 2. Setup
+2.  **Analysis & Planning**:
+    *   Run `scripts/compound/auto-compound.sh`.
+    *   The system analyzes the latest report in `reports/`.
+    *   It identifies the #1 actionable priority.
+    *   It creates a Feature Branch (`compound/feature-name`).
+    *   It generates a PRD (`tasks/prd-feature-name.md`) and a Task List (`scripts/compound/prd.json`).
 
-### Configuration
-Create `compound.config.json` in the project root:
+3.  **Execution Loop**:
+    *   The system enters a loop (max 25 iterations).
+    *   **Pick Task**: Selects the next failing task from `prd.json`.
+    *   **Implement**: Coding agent implements the task.
+    *   **Verify**: Quality checks are run.
+    *   **Commit**: Changes are committed if checks pass.
+    *   **Mark Complete**: Task is updated in `prd.json`.
 
-```json
-{
-  "tool": "claude",
-  "reportsDir": "./reports",
-  "outputDir": "./scripts/compound",
-  "qualityChecks": ["npm test", "npm run lint"],
-  "maxIterations": 10,
-  "branchPrefix": "compound/"
-}
-```
+4.  **Review**:
+    *   A Pull Request is generated automatically (if configured) or the branch is pushed.
+    *   Human review is required before merging.
 
-### Environment Variables
-Ensure you have API keys set for the analysis step (in `.env.local` or environment):
-- `ANTHROPIC_API_KEY` (or `OPENAI_API_KEY`, `OPENROUTER_API_KEY`)
-
----
-
-## 3. Usage
-
-### Full Automation
-Run the pipeline to process the latest report:
+## Usage
 
 ```bash
+# 1. Add a report
+echo "# New Feature Request..." > reports/2026-05-24-feature-request.md
+
+# 2. Run the cycle
 ./scripts/compound/auto-compound.sh
 ```
 
-### Dry Run
-See what the agent would pick without creating branches or code:
-
-```bash
-./scripts/compound/auto-compound.sh --dry-run
-```
-
----
-
-## 4. Reports Directory
-Place your daily/weekly reports in `reports/` as markdown files (e.g., `reports/2023-10-27-user-feedback.md`).
-
-The agent prefers:
-- Specific bug reports
-- clear UX improvements
-- Configuration tweaks
-```
+## Configuration
+Edit `scripts/compound/compound.config.json` to customize:
+*   `tool`: Agent tool to use (e.g., `opencode`, `claude`, `amp`).
+*   `qualityChecks`: Array of commands to run for verification.
+*   `maxIterations`: Limit to prevent infinite loops.
