@@ -25,6 +25,41 @@ All notable changes to the Overpowers toolkit are documented in this file.
 - **Configuration**:
   - Injected 11 new agents into `opencode-example.json` (and local config).
 
+## [2026-05-23] - Knowledge Absorption Integration
+
+### Added
+- **Agents**: Metis Consultant, Sisyphus Orchestrator, Explorer Recon, Oracle Architect, Librarian Researcher (from OhMyOpenCode).
+- **Skills**: Discord, Slack, Trello, Notion, 1Password, Voice Call (from Moltbot).
+- **Workflows**: Compound Product Cycle (`workflows/compound-product-cycle.md`, `scripts/compound/`).
+- **Protocols**: Intent Classification (`docs/protocols/intent-classification.md`).
+- **Templates**: `templates/compound.config.json`.
+
+### Changed
+- **AGENTS.md**: Added Multi-Agent Safety and Guardrails sections.
+- **scripts/compound/auto-compound.sh**: Updated error message for missing config.
+- **continuity.md**: Updated session details.
+
+**Author**: Jules (Agent)
+
+---
+
+## [2026-01-21] - Activation & Implementation
+
+### Added
+- **Scripts Implementation**:
+  - `scripts/codemaps/generate.ts`: Fully implemented with `ts-morph` to generate markdown codemaps.
+  - `scripts/docs/update.ts`: Fully implemented to update README and AGENTS.md stats.
+- **Dependencies**:
+  - Added `ts-morph` and `tsx` to `package.json`.
+
+### Changed
+- **Documentation**:
+  - Generated initial codemaps in `docs/CODEMAPS/`.
+  - Updated `README.md` architecture section.
+  - Updated `AGENTS.md` agent count (now 414+).
+- **Configuration**:
+  - Injected 11 new agents into `opencode-example.json` (and local config).
+
 **Author**: Jules
 
 ## [2026-01-19] - Mega Harvest Session & Bulk Extraction
