@@ -28,7 +28,9 @@ The system is designed to transform a single developer into an orchestrator of h
     *   *Relations*: Agents use Skills to perform actions (e.g., "dispatch to swarm").
 *   **Commands** (`commands/`): Shorthand operations for common tasks.
 *   **Workflows** (`workflows/*.md`): Documented processes that guide agents through complex multi-step objectives.
-*   **Hooks** (`hooks/`): Event-driven triggers (pre/post action) to enforce rules or notifications.
+*   **Hooks** (`hooks/`): Event-driven triggers.
+    *   **Safety Layer**: `hooks/safety/destructive-command-blocker.ts` prevents dangerous ops.
+*   **Knowledge Graph** (`docs/knowledge/`): Domain-specific knowledge fragments (e.g., Testing patterns) loaded by agents.
 *   **Configuration** (`opencode.json`): The runtime configuration where all agents and settings are injected.
 
 ## 4. Architecture Diagram
@@ -39,35 +41,34 @@ graph TD
 
     subgraph Local_Orchestration
         CEO -->|Decompose| Planner[Task Decomposition Expert]
-        Planner -->|Assign| Specialist1[Specialist Agent (e.g., Python Expert)]
-        Planner -->|Assign| Specialist2[Specialist Agent (e.g., Security Auditor)]
+        Planner -->|Assign| Specialist1[Specialist Agent]
+        Planner -->|Assign| Specialist2[Specialist Agent]
+    end
+
+    subgraph Safety_Layer
+        Specialist1 -.->|Command| SafetyHook[Destructive Command Blocker]
+        SafetyHook --|Block| Specialist1
+        SafetyHook --|Allow| Execution_Layer
     end
 
     subgraph Execution_Layer
         Specialist1 -->|Execute| LocalSkills[Local Skills/Scripts]
         Specialist2 -->|Execute| LocalSkills
-
-        CEO -->|Delegate Heavy Load| JulesDispatch[Skill: Jules Dispatch]
-    end
-
-    subgraph Jules_Swarm_Cloud
-        JulesDispatch -->|Prompt| CloudTask1[Google Jules Account 1]
-        JulesDispatch -->|Prompt| CloudTask2[Google Jules Account 2]
-        CloudTask1 -->|Branch| GitBranch1[Feature Branch]
-        CloudTask2 -->|Branch| GitBranch2[Feature Branch]
-    end
-
-    subgraph Integration
-        GitBranch1 --> JulesHarvest[Skill: Jules Harvest]
-        GitBranch2 --> JulesHarvest
-        JulesHarvest --> JulesTriage[Skill: Jules Triage]
-        JulesTriage -->|Merge| MainCodebase[Main Codebase]
     end
 ```
 
 ## 5. Critical Paths
 
 ### A. The "CEO" Orchestration Loop
+1.  **Input**: User provides a high-level goal.
+2.  **Decomposition**: The CEO agent uses the `task_decomposition_expert`.
+3.  **Delegation**: Tasks dispatched to specialists.
+4.  **Review**: Synthesis of results.
+
+### B. The Compound Product Cycle (Report -> Code)
+1.  **Input**: Report markdown file in `reports/`.
+2.  **Analysis**: `auto-compound.sh` prioritizes one feature.
+3.  **Cycle**: Generates PRD, executes loop, verifies.
 1.  **Input**: User provides a high-level goal (e.g., "Refactor auth system").
 2.  **Decomposition**: The CEO agent uses the `task_decomposition_expert` to break this into atomic tasks.
 3.  **Delegation**:
@@ -117,21 +118,16 @@ The system logic is driven by 5 core agents:
     model: optional-model-override
     ---
     ```
-*   **Changelog Law**:
-    *   **MUST** update `CHANGELOG.md` for *every* modification.
-    *   Newest entries at the top.
-    *   Never delete history.
-*   **Continuity**:
-    *   Update `continuity.md` at the end of every session to track state.
+*   **Changelog Law**: **MUST** update `CHANGELOG.md` for *every* modification.
+*   **Continuity**: Update `continuity.md` at session end.
 
 ## 8. Operational Instructions
 
 ### Deploying the Agent Army
-To regenerate and inject all agent configurations into the local OpenCode environment:
+To regenerate and inject all agent configurations:
 ```bash
 ./deploy-agent-army.sh
 ```
-*   **Logic**: Runs `generate-agent-configs.py` (parse markdown -> json) then `inject-agents-to-config.py` (update `opencode.json`).
 
 ### Adding a New Agent
 1.  Create `agents/new-agent-name.md`.
