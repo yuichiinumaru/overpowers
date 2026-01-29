@@ -69,6 +69,33 @@ graph TD
 1.  **Input**: Report markdown file in `reports/`.
 2.  **Analysis**: `auto-compound.sh` prioritizes one feature.
 3.  **Cycle**: Generates PRD, executes loop, verifies.
+1.  **Input**: User provides a high-level goal (e.g., "Refactor auth system").
+2.  **Decomposition**: The CEO agent uses the `task_decomposition_expert` to break this into atomic tasks.
+3.  **Delegation**:
+    *   Small tasks -> Executed locally by specialized agents (e.g., `security_auditor`).
+    *   Large/Parallel tasks -> Dispatched to Jules Swarm.
+4.  **Review**: The CEO synthesizes the results and presents them to the user.
+
+### B. The Jules Swarm Workflow (4-Stage)
+1.  **Dispatch (`jules-dispatch`)**:
+    *   Generates optimized, modular prompts.
+    *   Creates a dispatch record in `.jules/pending/`.
+    *   Assigns tasks to available Google Jules accounts (round-robin).
+2.  **Harvest (`jules-harvest`)**:
+    *   Polls for completed tasks.
+    *   Fetches remote branches created by the swarm.
+3.  **Triage (`jules-triage`)**:
+    *   Enables parallel review of the harvested branches.
+    *   Rates solutions.
+4.  **Integrate (`jules-integrate`)**:
+    *   Merges the approved branches into the main codebase.
+
+### C. The Compound Product Cycle (Report -> Code)
+1.  **Input**: Report markdown file in `reports/`.
+2.  **Analysis**: `auto-compound.sh` analyzes the report and prioritizes one feature.
+3.  **Cycle**:
+    *   Generates PRD and Task List.
+    *   Executes loop (`loop.sh`): Code -> Verify -> Commit.
 4.  **Output**: Feature Branch ready for PR.
 
 ## 6. Core Agents (Oh My OpenCode Integration)
@@ -81,7 +108,7 @@ The system logic is driven by 5 core agents:
 
 ## 7. Style Guide
 
-*   **Naming Convention**: `kebab-case` for all files.
+*   **Naming Convention**: `kebab-case` for all files (agents, skills, scripts).
 *   **Agent Frontmatter**:
     ```yaml
     ---
@@ -106,3 +133,11 @@ To regenerate and inject all agent configurations:
 1.  Create `agents/new-agent-name.md`.
 2.  Add frontmatter and prompt.
 3.  Run `./deploy-agent-army.sh`.
+4.  Verify with `opencode agent list`.
+
+## 9. Technical Debt & Observations
+
+*   **Scale Complexity**: With 390+ agents, there is significant overlap in capabilities. Finding the "right" agent can be difficult for a human, necessitating the "CEO" agent pattern.
+*   **Maintenance**: Keeping 960+ components updated and compatible with the underlying OpenCode platform is a high-effort task.
+*   **Dependency**: The system is heavily dependent on the external OpenCode/Claude Code CLI environment and its plugin architecture.
+*   **Manual Steps**: The "Jules Swarm" still has manual triggers (dispatch/harvest), though heavily automated via scripts.
