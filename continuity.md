@@ -1,28 +1,28 @@
 # Overpowers Continuity Ledger
 
-## Session: 2026-05-24 - Mothership Integration (Bonus)
+## Session: 2026-05-24 - BMAD & Safety Integration
 **Operator**: Jules (Agent)
-**Focus**: Advanced integrations and documentation
+**Focus**: Absorption of BMAD Architecture, TEA Testing, and Safety Layers
 
 ### 🟢 Global State
-- **Skills**: Added `voice-call`, `telegram`, `whatsapp` extensions.
-- **Docs**: Documented advanced hooks (OhMyOpenCode) and MCP tools.
-- **Agents**: Fully deployed updated agent set.
+- **Safety**: 🟢 Protected. Destructive command blocker active (regex-based).
+- **Knowledge**: 🟢 Expanded. Added `docs/knowledge/testing/`.
+- **Agents**: Added `Murat` (Test), `Link` (Game Dev), `Dr. Quinn` (Creative).
 
 ### 🔄 Active Contexts
 | Component | Status | Notes |
 |:----------|:-------|:------|
-| **Communication** | 🟢 Expanded | Added Voice/Telegram/WhatsApp support |
-| **Future Tech** | 🟡 Documented | Hooks and MCP integrations mapped for future implementation |
+| **Testing** | 🟢 Expert | "Murat" agent + Network Monitor skill available |
+| **Safety** | 🟢 Hardened | `rm -rf` and CI/CD destructive ops are blocked |
+| **Architecture**| 🟢 Evolved | "Knowledge Graph" pattern adopted for domain docs |
 
 ### ⏭️ Next Actions
-1.  **Implement**: Build the `grep.app` MCP server based on `docs/future/mcp-integrations.md`.
-2.  **Implement**: Port the `todo-continuation` hook once the plugin system is ready.
+1.  **Refine**: Test the `destructive-command-blocker` with more edge cases.
+2.  **Expand**: Import more knowledge fragments for Game Dev and Creative domains.
 
 ### 📋 Session History
 | Date | Focus | Outcome |
 |:-----|:------|:--------|
+| 2026-05-24 | BMAD & Safety Integration | Added Destructive Guard, Murat Agent, and Testing Knowledge. |
 | 2026-05-24 | Mothership Integration (Bonus) | Added communication skills and future-tech documentation. |
 | 2026-05-24 | Mothership Integration | Integrated features from 7 references (Moltbot, OhMyOpenCode, Compound Product). |
-| 2026-05-23 | Knowledge Absorption | Integrated protocols, agents, skills, and workflows from 7 external repos. |
-| 2026-01-21 | Mega Harvest Integration | Integrated harvest branch with architectural digest. |

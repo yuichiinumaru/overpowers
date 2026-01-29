@@ -28,7 +28,9 @@ The system is designed to transform a single developer into an orchestrator of h
     *   *Relations*: Agents use Skills to perform actions (e.g., "dispatch to swarm").
 *   **Commands** (`commands/`): Shorthand operations for common tasks.
 *   **Workflows** (`workflows/*.md`): Documented processes that guide agents through complex multi-step objectives.
-*   **Hooks** (`hooks/`): Event-driven triggers (pre/post action) to enforce rules or notifications.
+*   **Hooks** (`hooks/`): Event-driven triggers.
+    *   **Safety Layer**: `hooks/safety/destructive-command-blocker.ts` prevents dangerous ops.
+*   **Knowledge Graph** (`docs/knowledge/`): Domain-specific knowledge fragments (e.g., Testing patterns) loaded by agents.
 *   **Configuration** (`opencode.json`): The runtime configuration where all agents and settings are injected.
 
 ## 4. Architecture Diagram
@@ -39,62 +41,34 @@ graph TD
 
     subgraph Local_Orchestration
         CEO -->|Decompose| Planner[Task Decomposition Expert]
-        Planner -->|Assign| Specialist1[Specialist Agent (e.g., Python Expert)]
-        Planner -->|Assign| Specialist2[Specialist Agent (e.g., Security Auditor)]
+        Planner -->|Assign| Specialist1[Specialist Agent]
+        Planner -->|Assign| Specialist2[Specialist Agent]
+    end
+
+    subgraph Safety_Layer
+        Specialist1 -.->|Command| SafetyHook[Destructive Command Blocker]
+        SafetyHook --|Block| Specialist1
+        SafetyHook --|Allow| Execution_Layer
     end
 
     subgraph Execution_Layer
         Specialist1 -->|Execute| LocalSkills[Local Skills/Scripts]
         Specialist2 -->|Execute| LocalSkills
-
-        CEO -->|Delegate Heavy Load| JulesDispatch[Skill: Jules Dispatch]
-    end
-
-    subgraph Jules_Swarm_Cloud
-        JulesDispatch -->|Prompt| CloudTask1[Google Jules Account 1]
-        JulesDispatch -->|Prompt| CloudTask2[Google Jules Account 2]
-        CloudTask1 -->|Branch| GitBranch1[Feature Branch]
-        CloudTask2 -->|Branch| GitBranch2[Feature Branch]
-    end
-
-    subgraph Integration
-        GitBranch1 --> JulesHarvest[Skill: Jules Harvest]
-        GitBranch2 --> JulesHarvest
-        JulesHarvest --> JulesTriage[Skill: Jules Triage]
-        JulesTriage -->|Merge| MainCodebase[Main Codebase]
     end
 ```
 
 ## 5. Critical Paths
 
 ### A. The "CEO" Orchestration Loop
-1.  **Input**: User provides a high-level goal (e.g., "Refactor auth system").
-2.  **Decomposition**: The CEO agent uses the `task_decomposition_expert` to break this into atomic tasks.
-3.  **Delegation**:
-    *   Small tasks -> Executed locally by specialized agents (e.g., `security_auditor`).
-    *   Large/Parallel tasks -> Dispatched to Jules Swarm.
-4.  **Review**: The CEO synthesizes the results and presents them to the user.
+1.  **Input**: User provides a high-level goal.
+2.  **Decomposition**: The CEO agent uses the `task_decomposition_expert`.
+3.  **Delegation**: Tasks dispatched to specialists.
+4.  **Review**: Synthesis of results.
 
-### B. The Jules Swarm Workflow (4-Stage)
-1.  **Dispatch (`jules-dispatch`)**:
-    *   Generates optimized, modular prompts.
-    *   Creates a dispatch record in `.jules/pending/`.
-    *   Assigns tasks to available Google Jules accounts (round-robin).
-2.  **Harvest (`jules-harvest`)**:
-    *   Polls for completed tasks.
-    *   Fetches remote branches created by the swarm.
-3.  **Triage (`jules-triage`)**:
-    *   Enables parallel review of the harvested branches.
-    *   Rates solutions.
-4.  **Integrate (`jules-integrate`)**:
-    *   Merges the approved branches into the main codebase.
-
-### C. The Compound Product Cycle (Report -> Code)
+### B. The Compound Product Cycle (Report -> Code)
 1.  **Input**: Report markdown file in `reports/`.
-2.  **Analysis**: `auto-compound.sh` analyzes the report and prioritizes one feature.
-3.  **Cycle**:
-    *   Generates PRD and Task List.
-    *   Executes loop (`loop.sh`): Code -> Verify -> Commit.
+2.  **Analysis**: `auto-compound.sh` prioritizes one feature.
+3.  **Cycle**: Generates PRD, executes loop, verifies.
 4.  **Output**: Feature Branch ready for PR.
 
 ## 6. Core Agents (Oh My OpenCode Integration)
@@ -107,7 +81,7 @@ The system logic is driven by 5 core agents:
 
 ## 7. Style Guide
 
-*   **Naming Convention**: `kebab-case` for all files (agents, skills, scripts).
+*   **Naming Convention**: `kebab-case` for all files.
 *   **Agent Frontmatter**:
     ```yaml
     ---
@@ -117,31 +91,18 @@ The system logic is driven by 5 core agents:
     model: optional-model-override
     ---
     ```
-*   **Changelog Law**:
-    *   **MUST** update `CHANGELOG.md` for *every* modification.
-    *   Newest entries at the top.
-    *   Never delete history.
-*   **Continuity**:
-    *   Update `continuity.md` at the end of every session to track state.
+*   **Changelog Law**: **MUST** update `CHANGELOG.md` for *every* modification.
+*   **Continuity**: Update `continuity.md` at session end.
 
 ## 8. Operational Instructions
 
 ### Deploying the Agent Army
-To regenerate and inject all agent configurations into the local OpenCode environment:
+To regenerate and inject all agent configurations:
 ```bash
 ./deploy-agent-army.sh
 ```
-*   **Logic**: Runs `generate-agent-configs.py` (parse markdown -> json) then `inject-agents-to-config.py` (update `opencode.json`).
 
 ### Adding a New Agent
 1.  Create `agents/new-agent-name.md`.
 2.  Add frontmatter and prompt.
 3.  Run `./deploy-agent-army.sh`.
-4.  Verify with `opencode agent list`.
-
-## 9. Technical Debt & Observations
-
-*   **Scale Complexity**: With 390+ agents, there is significant overlap in capabilities. Finding the "right" agent can be difficult for a human, necessitating the "CEO" agent pattern.
-*   **Maintenance**: Keeping 960+ components updated and compatible with the underlying OpenCode platform is a high-effort task.
-*   **Dependency**: The system is heavily dependent on the external OpenCode/Claude Code CLI environment and its plugin architecture.
-*   **Manual Steps**: The "Jules Swarm" still has manual triggers (dispatch/harvest), though heavily automated via scripts.
