@@ -14,7 +14,7 @@
     },
     "librarian-researcher": {
       "mode": "primary",
-      "description": "External knowledge retrieval specialist. Documentation discovery, finding correct versions, and creating permalinks.",
+      "description": "Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples.",
       "model": "claude-3-5-sonnet-latest"
     },
     "explorer-recon": {

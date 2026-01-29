@@ -89,7 +89,23 @@ graph TD
 4.  **Integrate (`jules-integrate`)**:
     *   Merges the approved branches into the main codebase.
 
-## 6. Style Guide
+### C. The Compound Product Cycle (Report -> Code)
+1.  **Input**: Report markdown file in `reports/`.
+2.  **Analysis**: `auto-compound.sh` analyzes the report and prioritizes one feature.
+3.  **Cycle**:
+    *   Generates PRD and Task List.
+    *   Executes loop (`loop.sh`): Code -> Verify -> Commit.
+4.  **Output**: Feature Branch ready for PR.
+
+## 6. Core Agents (Oh My OpenCode Integration)
+The system logic is driven by 5 core agents:
+*   **Sisyphus (Orchestrator)**: Plans obsessively, delegates to specialists.
+*   **Metis (Consultant)**: Classifies intent and consults *before* planning.
+*   **Librarian (Researcher)**: Finds documentation and examples from external sources.
+*   **Oracle (Architect)**: High-IQ reasoning for complex architecture and debugging.
+*   **Explorer (Recon)**: Internal codebase exploration via grep/AST search.
+
+## 7. Style Guide
 
 *   **Naming Convention**: `kebab-case` for all files (agents, skills, scripts).
 *   **Agent Frontmatter**:
@@ -108,7 +124,7 @@ graph TD
 *   **Continuity**:
     *   Update `continuity.md` at the end of every session to track state.
 
-## 7. Operational Instructions
+## 8. Operational Instructions
 
 ### Deploying the Agent Army
 To regenerate and inject all agent configurations into the local OpenCode environment:
@@ -123,7 +139,7 @@ To regenerate and inject all agent configurations into the local OpenCode enviro
 3.  Run `./deploy-agent-army.sh`.
 4.  Verify with `opencode agent list`.
 
-## 8. Technical Debt & Observations
+## 9. Technical Debt & Observations
 
 *   **Scale Complexity**: With 390+ agents, there is significant overlap in capabilities. Finding the "right" agent can be difficult for a human, necessitating the "CEO" agent pattern.
 *   **Maintenance**: Keeping 960+ components updated and compatible with the underlying OpenCode platform is a high-effort task.
