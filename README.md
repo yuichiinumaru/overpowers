@@ -312,3 +312,12 @@ See [LICENSE](LICENSE) for details.
 
 ---
 *Built with 💜 upon the foundation of Superpowers by Jesse Vincent*
+
+## Architecture
+
+See [docs/CODEMAPS/INDEX.md](docs/CODEMAPS/INDEX.md) for detailed architecture.
+Also see [JULES_ARCHITECTURAL_DIGEST.md](JULES_ARCHITECTURAL_DIGEST.md) for a high-level architectural digest.
+
+### Key Components
+- **Agents**: See [docs/CODEMAPS/agents.md](docs/CODEMAPS/agents.md)
+- **Source**: See [docs/CODEMAPS/source.md](docs/CODEMAPS/source.md)

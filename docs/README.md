@@ -10,8 +10,11 @@ This directory contains guides for using and extending the Overpowers toolkit.
 | [Scripts Guide](scripts-guide.md) | DevOps and automation scripts (89 available) |
 | [Workflows Guide](workflows-guide.md) | Multi-step development workflows (16 available) |
 | [Services Guide](services-guide.md) | External service integrations (13 available) |
+<<<<<<< HEAD
 | [Awesome References](references.md) | Curated list of 50+ plugins, agents, and tools |
 | [PREVC Workflow](concepts/prevc-workflow.md) | Planning, Review, Execution, Validation, Confirmation workflow |
+=======
+>>>>>>> remotes/origin/jules-harvest-mega-session-16505481372407860250
 
 ## Installation
 

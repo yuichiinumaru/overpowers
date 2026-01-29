@@ -26,7 +26,7 @@
 ### 📦 Core Components
 | Component | Count | Location |
 |:----------|:------|:---------|
-| Agents | 390+ | `agents/` |
+| Agents | 414+ | `agents/` |
 | Skills | 149 | `skills/` |
 | Commands | 228+ | `commands/` |
 | Hooks | 29 | `hooks/` |
