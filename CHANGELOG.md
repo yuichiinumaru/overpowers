@@ -8,6 +8,20 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-05-24] - Project Knowledge Optimization
+
+### Added
+- **Documentation**: `docs/SYSTEM_KNOWLEDGE_GRAPH.md` - The "Cognitive Context File" containing architecture, entity relationships, and component registry.
+- **Documentation**: `docs/project_structure_map.md` - Full recursive file tree and entity map.
+- **Tooling**: `generate_structure_map.py` - Script to regenerate the project structure map.
+
+### Changed
+- **Planning**: Initiated "Project Knowledge Optimization" mission.
+
+**Author**: Jules (Agent)
+
+---
+
 ## [2026-05-24] - Browser Automation & Cleanup
 ## [2026-05-24] - BMAD & Safety Integration
 
