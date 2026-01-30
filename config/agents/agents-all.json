@@ -1082,7 +1082,8 @@
     },
     "browser-automator": {
       "mode": "primary",
-      "description": "An AI agent designed to automate browser tasks using the browser-use CLI."
+      "description": "Specialized agent for web interaction using Playwright and Browser Use skills. Can navigate, scrape, interact with forms, and verify UI states.",
+      "model": "claude-3-5-sonnet-latest"
     },
     "jquery-expert": {
       "mode": "subagent",

@@ -25,3 +25,9 @@ pnpm-lock.yaml
 .DS_Store
 Thumbs.db
 references/
+node_modules/
+dist/
+coverage/
+.DS_Store
+__pycache__/
+*.log

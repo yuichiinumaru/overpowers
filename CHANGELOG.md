@@ -8,6 +8,19 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-05-24] - Browser Automation & Cleanup
+
+### Added
+- **Skills**: `browser-use`, `playwright-skill`, `web-research` (from Moltbot).
+- **Agents**: `browser-automator.md` specialized in web interaction.
+- **Workflows**: `workflows/web-research.md`.
+
+### Changed
+- **Config**: Updated `.gitignore` to exclude build artifacts and caches.
+- **Agents**: Regenerated all agent configs.
+
+**Author**: Jules (Agent)
+
 ## [2026-05-24] - BMAD Deepening Phase (Workflows)
 
 ### Added
