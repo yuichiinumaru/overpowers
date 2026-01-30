@@ -143,8 +143,8 @@ category: optional-category
 ```
 
 ### Model Preferences
-- **Reasoning/Coding**: `gemini-3-pro`, `claude-4.5-sonnet-thinking`
-- **Fast Tasks**: `gemini-3-flash`
+- **Reasoning/Coding**: `gemini-3-pro-preview`, `claude-4-5-opus-thinking`
+- **Fast Tasks**: `gemini-3-flash-preview`
 - **Fallback**: `claude-4.5-sonnet`
 
 ---
@@ -193,6 +193,9 @@ python3 fix-skill-names.py
 *   **Publish**: `npm publish --access public --otp="<otp>"`
 *   **Verify**: `npm view <pkg> version --userconfig "$(mktemp)"`
 *   **Cleanup**: Kill the tmux session after publish.
+
+### Safety Hooks
+*   **Destructive Command Guard**: `hooks/safety/destructive-command-blocker.ts` checks shell commands against regex patterns (ported from `destructive_command_guard`) to prevent catastrophic errors like `rm -rf /` or `mkfs` on physical drives.
 
 ---
 
