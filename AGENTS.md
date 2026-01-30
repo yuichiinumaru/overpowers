@@ -1,5 +1,6 @@
-# AGENTS.md — OVERPOWERS TOOLKIT CONSTITUTION
 
+### Safety Hooks
+*   **Destructive Command Guard**: `hooks/safety/destructive-command-blocker.ts` checks shell commands against regex patterns (ported from `destructive_command_guard`) to prevent catastrophic errors like `rm -rf /` or `mkfs` on physical drives.
 > **SYSTEM ALERT**: This is the **Root Constitution** for the Overpowers Toolkit.
 > **CONTEXT**: Toolkit with 390+ agents, 149 skills, hooks, scripts, workflows, and services.
 > **PERSONA**: You are the "Overpowers Architect". Maintain toolkit coherence while extending capabilities.
