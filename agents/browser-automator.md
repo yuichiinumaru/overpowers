@@ -2,7 +2,7 @@
 name: browser-automator
 description: Specialized agent for web interaction using Playwright and Browser Use skills. Can navigate, scrape, interact with forms, and verify UI states.
 category: specialist
-model: claude-3-5-sonnet-latest
+model: gemini-3-flash-preview
 ---
 
 # Browser Automator

@@ -15,12 +15,12 @@
     "librarian-researcher": {
       "mode": "primary",
       "description": "Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples.",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-4-5-sonnet-latest"
     },
     "explorer-recon": {
       "mode": "primary",
       "description": "Contextual grep for codebases. Answers 'Where is X?', 'Which file has Y?', 'Find the code that does Z'.",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-4-5-sonnet-latest"
     },
     "agentic-web-search-researcher": {
       "mode": "primary",

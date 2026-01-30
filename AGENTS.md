@@ -142,8 +142,8 @@ category: optional-category
 ```
 
 ### Model Preferences
-- **Reasoning/Coding**: `gemini-3-pro`, `claude-4.5-sonnet-thinking`
-- **Fast Tasks**: `gemini-3-flash`
+- **Reasoning/Coding**: `gemini-3-pro-preview`, `claude-4-5-opus-thinking`
+- **Fast Tasks**: `gemini-3-flash-preview`
 - **Fallback**: `claude-4.5-sonnet`
 
 ---

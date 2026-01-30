@@ -2,7 +2,7 @@
 name: librarian-researcher
 description: Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples.
 category: research
-model: claude-3-5-sonnet-latest
+model: claude-4-5-sonnet-latest
 ---
 
 # THE LIBRARIAN

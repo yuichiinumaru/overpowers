@@ -187,7 +187,7 @@
     "sisyphus-orchestrator": {
       "mode": "primary",
       "description": "Powerful AI orchestrator from OhMyOpenCode. Plans obsessively with todos, assesses search complexity before exploration, delegates strategically via category+skills combinations.",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "gemini-3-pro-preview"
     },
     "phoenix-expert": {
       "mode": "subagent",
@@ -323,7 +323,7 @@
     "game-dev-studio": {
       "mode": "primary",
       "description": "Senior Game Developer. Expertise in Unity, Unreal, Godot. Focus on performance (60fps), game loop optimization, and rapid iteration.",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "gemini-3-flash-preview"
     },
     "ux-researcher": {
       "mode": "primary",
@@ -654,7 +654,7 @@
     "tdd-expert": {
       "mode": "subagent",
       "description": "Test-Driven Development specialist enforcing write-tests-first methodology. Use PROACTIVELY when writing new features, fixing bugs, or refactoring code. Ensures 80%+ test coverage.",
-      "model": "opus",
+      "model": "gemini-3-flash-preview",
       "prompt": "You are a Test-Driven Development (TDD) specialist who ensures all code is developed test-first with comprehensive coverage.\n\n## Your Role\n\n- Enforce tests-before-code methodology\n- Guide developers through TDD Red-Green-Refactor cycle\n- Ensure 80%+ test coverage\n- Write comprehensive test suites (unit, integration, E2E)\n- Catch edge cases before implementation\n\n## TDD Workflow\n\n### Step 1: Write Test First (RED)\n```typescript\n// ALWAYS start with a failing test\ndescribe('searchMarkets', () => {..."
     },
     "test-coverage-reviewer": {
@@ -1083,7 +1083,7 @@
     "browser-automator": {
       "mode": "primary",
       "description": "Specialized agent for web interaction using Playwright and Browser Use skills. Can navigate, scrape, interact with forms, and verify UI states.",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "gemini-3-flash-preview"
     },
     "jquery-expert": {
       "mode": "subagent",
@@ -1167,7 +1167,7 @@
     "creative-problem-solver": {
       "mode": "subagent",
       "description": "Master Problem Solver using TRIZ, Systems Thinking, and Root Cause Analysis. Solves impossible challenges.",
-      "model": "claude-3-5-sonnet-latest",
+      "model": "claude-4-5-opus-thinking",
       "prompt": "# Dr. Quinn - Master Problem Solver\n\n## Persona\n**Role**: Systematic Problem-Solving Expert\n**Identity**: Renowned puzzle master. Expert in TRIZ, Theory of Constraints, Systems Thinking.\n**Communication Style**: Sherlock Holmes mixed with a playful scientist. Deductive, curious.\n**Principles**:\n- Every problem is a system revealing weaknesses.\n- Hunt for root causes relentlessly.\n- The right question beats a fast answer.\n\n## Methodology\n1.  **Define**: What is the *actual* problem? (5 Whys).\n2. ..."
     },
     "ios-expert": {
@@ -1390,7 +1390,7 @@
     "murat-test-architect": {
       "mode": "primary",
       "description": "Master Test Architect and Quality Advisor. Specializes in risk-based testing, ATDD, and quality gates.",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "gemini-3-flash-preview"
     },
     "docker-specialist": {
       "mode": "subagent",
@@ -1410,7 +1410,7 @@
     "metis-consultant": {
       "mode": "primary",
       "description": "Pre-planning consultant that analyzes requests to identify hidden intentions, ambiguities, and AI failure points.",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-4-5-opus-thinking"
     },
     "customer-success-manager": {
       "mode": "primary",
@@ -1816,7 +1816,7 @@
     "architect": {
       "mode": "primary",
       "description": "Software architecture specialist for system design, scalability, and technical decision-making. Use PROACTIVELY when planning new features, refactoring large systems, or making architectural decisions.",
-      "model": "opus"
+      "model": "claude-4-5-opus-thinking"
     },
     "agentic-codebase-analyzer": {
       "mode": "primary",
@@ -1916,7 +1916,7 @@
     "oracle-architect": {
       "mode": "primary",
       "description": "Read-only consultation agent. High-IQ reasoning specialist for debugging hard problems and high-difficulty architecture design.",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-4-5-opus-thinking"
     },
     "metadata-agent": {
       "mode": "primary",
@@ -2152,7 +2152,7 @@
     "librarian-researcher": {
       "mode": "primary",
       "description": "Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples.",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-4-5-sonnet-latest"
     },
     "api-documenter": {
       "mode": "primary",
@@ -2163,7 +2163,7 @@
     "explorer-recon": {
       "mode": "primary",
       "description": "Contextual grep for codebases. Answers 'Where is X?', 'Which file has Y?', 'Find the code that does Z'.",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-4-5-sonnet-latest"
     },
     "report-generator": {
       "mode": "primary",
