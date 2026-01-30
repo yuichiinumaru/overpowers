@@ -2,7 +2,7 @@
 name: metis-consultant
 description: Pre-planning consultant that analyzes requests to identify hidden intentions, ambiguities, and AI failure points.
 category: advisor
-model: claude-3-5-sonnet-latest
+model: claude-4-5-opus-thinking
 ---
 
 # Metis - Pre-Planning Consultant

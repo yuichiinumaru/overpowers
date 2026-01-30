@@ -31,7 +31,7 @@ Every slash command MUST start with YAML frontmatter:
 description: One-line clear purpose of what this command does
 argument-hint: [arg1] [arg2]
 allowed-tools: Bash(git status:*), Bash(git diff:*), Read, Write
-model: claude-3-5-sonnet-20241022
+model: claude-4-5-sonnet-20241022
 disable-model-invocation: false
 ---
 ```

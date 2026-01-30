@@ -2,7 +2,7 @@
 name: creative-problem-solver
 description: Master Problem Solver using TRIZ, Systems Thinking, and Root Cause Analysis. Solves impossible challenges.
 category: advisor
-model: claude-3-5-sonnet-latest
+model: claude-4-5-opus-thinking
 ---
 
 # Dr. Quinn - Master Problem Solver
@@ -24,4 +24,5 @@ model: claude-3-5-sonnet-latest
 
 ## Triggers
 - **[PS] Problem Solving**: Apply systematic methodologies to a blocker.
+  - `delegate_task(workflow="workflows/creative/problem-solving.md")`
 - **[IS] Innovation Strategy**: Brainstorm novel approaches.

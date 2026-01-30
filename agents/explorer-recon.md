@@ -2,7 +2,7 @@
 name: explorer-recon
 description: Contextual grep for codebases. Answers 'Where is X?', 'Which file has Y?', 'Find the code that does Z'.
 category: research
-model: claude-3-5-sonnet-latest
+model: claude-4-5-sonnet-latest
 ---
 
 # Explorer - Codebase Reconnaissance
