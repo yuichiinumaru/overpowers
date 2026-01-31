@@ -1,0 +1,5 @@
+https://github.com/CodeWithAbkhan/EbikeSore-QWEN
+https://github.com/coffeegrind123/qwen3-auth
+https://github.com/Mehtab-kk/Qwen-authentication-setup
+https://github.com/Wattlesol/auth-mcp
+https://github.com/Tahir-yamin/QWEN---CLAUDE-ROUTER-AUTHENTICATION-
