@@ -8,6 +8,16 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-05-24] - Legacy Code Assimilation
+
+### Added
+- **Skills**: Imported 19 high-value skills from `antigravity-skills` (including `bdi-mental-states`, `context-optimization`, `remotion`).
+- **Scripts**: Added Knowledge Management System (`scripts/knowledge/*.py`) ported from `andy-universal-agent-rules`.
+- **Documentation**: `docs/INTEGRATION_REPORT.md` - detailed report of the extraction.
+
+### Changed
+- **Knowledge**: `scripts/knowledge/*.py` modified to store data in `docs/knowledge/` instead of legacy paths.
+
 ## [2026-05-24] - Project Knowledge Optimization
 
 ### Added

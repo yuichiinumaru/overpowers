@@ -1,2626 +1,3339 @@
-# Project Structure Map
-
-| Type | Path | Description (Inferred) |
-|---|---|---|
-| File | `AGENTS.md` | Documentation |
-| File | `CHANGELOG.md` | Documentation |
-| File | `JULES_ARCHITECTURAL_DIGEST.md` | Documentation |
-| File | `LICENSE` |  |
-| File | `README.md` | Documentation |
-| File | `compound.config.json` | Data / Config |
-| File | `configure-persona.sh` | Shell Script |
-| File | `continuity.md` | Documentation |
-| File | `deploy-agent-army.sh` | Shell Script |
-| File | `generate-agent-configs.py` | Python Source |
-| File | `generate-inventory.py` | Python Source |
-| File | `generate_structure_map.py` | Python Source |
-| File | `inject-agents-to-config.py` | Python Source |
-| File | `install-antigravity-skills.sh` | Shell Script |
-| File | `install-personas.sh` | Shell Script |
-| File | `opencode-example.json` | Data / Config |
-| File | `package-lock.json` | Data / Config |
-| File | `package.json` | Data / Config |
-| File | `subagent-orchestrator.py` | Python Source |
-| File | `test-nonhidden.sh` | Shell Script |
-| File | `test-subagent.sh` | Shell Script |
-| Agent | `config/agents/agents-ARCHITECTURE.json` | Data / Config |
-| Agent | `config/agents/agents-CLI.json` | Data / Config |
-| Agent | `config/agents/agents-CODING.json` | Data / Config |
-| Agent | `config/agents/agents-CRITICAL.json` | Data / Config |
-| Agent | `config/agents/agents-DOCS.json` | Data / Config |
-| Agent | `config/agents/agents-FREE.json` | Data / Config |
-| Agent | `config/agents/agents-FRONTEND.json` | Data / Config |
-| Agent | `config/agents/agents-PERFORMANCE.json` | Data / Config |
-| Agent | `config/agents/agents-TOOLING.json` | Data / Config |
-| Agent | `config/agents/agents-advisor.json` | Data / Config |
-| Agent | `config/agents/agents-ai-ml.json` | Data / Config |
-| Agent | `config/agents/agents-all.json` | Data / Config |
-| Agent | `config/agents/agents-architecture.json` | Data / Config |
-| Agent | `config/agents/agents-automation.json` | Data / Config |
-| Agent | `config/agents/agents-backend.json` | Data / Config |
-| Agent | `config/agents/agents-blockchain-web3.json` | Data / Config |
-| Agent | `config/agents/agents-crypto-trading.json` | Data / Config |
-| Agent | `config/agents/agents-data-ai.json` | Data / Config |
-| Agent | `config/agents/agents-design-experience.json` | Data / Config |
-| Agent | `config/agents/agents-development-architecture.json` | Data / Config |
-| Agent | `config/agents/agents-devops.json` | Data / Config |
-| Agent | `config/agents/agents-documentation.json` | Data / Config |
-| Agent | `config/agents/agents-frontend.json` | Data / Config |
-| Agent | `config/agents/agents-general.json` | Data / Config |
-| Agent | `config/agents/agents-infrastructure-operations.json` | Data / Config |
-| Agent | `config/agents/agents-language-specialists.json` | Data / Config |
-| Agent | `config/agents/agents-marketing.json` | Data / Config |
-| Agent | `config/agents/agents-mobile.json` | Data / Config |
-| Agent | `config/agents/agents-orchestrator.json` | Data / Config |
-| Agent | `config/agents/agents-prevc-context.json` | Data / Config |
-| Agent | `config/agents/agents-product.json` | Data / Config |
-| Agent | `config/agents/agents-quality-security.json` | Data / Config |
-| Agent | `config/agents/agents-research.json` | Data / Config |
-| Agent | `config/agents/agents-sales-marketing.json` | Data / Config |
-| Agent | `config/agents/agents-security.json` | Data / Config |
-| Agent | `config/agents/agents-specialist.json` | Data / Config |
-| Agent | `config/agents/agents-specialists.json` | Data / Config |
-| Agent | `config/agents/agents-specialized-domains.json` | Data / Config |
-| Agent | `config/agents/agents-testing.json` | Data / Config |
-| Agent | `config/agents/index.json` | Data / Config |
-| Skill | `skills/consolidate_additional.py` | Python Source |
-| Skill | `skills/consolidate_skills.py` | Python Source |
-| Skill | `skills/lista de skills.md` | Documentation |
-| Skill | `skills/skills_report.json` | Data / Config |
-| Skill | `skills/v3-mcp-optimization/SKILL.md` | Documentation |
-| Skill | `skills/dashboard-creator/SKILL.md` | Documentation |
-| Skill | `skills/dashboard-creator/assets/templates/base_template.html` |  |
-| Skill | `skills/dashboard-creator/assets/templates/dashboard_components.html` |  |
-| Skill | `skills/dashboard-creator/references/design_patterns.md` | Documentation |
-| Skill | `skills/dashboard-creator/references/svg_library.md` | Documentation |
-| Skill | `skills/code-auditor/SKILL.md` | Documentation |
-| Skill | `skills/jules-harvest/SKILL.md` | Documentation |
-| Skill | `skills/game-development/SKILL.md` | Documentation |
-| Skill | `skills/game-development/skills/unity-ecs-patterns/SKILL.md` | Documentation |
-| Skill | `skills/game-development/skills/godot-gdscript-patterns/SKILL.md` | Documentation |
-| Skill | `skills/verification-quality/SKILL.md` | Documentation |
-| Skill | `skills/threejs-shaders/SKILL.md` | Documentation |
-| Skill | `skills/ensemble-solving/SKILL.md` | Documentation |
-| Skill | `skills/ensemble-solving/references/diversification-strategies.md` | Documentation |
-| Skill | `skills/ensemble-solving/references/evaluation-rubrics.md` | Documentation |
-| Skill | `skills/reasoningbank-intelligence/SKILL.md` | Documentation |
-| Skill | `skills/cookie-policy-fr-malik-taiar/LICENSE.txt` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/SKILL.md` | Documentation |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/CNIL_droits_personnes.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/CNIL_durees_conservation.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/CNIL_evolution_regles_utilisation_cookies.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/CNIL_faq_cookies_et_traceurs.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/CNIL_finalites.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/CNIL_lignes_directrices_cookies_et_traceurs.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/CNIL_principes_rgpd.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/CNIL_recommandation_cookies_et_traceurs.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/CNIL_transparence.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/RGPD_texte_officiel.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/sample_template_politique_cookies.docx` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/assets/sample_template_politique_cookies.pdf` |  |
-| Skill | `skills/cookie-policy-fr-malik-taiar/references/BASES_LEGALES_COOKIES.md` | Documentation |
-| Skill | `skills/cookie-policy-fr-malik-taiar/references/COOKIES.md` | Documentation |
-| Skill | `skills/cookie-policy-fr-malik-taiar/references/DROITS_PERSONNES.md` | Documentation |
-| Skill | `skills/cookie-policy-fr-malik-taiar/references/DUREES_CONSERVATION.md` | Documentation |
-| Skill | `skills/pair-programming/SKILL.md` | Documentation |
-| Skill | `skills/threejs-loaders/SKILL.md` | Documentation |
-| Skill | `skills/v3-security-overhaul/SKILL.md` | Documentation |
-| Skill | `skills/hive-mind-advanced/SKILL.md` | Documentation |
-| Skill | `skills/file-operations/SKILL.md` | Documentation |
-| Skill | `skills/v3-integration-deep/SKILL.md` | Documentation |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/LICENSE.txt` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/README.md` | Documentation |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/SKILL.md` | Documentation |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/assets/Circulaire_26_juin_2024.pdf` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/assets/DREETS_synthese_2025.pdf` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/assets/Decret_2022_1284.pdf` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/assets/Directive_CS3D_2024_1760.pdf` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/assets/L225-102-1.pdf` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/assets/L225-102-2.pdf` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/assets/Loi_Sapin_II_consolidee.pdf` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/assets/Loi_Waserman_2022.pdf` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/assets/Referentiel_CNIL_alertes_professionnelles.pdf` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/assets/Template_Politique_Lanceur_Alerte.docx` |  |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/references/DECRET_PROCEDURE.md` | Documentation |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/references/FONCTION_PUBLIQUE.md` | Documentation |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/references/RGPD_CNIL.md` | Documentation |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/references/TEXTES_LEGAUX.md` | Documentation |
-| Skill | `skills/whistleblower-policy-fr-malik-taiar/references/VIGILANCE.md` | Documentation |
-| Skill | `skills/expo-app-design/SKILL.md` | Documentation |
-| Skill | `skills/file-organizer/SKILL.md` | Documentation |
-| Skill | `skills/swarm-advanced/SKILL.md` | Documentation |
-| Skill | `skills/competitive-ads-extractor/SKILL.md` | Documentation |
-| Skill | `skills/writing-skills/SKILL.md` | Documentation |
-| Skill | `skills/writing-skills/anthropic-best-practices.md` | Documentation |
-| Skill | `skills/writing-skills/graphviz-conventions.dot` |  |
-| Skill | `skills/writing-skills/persuasion-principles.md` | Documentation |
-| Skill | `skills/writing-skills/render-graphs.js` | JavaScript/TypeScript Source |
-| Skill | `skills/writing-skills/testing-skills-with-subagents.md` | Documentation |
-| Skill | `skills/writing-skills/examples/CLAUDE_MD_TESTING.md` | Documentation |
-| Skill | `skills/aws-agentic-ai/SKILL.md` | Documentation |
-| Skill | `skills/aws-agentic-ai/cross-service/credential-management.md` | Documentation |
-| Service | `skills/aws-agentic-ai/services/browser/README.md` | Documentation |
-| Service | `skills/aws-agentic-ai/services/runtime/README.md` | Documentation |
-| Service | `skills/aws-agentic-ai/services/code-interpreter/README.md` | Documentation |
-| Service | `skills/aws-agentic-ai/services/observability/README.md` | Documentation |
-| Service | `skills/aws-agentic-ai/services/identity/README.md` | Documentation |
-| Service | `skills/aws-agentic-ai/services/gateway/README.md` | Documentation |
-| Service | `skills/aws-agentic-ai/services/gateway/deploy-template.sh` | Shell Script |
-| Service | `skills/aws-agentic-ai/services/gateway/deployment-strategies.md` | Documentation |
-| Service | `skills/aws-agentic-ai/services/gateway/troubleshooting-guide.md` | Documentation |
-| Service | `skills/aws-agentic-ai/services/gateway/validate-deployment.sh` | Shell Script |
-| Service | `skills/aws-agentic-ai/services/memory/README.md` | Documentation |
-| Skill | `skills/agentdb-advanced/SKILL.md` | Documentation |
-| Skill | `skills/lead-research-assistant/SKILL.md` | Documentation |
-| Skill | `skills/prevc-test-generation/SKILL.md` | Documentation |
-| Skill | `skills/aws-mcp-setup/SKILL.md` | Documentation |
-| Skill | `skills/web-design-guidelines/SKILL.md` | Documentation |
-| Skill | `skills/mcp-builder/SKILL.md` | Documentation |
-| Skill | `skills/pdf/SKILL.md` | Documentation |
-| Script | `skills/pdf/scripts/fill_form.py` | Python Source |
-| Skill | `skills/brainstorming/SKILL.md` | Documentation |
-| Skill | `skills/qa-regression/SKILL.md` | Documentation |
-| Skill | `skills/brand-guidelines/SKILL.md` | Documentation |
-| Skill | `skills/webapp-testing/SKILL.md` | Documentation |
-| Skill | `skills/expo-deployment/SKILL.md` | Documentation |
-| Skill | `skills/vercel-deploy/SKILL.md` | Documentation |
-| Skill | `skills/threejs-animation/SKILL.md` | Documentation |
-| Skill | `skills/skill-evaluator/SKILL.md` | Documentation |
-| Skill | `skills/skill-evaluator/evaluations/README.md` | Documentation |
-| Skill | `skills/skill-evaluator/evaluations/basic-skill-evaluation.json` | Data / Config |
-| Skill | `skills/skill-evaluator/evaluations/problematic-skill-evaluation.json` | Data / Config |
-| Script | `skills/skill-evaluator/scripts/validate_skill.py` | Python Source |
-| Skill | `skills/skill-evaluator/references/evaluation-criteria.md` | Documentation |
-| Skill | `skills/skill-evaluator/references/scoring-rubric.md` | Documentation |
-| Skill | `skills/mobile/react-native-architecture/SKILL.md` | Documentation |
-| Skill | `skills/mobile/nextjs-app-router-patterns/SKILL.md` | Documentation |
-| Skill | `skills/mobile/tailwind-design-system/SKILL.md` | Documentation |
-| Skill | `skills/mobile/react-state-management/SKILL.md` | Documentation |
-| Skill | `skills/pdf-processing-en-anthropic/LICENSE.txt` |  |
-| Skill | `skills/pdf-processing-en-anthropic/SKILL.md` | Documentation |
-| Script | `skills/pdf-processing-en-anthropic/scripts/check_bounding_boxes.py` | Python Source |
-| Script | `skills/pdf-processing-en-anthropic/scripts/check_bounding_boxes_test.py` | Python Source |
-| Script | `skills/pdf-processing-en-anthropic/scripts/check_fillable_fields.py` | Python Source |
-| Script | `skills/pdf-processing-en-anthropic/scripts/convert_pdf_to_images.py` | Python Source |
-| Script | `skills/pdf-processing-en-anthropic/scripts/create_validation_image.py` | Python Source |
-| Script | `skills/pdf-processing-en-anthropic/scripts/extract_form_field_info.py` | Python Source |
-| Script | `skills/pdf-processing-en-anthropic/scripts/fill_fillable_fields.py` | Python Source |
-| Script | `skills/pdf-processing-en-anthropic/scripts/fill_pdf_form_with_annotations.py` | Python Source |
-| Skill | `skills/pdf-processing-en-anthropic/references/FORMS.md` | Documentation |
-| Skill | `skills/pdf-processing-en-anthropic/references/REFERENCE.md` | Documentation |
-| Skill | `skills/hooks-automation/SKILL.md` | Documentation |
-| Skill | `skills/v3-cli-modernization/SKILL.md` | Documentation |
-| Skill | `skills/llm-application-dev/SKILL.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/langchain-architecture/SKILL.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/rag-implementation/SKILL.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/embedding-strategies/SKILL.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/vector-index-tuning/SKILL.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/similarity-search-patterns/SKILL.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/llm-evaluation/SKILL.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/prompt-engineering-patterns/SKILL.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/prompt-engineering-patterns/assets/few-shot-examples.json` | Data / Config |
-| Skill | `skills/llm-application-dev/skills/prompt-engineering-patterns/assets/prompt-template-library.md` | Documentation |
-| Script | `skills/llm-application-dev/skills/prompt-engineering-patterns/scripts/optimize-prompt.py` | Python Source |
-| Skill | `skills/llm-application-dev/skills/prompt-engineering-patterns/references/chain-of-thought.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/prompt-engineering-patterns/references/few-shot-learning.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/prompt-engineering-patterns/references/prompt-optimization.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/prompt-engineering-patterns/references/prompt-templates.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/prompt-engineering-patterns/references/system-prompts.md` | Documentation |
-| Skill | `skills/llm-application-dev/skills/hybrid-search-implementation/SKILL.md` | Documentation |
-| Skill | `skills/aws-cdk-development/SKILL.md` | Documentation |
-| Script | `skills/aws-cdk-development/scripts/validate-stack.sh` | Shell Script |
-| Skill | `skills/aws-cdk-development/references/cdk-patterns.md` | Documentation |
-| Skill | `skills/payment-processing/SKILL.md` | Documentation |
-| Skill | `skills/payment-processing/skills/billing-automation/SKILL.md` | Documentation |
-| Skill | `skills/payment-processing/skills/paypal-integration/SKILL.md` | Documentation |
-| Skill | `skills/payment-processing/skills/pci-compliance/SKILL.md` | Documentation |
-| Skill | `skills/payment-processing/skills/stripe-integration/SKILL.md` | Documentation |
-| Skill | `skills/agentdb-vector-search/SKILL.md` | Documentation |
-| Skill | `skills/v3-swarm-coordination/SKILL.md` | Documentation |
-| Skill | `skills/canvas-design/SKILL.md` | Documentation |
-| Skill | `skills/flowchart-creator/SKILL.md` | Documentation |
-| Skill | `skills/flowchart-creator/assets/templates/base_template.html` |  |
-| Skill | `skills/flowchart-creator/assets/templates/flowchart_components.html` |  |
-| Skill | `skills/flowchart-creator/references/design_patterns.md` | Documentation |
-| Skill | `skills/flowchart-creator/references/svg_library.md` | Documentation |
-| Skill | `skills/meeting-insights-analyzer/SKILL.md` | Documentation |
-| Skill | `skills/skill-creator/SKILL.md` | Documentation |
-| Skill | `skills/conversation-analyzer/SKILL.md` | Documentation |
-| Script | `skills/conversation-analyzer/scripts/analyze_history.py` | Python Source |
-| Skill | `skills/using-overpowers/SKILL.md` | Documentation |
-| Skill | `skills/1password/SKILL.md` | Documentation |
-| Skill | `skills/jules-integrate/SKILL.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/AGENTS.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/README.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/SKILL.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/metadata.json` | Data / Config |
-| Skill | `skills/vercel-react-best-practices/rules/_sections.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/_template.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/advanced-use-latest.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/async-api-routes.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/async-defer-await.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/async-dependencies.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/async-parallel.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/async-suspense-boundaries.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/bundle-barrel-imports.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/bundle-conditional.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/bundle-defer-third-party.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/bundle-preload.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/client-event-listeners.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/client-localstorage-schema.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/client-passive-event-listeners.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/client-swr-dedup.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-batch-dom-css.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-cache-function-results.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-cache-property-access.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-cache-storage.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-combine-iterations.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-early-exit.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-hoist-regexp.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-index-maps.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-length-check-first.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-min-max-loop.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-set-map-lookups.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/js-tosorted-immutable.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rendering-activity.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rendering-conditional-render.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rendering-content-visibility.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rendering-svg-precision.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rerender-defer-reads.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rerender-dependencies.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rerender-derived-state.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rerender-functional-setstate.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rerender-memo.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/rerender-transitions.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/server-after-nonblocking.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/server-cache-lru.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/server-cache-react.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/server-parallel-fetching.md` | Documentation |
-| Skill | `skills/vercel-react-best-practices/rules/server-serialization.md` | Documentation |
-| Skill | `skills/agentdb-optimization/SKILL.md` | Documentation |
-| Skill | `skills/context-engineering/context-degradation/SKILL.md` | Documentation |
-| Script | `skills/context-engineering/context-degradation/scripts/degradation_detector.py` | Python Source |
-| Skill | `skills/context-engineering/context-degradation/references/patterns.md` | Documentation |
-| Skill | `skills/context-engineering/context-compression/SKILL.md` | Documentation |
-| Script | `skills/context-engineering/context-compression/scripts/compression_evaluator.py` | Python Source |
-| Skill | `skills/context-engineering/context-compression/references/evaluation-framework.md` | Documentation |
-| Skill | `skills/github-release-management/SKILL.md` | Documentation |
-| Skill | `skills/python-development/SKILL.md` | Documentation |
-| Skill | `skills/python-development/skills/python-packaging/SKILL.md` | Documentation |
-| Skill | `skills/python-development/skills/async-python-patterns/SKILL.md` | Documentation |
-| Skill | `skills/python-development/skills/python-performance-optimization/SKILL.md` | Documentation |
-| Skill | `skills/python-development/skills/uv-package-manager/SKILL.md` | Documentation |
-| Skill | `skills/python-development/skills/python-testing-patterns/SKILL.md` | Documentation |
-| Skill | `skills/github-multi-repo/SKILL.md` | Documentation |
-| Skill | `skills/timeline-creator/SKILL.md` | Documentation |
-| Skill | `skills/timeline-creator/assets/templates/base_template.html` |  |
-| Skill | `skills/timeline-creator/assets/templates/timeline_components.html` |  |
-| Skill | `skills/timeline-creator/references/design_patterns.md` | Documentation |
-| Skill | `skills/timeline-creator/references/svg_library.md` | Documentation |
-| Skill | `skills/code-refactor/SKILL.md` | Documentation |
-| Skill | `skills/claude-settings-audit/SKILL.md` | Documentation |
-| Skill | `skills/slack-gif-creator/LICENSE.txt` |  |
-| Skill | `skills/slack-gif-creator/SKILL.md` | Documentation |
-| Skill | `skills/slack-gif-creator/requirements.txt` |  |
-| Skill | `skills/slack-gif-creator/templates/bounce.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/explode.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/fade.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/flip.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/kaleidoscope.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/morph.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/move.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/pulse.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/shake.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/slide.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/spin.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/wiggle.py` | Python Source |
-| Skill | `skills/slack-gif-creator/templates/zoom.py` | Python Source |
-| Skill | `skills/slack-gif-creator/core/color_palettes.py` | Python Source |
-| Skill | `skills/slack-gif-creator/core/easing.py` | Python Source |
-| Skill | `skills/slack-gif-creator/core/frame_composer.py` | Python Source |
-| Skill | `skills/slack-gif-creator/core/gif_builder.py` | Python Source |
-| Skill | `skills/slack-gif-creator/core/typography.py` | Python Source |
-| Skill | `skills/slack-gif-creator/core/validators.py` | Python Source |
-| Skill | `skills/slack-gif-creator/core/visual_effects.py` | Python Source |
-| Skill | `skills/algorithmic-art/SKILL.md` | Documentation |
-| Skill | `skills/csv-data-summarizer/README.md` | Documentation |
-| Skill | `skills/csv-data-summarizer/SKILL.md` | Documentation |
-| Skill | `skills/csv-data-summarizer/analyze.py` | Python Source |
-| Skill | `skills/csv-data-summarizer/csv-data-summarizer.zip` |  |
-| Skill | `skills/csv-data-summarizer/requirements.txt` |  |
-| Skill | `skills/csv-data-summarizer/resources/README.md` | Documentation |
-| Skill | `skills/csv-data-summarizer/resources/sample.csv` |  |
-| Skill | `skills/csv-data-summarizer/examples/showcase_financial_pl_data.csv` |  |
-| Skill | `skills/trello/SKILL.md` | Documentation |
-| Skill | `skills/github-code-review/SKILL.md` | Documentation |
-| Skill | `skills/security/security-researcher/SKILL.md` | Documentation |
-| Skill | `skills/security/cloud-penetration-testing/SKILL.md` | Documentation |
-| Skill | `skills/security/cloud-penetration-testing/references/advanced-cloud-scripts.md` | Documentation |
-| Skill | `skills/security/top-web-vulnerabilities/SKILL.md` | Documentation |
-| Skill | `skills/security/active-directory-attacks/SKILL.md` | Documentation |
-| Skill | `skills/security/active-directory-attacks/references/advanced-attacks.md` | Documentation |
-| Skill | `skills/security/linux-privilege-escalation/SKILL.md` | Documentation |
-| Skill | `skills/security/pentest-commands/SKILL.md` | Documentation |
-| Skill | `skills/security/idor-testing/SKILL.md` | Documentation |
-| Skill | `skills/security/metasploit-framework/SKILL.md` | Documentation |
-| Skill | `skills/security/ethical-hacking-methodology/SKILL.md` | Documentation |
-| Skill | `skills/security/privilege-escalation-methods/SKILL.md` | Documentation |
-| Skill | `skills/security/burp-suite-testing/SKILL.md` | Documentation |
-| Skill | `skills/security/api-fuzzing-bug-bounty/SKILL.md` | Documentation |
-| Skill | `skills/security/pentest-checklist/SKILL.md` | Documentation |
-| Skill | `skills/security/scanning/security-requirement-extraction/SKILL.md` | Documentation |
-| Skill | `skills/security/scanning/sast-configuration/SKILL.md` | Documentation |
-| Skill | `skills/security/scanning/attack-tree-construction/SKILL.md` | Documentation |
-| Skill | `skills/security/scanning/threat-mitigation-mapping/SKILL.md` | Documentation |
-| Skill | `skills/security/scanning/stride-analysis-patterns/SKILL.md` | Documentation |
-| Skill | `skills/security/file-path-traversal/SKILL.md` | Documentation |
-| Skill | `skills/security/red-team-tools/SKILL.md` | Documentation |
-| Skill | `skills/security/xss-html-injection/SKILL.md` | Documentation |
-| Skill | `skills/security/aws-penetration-testing/SKILL.md` | Documentation |
-| Skill | `skills/security/aws-penetration-testing/references/advanced-aws-pentesting.md` | Documentation |
-| Skill | `skills/security/sql-injection-testing/SKILL.md` | Documentation |
-| Skill | `skills/security/broken-authentication/SKILL.md` | Documentation |
-| Skill | `skills/prompt-optimizer/LICENSE.txt` |  |
-| Skill | `skills/prompt-optimizer/SKILL.md` | Documentation |
-| Skill | `skills/prompt-optimizer/references/examples.md` | Documentation |
-| Skill | `skills/prompt-optimizer/references/prompt-best-practices.md` | Documentation |
-| Skill | `skills/github-project-management/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cloud/cloud-architect.md` | Documentation |
-| Skill | `skills/infrastructure/cloud/hybrid-cloud-networking/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cloud/linkerd-patterns/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cloud/terraform-module-library/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cloud/terraform-module-library/references/aws-modules.md` | Documentation |
-| Skill | `skills/infrastructure/cloud/cost-optimization/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cloud/multi-cloud-architecture/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cloud/istio-traffic-management/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cloud/service-mesh-observability/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cloud/mtls-configuration/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/observability/prometheus-configuration/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/observability/slo-implementation/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/observability/grafana-dashboards/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/observability/distributed-tracing/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/kubernetes/k8s-security-policies/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/kubernetes/k8s-security-policies/assets/network-policy-template.yaml` |  |
-| Skill | `skills/infrastructure/kubernetes/k8s-security-policies/references/rbac-patterns.md` | Documentation |
-| Skill | `skills/infrastructure/kubernetes/k8s-manifest-generator/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/kubernetes/k8s-manifest-generator/assets/configmap-template.yaml` |  |
-| Skill | `skills/infrastructure/kubernetes/k8s-manifest-generator/assets/deployment-template.yaml` |  |
-| Skill | `skills/infrastructure/kubernetes/k8s-manifest-generator/assets/service-template.yaml` |  |
-| Skill | `skills/infrastructure/kubernetes/k8s-manifest-generator/references/deployment-spec.md` | Documentation |
-| Skill | `skills/infrastructure/kubernetes/k8s-manifest-generator/references/service-spec.md` | Documentation |
-| Skill | `skills/infrastructure/kubernetes/gitops-workflow/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/kubernetes/gitops-workflow/references/argocd-setup.md` | Documentation |
-| Skill | `skills/infrastructure/kubernetes/gitops-workflow/references/sync-policies.md` | Documentation |
-| Skill | `skills/infrastructure/kubernetes/helm-chart-scaffolding/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/kubernetes/helm-chart-scaffolding/assets/Chart.yaml.template` |  |
-| Skill | `skills/infrastructure/kubernetes/helm-chart-scaffolding/assets/values.yaml.template` |  |
-| Script | `skills/infrastructure/kubernetes/helm-chart-scaffolding/scripts/validate-chart.sh` | Shell Script |
-| Skill | `skills/infrastructure/kubernetes/helm-chart-scaffolding/references/chart-structure.md` | Documentation |
-| Skill | `skills/infrastructure/incident-response/on-call-handoff-patterns/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/incident-response/postmortem-writing/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/incident-response/incident-runbook-templates/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/deployment-strategies/deployment-engineer.md` | Documentation |
-| Skill | `skills/infrastructure/deployment-strategies/terraform-specialist.md` | Documentation |
-| Skill | `skills/infrastructure/cicd/deployment-pipeline-design/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cicd/secrets-management/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cicd/github-actions-templates/SKILL.md` | Documentation |
-| Skill | `skills/infrastructure/cicd/gitlab-ci-patterns/SKILL.md` | Documentation |
-| Skill | `skills/test-fixing/SKILL.md` | Documentation |
-| Skill | `skills/code-refactoring/SKILL.md` | Documentation |
-| Skill | `skills/browser-use/SKILL.md` | Documentation |
-| Skill | `skills/prevc-refactoring/SKILL.md` | Documentation |
-| Skill | `skills/whatsapp/SKILL.md` | Documentation |
-| Skill | `skills/whatsapp/clawdbot.plugin.json` | Data / Config |
-| Skill | `skills/whatsapp/index.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/whatsapp/package.json` | Data / Config |
-| Skill | `skills/whatsapp/src/channel.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/whatsapp/src/runtime.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/web-artifacts-builder/LICENSE.txt` |  |
-| Skill | `skills/web-artifacts-builder/SKILL.md` | Documentation |
-| Script | `skills/web-artifacts-builder/scripts/bundle-artifact.sh` | Shell Script |
-| Script | `skills/web-artifacts-builder/scripts/init-artifact.sh` | Shell Script |
-| Script | `skills/web-artifacts-builder/scripts/shadcn-components.tar.gz` |  |
-| Skill | `skills/_staging/memory-systems/SKILL.md` | Documentation |
-| Script | `skills/_staging/memory-systems/scripts/memory_store.py` | Python Source |
-| Skill | `skills/_staging/memory-systems/references/implementation.md` | Documentation |
-| Skill | `skills/_staging/multi-agent-patterns/SKILL.md` | Documentation |
-| Script | `skills/_staging/multi-agent-patterns/scripts/coordination.py` | Python Source |
-| Skill | `skills/_staging/multi-agent-patterns/references/frameworks.md` | Documentation |
-| Skill | `skills/_staging/context-optimization/SKILL.md` | Documentation |
-| Script | `skills/_staging/context-optimization/scripts/compaction.py` | Python Source |
-| Skill | `skills/_staging/context-optimization/references/optimization_techniques.md` | Documentation |
-| Skill | `skills/_staging/context-fundamentals/SKILL.md` | Documentation |
-| Script | `skills/_staging/context-fundamentals/scripts/context_manager.py` | Python Source |
-| Skill | `skills/_staging/context-fundamentals/references/context-components.md` | Documentation |
-| Skill | `skills/performance-analysis/SKILL.md` | Documentation |
-| Skill | `skills/agentdb-memory-patterns/SKILL.md` | Documentation |
-| Skill | `skills/notion/SKILL.md` | Documentation |
-| Skill | `skills/code-documentation/SKILL.md` | Documentation |
-| Skill | `skills/receiving-code-review/SKILL.md` | Documentation |
-| Skill | `skills/reasoning/README.md` | Documentation |
-| Skill | `skills/reasoning/planning-with-files/SKILL.md` | Documentation |
-| Skill | `skills/reasoning/planning-with-files/examples.md` | Documentation |
-| Skill | `skills/reasoning/planning-with-files/reference.md` | Documentation |
-| Skill | `skills/reasoning/planning-with-files/templates/findings.md` | Documentation |
-| Skill | `skills/reasoning/planning-with-files/templates/progress.md` | Documentation |
-| Skill | `skills/reasoning/planning-with-files/templates/task_plan.md` | Documentation |
-| Script | `skills/reasoning/planning-with-files/scripts/check-complete.sh` | Shell Script |
-| Script | `skills/reasoning/planning-with-files/scripts/init-session.sh` | Shell Script |
-| Skill | `skills/reasoning/bdi-mental-states/SKILL.md` | Documentation |
-| Skill | `skills/reasoning/bdi-mental-states/references/bdi-ontology-core.md` | Documentation |
-| Skill | `skills/reasoning/bdi-mental-states/references/framework-integration.md` | Documentation |
-| Skill | `skills/reasoning/bdi-mental-states/references/rdf-examples.md` | Documentation |
-| Skill | `skills/reasoning/bdi-mental-states/references/sparql-competency.md` | Documentation |
-| Skill | `skills/reasoning/hosted-agents/SKILL.md` | Documentation |
-| Script | `skills/reasoning/hosted-agents/scripts/sandbox_manager.py` | Python Source |
-| Skill | `skills/reasoning/hosted-agents/references/infrastructure-patterns.md` | Documentation |
-| Skill | `skills/jules-dispatch/SKILL.md` | Documentation |
-| Skill | `skills/technical-doc-creator/SKILL.md` | Documentation |
-| Skill | `skills/technical-doc-creator/assets/templates/base_template.html` |  |
-| Skill | `skills/technical-doc-creator/references/design_patterns.md` | Documentation |
-| Skill | `skills/technical-doc-creator/references/svg_library.md` | Documentation |
-| Skill | `skills/audit-prep-assistant/SKILL.md` | Documentation |
-| Skill | `skills/factory/agent-factory.md` | Documentation |
-| Skill | `skills/factory/claude-md-enhancer.md` | Documentation |
-| Skill | `skills/factory/hook-factory-v2.md` | Documentation |
-| Skill | `skills/factory/prompt-factory.md` | Documentation |
-| Skill | `skills/factory/slash-command-factory.md` | Documentation |
-| Skill | `skills/react-best-practices/AGENTS.md` | Documentation |
-| Skill | `skills/react-best-practices/SKILL.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/_sections.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/_template.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/advanced-event-handler-refs.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/advanced-use-latest.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/async-api-routes.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/async-defer-await.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/async-dependencies.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/async-parallel.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/async-suspense-boundaries.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/bundle-barrel-imports.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/bundle-conditional.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/bundle-defer-third-party.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/bundle-dynamic-imports.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/bundle-preload.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/client-event-listeners.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/client-swr-dedup.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-batch-dom-css.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-cache-function-results.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-cache-property-access.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-cache-storage.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-combine-iterations.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-early-exit.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-hoist-regexp.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-index-maps.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-length-check-first.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-min-max-loop.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-set-map-lookups.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/js-tosorted-immutable.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rendering-activity.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rendering-animate-svg-wrapper.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rendering-conditional-render.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rendering-content-visibility.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rendering-hoist-jsx.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rendering-hydration-no-flicker.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rendering-svg-precision.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rerender-defer-reads.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rerender-dependencies.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rerender-derived-state.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rerender-functional-setstate.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rerender-lazy-state-init.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rerender-memo.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/rerender-transitions.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/server-after-nonblocking.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/server-cache-lru.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/server-cache-react.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/server-parallel-fetching.md` | Documentation |
-| Skill | `skills/react-best-practices/rules/server-serialization.md` | Documentation |
-| Skill | `skills/javascript-typescript/SKILL.md` | Documentation |
-| Skill | `skills/javascript-typescript/skills/modern-javascript-patterns/SKILL.md` | Documentation |
-| Skill | `skills/javascript-typescript/skills/typescript-advanced-types/SKILL.md` | Documentation |
-| Skill | `skills/javascript-typescript/skills/javascript-testing-patterns/SKILL.md` | Documentation |
-| Skill | `skills/javascript-typescript/skills/nodejs-backend-patterns/SKILL.md` | Documentation |
-| Skill | `skills/systematic-debugging/CREATION-LOG.md` | Documentation |
-| Skill | `skills/systematic-debugging/SKILL.md` | Documentation |
-| Skill | `skills/systematic-debugging/condition-based-waiting-example.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/systematic-debugging/condition-based-waiting.md` | Documentation |
-| Skill | `skills/systematic-debugging/defense-in-depth.md` | Documentation |
-| Skill | `skills/systematic-debugging/find-polluter.sh` | Shell Script |
-| Skill | `skills/systematic-debugging/root-cause-tracing.md` | Documentation |
-| Skill | `skills/systematic-debugging/test-academic.md` | Documentation |
-| Skill | `skills/systematic-debugging/test-pressure-1.md` | Documentation |
-| Skill | `skills/systematic-debugging/test-pressure-2.md` | Documentation |
-| Skill | `skills/systematic-debugging/test-pressure-3.md` | Documentation |
-| Skill | `skills/xlsx/SKILL.md` | Documentation |
-| Skill | `skills/tailored-resume-generator/SKILL.md` | Documentation |
-| Skill | `skills/subagent-orchestration/SKILL.md` | Documentation |
-| Skill | `skills/subagent-orchestration/examples/tasks.txt` |  |
-| Script | `skills/subagent-orchestration/scripts/batch-analyze.sh` | Shell Script |
-| Script | `skills/subagent-orchestration/scripts/parallel-tasks.sh` | Shell Script |
-| Script | `skills/subagent-orchestration/scripts/run-subagent.sh` | Shell Script |
-| Skill | `skills/v3-memory-unification/SKILL.md` | Documentation |
-| Skill | `skills/review-implementing/SKILL.md` | Documentation |
-| Skill | `skills/flow-nexus-swarm/SKILL.md` | Documentation |
-| Skill | `skills/subagent-driven-development/SKILL.md` | Documentation |
-| Skill | `skills/subagent-driven-development/code-quality-reviewer-prompt.md` | Documentation |
-| Skill | `skills/subagent-driven-development/implementer-prompt.md` | Documentation |
-| Skill | `skills/subagent-driven-development/spec-reviewer-prompt.md` | Documentation |
-| Skill | `skills/code-execution/SKILL.md` | Documentation |
-| Skill | `skills/code-execution/examples/bulk_refactor.py` | Python Source |
-| Skill | `skills/code-execution/examples/codebase_audit.py` | Python Source |
-| Skill | `skills/code-execution/examples/extract_functions.py` | Python Source |
-| Skill | `skills/discord/SKILL.md` | Documentation |
-| Skill | `skills/prevc-api-design/SKILL.md` | Documentation |
-| Skill | `skills/prevc-security-audit/SKILL.md` | Documentation |
-| Skill | `skills/writing-plans/SKILL.md` | Documentation |
-| Skill | `skills/ask-questions-if-underspecified/SKILL.md` | Documentation |
-| Skill | `skills/privacy-policy-fr-malik-taiar/LICENSE.txt` |  |
-| Skill | `skills/privacy-policy-fr-malik-taiar/SKILL.md` | Documentation |
-| Skill | `skills/privacy-policy-fr-malik-taiar/assets/CNIL_droits_personnes.pdf` |  |
-| Skill | `skills/privacy-policy-fr-malik-taiar/assets/CNIL_durees_conservation.pdf` |  |
-| Skill | `skills/privacy-policy-fr-malik-taiar/assets/CNIL_finalites.pdf` |  |
-| Skill | `skills/privacy-policy-fr-malik-taiar/assets/CNIL_principes_rgpd.pdf` |  |
-| Skill | `skills/privacy-policy-fr-malik-taiar/assets/CNIL_transparence.pdf` |  |
-| Skill | `skills/privacy-policy-fr-malik-taiar/assets/RGPD_texte_officiel.pdf` |  |
-| Skill | `skills/privacy-policy-fr-malik-taiar/assets/sample_template_politique_confidentialite.docx` |  |
-| Skill | `skills/privacy-policy-fr-malik-taiar/assets/sample_template_politique_confidentialite.pdf` |  |
-| Skill | `skills/privacy-policy-fr-malik-taiar/references/BASES_LEGALES.md` | Documentation |
-| Skill | `skills/privacy-policy-fr-malik-taiar/references/COOKIES.md` | Documentation |
-| Skill | `skills/privacy-policy-fr-malik-taiar/references/DROITS_PERSONNES.md` | Documentation |
-| Skill | `skills/privacy-policy-fr-malik-taiar/references/DUREES_CONSERVATION.md` | Documentation |
-| Skill | `skills/nda-review-en-jamie-tso/LICENSE.txt` |  |
-| Skill | `skills/nda-review-en-jamie-tso/README.md` | Documentation |
-| Skill | `skills/nda-review-en-jamie-tso/SKILL.md` | Documentation |
-| Skill | `skills/nda-review-en-jamie-tso/references/DURATION_SCOPE.md` | Documentation |
-| Skill | `skills/nda-review-en-jamie-tso/references/KEY_CLAUSES.md` | Documentation |
-| Skill | `skills/nda-review-en-jamie-tso/references/PARTY_OBLIGATIONS.md` | Documentation |
-| Skill | `skills/nda-review-en-jamie-tso/references/REMEDIES_LIABILITY.md` | Documentation |
-| Skill | `skills/nda-review-en-jamie-tso/references/STANDARD_EXCEPTIONS.md` | Documentation |
-| Skill | `skills/content-research-writer/SKILL.md` | Documentation |
-| Skill | `skills/multi-agent-file-coordination/SKILL.md` | Documentation |
-| Skill | `skills/arxiv-search/SKILL.md` | Documentation |
-| Script | `skills/arxiv-search/scripts/arxiv_search.py` | Python Source |
-| Skill | `skills/prevc-commit-message/SKILL.md` | Documentation |
-| Skill | `skills/reverse-engineering/SKILL.md` | Documentation |
-| Skill | `skills/reverse-engineering/skills/protocol-reverse-engineering/SKILL.md` | Documentation |
-| Skill | `skills/reverse-engineering/skills/memory-forensics/SKILL.md` | Documentation |
-| Skill | `skills/reverse-engineering/skills/binary-analysis-patterns/SKILL.md` | Documentation |
-| Skill | `skills/reverse-engineering/skills/anti-reversing-techniques/SKILL.md` | Documentation |
-| Skill | `skills/quantitative-trading/SKILL.md` | Documentation |
-| Skill | `skills/quantitative-trading/skills/backtesting-frameworks/SKILL.md` | Documentation |
-| Skill | `skills/quantitative-trading/skills/risk-metrics-calculation/SKILL.md` | Documentation |
-| Skill | `skills/upgrading-expo/SKILL.md` | Documentation |
-| Skill | `skills/project-bootstrapper/SKILL.md` | Documentation |
-| Skill | `skills/docx/SKILL.md` | Documentation |
-| Script | `skills/docx/scripts/validation.py` | Python Source |
-| Skill | `skills/internal-comms/SKILL.md` | Documentation |
-| Skill | `skills/git-master/SKILL.md` | Documentation |
-| Skill | `skills/artifacts-builder/LICENSE.txt` |  |
-| Skill | `skills/artifacts-builder/SKILL.md` | Documentation |
-| Script | `skills/artifacts-builder/scripts/bundle-artifact.sh` | Shell Script |
-| Script | `skills/artifacts-builder/scripts/init-artifact.sh` | Shell Script |
-| Script | `skills/artifacts-builder/scripts/shadcn-components.tar.gz` |  |
-| Skill | `skills/ios-simulator-skill/SKILL.md` | Documentation |
-| Script | `skills/ios-simulator-skill/scripts/accessibility_audit.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/app_launcher.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/app_state_capture.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/build_and_test.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/clipboard.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/gesture.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/keyboard.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/log_monitor.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/navigator.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/privacy_manager.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/push_notification.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/screen_mapper.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/sim_health_check.sh` | Shell Script |
-| Script | `skills/ios-simulator-skill/scripts/sim_list.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/simctl_boot.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/simctl_create.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/simctl_delete.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/simctl_erase.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/simctl_shutdown.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/simulator_selector.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/status_bar.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/test_recorder.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/visual_diff.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/common/__init__.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/common/cache_utils.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/common/device_utils.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/common/idb_utils.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/common/screenshot_utils.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/xcode/__init__.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/xcode/builder.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/xcode/cache.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/xcode/config.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/xcode/reporter.py` | Python Source |
-| Script | `skills/ios-simulator-skill/scripts/xcode/xcresult.py` | Python Source |
-| Skill | `skills/docx-processing-en-anthropic/LICENSE.txt` |  |
-| Skill | `skills/docx-processing-en-anthropic/SKILL.md` | Documentation |
-| Script | `skills/docx-processing-en-anthropic/scripts/__init__.py` | Python Source |
-| Script | `skills/docx-processing-en-anthropic/scripts/document.py` | Python Source |
-| Script | `skills/docx-processing-en-anthropic/scripts/utilities.py` | Python Source |
-| Script | `skills/docx-processing-en-anthropic/scripts/templates/comments.xml` |  |
-| Script | `skills/docx-processing-en-anthropic/scripts/templates/commentsExtended.xml` |  |
-| Script | `skills/docx-processing-en-anthropic/scripts/templates/commentsExtensible.xml` |  |
-| Script | `skills/docx-processing-en-anthropic/scripts/templates/commentsIds.xml` |  |
-| Script | `skills/docx-processing-en-anthropic/scripts/templates/people.xml` |  |
-| Skill | `skills/docx-processing-en-anthropic/references/docx-js.md` | Documentation |
-| Skill | `skills/docx-processing-en-anthropic/references/ooxml.md` | Documentation |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/microsoft/wml-2010.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/microsoft/wml-2012.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/microsoft/wml-2018.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/microsoft/wml-cex-2018.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/microsoft/wml-cid-2016.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/microsoft/wml-sdtdatahash-2020.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/microsoft/wml-symex-2015.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ecma/fouth-edition/opc-contentTypes.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ecma/fouth-edition/opc-coreProperties.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ecma/fouth-edition/opc-digSig.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ecma/fouth-edition/opc-relationships.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-chart.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-main.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-picture.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/pml.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-math.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/sml.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/vml-main.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/wml.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/xml.xsd` |  |
-| Skill | `skills/docx-processing-en-anthropic/ooxml/schemas/mce/mc.xsd` |  |
-| Script | `skills/docx-processing-en-anthropic/ooxml/scripts/pack.py` | Python Source |
-| Script | `skills/docx-processing-en-anthropic/ooxml/scripts/unpack.py` | Python Source |
-| Script | `skills/docx-processing-en-anthropic/ooxml/scripts/validate.py` | Python Source |
-| Script | `skills/docx-processing-en-anthropic/ooxml/scripts/validation/__init__.py` | Python Source |
-| Script | `skills/docx-processing-en-anthropic/ooxml/scripts/validation/base.py` | Python Source |
-| Script | `skills/docx-processing-en-anthropic/ooxml/scripts/validation/docx.py` | Python Source |
-| Script | `skills/docx-processing-en-anthropic/ooxml/scripts/validation/pptx.py` | Python Source |
-| Script | `skills/docx-processing-en-anthropic/ooxml/scripts/validation/redlining.py` | Python Source |
-| Skill | `skills/using-git-worktrees/SKILL.md` | Documentation |
-| Skill | `skills/image-enhancer/SKILL.md` | Documentation |
-| Skill | `skills/feature-planning/SKILL.md` | Documentation |
-| Skill | `skills/feature-planning/references/planning-best-practices.md` | Documentation |
-| Skill | `skills/mobile-developer/SKILL.md` | Documentation |
-| Skill | `skills/prevc-bug-investigation/SKILL.md` | Documentation |
-| Skill | `skills/web-research/SKILL.md` | Documentation |
-| Skill | `skills/architecture-diagram-creator/SKILL.md` | Documentation |
-| Skill | `skills/architecture-diagram-creator/assets/templates/architecture_components.html` |  |
-| Skill | `skills/architecture-diagram-creator/assets/templates/base_template.html` |  |
-| Skill | `skills/architecture-diagram-creator/references/example_architecture.html` |  |
-| Skill | `skills/scientific/README.md` | Documentation |
-| Skill | `skills/scientific/post-processing/SKILL.md` | Documentation |
-| Script | `skills/scientific/post-processing/scripts/comparison_tool.py` | Python Source |
-| Script | `skills/scientific/post-processing/scripts/derived_quantities.py` | Python Source |
-| Script | `skills/scientific/post-processing/scripts/field_extractor.py` | Python Source |
-| Script | `skills/scientific/post-processing/scripts/profile_extractor.py` | Python Source |
-| Script | `skills/scientific/post-processing/scripts/report_generator.py` | Python Source |
-| Script | `skills/scientific/post-processing/scripts/statistical_analyzer.py` | Python Source |
-| Script | `skills/scientific/post-processing/scripts/time_series_analyzer.py` | Python Source |
-| Skill | `skills/scientific/post-processing/references/comparison_metrics.md` | Documentation |
-| Skill | `skills/scientific/post-processing/references/data_formats.md` | Documentation |
-| Skill | `skills/scientific/post-processing/references/derived_quantities_guide.md` | Documentation |
-| Skill | `skills/scientific/post-processing/references/statistical_methods.md` | Documentation |
-| Skill | `skills/scientific/time-stepping/SKILL.md` | Documentation |
-| Script | `skills/scientific/time-stepping/scripts/checkpoint_planner.py` | Python Source |
-| Script | `skills/scientific/time-stepping/scripts/output_schedule.py` | Python Source |
-| Script | `skills/scientific/time-stepping/scripts/timestep_planner.py` | Python Source |
-| Skill | `skills/scientific/time-stepping/references/cfl_coupling.md` | Documentation |
-| Skill | `skills/scientific/time-stepping/references/output_checkpoint_guidelines.md` | Documentation |
-| Skill | `skills/scientific/time-stepping/references/ramping_strategies.md` | Documentation |
-| Skill | `skills/scientific/mesh-generation/SKILL.md` | Documentation |
-| Script | `skills/scientific/mesh-generation/scripts/grid_sizing.py` | Python Source |
-| Script | `skills/scientific/mesh-generation/scripts/mesh_quality.py` | Python Source |
-| Skill | `skills/scientific/mesh-generation/references/mesh_types.md` | Documentation |
-| Skill | `skills/scientific/mesh-generation/references/quality_metrics.md` | Documentation |
-| Skill | `skills/scientific/linear-solvers/SKILL.md` | Documentation |
-| Script | `skills/scientific/linear-solvers/scripts/convergence_diagnostics.py` | Python Source |
-| Script | `skills/scientific/linear-solvers/scripts/preconditioner_advisor.py` | Python Source |
-| Script | `skills/scientific/linear-solvers/scripts/residual_norms.py` | Python Source |
-| Script | `skills/scientific/linear-solvers/scripts/scaling_equilibration.py` | Python Source |
-| Script | `skills/scientific/linear-solvers/scripts/solver_selector.py` | Python Source |
-| Script | `skills/scientific/linear-solvers/scripts/sparsity_stats.py` | Python Source |
-| Skill | `skills/scientific/linear-solvers/references/convergence_patterns.md` | Documentation |
-| Skill | `skills/scientific/linear-solvers/references/preconditioner_catalog.md` | Documentation |
-| Skill | `skills/scientific/linear-solvers/references/scaling_guidelines.md` | Documentation |
-| Skill | `skills/scientific/linear-solvers/references/solver_decision_tree.md` | Documentation |
-| Skill | `skills/scientific/numerical-stability/SKILL.md` | Documentation |
-| Script | `skills/scientific/numerical-stability/scripts/cfl_checker.py` | Python Source |
-| Script | `skills/scientific/numerical-stability/scripts/matrix_condition.py` | Python Source |
-| Script | `skills/scientific/numerical-stability/scripts/requirements.txt` |  |
-| Script | `skills/scientific/numerical-stability/scripts/stiffness_detector.py` | Python Source |
-| Script | `skills/scientific/numerical-stability/scripts/von_neumann_analyzer.py` | Python Source |
-| Skill | `skills/scientific/numerical-stability/references/common_pitfalls.md` | Documentation |
-| Skill | `skills/scientific/numerical-stability/references/scheme_catalog.md` | Documentation |
-| Skill | `skills/scientific/numerical-stability/references/stability_criteria.md` | Documentation |
-| Skill | `skills/scientific/numerical-integration/SKILL.md` | Documentation |
-| Script | `skills/scientific/numerical-integration/scripts/adaptive_step_controller.py` | Python Source |
-| Script | `skills/scientific/numerical-integration/scripts/error_norm.py` | Python Source |
-| Script | `skills/scientific/numerical-integration/scripts/imex_split_planner.py` | Python Source |
-| Script | `skills/scientific/numerical-integration/scripts/integrator_selector.py` | Python Source |
-| Script | `skills/scientific/numerical-integration/scripts/splitting_error_estimator.py` | Python Source |
-| Skill | `skills/scientific/numerical-integration/references/error_control.md` | Documentation |
-| Skill | `skills/scientific/numerical-integration/references/imex_guidelines.md` | Documentation |
-| Skill | `skills/scientific/numerical-integration/references/method_catalog.md` | Documentation |
-| Skill | `skills/scientific/numerical-integration/references/multiphase_field_patterns.md` | Documentation |
-| Skill | `skills/scientific/numerical-integration/references/splitting_catalog.md` | Documentation |
-| Skill | `skills/scientific/numerical-integration/references/tolerance_guidelines.md` | Documentation |
-| Skill | `skills/scientific/parameter-optimization/SKILL.md` | Documentation |
-| Script | `skills/scientific/parameter-optimization/scripts/doe_generator.py` | Python Source |
-| Script | `skills/scientific/parameter-optimization/scripts/optimizer_selector.py` | Python Source |
-| Script | `skills/scientific/parameter-optimization/scripts/sensitivity_summary.py` | Python Source |
-| Script | `skills/scientific/parameter-optimization/scripts/surrogate_builder.py` | Python Source |
-| Skill | `skills/scientific/parameter-optimization/references/doe_methods.md` | Documentation |
-| Skill | `skills/scientific/parameter-optimization/references/optimizer_selection.md` | Documentation |
-| Skill | `skills/scientific/parameter-optimization/references/sensitivity_guidelines.md` | Documentation |
-| Skill | `skills/scientific/parameter-optimization/references/surrogate_guidelines.md` | Documentation |
-| Skill | `skills/scientific/differentiation-schemes/SKILL.md` | Documentation |
-| Script | `skills/scientific/differentiation-schemes/scripts/scheme_selector.py` | Python Source |
-| Script | `skills/scientific/differentiation-schemes/scripts/stencil_generator.py` | Python Source |
-| Script | `skills/scientific/differentiation-schemes/scripts/truncation_error.py` | Python Source |
-| Skill | `skills/scientific/differentiation-schemes/references/boundary_handling.md` | Documentation |
-| Skill | `skills/scientific/differentiation-schemes/references/error_guidance.md` | Documentation |
-| Skill | `skills/scientific/differentiation-schemes/references/scheme_selection.md` | Documentation |
-| Skill | `skills/scientific/differentiation-schemes/references/stencil_catalog.md` | Documentation |
-| Skill | `skills/scientific/simulation-validator/SKILL.md` | Documentation |
-| Script | `skills/scientific/simulation-validator/scripts/failure_diagnoser.py` | Python Source |
-| Script | `skills/scientific/simulation-validator/scripts/preflight_checker.py` | Python Source |
-| Script | `skills/scientific/simulation-validator/scripts/result_validator.py` | Python Source |
-| Script | `skills/scientific/simulation-validator/scripts/runtime_monitor.py` | Python Source |
-| Skill | `skills/scientific/simulation-validator/references/log_patterns.md` | Documentation |
-| Skill | `skills/scientific/simulation-validator/references/validation_protocol.md` | Documentation |
-| Skill | `skills/scientific/simulation-orchestrator/SKILL.md` | Documentation |
-| Script | `skills/scientific/simulation-orchestrator/scripts/campaign_manager.py` | Python Source |
-| Script | `skills/scientific/simulation-orchestrator/scripts/job_tracker.py` | Python Source |
-| Script | `skills/scientific/simulation-orchestrator/scripts/result_aggregator.py` | Python Source |
-| Script | `skills/scientific/simulation-orchestrator/scripts/sweep_generator.py` | Python Source |
-| Skill | `skills/scientific/simulation-orchestrator/references/aggregation_methods.md` | Documentation |
-| Skill | `skills/scientific/simulation-orchestrator/references/campaign_patterns.md` | Documentation |
-| Skill | `skills/scientific/simulation-orchestrator/references/sweep_strategies.md` | Documentation |
-| Skill | `skills/database-design/SKILL.md` | Documentation |
-| Skill | `skills/threejs-textures/SKILL.md` | Documentation |
-| Skill | `skills/sheets-cli/SKILL.md` | Documentation |
-| Skill | `skills/skill-builder/SKILL.md` | Documentation |
-| Skill | `skills/github-workflow-automation/SKILL.md` | Documentation |
-| Skill | `skills/aws-cost-operations/SKILL.md` | Documentation |
-| Skill | `skills/aws-cost-operations/references/cloudwatch-alarms.md` | Documentation |
-| Skill | `skills/aws-cost-operations/references/operations-patterns.md` | Documentation |
-| Skill | `skills/slack/SKILL.md` | Documentation |
-| Skill | `skills/x-search/SKILL.md` | Documentation |
-| Skill | `skills/code-review/SKILL.md` | Documentation |
-| Skill | `skills/dispatching-parallel-agents/SKILL.md` | Documentation |
-| Skill | `skills/voice-call/CHANGELOG.md` | Documentation |
-| Skill | `skills/voice-call/README.md` | Documentation |
-| Skill | `skills/voice-call/SKILL.md` | Documentation |
-| Skill | `skills/voice-call/clawdbot.plugin.json` | Data / Config |
-| Skill | `skills/voice-call/index.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/package.json` | Data / Config |
-| Skill | `skills/voice-call/src/cli.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/config.test.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/config.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/core-bridge.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/manager.test.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/manager.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/media-stream.test.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/media-stream.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/response-generator.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/runtime.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/telephony-audio.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/telephony-tts.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/tunnel.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/types.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/utils.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/voice-mapping.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/webhook-security.test.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/webhook-security.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/webhook.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/base.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/index.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/mock.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/plivo.test.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/plivo.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/stt-openai-realtime.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/telnyx.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/tts-openai.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/twilio.test.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/twilio.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/twilio/api.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/providers/twilio/webhook.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/manager/context.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/manager/events.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/manager/lookup.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/manager/outbound.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/manager/state.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/manager/store.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/manager/timers.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/voice-call/src/manager/twiml.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/threejs-lighting/SKILL.md` | Documentation |
-| Skill | `skills/jira-issues/SKILL.md` | Documentation |
-| Skill | `skills/frontend-design/SKILL.md` | Documentation |
-| Skill | `skills/theme-factory/LICENSE.txt` |  |
-| Skill | `skills/theme-factory/SKILL.md` | Documentation |
-| Skill | `skills/theme-factory/theme-showcase.pdf` |  |
-| Skill | `skills/theme-factory/themes/arctic-frost.md` | Documentation |
-| Skill | `skills/theme-factory/themes/botanical-garden.md` | Documentation |
-| Skill | `skills/theme-factory/themes/desert-rose.md` | Documentation |
-| Skill | `skills/theme-factory/themes/forest-canopy.md` | Documentation |
-| Skill | `skills/theme-factory/themes/golden-hour.md` | Documentation |
-| Skill | `skills/theme-factory/themes/midnight-galaxy.md` | Documentation |
-| Skill | `skills/theme-factory/themes/modern-minimalist.md` | Documentation |
-| Skill | `skills/theme-factory/themes/ocean-depths.md` | Documentation |
-| Skill | `skills/theme-factory/themes/sunset-boulevard.md` | Documentation |
-| Skill | `skills/theme-factory/themes/tech-innovation.md` | Documentation |
-| Skill | `skills/blockchain-web3/SKILL.md` | Documentation |
-| Skill | `skills/blockchain-web3/skills/solidity-security/SKILL.md` | Documentation |
-| Skill | `skills/blockchain-web3/skills/defi-protocol-templates/SKILL.md` | Documentation |
-| Skill | `skills/blockchain-web3/skills/web3-testing/SKILL.md` | Documentation |
-| Skill | `skills/blockchain-web3/skills/nft-standards/SKILL.md` | Documentation |
-| Skill | `skills/code-transfer/SKILL.md` | Documentation |
-| Script | `skills/code-transfer/scripts/line_insert.py` | Python Source |
-| Skill | `skills/test-driven-development/SKILL.md` | Documentation |
-| Skill | `skills/test-driven-development/testing-anti-patterns.md` | Documentation |
-| Skill | `skills/document-skills/pdf/LICENSE.txt` |  |
-| Skill | `skills/document-skills/pdf/SKILL.md` | Documentation |
-| Skill | `skills/document-skills/pdf/forms.md` | Documentation |
-| Skill | `skills/document-skills/pdf/reference.md` | Documentation |
-| Script | `skills/document-skills/pdf/scripts/check_bounding_boxes.py` | Python Source |
-| Script | `skills/document-skills/pdf/scripts/check_bounding_boxes_test.py` | Python Source |
-| Script | `skills/document-skills/pdf/scripts/check_fillable_fields.py` | Python Source |
-| Script | `skills/document-skills/pdf/scripts/convert_pdf_to_images.py` | Python Source |
-| Script | `skills/document-skills/pdf/scripts/create_validation_image.py` | Python Source |
-| Script | `skills/document-skills/pdf/scripts/extract_form_field_info.py` | Python Source |
-| Script | `skills/document-skills/pdf/scripts/fill_fillable_fields.py` | Python Source |
-| Script | `skills/document-skills/pdf/scripts/fill_pdf_form_with_annotations.py` | Python Source |
-| Skill | `skills/document-skills/xlsx/LICENSE.txt` |  |
-| Skill | `skills/document-skills/xlsx/SKILL.md` | Documentation |
-| Skill | `skills/document-skills/xlsx/recalc.py` | Python Source |
-| Skill | `skills/document-skills/docx/LICENSE.txt` |  |
-| Skill | `skills/document-skills/docx/SKILL.md` | Documentation |
-| Skill | `skills/document-skills/docx/docx-js.md` | Documentation |
-| Skill | `skills/document-skills/docx/ooxml.md` | Documentation |
-| Script | `skills/document-skills/docx/scripts/__init__.py` | Python Source |
-| Script | `skills/document-skills/docx/scripts/document.py` | Python Source |
-| Script | `skills/document-skills/docx/scripts/utilities.py` | Python Source |
-| Script | `skills/document-skills/docx/scripts/templates/comments.xml` |  |
-| Script | `skills/document-skills/docx/scripts/templates/commentsExtended.xml` |  |
-| Script | `skills/document-skills/docx/scripts/templates/commentsExtensible.xml` |  |
-| Script | `skills/document-skills/docx/scripts/templates/commentsIds.xml` |  |
-| Script | `skills/document-skills/docx/scripts/templates/people.xml` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/microsoft/wml-2010.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/microsoft/wml-2012.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/microsoft/wml-2018.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/microsoft/wml-cex-2018.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/microsoft/wml-cid-2016.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/microsoft/wml-sdtdatahash-2020.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/microsoft/wml-symex-2015.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ecma/fouth-edition/opc-contentTypes.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ecma/fouth-edition/opc-coreProperties.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ecma/fouth-edition/opc-digSig.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ecma/fouth-edition/opc-relationships.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-chart.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-main.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-picture.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/pml.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-math.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/sml.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/vml-main.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/wml.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/xml.xsd` |  |
-| Skill | `skills/document-skills/docx/ooxml/schemas/mce/mc.xsd` |  |
-| Script | `skills/document-skills/docx/ooxml/scripts/pack.py` | Python Source |
-| Script | `skills/document-skills/docx/ooxml/scripts/unpack.py` | Python Source |
-| Script | `skills/document-skills/docx/ooxml/scripts/validate.py` | Python Source |
-| Script | `skills/document-skills/docx/ooxml/scripts/validation/__init__.py` | Python Source |
-| Script | `skills/document-skills/docx/ooxml/scripts/validation/base.py` | Python Source |
-| Script | `skills/document-skills/docx/ooxml/scripts/validation/docx.py` | Python Source |
-| Script | `skills/document-skills/docx/ooxml/scripts/validation/pptx.py` | Python Source |
-| Script | `skills/document-skills/docx/ooxml/scripts/validation/redlining.py` | Python Source |
-| Skill | `skills/document-skills/pptx/LICENSE.txt` |  |
-| Skill | `skills/document-skills/pptx/SKILL.md` | Documentation |
-| Skill | `skills/document-skills/pptx/html2pptx.md` | Documentation |
-| Skill | `skills/document-skills/pptx/ooxml.md` | Documentation |
-| Script | `skills/document-skills/pptx/scripts/html2pptx.js` | JavaScript/TypeScript Source |
-| Script | `skills/document-skills/pptx/scripts/inventory.py` | Python Source |
-| Script | `skills/document-skills/pptx/scripts/rearrange.py` | Python Source |
-| Script | `skills/document-skills/pptx/scripts/replace.py` | Python Source |
-| Script | `skills/document-skills/pptx/scripts/thumbnail.py` | Python Source |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/microsoft/wml-2010.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/microsoft/wml-2012.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/microsoft/wml-2018.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/microsoft/wml-cex-2018.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/microsoft/wml-cid-2016.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/microsoft/wml-sdtdatahash-2020.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/microsoft/wml-symex-2015.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ecma/fouth-edition/opc-contentTypes.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ecma/fouth-edition/opc-coreProperties.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ecma/fouth-edition/opc-digSig.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ecma/fouth-edition/opc-relationships.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-chart.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-main.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-picture.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/pml.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-math.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/sml.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/vml-main.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/wml.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/xml.xsd` |  |
-| Skill | `skills/document-skills/pptx/ooxml/schemas/mce/mc.xsd` |  |
-| Script | `skills/document-skills/pptx/ooxml/scripts/pack.py` | Python Source |
-| Script | `skills/document-skills/pptx/ooxml/scripts/unpack.py` | Python Source |
-| Script | `skills/document-skills/pptx/ooxml/scripts/validate.py` | Python Source |
-| Script | `skills/document-skills/pptx/ooxml/scripts/validation/__init__.py` | Python Source |
-| Script | `skills/document-skills/pptx/ooxml/scripts/validation/base.py` | Python Source |
-| Script | `skills/document-skills/pptx/ooxml/scripts/validation/docx.py` | Python Source |
-| Script | `skills/document-skills/pptx/ooxml/scripts/validation/pptx.py` | Python Source |
-| Script | `skills/document-skills/pptx/ooxml/scripts/validation/redlining.py` | Python Source |
-| Skill | `skills/changelog-generator/SKILL.md` | Documentation |
-| Skill | `skills/machine-learning-ops/SKILL.md` | Documentation |
-| Skill | `skills/machine-learning-ops/skills/ml-pipeline-workflow/SKILL.md` | Documentation |
-| Skill | `skills/pptx-processing-en-anthropic/LICENSE.txt` |  |
-| Skill | `skills/pptx-processing-en-anthropic/SKILL.md` | Documentation |
-| Script | `skills/pptx-processing-en-anthropic/scripts/html2pptx.js` | JavaScript/TypeScript Source |
-| Script | `skills/pptx-processing-en-anthropic/scripts/inventory.py` | Python Source |
-| Script | `skills/pptx-processing-en-anthropic/scripts/rearrange.py` | Python Source |
-| Script | `skills/pptx-processing-en-anthropic/scripts/replace.py` | Python Source |
-| Script | `skills/pptx-processing-en-anthropic/scripts/thumbnail.py` | Python Source |
-| Skill | `skills/pptx-processing-en-anthropic/references/html2pptx.md` | Documentation |
-| Skill | `skills/pptx-processing-en-anthropic/references/ooxml.md` | Documentation |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/microsoft/wml-2010.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/microsoft/wml-2012.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/microsoft/wml-2018.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/microsoft/wml-cex-2018.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/microsoft/wml-cid-2016.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/microsoft/wml-sdtdatahash-2020.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/microsoft/wml-symex-2015.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ecma/fouth-edition/opc-contentTypes.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ecma/fouth-edition/opc-coreProperties.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ecma/fouth-edition/opc-digSig.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ecma/fouth-edition/opc-relationships.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-chart.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-main.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-picture.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/pml.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-math.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/sml.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/vml-main.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/wml.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/ISO-IEC29500-4_2016/xml.xsd` |  |
-| Skill | `skills/pptx-processing-en-anthropic/ooxml/schemas/mce/mc.xsd` |  |
-| Script | `skills/pptx-processing-en-anthropic/ooxml/scripts/pack.py` | Python Source |
-| Script | `skills/pptx-processing-en-anthropic/ooxml/scripts/unpack.py` | Python Source |
-| Script | `skills/pptx-processing-en-anthropic/ooxml/scripts/validate.py` | Python Source |
-| Script | `skills/pptx-processing-en-anthropic/ooxml/scripts/validation/__init__.py` | Python Source |
-| Script | `skills/pptx-processing-en-anthropic/ooxml/scripts/validation/base.py` | Python Source |
-| Script | `skills/pptx-processing-en-anthropic/ooxml/scripts/validation/docx.py` | Python Source |
-| Script | `skills/pptx-processing-en-anthropic/ooxml/scripts/validation/pptx.py` | Python Source |
-| Script | `skills/pptx-processing-en-anthropic/ooxml/scripts/validation/redlining.py` | Python Source |
-| Skill | `skills/v3-ddd-architecture/SKILL.md` | Documentation |
-| Skill | `skills/sparc-methodology/SKILL.md` | Documentation |
-| Skill | `skills/finishing-a-development-branch/SKILL.md` | Documentation |
-| Skill | `skills/threejs-fundamentals/SKILL.md` | Documentation |
-| Skill | `skills/flow-nexus-platform/SKILL.md` | Documentation |
-| Skill | `skills/developer-growth-analysis/SKILL.md` | Documentation |
-| Skill | `skills/data-fetching/SKILL.md` | Documentation |
-| Skill | `skills/ui-ux-pro-max/SKILL.md` | Documentation |
-| Skill | `skills/ui-ux-pro-max/data/charts.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/colors.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/icons.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/landing.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/products.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/prompts.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/react-performance.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/styles.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/typography.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/ui-reasoning.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/ux-guidelines.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/web-interface.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/flutter.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/html-tailwind.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/nextjs.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/nuxtjs.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/react-native.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/react.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/shadcn.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/svelte.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/swiftui.csv` |  |
-| Skill | `skills/ui-ux-pro-max/data/stacks/vue.csv` |  |
-| Script | `skills/ui-ux-pro-max/scripts/core.py` | Python Source |
-| Script | `skills/ui-ux-pro-max/scripts/design_system.py` | Python Source |
-| Script | `skills/ui-ux-pro-max/scripts/search.py` | Python Source |
-| Skill | `skills/playwright-skill/API_REFERENCE.md` | Documentation |
-| Skill | `skills/playwright-skill/SKILL.md` | Documentation |
-| Skill | `skills/playwright-skill/network-monitor.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/playwright-skill/package.json` | Data / Config |
-| Skill | `skills/playwright-skill/run.js` | JavaScript/TypeScript Source |
-| Skill | `skills/playwright-skill/lib/helpers.js` | JavaScript/TypeScript Source |
-| Skill | `skills/prevc-code-review/SKILL.md` | Documentation |
-| Skill | `skills/validation/clarity-gate/CLARITY_GATE_FORMAT_SPEC.md` | Documentation |
-| Skill | `skills/validation/clarity-gate/CLARITY_GATE_PROCEDURES.md` | Documentation |
-| Skill | `skills/validation/clarity-gate/SKILL.md` | Documentation |
-| Skill | `skills/hugging-face-datasets/SKILL.md` | Documentation |
-| Skill | `skills/hugging-face-datasets/templates/chat.json` | Data / Config |
-| Skill | `skills/hugging-face-datasets/templates/classification.json` | Data / Config |
-| Skill | `skills/hugging-face-datasets/templates/completion.json` | Data / Config |
-| Skill | `skills/hugging-face-datasets/templates/custom.json` | Data / Config |
-| Skill | `skills/hugging-face-datasets/templates/qa.json` | Data / Config |
-| Skill | `skills/hugging-face-datasets/templates/tabular.json` | Data / Config |
-| Skill | `skills/hugging-face-datasets/examples/diverse_training_examples.json` | Data / Config |
-| Skill | `skills/hugging-face-datasets/examples/system_prompt_template.txt` |  |
-| Skill | `skills/hugging-face-datasets/examples/training_examples.json` | Data / Config |
-| Script | `skills/hugging-face-datasets/scripts/dataset_manager.py` | Python Source |
-| Script | `skills/hugging-face-datasets/scripts/sql_manager.py` | Python Source |
-| Skill | `skills/telegram/SKILL.md` | Documentation |
-| Skill | `skills/telegram/clawdbot.plugin.json` | Data / Config |
-| Skill | `skills/telegram/index.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/telegram/package.json` | Data / Config |
-| Skill | `skills/telegram/src/channel.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/telegram/src/runtime.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/prevc-documentation/SKILL.md` | Documentation |
-| Skill | `skills/jules-triage/SKILL.md` | Documentation |
-| Skill | `skills/flow-nexus-neural/SKILL.md` | Documentation |
-| Skill | `skills/requesting-code-review/SKILL.md` | Documentation |
-| Skill | `skills/requesting-code-review/code-reviewer.md` | Documentation |
-| Skill | `skills/z-audit/SKILL.md` | Documentation |
-| Skill | `skills/audit-context-building/SKILL.md` | Documentation |
-| Skill | `skills/audit-context-building/resources/COMPLETENESS_CHECKLIST.md` | Documentation |
-| Skill | `skills/audit-context-building/resources/FUNCTION_MICRO_ANALYSIS_EXAMPLE.md` | Documentation |
-| Skill | `skills/audit-context-building/resources/OUTPUT_REQUIREMENTS.md` | Documentation |
-| Skill | `skills/stream-chain/SKILL.md` | Documentation |
-| Skill | `skills/dev-browser/SKILL.md` | Documentation |
-| Skill | `skills/dev-browser/package-lock.json` | Data / Config |
-| Skill | `skills/dev-browser/package.json` | Data / Config |
-| Skill | `skills/dev-browser/server.sh` | Shell Script |
-| Skill | `skills/dev-browser/tsconfig.json` | Data / Config |
-| Skill | `skills/dev-browser/vitest.config.ts` | JavaScript/TypeScript Source |
-| Script | `skills/dev-browser/scripts/start-relay.ts` | JavaScript/TypeScript Source |
-| Script | `skills/dev-browser/scripts/start-server.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/dev-browser/references/scraping.md` | Documentation |
-| Skill | `skills/dev-browser/src/client.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/dev-browser/src/index.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/dev-browser/src/relay.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/dev-browser/src/types.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/dev-browser/src/snapshot/browser-script.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/dev-browser/src/snapshot/index.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/dev-browser/src/snapshot/inject.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/dev-browser/src/snapshot/__tests__/snapshot.test.ts` | JavaScript/TypeScript Source |
-| Skill | `skills/threejs-geometry/SKILL.md` | Documentation |
-| Skill | `skills/prevc-feature-breakdown/SKILL.md` | Documentation |
-| Skill | `skills/swarm-orchestration/SKILL.md` | Documentation |
-| Skill | `skills/pptx/SKILL.md` | Documentation |
-| Script | `skills/pptx/scripts/html2pptx.js` | JavaScript/TypeScript Source |
-| Skill | `skills/domain-name-brainstormer/SKILL.md` | Documentation |
-| Skill | `skills/data-engineering/SKILL.md` | Documentation |
-| Skill | `skills/data-engineering/skills/dbt-transformation-patterns/SKILL.md` | Documentation |
-| Skill | `skills/data-engineering/skills/airflow-dag-patterns/SKILL.md` | Documentation |
-| Skill | `skills/data-engineering/skills/spark-optimization/SKILL.md` | Documentation |
-| Skill | `skills/data-engineering/skills/data-quality-frameworks/SKILL.md` | Documentation |
-| Skill | `skills/github/SKILL.md` | Documentation |
-| Skill | `skills/invoice-organizer/SKILL.md` | Documentation |
-| Skill | `skills/verification-before-completion/SKILL.md` | Documentation |
-| Skill | `skills/agentdb-learning/SKILL.md` | Documentation |
-| Skill | `skills/langsmith-fetch/SKILL.md` | Documentation |
-| Skill | `skills/v3-core-implementation/SKILL.md` | Documentation |
-| Skill | `skills/backend-development/SKILL.md` | Documentation |
-| Skill | `skills/backend-development/skills/event-store-design/SKILL.md` | Documentation |
-| Skill | `skills/backend-development/skills/temporal-python-testing/SKILL.md` | Documentation |
-| Skill | `skills/backend-development/skills/temporal-python-testing/resources/integration-testing.md` | Documentation |
-| Skill | `skills/backend-development/skills/temporal-python-testing/resources/local-setup.md` | Documentation |
-| Skill | `skills/backend-development/skills/temporal-python-testing/resources/replay-testing.md` | Documentation |
-| Skill | `skills/backend-development/skills/temporal-python-testing/resources/unit-testing.md` | Documentation |
-| Skill | `skills/backend-development/skills/cqrs-implementation/SKILL.md` | Documentation |
-| Skill | `skills/backend-development/skills/architecture-patterns/SKILL.md` | Documentation |
-| Skill | `skills/backend-development/skills/projection-patterns/SKILL.md` | Documentation |
-| Skill | `skills/backend-development/skills/microservices-patterns/SKILL.md` | Documentation |
-| Skill | `skills/backend-development/skills/api-design-principles/SKILL.md` | Documentation |
-| Skill | `skills/backend-development/skills/api-design-principles/assets/api-design-checklist.md` | Documentation |
-| Skill | `skills/backend-development/skills/api-design-principles/assets/rest-api-template.py` | Python Source |
-| Skill | `skills/backend-development/skills/api-design-principles/references/graphql-schema-design.md` | Documentation |
-| Skill | `skills/backend-development/skills/api-design-principles/references/rest-best-practices.md` | Documentation |
-| Skill | `skills/backend-development/skills/saga-orchestration/SKILL.md` | Documentation |
-| Skill | `skills/backend-development/skills/workflow-orchestration-patterns/SKILL.md` | Documentation |
-| Skill | `skills/prevc-pr-review/SKILL.md` | Documentation |
-| Skill | `skills/executing-plans/SKILL.md` | Documentation |
-| Skill | `skills/cloudflare/SKILL.md` | Documentation |
-| Skill | `skills/cloudflare/references/ai-gateway/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/sandbox/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/sandbox/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/sandbox/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/sandbox/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/sandbox/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/web-analytics/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/web-analytics/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/web-analytics/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/web-analytics/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/web-analytics/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/waf/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/waf/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/waf/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/waf/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/waf/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/realtime-sfu/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/realtime-sfu/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/realtime-sfu/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/realtime-sfu/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/realtime-sfu/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/static-assets/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/static-assets/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/static-assets/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/static-assets/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/static-assets/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/zaraz/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/email-workers/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/do-storage/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/do-storage/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/do-storage/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/do-storage/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/do-storage/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/browser-rendering/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/browser-rendering/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/browser-rendering/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/browser-rendering/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/browser-rendering/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/durable-objects/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/durable-objects/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/durable-objects/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/durable-objects/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/durable-objects/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/c3/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/realtimekit/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/realtimekit/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/realtimekit/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/realtimekit/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/realtimekit/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/smart-placement/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/smart-placement/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/smart-placement/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/smart-placement/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/smart-placement/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-ai/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/email-routing/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/email-routing/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/email-routing/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/email-routing/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/email-routing/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-vpc/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/turn/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/pipelines/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/agents-sdk/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/agents-sdk/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/agents-sdk/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/agents-sdk/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/agents-sdk/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/observability/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/observability/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/observability/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/observability/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/observability/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/cron-triggers/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/cron-triggers/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/cron-triggers/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/cron-triggers/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/cron-triggers/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/wrangler/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/wrangler/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/wrangler/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/wrangler/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/wrangler/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/bindings/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/bindings/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/bindings/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/bindings/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/bindings/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-for-platforms/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-for-platforms/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-for-platforms/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-for-platforms/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-for-platforms/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2-sql/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/miniflare/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/miniflare/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/miniflare/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/miniflare/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/miniflare/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/stream/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/stream/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/stream/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/stream/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/stream/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/secrets-store/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/secrets-store/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/secrets-store/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/secrets-store/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/secrets-store/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/vectorize/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/containers/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/containers/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/containers/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/containers/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/containers/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/spectrum/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/spectrum/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/spectrum/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/spectrum/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/spectrum/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-playground/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-playground/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-playground/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-playground/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/workers-playground/patterns.md` | Documentation |
-| Workflow | `skills/cloudflare/references/workflows/README.md` | Documentation |
-| Workflow | `skills/cloudflare/references/workflows/api.md` | Documentation |
-| Workflow | `skills/cloudflare/references/workflows/configuration.md` | Documentation |
-| Workflow | `skills/cloudflare/references/workflows/gotchas.md` | Documentation |
-| Workflow | `skills/cloudflare/references/workflows/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/pages-functions/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/pages-functions/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/pages-functions/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/pages-functions/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/pages-functions/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/terraform/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/terraform/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/terraform/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/terraform/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/terraform/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/queues/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/queues/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/queues/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/queues/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/queues/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/snippets/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/snippets/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/snippets/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/snippets/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/snippets/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/pulumi/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/pulumi/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/pulumi/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/pulumi/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/pulumi/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/images/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/images/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/images/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/images/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/images/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/ddos/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/ddos/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/ddos/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/ddos/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/ddos/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/api-shield/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/api-shield/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/api-shield/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/api-shield/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/api-shield/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2-data-catalog/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2-data-catalog/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2-data-catalog/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2-data-catalog/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/r2-data-catalog/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/analytics-engine/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/analytics-engine/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/analytics-engine/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/analytics-engine/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/analytics-engine/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/kv/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/kv/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/kv/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/kv/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/kv/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/tunnel/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/tunnel/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/tunnel/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/tunnel/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/tunnel/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/network-interconnect/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/network-interconnect/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/network-interconnect/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/network-interconnect/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/network-interconnect/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/tail-workers/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/api/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/api/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/api/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/api/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/api/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/workerd/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/workerd/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/workerd/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/workerd/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/workerd/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/turnstile/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/turnstile/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/turnstile/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/turnstile/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/turnstile/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/ai-search/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/ai-search/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/ai-search/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/ai-search/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/ai-search/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/d1/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/d1/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/d1/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/d1/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/d1/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/cache-reserve/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/cache-reserve/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/cache-reserve/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/cache-reserve/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/cache-reserve/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/argo-smart-routing/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/argo-smart-routing/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/argo-smart-routing/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/argo-smart-routing/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/argo-smart-routing/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/pages/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/pages/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/pages/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/pages/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/pages/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/bot-management/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/bot-management/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/bot-management/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/bot-management/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/bot-management/patterns.md` | Documentation |
-| Skill | `skills/cloudflare/references/hyperdrive/README.md` | Documentation |
-| Skill | `skills/cloudflare/references/hyperdrive/api.md` | Documentation |
-| Skill | `skills/cloudflare/references/hyperdrive/configuration.md` | Documentation |
-| Skill | `skills/cloudflare/references/hyperdrive/gotchas.md` | Documentation |
-| Skill | `skills/cloudflare/references/hyperdrive/patterns.md` | Documentation |
-| Skill | `skills/v3-performance-optimization/SKILL.md` | Documentation |
-| Skill | `skills/agentic-jujutsu/SKILL.md` | Documentation |
-| Skill | `skills/codebase-documenter/SKILL.md` | Documentation |
-| Skill | `skills/threejs-materials/SKILL.md` | Documentation |
-| Skill | `skills/skill-creator-en-anthropic/LICENSE.txt` |  |
-| Skill | `skills/skill-creator-en-anthropic/SKILL.md` | Documentation |
-| Script | `skills/skill-creator-en-anthropic/scripts/init_skill.py` | Python Source |
-| Script | `skills/skill-creator-en-anthropic/scripts/package_skill.py` | Python Source |
-| Script | `skills/skill-creator-en-anthropic/scripts/quick_validate.py` | Python Source |
-| Skill | `skills/skill-creator-en-anthropic/references/output-patterns.md` | Documentation |
-| Skill | `skills/skill-creator-en-anthropic/references/workflows.md` | Documentation |
-| Skill | `skills/xlsx-processing-en-anthropic/LICENSE.txt` |  |
-| Skill | `skills/xlsx-processing-en-anthropic/SKILL.md` | Documentation |
-| Script | `skills/xlsx-processing-en-anthropic/scripts/recalc.py` | Python Source |
-| Skill | `skills/reasoningbank-agentdb/SKILL.md` | Documentation |
-| Skill | `skills/threejs-postprocessing/SKILL.md` | Documentation |
-| Skill | `skills/aws-serverless-eda/SKILL.md` | Documentation |
-| Skill | `skills/aws-serverless-eda/references/deployment-best-practices.md` | Documentation |
-| Skill | `skills/aws-serverless-eda/references/eda-patterns.md` | Documentation |
-| Skill | `skills/aws-serverless-eda/references/observability-best-practices.md` | Documentation |
-| Skill | `skills/aws-serverless-eda/references/performance-optimization.md` | Documentation |
-| Skill | `skills/aws-serverless-eda/references/security-best-practices.md` | Documentation |
-| Skill | `skills/aws-serverless-eda/references/serverless-patterns.md` | Documentation |
-| Skill | `skills/video-downloader/SKILL.md` | Documentation |
-| Skill | `skills/git-pushing/SKILL.md` | Documentation |
-| Script | `skills/git-pushing/scripts/smart_commit.sh` | Shell Script |
-| Skill | `skills/doc-coauthoring/SKILL.md` | Documentation |
-| Skill | `skills/frontend-ui-ux/SKILL.md` | Documentation |
-| Skill | `skills/threejs-interaction/SKILL.md` | Documentation |
-| File | `docs/README.md` | Documentation |
-| File | `docs/browser-use-integration.md` | Documentation |
-| File | `docs/harvest_report_2026-01-19_claude-code-templates.md` | Documentation |
-| File | `docs/harvest_report_2026-01-19_everything-claude-code.md` | Documentation |
-| File | `docs/harvest_report_2026-01-19_marketingskills.md` | Documentation |
-| File | `docs/harvest_report_2026-01-19_oh-my-opencode.md` | Documentation |
-| File | `docs/harvest_report_2026-01-19_omnara.md` | Documentation |
-| File | `docs/harvest_report_final_2026-01-19.md` | Documentation |
-| File | `docs/hooks-guide.md` | Documentation |
-| File | `docs/inventory.md` | Documentation |
-| File | `docs/model-fallback-system-design.md` | Documentation |
-| File | `docs/oh-my-opencode-analysis.md` | Documentation |
-| File | `docs/references.md` | Documentation |
-| File | `docs/scripts-guide.md` | Documentation |
-| File | `docs/services-guide.md` | Documentation |
-| File | `docs/workflows-guide.md` | Documentation |
-| File | `docs/research/moltbot-memory.md` | Documentation |
-| File | `docs/future/advanced-hooks.md` | Documentation |
-| File | `docs/future/mcp-integrations.md` | Documentation |
-| File | `docs/CODEMAPS/INDEX.md` | Documentation |
-| File | `docs/CODEMAPS/agents.md` | Documentation |
-| File | `docs/CODEMAPS/source.md` | Documentation |
-| File | `docs/standards/evaluation-driven-development.md` | Documentation |
-| File | `docs/standards/progressive-disclosure.md` | Documentation |
-| File | `docs/protocols/intent-classification.md` | Documentation |
-| File | `docs/protocols/sandbox-guidelines.md` | Documentation |
-| File | `docs/future-research/agent-reasoning-review.md` | Documentation |
-| File | `docs/future-research/skill-branching-concept.md` | Documentation |
-| File | `docs/concepts/agentic-workflow.md` | Documentation |
-| File | `docs/concepts/micode-architecture.md` | Documentation |
-| File | `docs/concepts/mvpm-workflow.md` | Documentation |
-| File | `docs/concepts/prevc-workflow.md` | Documentation |
-| File | `docs/concepts/ralph-loop.md` | Documentation |
-| File | `docs/knowledge/testing/adr-quality-readiness-checklist.md` | Documentation |
-| File | `docs/knowledge/testing/api-request.md` | Documentation |
-| File | `docs/knowledge/testing/api-testing-patterns.md` | Documentation |
-| File | `docs/knowledge/testing/auth-session.md` | Documentation |
-| File | `docs/knowledge/testing/burn-in.md` | Documentation |
-| File | `docs/knowledge/testing/ci-burn-in.md` | Documentation |
-| File | `docs/knowledge/testing/component-tdd.md` | Documentation |
-| File | `docs/knowledge/testing/contract-testing.md` | Documentation |
-| File | `docs/knowledge/testing/data-factories.md` | Documentation |
-| File | `docs/knowledge/testing/email-auth.md` | Documentation |
-| File | `docs/knowledge/testing/error-handling.md` | Documentation |
-| File | `docs/knowledge/testing/feature-flags.md` | Documentation |
-| File | `docs/knowledge/testing/file-utils.md` | Documentation |
-| File | `docs/knowledge/testing/fixture-architecture.md` | Documentation |
-| File | `docs/knowledge/testing/fixtures-composition.md` | Documentation |
-| File | `docs/knowledge/testing/intercept-network-call.md` | Documentation |
-| File | `docs/knowledge/testing/log.md` | Documentation |
-| File | `docs/knowledge/testing/network-error-monitor.md` | Documentation |
-| File | `docs/knowledge/testing/network-first.md` | Documentation |
-| File | `docs/knowledge/testing/network-recorder.md` | Documentation |
-| File | `docs/knowledge/testing/nfr-criteria.md` | Documentation |
-| File | `docs/knowledge/testing/overview.md` | Documentation |
-| File | `docs/knowledge/testing/playwright-config.md` | Documentation |
-| File | `docs/knowledge/testing/probability-impact.md` | Documentation |
-| File | `docs/knowledge/testing/recurse.md` | Documentation |
-| File | `docs/knowledge/testing/risk-governance.md` | Documentation |
-| File | `docs/knowledge/testing/selective-testing.md` | Documentation |
-| File | `docs/knowledge/testing/selector-resilience.md` | Documentation |
-| File | `docs/knowledge/testing/test-healing-patterns.md` | Documentation |
-| File | `docs/knowledge/testing/test-levels-framework.md` | Documentation |
-| File | `docs/knowledge/testing/test-priorities-matrix.md` | Documentation |
-| File | `docs/knowledge/testing/test-quality.md` | Documentation |
-| File | `docs/knowledge/testing/timing-debugging.md` | Documentation |
-| File | `docs/knowledge/testing/visual-debugging.md` | Documentation |
-| File | `docs/devops/feature-development.md` | Documentation |
-| File | `docs/devops/release-process.md` | Documentation |
-| Hook | `hooks/auto-git-add.json` | Data / Config |
-| Hook | `hooks/auto-git-add.md` | Documentation |
-| Hook | `hooks/auto-sync-plan-to-github.json` | Data / Config |
-| Hook | `hooks/build-on-change.md` | Documentation |
-| Hook | `hooks/change-tracker.md` | Documentation |
-| Hook | `hooks/dependency-checker.md` | Documentation |
-| Hook | `hooks/discord-detailed-notifications.md` | Documentation |
-| Hook | `hooks/discord-error-notifications.md` | Documentation |
-| Hook | `hooks/discord-notifications.md` | Documentation |
-| Hook | `hooks/file-backup.md` | Documentation |
-| Hook | `hooks/file-protection-hook.md` | Documentation |
-| Hook | `hooks/file-protection.json` | Data / Config |
-| Hook | `hooks/file-protection.md` | Documentation |
-| Hook | `hooks/format-javascript-files.md` | Documentation |
-| Hook | `hooks/format-python-files.md` | Documentation |
-| Hook | `hooks/git-add-changes.md` | Documentation |
-| Hook | `hooks/hooks.json` | Data / Config |
-| Hook | `hooks/lint-on-save.md` | Documentation |
-| Hook | `hooks/notify-before-bash.md` | Documentation |
-| Hook | `hooks/performance-monitor.md` | Documentation |
-| Hook | `hooks/run-hook.cmd` |  |
-| Hook | `hooks/run-tests-after-changes.md` | Documentation |
-| Hook | `hooks/security-scanner.md` | Documentation |
-| Hook | `hooks/session-start.sh` | Shell Script |
-| Hook | `hooks/simple-notifications.md` | Documentation |
-| Hook | `hooks/slack-detailed-notifications.md` | Documentation |
-| Hook | `hooks/slack-error-notifications.md` | Documentation |
-| Hook | `hooks/slack-notifications.json` | Data / Config |
-| Hook | `hooks/slack-notifications.md` | Documentation |
-| Hook | `hooks/smart-commit.md` | Documentation |
-| Hook | `hooks/smart-formatting.md` | Documentation |
-| Hook | `hooks/telegram-detailed-notifications.md` | Documentation |
-| Hook | `hooks/telegram-error-notifications.md` | Documentation |
-| Hook | `hooks/telegram-notifications.md` | Documentation |
-| Hook | `hooks/test-runner.md` | Documentation |
-| Hook | `hooks/todo-continuation-enforcer.md` | Documentation |
-| Hook | `hooks/safety/destructive-command-blocker.ts` | JavaScript/TypeScript Source |
-| File | `templates/PR_TEMPLATE.md` | Documentation |
-| File | `templates/SPECIFICATION.md` | Documentation |
-| File | `templates/bug_report.md` | Documentation |
-| File | `templates/compound.config.json` | Data / Config |
-| File | `templates/feature_request.md` | Documentation |
-| File | `packages/jules-swarm/AGENTS.md` | Documentation |
-| File | `packages/jules-swarm/QUICK_REFERENCE.md` | Documentation |
-| File | `packages/jules-swarm/README.md` | Documentation |
-| File | `packages/jules-swarm/consolidate_arxiv.py` | Python Source |
-| File | `packages/jules-swarm/consolidate_github.py` | Python Source |
-| File | `packages/jules-swarm/consolidate_github_log.txt` |  |
-| File | `packages/jules-swarm/consolidate_log.txt` |  |
-| File | `packages/jules-swarm/deep-research.json` | Data / Config |
-| File | `packages/jules-swarm/peek_data.py` | Python Source |
-| File | `packages/jules-swarm/requirements.txt` |  |
-| File | `packages/jules-swarm/server.py` | Python Source |
-| File | `packages/jules-swarm/data/github-repos.txt` |  |
-| File | `packages/jules-swarm/data/paper_ids.txt` |  |
-| File | `packages/jules-swarm/data/target_papers.txt` |  |
-| File | `packages/jules-swarm/docs/AGENTS_legacy.md` | Documentation |
-| File | `packages/jules-swarm/docs/How Jules Internally Works_ Multi-Agent Architectu.md` | Documentation |
-| File | `packages/jules-swarm/docs/IMPLEMENTATION_SUMMARY.md` | Documentation |
-| File | `packages/jules-swarm/docs/JULES-IMPLEMENTATION_SUMMARY.md` | Documentation |
-| File | `packages/jules-swarm/docs/JULIUS_FORGE_PROMPT.md` | Documentation |
-| File | `packages/jules-swarm/docs/QUICK_REFERENCE.md` | Documentation |
-| File | `packages/jules-swarm/docs/RESEARCH_BACKLOG.md` | Documentation |
-| File | `packages/jules-swarm/docs/ai_coding_failures_map.md` | Documentation |
-| File | `packages/jules-swarm/docs/jules-api-documentation-links.md` | Documentation |
-| File | `packages/jules-swarm/docs/jules-research.md` | Documentation |
-| File | `packages/jules-swarm/docs/jules-research1.md` | Documentation |
-| File | `packages/jules-swarm/docs/jules-swarm-protocol.md` | Documentation |
-| File | `packages/jules-swarm/utils/generate_backlog.py` | Python Source |
-| File | `packages/jules-swarm/utils/harvest_metadata.py` | Python Source |
-| File | `packages/jules-swarm/utils/merge_train.py` | Python Source |
-| File | `packages/jules-swarm/utils/merge_train.sh` | Shell Script |
-| File | `packages/jules-swarm/utils/sync_backlog_status.py` | Python Source |
-| File | `packages/jules-swarm/swarm_core/__init__.py` | Python Source |
-| File | `packages/jules-swarm/swarm_core/api.py` | Python Source |
-| File | `packages/jules-swarm/swarm_core/config.py` | Python Source |
-| File | `packages/jules-swarm/swarm_core/launcher.py` | Python Source |
-| File | `packages/jules-swarm/swarm_core/prompts.py` | Python Source |
-| File | `packages/jules-swarm/swarm_core/providers.py` | Python Source |
-| File | `packages/jules-swarm/prompts/atoms_phase1_prompt.md` | Documentation |
-| File | `packages/jules-swarm/prompts/atoms_phase2_prompt.md` | Documentation |
-| File | `packages/jules-swarm/prompts/atoms_prompt.md` | Documentation |
-| File | `packages/jules-swarm/prompts/missing_molecules_prompt.md` | Documentation |
-| File | `packages/jules-swarm/prompts/molecules_prompt.md` | Documentation |
-| File | `packages/jules-swarm/prompts/organisms_prompt.md` | Documentation |
-| File | `packages/jules-swarm/prompts/test_atom_prompt.md` | Documentation |
-| File | `packages/jules-swarm/runners/automate_cycle.py` | Python Source |
-| File | `packages/jules-swarm/runners/check_research_status.py` | Python Source |
-| File | `packages/jules-swarm/runners/check_status.py` | Python Source |
-| File | `packages/jules-swarm/runners/fetch_papers.py` | Python Source |
-| File | `packages/jules-swarm/runners/generic_swarm.py` | Python Source |
-| File | `packages/jules-swarm/runners/inspect_session.py` | Python Source |
-| File | `packages/jules-swarm/runners/paper_analysis.py` | Python Source |
-| File | `packages/jules-swarm/runners/poke_session.py` | Python Source |
-| File | `packages/jules-swarm/state/sessions.json` | Data / Config |
-| File | `packages/jules-swarm/tasks/atoms.txt` |  |
-| File | `packages/jules-swarm/tasks/atoms_phase1.txt` |  |
-| File | `packages/jules-swarm/tasks/atoms_phase2.txt` |  |
-| File | `packages/jules-swarm/tasks/missing_molecules.txt` |  |
-| File | `packages/jules-swarm/tasks/molecules.txt` |  |
-| File | `packages/jules-swarm/tasks/organisms.txt` |  |
-| File | `packages/jules-swarm/tasks/test_atom.txt` |  |
-| File | `packages/jules-swarm/ui/App.tsx` |  |
-| File | `packages/jules-swarm/ui/README.md` | Documentation |
-| File | `packages/jules-swarm/ui/index.html` |  |
-| File | `packages/jules-swarm/ui/index.tsx` |  |
-| File | `packages/jules-swarm/ui/metadata.json` | Data / Config |
-| File | `packages/jules-swarm/ui/package.json` | Data / Config |
-| File | `packages/jules-swarm/ui/tsconfig.json` | Data / Config |
-| File | `packages/jules-swarm/ui/types.ts` | JavaScript/TypeScript Source |
-| File | `packages/jules-swarm/ui/vite.config.ts` | JavaScript/TypeScript Source |
-| File | `packages/jules-swarm/ui/utils/taskGenerator.ts` | JavaScript/TypeScript Source |
-| File | `packages/jules-swarm/ui/components/Console.tsx` |  |
-| File | `packages/jules-swarm/ui/components/VariableTable.tsx` |  |
-| File | `packages/jules-swarm/ui/components/ui/GlassCard.tsx` |  |
-| Service | `packages/jules-swarm/ui/services/julesService.ts` | JavaScript/TypeScript Source |
-| File | `evaluations/schema.json` | Data / Config |
-| Script | `scripts/101domains-helper.sh` | Shell Script |
-| Script | `scripts/add-missing-returns.sh` | Shell Script |
-| Script | `scripts/agno-setup.sh` | Shell Script |
-| Script | `scripts/ai-cli-config.sh` | Shell Script |
-| Script | `scripts/ampcode-cli.sh` | Shell Script |
-| Script | `scripts/auto-version-bump.sh` | Shell Script |
-| Script | `scripts/closte-helper.sh` | Shell Script |
-| Script | `scripts/cloudron-helper.sh` | Shell Script |
-| Script | `scripts/codacy-cli-chunked.sh` | Shell Script |
-| Script | `scripts/codacy-cli.sh` | Shell Script |
-| Script | `scripts/code-audit-helper.sh` | Shell Script |
-| Script | `scripts/coderabbit-cli.sh` | Shell Script |
-| Script | `scripts/coderabbit-pro-analysis.sh` | Shell Script |
-| Script | `scripts/comprehensive-quality-fix.sh` | Shell Script |
-| Script | `scripts/context-builder-helper.sh` | Shell Script |
-| Script | `scripts/continue-cli.sh` | Shell Script |
-| Script | `scripts/convert-agents-to-skills.py` | Python Source |
-| Script | `scripts/coolify-cli-helper.sh` | Shell Script |
-| Script | `scripts/coolify-helper.sh` | Shell Script |
-| Script | `scripts/crawl4ai-examples.sh` | Shell Script |
-| Script | `scripts/crawl4ai-helper.sh` | Shell Script |
-| Script | `scripts/dns-helper.sh` | Shell Script |
-| Script | `scripts/dspy-helper.sh` | Shell Script |
-| Script | `scripts/dspyground-helper.sh` | Shell Script |
-| Script | `scripts/efficient-return-fix.sh` | Shell Script |
-| Script | `scripts/extract-awesome-references.py` | Python Source |
-| Script | `scripts/find-missing-returns.sh` | Shell Script |
-| Script | `scripts/fix-auth-headers.sh` | Shell Script |
-| Script | `scripts/fix-common-strings.sh` | Shell Script |
-| Script | `scripts/fix-content-type.sh` | Shell Script |
-| Script | `scripts/fix-error-messages.sh` | Shell Script |
-| Script | `scripts/fix-misplaced-returns.sh` | Shell Script |
-| Script | `scripts/fix-remaining-literals.sh` | Shell Script |
-| Script | `scripts/fix-return-statements.sh` | Shell Script |
-| Script | `scripts/fix-sc2155-simple.sh` | Shell Script |
-| Script | `scripts/fix-shellcheck-critical.sh` | Shell Script |
-| Script | `scripts/fix-string-literals.sh` | Shell Script |
-| Script | `scripts/generate-opencode-agents.sh` | Shell Script |
-| Script | `scripts/git-platforms-helper.sh` | Shell Script |
-| Script | `scripts/gitea-cli-helper.sh` | Shell Script |
-| Script | `scripts/github-cli-helper.sh` | Shell Script |
-| Script | `scripts/gitlab-cli-helper.sh` | Shell Script |
-| Script | `scripts/hetzner-helper.sh` | Shell Script |
-| Script | `scripts/hostinger-helper.sh` | Shell Script |
-| Script | `scripts/linter-manager.sh` | Shell Script |
-| Script | `scripts/localhost-helper.sh` | Shell Script |
-| Script | `scripts/mainwp-helper.sh` | Shell Script |
-| Script | `scripts/markdown-formatter.sh` | Shell Script |
-| Script | `scripts/markdown-lint-fix.sh` | Shell Script |
-| Script | `scripts/mass-fix-returns.sh` | Shell Script |
-| Script | `scripts/monitor-code-review.sh` | Shell Script |
-| Script | `scripts/pagespeed-helper.sh` | Shell Script |
-| Script | `scripts/pandoc-helper.sh` | Shell Script |
-| Script | `scripts/pre-commit-hook.sh` | Shell Script |
-| Script | `scripts/qlty-cli.sh` | Shell Script |
-| Script | `scripts/quality-check.sh` | Shell Script |
-| Script | `scripts/quality-cli-manager.sh` | Shell Script |
-| Script | `scripts/quality-feedback-helper.sh` | Shell Script |
-| Script | `scripts/quality-fix.sh` | Shell Script |
-| Script | `scripts/revert-skills-to-kebab.py` | Python Source |
-| Script | `scripts/secretlint-helper.sh` | Shell Script |
-| Script | `scripts/servers-helper.sh` | Shell Script |
-| Script | `scripts/ses-helper.sh` | Shell Script |
-| Script | `scripts/setup-ai-system-prompts.sh` | Shell Script |
-| Script | `scripts/setup-browser-use.sh` | Shell Script |
-| Script | `scripts/setup-linters-wizard.sh` | Shell Script |
-| Script | `scripts/setup-local-api-keys.sh` | Shell Script |
-| Script | `scripts/setup-mcp-integrations.sh` | Shell Script |
-| Script | `scripts/setup-wizard-helper.sh` | Shell Script |
-| Script | `scripts/shared-constants.sh` | Shell Script |
-| Script | `scripts/snyk-helper.sh` | Shell Script |
-| Script | `scripts/sonarcloud-autofix.sh` | Shell Script |
-| Script | `scripts/sonarcloud-cli.sh` | Shell Script |
-| Script | `scripts/sonarscanner-cli.sh` | Shell Script |
-| Script | `scripts/spaceship-helper.sh` | Shell Script |
-| Script | `scripts/stagehand-helper.sh` | Shell Script |
-| Script | `scripts/stagehand-python-helper.sh` | Shell Script |
-| Script | `scripts/stagehand-python-setup.sh` | Shell Script |
-| Script | `scripts/stagehand-setup.sh` | Shell Script |
-| Script | `scripts/sync-agents-to-personas.py` | Python Source |
-| Script | `scripts/system-cleanup.sh` | Shell Script |
-| Script | `scripts/test-stagehand-both-integration.sh` | Shell Script |
-| Script | `scripts/test-stagehand-integration.sh` | Shell Script |
-| Script | `scripts/test-stagehand-python-integration.sh` | Shell Script |
-| Script | `scripts/toon-helper.sh` | Shell Script |
-| Script | `scripts/updown-helper.sh` | Shell Script |
-| Script | `scripts/validate-mcp-integrations.sh` | Shell Script |
-| Script | `scripts/validate-version-consistency.sh` | Shell Script |
-| Script | `scripts/vaultwarden-helper.sh` | Shell Script |
-| Script | `scripts/vercel-cli-helper.sh` | Shell Script |
-| Script | `scripts/version-manager.sh` | Shell Script |
-| Script | `scripts/webhosting-helper.sh` | Shell Script |
-| Script | `scripts/webhosting-verify.sh` | Shell Script |
-| Script | `scripts/wordpress-mcp-helper.sh` | Shell Script |
-| Script | `scripts/codemaps/generate.ts` | JavaScript/TypeScript Source |
-| Script | `scripts/docs/update.ts` | JavaScript/TypeScript Source |
-| Script | `scripts/monitoring/claude-monitor.py` | Python Source |
-| Script | `scripts/security/quality-check.sh` | Shell Script |
-| Script | `scripts/security/secretlint-helper.sh` | Shell Script |
-| Script | `scripts/security/security.md` | Documentation |
-| Script | `scripts/devops/tmux-interactive.sh` | Shell Script |
-| Script | `scripts/devops/version-manager.sh` | Shell Script |
-| Script | `scripts/compound/CLAUDE.md` | Documentation |
-| Script | `scripts/compound/analyze-report.sh` | Shell Script |
-| Script | `scripts/compound/auto-compound.sh` | Shell Script |
-| Script | `scripts/compound/loop.sh` | Shell Script |
-| Script | `scripts/compound/prompt.md` | Documentation |
-| File | `tests/test_browser_use_persistence.sh` | Shell Script |
-| File | `tests/skill-triggering/run-all.sh` | Shell Script |
-| File | `tests/skill-triggering/run-test.sh` | Shell Script |
-| File | `tests/skill-triggering/prompts/dispatching-parallel-agents.txt` |  |
-| File | `tests/skill-triggering/prompts/executing-plans.txt` |  |
-| File | `tests/skill-triggering/prompts/requesting-code-review.txt` |  |
-| File | `tests/skill-triggering/prompts/systematic-debugging.txt` |  |
-| File | `tests/skill-triggering/prompts/test-driven-development.txt` |  |
-| File | `tests/skill-triggering/prompts/writing-plans.txt` |  |
-| File | `tests/claude-code/README.md` | Documentation |
-| File | `tests/claude-code/analyze-token-usage.py` | Python Source |
-| File | `tests/claude-code/run-skill-tests.sh` | Shell Script |
-| File | `tests/claude-code/test-helpers.sh` | Shell Script |
-| File | `tests/claude-code/test-subagent-driven-development-integration.sh` | Shell Script |
-| File | `tests/claude-code/test-subagent-driven-development.sh` | Shell Script |
-| File | `tests/opencode/run-tests.sh` | Shell Script |
-| File | `tests/opencode/setup.sh` | Shell Script |
-| File | `tests/opencode/test-plugin-loading.sh` | Shell Script |
-| File | `tests/opencode/test-priority.sh` | Shell Script |
-| File | `tests/opencode/test-skills-core.sh` | Shell Script |
-| File | `tests/opencode/test-tools.sh` | Shell Script |
-| File | `tests/explicit-skill-requests/run-all.sh` | Shell Script |
-| File | `tests/explicit-skill-requests/run-claude-describes-sdd.sh` | Shell Script |
-| File | `tests/explicit-skill-requests/run-extended-multiturn-test.sh` | Shell Script |
-| File | `tests/explicit-skill-requests/run-haiku-test.sh` | Shell Script |
-| File | `tests/explicit-skill-requests/run-multiturn-test.sh` | Shell Script |
-| File | `tests/explicit-skill-requests/run-test.sh` | Shell Script |
-| File | `tests/explicit-skill-requests/prompts/action-oriented.txt` |  |
-| File | `tests/explicit-skill-requests/prompts/after-planning-flow.txt` |  |
-| File | `tests/explicit-skill-requests/prompts/claude-suggested-it.txt` |  |
-| File | `tests/explicit-skill-requests/prompts/i-know-what-sdd-means.txt` |  |
-| File | `tests/explicit-skill-requests/prompts/mid-conversation-execute-plan.txt` |  |
-| File | `tests/explicit-skill-requests/prompts/please-use-brainstorming.txt` |  |
-| File | `tests/explicit-skill-requests/prompts/skip-formalities.txt` |  |
-| File | `tests/explicit-skill-requests/prompts/subagent-driven-development-please.txt` |  |
-| File | `tests/explicit-skill-requests/prompts/use-systematic-debugging.txt` |  |
-| File | `tests/subagent-driven-dev/run-test.sh` | Shell Script |
-| File | `tests/subagent-driven-dev/go-fractals/design.md` | Documentation |
-| File | `tests/subagent-driven-dev/go-fractals/plan.md` | Documentation |
-| File | `tests/subagent-driven-dev/go-fractals/scaffold.sh` | Shell Script |
-| File | `tests/subagent-driven-dev/svelte-todo/design.md` | Documentation |
-| File | `tests/subagent-driven-dev/svelte-todo/plan.md` | Documentation |
-| File | `tests/subagent-driven-dev/svelte-todo/scaffold.sh` | Shell Script |
-| Workflow | `workflows/agent-discovery.md` | Documentation |
-| Workflow | `workflows/bug-fixing.md` | Documentation |
-| Workflow | `workflows/code-review.md` | Documentation |
-| Workflow | `workflows/compound-product-cycle.md` | Documentation |
-| Workflow | `workflows/error-feedback.md` | Documentation |
-| Workflow | `workflows/feature-development.md` | Documentation |
-| Workflow | `workflows/full-stack-feature.md` | Documentation |
-| Workflow | `workflows/jules-orchestration.md` | Documentation |
-| Workflow | `workflows/legal-review.md` | Documentation |
-| Workflow | `workflows/marketing-launch.md` | Documentation |
-| Workflow | `workflows/multi-repo-workspace.md` | Documentation |
-| Workflow | `workflows/release-improvements.md` | Documentation |
-| Workflow | `workflows/release-process.md` | Documentation |
-| Workflow | `workflows/research-to-product.md` | Documentation |
-| Workflow | `workflows/security-hardening.md` | Documentation |
-| Workflow | `workflows/swarm-development.md` | Documentation |
-| Workflow | `workflows/teach-me-testing.md` | Documentation |
-| Workflow | `workflows/versioning.md` | Documentation |
-| Workflow | `workflows/github/plan-auto-close.yml` |  |
-| Workflow | `workflows/github/plan-to-tasks.yml` |  |
-| Workflow | `workflows/github/smart-sync.yml` |  |
-| Workflow | `workflows/github/task-to-subtasks.yml` |  |
-| File | `commands/00-setup.md` | Documentation |
-| File | `commands/01-specify.md` | Documentation |
-| File | `commands/02-plan.md` | Documentation |
-| File | `commands/03-tasks.md` | Documentation |
-| File | `commands/04-implement.md` | Documentation |
-| File | `commands/05-document.md` | Documentation |
-| File | `commands/act.md` | Documentation |
-| File | `commands/actualize.md` | Documentation |
-| File | `commands/add-authentication-system.md` | Documentation |
-| File | `commands/add-changelog.md` | Documentation |
-| File | `commands/add-mutation-testing.md` | Documentation |
-| File | `commands/add-package.md` | Documentation |
-| File | `commands/add-performance-monitoring.md` | Documentation |
-| File | `commands/add-property-based-testing.md` | Documentation |
-| File | `commands/add-to-changelog.md` | Documentation |
-| File | `commands/add-typescript-best-practices.md` | Documentation |
-| File | `commands/all-tools.md` | Documentation |
-| File | `commands/analyse-problem.md` | Documentation |
-| File | `commands/analyse.md` | Documentation |
-| File | `commands/analyze-issue.md` | Documentation |
-| File | `commands/antigravity-quota.md` | Documentation |
-| File | `commands/apply-anthropic-skill-best-practices.md` | Documentation |
-| File | `commands/architecture-review.md` | Documentation |
-| File | `commands/architecture-scenario-explorer.md` | Documentation |
-| File | `commands/attach-review-to-pr.md` | Documentation |
-| File | `commands/bidirectional-sync.md` | Documentation |
-| File | `commands/big-features-interview.md` | Documentation |
-| File | `commands/brainstorm.md` | Documentation |
-| File | `commands/bug-fix.md` | Documentation |
-| File | `commands/build-mcp.md` | Documentation |
-| File | `commands/build.md` | Documentation |
-| File | `commands/bulk-import-issues.md` | Documentation |
-| File | `commands/business-scenario-explorer.md` | Documentation |
-| File | `commands/cause-and-effect.md` | Documentation |
-| File | `commands/changelog-demo-command.md` | Documentation |
-| File | `commands/check-file.md` | Documentation |
-| File | `commands/check.md` | Documentation |
-| File | `commands/ci-setup.md` | Documentation |
-| File | `commands/clean-branches.md` | Documentation |
-| File | `commands/clean.md` | Documentation |
-| File | `commands/code-permutation-tester.md` | Documentation |
-| File | `commands/code-review.md` | Documentation |
-| File | `commands/code-to-task.md` | Documentation |
-| File | `commands/code_analysis.md` | Documentation |
-| File | `commands/commit-fast.md` | Documentation |
-| File | `commands/commit.md` | Documentation |
-| File | `commands/constraint-modeler.md` | Documentation |
-| File | `commands/containerize-application.md` | Documentation |
-| File | `commands/context-prime.md` | Documentation |
-| File | `commands/create-agent.md` | Documentation |
-| File | `commands/create-architecture-documentation.md` | Documentation |
-| File | `commands/create-command.md` | Documentation |
-| File | `commands/create-database-migrations.md` | Documentation |
-| File | `commands/create-docs.md` | Documentation |
-| File | `commands/create-feature.md` | Documentation |
-| File | `commands/create-hook.md` | Documentation |
-| File | `commands/create-ideas.md` | Documentation |
-| File | `commands/create-jtbd.md` | Documentation |
-| File | `commands/create-onboarding-guide.md` | Documentation |
-| File | `commands/create-pr.md` | Documentation |
-| File | `commands/create-prd.md` | Documentation |
-| File | `commands/create-prp.md` | Documentation |
-| File | `commands/create-pull-request.md` | Documentation |
-| File | `commands/create-skill.md` | Documentation |
-| File | `commands/create-workflow-command.md` | Documentation |
-| File | `commands/create-worktrees.md` | Documentation |
-| File | `commands/critique.md` | Documentation |
-| File | `commands/cross-reference-manager.md` | Documentation |
-| File | `commands/debug-error.md` | Documentation |
-| File | `commands/decay.md` | Documentation |
-| File | `commands/decision-quality-analyzer.md` | Documentation |
-| File | `commands/decision-tree-explorer.md` | Documentation |
-| File | `commands/dependency-audit.md` | Documentation |
-| File | `commands/dependency-mapper.md` | Documentation |
-| File | `commands/design-database-schema.md` | Documentation |
-| File | `commands/design-rest-api.md` | Documentation |
-| File | `commands/digital-twin-creator.md` | Documentation |
-| File | `commands/directory-deep-dive.md` | Documentation |
-| File | `commands/do-competitively.md` | Documentation |
-| File | `commands/do-in-parallel.md` | Documentation |
-| File | `commands/do-in-steps.md` | Documentation |
-| File | `commands/doc-api.md` | Documentation |
-| File | `commands/docs.md` | Documentation |
-| File | `commands/e2e-setup.md` | Documentation |
-| File | `commands/estimate-assistant.md` | Documentation |
-| File | `commands/execute-plan.md` | Documentation |
-| File | `commands/explain-code.md` | Documentation |
-| File | `commands/explain-issue-fix.md` | Documentation |
-| File | `commands/find.md` | Documentation |
-| File | `commands/five.md` | Documentation |
-| File | `commands/fix-github-issue.md` | Documentation |
-| File | `commands/fix-issue.md` | Documentation |
-| File | `commands/fix-pr.md` | Documentation |
-| File | `commands/fix-tests.md` | Documentation |
-| File | `commands/future-scenario-generator.md` | Documentation |
-| File | `commands/generate-api-documentation.md` | Documentation |
-| File | `commands/generate-linear-worklog.md` | Documentation |
-| File | `commands/generate-test-cases.md` | Documentation |
-| File | `commands/generate-tests.md` | Documentation |
-| File | `commands/git-status.md` | Documentation |
-| File | `commands/hotfix-deploy.md` | Documentation |
-| File | `commands/husky.md` | Documentation |
-| File | `commands/implement-caching-strategy.md` | Documentation |
-| File | `commands/implement-graphql-api.md` | Documentation |
-| File | `commands/init-project.md` | Documentation |
-| File | `commands/initref.md` | Documentation |
-| File | `commands/interview.md` | Documentation |
-| File | `commands/issue-to-linear-task.md` | Documentation |
-| File | `commands/issue-triage.md` | Documentation |
-| File | `commands/judge-with-debate.md` | Documentation |
-| File | `commands/judge.md` | Documentation |
-| File | `commands/launch-sub-agent.md` | Documentation |
-| File | `commands/linear-task-to-issue.md` | Documentation |
-| File | `commands/load-issues.md` | Documentation |
-| File | `commands/load-llms-txt.md` | Documentation |
-| File | `commands/log.md` | Documentation |
-| File | `commands/market-response-modeler.md` | Documentation |
-| File | `commands/memorize.md` | Documentation |
-| File | `commands/memory-spring-cleaning.md` | Documentation |
-| File | `commands/mermaid.md` | Documentation |
-| File | `commands/migrate-to-typescript.md` | Documentation |
-| File | `commands/migration-assistant.md` | Documentation |
-| File | `commands/migration-guide.md` | Documentation |
-| File | `commands/milestone-tracker.md` | Documentation |
-| File | `commands/modernize-deps.md` | Documentation |
-| File | `commands/move.md` | Documentation |
-| File | `commands/optimize-build.md` | Documentation |
-| File | `commands/optimize-bundle-size.md` | Documentation |
-| File | `commands/optimize-database-performance.md` | Documentation |
-| File | `commands/optimize.md` | Documentation |
-| File | `commands/pac-configure.md` | Documentation |
-| File | `commands/pac-create-epic.md` | Documentation |
-| File | `commands/pac-create-ticket.md` | Documentation |
-| File | `commands/pac-update-status.md` | Documentation |
-| File | `commands/pac-validate.md` | Documentation |
-| File | `commands/performance-audit.md` | Documentation |
-| File | `commands/plan-do-check-act.md` | Documentation |
-| File | `commands/pr-review.md` | Documentation |
-| File | `commands/prepare-release.md` | Documentation |
-| File | `commands/prime.md` | Documentation |
-| File | `commands/project-health-check.md` | Documentation |
-| File | `commands/project-timeline-simulator.md` | Documentation |
-| File | `commands/project-to-linear.md` | Documentation |
-| File | `commands/propose-hypotheses.md` | Documentation |
-| File | `commands/query.md` | Documentation |
-| File | `commands/refactor-code.md` | Documentation |
-| File | `commands/reflect.md` | Documentation |
-| File | `commands/release.md` | Documentation |
-| File | `commands/remove.md` | Documentation |
-| File | `commands/report.md` | Documentation |
-| File | `commands/repro-issue.md` | Documentation |
-| File | `commands/reset.md` | Documentation |
-| File | `commands/resume.md` | Documentation |
-| File | `commands/retrospective-analyzer.md` | Documentation |
-| File | `commands/review-local-changes.md` | Documentation |
-| File | `commands/review-pr.md` | Documentation |
-| File | `commands/rollback-deploy.md` | Documentation |
-| File | `commands/root-cause-tracing.md` | Documentation |
-| File | `commands/rsi.md` | Documentation |
-| File | `commands/run-ci.md` | Documentation |
-| File | `commands/security-audit.md` | Documentation |
-| File | `commands/security-hardening.md` | Documentation |
-| File | `commands/session-learning-capture.md` | Documentation |
-| File | `commands/setup-arxiv-mcp.md` | Documentation |
-| File | `commands/setup-automated-releases.md` | Documentation |
-| File | `commands/setup-cdn-optimization.md` | Documentation |
-| File | `commands/setup-code-formating.md` | Documentation |
-| File | `commands/setup-codemap-cli.md` | Documentation |
-| File | `commands/setup-comprehensive-testing.md` | Documentation |
-| File | `commands/setup-context7-mcp.md` | Documentation |
-| File | `commands/setup-development-environment.md` | Documentation |
-| File | `commands/setup-formatting.md` | Documentation |
-| File | `commands/setup-kubernetes-deployment.md` | Documentation |
-| File | `commands/setup-linting.md` | Documentation |
-| File | `commands/setup-load-testing.md` | Documentation |
-| File | `commands/setup-monitoring-observability.md` | Documentation |
-| File | `commands/setup-monorepo.md` | Documentation |
-| File | `commands/setup-rate-limiting.md` | Documentation |
-| File | `commands/setup-serena-mcp.md` | Documentation |
-| File | `commands/setup-visual-testing.md` | Documentation |
-| File | `commands/simulation-calibrator.md` | Documentation |
-| File | `commands/sprint-planning.md` | Documentation |
-| File | `commands/standup-report.md` | Documentation |
-| File | `commands/start.md` | Documentation |
-| File | `commands/status.md` | Documentation |
-| File | `commands/svelte-a11y.md` | Documentation |
-| File | `commands/svelte-component.md` | Documentation |
-| File | `commands/svelte-debug.md` | Documentation |
-| File | `commands/svelte-migrate.md` | Documentation |
-| File | `commands/svelte-optimize.md` | Documentation |
-| File | `commands/svelte-scaffold.md` | Documentation |
-| File | `commands/svelte-storybook-migrate.md` | Documentation |
-| File | `commands/svelte-storybook-mock.md` | Documentation |
-| File | `commands/svelte-storybook-setup.md` | Documentation |
-| File | `commands/svelte-storybook-story.md` | Documentation |
-| File | `commands/svelte-storybook-troubleshoot.md` | Documentation |
-| File | `commands/svelte-storybook.md` | Documentation |
-| File | `commands/svelte-test-coverage.md` | Documentation |
-| File | `commands/svelte-test-fix.md` | Documentation |
-| File | `commands/svelte-test-setup.md` | Documentation |
-| File | `commands/svelte-test.md` | Documentation |
-| File | `commands/sync-automation-setup.md` | Documentation |
-| File | `commands/sync-conflict-resolver.md` | Documentation |
-| File | `commands/sync-issues-to-linear.md` | Documentation |
-| File | `commands/sync-linear-to-issues.md` | Documentation |
-| File | `commands/sync-pr-to-task.md` | Documentation |
-| File | `commands/sync-status.md` | Documentation |
-| File | `commands/sync.md` | Documentation |
-| File | `commands/system-behavior-simulator.md` | Documentation |
-| File | `commands/task-from-pr.md` | Documentation |
-| File | `commands/tdd.md` | Documentation |
-| File | `commands/team-workload-balancer.md` | Documentation |
-| File | `commands/test-changelog-automation.md` | Documentation |
-| File | `commands/test-coverage.md` | Documentation |
-| File | `commands/test-prompt.md` | Documentation |
-| File | `commands/test-skill.md` | Documentation |
-| File | `commands/testing_plan_integration.md` | Documentation |
-| File | `commands/timeline-compressor.md` | Documentation |
-| File | `commands/todo.md` | Documentation |
-| File | `commands/tree-of-thoughts.md` | Documentation |
-| File | `commands/troubleshooting-guide.md` | Documentation |
-| File | `commands/ultra-think.md` | Documentation |
-| File | `commands/unity-project-setup.md` | Documentation |
-| File | `commands/update-branch-name.md` | Documentation |
-| File | `commands/update-codemaps.md` | Documentation |
-| File | `commands/update-docs.md` | Documentation |
-| File | `commands/use-stepper.md` | Documentation |
-| File | `commands/validate-output.md` | Documentation |
-| File | `commands/why.md` | Documentation |
-| File | `commands/write-plan.md` | Documentation |
-| File | `commands/write-tests.md` | Documentation |
-| File | `commands/z_audit.md` | Documentation |
-| File | `commands/interactive/interactive-bash.md` | Documentation |
-| File | `commands/agentic/agentic-commit.md` | Documentation |
-| File | `commands/agentic/agentic-execute.md` | Documentation |
-| File | `commands/agentic/agentic-plan.md` | Documentation |
-| File | `commands/agentic/agentic-research.md` | Documentation |
-| File | `commands/agentic/agentic-review.md` | Documentation |
-| File | `commands/agentic/agentic-ticket.md` | Documentation |
-| File | `commands/builtin/refactor.md` | Documentation |
-| File | `commands/builtin/start-work.md` | Documentation |
-| File | `commands/pocket-universe/session-resume.md` | Documentation |
-| File | `commands/pocket-universe/sibling-01.md` | Documentation |
-| File | `commands/pocket-universe/sibling-02.md` | Documentation |
-| File | `commands/pocket-universe/spawn-02.md` | Documentation |
-| File | `commands/pocket-universe/spawn.md` | Documentation |
-| File | `commands/analysis/ast-grep.md` | Documentation |
-| File | `commands/analysis/lsp-usage.md` | Documentation |
-| Agent | `agents/000_ceo_orchestrator.md` | Documentation |
-| Agent | `agents/academic_research_synthesizer.md` | Documentation |
-| Agent | `agents/academic_researcher.md` | Documentation |
-| Agent | `agents/accessibility_specialist.md` | Documentation |
-| Agent | `agents/accessibility_tester.md` | Documentation |
-| Agent | `agents/actix_expert.md` | Documentation |
-| Agent | `agents/agent_expert.md` | Documentation |
-| Agent | `agents/agent_organizer.md` | Documentation |
-| Agent | `agents/agentic-codebase-analyzer.md` | Documentation |
-| Agent | `agents/agentic-codebase-locator.md` | Documentation |
-| Agent | `agents/agentic-codebase-pattern-finder.md` | Documentation |
-| Agent | `agents/agentic-thoughts-analyzer.md` | Documentation |
-| Agent | `agents/agentic-thoughts-locator.md` | Documentation |
-| Agent | `agents/agentic-web-search-researcher.md` | Documentation |
-| Agent | `agents/agents_guide.md` | Documentation |
-| Agent | `agents/agents_md_guardian.md` | Documentation |
-| Agent | `agents/agile_sprint_planner.md` | Documentation |
-| Agent | `agents/ai_engineer.md` | Documentation |
-| Agent | `agents/android_expert.md` | Documentation |
-| Agent | `agents/angular_architect.md` | Documentation |
-| Agent | `agents/angular_expert.md` | Documentation |
-| Agent | `agents/angularjs_expert.md` | Documentation |
-| Agent | `agents/ansible_expert.md` | Documentation |
-| Agent | `agents/api_designer.md` | Documentation |
-| Agent | `agents/api_documenter.md` | Documentation |
-| Agent | `agents/api_security_audit.md` | Documentation |
-| Agent | `agents/app_store_optimizer.md` | Documentation |
-| Agent | `agents/arbitrage_bot.md` | Documentation |
-| Agent | `agents/architect.md` | Documentation |
-| Agent | `agents/architect_review.md` | Documentation |
-| Agent | `agents/architect_reviewer.md` | Documentation |
-| Agent | `agents/aspnet_core_expert.md` | Documentation |
-| Agent | `agents/astro_expert.md` | Documentation |
-| Agent | `agents/audio_quality_controller.md` | Documentation |
-| Agent | `agents/auth0_expert.md` | Documentation |
-| Agent | `agents/ava_expert.md` | Documentation |
-| Agent | `agents/aws_cloud_architect.md` | Documentation |
-| Agent | `agents/backend_architect.md` | Documentation |
-| Agent | `agents/backend_developer.md` | Documentation |
-| Agent | `agents/bash_expert.md` | Documentation |
-| Agent | `agents/blockchain_developer.md` | Documentation |
-| Agent | `agents/braintree_expert.md` | Documentation |
-| Agent | `agents/browser-automator.md` | Documentation |
-| Agent | `agents/build-error-resolver.md` | Documentation |
-| Agent | `agents/build_engineer.md` | Documentation |
-| Agent | `agents/bullmq_expert.md` | Documentation |
-| Agent | `agents/bun_expert.md` | Documentation |
-| Agent | `agents/business_analyst.md` | Documentation |
-| Agent | `agents/c_developer.md` | Documentation |
-| Agent | `agents/c_expert.md` | Documentation |
-| Agent | `agents/cassandra_expert.md` | Documentation |
-| Agent | `agents/celery_expert.md` | Documentation |
-| Agent | `agents/chaos_engineer.md` | Documentation |
-| Agent | `agents/cicd_pipeline_architect.md` | Documentation |
-| Agent | `agents/circleci_expert.md` | Documentation |
-| Agent | `agents/clean_architecture_expert.md` | Documentation |
-| Agent | `agents/cli_developer.md` | Documentation |
-| Agent | `agents/clojure_expert.md` | Documentation |
-| Agent | `agents/cloud_architect.md` | Documentation |
-| Agent | `agents/cockroachdb_expert.md` | Documentation |
-| Agent | `agents/code_pairing_assistant.md` | Documentation |
-| Agent | `agents/code_quality_guardian.md` | Documentation |
-| Agent | `agents/code_quality_reviewer.md` | Documentation |
-| Agent | `agents/code_refactorer.md` | Documentation |
-| Agent | `agents/code_review_master.md` | Documentation |
-| Agent | `agents/code_reviewer.md` | Documentation |
-| Agent | `agents/command_expert.md` | Documentation |
-| Agent | `agents/competitive_analyst.md` | Documentation |
-| Agent | `agents/compliance_auditor.md` | Documentation |
-| Agent | `agents/comprehensive_researcher.md` | Documentation |
-| Agent | `agents/connection_agent.md` | Documentation |
-| Agent | `agents/content_marketer.md` | Documentation |
-| Agent | `agents/content_writer.md` | Documentation |
-| Agent | `agents/context_manager.md` | Documentation |
-| Agent | `agents/cpp_engineer.md` | Documentation |
-| Agent | `agents/cpp_expert.md` | Documentation |
-| Agent | `agents/cpp_pro.md` | Documentation |
-| Agent | `agents/creative-problem-solver.md` | Documentation |
-| Agent | `agents/crypto_analyst.md` | Documentation |
-| Agent | `agents/crypto_risk_manager.md` | Documentation |
-| Agent | `agents/crypto_trader.md` | Documentation |
-| Agent | `agents/csharp_developer.md` | Documentation |
-| Agent | `agents/csharp_expert.md` | Documentation |
-| Agent | `agents/css_expert.md` | Documentation |
-| Agent | `agents/customer_success_manager.md` | Documentation |
-| Agent | `agents/customer_support.md` | Documentation |
-| Agent | `agents/cypress_expert.md` | Documentation |
-| Agent | `agents/dart_expert.md` | Documentation |
-| Agent | `agents/dart_flutter_expert.md` | Documentation |
-| Agent | `agents/data_analyst.md` | Documentation |
-| Agent | `agents/data_engineer.md` | Documentation |
-| Agent | `agents/data_researcher.md` | Documentation |
-| Agent | `agents/data_scientist.md` | Documentation |
-| Agent | `agents/database_admin.md` | Documentation |
-| Agent | `agents/database_administrator.md` | Documentation |
-| Agent | `agents/database_optimization.md` | Documentation |
-| Agent | `agents/database_optimizer.md` | Documentation |
-| Agent | `agents/debugger.md` | Documentation |
-| Agent | `agents/defi_strategist.md` | Documentation |
-| Agent | `agents/deno_expert.md` | Documentation |
-| Agent | `agents/dependency_manager.md` | Documentation |
-| Agent | `agents/deployment_engineer.md` | Documentation |
-| Agent | `agents/design_patterns_expert.md` | Documentation |
-| Agent | `agents/devops_engineer.md` | Documentation |
-| Agent | `agents/devops_incident_responder.md` | Documentation |
-| Agent | `agents/devops_troubleshooter.md` | Documentation |
-| Agent | `agents/directus_developer.md` | Documentation |
-| Agent | `agents/django_developer.md` | Documentation |
-| Agent | `agents/django_expert.md` | Documentation |
-| Agent | `agents/doc-updater.md` | Documentation |
-| Agent | `agents/docker_expert.md` | Documentation |
-| Agent | `agents/docker_specialist.md` | Documentation |
-| Agent | `agents/documentation_accuracy_reviewer.md` | Documentation |
-| Agent | `agents/documentation_engineer.md` | Documentation |
-| Agent | `agents/documentation_specialist.md` | Documentation |
-| Agent | `agents/docusaurus_expert.md` | Documentation |
-| Agent | `agents/dotnet_core_expert.md` | Documentation |
-| Agent | `agents/dotnet_framework_4_8_expert.md` | Documentation |
-| Agent | `agents/drupal_developer.md` | Documentation |
-| Agent | `agents/dx_optimizer.md` | Documentation |
-| Agent | `agents/dynamodb_expert.md` | Documentation |
-| Agent | `agents/elasticsearch_expert.md` | Documentation |
-| Agent | `agents/electron_expert.md` | Documentation |
-| Agent | `agents/electron_pro.md` | Documentation |
-| Agent | `agents/elixir_expert.md` | Documentation |
-| Agent | `agents/elk_expert.md` | Documentation |
-| Agent | `agents/embedded_systems.md` | Documentation |
-| Agent | `agents/environment_manager.md` | Documentation |
-| Agent | `agents/episode_orchestrator.md` | Documentation |
-| Agent | `agents/erlang_expert.md` | Documentation |
-| Agent | `agents/error_coordinator.md` | Documentation |
-| Agent | `agents/error_detective.md` | Documentation |
-| Agent | `agents/explorer-recon.md` | Documentation |
-| Agent | `agents/expo_expert.md` | Documentation |
-| Agent | `agents/express_expert.md` | Documentation |
-| Agent | `agents/expressjs_nodejs_expert.md` | Documentation |
-| Agent | `agents/extension-enablement.json` | Data / Config |
-| Agent | `agents/factory_guide.md` | Documentation |
-| Agent | `agents/fastapi_expert.md` | Documentation |
-| Agent | `agents/fastify_expert.md` | Documentation |
-| Agent | `agents/feedback_synthesizer.md` | Documentation |
-| Agent | `agents/fiber_expert.md` | Documentation |
-| Agent | `agents/fintech_engineer.md` | Documentation |
-| Agent | `agents/fintech_security_expert.md` | Documentation |
-| Agent | `agents/flask_expert.md` | Documentation |
-| Agent | `agents/flutter_expert.md` | Documentation |
-| Agent | `agents/flyway_expert.md` | Documentation |
-| Agent | `agents/frontend_designer.md` | Documentation |
-| Agent | `agents/frontend_developer.md` | Documentation |
-| Agent | `agents/fullstack_developer.md` | Documentation |
-| Agent | `agents/game-dev-studio.md` | Documentation |
-| Agent | `agents/game_developer.md` | Documentation |
-| Agent | `agents/gin_expert.md` | Documentation |
-| Agent | `agents/git_summarizer.md` | Documentation |
-| Agent | `agents/git_workflow_expert.md` | Documentation |
-| Agent | `agents/git_workflow_manager.md` | Documentation |
-| Agent | `agents/github_actions_expert.md` | Documentation |
-| Agent | `agents/gitlab_ci_expert.md` | Documentation |
-| Agent | `agents/go_expert.md` | Documentation |
-| Agent | `agents/golang_expert.md` | Documentation |
-| Agent | `agents/golang_pro.md` | Documentation |
-| Agent | `agents/grafana_expert.md` | Documentation |
-| Agent | `agents/graphql_architect.md` | Documentation |
-| Agent | `agents/graphql_expert.md` | Documentation |
-| Agent | `agents/growth_hacker.md` | Documentation |
-| Agent | `agents/grpc_expert.md` | Documentation |
-| Agent | `agents/hackathon_ai_strategist.md` | Documentation |
-| Agent | `agents/haskell_expert.md` | Documentation |
-| Agent | `agents/healthcare_hipaa_expert.md` | Documentation |
-| Agent | `agents/hooks_guide.md` | Documentation |
-| Agent | `agents/html_expert.md` | Documentation |
-| Agent | `agents/hyperledger_fabric_developer.md` | Documentation |
-| Agent | `agents/incident_responder.md` | Documentation |
-| Agent | `agents/ios_developer.md` | Documentation |
-| Agent | `agents/ios_expert.md` | Documentation |
-| Agent | `agents/iot_engineer.md` | Documentation |
-| Agent | `agents/jasmine_expert.md` | Documentation |
-| Agent | `agents/java_architect.md` | Documentation |
-| Agent | `agents/java_developer.md` | Documentation |
-| Agent | `agents/java_expert.md` | Documentation |
-| Agent | `agents/javascript_developer.md` | Documentation |
-| Agent | `agents/javascript_expert.md` | Documentation |
-| Agent | `agents/javascript_pro.md` | Documentation |
-| Agent | `agents/javascript_typescript_expert.md` | Documentation |
-| Agent | `agents/jenkins_expert.md` | Documentation |
-| Agent | `agents/jest_expert.md` | Documentation |
-| Agent | `agents/joker.md` | Documentation |
-| Agent | `agents/jquery_expert.md` | Documentation |
-| Agent | `agents/jwt_expert.md` | Documentation |
-| Agent | `agents/kafka_expert.md` | Documentation |
-| Agent | `agents/keycloak_expert.md` | Documentation |
-| Agent | `agents/knex_expert.md` | Documentation |
-| Agent | `agents/knowledge_synthesizer.md` | Documentation |
-| Agent | `agents/kotlin_expert.md` | Documentation |
-| Agent | `agents/kotlin_specialist.md` | Documentation |
-| Agent | `agents/kubernetes_expert.md` | Documentation |
-| Agent | `agents/kubernetes_specialist.md` | Documentation |
-| Agent | `agents/langchain_expert.md` | Documentation |
-| Agent | `agents/laravel_expert.md` | Documentation |
-| Agent | `agents/laravel_specialist.md` | Documentation |
-| Agent | `agents/laravel_vue_developer.md` | Documentation |
-| Agent | `agents/legacy_modernizer.md` | Documentation |
-| Agent | `agents/legal_advisor.md` | Documentation |
-| Agent | `agents/librarian-researcher.md` | Documentation |
-| Agent | `agents/liquibase_expert.md` | Documentation |
-| Agent | `agents/llm_architect.md` | Documentation |
-| Agent | `agents/llm_finetuning_expert.md` | Documentation |
-| Agent | `agents/llmops_engineer.md` | Documentation |
-| Agent | `agents/llms_maintainer.md` | Documentation |
-| Agent | `agents/loki_expert.md` | Documentation |
-| Agent | `agents/lua_expert.md` | Documentation |
-| Agent | `agents/machine_learning_engineer.md` | Documentation |
-| Agent | `agents/mariadb_expert.md` | Documentation |
-| Agent | `agents/markdown_syntax_formatter.md` | Documentation |
-| Agent | `agents/market_research_analyst.md` | Documentation |
-| Agent | `agents/market_researcher.md` | Documentation |
-| Agent | `agents/mcp_deployment_orchestrator.md` | Documentation |
-| Agent | `agents/mcp_developer.md` | Documentation |
-| Agent | `agents/mcp_expert.md` | Documentation |
-| Agent | `agents/mcp_registry_navigator.md` | Documentation |
-| Agent | `agents/mcp_security_auditor.md` | Documentation |
-| Agent | `agents/mcp_server_architect.md` | Documentation |
-| Agent | `agents/mcp_testing_engineer.md` | Documentation |
-| Agent | `agents/metadata_agent.md` | Documentation |
-| Agent | `agents/metis-consultant.md` | Documentation |
-| Agent | `agents/microservices_architect.md` | Documentation |
-| Agent | `agents/ml_engineer.md` | Documentation |
-| Agent | `agents/mlops_engineer.md` | Documentation |
-| Agent | `agents/mobile_app_developer.md` | Documentation |
-| Agent | `agents/mobile_developer.md` | Documentation |
-| Agent | `agents/moc_agent.md` | Documentation |
-| Agent | `agents/mocha_expert.md` | Documentation |
-| Agent | `agents/mongodb_expert.md` | Documentation |
-| Agent | `agents/mongoose_expert.md` | Documentation |
-| Agent | `agents/mqtt_expert.md` | Documentation |
-| Agent | `agents/mssql_expert.md` | Documentation |
-| Agent | `agents/multi_agent_coordinator.md` | Documentation |
-| Agent | `agents/murat-test-architect.md` | Documentation |
-| Agent | `agents/mysql_expert.md` | Documentation |
-| Agent | `agents/nats_expert.md` | Documentation |
-| Agent | `agents/neo4j_expert.md` | Documentation |
-| Agent | `agents/nestjs_expert.md` | Documentation |
-| Agent | `agents/network_engineer.md` | Documentation |
-| Agent | `agents/nextjs_app_router_developer.md` | Documentation |
-| Agent | `agents/nextjs_developer.md` | Documentation |
-| Agent | `agents/nextjs_expert.md` | Documentation |
-| Agent | `agents/nlp_engineer.md` | Documentation |
-| Agent | `agents/nodejs_expert.md` | Documentation |
-| Agent | `agents/numpy_expert.md` | Documentation |
-| Agent | `agents/oauth_oidc_expert.md` | Documentation |
-| Agent | `agents/ocaml_expert.md` | Documentation |
-| Agent | `agents/ocr_grammar_fixer.md` | Documentation |
-| Agent | `agents/ocr_quality_assurance.md` | Documentation |
-| Agent | `agents/openai_api_expert.md` | Documentation |
-| Agent | `agents/openapi_expert.md` | Documentation |
-| Agent | `agents/opensearch_expert.md` | Documentation |
-| Agent | `agents/opentelemetry_expert.md` | Documentation |
-| Agent | `agents/oracle-architect.md` | Documentation |
-| Agent | `agents/owasp_top10_expert.md` | Documentation |
-| Agent | `agents/pandas_expert.md` | Documentation |
-| Agent | `agents/payment_integration.md` | Documentation |
-| Agent | `agents/penetration_tester.md` | Documentation |
-| Agent | `agents/performance_engineer.md` | Documentation |
-| Agent | `agents/performance_monitor.md` | Documentation |
-| Agent | `agents/performance_optimization_specialist.md` | Documentation |
-| Agent | `agents/performance_profiler.md` | Documentation |
-| Agent | `agents/performance_reviewer.md` | Documentation |
-| Agent | `agents/performance_testing_expert.md` | Documentation |
-| Agent | `agents/perl_expert.md` | Documentation |
-| Agent | `agents/pew-bug-workflow-orchestrator.md` | Documentation |
-| Agent | `agents/pew-feature-workflow-orchestrator.md` | Documentation |
-| Agent | `agents/pew-lead-developer.md` | Documentation |
-| Agent | `agents/pew-roadmap-agent.md` | Documentation |
-| Agent | `agents/phoenix_expert.md` | Documentation |
-| Agent | `agents/php_developer.md` | Documentation |
-| Agent | `agents/php_expert.md` | Documentation |
-| Agent | `agents/php_pro.md` | Documentation |
-| Agent | `agents/platform_engineer.md` | Documentation |
-| Agent | `agents/playwright_expert.md` | Documentation |
-| Agent | `agents/podcast_content_analyzer.md` | Documentation |
-| Agent | `agents/podcast_metadata_specialist.md` | Documentation |
-| Agent | `agents/podcast_transcriber.md` | Documentation |
-| Agent | `agents/podcast_trend_scout.md` | Documentation |
-| Agent | `agents/postgres_expert.md` | Documentation |
-| Agent | `agents/postgres_pro.md` | Documentation |
-| Agent | `agents/pr_readiness_reviewer.md` | Documentation |
-| Agent | `agents/prd_writer.md` | Documentation |
-| Agent | `agents/prevc-architect-specialist.md` | Documentation |
-| Agent | `agents/prevc-backend-specialist.md` | Documentation |
-| Agent | `agents/prevc-bug-fixer.md` | Documentation |
-| Agent | `agents/prevc-code-reviewer.md` | Documentation |
-| Agent | `agents/prevc-database-specialist.md` | Documentation |
-| Agent | `agents/prevc-devops-specialist.md` | Documentation |
-| Agent | `agents/prevc-documentation-writer.md` | Documentation |
-| Agent | `agents/prevc-feature-developer.md` | Documentation |
-| Agent | `agents/prevc-frontend-specialist.md` | Documentation |
-| Agent | `agents/prevc-mobile-specialist.md` | Documentation |
-| Agent | `agents/prevc-performance-optimizer.md` | Documentation |
-| Agent | `agents/prevc-refactoring-specialist.md` | Documentation |
-| Agent | `agents/prevc-security-auditor.md` | Documentation |
-| Agent | `agents/prevc-test-writer.md` | Documentation |
-| Agent | `agents/prisma_expert.md` | Documentation |
-| Agent | `agents/product_manager.md` | Documentation |
-| Agent | `agents/project_manager.md` | Documentation |
-| Agent | `agents/project_setup_wizard.md` | Documentation |
-| Agent | `agents/project_shipper.md` | Documentation |
-| Agent | `agents/project_supervisor_orchestrator.md` | Documentation |
-| Agent | `agents/project_task_planner.md` | Documentation |
-| Agent | `agents/prometheus_expert.md` | Documentation |
-| Agent | `agents/prompt_engineer.md` | Documentation |
-| Agent | `agents/prompt_engineering_specialist.md` | Documentation |
-| Agent | `agents/prompts_guide.md` | Documentation |
-| Agent | `agents/pulumi_expert.md` | Documentation |
-| Agent | `agents/puppeteer_expert.md` | Documentation |
-| Agent | `agents/python_data_scientist.md` | Documentation |
-| Agent | `agents/python_expert.md` | Documentation |
-| Agent | `agents/python_pro.md` | Documentation |
-| Agent | `agents/pytorch_expert.md` | Documentation |
-| Agent | `agents/qa_expert.md` | Documentation |
-| Agent | `agents/quant_analyst.md` | Documentation |
-| Agent | `agents/query_clarifier.md` | Documentation |
-| Agent | `agents/rabbitmq_expert.md` | Documentation |
-| Agent | `agents/rag_architecture_expert.md` | Documentation |
-| Agent | `agents/rails_expert.md` | Documentation |
-| Agent | `agents/rapid_prototyper.md` | Documentation |
-| Agent | `agents/react_architect.md` | Documentation |
-| Agent | `agents/react_expert.md` | Documentation |
-| Agent | `agents/react_native_expert.md` | Documentation |
-| Agent | `agents/react_performance_optimization.md` | Documentation |
-| Agent | `agents/react_specialist.md` | Documentation |
-| Agent | `agents/reddit_community_builder.md` | Documentation |
-| Agent | `agents/redis_expert.md` | Documentation |
-| Agent | `agents/refactoring_specialist.md` | Documentation |
-| Agent | `agents/release_manager.md` | Documentation |
-| Agent | `agents/release_notes_writer.md` | Documentation |
-| Agent | `agents/remix_expert.md` | Documentation |
-| Agent | `agents/report_generator.md` | Documentation |
-| Agent | `agents/research_analyst.md` | Documentation |
-| Agent | `agents/research_brief_generator.md` | Documentation |
-| Agent | `agents/research_coordinator.md` | Documentation |
-| Agent | `agents/research_orchestrator.md` | Documentation |
-| Agent | `agents/research_synthesizer.md` | Documentation |
-| Agent | `agents/rest_expert.md` | Documentation |
-| Agent | `agents/review_agent.md` | Documentation |
-| Agent | `agents/risk_manager.md` | Documentation |
-| Agent | `agents/rollup_expert.md` | Documentation |
-| Agent | `agents/ruby_expert.md` | Documentation |
-| Agent | `agents/rust_engineer.md` | Documentation |
-| Agent | `agents/rust_expert.md` | Documentation |
-| Agent | `agents/sales_automator.md` | Documentation |
-| Agent | `agents/sales_engineer.md` | Documentation |
-| Agent | `agents/scala_expert.md` | Documentation |
-| Agent | `agents/scikit_learn_expert.md` | Documentation |
-| Agent | `agents/scrum_master.md` | Documentation |
-| Agent | `agents/search_specialist.md` | Documentation |
-| Agent | `agents/security_audit_expert.md` | Documentation |
-| Agent | `agents/security_auditor.md` | Documentation |
-| Agent | `agents/security_code_reviewer.md` | Documentation |
-| Agent | `agents/security_engineer.md` | Documentation |
-| Agent | `agents/selenium_expert.md` | Documentation |
-| Agent | `agents/seo_podcast_optimizer.md` | Documentation |
-| Agent | `agents/seo_specialist.md` | Documentation |
-| Agent | `agents/sequelize_expert.md` | Documentation |
-| Agent | `agents/sidekiq_expert.md` | Documentation |
-| Agent | `agents/sisyphus-orchestrator.md` | Documentation |
-| Agent | `agents/skills_guide.md` | Documentation |
-| Agent | `agents/sns_expert.md` | Documentation |
-| Agent | `agents/social_media_clip_creator.md` | Documentation |
-| Agent | `agents/social_media_copywriter.md` | Documentation |
-| Agent | `agents/solidjs_expert.md` | Documentation |
-| Agent | `agents/spring_boot_engineer.md` | Documentation |
-| Agent | `agents/spring_boot_expert.md` | Documentation |
-| Agent | `agents/sprint_prioritizer.md` | Documentation |
-| Agent | `agents/sql_expert.md` | Documentation |
-| Agent | `agents/sql_pro.md` | Documentation |
-| Agent | `agents/sqlite_expert.md` | Documentation |
-| Agent | `agents/sqs_expert.md` | Documentation |
-| Agent | `agents/sre_engineer.md` | Documentation |
-| Agent | `agents/stripe_expert.md` | Documentation |
-| Agent | `agents/studio_coach.md` | Documentation |
-| Agent | `agents/svelte_expert.md` | Documentation |
-| Agent | `agents/swift_expert.md` | Documentation |
-| Agent | `agents/swiftui_expert.md` | Documentation |
-| Agent | `agents/tag_agent.md` | Documentation |
-| Agent | `agents/tailwind_expert.md` | Documentation |
-| Agent | `agents/task_decomposition_expert.md` | Documentation |
-| Agent | `agents/task_distributor.md` | Documentation |
-| Agent | `agents/tauri_expert.md` | Documentation |
-| Agent | `agents/tdd-expert.md` | Documentation |
-| Agent | `agents/technical_debt_analyst.md` | Documentation |
-| Agent | `agents/technical_researcher.md` | Documentation |
-| Agent | `agents/technical_writer.md` | Documentation |
-| Agent | `agents/tensorflow_expert.md` | Documentation |
-| Agent | `agents/terraform_engineer.md` | Documentation |
-| Agent | `agents/terraform_expert.md` | Documentation |
-| Agent | `agents/terraform_infrastructure_expert.md` | Documentation |
-| Agent | `agents/terraform_specialist.md` | Documentation |
-| Agent | `agents/test_automation_specialist.md` | Documentation |
-| Agent | `agents/test_automator.md` | Documentation |
-| Agent | `agents/test_coverage_reviewer.md` | Documentation |
-| Agent | `agents/test_plan_writer.md` | Documentation |
-| Agent | `agents/test_strategy_architect.md` | Documentation |
-| Agent | `agents/testcafe_expert.md` | Documentation |
-| Agent | `agents/text_comparison_validator.md` | Documentation |
-| Agent | `agents/tiktok_strategist.md` | Documentation |
-| Agent | `agents/timestamp_precision_specialist.md` | Documentation |
-| Agent | `agents/todo_fixme_scanner.md` | Documentation |
-| Agent | `agents/tooling_engineer.md` | Documentation |
-| Agent | `agents/trend_analyst.md` | Documentation |
-| Agent | `agents/trend_researcher.md` | Documentation |
-| Agent | `agents/trpc_expert.md` | Documentation |
-| Agent | `agents/twitter_ai_influencer_manager.md` | Documentation |
-| Agent | `agents/typeorm_expert.md` | Documentation |
-| Agent | `agents/typescript_expert.md` | Documentation |
-| Agent | `agents/typescript_pro.md` | Documentation |
-| Agent | `agents/ui_designer.md` | Documentation |
-| Agent | `agents/ui_ux_designer.md` | Documentation |
-| Agent | `agents/update_models.sh` | Shell Script |
-| Agent | `agents/update_models_with_fallback.sh` | Shell Script |
-| Agent | `agents/url_context_validator.md` | Documentation |
-| Agent | `agents/url_link_extractor.md` | Documentation |
-| Agent | `agents/ux_researcher.md` | Documentation |
-| Agent | `agents/vector_db_expert.md` | Documentation |
-| Agent | `agents/vibe_coding_coach.md` | Documentation |
-| Agent | `agents/visual_analysis_ocr.md` | Documentation |
-| Agent | `agents/visual_storyteller.md` | Documentation |
-| Agent | `agents/vitest_expert.md` | Documentation |
-| Agent | `agents/vue_expert.md` | Documentation |
-| Agent | `agents/vue_specialist.md` | Documentation |
-| Agent | `agents/webpack_expert.md` | Documentation |
-| Agent | `agents/websocket_engineer.md` | Documentation |
-| Agent | `agents/websocket_expert.md` | Documentation |
-| Agent | `agents/whimsy_injector.md` | Documentation |
-| Agent | `agents/wordpress_developer.md` | Documentation |
-| Agent | `agents/wordpress_master.md` | Documentation |
-| Agent | `agents/workflow_optimizer.md` | Documentation |
-| Agent | `agents/workflow_orchestrator.md` | Documentation |
-| Agent | `agents/z_audit.md` | Documentation |
-| Agent | `agents/research/research-orchestrator.md` | Documentation |
-| Agent | `agents/research/research-synthesizer.md` | Documentation |
-| Agent | `agents/librarian/librarian-researcher.md` | Documentation |
-| Agent | `agents/opencode-agents/opencode-gemini.md` | Documentation |
-| Agent | `agents/opencode-agents/opencode-gpt.md` | Documentation |
-| Agent | `agents/opencode-agents/opencode-grok.md` | Documentation |
-| Agent | `agents/opencode-agents/opencode-llama.md` | Documentation |
-| Agent | `agents/explore/explore-grep.md` | Documentation |
-| Agent | `agents/mcp/mcp-server-architect.md` | Documentation |
-| Agent | `agents/marketing/copywriter.md` | Documentation |
-| Agent | `agents/marketing/marketing-strategist.md` | Documentation |
-| Agent | `agents/marketing/seo-auditor.md` | Documentation |
-| Agent | `agents/prometheus/prometheus-planner.md` | Documentation |
-| Agent | `agents/claude-subagents/claude-agent-installer.md` | Documentation |
-| Agent | `agents/claude-subagents/claude-agent-organizer.md` | Documentation |
-| Agent | `agents/claude-subagents/claude-context-manager.md` | Documentation |
-| Agent | `agents/claude-subagents/claude-error-coordinator.md` | Documentation |
-| Agent | `agents/claude-subagents/claude-it-ops-orchestrator.md` | Documentation |
-| Agent | `agents/claude-subagents/claude-knowledge-synthesizer.md` | Documentation |
-| Agent | `agents/claude-subagents/claude-multi-agent-coordinator.md` | Documentation |
-| Agent | `agents/claude-subagents/claude-performance-monitor.md` | Documentation |
-| Agent | `agents/claude-subagents/claude-task-distributor.md` | Documentation |
-| Agent | `agents/claude-subagents/claude-workflow-orchestrator.md` | Documentation |
-| Agent | `agents/froggy/froggy-architect.md` | Documentation |
-| Agent | `agents/froggy/froggy-code-reviewer.md` | Documentation |
-| Agent | `agents/froggy/froggy-code-simplifier.md` | Documentation |
-| Agent | `agents/froggy/froggy-doc-writer.md` | Documentation |
-| Agent | `agents/froggy/froggy-partner.md` | Documentation |
-| Agent | `agents/froggy/froggy-rubber-duck.md` | Documentation |
-| Agent | `agents/sisyphus/metis-consultant.md` | Documentation |
-| Agent | `agents/sisyphus/sisyphus-orchestrator.md` | Documentation |
-| Agent | `agents/oracle/oracle-consultant.md` | Documentation |
-| Library | `lib/skills-core.js` | JavaScript/TypeScript Source |
-| File | `personas/language-specialist/README.md` | Documentation |
-| File | `personas/language-specialist/mcp.json` | Data / Config |
-| File | `personas/language-specialist/persona.yaml` |  |
-| File | `personas/system-architect/README.md` | Documentation |
-| File | `personas/system-architect/mcp.json` | Data / Config |
-| File | `personas/system-architect/persona.yaml` |  |
-| File | `personas/fullstack-developer/README.md` | Documentation |
-| File | `personas/fullstack-developer/mcp.json` | Data / Config |
-| File | `personas/fullstack-developer/persona.yaml` |  |
-| File | `personas/general-assistant/README.md` | Documentation |
-| File | `personas/general-assistant/mcp.json` | Data / Config |
-| File | `personas/general-assistant/persona.yaml` |  |
-| File | `personas/ai-ml-engineer/README.md` | Documentation |
-| File | `personas/ai-ml-engineer/mcp.json` | Data / Config |
-| File | `personas/ai-ml-engineer/persona.yaml` |  |
-| File | `personas/mobile-developer/README.md` | Documentation |
-| File | `personas/mobile-developer/mcp.json` | Data / Config |
-| File | `personas/mobile-developer/persona.yaml` |  |
-| File | `personas/database-specialist/README.md` | Documentation |
-| File | `personas/database-specialist/mcp.json` | Data / Config |
-| File | `personas/database-specialist/persona.yaml` |  |
-| File | `personas/product-manager/README.md` | Documentation |
-| File | `personas/product-manager/mcp.json` | Data / Config |
-| File | `personas/product-manager/persona.yaml` |  |
-| File | `personas/comprehensive-researcher/README.md` | Documentation |
-| File | `personas/comprehensive-researcher/mcp.json` | Data / Config |
-| File | `personas/comprehensive-researcher/persona.yaml` |  |
-| File | `personas/qa-engineer/README.md` | Documentation |
-| File | `personas/qa-engineer/mcp.json` | Data / Config |
-| File | `personas/qa-engineer/persona.yaml` |  |
-| File | `personas/security-auditor/README.md` | Documentation |
-| File | `personas/security-auditor/mcp.json` | Data / Config |
-| File | `personas/security-auditor/persona.yaml` |  |
-| File | `personas/devops-engineer/README.md` | Documentation |
-| File | `personas/devops-engineer/mcp.json` | Data / Config |
-| File | `personas/devops-engineer/persona.yaml` |  |
-| File | `personas/documentation-writer/README.md` | Documentation |
-| File | `personas/documentation-writer/mcp.json` | Data / Config |
-| File | `personas/documentation-writer/persona.yaml` |  |
-| Service | `services/email/ses.md` | Documentation |
-| Service | `services/hosting/101domains.md` | Documentation |
-| Service | `services/hosting/closte.md` | Documentation |
-| Service | `services/hosting/cloudflare.md` | Documentation |
-| Service | `services/hosting/cloudron.md` | Documentation |
-| Service | `services/hosting/dns-providers.md` | Documentation |
-| Service | `services/hosting/domain-purchasing.md` | Documentation |
-| Service | `services/hosting/hetzner.md` | Documentation |
-| Service | `services/hosting/hostinger.md` | Documentation |
-| Service | `services/hosting/localhost.md` | Documentation |
-| Service | `services/hosting/spaceship.md` | Documentation |
-| Service | `services/hosting/webhosting.md` | Documentation |
-| Service | `services/accounting/quickfile.md` | Documentation |
-
-## Key Entities Analysis
-
-Based on directory structure and file types:
-
-- **Skills**: 938
-- **Services**: 25
-- **Scripts**: 285
-- **Workflows**: 23
-- **Hooks**: 31
-- **Agents**: 469
-- **Librarys**: 1
+.
+|____generate-inventory.py
+|____config
+| |____agents
+| | |____agents-ARCHITECTURE.json
+| | |____agents-CRITICAL.json
+| | |____agents-TOOLING.json
+| | |____agents-CLI.json
+| | |____index.json
+| | |____agents-product.json
+| | |____agents-PERFORMANCE.json
+| | |____agents-data-ai.json
+| | |____agents-DOCS.json
+| | |____agents-prevc-context.json
+| | |____agents-FRONTEND.json
+| | |____agents-specialist.json
+| | |____agents-sales-marketing.json
+| | |____agents-orchestrator.json
+| | |____agents-advisor.json
+| | |____agents-backend.json
+| | |____agents-automation.json
+| | |____agents-marketing.json
+| | |____agents-blockchain-web3.json
+| | |____agents-testing.json
+| | |____agents-frontend.json
+| | |____agents-research.json
+| | |____agents-general.json
+| | |____agents-devops.json
+| | |____agents-mobile.json
+| | |____agents-language-specialists.json
+| | |____agents-specialists.json
+| | |____agents-infrastructure-operations.json
+| | |____agents-quality-security.json
+| | |____agents-specialized-domains.json
+| | |____agents-documentation.json
+| | |____agents-design-experience.json
+| | |____agents-FREE.json
+| | |____agents-development-architecture.json
+| | |____agents-all.json
+| | |____agents-security.json
+| | |____agents-crypto-trading.json
+| | |____agents-architecture.json
+| | |____agents-CODING.json
+| | |____agents-ai-ml.json
+|____skills
+| |____v3-mcp-optimization
+| | |____SKILL.md
+| |____dashboard-creator
+| | |____assets
+| | | |____templates
+| | | | |____dashboard_components.html
+| | | | |____base_template.html
+| | |____references
+| | | |____svg_library.md
+| | | |____design_patterns.md
+| | |____SKILL.md
+| |____code-auditor
+| | |____SKILL.md
+| |____jules-harvest
+| | |____SKILL.md
+| |____game-development
+| | |____skills
+| | | |____unity-ecs-patterns
+| | | | |____SKILL.md
+| | | |____godot-gdscript-patterns
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____verification-quality
+| | |____SKILL.md
+| |____threejs-shaders
+| | |____SKILL.md
+| |____ensemble-solving
+| | |____references
+| | | |____evaluation-rubrics.md
+| | | |____diversification-strategies.md
+| | |____SKILL.md
+| |____reasoningbank-intelligence
+| | |____SKILL.md
+| |____cookie-policy-fr-malik-taiar
+| | |____LICENSE.txt
+| | |____assets
+| | | |____CNIL_faq_cookies_et_traceurs.pdf
+| | | |____CNIL_lignes_directrices_cookies_et_traceurs.pdf
+| | | |____RGPD_texte_officiel.pdf
+| | | |____CNIL_evolution_regles_utilisation_cookies.pdf
+| | | |____CNIL_finalites.pdf
+| | | |____CNIL_transparence.pdf
+| | | |____CNIL_droits_personnes.pdf
+| | | |____sample_template_politique_cookies.pdf
+| | | |____sample_template_politique_cookies.docx
+| | | |____CNIL_principes_rgpd.pdf
+| | | |____CNIL_durees_conservation.pdf
+| | | |____CNIL_recommandation_cookies_et_traceurs.pdf
+| | |____references
+| | | |____COOKIES.md
+| | | |____DROITS_PERSONNES.md
+| | | |____DUREES_CONSERVATION.md
+| | | |____BASES_LEGALES_COOKIES.md
+| | |____SKILL.md
+| |____pair-programming
+| | |____SKILL.md
+| |____threejs-loaders
+| | |____SKILL.md
+| |____v3-security-overhaul
+| | |____SKILL.md
+| |____hive-mind-advanced
+| | |____SKILL.md
+| |____file-operations
+| | |____SKILL.md
+| |____v3-integration-deep
+| | |____SKILL.md
+| |____whistleblower-policy-fr-malik-taiar
+| | |____README.md
+| | |____LICENSE.txt
+| | |____assets
+| | | |____Directive_CS3D_2024_1760.pdf
+| | | |____Decret_2022_1284.pdf
+| | | |____Circulaire_26_juin_2024.pdf
+| | | |____Template_Politique_Lanceur_Alerte.docx
+| | | |____L225-102-2.pdf
+| | | |____Loi_Waserman_2022.pdf
+| | | |____DREETS_synthese_2025.pdf
+| | | |____Loi_Sapin_II_consolidee.pdf
+| | | |____Referentiel_CNIL_alertes_professionnelles.pdf
+| | | |____L225-102-1.pdf
+| | |____references
+| | | |____FONCTION_PUBLIQUE.md
+| | | |____DECRET_PROCEDURE.md
+| | | |____VIGILANCE.md
+| | | |____TEXTES_LEGAUX.md
+| | | |____RGPD_CNIL.md
+| | |____SKILL.md
+| |____expo-app-design
+| | |____SKILL.md
+| |____file-organizer
+| | |____SKILL.md
+| |____swarm-advanced
+| | |____SKILL.md
+| |____competitive-ads-extractor
+| | |____SKILL.md
+| |____writing-skills
+| | |____persuasion-principles.md
+| | |____graphviz-conventions.dot
+| | |____examples
+| | | |____CLAUDE_MD_TESTING.md
+| | |____render-graphs.js
+| | |____anthropic-best-practices.md
+| | |____testing-skills-with-subagents.md
+| | |____SKILL.md
+| |____aws-agentic-ai
+| | |____cross-service
+| | | |____credential-management.md
+| | |____SKILL.md
+| | |____services
+| | | |____browser
+| | | | |____README.md
+| | | |____runtime
+| | | | |____README.md
+| | | |____code-interpreter
+| | | | |____README.md
+| | | |____observability
+| | | | |____README.md
+| | | |____identity
+| | | | |____README.md
+| | | |____gateway
+| | | | |____README.md
+| | | | |____troubleshooting-guide.md
+| | | | |____deployment-strategies.md
+| | | | |____validate-deployment.sh
+| | | | |____deploy-template.sh
+| | | |____memory
+| | | | |____README.md
+| |____agentdb-advanced
+| | |____SKILL.md
+| |____lead-research-assistant
+| | |____SKILL.md
+| |____prevc-test-generation
+| | |____SKILL.md
+| |____aws-mcp-setup
+| | |____SKILL.md
+| |____web-design-guidelines
+| | |____SKILL.md
+| |____mcp-builder
+| | |____SKILL.md
+| |____pdf
+| | |____scripts
+| | | |____fill_form.py
+| | |____SKILL.md
+| |____brainstorming
+| | |____SKILL.md
+| |____qa-regression
+| | |____SKILL.md
+| |____brand-guidelines
+| | |____SKILL.md
+| |____webapp-testing
+| | |____SKILL.md
+| |____expo-deployment
+| | |____SKILL.md
+| |____vercel-deploy
+| | |____SKILL.md
+| |____threejs-animation
+| | |____SKILL.md
+| |____skill-evaluator
+| | |____evaluations
+| | | |____basic-skill-evaluation.json
+| | | |____README.md
+| | | |____problematic-skill-evaluation.json
+| | |____scripts
+| | | |____validate_skill.py
+| | |____references
+| | | |____scoring-rubric.md
+| | | |____evaluation-criteria.md
+| | |____SKILL.md
+| |____mobile
+| | |____react-native-architecture
+| | | |____SKILL.md
+| | |____nextjs-app-router-patterns
+| | | |____SKILL.md
+| | |____tailwind-design-system
+| | | |____SKILL.md
+| | |____react-state-management
+| | | |____SKILL.md
+| |____pdf-processing-en-anthropic
+| | |____LICENSE.txt
+| | |____scripts
+| | | |____fill_fillable_fields.py
+| | | |____convert_pdf_to_images.py
+| | | |____check_bounding_boxes.py
+| | | |____check_fillable_fields.py
+| | | |____extract_form_field_info.py
+| | | |____check_bounding_boxes_test.py
+| | | |____fill_pdf_form_with_annotations.py
+| | | |____create_validation_image.py
+| | |____references
+| | | |____FORMS.md
+| | | |____REFERENCE.md
+| | |____SKILL.md
+| |____hooks-automation
+| | |____SKILL.md
+| |____v3-cli-modernization
+| | |____SKILL.md
+| |____llm-application-dev
+| | |____skills
+| | | |____langchain-architecture
+| | | | |____SKILL.md
+| | | |____rag-implementation
+| | | | |____SKILL.md
+| | | |____embedding-strategies
+| | | | |____SKILL.md
+| | | |____vector-index-tuning
+| | | | |____SKILL.md
+| | | |____similarity-search-patterns
+| | | | |____SKILL.md
+| | | |____llm-evaluation
+| | | | |____SKILL.md
+| | | |____prompt-engineering-patterns
+| | | | |____assets
+| | | | | |____few-shot-examples.json
+| | | | | |____prompt-template-library.md
+| | | | |____scripts
+| | | | | |____optimize-prompt.py
+| | | | |____references
+| | | | | |____system-prompts.md
+| | | | | |____chain-of-thought.md
+| | | | | |____few-shot-learning.md
+| | | | | |____prompt-optimization.md
+| | | | | |____prompt-templates.md
+| | | | |____SKILL.md
+| | | |____hybrid-search-implementation
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____aws-cdk-development
+| | |____scripts
+| | | |____validate-stack.sh
+| | |____references
+| | | |____cdk-patterns.md
+| | |____SKILL.md
+| |____payment-processing
+| | |____skills
+| | | |____billing-automation
+| | | | |____SKILL.md
+| | | |____paypal-integration
+| | | | |____SKILL.md
+| | | |____pci-compliance
+| | | | |____SKILL.md
+| | | |____stripe-integration
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____agentdb-vector-search
+| | |____SKILL.md
+| |____v3-swarm-coordination
+| | |____SKILL.md
+| |____canvas-design
+| | |____SKILL.md
+| |____flowchart-creator
+| | |____assets
+| | | |____templates
+| | | | |____flowchart_components.html
+| | | | |____base_template.html
+| | |____references
+| | | |____svg_library.md
+| | | |____design_patterns.md
+| | |____SKILL.md
+| |____meeting-insights-analyzer
+| | |____SKILL.md
+| |____skill-creator
+| | |____SKILL.md
+| |____conversation-analyzer
+| | |____scripts
+| | | |____analyze_history.py
+| | |____SKILL.md
+| |____using-overpowers
+| | |____SKILL.md
+| |____1password
+| | |____SKILL.md
+| |____jules-integrate
+| | |____SKILL.md
+| |____vercel-react-best-practices
+| | |____rules
+| | | |____rerender-derived-state.md
+| | | |____async-parallel.md
+| | | |____server-cache-lru.md
+| | | |_____template.md
+| | | |____bundle-barrel-imports.md
+| | | |____advanced-event-handler-refs.md
+| | | |____js-min-max-loop.md
+| | | |____js-hoist-regexp.md
+| | | |____rerender-memo.md
+| | | |____js-combine-iterations.md
+| | | |_____sections.md
+| | | |____bundle-conditional.md
+| | | |____client-passive-event-listeners.md
+| | | |____rerender-transitions.md
+| | | |____bundle-preload.md
+| | | |____bundle-defer-third-party.md
+| | | |____rendering-conditional-render.md
+| | | |____rendering-animate-svg-wrapper.md
+| | | |____server-after-nonblocking.md
+| | | |____js-early-exit.md
+| | | |____async-suspense-boundaries.md
+| | | |____js-batch-dom-css.md
+| | | |____js-set-map-lookups.md
+| | | |____rerender-dependencies.md
+| | | |____server-parallel-fetching.md
+| | | |____server-cache-react.md
+| | | |____server-serialization.md
+| | | |____client-swr-dedup.md
+| | | |____rerender-defer-reads.md
+| | | |____rerender-lazy-state-init.md
+| | | |____async-defer-await.md
+| | | |____rerender-functional-setstate.md
+| | | |____js-cache-property-access.md
+| | | |____async-api-routes.md
+| | | |____js-index-maps.md
+| | | |____js-length-check-first.md
+| | | |____rendering-hydration-no-flicker.md
+| | | |____bundle-dynamic-imports.md
+| | | |____js-cache-storage.md
+| | | |____rendering-activity.md
+| | | |____js-tosorted-immutable.md
+| | | |____advanced-use-latest.md
+| | | |____async-dependencies.md
+| | | |____client-event-listeners.md
+| | | |____rendering-hoist-jsx.md
+| | | |____client-localstorage-schema.md
+| | | |____rendering-content-visibility.md
+| | | |____js-cache-function-results.md
+| | | |____rendering-svg-precision.md
+| | |____README.md
+| | |____AGENTS.md
+| | |____metadata.json
+| | |____SKILL.md
+| |____skills_report.json
+| |____agentdb-optimization
+| | |____SKILL.md
+| |____context-engineering
+| | |____context-degradation
+| | | |____scripts
+| | | | |____degradation_detector.py
+| | | |____references
+| | | | |____patterns.md
+| | | |____SKILL.md
+| | |____context-compression
+| | | |____scripts
+| | | | |____compression_evaluator.py
+| | | |____references
+| | | | |____evaluation-framework.md
+| | | |____SKILL.md
+| |____github-release-management
+| | |____SKILL.md
+| |____python-development
+| | |____skills
+| | | |____python-packaging
+| | | | |____SKILL.md
+| | | |____async-python-patterns
+| | | | |____SKILL.md
+| | | |____python-performance-optimization
+| | | | |____SKILL.md
+| | | |____uv-package-manager
+| | | | |____SKILL.md
+| | | |____python-testing-patterns
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____github-multi-repo
+| | |____SKILL.md
+| |____timeline-creator
+| | |____assets
+| | | |____templates
+| | | | |____base_template.html
+| | | | |____timeline_components.html
+| | |____references
+| | | |____svg_library.md
+| | | |____design_patterns.md
+| | |____SKILL.md
+| |____code-refactor
+| | |____SKILL.md
+| |____claude-settings-audit
+| | |____SKILL.md
+| |____consolidate_skills.py
+| |____slack-gif-creator
+| | |____requirements.txt
+| | |____LICENSE.txt
+| | |____templates
+| | | |____bounce.py
+| | | |____zoom.py
+| | | |____flip.py
+| | | |____morph.py
+| | | |____shake.py
+| | | |____slide.py
+| | | |____pulse.py
+| | | |____wiggle.py
+| | | |____kaleidoscope.py
+| | | |____move.py
+| | | |____fade.py
+| | | |____explode.py
+| | | |____spin.py
+| | |____core
+| | | |____visual_effects.py
+| | | |____validators.py
+| | | |____gif_builder.py
+| | | |____color_palettes.py
+| | | |____easing.py
+| | | |____frame_composer.py
+| | | |____typography.py
+| | |____SKILL.md
+| |____algorithmic-art
+| | |____SKILL.md
+| |____csv-data-summarizer
+| | |____requirements.txt
+| | |____README.md
+| | |____resources
+| | | |____sample.csv
+| | | |____README.md
+| | |____analyze.py
+| | |____examples
+| | | |____showcase_financial_pl_data.csv
+| | |____.gitignore
+| | |____csv-data-summarizer.zip
+| | |____SKILL.md
+| |____trello
+| | |____SKILL.md
+| |____github-code-review
+| | |____SKILL.md
+| |____security
+| | |____security-researcher
+| | | |____SKILL.md
+| | |____cloud-penetration-testing
+| | | |____references
+| | | | |____advanced-cloud-scripts.md
+| | | |____SKILL.md
+| | |____top-web-vulnerabilities
+| | | |____SKILL.md
+| | |____active-directory-attacks
+| | | |____references
+| | | | |____advanced-attacks.md
+| | | |____SKILL.md
+| | |____linux-privilege-escalation
+| | | |____SKILL.md
+| | |____pentest-commands
+| | | |____SKILL.md
+| | |____idor-testing
+| | | |____SKILL.md
+| | |____metasploit-framework
+| | | |____SKILL.md
+| | |____ethical-hacking-methodology
+| | | |____SKILL.md
+| | |____privilege-escalation-methods
+| | | |____SKILL.md
+| | |____burp-suite-testing
+| | | |____SKILL.md
+| | |____api-fuzzing-bug-bounty
+| | | |____SKILL.md
+| | |____pentest-checklist
+| | | |____SKILL.md
+| | |____scanning
+| | | |____security-requirement-extraction
+| | | | |____SKILL.md
+| | | |____sast-configuration
+| | | | |____SKILL.md
+| | | |____attack-tree-construction
+| | | | |____SKILL.md
+| | | |____threat-mitigation-mapping
+| | | | |____SKILL.md
+| | | |____stride-analysis-patterns
+| | | | |____SKILL.md
+| | |____file-path-traversal
+| | | |____SKILL.md
+| | |____red-team-tools
+| | | |____SKILL.md
+| | |____xss-html-injection
+| | | |____SKILL.md
+| | |____aws-penetration-testing
+| | | |____references
+| | | | |____advanced-aws-pentesting.md
+| | | |____SKILL.md
+| | |____sql-injection-testing
+| | | |____SKILL.md
+| | |____broken-authentication
+| | | |____SKILL.md
+| |____prompt-optimizer
+| | |____LICENSE.txt
+| | |____references
+| | | |____examples.md
+| | | |____prompt-best-practices.md
+| | |____SKILL.md
+| |____github-project-management
+| | |____SKILL.md
+| |____infrastructure
+| | |____cloud
+| | | |____hybrid-cloud-networking
+| | | | |____SKILL.md
+| | | |____cloud-architect.md
+| | | |____linkerd-patterns
+| | | | |____SKILL.md
+| | | |____terraform-module-library
+| | | | |____references
+| | | | | |____aws-modules.md
+| | | | |____SKILL.md
+| | | |____cost-optimization
+| | | | |____SKILL.md
+| | | |____multi-cloud-architecture
+| | | | |____SKILL.md
+| | | |____istio-traffic-management
+| | | | |____SKILL.md
+| | | |____service-mesh-observability
+| | | | |____SKILL.md
+| | | |____mtls-configuration
+| | | | |____SKILL.md
+| | |____observability
+| | | |____prometheus-configuration
+| | | | |____SKILL.md
+| | | |____slo-implementation
+| | | | |____SKILL.md
+| | | |____grafana-dashboards
+| | | | |____SKILL.md
+| | | |____distributed-tracing
+| | | | |____SKILL.md
+| | |____kubernetes
+| | | |____k8s-security-policies
+| | | | |____assets
+| | | | | |____network-policy-template.yaml
+| | | | |____references
+| | | | | |____rbac-patterns.md
+| | | | |____SKILL.md
+| | | |____k8s-manifest-generator
+| | | | |____assets
+| | | | | |____service-template.yaml
+| | | | | |____configmap-template.yaml
+| | | | | |____deployment-template.yaml
+| | | | |____references
+| | | | | |____deployment-spec.md
+| | | | | |____service-spec.md
+| | | | |____SKILL.md
+| | | |____gitops-workflow
+| | | | |____references
+| | | | | |____argocd-setup.md
+| | | | | |____sync-policies.md
+| | | | |____SKILL.md
+| | | |____helm-chart-scaffolding
+| | | | |____assets
+| | | | | |____values.yaml.template
+| | | | | |____Chart.yaml.template
+| | | | |____scripts
+| | | | | |____validate-chart.sh
+| | | | |____references
+| | | | | |____chart-structure.md
+| | | | |____SKILL.md
+| | |____incident-response
+| | | |____on-call-handoff-patterns
+| | | | |____SKILL.md
+| | | |____postmortem-writing
+| | | | |____SKILL.md
+| | | |____incident-runbook-templates
+| | | | |____SKILL.md
+| | |____deployment-strategies
+| | | |____terraform-specialist.md
+| | | |____deployment-engineer.md
+| | |____cicd
+| | | |____deployment-pipeline-design
+| | | | |____SKILL.md
+| | | |____secrets-management
+| | | | |____SKILL.md
+| | | |____github-actions-templates
+| | | | |____SKILL.md
+| | | |____gitlab-ci-patterns
+| | | | |____SKILL.md
+| |____test-fixing
+| | |____SKILL.md
+| |____code-refactoring
+| | |____SKILL.md
+| |____browser-use
+| | |____SKILL.md
+| |____prevc-refactoring
+| | |____SKILL.md
+| |____whatsapp
+| | |____clawdbot.plugin.json
+| | |____index.ts
+| | |____package.json
+| | |____src
+| | | |____runtime.ts
+| | | |____channel.ts
+| | |____SKILL.md
+| |____web-artifacts-builder
+| | |____LICENSE.txt
+| | |____scripts
+| | | |____init-artifact.sh
+| | | |____shadcn-components.tar.gz
+| | | |____bundle-artifact.sh
+| | |____SKILL.md
+| |_____staging
+| | |____memory-systems
+| | | |____scripts
+| | | | |____memory_store.py
+| | | |____references
+| | | | |____implementation.md
+| | | |____SKILL.md
+| | |____multi-agent-patterns
+| | | |____scripts
+| | | | |____coordination.py
+| | | |____references
+| | | | |____frameworks.md
+| | | |____SKILL.md
+| | |____context-optimization
+| | | |____scripts
+| | | | |____compaction.py
+| | | |____references
+| | | | |____optimization_techniques.md
+| | | |____SKILL.md
+| | |____context-fundamentals
+| | | |____scripts
+| | | | |____context_manager.py
+| | | |____references
+| | | | |____context-components.md
+| | | |____SKILL.md
+| |____performance-analysis
+| | |____SKILL.md
+| |____agentdb-memory-patterns
+| | |____SKILL.md
+| |____notion
+| | |____SKILL.md
+| |____code-documentation
+| | |____SKILL.md
+| |____receiving-code-review
+| | |____SKILL.md
+| |____reasoning
+| | |____README.md
+| | |____planning-with-files
+| | | |____templates
+| | | | |____progress.md
+| | | | |____findings.md
+| | | | |____task_plan.md
+| | | |____scripts
+| | | | |____init-session.sh
+| | | | |____check-complete.sh
+| | | |____reference.md
+| | | |____examples.md
+| | | |____SKILL.md
+| | |____bdi-mental-states
+| | | |____references
+| | | | |____sparql-competency.md
+| | | | |____framework-integration.md
+| | | | |____rdf-examples.md
+| | | | |____bdi-ontology-core.md
+| | | |____SKILL.md
+| | |____hosted-agents
+| | | |____scripts
+| | | | |____sandbox_manager.py
+| | | |____references
+| | | | |____infrastructure-patterns.md
+| | | |____SKILL.md
+| |____jules-dispatch
+| | |____SKILL.md
+| |____technical-doc-creator
+| | |____assets
+| | | |____templates
+| | | | |____base_template.html
+| | |____references
+| | | |____svg_library.md
+| | | |____design_patterns.md
+| | |____SKILL.md
+| |____audit-prep-assistant
+| | |____SKILL.md
+| |____factory
+| | |____claude-md-enhancer.md
+| | |____prompt-factory.md
+| | |____agent-factory.md
+| | |____hook-factory-v2.md
+| | |____slash-command-factory.md
+| |____react-best-practices
+| | |____rules
+| | | |____rerender-derived-state.md
+| | | |____async-parallel.md
+| | | |____server-cache-lru.md
+| | | |_____template.md
+| | | |____bundle-barrel-imports.md
+| | | |____advanced-event-handler-refs.md
+| | | |____js-min-max-loop.md
+| | | |____js-hoist-regexp.md
+| | | |____rerender-memo.md
+| | | |____js-combine-iterations.md
+| | | |_____sections.md
+| | | |____bundle-conditional.md
+| | | |____rerender-transitions.md
+| | | |____bundle-preload.md
+| | | |____bundle-defer-third-party.md
+| | | |____rendering-conditional-render.md
+| | | |____rendering-animate-svg-wrapper.md
+| | | |____server-after-nonblocking.md
+| | | |____js-early-exit.md
+| | | |____async-suspense-boundaries.md
+| | | |____js-batch-dom-css.md
+| | | |____js-set-map-lookups.md
+| | | |____rerender-dependencies.md
+| | | |____server-parallel-fetching.md
+| | | |____server-cache-react.md
+| | | |____server-serialization.md
+| | | |____client-swr-dedup.md
+| | | |____rerender-defer-reads.md
+| | | |____rerender-lazy-state-init.md
+| | | |____async-defer-await.md
+| | | |____rerender-functional-setstate.md
+| | | |____js-cache-property-access.md
+| | | |____async-api-routes.md
+| | | |____js-index-maps.md
+| | | |____js-length-check-first.md
+| | | |____rendering-hydration-no-flicker.md
+| | | |____bundle-dynamic-imports.md
+| | | |____js-cache-storage.md
+| | | |____rendering-activity.md
+| | | |____js-tosorted-immutable.md
+| | | |____advanced-use-latest.md
+| | | |____async-dependencies.md
+| | | |____client-event-listeners.md
+| | | |____rendering-hoist-jsx.md
+| | | |____rendering-content-visibility.md
+| | | |____js-cache-function-results.md
+| | | |____rendering-svg-precision.md
+| | |____AGENTS.md
+| | |____SKILL.md
+| |____javascript-typescript
+| | |____skills
+| | | |____modern-javascript-patterns
+| | | | |____SKILL.md
+| | | |____typescript-advanced-types
+| | | | |____SKILL.md
+| | | |____javascript-testing-patterns
+| | | | |____SKILL.md
+| | | |____nodejs-backend-patterns
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____systematic-debugging
+| | |____defense-in-depth.md
+| | |____root-cause-tracing.md
+| | |____test-pressure-3.md
+| | |____condition-based-waiting.md
+| | |____test-academic.md
+| | |____find-polluter.sh
+| | |____CREATION-LOG.md
+| | |____test-pressure-2.md
+| | |____condition-based-waiting-example.ts
+| | |____test-pressure-1.md
+| | |____SKILL.md
+| |____xlsx
+| | |____SKILL.md
+| |____tailored-resume-generator
+| | |____SKILL.md
+| |____subagent-orchestration
+| | |____examples
+| | | |____tasks.txt
+| | |____scripts
+| | | |____run-subagent.sh
+| | | |____parallel-tasks.sh
+| | | |____batch-analyze.sh
+| | |____SKILL.md
+| |____v3-memory-unification
+| | |____SKILL.md
+| |____review-implementing
+| | |____SKILL.md
+| |____flow-nexus-swarm
+| | |____SKILL.md
+| |____subagent-driven-development
+| | |____implementer-prompt.md
+| | |____spec-reviewer-prompt.md
+| | |____code-quality-reviewer-prompt.md
+| | |____SKILL.md
+| |____code-execution
+| | |____examples
+| | | |____bulk_refactor.py
+| | | |____codebase_audit.py
+| | | |____extract_functions.py
+| | |____SKILL.md
+| |____discord
+| | |____SKILL.md
+| |____prevc-api-design
+| | |____SKILL.md
+| |____prevc-security-audit
+| | |____SKILL.md
+| |____writing-plans
+| | |____SKILL.md
+| |____ask-questions-if-underspecified
+| | |____SKILL.md
+| |____privacy-policy-fr-malik-taiar
+| | |____LICENSE.txt
+| | |____assets
+| | | |____RGPD_texte_officiel.pdf
+| | | |____CNIL_finalites.pdf
+| | | |____sample_template_politique_confidentialite.pdf
+| | | |____CNIL_transparence.pdf
+| | | |____CNIL_droits_personnes.pdf
+| | | |____sample_template_politique_confidentialite.docx
+| | | |____CNIL_principes_rgpd.pdf
+| | | |____CNIL_durees_conservation.pdf
+| | |____references
+| | | |____BASES_LEGALES.md
+| | | |____COOKIES.md
+| | | |____DROITS_PERSONNES.md
+| | | |____DUREES_CONSERVATION.md
+| | |____SKILL.md
+| |____nda-review-en-jamie-tso
+| | |____README.md
+| | |____LICENSE.txt
+| | |____references
+| | | |____REMEDIES_LIABILITY.md
+| | | |____PARTY_OBLIGATIONS.md
+| | | |____KEY_CLAUSES.md
+| | | |____DURATION_SCOPE.md
+| | | |____STANDARD_EXCEPTIONS.md
+| | |____SKILL.md
+| |____content-research-writer
+| | |____SKILL.md
+| |____multi-agent-file-coordination
+| | |____SKILL.md
+| |____arxiv-search
+| | |____scripts
+| | | |____arxiv_search.py
+| | |____SKILL.md
+| |____prevc-commit-message
+| | |____SKILL.md
+| |____reverse-engineering
+| | |____skills
+| | | |____protocol-reverse-engineering
+| | | | |____SKILL.md
+| | | |____memory-forensics
+| | | | |____SKILL.md
+| | | |____binary-analysis-patterns
+| | | | |____SKILL.md
+| | | |____anti-reversing-techniques
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____quantitative-trading
+| | |____skills
+| | | |____backtesting-frameworks
+| | | | |____SKILL.md
+| | | |____risk-metrics-calculation
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____upgrading-expo
+| | |____SKILL.md
+| |____project-bootstrapper
+| | |____SKILL.md
+| |____docx
+| | |____scripts
+| | | |____validation.py
+| | |____SKILL.md
+| |____internal-comms
+| | |____SKILL.md
+| |____git-master
+| | |____SKILL.md
+| |____artifacts-builder
+| | |____LICENSE.txt
+| | |____scripts
+| | | |____init-artifact.sh
+| | | |____shadcn-components.tar.gz
+| | | |____bundle-artifact.sh
+| | |____SKILL.md
+| |____ios-simulator-skill
+| | |____scripts
+| | | |____app_state_capture.py
+| | | |____app_launcher.py
+| | | |____clipboard.py
+| | | |____sim_health_check.sh
+| | | |____common
+| | | | |____screenshot_utils.py
+| | | | |______init__.py
+| | | | |____device_utils.py
+| | | | |____cache_utils.py
+| | | | |____idb_utils.py
+| | | |____log_monitor.py
+| | | |____simctl_boot.py
+| | | |____push_notification.py
+| | | |____gesture.py
+| | | |____simctl_create.py
+| | | |____simctl_shutdown.py
+| | | |____simulator_selector.py
+| | | |____status_bar.py
+| | | |____visual_diff.py
+| | | |____test_recorder.py
+| | | |____build_and_test.py
+| | | |____xcode
+| | | | |____xcresult.py
+| | | | |______init__.py
+| | | | |____builder.py
+| | | | |____config.py
+| | | | |____reporter.py
+| | | | |____cache.py
+| | | |____keyboard.py
+| | | |____screen_mapper.py
+| | | |____privacy_manager.py
+| | | |____navigator.py
+| | | |____simctl_delete.py
+| | | |____accessibility_audit.py
+| | | |____simctl_erase.py
+| | | |____sim_list.py
+| | |____SKILL.md
+| |____docx-processing-en-anthropic
+| | |____LICENSE.txt
+| | |____scripts
+| | | |____templates
+| | | | |____commentsIds.xml
+| | | | |____comments.xml
+| | | | |____commentsExtensible.xml
+| | | | |____people.xml
+| | | | |____commentsExtended.xml
+| | | |______init__.py
+| | | |____utilities.py
+| | | |____document.py
+| | |____references
+| | | |____docx-js.md
+| | | |____ooxml.md
+| | |____ooxml
+| | | |____schemas
+| | | | |____microsoft
+| | | | | |____wml-sdtdatahash-2020.xsd
+| | | | | |____wml-cex-2018.xsd
+| | | | | |____wml-symex-2015.xsd
+| | | | | |____wml-2018.xsd
+| | | | | |____wml-2012.xsd
+| | | | | |____wml-2010.xsd
+| | | | | |____wml-cid-2016.xsd
+| | | | |____ecma
+| | | | | |____fouth-edition
+| | | | | | |____opc-contentTypes.xsd
+| | | | | | |____opc-relationships.xsd
+| | | | | | |____opc-coreProperties.xsd
+| | | | | | |____opc-digSig.xsd
+| | | | |____ISO-IEC29500-4_2016
+| | | | | |____dml-diagram.xsd
+| | | | | |____shared-documentPropertiesCustom.xsd
+| | | | | |____shared-customXmlDataProperties.xsd
+| | | | | |____wml.xsd
+| | | | | |____dml-chart.xsd
+| | | | | |____shared-relationshipReference.xsd
+| | | | | |____vml-spreadsheetDrawing.xsd
+| | | | | |____dml-lockedCanvas.xsd
+| | | | | |____shared-bibliography.xsd
+| | | | | |____dml-main.xsd
+| | | | | |____vml-main.xsd
+| | | | | |____pml.xsd
+| | | | | |____dml-spreadsheetDrawing.xsd
+| | | | | |____vml-officeDrawing.xsd
+| | | | | |____shared-customXmlSchemaProperties.xsd
+| | | | | |____dml-wordprocessingDrawing.xsd
+| | | | | |____shared-documentPropertiesVariantTypes.xsd
+| | | | | |____xml.xsd
+| | | | | |____dml-picture.xsd
+| | | | | |____dml-chartDrawing.xsd
+| | | | | |____shared-additionalCharacteristics.xsd
+| | | | | |____sml.xsd
+| | | | | |____shared-commonSimpleTypes.xsd
+| | | | | |____shared-math.xsd
+| | | | | |____vml-presentationDrawing.xsd
+| | | | | |____shared-documentPropertiesExtended.xsd
+| | | | | |____vml-wordprocessingDrawing.xsd
+| | | | |____mce
+| | | | | |____mc.xsd
+| | | |____scripts
+| | | | |____validate.py
+| | | | |____pack.py
+| | | | |____unpack.py
+| | | | |____validation
+| | | | | |____docx.py
+| | | | | |____redlining.py
+| | | | | |____base.py
+| | | | | |______init__.py
+| | | | | |____pptx.py
+| | |____SKILL.md
+| |____using-git-worktrees
+| | |____SKILL.md
+| |____image-enhancer
+| | |____SKILL.md
+| |____feature-planning
+| | |____references
+| | | |____planning-best-practices.md
+| | |____SKILL.md
+| |____mobile-developer
+| | |____SKILL.md
+| |____prevc-bug-investigation
+| | |____SKILL.md
+| |____web-research
+| | |____SKILL.md
+| |____architecture-diagram-creator
+| | |____assets
+| | | |____templates
+| | | | |____base_template.html
+| | | | |____architecture_components.html
+| | |____references
+| | | |____example_architecture.html
+| | |____SKILL.md
+| |____scientific
+| | |____post-processing
+| | | |____scripts
+| | | | |____comparison_tool.py
+| | | | |____field_extractor.py
+| | | | |____time_series_analyzer.py
+| | | | |____report_generator.py
+| | | | |____profile_extractor.py
+| | | | |____derived_quantities.py
+| | | | |____statistical_analyzer.py
+| | | |____references
+| | | | |____data_formats.md
+| | | | |____comparison_metrics.md
+| | | | |____derived_quantities_guide.md
+| | | | |____statistical_methods.md
+| | | |____SKILL.md
+| | |____README.md
+| | |____time-stepping
+| | | |____scripts
+| | | | |____output_schedule.py
+| | | | |____checkpoint_planner.py
+| | | | |____timestep_planner.py
+| | | |____references
+| | | | |____output_checkpoint_guidelines.md
+| | | | |____cfl_coupling.md
+| | | | |____ramping_strategies.md
+| | | |____SKILL.md
+| | |____mesh-generation
+| | | |____scripts
+| | | | |____mesh_quality.py
+| | | | |____grid_sizing.py
+| | | |____references
+| | | | |____quality_metrics.md
+| | | | |____mesh_types.md
+| | | |____SKILL.md
+| | |____linear-solvers
+| | | |____scripts
+| | | | |____residual_norms.py
+| | | | |____convergence_diagnostics.py
+| | | | |____preconditioner_advisor.py
+| | | | |____scaling_equilibration.py
+| | | | |____solver_selector.py
+| | | | |____sparsity_stats.py
+| | | |____references
+| | | | |____convergence_patterns.md
+| | | | |____scaling_guidelines.md
+| | | | |____preconditioner_catalog.md
+| | | | |____solver_decision_tree.md
+| | | |____SKILL.md
+| | |____numerical-stability
+| | | |____scripts
+| | | | |____stiffness_detector.py
+| | | | |____requirements.txt
+| | | | |____matrix_condition.py
+| | | | |____von_neumann_analyzer.py
+| | | | |____cfl_checker.py
+| | | |____references
+| | | | |____common_pitfalls.md
+| | | | |____scheme_catalog.md
+| | | | |____stability_criteria.md
+| | | |____SKILL.md
+| | |____numerical-integration
+| | | |____scripts
+| | | | |____splitting_error_estimator.py
+| | | | |____imex_split_planner.py
+| | | | |____integrator_selector.py
+| | | | |____adaptive_step_controller.py
+| | | | |____error_norm.py
+| | | |____references
+| | | | |____error_control.md
+| | | | |____splitting_catalog.md
+| | | | |____imex_guidelines.md
+| | | | |____tolerance_guidelines.md
+| | | | |____multiphase_field_patterns.md
+| | | | |____method_catalog.md
+| | | |____SKILL.md
+| | |____parameter-optimization
+| | | |____scripts
+| | | | |____sensitivity_summary.py
+| | | | |____doe_generator.py
+| | | | |____surrogate_builder.py
+| | | | |____optimizer_selector.py
+| | | |____references
+| | | | |____sensitivity_guidelines.md
+| | | | |____surrogate_guidelines.md
+| | | | |____optimizer_selection.md
+| | | | |____doe_methods.md
+| | | |____SKILL.md
+| | |____differentiation-schemes
+| | | |____scripts
+| | | | |____truncation_error.py
+| | | | |____scheme_selector.py
+| | | | |____stencil_generator.py
+| | | |____references
+| | | | |____stencil_catalog.md
+| | | | |____scheme_selection.md
+| | | | |____boundary_handling.md
+| | | | |____error_guidance.md
+| | | |____SKILL.md
+| | |____simulation-validator
+| | | |____scripts
+| | | | |____runtime_monitor.py
+| | | | |____result_validator.py
+| | | | |____failure_diagnoser.py
+| | | | |____preflight_checker.py
+| | | |____references
+| | | | |____log_patterns.md
+| | | | |____validation_protocol.md
+| | | |____SKILL.md
+| | |____simulation-orchestrator
+| | | |____scripts
+| | | | |____sweep_generator.py
+| | | | |____campaign_manager.py
+| | | | |____result_aggregator.py
+| | | | |____job_tracker.py
+| | | |____references
+| | | | |____aggregation_methods.md
+| | | | |____sweep_strategies.md
+| | | | |____campaign_patterns.md
+| | | |____SKILL.md
+| |____database-design
+| | |____SKILL.md
+| |____threejs-textures
+| | |____SKILL.md
+| |____sheets-cli
+| | |____SKILL.md
+| |____skill-builder
+| | |____SKILL.md
+| |____github-workflow-automation
+| | |____SKILL.md
+| |____aws-cost-operations
+| | |____references
+| | | |____cloudwatch-alarms.md
+| | | |____operations-patterns.md
+| | |____SKILL.md
+| |____slack
+| | |____SKILL.md
+| |____x-search
+| | |____SKILL.md
+| |____code-review
+| | |____SKILL.md
+| |____dispatching-parallel-agents
+| | |____SKILL.md
+| |____voice-call
+| | |____README.md
+| | |____CHANGELOG.md
+| | |____clawdbot.plugin.json
+| | |____index.ts
+| | |____package.json
+| | |____src
+| | | |____webhook-security.ts
+| | | |____manager.ts
+| | | |____providers
+| | | | |____twilio
+| | | | | |____api.ts
+| | | | | |____webhook.ts
+| | | | |____twilio.test.ts
+| | | | |____index.ts
+| | | | |____telnyx.ts
+| | | | |____tts-openai.ts
+| | | | |____plivo.test.ts
+| | | | |____base.ts
+| | | | |____plivo.ts
+| | | | |____twilio.ts
+| | | | |____stt-openai-realtime.ts
+| | | | |____mock.ts
+| | | |____cli.ts
+| | | |____media-stream.test.ts
+| | | |____manager
+| | | | |____outbound.ts
+| | | | |____context.ts
+| | | | |____state.ts
+| | | | |____lookup.ts
+| | | | |____timers.ts
+| | | | |____events.ts
+| | | | |____store.ts
+| | | | |____twiml.ts
+| | | |____webhook-security.test.ts
+| | | |____manager.test.ts
+| | | |____media-stream.ts
+| | | |____config.test.ts
+| | | |____runtime.ts
+| | | |____voice-mapping.ts
+| | | |____webhook.ts
+| | | |____telephony-tts.ts
+| | | |____response-generator.ts
+| | | |____types.ts
+| | | |____telephony-audio.ts
+| | | |____tunnel.ts
+| | | |____config.ts
+| | | |____utils.ts
+| | | |____core-bridge.ts
+| | |____SKILL.md
+| |____threejs-lighting
+| | |____SKILL.md
+| |____jira-issues
+| | |____SKILL.md
+| |____frontend-design
+| | |____SKILL.md
+| |____theme-factory
+| | |____theme-showcase.pdf
+| | |____themes
+| | | |____ocean-depths.md
+| | | |____sunset-boulevard.md
+| | | |____modern-minimalist.md
+| | | |____desert-rose.md
+| | | |____golden-hour.md
+| | | |____forest-canopy.md
+| | | |____tech-innovation.md
+| | | |____midnight-galaxy.md
+| | | |____botanical-garden.md
+| | | |____arctic-frost.md
+| | |____LICENSE.txt
+| | |____SKILL.md
+| |____blockchain-web3
+| | |____skills
+| | | |____solidity-security
+| | | | |____SKILL.md
+| | | |____defi-protocol-templates
+| | | | |____SKILL.md
+| | | |____web3-testing
+| | | | |____SKILL.md
+| | | |____nft-standards
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____code-transfer
+| | |____scripts
+| | | |____line_insert.py
+| | |____SKILL.md
+| |____test-driven-development
+| | |____testing-anti-patterns.md
+| | |____SKILL.md
+| |____document-skills
+| | |____pdf
+| | | |____forms.md
+| | | |____LICENSE.txt
+| | | |____scripts
+| | | | |____fill_fillable_fields.py
+| | | | |____convert_pdf_to_images.py
+| | | | |____check_bounding_boxes.py
+| | | | |____check_fillable_fields.py
+| | | | |____extract_form_field_info.py
+| | | | |____check_bounding_boxes_test.py
+| | | | |____fill_pdf_form_with_annotations.py
+| | | | |____create_validation_image.py
+| | | |____reference.md
+| | | |____SKILL.md
+| | |____xlsx
+| | | |____LICENSE.txt
+| | | |____recalc.py
+| | | |____SKILL.md
+| | |____docx
+| | | |____LICENSE.txt
+| | | |____scripts
+| | | | |____templates
+| | | | | |____commentsIds.xml
+| | | | | |____comments.xml
+| | | | | |____commentsExtensible.xml
+| | | | | |____people.xml
+| | | | | |____commentsExtended.xml
+| | | | |______init__.py
+| | | | |____utilities.py
+| | | | |____document.py
+| | | |____ooxml
+| | | | |____schemas
+| | | | | |____microsoft
+| | | | | | |____wml-sdtdatahash-2020.xsd
+| | | | | | |____wml-cex-2018.xsd
+| | | | | | |____wml-symex-2015.xsd
+| | | | | | |____wml-2018.xsd
+| | | | | | |____wml-2012.xsd
+| | | | | | |____wml-2010.xsd
+| | | | | | |____wml-cid-2016.xsd
+| | | | | |____ecma
+| | | | | | |____fouth-edition
+| | | | | | | |____opc-contentTypes.xsd
+| | | | | | | |____opc-relationships.xsd
+| | | | | | | |____opc-coreProperties.xsd
+| | | | | | | |____opc-digSig.xsd
+| | | | | |____ISO-IEC29500-4_2016
+| | | | | | |____dml-diagram.xsd
+| | | | | | |____shared-documentPropertiesCustom.xsd
+| | | | | | |____shared-customXmlDataProperties.xsd
+| | | | | | |____wml.xsd
+| | | | | | |____dml-chart.xsd
+| | | | | | |____shared-relationshipReference.xsd
+| | | | | | |____vml-spreadsheetDrawing.xsd
+| | | | | | |____dml-lockedCanvas.xsd
+| | | | | | |____shared-bibliography.xsd
+| | | | | | |____dml-main.xsd
+| | | | | | |____vml-main.xsd
+| | | | | | |____pml.xsd
+| | | | | | |____dml-spreadsheetDrawing.xsd
+| | | | | | |____vml-officeDrawing.xsd
+| | | | | | |____shared-customXmlSchemaProperties.xsd
+| | | | | | |____dml-wordprocessingDrawing.xsd
+| | | | | | |____shared-documentPropertiesVariantTypes.xsd
+| | | | | | |____xml.xsd
+| | | | | | |____dml-picture.xsd
+| | | | | | |____dml-chartDrawing.xsd
+| | | | | | |____shared-additionalCharacteristics.xsd
+| | | | | | |____sml.xsd
+| | | | | | |____shared-commonSimpleTypes.xsd
+| | | | | | |____shared-math.xsd
+| | | | | | |____vml-presentationDrawing.xsd
+| | | | | | |____shared-documentPropertiesExtended.xsd
+| | | | | | |____vml-wordprocessingDrawing.xsd
+| | | | | |____mce
+| | | | | | |____mc.xsd
+| | | | |____scripts
+| | | | | |____validate.py
+| | | | | |____pack.py
+| | | | | |____unpack.py
+| | | | | |____validation
+| | | | | | |____docx.py
+| | | | | | |____redlining.py
+| | | | | | |____base.py
+| | | | | | |______init__.py
+| | | | | | |____pptx.py
+| | | |____docx-js.md
+| | | |____ooxml.md
+| | | |____SKILL.md
+| | |____pptx
+| | | |____LICENSE.txt
+| | | |____html2pptx.md
+| | | |____scripts
+| | | | |____thumbnail.py
+| | | | |____rearrange.py
+| | | | |____replace.py
+| | | | |____html2pptx.js
+| | | | |____inventory.py
+| | | |____ooxml
+| | | | |____schemas
+| | | | | |____microsoft
+| | | | | | |____wml-sdtdatahash-2020.xsd
+| | | | | | |____wml-cex-2018.xsd
+| | | | | | |____wml-symex-2015.xsd
+| | | | | | |____wml-2018.xsd
+| | | | | | |____wml-2012.xsd
+| | | | | | |____wml-2010.xsd
+| | | | | | |____wml-cid-2016.xsd
+| | | | | |____ecma
+| | | | | | |____fouth-edition
+| | | | | | | |____opc-contentTypes.xsd
+| | | | | | | |____opc-relationships.xsd
+| | | | | | | |____opc-coreProperties.xsd
+| | | | | | | |____opc-digSig.xsd
+| | | | | |____ISO-IEC29500-4_2016
+| | | | | | |____dml-diagram.xsd
+| | | | | | |____shared-documentPropertiesCustom.xsd
+| | | | | | |____shared-customXmlDataProperties.xsd
+| | | | | | |____wml.xsd
+| | | | | | |____dml-chart.xsd
+| | | | | | |____shared-relationshipReference.xsd
+| | | | | | |____vml-spreadsheetDrawing.xsd
+| | | | | | |____dml-lockedCanvas.xsd
+| | | | | | |____shared-bibliography.xsd
+| | | | | | |____dml-main.xsd
+| | | | | | |____vml-main.xsd
+| | | | | | |____pml.xsd
+| | | | | | |____dml-spreadsheetDrawing.xsd
+| | | | | | |____vml-officeDrawing.xsd
+| | | | | | |____shared-customXmlSchemaProperties.xsd
+| | | | | | |____dml-wordprocessingDrawing.xsd
+| | | | | | |____shared-documentPropertiesVariantTypes.xsd
+| | | | | | |____xml.xsd
+| | | | | | |____dml-picture.xsd
+| | | | | | |____dml-chartDrawing.xsd
+| | | | | | |____shared-additionalCharacteristics.xsd
+| | | | | | |____sml.xsd
+| | | | | | |____shared-commonSimpleTypes.xsd
+| | | | | | |____shared-math.xsd
+| | | | | | |____vml-presentationDrawing.xsd
+| | | | | | |____shared-documentPropertiesExtended.xsd
+| | | | | | |____vml-wordprocessingDrawing.xsd
+| | | | | |____mce
+| | | | | | |____mc.xsd
+| | | | |____scripts
+| | | | | |____validate.py
+| | | | | |____pack.py
+| | | | | |____unpack.py
+| | | | | |____validation
+| | | | | | |____docx.py
+| | | | | | |____redlining.py
+| | | | | | |____base.py
+| | | | | | |______init__.py
+| | | | | | |____pptx.py
+| | | |____ooxml.md
+| | | |____SKILL.md
+| |____changelog-generator
+| | |____SKILL.md
+| |____machine-learning-ops
+| | |____skills
+| | | |____ml-pipeline-workflow
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____pptx-processing-en-anthropic
+| | |____LICENSE.txt
+| | |____scripts
+| | | |____thumbnail.py
+| | | |____rearrange.py
+| | | |____replace.py
+| | | |____html2pptx.js
+| | | |____inventory.py
+| | |____references
+| | | |____html2pptx.md
+| | | |____ooxml.md
+| | |____ooxml
+| | | |____schemas
+| | | | |____microsoft
+| | | | | |____wml-sdtdatahash-2020.xsd
+| | | | | |____wml-cex-2018.xsd
+| | | | | |____wml-symex-2015.xsd
+| | | | | |____wml-2018.xsd
+| | | | | |____wml-2012.xsd
+| | | | | |____wml-2010.xsd
+| | | | | |____wml-cid-2016.xsd
+| | | | |____ecma
+| | | | | |____fouth-edition
+| | | | | | |____opc-contentTypes.xsd
+| | | | | | |____opc-relationships.xsd
+| | | | | | |____opc-coreProperties.xsd
+| | | | | | |____opc-digSig.xsd
+| | | | |____ISO-IEC29500-4_2016
+| | | | | |____dml-diagram.xsd
+| | | | | |____shared-documentPropertiesCustom.xsd
+| | | | | |____shared-customXmlDataProperties.xsd
+| | | | | |____wml.xsd
+| | | | | |____dml-chart.xsd
+| | | | | |____shared-relationshipReference.xsd
+| | | | | |____vml-spreadsheetDrawing.xsd
+| | | | | |____dml-lockedCanvas.xsd
+| | | | | |____shared-bibliography.xsd
+| | | | | |____dml-main.xsd
+| | | | | |____vml-main.xsd
+| | | | | |____pml.xsd
+| | | | | |____dml-spreadsheetDrawing.xsd
+| | | | | |____vml-officeDrawing.xsd
+| | | | | |____shared-customXmlSchemaProperties.xsd
+| | | | | |____dml-wordprocessingDrawing.xsd
+| | | | | |____shared-documentPropertiesVariantTypes.xsd
+| | | | | |____xml.xsd
+| | | | | |____dml-picture.xsd
+| | | | | |____dml-chartDrawing.xsd
+| | | | | |____shared-additionalCharacteristics.xsd
+| | | | | |____sml.xsd
+| | | | | |____shared-commonSimpleTypes.xsd
+| | | | | |____shared-math.xsd
+| | | | | |____vml-presentationDrawing.xsd
+| | | | | |____shared-documentPropertiesExtended.xsd
+| | | | | |____vml-wordprocessingDrawing.xsd
+| | | | |____mce
+| | | | | |____mc.xsd
+| | | |____scripts
+| | | | |____validate.py
+| | | | |____pack.py
+| | | | |____unpack.py
+| | | | |____validation
+| | | | | |____docx.py
+| | | | | |____redlining.py
+| | | | | |____base.py
+| | | | | |______init__.py
+| | | | | |____pptx.py
+| | |____SKILL.md
+| |____v3-ddd-architecture
+| | |____SKILL.md
+| |____sparc-methodology
+| | |____SKILL.md
+| |____finishing-a-development-branch
+| | |____SKILL.md
+| |____threejs-fundamentals
+| | |____SKILL.md
+| |____flow-nexus-platform
+| | |____SKILL.md
+| |____developer-growth-analysis
+| | |____SKILL.md
+| |____data-fetching
+| | |____SKILL.md
+| |____ui-ux-pro-max
+| | |____data
+| | | |____icons.csv
+| | | |____stacks
+| | | | |____nuxtjs.csv
+| | | | |____html-tailwind.csv
+| | | | |____vue.csv
+| | | | |____react-native.csv
+| | | | |____react.csv
+| | | | |____shadcn.csv
+| | | | |____nextjs.csv
+| | | | |____flutter.csv
+| | | | |____nuxt-ui.csv
+| | | | |____swiftui.csv
+| | | | |____svelte.csv
+| | | |____typography.csv
+| | | |____react-performance.csv
+| | | |____landing.csv
+| | | |____styles.csv
+| | | |____colors.csv
+| | | |____ui-reasoning.csv
+| | | |____ux-guidelines.csv
+| | | |____charts.csv
+| | | |____prompts.csv
+| | | |____web-interface.csv
+| | | |____products.csv
+| | |____scripts
+| | | |____design_system.py
+| | | |____core.py
+| | | |______pycache__
+| | | | |____core.cpython-314.pyc
+| | | | |____design_system.cpython-314.pyc
+| | | |____search.py
+| | |____SKILL.md
+| |____playwright-skill
+| | |____API_REFERENCE.md
+| | |____run.js
+| | |____network-monitor.ts
+| | |____package.json
+| | |____lib
+| | | |____helpers.js
+| | |____SKILL.md
+| |____prevc-code-review
+| | |____SKILL.md
+| |____validation
+| | |____clarity-gate
+| | | |____CLARITY_GATE_FORMAT_SPEC.md
+| | | |____CLARITY_GATE_PROCEDURES.md
+| | | |____SKILL.md
+| |____hugging-face-datasets
+| | |____templates
+| | | |____completion.json
+| | | |____chat.json
+| | | |____custom.json
+| | | |____qa.json
+| | | |____classification.json
+| | | |____tabular.json
+| | |____examples
+| | | |____diverse_training_examples.json
+| | | |____training_examples.json
+| | | |____system_prompt_template.txt
+| | |____scripts
+| | | |____sql_manager.py
+| | | |____dataset_manager.py
+| | |____SKILL.md
+| |____telegram
+| | |____clawdbot.plugin.json
+| | |____index.ts
+| | |____package.json
+| | |____src
+| | | |____runtime.ts
+| | | |____channel.ts
+| | |____SKILL.md
+| |____prevc-documentation
+| | |____SKILL.md
+| |____jules-triage
+| | |____SKILL.md
+| |____flow-nexus-neural
+| | |____SKILL.md
+| |____consolidate_additional.py
+| |____requesting-code-review
+| | |____code-reviewer.md
+| | |____SKILL.md
+| |____z-audit
+| | |____SKILL.md
+| |____audit-context-building
+| | |____resources
+| | | |____OUTPUT_REQUIREMENTS.md
+| | | |____COMPLETENESS_CHECKLIST.md
+| | | |____FUNCTION_MICRO_ANALYSIS_EXAMPLE.md
+| | |____SKILL.md
+| |____stream-chain
+| | |____SKILL.md
+| |____dev-browser
+| | |____vitest.config.ts
+| | |____server.sh
+| | |____scripts
+| | | |____start-server.ts
+| | | |____start-relay.ts
+| | |____package-lock.json
+| | |____references
+| | | |____scraping.md
+| | |____package.json
+| | |____src
+| | | |____client.ts
+| | | |____snapshot
+| | | | |____browser-script.ts
+| | | | |______tests__
+| | | | | |____snapshot.test.ts
+| | | | |____index.ts
+| | | | |____inject.ts
+| | | |____index.ts
+| | | |____relay.ts
+| | | |____types.ts
+| | |____SKILL.md
+| | |____tsconfig.json
+| |____threejs-geometry
+| | |____SKILL.md
+| |____prevc-feature-breakdown
+| | |____SKILL.md
+| |____swarm-orchestration
+| | |____SKILL.md
+| |____pptx
+| | |____scripts
+| | | |____html2pptx.js
+| | |____SKILL.md
+| |____domain-name-brainstormer
+| | |____SKILL.md
+| |____data-engineering
+| | |____skills
+| | | |____dbt-transformation-patterns
+| | | | |____SKILL.md
+| | | |____airflow-dag-patterns
+| | | | |____SKILL.md
+| | | |____spark-optimization
+| | | | |____SKILL.md
+| | | |____data-quality-frameworks
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____github
+| | |____SKILL.md
+| |____invoice-organizer
+| | |____SKILL.md
+| |____verification-before-completion
+| | |____SKILL.md
+| |____agentdb-learning
+| | |____SKILL.md
+| |____langsmith-fetch
+| | |____SKILL.md
+| |____v3-core-implementation
+| | |____SKILL.md
+| |____backend-development
+| | |____skills
+| | | |____event-store-design
+| | | | |____SKILL.md
+| | | |____temporal-python-testing
+| | | | |____resources
+| | | | | |____unit-testing.md
+| | | | | |____local-setup.md
+| | | | | |____integration-testing.md
+| | | | | |____replay-testing.md
+| | | | |____SKILL.md
+| | | |____cqrs-implementation
+| | | | |____SKILL.md
+| | | |____architecture-patterns
+| | | | |____SKILL.md
+| | | |____projection-patterns
+| | | | |____SKILL.md
+| | | |____microservices-patterns
+| | | | |____SKILL.md
+| | | |____api-design-principles
+| | | | |____assets
+| | | | | |____api-design-checklist.md
+| | | | | |____rest-api-template.py
+| | | | |____references
+| | | | | |____graphql-schema-design.md
+| | | | | |____rest-best-practices.md
+| | | | |____SKILL.md
+| | | |____saga-orchestration
+| | | | |____SKILL.md
+| | | |____workflow-orchestration-patterns
+| | | | |____SKILL.md
+| | |____SKILL.md
+| |____prevc-pr-review
+| | |____SKILL.md
+| |____executing-plans
+| | |____SKILL.md
+| |____cloudflare
+| | |____references
+| | | |____ai-gateway
+| | | | |____README.md
+| | | |____sandbox
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____web-analytics
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____waf
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____realtime-sfu
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____static-assets
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____zaraz
+| | | | |____README.md
+| | | |____email-workers
+| | | | |____README.md
+| | | |____do-storage
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____browser-rendering
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____durable-objects
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____c3
+| | | | |____README.md
+| | | |____realtimekit
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____smart-placement
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____workers-ai
+| | | | |____README.md
+| | | |____workers
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____email-routing
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____workers-vpc
+| | | | |____README.md
+| | | |____turn
+| | | | |____README.md
+| | | |____pipelines
+| | | | |____README.md
+| | | |____agents-sdk
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____observability
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____cron-triggers
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____wrangler
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____bindings
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____workers-for-platforms
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____r2-sql
+| | | | |____README.md
+| | | |____miniflare
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____stream
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____secrets-store
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____vectorize
+| | | | |____README.md
+| | | |____containers
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____spectrum
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____workers-playground
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____workflows
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____pages-functions
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____terraform
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____queues
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____snippets
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____pulumi
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____images
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____r2
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____ddos
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____api-shield
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____r2-data-catalog
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____analytics-engine
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____kv
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____tunnel
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____network-interconnect
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____tail-workers
+| | | | |____README.md
+| | | |____api
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____workerd
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____turnstile
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____ai-search
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____d1
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____cache-reserve
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____argo-smart-routing
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____pages
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____bot-management
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | | |____hyperdrive
+| | | | |____README.md
+| | | | |____configuration.md
+| | | | |____patterns.md
+| | | | |____api.md
+| | | | |____gotchas.md
+| | |____SKILL.md
+| |____v3-performance-optimization
+| | |____SKILL.md
+| |____agentic-jujutsu
+| | |____SKILL.md
+| |____codebase-documenter
+| | |____SKILL.md
+| |____threejs-materials
+| | |____SKILL.md
+| |____skill-creator-en-anthropic
+| | |____LICENSE.txt
+| | |____scripts
+| | | |____package_skill.py
+| | | |____quick_validate.py
+| | | |____init_skill.py
+| | |____references
+| | | |____workflows.md
+| | | |____output-patterns.md
+| | |____SKILL.md
+| |____xlsx-processing-en-anthropic
+| | |____LICENSE.txt
+| | |____scripts
+| | | |____recalc.py
+| | |____SKILL.md
+| |____reasoningbank-agentdb
+| | |____SKILL.md
+| |____threejs-postprocessing
+| | |____SKILL.md
+| |____aws-serverless-eda
+| | |____references
+| | | |____eda-patterns.md
+| | | |____deployment-best-practices.md
+| | | |____observability-best-practices.md
+| | | |____security-best-practices.md
+| | | |____performance-optimization.md
+| | | |____serverless-patterns.md
+| | |____SKILL.md
+| |____video-downloader
+| | |____SKILL.md
+| |____git-pushing
+| | |____scripts
+| | | |____smart_commit.sh
+| | |____SKILL.md
+| |____doc-coauthoring
+| | |____SKILL.md
+| |____frontend-ui-ux
+| | |____SKILL.md
+| |____lista de skills.md
+| |____threejs-interaction
+| | |____SKILL.md
+|____docs
+| |____research
+| | |____moltbot-memory.md
+| |____branch_diffs
+| | |____integrate_references.diff
+| | |____mega_harvest.diff
+| |____scripts-guide.md
+| |____harvest_report_final_2026-01-19.md
+| |____project_structure_map.md
+| |____README.md
+| |____references.md
+| |____future
+| | |____advanced-hooks.md
+| | |____mcp-integrations.md
+| |____harvest_report_2026-01-19_oh-my-opencode.md
+| |____harvest_report_2026-01-19_omnara.md
+| |____oh-my-opencode-analysis.md
+| |____CODEMAPS
+| | |____agents.md
+| | |____INDEX.md
+| | |____source.md
+| |____harvest_report_2026-01-19_everything-claude-code.md
+| |____model-fallback-system-design.md
+| |____branch_analysis_report.md
+| |____standards
+| | |____evaluation-driven-development.md
+| | |____progressive-disclosure.md
+| |____services-guide.md
+| |____hooks-guide.md
+| |____harvest_report_2026-01-19_marketingskills.md
+| |____INTEGRATION_PLAN.md
+| |____SYSTEM_KNOWLEDGE_GRAPH.md
+| |____browser-use-integration.md
+| |____protocols
+| | |____sandbox-guidelines.md
+| | |____intent-classification.md
+| |____harvest_report_2026-01-19_claude-code-templates.md
+| |____inventory.md
+| |____future-research
+| | |____agent-reasoning-review.md
+| | |____skill-branching-concept.md
+| |____workflows-guide.md
+| |____concepts
+| | |____mvpm-workflow.md
+| | |____micode-architecture.md
+| | |____agentic-workflow.md
+| | |____prevc-workflow.md
+| | |____ralph-loop.md
+| |____knowledge
+| | |____testing
+| | | |____burn-in.md
+| | | |____auth-session.md
+| | | |____risk-governance.md
+| | | |____selector-resilience.md
+| | | |____nfr-criteria.md
+| | | |____overview.md
+| | | |____recurse.md
+| | | |____api-request.md
+| | | |____data-factories.md
+| | | |____network-recorder.md
+| | | |____test-priorities-matrix.md
+| | | |____test-healing-patterns.md
+| | | |____email-auth.md
+| | | |____fixtures-composition.md
+| | | |____timing-debugging.md
+| | | |____adr-quality-readiness-checklist.md
+| | | |____probability-impact.md
+| | | |____error-handling.md
+| | | |____api-testing-patterns.md
+| | | |____network-first.md
+| | | |____file-utils.md
+| | | |____intercept-network-call.md
+| | | |____test-levels-framework.md
+| | | |____component-tdd.md
+| | | |____ci-burn-in.md
+| | | |____contract-testing.md
+| | | |____playwright-config.md
+| | | |____selective-testing.md
+| | | |____fixture-architecture.md
+| | | |____visual-debugging.md
+| | | |____test-quality.md
+| | | |____feature-flags.md
+| | | |____log.md
+| | | |____network-error-monitor.md
+| |____devops
+| | |____feature-development.md
+| | |____release-process.md
+|____install-personas.sh
+|____README.md
+|____subagent-orchestrator.py
+|____hooks
+| |____file-protection.json
+| |____file-backup.md
+| |____security-scanner.md
+| |____smart-formatting.md
+| |____performance-monitor.md
+| |____build-on-change.md
+| |____run-tests-after-changes.md
+| |____dependency-checker.md
+| |____hooks.json
+| |____format-javascript-files.md
+| |____slack-detailed-notifications.md
+| |____discord-detailed-notifications.md
+| |____session-start.sh
+| |____smart-commit.md
+| |____change-tracker.md
+| |____todo-continuation-enforcer.md
+| |____format-python-files.md
+| |____discord-error-notifications.md
+| |____discord-notifications.md
+| |____slack-error-notifications.md
+| |____lint-on-save.md
+| |____slack-notifications.json
+| |____auto-git-add.json
+| |____telegram-notifications.md
+| |____test-runner.md
+| |____slack-notifications.md
+| |____file-protection.md
+| |____simple-notifications.md
+| |____git-add-changes.md
+| |____auto-git-add.md
+| |____telegram-detailed-notifications.md
+| |____notify-before-bash.md
+| |____safety
+| | |____destructive-command-blocker.ts
+| |____auto-sync-plan-to-github.json
+| |____run-hook.cmd
+| |____file-protection-hook.md
+| |____telegram-error-notifications.md
+|____CHANGELOG.md
+|____templates
+| |____bug_report.md
+| |____feature_request.md
+| |____SPECIFICATION.md
+| |____PR_TEMPLATE.md
+| |____compound.config.json
+|____AGENTS.md
+|____.gitmodules
+|____opencode-example.json
+|____packages
+| |____jules-swarm
+| | |____data
+| | | |____paper_ids.txt
+| | | |____github-repos.txt
+| | | |____target_papers.txt
+| | |____requirements.txt
+| | |____consolidate_arxiv.py
+| | |____QUICK_REFERENCE.md
+| | |____docs
+| | | |____jules-research1.md
+| | | |____QUICK_REFERENCE.md
+| | | |____jules-research.md
+| | | |____JULIUS_FORGE_PROMPT.md
+| | | |____AGENTS_legacy.md
+| | | |____RESEARCH_BACKLOG.md
+| | | |____jules-swarm-protocol.md
+| | | |____ai_coding_failures_map.md
+| | | |____How Jules Internally Works_ Multi-Agent Architectu.md
+| | | |____IMPLEMENTATION_SUMMARY.md
+| | | |____jules-api-documentation-links.md
+| | | |____JULES-IMPLEMENTATION_SUMMARY.md
+| | |____README.md
+| | |____utils
+| | | |____harvest_metadata.py
+| | | |____generate_backlog.py
+| | | |____sync_backlog_status.py
+| | | |____merge_train.sh
+| | | |____merge_train.py
+| | |____AGENTS.md
+| | |____.gitkeep
+| | |____peek_data.py
+| | |____.gitignore
+| | |____deep-research.json
+| | |____swarm_core
+| | | |____api.py
+| | | |____providers.py
+| | | |______init__.py
+| | | |____launcher.py
+| | | |____config.py
+| | | |______pycache__
+| | | | |____launcher.cpython-313.pyc
+| | | | |____api.cpython-313.pyc
+| | | | |____config.cpython-313.pyc
+| | | | |______init__.cpython-313.pyc
+| | | | |____prompts.cpython-313.pyc
+| | | | |____providers.cpython-313.pyc
+| | | |____prompts.py
+| | |____prompts
+| | | |____test_atom_prompt.md
+| | | |____atoms_phase2_prompt.md
+| | | |____molecules_prompt.md
+| | | |____atoms_prompt.md
+| | | |____missing_molecules_prompt.md
+| | | |____atoms_phase1_prompt.md
+| | | |____organisms_prompt.md
+| | |____.env.example
+| | |____runners
+| | | |____automate_cycle.py
+| | | |____poke_session.py
+| | | |____paper_analysis.py
+| | | |____check_research_status.py
+| | | |____inspect_session.py
+| | | |____fetch_papers.py
+| | | |____check_status.py
+| | | |____generic_swarm.py
+| | |____server.py
+| | |____consolidate_github.py
+| | |____.git
+| | |____state
+| | | |____sessions.json
+| | |____tasks
+| | | |____molecules.txt
+| | | |____organisms.txt
+| | | |____test_atom.txt
+| | | |____atoms_phase2.txt
+| | | |____atoms.txt
+| | | |____atoms_phase1.txt
+| | | |____missing_molecules.txt
+| | |____consolidate_github_log.txt
+| | |____ui
+| | | |____App.tsx
+| | | |____index.html
+| | | |____vite.config.ts
+| | | |____README.md
+| | | |____utils
+| | | | |____taskGenerator.ts
+| | | |____components
+| | | | |____Console.tsx
+| | | | |____VariableTable.tsx
+| | | | |____ui
+| | | | | |____GlassCard.tsx
+| | | |____metadata.json
+| | | |____.gitignore
+| | | |____index.tsx
+| | | |____package.json
+| | | |____types.ts
+| | | |____services
+| | | | |____julesService.ts
+| | | |____tsconfig.json
+| | |____consolidate_log.txt
+|____install-antigravity-skills.sh
+|____.gitignore
+|____evaluations
+| |____schema.json
+|____inject-agents-to-config.py
+|____scripts
+| |____crawl4ai-examples.sh
+| |____sonarcloud-autofix.sh
+| |____context-builder-helper.sh
+| |____coolify-cli-helper.sh
+| |____fix-common-strings.sh
+| |____find-missing-returns.sh
+| |____codemaps
+| | |____generate.ts
+| |____sonarscanner-cli.sh
+| |____mass-fix-returns.sh
+| |____validate-version-consistency.sh
+| |____webhosting-verify.sh
+| |____fix-auth-headers.sh
+| |____hostinger-helper.sh
+| |____revert-skills-to-kebab.py
+| |____docs
+| | |____update.ts
+| |____sonarcloud-cli.sh
+| |____updown-helper.sh
+| |____stagehand-setup.sh
+| |____validate-mcp-integrations.sh
+| |____vercel-cli-helper.sh
+| |____ses-helper.sh
+| |____convert-agents-to-skills.py
+| |____wordpress-mcp-helper.sh
+| |____monitoring
+| | |____claude-monitor.py
+| |____gitea-cli-helper.sh
+| |____cloudron-helper.sh
+| |____fix-remaining-literals.sh
+| |____coderabbit-pro-analysis.sh
+| |____auto-version-bump.sh
+| |____shared-constants.sh
+| |____security
+| | |____security.md
+| | |____quality-check.sh
+| | |____secretlint-helper.sh
+| |____qlty-cli.sh
+| |____webhosting-helper.sh
+| |____101domains-helper.sh
+| |____mainwp-helper.sh
+| |____pagespeed-helper.sh
+| |____gitlab-cli-helper.sh
+| |____quality-fix.sh
+| |____ai-cli-config.sh
+| |____setup-local-api-keys.sh
+| |____codacy-cli-chunked.sh
+| |____snyk-helper.sh
+| |____quality-feedback-helper.sh
+| |____fix-sc2155-simple.sh
+| |____localhost-helper.sh
+| |____efficient-return-fix.sh
+| |____stagehand-helper.sh
+| |____coolify-helper.sh
+| |____crawl4ai-helper.sh
+| |____fix-error-messages.sh
+| |____system-cleanup.sh
+| |____sync-agents-to-personas.py
+| |____ampcode-cli.sh
+| |____dns-helper.sh
+| |____coderabbit-cli.sh
+| |____test-stagehand-integration.sh
+| |____toon-helper.sh
+| |____fix-return-statements.sh
+| |____setup-linters-wizard.sh
+| |____quality-check.sh
+| |____version-manager.sh
+| |____setup-mcp-integrations.sh
+| |____pre-commit-hook.sh
+| |____github-cli-helper.sh
+| |____fix-string-literals.sh
+| |____fix-shellcheck-critical.sh
+| |____stagehand-python-helper.sh
+| |____dspy-helper.sh
+| |____closte-helper.sh
+| |____pandoc-helper.sh
+| |____setup-ai-system-prompts.sh
+| |____test-stagehand-python-integration.sh
+| |____linter-manager.sh
+| |____stagehand-python-setup.sh
+| |____fix-misplaced-returns.sh
+| |____spaceship-helper.sh
+| |____setup-browser-use.sh
+| |____continue-cli.sh
+| |____hetzner-helper.sh
+| |____agno-setup.sh
+| |____generate-opencode-agents.sh
+| |____setup-wizard-helper.sh
+| |____git-platforms-helper.sh
+| |____fix-content-type.sh
+| |____dspyground-helper.sh
+| |____comprehensive-quality-fix.sh
+| |____vaultwarden-helper.sh
+| |____monitor-code-review.sh
+| |____devops
+| | |____version-manager.sh
+| | |____tmux-interactive.sh
+| |____markdown-lint-fix.sh
+| |____code-audit-helper.sh
+| |____servers-helper.sh
+| |____codacy-cli.sh
+| |____secretlint-helper.sh
+| |____test-stagehand-both-integration.sh
+| |____compound
+| | |____loop.sh
+| | |____prompt.md
+| | |____analyze-report.sh
+| | |____auto-compound.sh
+| | |____CLAUDE.md
+| |____add-missing-returns.sh
+| |____quality-cli-manager.sh
+| |____extract-awesome-references.py
+| |____markdown-formatter.sh
+|____JULES_ARCHITECTURAL_DIGEST.md
+|____.claude-plugin
+| |____plugin.json
+| |____marketplace.json
+|____CHANGELOG_NEW.md
+|____package-lock.json
+|____test-nonhidden.sh
+|____tests
+| |____skill-triggering
+| | |____run-test.sh
+| | |____run-all.sh
+| | |____prompts
+| | | |____writing-plans.txt
+| | | |____executing-plans.txt
+| | | |____systematic-debugging.txt
+| | | |____test-driven-development.txt
+| | | |____dispatching-parallel-agents.txt
+| | | |____requesting-code-review.txt
+| |____claude-code
+| | |____README.md
+| | |____analyze-token-usage.py
+| | |____test-subagent-driven-development-integration.sh
+| | |____test-subagent-driven-development.sh
+| | |____run-skill-tests.sh
+| | |____test-helpers.sh
+| |____opencode
+| | |____test-skills-core.sh
+| | |____setup.sh
+| | |____test-priority.sh
+| | |____test-plugin-loading.sh
+| | |____test-tools.sh
+| | |____run-tests.sh
+| |____explicit-skill-requests
+| | |____run-extended-multiturn-test.sh
+| | |____run-claude-describes-sdd.sh
+| | |____run-test.sh
+| | |____run-multiturn-test.sh
+| | |____run-haiku-test.sh
+| | |____run-all.sh
+| | |____prompts
+| | | |____i-know-what-sdd-means.txt
+| | | |____use-systematic-debugging.txt
+| | | |____skip-formalities.txt
+| | | |____claude-suggested-it.txt
+| | | |____after-planning-flow.txt
+| | | |____mid-conversation-execute-plan.txt
+| | | |____action-oriented.txt
+| | | |____please-use-brainstorming.txt
+| | | |____subagent-driven-development-please.txt
+| |____subagent-driven-dev
+| | |____run-test.sh
+| | |____go-fractals
+| | | |____scaffold.sh
+| | | |____plan.md
+| | | |____design.md
+| | |____svelte-todo
+| | | |____scaffold.sh
+| | | |____plan.md
+| | | |____design.md
+| |____test_browser_use_persistence.sh
+|____workflows
+| |____game-dev
+| | |____dev-story.md
+| |____feature-development.md
+| |____release-improvements.md
+| |____swarm-development.md
+| |____error-feedback.md
+| |____creative
+| | |____problem-solving.md
+| |____multi-repo-workspace.md
+| |____security-hardening.md
+| |____bug-fixing.md
+| |____versioning.md
+| |____full-stack-feature.md
+| |____code-review.md
+| |____agent-discovery.md
+| |____release-process.md
+| |____compound-product-cycle.md
+| |____github
+| | |____plan-auto-close.yml
+| | |____smart-sync.yml
+| | |____plan-to-tasks.yml
+| | |____task-to-subtasks.yml
+| |____legal-review.md
+| |____teach-me-testing.md
+| |____jules-orchestration.md
+| |____marketing-launch.md
+| |____research-to-product.md
+| |____web-research.md
+|____test-subagent.sh
+|____.opencode
+| |____INSTALL.md
+| |____plugin
+| | |____Overpowers.js
+|____deploy-agent-army.sh
+|____generate_structure_map.py
+|____references
+| |____openwork
+| |____threejs-skills
+| |____z-audit
+|____package.json
+|____generate-agent-configs.py
+|____configure-persona.sh
+|____commands
+| |____setup-context7-mcp.md
+| |____system-behavior-simulator.md
+| |____simulation-calibrator.md
+| |____resume.md
+| |____setup-linting.md
+| |____critique.md
+| |____status.md
+| |____create-pr.md
+| |____husky.md
+| |____z_audit.md
+| |____milestone-tracker.md
+| |____initref.md
+| |____check-file.md
+| |____clean.md
+| |____setup-visual-testing.md
+| |____issue-triage.md
+| |____release.md
+| |____do-in-steps.md
+| |____issue-to-linear-task.md
+| |____doc-api.md
+| |____sync-issues-to-linear.md
+| |____create-skill.md
+| |____repro-issue.md
+| |____all-tools.md
+| |____load-llms-txt.md
+| |____report.md
+| |____sync-linear-to-issues.md
+| |____test-changelog-automation.md
+| |____pr-review.md
+| |____init-project.md
+| |____start.md
+| |____setup-codemap-cli.md
+| |____project-to-linear.md
+| |____fix-github-issue.md
+| |____fix-tests.md
+| |____create-prp.md
+| |____code-to-task.md
+| |____setup-formatting.md
+| |____five.md
+| |____add-authentication-system.md
+| |____update-docs.md
+| |____cross-reference-manager.md
+| |____standup-report.md
+| |____migrate-to-typescript.md
+| |____root-cause-tracing.md
+| |____tree-of-thoughts.md
+| |____setup-automated-releases.md
+| |____actualize.md
+| |____query.md
+| |____bug-fix.md
+| |____create-hook.md
+| |____generate-test-cases.md
+| |____act.md
+| |____debug-error.md
+| |____build.md
+| |____svelte-a11y.md
+| |____optimize-bundle-size.md
+| |____optimize.md
+| |____e2e-setup.md
+| |____session-learning-capture.md
+| |____check.md
+| |____explain-issue-fix.md
+| |____testing_plan_integration.md
+| |____constraint-modeler.md
+| |____svelte-storybook.md
+| |____interview.md
+| |____svelte-test-coverage.md
+| |____00-setup.md
+| |____interactive
+| | |____interactive-bash.md
+| |____troubleshooting-guide.md
+| |____execute-plan.md
+| |____reset.md
+| |____generate-linear-worklog.md
+| |____test-prompt.md
+| |____generate-api-documentation.md
+| |____cause-and-effect.md
+| |____sync-conflict-resolver.md
+| |____create-workflow-command.md
+| |____judge.md
+| |____pac-configure.md
+| |____create-pull-request.md
+| |____svelte-scaffold.md
+| |____create-jtbd.md
+| |____setup-load-testing.md
+| |____agentic
+| | |____agentic-plan.md
+| | |____agentic-ticket.md
+| | |____agentic-research.md
+| | |____agentic-review.md
+| | |____agentic-execute.md
+| | |____agentic-commit.md
+| |____security-audit.md
+| |____03-tasks.md
+| |____code_analysis.md
+| |____setup-serena-mcp.md
+| |____git-status.md
+| |____digital-twin-creator.md
+| |____docs.md
+| |____tdd.md
+| |____add-changelog.md
+| |____svelte-debug.md
+| |____01-specify.md
+| |____test-skill.md
+| |____decision-tree-explorer.md
+| |____decay.md
+| |____decision-quality-analyzer.md
+| |____context-prime.md
+| |____prime.md
+| |____containerize-application.md
+| |____launch-sub-agent.md
+| |____dependency-mapper.md
+| |____dependency-audit.md
+| |____builtin
+| | |____start-work.md
+| | |____refactor.md
+| |____use-stepper.md
+| |____04-implement.md
+| |____estimate-assistant.md
+| |____create-onboarding-guide.md
+| |____build-mcp.md
+| |____performance-audit.md
+| |____write-tests.md
+| |____why.md
+| |____pac-update-status.md
+| |____setup-rate-limiting.md
+| |____mermaid.md
+| |____sync-status.md
+| |____sync-automation-setup.md
+| |____code-permutation-tester.md
+| |____find.md
+| |____clean-branches.md
+| |____svelte-test-setup.md
+| |____add-to-changelog.md
+| |____bidirectional-sync.md
+| |____security-hardening.md
+| |____memory-spring-cleaning.md
+| |____reflect.md
+| |____create-docs.md
+| |____analyse.md
+| |____create-feature.md
+| |____team-workload-balancer.md
+| |____hotfix-deploy.md
+| |____add-mutation-testing.md
+| |____apply-anthropic-skill-best-practices.md
+| |____review-local-changes.md
+| |____sync-pr-to-task.md
+| |____setup-comprehensive-testing.md
+| |____add-package.md
+| |____optimize-build.md
+| |____implement-graphql-api.md
+| |____pac-create-ticket.md
+| |____svelte-storybook-setup.md
+| |____modernize-deps.md
+| |____do-in-parallel.md
+| |____svelte-storybook-migrate.md
+| |____rsi.md
+| |____pac-validate.md
+| |____future-scenario-generator.md
+| |____migration-guide.md
+| |____svelte-storybook-story.md
+| |____create-architecture-documentation.md
+| |____attach-review-to-pr.md
+| |____implement-caching-strategy.md
+| |____project-timeline-simulator.md
+| |____generate-tests.md
+| |____create-command.md
+| |____code-review.md
+| |____update-branch-name.md
+| |____commit.md
+| |____add-performance-monitoring.md
+| |____setup-monitoring-observability.md
+| |____svelte-optimize.md
+| |____rollback-deploy.md
+| |____ultra-think.md
+| |____big-features-interview.md
+| |____do-competitively.md
+| |____project-health-check.md
+| |____task-from-pr.md
+| |____architecture-review.md
+| |____judge-with-debate.md
+| |____explain-code.md
+| |____timeline-compressor.md
+| |____sync.md
+| |____setup-code-formating.md
+| |____brainstorm.md
+| |____bulk-import-issues.md
+| |____svelte-component.md
+| |____analyse-problem.md
+| |____update-codemaps.md
+| |____fix-issue.md
+| |____svelte-migrate.md
+| |____memorize.md
+| |____antigravity-quota.md
+| |____svelte-test-fix.md
+| |____pocket-universe
+| | |____spawn.md
+| | |____spawn-02.md
+| | |____session-resume.md
+| | |____sibling-02.md
+| | |____sibling-01.md
+| |____test-coverage.md
+| |____design-rest-api.md
+| |____add-property-based-testing.md
+| |____analysis
+| | |____ast-grep.md
+| | |____lsp-usage.md
+| |____svelte-test.md
+| |____run-ci.md
+| |____setup-cdn-optimization.md
+| |____write-plan.md
+| |____todo.md
+| |____load-issues.md
+| |____business-scenario-explorer.md
+| |____optimize-database-performance.md
+| |____plan-do-check-act.md
+| |____linear-task-to-issue.md
+| |____design-database-schema.md
+| |____setup-monorepo.md
+| |____create-ideas.md
+| |____fix-pr.md
+| |____directory-deep-dive.md
+| |____sprint-planning.md
+| |____unity-project-setup.md
+| |____move.md
+| |____validate-output.md
+| |____ci-setup.md
+| |____refactor-code.md
+| |____create-agent.md
+| |____05-document.md
+| |____remove.md
+| |____create-worktrees.md
+| |____commit-fast.md
+| |____02-plan.md
+| |____migration-assistant.md
+| |____review-pr.md
+| |____analyze-issue.md
+| |____create-database-migrations.md
+| |____svelte-storybook-troubleshoot.md
+| |____log.md
+| |____retrospective-analyzer.md
+| |____pac-create-epic.md
+| |____architecture-scenario-explorer.md
+| |____svelte-storybook-mock.md
+| |____add-typescript-best-practices.md
+| |____market-response-modeler.md
+| |____create-prd.md
+| |____setup-development-environment.md
+| |____setup-kubernetes-deployment.md
+| |____prepare-release.md
+| |____setup-arxiv-mcp.md
+| |____propose-hypotheses.md
+| |____changelog-demo-command.md
+|____agents
+| |____ios_developer.md
+| |____qa_expert.md
+| |____vibe_coding_coach.md
+| |____dx_optimizer.md
+| |____reddit_community_builder.md
+| |____sidekiq_expert.md
+| |____agentic-codebase-locator.md
+| |____javascript_expert.md
+| |____cassandra_expert.md
+| |____mysql_expert.md
+| |____visual_storyteller.md
+| |____bash_expert.md
+| |____documentation_accuracy_reviewer.md
+| |____prompt_engineering_specialist.md
+| |____z_audit.md
+| |____research
+| | |____research-orchestrator.md
+| | |____research-synthesizer.md
+| |____code_pairing_assistant.md
+| |____task_decomposition_expert.md
+| |____prompt_engineer.md
+| |____build_engineer.md
+| |____websocket_expert.md
+| |____technical_debt_analyst.md
+| |____go_expert.md
+| |____ava_expert.md
+| |____healthcare_hipaa_expert.md
+| |____terraform_specialist.md
+| |____mcp_registry_navigator.md
+| |____wordpress_developer.md
+| |____dart_expert.md
+| |____arbitrage_bot.md
+| |____code_quality_guardian.md
+| |____git_workflow_expert.md
+| |____remix_expert.md
+| |____whimsy_injector.md
+| |____cicd_pipeline_architect.md
+| |____scikit_learn_expert.md
+| |____sisyphus-orchestrator.md
+| |____phoenix_expert.md
+| |____pew-roadmap-agent.md
+| |____angularjs_expert.md
+| |____sales_automator.md
+| |____prevc-code-reviewer.md
+| |____research_brief_generator.md
+| |____seo_specialist.md
+| |____rails_expert.md
+| |____librarian
+| | |____librarian-researcher.md
+| |____prevc-security-auditor.md
+| |____tauri_expert.md
+| |____project_task_planner.md
+| |____electron_expert.md
+| |____mongoose_expert.md
+| |____trend_researcher.md
+| |____rest_expert.md
+| |____mcp_deployment_orchestrator.md
+| |____context_manager.md
+| |____incident_responder.md
+| |____api_security_audit.md
+| |____prevc-feature-developer.md
+| |____php_pro.md
+| |____javascript_pro.md
+| |____documentation_specialist.md
+| |____laravel_specialist.md
+| |____game-dev-studio.md
+| |____ux_researcher.md
+| |____data_scientist.md
+| |____product_manager.md
+| |____mariadb_expert.md
+| |____payment_integration.md
+| |____ml_engineer.md
+| |____knowledge_synthesizer.md
+| |____python_pro.md
+| |____performance_engineer.md
+| |____performance_reviewer.md
+| |____visual_analysis_ocr.md
+| |____release_notes_writer.md
+| |____graphql_expert.md
+| |____expressjs_nodejs_expert.md
+| |____fintech_engineer.md
+| |____prevc-documentation-writer.md
+| |____jenkins_expert.md
+| |____swiftui_expert.md
+| |____python_expert.md
+| |____test_automator.md
+| |____spring_boot_engineer.md
+| |____ocr_grammar_fixer.md
+| |____social_media_clip_creator.md
+| |____astro_expert.md
+| |____prevc-test-writer.md
+| |____html_expert.md
+| |____agentic-codebase-pattern-finder.md
+| |____nextjs_expert.md
+| |____hyperledger_fabric_developer.md
+| |____accessibility_specialist.md
+| |____technical_researcher.md
+| |____pr_readiness_reviewer.md
+| |____react_specialist.md
+| |____prevc-mobile-specialist.md
+| |____hackathon_ai_strategist.md
+| |____github_actions_expert.md
+| |____docusaurus_expert.md
+| |____scrum_master.md
+| |____spring_boot_expert.md
+| |____technical_writer.md
+| |____sales_engineer.md
+| |____todo_fixme_scanner.md
+| |____perl_expert.md
+| |____project_setup_wizard.md
+| |____architect_reviewer.md
+| |____postgres_expert.md
+| |____bun_expert.md
+| |____risk_manager.md
+| |____typeorm_expert.md
+| |____000_ceo_orchestrator.md
+| |____update_models.sh
+| |____cpp_expert.md
+| |____kubernetes_expert.md
+| |____dotnet_framework_4_8_expert.md
+| |____react_performance_optimization.md
+| |____auth0_expert.md
+| |____market_researcher.md
+| |____express_expert.md
+| |____agents_md_guardian.md
+| |____tdd-expert.md
+| |____test_coverage_reviewer.md
+| |____platform_engineer.md
+| |____csharp_expert.md
+| |____fiber_expert.md
+| |____postgres_pro.md
+| |____mqtt_expert.md
+| |____environment_manager.md
+| |____sqlite_expert.md
+| |____prisma_expert.md
+| |____wordpress_master.md
+| |____chaos_engineer.md
+| |____elasticsearch_expert.md
+| |____dynamodb_expert.md
+| |____markdown_syntax_formatter.md
+| |____mcp_server_architect.md
+| |____vector_db_expert.md
+| |____sre_engineer.md
+| |____prevc-architect-specialist.md
+| |____gitlab_ci_expert.md
+| |____seo_podcast_optimizer.md
+| |____dotnet_core_expert.md
+| |____crypto_risk_manager.md
+| |____flutter_expert.md
+| |____opencode-agents
+| | |____opencode-gpt.md
+| | |____opencode-grok.md
+| | |____opencode-llama.md
+| | |____opencode-gemini.md
+| |____golang_pro.md
+| |____project_manager.md
+| |____workflow_optimizer.md
+| |____tag_agent.md
+| |____liquibase_expert.md
+| |____research_coordinator.md
+| |____vue_expert.md
+| |____test_automation_specialist.md
+| |____defi_strategist.md
+| |____twitter_ai_influencer_manager.md
+| |____backend_developer.md
+| |____research_analyst.md
+| |____mobile_developer.md
+| |____multi_agent_coordinator.md
+| |____angular_architect.md
+| |____joker.md
+| |____git_summarizer.md
+| |____feedback_synthesizer.md
+| |____update_models_with_fallback.sh
+| |____selenium_expert.md
+| |____pytorch_expert.md
+| |____machine_learning_engineer.md
+| |____clean_architecture_expert.md
+| |____nextjs_app_router_developer.md
+| |____rag_architecture_expert.md
+| |____database_optimizer.md
+| |____knex_expert.md
+| |____stripe_expert.md
+| |____episode_orchestrator.md
+| |____url_link_extractor.md
+| |____prometheus_expert.md
+| |____swift_expert.md
+| |____business_analyst.md
+| |____gin_expert.md
+| |____celery_expert.md
+| |____pandas_expert.md
+| |____compliance_auditor.md
+| |____embedded_systems.md
+| |____loki_expert.md
+| |____fintech_security_expert.md
+| |____legal_advisor.md
+| |____tensorflow_expert.md
+| |____rust_expert.md
+| |____react_expert.md
+| |____c_expert.md
+| |____fullstack_developer.md
+| |____performance_optimization_specialist.md
+| |____data_engineer.md
+| |____explore
+| | |____explore-grep.md
+| |____sns_expert.md
+| |____laravel_vue_developer.md
+| |____django_developer.md
+| |____growth_hacker.md
+| |____search_specialist.md
+| |____rapid_prototyper.md
+| |____browser-automator.md
+| |____jquery_expert.md
+| |____rust_engineer.md
+| |____agent_organizer.md
+| |____mongodb_expert.md
+| |____mobile_app_developer.md
+| |____trend_analyst.md
+| |____cpp_engineer.md
+| |____tooling_engineer.md
+| |____pew-lead-developer.md
+| |____bullmq_expert.md
+| |____blockchain_developer.md
+| |____websocket_engineer.md
+| |____golang_expert.md
+| |____opentelemetry_expert.md
+| |____creative-problem-solver.md
+| |____ios_expert.md
+| |____doc-updater.md
+| |____security_code_reviewer.md
+| |____code_reviewer.md
+| |____performance_testing_expert.md
+| |____mocha_expert.md
+| |____devops_incident_responder.md
+| |____network_engineer.md
+| |____debugger.md
+| |____angular_expert.md
+| |____mcp
+| | |____mcp-server-architect.md
+| |____sprint_prioritizer.md
+| |____ocr_quality_assurance.md
+| |____android_expert.md
+| |____react_native_expert.md
+| |____marketing
+| | |____marketing-strategist.md
+| | |____copywriter.md
+| | |____seo-auditor.md
+| |____data_researcher.md
+| |____kubernetes_specialist.md
+| |____llms_maintainer.md
+| |____error_coordinator.md
+| |____legacy_modernizer.md
+| |____database_admin.md
+| |____database_optimization.md
+| |____performance_monitor.md
+| |____pulumi_expert.md
+| |____backend_architect.md
+| |____prompts_guide.md
+| |____architect_review.md
+| |____openai_api_expert.md
+| |____docker_expert.md
+| |____research_orchestrator.md
+| |____deployment_engineer.md
+| |____ansible_expert.md
+| |____jasmine_expert.md
+| |____microservices_architect.md
+| |____factory_guide.md
+| |____mcp_testing_engineer.md
+| |____dart_flutter_expert.md
+| |____pew-bug-workflow-orchestrator.md
+| |____rabbitmq_expert.md
+| |____text_comparison_validator.md
+| |____sql_pro.md
+| |____murat-test-architect.md
+| |____docker_specialist.md
+| |____social_media_copywriter.md
+| |____elk_expert.md
+| |____metis-consultant.md
+| |____customer_success_manager.md
+| |____frontend_designer.md
+| |____agent_expert.md
+| |____studio_coach.md
+| |____agents_guide.md
+| |____django_expert.md
+| |____elixir_expert.md
+| |____nestjs_expert.md
+| |____rollup_expert.md
+| |____nlp_engineer.md
+| |____dependency_manager.md
+| |____prevc-backend-specialist.md
+| |____java_expert.md
+| |____prevc-performance-optimizer.md
+| |____scala_expert.md
+| |____terraform_expert.md
+| |____prometheus
+| | |____prometheus-planner.md
+| |____expo_expert.md
+| |____terraform_infrastructure_expert.md
+| |____database_administrator.md
+| |____mlops_engineer.md
+| |____nats_expert.md
+| |____ruby_expert.md
+| |____agentic-thoughts-locator.md
+| |____security_audit_expert.md
+| |____c_developer.md
+| |____iot_engineer.md
+| |____vitest_expert.md
+| |____javascript_developer.md
+| |____clojure_expert.md
+| |____ui_ux_designer.md
+| |____css_expert.md
+| |____oauth_oidc_expert.md
+| |____quant_analyst.md
+| |____code_quality_reviewer.md
+| |____kotlin_expert.md
+| |____research_synthesizer.md
+| |____nodejs_expert.md
+| |____test_plan_writer.md
+| |____accessibility_tester.md
+| |____cypress_expert.md
+| |____directus_developer.md
+| |____refactoring_specialist.md
+| |____opensearch_expert.md
+| |____fastify_expert.md
+| |____competitive_analyst.md
+| |____customer_support.md
+| |____claude-subagents
+| | |____claude-context-manager.md
+| | |____claude-task-distributor.md
+| | |____claude-performance-monitor.md
+| | |____claude-knowledge-synthesizer.md
+| | |____claude-agent-installer.md
+| | |____claude-agent-organizer.md
+| | |____claude-multi-agent-coordinator.md
+| | |____claude-workflow-orchestrator.md
+| | |____claude-it-ops-orchestrator.md
+| | |____claude-error-coordinator.md
+| |____llm_architect.md
+| |____fastapi_expert.md
+| |____security_auditor.md
+| |____kotlin_specialist.md
+| |____skills_guide.md
+| |____sequelize_expert.md
+| |____cloud_architect.md
+| |____haskell_expert.md
+| |____app_store_optimizer.md
+| |____drupal_developer.md
+| |____ai_engineer.md
+| |____query_clarifier.md
+| |____project_shipper.md
+| |____froggy
+| | |____froggy-code-simplifier.md
+| | |____froggy-rubber-duck.md
+| | |____froggy-code-reviewer.md
+| | |____froggy-doc-writer.md
+| | |____froggy-partner.md
+| | |____froggy-architect.md
+| |____testcafe_expert.md
+| |____podcast_trend_scout.md
+| |____tiktok_strategist.md
+| |____test_strategy_architect.md
+| |____error_detective.md
+| |____frontend_developer.md
+| |____sisyphus
+| | |____sisyphus-orchestrator.md
+| | |____metis-consultant.md
+| |____performance_profiler.md
+| |____cli_developer.md
+| |____git_workflow_manager.md
+| |____review_agent.md
+| |____typescript_pro.md
+| |____llmops_engineer.md
+| |____project_supervisor_orchestrator.md
+| |____java_architect.md
+| |____workflow_orchestrator.md
+| |____architect.md
+| |____agentic-codebase-analyzer.md
+| |____laravel_expert.md
+| |____market_research_analyst.md
+| |____mcp_expert.md
+| |____crypto_analyst.md
+| |____braintree_expert.md
+| |____redis_expert.md
+| |____oracle
+| | |____oracle-consultant.md
+| |____playwright_expert.md
+| |____ocaml_expert.md
+| |____prevc-bug-fixer.md
+| |____trpc_expert.md
+| |____penetration_tester.md
+| |____php_developer.md
+| |____deno_expert.md
+| |____puppeteer_expert.md
+| |____prevc-refactoring-specialist.md
+| |____podcast_content_analyzer.md
+| |____mcp_developer.md
+| |____oracle-architect.md
+| |____metadata_agent.md
+| |____podcast_metadata_specialist.md
+| |____grafana_expert.md
+| |____kafka_expert.md
+| |____electron_pro.md
+| |____tailwind_expert.md
+| |____documentation_engineer.md
+| |____python_data_scientist.md
+| |____crypto_trader.md
+| |____command_expert.md
+| |____podcast_transcriber.md
+| |____react_architect.md
+| |____security_engineer.md
+| |____javascript_typescript_expert.md
+| |____timestamp_precision_specialist.md
+| |____solidjs_expert.md
+| |____cockroachdb_expert.md
+| |____svelte_expert.md
+| |____connection_agent.md
+| |____erlang_expert.md
+| |____academic_researcher.md
+| |____aws_cloud_architect.md
+| |____webpack_expert.md
+| |____jest_expert.md
+| |____vue_specialist.md
+| |____moc_agent.md
+| |____api_designer.md
+| |____mcp_security_auditor.md
+| |____hooks_guide.md
+| |____php_expert.md
+| |____data_analyst.md
+| |____nextjs_developer.md
+| |____devops_troubleshooter.md
+| |____task_distributor.md
+| |____sqs_expert.md
+| |____actix_expert.md
+| |____audio_quality_controller.md
+| |____ui_designer.md
+| |____circleci_expert.md
+| |____academic_research_synthesizer.md
+| |____prd_writer.md
+| |____build-error-resolver.md
+| |____jwt_expert.md
+| |____langchain_expert.md
+| |____librarian-researcher.md
+| |____api_documenter.md
+| |____explorer-recon.md
+| |____report_generator.md
+| |____agentic-web-search-researcher.md
+| |____comprehensive_researcher.md
+| |____agentic-thoughts-analyzer.md
+| |____prevc-database-specialist.md
+| |____numpy_expert.md
+| |____csharp_developer.md
+| |____typescript_expert.md
+| |____content_marketer.md
+| |____graphql_architect.md
+| |____flask_expert.md
+| |____aspnet_core_expert.md
+| |____sql_expert.md
+| |____terraform_engineer.md
+| |____owasp_top10_expert.md
+| |____mssql_expert.md
+| |____content_writer.md
+| |____java_developer.md
+| |____design_patterns_expert.md
+| |____devops_engineer.md
+| |____url_context_validator.md
+| |____neo4j_expert.md
+| |____cpp_pro.md
+| |____prevc-devops-specialist.md
+| |____release_manager.md
+| |____prevc-frontend-specialist.md
+| |____game_developer.md
+| |____flyway_expert.md
+| |____llm_finetuning_expert.md
+| |____code_refactorer.md
+| |____pew-feature-workflow-orchestrator.md
+| |____keycloak_expert.md
+| |____lua_expert.md
+| |____code_review_master.md
+| |____openapi_expert.md
+| |____extension-enablement.json
+| |____grpc_expert.md
+| |____agile_sprint_planner.md
+|____continuity.md
+|____.codex
+| |____INSTALL.md
+| |____superpowers-codex
+| |____superpowers-bootstrap.md
+|____lib
+| |____skills-core.js
+|____LICENSE
+|____personas
+| |____language-specialist
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____system-architect
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____fullstack-developer
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____general-assistant
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____ai-ml-engineer
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____mobile-developer
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____database-specialist
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____product-manager
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____comprehensive-researcher
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____qa-engineer
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____security-auditor
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____devops-engineer
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+| |____documentation-writer
+| | |____mcp.json
+| | |____persona.yaml
+| | |____README.md
+|____CHANGELOG_OLD.md
+|____compound.config.json
+|____services
+| |____email
+| | |____ses.md
+| |____hosting
+| | |____hetzner.md
+| | |____webhosting.md
+| | |____cloudflare.md
+| | |____101domains.md
+| | |____spaceship.md
+| | |____localhost.md
+| | |____cloudron.md
+| | |____domain-purchasing.md
+| | |____dns-providers.md
+| | |____closte.md
+| | |____hostinger.md
+| |____accounting
+| | |____quickfile.md
