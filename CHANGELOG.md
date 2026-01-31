@@ -8,6 +8,14 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-05-24] - Deep Extraction Iteration
+
+### Added
+- **Skills**: Re-synchronized ALL skills from `antigravity-skills` to ensure 100% asset coverage.
+- **Tools**: Extracted `sanity-cli` to `scripts/sanity-cli`.
+- **Tools**: Extracted Linux helper scripts to `scripts/linux-tools/`.
+- **Documentation**: `docs/INTEGRATION_REPORT_PHASE_3.md`.
+
 ## [2026-05-24] - Sandbox & Unified TUI
 
 ### Added

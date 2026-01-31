@@ -1,5 +1,22 @@
 # Overpowers Continuity Ledger
 
+## Session: 2026-05-24 - Deep Extraction Iteration
+**Operator**: Jules (Agent)
+**Focus**: Maximizing value capture from external sources (Phase 3).
+
+### 🟢 Global State
+- **Completeness**: 🟢 100%. Re-synced all external skills.
+- **Tools**: 🟢 Expanded. Added `sanity-cli` and `linux-tools`.
+
+### 🔄 Active Contexts
+| Component | Status | Notes |
+|:----------|:-------|:------|
+| **Sanity CLI** | 🟢 New | Wrapper for sandbox management. |
+| **Linux Tools** | 🟢 New | Helper scripts in `scripts/linux-tools/`. |
+
+### ⏭️ Next Actions
+1.  **Consolidate**: Review `sanity-cli` vs `sandbox-launcher.sh` and merge if redundant.
+
 ## Session: 2026-05-24 - Sandbox & Unified TUI
 **Operator**: Jules (Agent)
 **Focus**: Infrastructure isolation and user experience improvement.
