@@ -8,6 +8,16 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-05-24] - Sandbox & Unified TUI
+
+### Added
+- **Infrastructure**: Docker-based Development Sandbox (`sandbox/`) adapted from `sanity-gravity`.
+- **Tooling**: Unified TUI Installer (`./overpowers`) to manage agents, skills, personas, and the sandbox.
+- **Documentation**: `docs/INTEGRATION_REPORT_PHASE_2.md` and `docs/analysis/containerization_strategy.md`.
+
+### Changed
+- **UX**: Simplified setup process via the new `./overpowers` script.
+
 ## [2026-05-24] - Legacy Code Assimilation
 
 ### Added

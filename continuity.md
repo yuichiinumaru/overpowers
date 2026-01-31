@@ -1,5 +1,24 @@
 # Overpowers Continuity Ledger
 
+## Session: 2026-05-24 - Sandbox & Unified TUI
+**Operator**: Jules (Agent)
+**Focus**: Infrastructure isolation and user experience improvement.
+
+### 🟢 Global State
+- **Sandbox**: 🟢 Ready. Docker-based isolation available in `sandbox/`.
+- **UX**: 🟢 Unified. `./overpowers` script provides a central menu for all tasks.
+- **Documentation**: 🟢 Updated. Analysis and reports added.
+
+### 🔄 Active Contexts
+| Component | Status | Notes |
+|:----------|:-------|:------|
+| **Sandbox** | 🟢 New | Supports Host UID mapping, Supervisor, and SSH. |
+| **Installer** | 🟢 New | CLI menu for agents, skills, and sandbox. |
+
+### ⏭️ Next Actions
+1.  **Test**: Verify Docker build on a machine with Docker installed.
+2.  **Expand**: Add `install-personas.sh` logic if not fully implemented.
+
 ## Session: 2026-05-24 - Legacy Code Assimilation
 **Operator**: Jules (Agent)
 **Focus**: Extraction of valuable assets from external Antigravity repositories.
