@@ -8,6 +8,18 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-05-24] - Stitch Skills Integration
+
+### Added
+- Integrated skills from **`google-labs-code/stitch-skills`**:
+  - `skills/design-md` - Analyzes Stitch projects and generates `DESIGN.md`.
+  - `skills/enhance-prompt` - Optimizes UI prompts for Stitch.
+  - `skills/react-components` - Converts Stitch screens to React components.
+  - `skills/stitch-loop` - Generates multi-page websites from single prompts.
+- Updated `docs/references.md` and `skills/lista de skills.md`.
+
+**Author**: Jules (Overpowers Architect)
+
 ## [2026-01-31] - Auth Monster Integration
 
 ### Added

@@ -30,6 +30,8 @@ A curated list of plugins, agents, and resources extracted from [awesome-opencod
   Gives the agent persistent, self-editable memory blocks inspired by Letta agents.
 
 - [ ] [Agent Skills (JDT)](https://github.com/joshuadavidthomas/opencode-agent-skills) - _Dynamic skills loader_
+- [x] [Stitch Skills](https://github.com/google-labs-code/stitch-skills) - _Stitch MCP skills_
+  A library of Agent Skills designed to work with the Stitch MCP server, including design-md, react-components, and more.
   Dynamic skills loader that discovers skills from project, user, and plugin directories.
 
 - [ ] [Antigravity Auth](https://github.com/NoeFabris/opencode-antigravity-auth) - _Google Antigravity models_

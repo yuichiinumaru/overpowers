@@ -46,3 +46,4 @@ git clone https://github.com/SawyerHood/dev_browser 45
 git clone https://github.com/gmickel/sheets_cli 46
 git clone https://github.com/fabioc-aloha/spotify-skill 47
 git clone https://github.com/mhattingpete/claude-skills-marketplace 48
+git clone https://github.com/google-labs-code/stitch-skills 49
