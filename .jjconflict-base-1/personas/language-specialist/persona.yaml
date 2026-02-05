@@ -1,0 +1,35 @@
+name: language-specialist
+description: Language-specific development expertise
+version: '1.0'
+toolsets:
+- name: coding
+  toolIds:
+  - serena.find_symbol
+  - serena.replace_symbol_body
+  - context7.query-docs
+- name: refactoring
+  toolIds:
+  - serena.rename_symbol
+  - serena.find_referencing_symbols
+- name: analysis
+  toolIds:
+  - serena.get_symbols_overview
+  - serena.search_for_pattern
+defaultToolset: coding
+metadata:
+  author: overpowers
+  tags:
+  - language
+  - auto-generated
+  created: '2026-01-19T14:38:23.964667Z'
+  agents:
+  - cpp-pro
+  - golang-pro
+  - javascript-pro
+  - php-pro
+  - python-pro
+  - rust-engineer
+  - typescript-pro
+  - cpp-engineer
+  - golang-expert
+  - python-expert

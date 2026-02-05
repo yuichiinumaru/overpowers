@@ -1,0 +1,358 @@
+#!/bin/bash
+# shellcheck disable=SC2034,SC2155,SC2317,SC2329,SC2016,SC2181,SC1091,SC2154,SC2015,SC2086,SC2129,SC2030,SC2031,SC2119,SC2120,SC2001,SC2162,SC2088,SC2089,SC2090,SC2029,SC2006,SC2153
+# Multi-Platform Quality Validation Script
+# Ensures compliance across SonarCloud, CodeFactor, and Codacy
+
+set -euo pipefail
+
+# Color codes for output
+readonly RED='\033[0;31m'
+readonly GREEN='\033[0;32m'
+readonly YELLOW='\033[1;33m'
+readonly BLUE='\033[0;34m'
+readonly NC='\033[0m' # No Color
+
+# Quality thresholds
+readonly MAX_TOTAL_ISSUES=100
+readonly MAX_RETURN_ISSUES=0
+readonly MAX_POSITIONAL_ISSUES=0
+readonly MAX_STRING_LITERAL_ISSUES=0
+
+print_header() {
+    echo -e "${BLUE}🎯 AI DevOps Framework - Multi-Platform Quality Check${NC}"
+    echo -e "${BLUE}================================================================${NC}"
+    return 0
+}
+
+print_success() {
+    local message="$1"
+    echo -e "${GREEN}✅ $message${NC}"
+    return 0
+}
+
+print_warning() {
+    local message="$1"
+    echo -e "${YELLOW}⚠️  $message${NC}"
+    return 0
+}
+
+print_error() {
+    local message="$1"
+    echo -e "${RED}❌ $message${NC}"
+    return 0
+}
+
+print_info() {
+    local message="$1"
+    echo -e "${BLUE}ℹ️  $message${NC}"
+    return 0
+}
+
+check_sonarcloud_status() {
+    echo -e "${BLUE}📊 Checking SonarCloud Status...${NC}"
+    
+    local response
+    if response=$(curl -s "https://sonarcloud.io/api/issues/search?componentKeys=marcusquinn_aidevops&impactSoftwareQualities=MAINTAINABILITY&resolved=false&ps=1"); then
+        local total_issues
+        total_issues=$(echo "$response" | jq -r '.total // 0')
+        
+        echo "Total Issues: $total_issues"
+        
+        if [[ $total_issues -le $MAX_TOTAL_ISSUES ]]; then
+            print_success "SonarCloud: $total_issues issues (within threshold of $MAX_TOTAL_ISSUES)"
+        else
+            print_warning "SonarCloud: $total_issues issues (exceeds threshold of $MAX_TOTAL_ISSUES)"
+        fi
+        
+        # Get detailed breakdown
+        local breakdown_response
+        if breakdown_response=$(curl -s "https://sonarcloud.io/api/issues/search?componentKeys=marcusquinn_aidevops&impactSoftwareQualities=MAINTAINABILITY&resolved=false&ps=10&facets=rules"); then
+            echo "Issue Breakdown:"
+            echo "$breakdown_response" | jq -r '.facets[0].values[] | "  \(.val): \(.count) issues"'
+        fi
+    else
+        print_error "Failed to fetch SonarCloud status"
+        return 1
+    fi
+    
+    return 0
+}
+
+check_return_statements() {
+    echo -e "${BLUE}🔄 Checking Return Statements (S7682)...${NC}"
+    
+    local violations=0
+    local files_checked=0
+    
+    for file in .agent/scripts/*.sh; do
+        if [[ -f "$file" ]]; then
+            ((files_checked++))
+            
+            # Check if file has functions without return statements
+            local functions_without_return
+            functions_without_return=$(grep -c "^[a-zA-Z_][a-zA-Z0-9_]*() {" "$file" 2>/dev/null || echo "0")
+            local return_statements
+            return_statements=$(grep -c "return [01]" "$file" 2>/dev/null || echo "0")
+
+            # Ensure variables are numeric
+            functions_without_return=${functions_without_return//[^0-9]/}
+            return_statements=${return_statements//[^0-9]/}
+            functions_without_return=${functions_without_return:-0}
+            return_statements=${return_statements:-0}
+
+            if [[ $return_statements -lt $functions_without_return ]]; then
+                ((violations++))
+                print_warning "Missing return statements in $file"
+            fi
+        fi
+    done
+    
+    echo "Files checked: $files_checked"
+    echo "Files with violations: $violations"
+    
+    if [[ $violations -le $MAX_RETURN_ISSUES ]]; then
+        print_success "Return statements: $violations violations (within threshold)"
+    else
+        print_error "Return statements: $violations violations (exceeds threshold of $MAX_RETURN_ISSUES)"
+        return 1
+    fi
+    
+    return 0
+}
+
+check_positional_parameters() {
+    echo -e "${BLUE}📝 Checking Positional Parameters (S7679)...${NC}"
+    
+    local violations=0
+    
+    # Find direct usage of positional parameters (not in local assignments)
+    local tmp_file
+    tmp_file=$(mktemp)
+    
+    if grep -n '\$[1-9]' .agent/scripts/*.sh | grep -v 'local.*=.*\$[1-9]' > "$tmp_file"; then
+        violations=$(wc -l < "$tmp_file")
+        
+        if [[ $violations -gt 0 ]]; then
+            print_warning "Found $violations positional parameter violations:"
+            head -10 "$tmp_file"
+            if [[ $violations -gt 10 ]]; then
+                echo "... and $((violations - 10)) more"
+            fi
+        fi
+    fi
+    
+    rm -f "$tmp_file"
+    
+    if [[ $violations -le $MAX_POSITIONAL_ISSUES ]]; then
+        print_success "Positional parameters: $violations violations (within threshold)"
+    else
+        print_error "Positional parameters: $violations violations (exceeds threshold of $MAX_POSITIONAL_ISSUES)"
+        return 1
+    fi
+    
+    return 0
+}
+
+check_string_literals() {
+    echo -e "${BLUE}📄 Checking String Literals (S1192)...${NC}"
+    
+    local violations=0
+    
+    for file in .agent/scripts/*.sh; do
+        if [[ -f "$file" ]]; then
+            # Find strings that appear 3 or more times
+            local repeated_strings
+            repeated_strings=$(grep -o '"[^"]*"' "$file" | sort | uniq -c | awk '$1 >= 3 {print $1, $2}' | wc -l)
+            
+            if [[ $repeated_strings -gt 0 ]]; then
+                ((violations += repeated_strings))
+                print_warning "$file has $repeated_strings repeated string literals"
+            fi
+        fi
+    done
+    
+    if [[ $violations -le $MAX_STRING_LITERAL_ISSUES ]]; then
+        print_success "String literals: $violations violations (within threshold)"
+    else
+        print_error "String literals: $violations violations (exceeds threshold of $MAX_STRING_LITERAL_ISSUES)"
+        return 1
+    fi
+    
+    return 0
+}
+
+run_shellcheck() {
+    echo -e "${BLUE}🐚 Running ShellCheck Validation...${NC}"
+    
+    local violations=0
+    
+    for file in .agent/scripts/*.sh; do
+        if [[ -f "$file" ]] && ! shellcheck "$file" > /dev/null 2>&1; then
+            ((violations++))
+            print_warning "ShellCheck violations in $file"
+        fi
+    done
+    
+    if [[ $violations -eq 0 ]]; then
+        print_success "ShellCheck: No violations found"
+    else
+        print_error "ShellCheck: $violations files with violations"
+        return 1
+    fi
+    
+    return 0
+}
+
+# Check for secrets in codebase
+check_secrets() {
+    echo -e "${BLUE}🔐 Checking for Exposed Secrets (Secretlint)...${NC}"
+    
+    local secretlint_script=".agent/scripts/secretlint-helper.sh"
+    local violations=0
+    
+    # Check if secretlint is available
+    if command -v secretlint &> /dev/null || [[ -f "node_modules/.bin/secretlint" ]]; then
+        # Run secretlint scan
+        local secretlint_cmd
+        if command -v secretlint &> /dev/null; then
+            secretlint_cmd="secretlint"
+        else
+            secretlint_cmd="./node_modules/.bin/secretlint"
+        fi
+        
+        if [[ -f ".secretlintrc.json" ]]; then
+            # Run scan and capture exit code
+            if $secretlint_cmd "**/*" --format compact 2>/dev/null; then
+                print_success "Secretlint: No secrets detected"
+            else
+                violations=1
+                print_error "Secretlint: Potential secrets detected!"
+                print_info "Run: bash $secretlint_script scan (for detailed results)"
+            fi
+        else
+            print_warning "Secretlint: Configuration not found"
+            print_info "Run: bash $secretlint_script init"
+        fi
+    elif command -v docker &> /dev/null; then
+        print_info "Secretlint: Using Docker for scan..."
+        if docker run -v "$(pwd)":"$(pwd)" -w "$(pwd)" --rm secretlint/secretlint secretlint "**/*" --format compact 2>/dev/null; then
+            print_success "Secretlint: No secrets detected"
+        else
+            violations=1
+            print_error "Secretlint: Potential secrets detected!"
+        fi
+    else
+        print_warning "Secretlint: Not installed (install with: npm install secretlint)"
+        print_info "Run: bash $secretlint_script install"
+    fi
+    
+    return $violations
+}
+
+# Check AI-Powered Quality CLIs integration
+check_quality_clis() {
+    print_info "🤖 Checking AI-Powered Quality CLIs Integration..."
+
+    # Secretlint
+    local secretlint_script=".agent/scripts/secretlint-helper.sh"
+    if [[ -f "$secretlint_script" ]]; then
+        if command -v secretlint &> /dev/null || [[ -f "node_modules/.bin/secretlint" ]]; then
+            print_success "Secretlint: Integration ready"
+            print_info "Run: bash $secretlint_script scan (for secret detection)"
+        else
+            print_info "Secretlint: Available for setup"
+            print_info "Run: bash $secretlint_script install"
+        fi
+    else
+        print_warning "Secretlint helper script not found"
+    fi
+    echo ""
+
+    # CodeRabbit CLI
+    local coderabbit_script=".agent/scripts/coderabbit-cli.sh"
+    if [[ -f "$coderabbit_script" ]]; then
+        if bash "$coderabbit_script" status > /dev/null 2>&1; then
+            print_success "CodeRabbit CLI: Integration ready"
+            print_info "Run: bash $coderabbit_script review (for local code review)"
+        else
+            print_info "CodeRabbit CLI: Available for setup"
+            print_info "Run: bash $coderabbit_script install && bash $coderabbit_script setup"
+        fi
+    else
+        print_warning "CodeRabbit CLI script not found"
+    fi
+
+    # Codacy CLI
+    local codacy_script=".agent/scripts/codacy-cli.sh"
+    if [[ -f "$codacy_script" ]]; then
+        if bash "$codacy_script" status > /dev/null 2>&1; then
+            print_success "Codacy CLI: Integration ready"
+            print_info "Run: bash $codacy_script analyze (for local analysis)"
+        else
+            print_info "Codacy CLI: Available for setup"
+            print_info "Run: bash $codacy_script install && bash $codacy_script init"
+        fi
+    else
+        print_warning "Codacy CLI script not found"
+    fi
+
+    # SonarScanner CLI
+    local sonar_script=".agent/scripts/sonarscanner-cli.sh"
+    if [[ -f "$sonar_script" ]]; then
+        if bash "$sonar_script" status > /dev/null 2>&1; then
+            print_success "SonarScanner CLI: Integration ready"
+            print_info "Run: bash $sonar_script analyze (for SonarCloud analysis)"
+        else
+            print_info "SonarScanner CLI: Available for setup"
+            print_info "Run: bash $sonar_script install && bash $sonar_script init"
+        fi
+    else
+        print_warning "SonarScanner CLI script not found"
+    fi
+
+    return 0
+}
+
+main() {
+    print_header
+    
+    local exit_code=0
+    
+    # Run all quality checks
+    check_sonarcloud_status || exit_code=1
+    echo ""
+    
+    check_return_statements || exit_code=1
+    echo ""
+    
+    check_positional_parameters || exit_code=1
+    echo ""
+    
+    check_string_literals || exit_code=1
+    echo ""
+    
+    run_shellcheck || exit_code=1
+    echo ""
+    
+    check_secrets || exit_code=1
+    echo ""
+
+    check_quality_clis
+
+    echo ""
+    print_info "📝 Markdown Formatting Tools Available:"
+    print_info "Run: bash .agent/scripts/markdown-lint-fix.sh manual . (for quick fixes)"
+    print_info "Run: bash .agent/scripts/markdown-formatter.sh format . (for comprehensive formatting)"
+    echo ""
+
+    # Final summary
+    if [[ $exit_code -eq 0 ]]; then
+        print_success "🎉 ALL QUALITY CHECKS PASSED! Framework maintains A-grade standards."
+    else
+        print_error "❌ QUALITY ISSUES DETECTED. Please address violations before committing."
+    fi
+    
+    return $exit_code
+}
+
+main "$@"

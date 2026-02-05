@@ -1,0 +1,17 @@
+{
+  "gemini-cli-security": {
+    "overrides": [
+      "/home/sephiroth/*"
+    ]
+  },
+  "gemini-flow": {
+    "overrides": [
+      "/home/sephiroth/*"
+    ]
+  },
+  "archon": {
+    "overrides": [
+      "/home/sephiroth/*"
+    ]
+  }
+}

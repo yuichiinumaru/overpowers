@@ -1,0 +1,34 @@
+name: qa-engineer
+description: Quality assurance, test automation, and coverage analysis
+version: '1.0'
+toolsets:
+- name: testing
+  toolIds:
+  - serena.find_symbol
+  - serena.search_for_pattern
+- name: coverage
+  toolIds:
+  - serena.get_symbols_overview
+  - serena.find_referencing_symbols
+- name: reporting
+  toolIds:
+  - serena.write_memory
+  - vibe-check.check_status
+defaultToolset: testing
+metadata:
+  author: overpowers
+  tags:
+  - qa
+  - auto-generated
+  created: '2026-01-19T14:38:23.956796Z'
+  agents:
+  - accessibility-tester
+  - code-quality-reviewer
+  - qa-expert
+  - test-automator
+  - test-coverage-reviewer
+  - test-plan-writer
+  - audio-quality-controller
+  - mcp-testing-engineer
+  - ocr-quality-assurance
+  - testcafe-expert

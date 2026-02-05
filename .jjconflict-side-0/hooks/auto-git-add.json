@@ -1,0 +1,6 @@
+{
+  "name": "auto-git-add",
+  "trigger": "file_edit",
+  "action": "git add \"$FILE_PATH\"",
+  "description": "Automatically stage files after they are edited by an agent."
+}

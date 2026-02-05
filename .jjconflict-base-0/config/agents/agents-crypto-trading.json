@@ -1,0 +1,24 @@
+{
+  "agent": {
+    "crypto-risk-manager": {
+      "mode": "primary",
+      "description": "Implement risk management systems for cryptocurrency trading and DeFi positions. Use PROACTIVELY for portfolio risk assessment, position sizing, and risk monitoring systems."
+    },
+    "defi-strategist": {
+      "mode": "primary",
+      "description": "Design and implement DeFi yield strategies, liquidity provision, and protocol interactions. Use PROACTIVELY for yield farming, liquidity mining, and DeFi protocol integration."
+    },
+    "crypto-trader": {
+      "mode": "primary",
+      "description": "Build cryptocurrency trading systems, implement trading strategies, and integrate with exchange APIs. Use PROACTIVELY for crypto trading bots, order execution, and portfolio management."
+    },
+    "arbitrage-bot": {
+      "mode": "primary",
+      "description": "Identify and execute cryptocurrency arbitrage opportunities across exchanges and DeFi protocols. Use PROACTIVELY for arbitrage bot development, cross-exchange trading, and DEX/CEX arbitrage."
+    },
+    "crypto-analyst": {
+      "mode": "primary",
+      "description": "Perform cryptocurrency market analysis, on-chain analytics, and sentiment analysis. Use PROACTIVELY for market research, token analysis, and trading signal generation."
+    }
+  }
+}

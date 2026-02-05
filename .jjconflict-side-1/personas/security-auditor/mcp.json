@@ -1,0 +1,51 @@
+{
+  "mcpServers": {
+    "serena": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide-assistant"
+      ],
+      "enabled": true
+    },
+    "vibe-check": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@pv-bhat/vibe-check-mcp",
+        "start",
+        "--stdio"
+      ],
+      "environment": {
+        "GEMINI_API_KEY": "<YOUR_GEMINI_API_KEY>"
+      },
+      "enabled": true
+    },
+    "hyperbrowser": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@anthropic/hyperbrowser-mcp"
+      ],
+      "enabled": true
+    },
+    "terminal": {
+      "type": "local",
+      "command": [
+        "mcp-shell"
+      ],
+      "environment": {
+        "MCP_SHELL_LOG_LEVEL": "info"
+      },
+      "enabled": true,
+      "note": "YAAMCPL Winner: sonirico/mcp-shell (secure shell with audit)"
+    }
+  }
+}

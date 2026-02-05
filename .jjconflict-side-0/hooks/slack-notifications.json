@@ -1,0 +1,6 @@
+{
+  "name": "slack-notifications",
+  "trigger": "task_complete",
+  "action": "curl -X POST -H 'Content-type: application/json' --data \"{\\\"text\\\":\\\"Task completed: $TASK_DESCRIPTION\\\"}\" $SLACK_WEBHOOK_URL",
+  "description": "Send a notification to Slack when a task is finished."
+}

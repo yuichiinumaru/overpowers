@@ -1,0 +1,9 @@
+{
+  "tool": "opencode",
+  "reportsDir": "./reports",
+  "outputDir": "./scripts/compound",
+  "qualityChecks": ["echo 'Running quality checks...'"],
+  "maxIterations": 25,
+  "branchPrefix": "compound/",
+  "analyzeCommand": ""
+}

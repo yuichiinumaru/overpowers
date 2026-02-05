@@ -1,0 +1,3345 @@
+diff --git a/package-lock.json b/package-lock.json
+index 559a254..546af95 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -27,12 +27,8 @@
+         "opencode-monster": "dist/cli.js"
+       },
+       "devDependencies": {
+-        "@types/chai": "^4.3.20",
+-        "@types/mocha": "^10.0.10",
+         "@types/node": "^25.0.10",
+         "@types/proper-lockfile": "^4.1.4",
+-        "chai": "^4.5.0",
+-        "mocha": "^11.7.5",
+         "ts-node": "^10.9.2",
+         "typescript": "^5.9.3"
+       }
+@@ -60,53 +56,6 @@
+         "node": ">=12"
+       }
+     },
+-    "node_modules/@isaacs/cliui": {
+-      "version": "8.0.2",
+-      "resolved": "https://registry.npmjs.org/@isaacs/cliui/-/cliui-8.0.2.tgz",
+-      "integrity": "sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==",
+-      "dev": true,
+-      "license": "ISC",
+-      "dependencies": {
+-        "string-width": "^5.1.2",
+-        "string-width-cjs": "npm:string-width@^4.2.0",
+-        "strip-ansi": "^7.0.1",
+-        "strip-ansi-cjs": "npm:strip-ansi@^6.0.1",
+-        "wrap-ansi": "^8.1.0",
+-        "wrap-ansi-cjs": "npm:wrap-ansi@^7.0.0"
+-      },
+-      "engines": {
+-        "node": ">=12"
+-      }
+-    },
+-    "node_modules/@isaacs/cliui/node_modules/ansi-regex": {
+-      "version": "6.2.2",
+-      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz",
+-      "integrity": "sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=12"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/ansi-regex?sponsor=1"
+-      }
+-    },
+-    "node_modules/@isaacs/cliui/node_modules/strip-ansi": {
+-      "version": "7.1.2",
+-      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz",
+-      "integrity": "sha512-gmBGslpoQJtgnMAvOVqGZpEz9dyoKTCzy2nfz/n8aIFhN/jCE/rCmcxabB6jOOHV+0WNnylOxaxBQPSvcWklhA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "ansi-regex": "^6.0.1"
+-      },
+-      "engines": {
+-        "node": ">=12"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/strip-ansi?sponsor=1"
+-      }
+-    },
+     "node_modules/@jridgewell/resolve-uri": {
+       "version": "3.1.2",
+       "resolved": "https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz",
+@@ -135,17 +84,6 @@
+         "@jridgewell/sourcemap-codec": "^1.4.10"
+       }
+     },
+-    "node_modules/@pkgjs/parseargs": {
+-      "version": "0.11.0",
+-      "resolved": "https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz",
+-      "integrity": "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==",
+-      "dev": true,
+-      "license": "MIT",
+-      "optional": true,
+-      "engines": {
+-        "node": ">=14"
+-      }
+-    },
+     "node_modules/@tsconfig/node10": {
+       "version": "1.0.12",
+       "resolved": "https://registry.npmjs.org/@tsconfig/node10/-/node10-1.0.12.tgz",
+@@ -193,13 +131,6 @@
+         "@types/node": "*"
+       }
+     },
+-    "node_modules/@types/chai": {
+-      "version": "4.3.20",
+-      "resolved": "https://registry.npmjs.org/@types/chai/-/chai-4.3.20.tgz",
+-      "integrity": "sha512-/pC9HAB5I/xMlc5FP77qjCnI16ChlJfW0tGa0IUcFn38VJrTV6DeZ60NU5KZBtaOZqjdpwTWohz5HU1RrhiYxQ==",
+-      "dev": true,
+-      "license": "MIT"
+-    },
+     "node_modules/@types/connect": {
+       "version": "3.4.38",
+       "resolved": "https://registry.npmjs.org/@types/connect/-/connect-3.4.38.tgz",
+@@ -238,13 +169,6 @@
+       "integrity": "sha512-r8Tayk8HJnX0FztbZN7oVqGccWgw98T/0neJphO91KkmOzug1KkofZURD4UaD5uH8AqcFLfdPErnBod0u71/qg==",
+       "license": "MIT"
+     },
+-    "node_modules/@types/mocha": {
+-      "version": "10.0.10",
+-      "resolved": "https://registry.npmjs.org/@types/mocha/-/mocha-10.0.10.tgz",
+-      "integrity": "sha512-xPyYSz1cMPnJQhl0CLMH68j3gprKZaTjG3s5Vi+fDgx+uhG9NOXwbVt52eFS8ECyXhyKcjDLCBEqBExKuiZb7Q==",
+-      "dev": true,
+-      "license": "MIT"
+-    },
+     "node_modules/@types/node": {
+       "version": "25.0.10",
+       "resolved": "https://registry.npmjs.org/@types/node/-/node-25.0.10.tgz",
+@@ -387,19 +311,12 @@
+       }
+     },
+     "node_modules/ansi-styles": {
+-      "version": "4.3.0",
+-      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
+-      "integrity": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==",
+-      "dev": true,
++      "version": "2.2.1",
++      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz",
++      "integrity": "sha512-kmCevFghRiWM7HB5zTPULl4r9bVFSWjz62MhqizDGUrq2NWuNMQyuv4tHHoKJHs69M/MF64lEcHdYIocrdWQYA==",
+       "license": "MIT",
+-      "dependencies": {
+-        "color-convert": "^2.0.1"
+-      },
+       "engines": {
+-        "node": ">=8"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/ansi-styles?sponsor=1"
++        "node": ">=0.10.0"
+       }
+     },
+     "node_modules/ansi-term": {
+@@ -424,30 +341,6 @@
+       "dev": true,
+       "license": "MIT"
+     },
+-    "node_modules/argparse": {
+-      "version": "2.0.1",
+-      "resolved": "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz",
+-      "integrity": "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==",
+-      "dev": true,
+-      "license": "Python-2.0"
+-    },
+-    "node_modules/assertion-error": {
+-      "version": "1.1.0",
+-      "resolved": "https://registry.npmjs.org/assertion-error/-/assertion-error-1.1.0.tgz",
+-      "integrity": "sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": "*"
+-      }
+-    },
+-    "node_modules/balanced-match": {
+-      "version": "1.0.2",
+-      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
+-      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",
+-      "dev": true,
+-      "license": "MIT"
+-    },
+     "node_modules/blessed": {
+       "version": "0.1.81",
+       "resolved": "https://registry.npmjs.org/blessed/-/blessed-0.1.81.tgz",
+@@ -491,40 +384,6 @@
+         "node": ">=0.10.0"
+       }
+     },
+-    "node_modules/blessed-contrib/node_modules/ansi-styles": {
+-      "version": "2.2.1",
+-      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz",
+-      "integrity": "sha512-kmCevFghRiWM7HB5zTPULl4r9bVFSWjz62MhqizDGUrq2NWuNMQyuv4tHHoKJHs69M/MF64lEcHdYIocrdWQYA==",
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=0.10.0"
+-      }
+-    },
+-    "node_modules/blessed-contrib/node_modules/chalk": {
+-      "version": "1.1.3",
+-      "resolved": "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz",
+-      "integrity": "sha512-U3lRVLMSlsCfjqYPbLyVv11M9CPW4I728d6TCKMAOJueEeB9/8o+eSsMnxPJD+Q+K909sdESg7C+tIkoH6on1A==",
+-      "license": "MIT",
+-      "dependencies": {
+-        "ansi-styles": "^2.2.1",
+-        "escape-string-regexp": "^1.0.2",
+-        "has-ansi": "^2.0.0",
+-        "strip-ansi": "^3.0.0",
+-        "supports-color": "^2.0.0"
+-      },
+-      "engines": {
+-        "node": ">=0.10.0"
+-      }
+-    },
+-    "node_modules/blessed-contrib/node_modules/escape-string-regexp": {
+-      "version": "1.0.5",
+-      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
+-      "integrity": "sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==",
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=0.8.0"
+-      }
+-    },
+     "node_modules/blessed-contrib/node_modules/strip-ansi": {
+       "version": "3.0.1",
+       "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
+@@ -537,15 +396,6 @@
+         "node": ">=0.10.0"
+       }
+     },
+-    "node_modules/blessed-contrib/node_modules/supports-color": {
+-      "version": "2.0.0",
+-      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz",
+-      "integrity": "sha512-KKNVtd6pCYgPIKU4cp2733HWYCpplQhddZLBUryaAHou723x+FRzQ5Df824Fj+IyyuiQTRoub4SnIFfIcrp70g==",
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=0.8.0"
+-      }
+-    },
+     "node_modules/body-parser": {
+       "version": "2.2.2",
+       "resolved": "https://registry.npmjs.org/body-parser/-/body-parser-2.2.2.tgz",
+@@ -570,29 +420,12 @@
+         "url": "https://opencollective.com/express"
+       }
+     },
+-    "node_modules/brace-expansion": {
+-      "version": "2.0.2",
+-      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.2.tgz",
+-      "integrity": "sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "balanced-match": "^1.0.0"
+-      }
+-    },
+     "node_modules/bresenham": {
+       "version": "0.0.3",
+       "resolved": "https://registry.npmjs.org/bresenham/-/bresenham-0.0.3.tgz",
+       "integrity": "sha512-wbMxoJJM1p3+6G7xEFXYNCJ30h2qkwmVxebkbwIl4OcnWtno5R3UT9VuYLfStlVNAQCmRjkGwjPFdfaPd4iNXw==",
+       "license": "MIT"
+     },
+-    "node_modules/browser-stdout": {
+-      "version": "1.3.1",
+-      "resolved": "https://registry.npmjs.org/browser-stdout/-/browser-stdout-1.3.1.tgz",
+-      "integrity": "sha512-qhAVI1+Av2X7qelOfAIYwXONood6XlZE/fXaBSmW/T5SzLAmCgzi+eiWE7fUvbHaeNBQH13UftjpXxsfLkMpgw==",
+-      "dev": true,
+-      "license": "ISC"
+-    },
+     "node_modules/buffers": {
+       "version": "0.1.1",
+       "resolved": "https://registry.npmjs.org/buffers/-/buffers-0.1.1.tgz",
+@@ -639,19 +472,6 @@
+         "url": "https://github.com/sponsors/ljharb"
+       }
+     },
+-    "node_modules/camelcase": {
+-      "version": "6.3.0",
+-      "resolved": "https://registry.npmjs.org/camelcase/-/camelcase-6.3.0.tgz",
+-      "integrity": "sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+     "node_modules/cardinal": {
+       "version": "2.1.1",
+       "resolved": "https://registry.npmjs.org/cardinal/-/cardinal-2.1.1.tgz",
+@@ -665,53 +485,41 @@
+         "cdl": "bin/cdl.js"
+       }
+     },
+-    "node_modules/chai": {
+-      "version": "4.5.0",
+-      "resolved": "https://registry.npmjs.org/chai/-/chai-4.5.0.tgz",
+-      "integrity": "sha512-RITGBfijLkBddZvnn8jdqoTypxvqbOLYQkGGxXzeFjVHvudaPw0HNFD9x928/eUwYWd2dPCugVqspGALTZZQKw==",
+-      "dev": true,
++    "node_modules/chalk": {
++      "version": "1.1.3",
++      "resolved": "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz",
++      "integrity": "sha512-U3lRVLMSlsCfjqYPbLyVv11M9CPW4I728d6TCKMAOJueEeB9/8o+eSsMnxPJD+Q+K909sdESg7C+tIkoH6on1A==",
+       "license": "MIT",
+       "dependencies": {
+-        "assertion-error": "^1.1.0",
+-        "check-error": "^1.0.3",
+-        "deep-eql": "^4.1.3",
+-        "get-func-name": "^2.0.2",
+-        "loupe": "^2.3.6",
+-        "pathval": "^1.1.1",
+-        "type-detect": "^4.1.0"
++        "ansi-styles": "^2.2.1",
++        "escape-string-regexp": "^1.0.2",
++        "has-ansi": "^2.0.0",
++        "strip-ansi": "^3.0.0",
++        "supports-color": "^2.0.0"
+       },
+       "engines": {
+-        "node": ">=4"
++        "node": ">=0.10.0"
+       }
+     },
+-    "node_modules/chalk": {
+-      "version": "4.1.2",
+-      "resolved": "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz",
+-      "integrity": "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==",
+-      "dev": true,
++    "node_modules/chalk/node_modules/ansi-regex": {
++      "version": "2.1.1",
++      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
++      "integrity": "sha512-TIGnTpdo+E3+pCyAluZvtED5p5wCqLdezCyhPZzKPcxvFplEt4i+W7OONCKgeZFT3+y5NZZfOOS/Bdcanm1MYA==",
+       "license": "MIT",
+-      "dependencies": {
+-        "ansi-styles": "^4.1.0",
+-        "supports-color": "^7.1.0"
+-      },
+       "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/chalk?sponsor=1"
++        "node": ">=0.10.0"
+       }
+     },
+-    "node_modules/chalk/node_modules/supports-color": {
+-      "version": "7.2.0",
+-      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz",
+-      "integrity": "sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==",
+-      "dev": true,
++    "node_modules/chalk/node_modules/strip-ansi": {
++      "version": "3.0.1",
++      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
++      "integrity": "sha512-VhumSSbBqDTP8p2ZLKj40UjBCV4+v8bUSEpUb4KjRgWk9pbqGF4REFj6KEagidb2f/M6AzC0EmFyDNGaw9OCzg==",
+       "license": "MIT",
+       "dependencies": {
+-        "has-flag": "^4.0.0"
++        "ansi-regex": "^2.0.0"
+       },
+       "engines": {
+-        "node": ">=8"
++        "node": ">=0.10.0"
+       }
+     },
+     "node_modules/charm": {
+@@ -720,35 +528,6 @@
+       "integrity": "sha512-syedaZ9cPe7r3hoQA9twWYKu5AIyCswN5+szkmPBe9ccdLrj4bYaCnLVPTLd2kgVRc7+zoX4tyPgRnFKCj5YjQ==",
+       "license": "MIT/X11"
+     },
+-    "node_modules/check-error": {
+-      "version": "1.0.3",
+-      "resolved": "https://registry.npmjs.org/check-error/-/check-error-1.0.3.tgz",
+-      "integrity": "sha512-iKEoDYaRmd1mxM90a2OEfWhjsjPpYPuQ+lMYsoxB126+t8fw7ySEO48nmDg5COTjxDI65/Y2OWpeEHk3ZOe8zg==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "get-func-name": "^2.0.2"
+-      },
+-      "engines": {
+-        "node": "*"
+-      }
+-    },
+-    "node_modules/chokidar": {
+-      "version": "4.0.3",
+-      "resolved": "https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz",
+-      "integrity": "sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "readdirp": "^4.0.1"
+-      },
+-      "engines": {
+-        "node": ">= 14.16.0"
+-      },
+-      "funding": {
+-        "url": "https://paulmillr.com/funding/"
+-      }
+-    },
+     "node_modules/cli-table3": {
+       "version": "0.6.5",
+       "resolved": "https://registry.npmjs.org/cli-table3/-/cli-table3-0.6.5.tgz",
+@@ -764,101 +543,6 @@
+         "@colors/colors": "1.5.0"
+       }
+     },
+-    "node_modules/cli-table3/node_modules/emoji-regex": {
+-      "version": "8.0.0",
+-      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+-      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==",
+-      "license": "MIT"
+-    },
+-    "node_modules/cli-table3/node_modules/string-width": {
+-      "version": "4.2.3",
+-      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+-      "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
+-      "license": "MIT",
+-      "dependencies": {
+-        "emoji-regex": "^8.0.0",
+-        "is-fullwidth-code-point": "^3.0.0",
+-        "strip-ansi": "^6.0.1"
+-      },
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+-    "node_modules/cliui": {
+-      "version": "8.0.1",
+-      "resolved": "https://registry.npmjs.org/cliui/-/cliui-8.0.1.tgz",
+-      "integrity": "sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==",
+-      "dev": true,
+-      "license": "ISC",
+-      "dependencies": {
+-        "string-width": "^4.2.0",
+-        "strip-ansi": "^6.0.1",
+-        "wrap-ansi": "^7.0.0"
+-      },
+-      "engines": {
+-        "node": ">=12"
+-      }
+-    },
+-    "node_modules/cliui/node_modules/emoji-regex": {
+-      "version": "8.0.0",
+-      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+-      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==",
+-      "dev": true,
+-      "license": "MIT"
+-    },
+-    "node_modules/cliui/node_modules/string-width": {
+-      "version": "4.2.3",
+-      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+-      "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "emoji-regex": "^8.0.0",
+-        "is-fullwidth-code-point": "^3.0.0",
+-        "strip-ansi": "^6.0.1"
+-      },
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+-    "node_modules/cliui/node_modules/wrap-ansi": {
+-      "version": "7.0.0",
+-      "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz",
+-      "integrity": "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "ansi-styles": "^4.0.0",
+-        "string-width": "^4.1.0",
+-        "strip-ansi": "^6.0.0"
+-      },
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/wrap-ansi?sponsor=1"
+-      }
+-    },
+-    "node_modules/color-convert": {
+-      "version": "2.0.1",
+-      "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
+-      "integrity": "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "color-name": "~1.1.4"
+-      },
+-      "engines": {
+-        "node": ">=7.0.0"
+-      }
+-    },
+-    "node_modules/color-name": {
+-      "version": "1.1.4",
+-      "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
+-      "integrity": "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==",
+-      "dev": true,
+-      "license": "MIT"
+-    },
+     "node_modules/commander": {
+       "version": "14.0.2",
+       "resolved": "https://registry.npmjs.org/commander/-/commander-14.0.2.tgz",
+@@ -921,21 +605,6 @@
+       "dev": true,
+       "license": "MIT"
+     },
+-    "node_modules/cross-spawn": {
+-      "version": "7.0.6",
+-      "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz",
+-      "integrity": "sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "path-key": "^3.1.0",
+-        "shebang-command": "^2.0.0",
+-        "which": "^2.0.1"
+-      },
+-      "engines": {
+-        "node": ">= 8"
+-      }
+-    },
+     "node_modules/debug": {
+       "version": "4.4.3",
+       "resolved": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz",
+@@ -953,32 +622,6 @@
+         }
+       }
+     },
+-    "node_modules/decamelize": {
+-      "version": "4.0.0",
+-      "resolved": "https://registry.npmjs.org/decamelize/-/decamelize-4.0.0.tgz",
+-      "integrity": "sha512-9iE1PgSik9HeIIw2JO94IidnE3eBoQrFJ3w7sFuzSX4DpmZ3v5sZpUiV5Swcf6mQEF+Y0ru8Neo+p+nyh2J+hQ==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+-    "node_modules/deep-eql": {
+-      "version": "4.1.4",
+-      "resolved": "https://registry.npmjs.org/deep-eql/-/deep-eql-4.1.4.tgz",
+-      "integrity": "sha512-SUwdGfqdKOwxCPeVYjwSyRpJ7Z+fhpwIAtmCUdZIWZ/YP5R9WAsyuSgpLVDi9bjWoN2LXHNss/dk3urXtdQxGg==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "type-detect": "^4.0.0"
+-      },
+-      "engines": {
+-        "node": ">=6"
+-      }
+-    },
+     "node_modules/depd": {
+       "version": "2.0.0",
+       "resolved": "https://registry.npmjs.org/depd/-/depd-2.0.0.tgz",
+@@ -1031,13 +674,6 @@
+         "node": ">= 0.4"
+       }
+     },
+-    "node_modules/eastasianwidth": {
+-      "version": "0.2.0",
+-      "resolved": "https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz",
+-      "integrity": "sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==",
+-      "dev": true,
+-      "license": "MIT"
+-    },
+     "node_modules/ee-first": {
+       "version": "1.1.1",
+       "resolved": "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz",
+@@ -1045,10 +681,9 @@
+       "license": "MIT"
+     },
+     "node_modules/emoji-regex": {
+-      "version": "9.2.2",
+-      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.2.2.tgz",
+-      "integrity": "sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==",
+-      "dev": true,
++      "version": "8.0.0",
++      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
++      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==",
+       "license": "MIT"
+     },
+     "node_modules/encodeurl": {
+@@ -1103,16 +738,6 @@
+         "node": ">= 0.4"
+       }
+     },
+-    "node_modules/escalade": {
+-      "version": "3.2.0",
+-      "resolved": "https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz",
+-      "integrity": "sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=6"
+-      }
+-    },
+     "node_modules/escape-html": {
+       "version": "1.0.3",
+       "resolved": "https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz",
+@@ -1120,16 +745,12 @@
+       "license": "MIT"
+     },
+     "node_modules/escape-string-regexp": {
+-      "version": "4.0.0",
+-      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz",
+-      "integrity": "sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==",
+-      "dev": true,
++      "version": "1.0.5",
++      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
++      "integrity": "sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==",
+       "license": "MIT",
+       "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
++        "node": ">=0.8.0"
+       }
+     },
+     "node_modules/esprima": {
+@@ -1241,63 +862,6 @@
+         "url": "https://opencollective.com/express"
+       }
+     },
+-    "node_modules/find-up": {
+-      "version": "5.0.0",
+-      "resolved": "https://registry.npmjs.org/find-up/-/find-up-5.0.0.tgz",
+-      "integrity": "sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "locate-path": "^6.0.0",
+-        "path-exists": "^4.0.0"
+-      },
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+-    "node_modules/flat": {
+-      "version": "5.0.2",
+-      "resolved": "https://registry.npmjs.org/flat/-/flat-5.0.2.tgz",
+-      "integrity": "sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==",
+-      "dev": true,
+-      "license": "BSD-3-Clause",
+-      "bin": {
+-        "flat": "cli.js"
+-      }
+-    },
+-    "node_modules/foreground-child": {
+-      "version": "3.3.1",
+-      "resolved": "https://registry.npmjs.org/foreground-child/-/foreground-child-3.3.1.tgz",
+-      "integrity": "sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==",
+-      "dev": true,
+-      "license": "ISC",
+-      "dependencies": {
+-        "cross-spawn": "^7.0.6",
+-        "signal-exit": "^4.0.1"
+-      },
+-      "engines": {
+-        "node": ">=14"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/isaacs"
+-      }
+-    },
+-    "node_modules/foreground-child/node_modules/signal-exit": {
+-      "version": "4.1.0",
+-      "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz",
+-      "integrity": "sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==",
+-      "dev": true,
+-      "license": "ISC",
+-      "engines": {
+-        "node": ">=14"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/isaacs"
+-      }
+-    },
+     "node_modules/forwarded": {
+       "version": "0.2.0",
+       "resolved": "https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz",
+@@ -1325,26 +889,6 @@
+         "url": "https://github.com/sponsors/ljharb"
+       }
+     },
+-    "node_modules/get-caller-file": {
+-      "version": "2.0.5",
+-      "resolved": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz",
+-      "integrity": "sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==",
+-      "dev": true,
+-      "license": "ISC",
+-      "engines": {
+-        "node": "6.* || 8.* || >= 10.*"
+-      }
+-    },
+-    "node_modules/get-func-name": {
+-      "version": "2.0.2",
+-      "resolved": "https://registry.npmjs.org/get-func-name/-/get-func-name-2.0.2.tgz",
+-      "integrity": "sha512-8vXOvuE167CtIc3OyItco7N/dpRtBbYOsPsXCz7X/PMnlGjYjSGuZJgM1Y7mmew7BKf9BqvLX2tnOVy1BBUsxQ==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": "*"
+-      }
+-    },
+     "node_modules/get-intrinsic": {
+       "version": "1.3.0",
+       "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.3.0.tgz",
+@@ -1388,27 +932,6 @@
+       "integrity": "sha512-0YCjVpE3pS5XWlN3J4X7AiAx65+nqAI54LndtVFnQZB6G/FVLkZH8y8V6R3cIoOQR4pUdfwQGd1iwyoXHJ4Qfw==",
+       "license": "MIT"
+     },
+-    "node_modules/glob": {
+-      "version": "10.5.0",
+-      "resolved": "https://registry.npmjs.org/glob/-/glob-10.5.0.tgz",
+-      "integrity": "sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==",
+-      "dev": true,
+-      "license": "ISC",
+-      "dependencies": {
+-        "foreground-child": "^3.1.0",
+-        "jackspeak": "^3.1.2",
+-        "minimatch": "^9.0.4",
+-        "minipass": "^7.1.2",
+-        "package-json-from-dist": "^1.0.0",
+-        "path-scurry": "^1.11.1"
+-      },
+-      "bin": {
+-        "glob": "dist/esm/bin.mjs"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/isaacs"
+-      }
+-    },
+     "node_modules/gopd": {
+       "version": "1.2.0",
+       "resolved": "https://registry.npmjs.org/gopd/-/gopd-1.2.0.tgz",
+@@ -1481,16 +1004,6 @@
+         "node": ">= 0.4"
+       }
+     },
+-    "node_modules/he": {
+-      "version": "1.2.0",
+-      "resolved": "https://registry.npmjs.org/he/-/he-1.2.0.tgz",
+-      "integrity": "sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==",
+-      "dev": true,
+-      "license": "MIT",
+-      "bin": {
+-        "he": "bin/he"
+-      }
+-    },
+     "node_modules/here": {
+       "version": "0.0.2",
+       "resolved": "https://registry.npmjs.org/here/-/here-0.0.2.tgz",
+@@ -1579,143 +1092,24 @@
+         "node": ">=8"
+       }
+     },
+-    "node_modules/is-path-inside": {
+-      "version": "3.0.3",
+-      "resolved": "https://registry.npmjs.org/is-path-inside/-/is-path-inside-3.0.3.tgz",
+-      "integrity": "sha512-Fd4gABb+ycGAmKou8eMftCupSir5lRxqf4aD/vd0cD2qc4HL07OjCeuHMr8Ro4CoMaeCKDB0/ECBOVWjTwUvPQ==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+-    "node_modules/is-plain-obj": {
+-      "version": "2.1.0",
+-      "resolved": "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-2.1.0.tgz",
+-      "integrity": "sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+     "node_modules/is-promise": {
+       "version": "4.0.0",
+       "resolved": "https://registry.npmjs.org/is-promise/-/is-promise-4.0.0.tgz",
+       "integrity": "sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==",
+       "license": "MIT"
+     },
+-    "node_modules/is-unicode-supported": {
+-      "version": "0.1.0",
+-      "resolved": "https://registry.npmjs.org/is-unicode-supported/-/is-unicode-supported-0.1.0.tgz",
+-      "integrity": "sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+     "node_modules/isarray": {
+       "version": "0.0.1",
+       "resolved": "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz",
+       "integrity": "sha512-D2S+3GLxWH+uhrNEcoh/fnmYeP8E8/zHl644d/jdA0g2uyXvy3sb0qxotE+ne0LtccHknQzWwZEzhak7oJ0COQ==",
+       "license": "MIT"
+     },
+-    "node_modules/isexe": {
+-      "version": "2.0.0",
+-      "resolved": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
+-      "integrity": "sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==",
+-      "dev": true,
+-      "license": "ISC"
+-    },
+-    "node_modules/jackspeak": {
+-      "version": "3.4.3",
+-      "resolved": "https://registry.npmjs.org/jackspeak/-/jackspeak-3.4.3.tgz",
+-      "integrity": "sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==",
+-      "dev": true,
+-      "license": "BlueOak-1.0.0",
+-      "dependencies": {
+-        "@isaacs/cliui": "^8.0.2"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/isaacs"
+-      },
+-      "optionalDependencies": {
+-        "@pkgjs/parseargs": "^0.11.0"
+-      }
+-    },
+-    "node_modules/js-yaml": {
+-      "version": "4.1.1",
+-      "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz",
+-      "integrity": "sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "argparse": "^2.0.1"
+-      },
+-      "bin": {
+-        "js-yaml": "bin/js-yaml.js"
+-      }
+-    },
+-    "node_modules/locate-path": {
+-      "version": "6.0.0",
+-      "resolved": "https://registry.npmjs.org/locate-path/-/locate-path-6.0.0.tgz",
+-      "integrity": "sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "p-locate": "^5.0.0"
+-      },
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+     "node_modules/lodash": {
+       "version": "4.17.23",
+       "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.23.tgz",
+       "integrity": "sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==",
+       "license": "MIT"
+     },
+-    "node_modules/log-symbols": {
+-      "version": "4.1.0",
+-      "resolved": "https://registry.npmjs.org/log-symbols/-/log-symbols-4.1.0.tgz",
+-      "integrity": "sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "chalk": "^4.1.0",
+-        "is-unicode-supported": "^0.1.0"
+-      },
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+-    "node_modules/loupe": {
+-      "version": "2.3.7",
+-      "resolved": "https://registry.npmjs.org/loupe/-/loupe-2.3.7.tgz",
+-      "integrity": "sha512-zSMINGVYkdpYSOBmLi0D1Uo7JU9nVdQKrHxC8eYlV+9YKK9WePqAlL7lSlorG/U2Fw1w0hTBmaa/jrQ3UbPHtA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "get-func-name": "^2.0.1"
+-      }
+-    },
+-    "node_modules/lru-cache": {
+-      "version": "10.4.3",
+-      "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz",
+-      "integrity": "sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==",
+-      "dev": true,
+-      "license": "ISC"
+-    },
+     "node_modules/make-error": {
+       "version": "1.3.6",
+       "resolved": "https://registry.npmjs.org/make-error/-/make-error-1.3.6.tgz",
+@@ -1849,79 +1243,6 @@
+         "url": "https://opencollective.com/express"
+       }
+     },
+-    "node_modules/minimatch": {
+-      "version": "9.0.5",
+-      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-9.0.5.tgz",
+-      "integrity": "sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==",
+-      "dev": true,
+-      "license": "ISC",
+-      "dependencies": {
+-        "brace-expansion": "^2.0.1"
+-      },
+-      "engines": {
+-        "node": ">=16 || 14 >=14.17"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/isaacs"
+-      }
+-    },
+-    "node_modules/minipass": {
+-      "version": "7.1.2",
+-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz",
+-      "integrity": "sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==",
+-      "dev": true,
+-      "license": "ISC",
+-      "engines": {
+-        "node": ">=16 || 14 >=14.17"
+-      }
+-    },
+-    "node_modules/mocha": {
+-      "version": "11.7.5",
+-      "resolved": "https://registry.npmjs.org/mocha/-/mocha-11.7.5.tgz",
+-      "integrity": "sha512-mTT6RgopEYABzXWFx+GcJ+ZQ32kp4fMf0xvpZIIfSq9Z8lC/++MtcCnQ9t5FP2veYEP95FIYSvW+U9fV4xrlig==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "browser-stdout": "^1.3.1",
+-        "chokidar": "^4.0.1",
+-        "debug": "^4.3.5",
+-        "diff": "^7.0.0",
+-        "escape-string-regexp": "^4.0.0",
+-        "find-up": "^5.0.0",
+-        "glob": "^10.4.5",
+-        "he": "^1.2.0",
+-        "is-path-inside": "^3.0.3",
+-        "js-yaml": "^4.1.0",
+-        "log-symbols": "^4.1.0",
+-        "minimatch": "^9.0.5",
+-        "ms": "^2.1.3",
+-        "picocolors": "^1.1.1",
+-        "serialize-javascript": "^6.0.2",
+-        "strip-json-comments": "^3.1.1",
+-        "supports-color": "^8.1.1",
+-        "workerpool": "^9.2.0",
+-        "yargs": "^17.7.2",
+-        "yargs-parser": "^21.1.1",
+-        "yargs-unparser": "^2.0.0"
+-      },
+-      "bin": {
+-        "_mocha": "bin/_mocha",
+-        "mocha": "bin/mocha.js"
+-      },
+-      "engines": {
+-        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+-      }
+-    },
+-    "node_modules/mocha/node_modules/diff": {
+-      "version": "7.0.0",
+-      "resolved": "https://registry.npmjs.org/diff/-/diff-7.0.0.tgz",
+-      "integrity": "sha512-PJWHUb1RFevKCwaFA9RlG5tCd+FO5iRh9A8HEtkmBH2Li03iJriB6m6JIN4rGz3K3JLawI7/veA1xzRKP6ISBw==",
+-      "dev": true,
+-      "license": "BSD-3-Clause",
+-      "engines": {
+-        "node": ">=0.3.1"
+-      }
+-    },
+     "node_modules/ms": {
+       "version": "2.1.3",
+       "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
+@@ -2000,45 +1321,6 @@
+         "wordwrap": "~0.0.2"
+       }
+     },
+-    "node_modules/p-limit": {
+-      "version": "3.1.0",
+-      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-3.1.0.tgz",
+-      "integrity": "sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "yocto-queue": "^0.1.0"
+-      },
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+-    "node_modules/p-locate": {
+-      "version": "5.0.0",
+-      "resolved": "https://registry.npmjs.org/p-locate/-/p-locate-5.0.0.tgz",
+-      "integrity": "sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "p-limit": "^3.0.2"
+-      },
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+-    "node_modules/package-json-from-dist": {
+-      "version": "1.0.1",
+-      "resolved": "https://registry.npmjs.org/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz",
+-      "integrity": "sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==",
+-      "dev": true,
+-      "license": "BlueOak-1.0.0"
+-    },
+     "node_modules/parseurl": {
+       "version": "1.3.3",
+       "resolved": "https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz",
+@@ -2048,43 +1330,6 @@
+         "node": ">= 0.8"
+       }
+     },
+-    "node_modules/path-exists": {
+-      "version": "4.0.0",
+-      "resolved": "https://registry.npmjs.org/path-exists/-/path-exists-4.0.0.tgz",
+-      "integrity": "sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+-    "node_modules/path-key": {
+-      "version": "3.1.1",
+-      "resolved": "https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz",
+-      "integrity": "sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+-    "node_modules/path-scurry": {
+-      "version": "1.11.1",
+-      "resolved": "https://registry.npmjs.org/path-scurry/-/path-scurry-1.11.1.tgz",
+-      "integrity": "sha512-Xa4Nw17FS9ApQFJ9umLiJS4orGjm7ZzwUrwamcGQuHSzDyth9boKDaycYdDcZDuqYATXw4HFXgaqWTctW/v1HA==",
+-      "dev": true,
+-      "license": "BlueOak-1.0.0",
+-      "dependencies": {
+-        "lru-cache": "^10.2.0",
+-        "minipass": "^5.0.0 || ^6.0.2 || ^7.0.0"
+-      },
+-      "engines": {
+-        "node": ">=16 || 14 >=14.18"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/isaacs"
+-      }
+-    },
+     "node_modules/path-to-regexp": {
+       "version": "8.3.0",
+       "resolved": "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-8.3.0.tgz",
+@@ -2092,25 +1337,8 @@
+       "license": "MIT",
+       "funding": {
+         "type": "opencollective",
+-        "url": "https://opencollective.com/express"
+-      }
+-    },
+-    "node_modules/pathval": {
+-      "version": "1.1.1",
+-      "resolved": "https://registry.npmjs.org/pathval/-/pathval-1.1.1.tgz",
+-      "integrity": "sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": "*"
+-      }
+-    },
+-    "node_modules/picocolors": {
+-      "version": "1.1.1",
+-      "resolved": "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz",
+-      "integrity": "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==",
+-      "dev": true,
+-      "license": "ISC"
++        "url": "https://opencollective.com/express"
++      }
+     },
+     "node_modules/picture-tuber": {
+       "version": "1.0.2",
+@@ -2176,16 +1404,6 @@
+         "url": "https://github.com/sponsors/ljharb"
+       }
+     },
+-    "node_modules/randombytes": {
+-      "version": "2.1.0",
+-      "resolved": "https://registry.npmjs.org/randombytes/-/randombytes-2.1.0.tgz",
+-      "integrity": "sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "safe-buffer": "^5.1.0"
+-      }
+-    },
+     "node_modules/range-parser": {
+       "version": "1.2.1",
+       "resolved": "https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.tgz",
+@@ -2222,20 +1440,6 @@
+         "string_decoder": "~0.10.x"
+       }
+     },
+-    "node_modules/readdirp": {
+-      "version": "4.1.2",
+-      "resolved": "https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz",
+-      "integrity": "sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">= 14.18.0"
+-      },
+-      "funding": {
+-        "type": "individual",
+-        "url": "https://paulmillr.com/funding/"
+-      }
+-    },
+     "node_modules/redeyed": {
+       "version": "2.1.1",
+       "resolved": "https://registry.npmjs.org/redeyed/-/redeyed-2.1.1.tgz",
+@@ -2245,16 +1449,6 @@
+         "esprima": "~4.0.0"
+       }
+     },
+-    "node_modules/require-directory": {
+-      "version": "2.1.1",
+-      "resolved": "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz",
+-      "integrity": "sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=0.10.0"
+-      }
+-    },
+     "node_modules/retry": {
+       "version": "0.12.0",
+       "resolved": "https://registry.npmjs.org/retry/-/retry-0.12.0.tgz",
+@@ -2280,27 +1474,6 @@
+         "node": ">= 18"
+       }
+     },
+-    "node_modules/safe-buffer": {
+-      "version": "5.2.1",
+-      "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz",
+-      "integrity": "sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==",
+-      "dev": true,
+-      "funding": [
+-        {
+-          "type": "github",
+-          "url": "https://github.com/sponsors/feross"
+-        },
+-        {
+-          "type": "patreon",
+-          "url": "https://www.patreon.com/feross"
+-        },
+-        {
+-          "type": "consulting",
+-          "url": "https://feross.org/support"
+-        }
+-      ],
+-      "license": "MIT"
+-    },
+     "node_modules/safer-buffer": {
+       "version": "2.1.2",
+       "resolved": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
+@@ -2342,16 +1515,6 @@
+         "url": "https://opencollective.com/express"
+       }
+     },
+-    "node_modules/serialize-javascript": {
+-      "version": "6.0.2",
+-      "resolved": "https://registry.npmjs.org/serialize-javascript/-/serialize-javascript-6.0.2.tgz",
+-      "integrity": "sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==",
+-      "dev": true,
+-      "license": "BSD-3-Clause",
+-      "dependencies": {
+-        "randombytes": "^2.1.0"
+-      }
+-    },
+     "node_modules/serve-static": {
+       "version": "2.2.1",
+       "resolved": "https://registry.npmjs.org/serve-static/-/serve-static-2.2.1.tgz",
+@@ -2377,29 +1540,6 @@
+       "integrity": "sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==",
+       "license": "ISC"
+     },
+-    "node_modules/shebang-command": {
+-      "version": "2.0.0",
+-      "resolved": "https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz",
+-      "integrity": "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "shebang-regex": "^3.0.0"
+-      },
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+-    "node_modules/shebang-regex": {
+-      "version": "3.0.0",
+-      "resolved": "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz",
+-      "integrity": "sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+     "node_modules/side-channel": {
+       "version": "1.1.0",
+       "resolved": "https://registry.npmjs.org/side-channel/-/side-channel-1.1.0.tgz",
+@@ -2547,29 +1687,9 @@
+       "license": "MIT"
+     },
+     "node_modules/string-width": {
+-      "version": "5.1.2",
+-      "resolved": "https://registry.npmjs.org/string-width/-/string-width-5.1.2.tgz",
+-      "integrity": "sha512-HnLOCR3vjcY8beoNLtcjZ5/nxn2afmME6lhrDrebokqMap+XbeW8n9TXpPDOqdGK5qcI3oT0GKTW6wC7EMiVqA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "eastasianwidth": "^0.2.0",
+-        "emoji-regex": "^9.2.2",
+-        "strip-ansi": "^7.0.1"
+-      },
+-      "engines": {
+-        "node": ">=12"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+-    "node_modules/string-width-cjs": {
+-      "name": "string-width",
+       "version": "4.2.3",
+       "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+       "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
+-      "dev": true,
+       "license": "MIT",
+       "dependencies": {
+         "emoji-regex": "^8.0.0",
+@@ -2580,42 +1700,6 @@
+         "node": ">=8"
+       }
+     },
+-    "node_modules/string-width-cjs/node_modules/emoji-regex": {
+-      "version": "8.0.0",
+-      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+-      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==",
+-      "dev": true,
+-      "license": "MIT"
+-    },
+-    "node_modules/string-width/node_modules/ansi-regex": {
+-      "version": "6.2.2",
+-      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz",
+-      "integrity": "sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=12"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/ansi-regex?sponsor=1"
+-      }
+-    },
+-    "node_modules/string-width/node_modules/strip-ansi": {
+-      "version": "7.1.2",
+-      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz",
+-      "integrity": "sha512-gmBGslpoQJtgnMAvOVqGZpEz9dyoKTCzy2nfz/n8aIFhN/jCE/rCmcxabB6jOOHV+0WNnylOxaxBQPSvcWklhA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "ansi-regex": "^6.0.1"
+-      },
+-      "engines": {
+-        "node": ">=12"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/strip-ansi?sponsor=1"
+-      }
+-    },
+     "node_modules/strip-ansi": {
+       "version": "6.0.1",
+       "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
+@@ -2628,47 +1712,13 @@
+         "node": ">=8"
+       }
+     },
+-    "node_modules/strip-ansi-cjs": {
+-      "name": "strip-ansi",
+-      "version": "6.0.1",
+-      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
+-      "integrity": "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "ansi-regex": "^5.0.1"
+-      },
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+-    "node_modules/strip-json-comments": {
+-      "version": "3.1.1",
+-      "resolved": "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz",
+-      "integrity": "sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=8"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+     "node_modules/supports-color": {
+-      "version": "8.1.1",
+-      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-8.1.1.tgz",
+-      "integrity": "sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==",
+-      "dev": true,
++      "version": "2.0.0",
++      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz",
++      "integrity": "sha512-KKNVtd6pCYgPIKU4cp2733HWYCpplQhddZLBUryaAHou723x+FRzQ5Df824Fj+IyyuiQTRoub4SnIFfIcrp70g==",
+       "license": "MIT",
+-      "dependencies": {
+-        "has-flag": "^4.0.0"
+-      },
+       "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/supports-color?sponsor=1"
++        "node": ">=0.8.0"
+       }
+     },
+     "node_modules/supports-hyperlinks": {
+@@ -2754,16 +1804,6 @@
+         }
+       }
+     },
+-    "node_modules/type-detect": {
+-      "version": "4.1.0",
+-      "resolved": "https://registry.npmjs.org/type-detect/-/type-detect-4.1.0.tgz",
+-      "integrity": "sha512-Acylog8/luQ8L7il+geoSxhEkazvkslg7PSNKOX59mbB9cOveP5aq9h74Y7YU8yDpJwetzQQrfIwtf4Wp4LKcw==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=4"
+-      }
+-    },
+     "node_modules/type-is": {
+       "version": "2.0.1",
+       "resolved": "https://registry.npmjs.org/type-is/-/type-is-2.0.1.tgz",
+@@ -2823,22 +1863,6 @@
+         "node": ">= 0.8"
+       }
+     },
+-    "node_modules/which": {
+-      "version": "2.0.2",
+-      "resolved": "https://registry.npmjs.org/which/-/which-2.0.2.tgz",
+-      "integrity": "sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==",
+-      "dev": true,
+-      "license": "ISC",
+-      "dependencies": {
+-        "isexe": "^2.0.0"
+-      },
+-      "bin": {
+-        "node-which": "bin/node-which"
+-      },
+-      "engines": {
+-        "node": ">= 8"
+-      }
+-    },
+     "node_modules/wordwrap": {
+       "version": "0.0.3",
+       "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz",
+@@ -2848,114 +1872,6 @@
+         "node": ">=0.4.0"
+       }
+     },
+-    "node_modules/workerpool": {
+-      "version": "9.3.4",
+-      "resolved": "https://registry.npmjs.org/workerpool/-/workerpool-9.3.4.tgz",
+-      "integrity": "sha512-TmPRQYYSAnnDiEB0P/Ytip7bFGvqnSU6I2BcuSw7Hx+JSg/DsUi5ebYfc8GYaSdpuvOcEs6dXxPurOYpe9QFwg==",
+-      "dev": true,
+-      "license": "Apache-2.0"
+-    },
+-    "node_modules/wrap-ansi": {
+-      "version": "8.1.0",
+-      "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz",
+-      "integrity": "sha512-si7QWI6zUMq56bESFvagtmzMdGOtoxfR+Sez11Mobfc7tm+VkUckk9bW2UeffTGVUbOksxmSw0AA2gs8g71NCQ==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "ansi-styles": "^6.1.0",
+-        "string-width": "^5.0.1",
+-        "strip-ansi": "^7.0.1"
+-      },
+-      "engines": {
+-        "node": ">=12"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/wrap-ansi?sponsor=1"
+-      }
+-    },
+-    "node_modules/wrap-ansi-cjs": {
+-      "name": "wrap-ansi",
+-      "version": "7.0.0",
+-      "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz",
+-      "integrity": "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "ansi-styles": "^4.0.0",
+-        "string-width": "^4.1.0",
+-        "strip-ansi": "^6.0.0"
+-      },
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/wrap-ansi?sponsor=1"
+-      }
+-    },
+-    "node_modules/wrap-ansi-cjs/node_modules/emoji-regex": {
+-      "version": "8.0.0",
+-      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+-      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==",
+-      "dev": true,
+-      "license": "MIT"
+-    },
+-    "node_modules/wrap-ansi-cjs/node_modules/string-width": {
+-      "version": "4.2.3",
+-      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+-      "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "emoji-regex": "^8.0.0",
+-        "is-fullwidth-code-point": "^3.0.0",
+-        "strip-ansi": "^6.0.1"
+-      },
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+-    "node_modules/wrap-ansi/node_modules/ansi-regex": {
+-      "version": "6.2.2",
+-      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.2.2.tgz",
+-      "integrity": "sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=12"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/ansi-regex?sponsor=1"
+-      }
+-    },
+-    "node_modules/wrap-ansi/node_modules/ansi-styles": {
+-      "version": "6.2.3",
+-      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.3.tgz",
+-      "integrity": "sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=12"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/ansi-styles?sponsor=1"
+-      }
+-    },
+-    "node_modules/wrap-ansi/node_modules/strip-ansi": {
+-      "version": "7.1.2",
+-      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.2.tgz",
+-      "integrity": "sha512-gmBGslpoQJtgnMAvOVqGZpEz9dyoKTCzy2nfz/n8aIFhN/jCE/rCmcxabB6jOOHV+0WNnylOxaxBQPSvcWklhA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "ansi-regex": "^6.0.1"
+-      },
+-      "engines": {
+-        "node": ">=12"
+-      },
+-      "funding": {
+-        "url": "https://github.com/chalk/strip-ansi?sponsor=1"
+-      }
+-    },
+     "node_modules/wrappy": {
+       "version": "1.0.2",
+       "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+@@ -3005,83 +1921,6 @@
+         "node": ">=4.0"
+       }
+     },
+-    "node_modules/y18n": {
+-      "version": "5.0.8",
+-      "resolved": "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz",
+-      "integrity": "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==",
+-      "dev": true,
+-      "license": "ISC",
+-      "engines": {
+-        "node": ">=10"
+-      }
+-    },
+-    "node_modules/yargs": {
+-      "version": "17.7.2",
+-      "resolved": "https://registry.npmjs.org/yargs/-/yargs-17.7.2.tgz",
+-      "integrity": "sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "cliui": "^8.0.1",
+-        "escalade": "^3.1.1",
+-        "get-caller-file": "^2.0.5",
+-        "require-directory": "^2.1.1",
+-        "string-width": "^4.2.3",
+-        "y18n": "^5.0.5",
+-        "yargs-parser": "^21.1.1"
+-      },
+-      "engines": {
+-        "node": ">=12"
+-      }
+-    },
+-    "node_modules/yargs-parser": {
+-      "version": "21.1.1",
+-      "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.1.1.tgz",
+-      "integrity": "sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==",
+-      "dev": true,
+-      "license": "ISC",
+-      "engines": {
+-        "node": ">=12"
+-      }
+-    },
+-    "node_modules/yargs-unparser": {
+-      "version": "2.0.0",
+-      "resolved": "https://registry.npmjs.org/yargs-unparser/-/yargs-unparser-2.0.0.tgz",
+-      "integrity": "sha512-7pRTIA9Qc1caZ0bZ6RYRGbHJthJWuakf+WmHK0rVeLkNrrGhfoabBNdue6kdINI6r4if7ocq9aD/n7xwKOdzOA==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "camelcase": "^6.0.0",
+-        "decamelize": "^4.0.0",
+-        "flat": "^5.0.2",
+-        "is-plain-obj": "^2.1.0"
+-      },
+-      "engines": {
+-        "node": ">=10"
+-      }
+-    },
+-    "node_modules/yargs/node_modules/emoji-regex": {
+-      "version": "8.0.0",
+-      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+-      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==",
+-      "dev": true,
+-      "license": "MIT"
+-    },
+-    "node_modules/yargs/node_modules/string-width": {
+-      "version": "4.2.3",
+-      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+-      "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
+-      "dev": true,
+-      "license": "MIT",
+-      "dependencies": {
+-        "emoji-regex": "^8.0.0",
+-        "is-fullwidth-code-point": "^3.0.0",
+-        "strip-ansi": "^6.0.1"
+-      },
+-      "engines": {
+-        "node": ">=8"
+-      }
+-    },
+     "node_modules/yn": {
+       "version": "3.1.1",
+       "resolved": "https://registry.npmjs.org/yn/-/yn-3.1.1.tgz",
+@@ -3092,19 +1931,6 @@
+         "node": ">=6"
+       }
+     },
+-    "node_modules/yocto-queue": {
+-      "version": "0.1.0",
+-      "resolved": "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz",
+-      "integrity": "sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==",
+-      "dev": true,
+-      "license": "MIT",
+-      "engines": {
+-        "node": ">=10"
+-      },
+-      "funding": {
+-        "url": "https://github.com/sponsors/sindresorhus"
+-      }
+-    },
+     "node_modules/zod": {
+       "version": "3.25.76",
+       "resolved": "https://registry.npmjs.org/zod/-/zod-3.25.76.tgz",
+diff --git a/package.json b/package.json
+index e888dac..8370926 100644
+--- a/package.json
++++ b/package.json
+@@ -15,7 +15,7 @@
+   ],
+   "scripts": {
+     "build": "tsc",
+-    "test": "mocha -r ts-node/register 'test/**/*.test.ts'",
++    "test": "echo \"Error: no test specified\" && exit 1",
+     "cli": "ts-node src/cli.ts",
+     "start": "node dist/cli.js",
+     "prepublishOnly": "npm run build",
+@@ -40,12 +40,8 @@
+     "zod": "^3.25.76"
+   },
+   "devDependencies": {
+-    "@types/chai": "^4.3.20",
+-    "@types/mocha": "^10.0.10",
+     "@types/node": "^25.0.10",
+     "@types/proper-lockfile": "^4.1.4",
+-    "chai": "^4.5.0",
+-    "mocha": "^11.7.5",
+     "ts-node": "^10.9.2",
+     "typescript": "^5.9.3"
+   }
+diff --git a/src/cli.ts b/src/cli.ts
+index 4dfe65f..fabf0c4 100644
+--- a/src/cli.ts
++++ b/src/cli.ts
+@@ -5,20 +5,15 @@ import { ConfigManager } from './core/config';
+ import { StorageManager } from './core/storage';
+ import { AuthProvider, ManagedAccount, OAuthTokens } from './core/types';
+ import { extractQuota, getCooldownStatus } from './core/quota-manager';
+-import * as fs from 'fs';
+-import * as path from 'path';
+-import { execSync } from 'child_process';
+-
+-import { AnthropicProvider } from './providers/anthropic';
+-import { GeminiProvider } from './providers/gemini';
+-import { syncToGitHub } from './utils/github-sync';
+-import { runOnboardingWizard } from './utils/wizard';
+-import { startDashboard } from './ui/dashboard';
+-import { startServer } from './server/index';
+-import { DialecticsEngine } from './core/dialectics';
+-import { getProviderEndpoint } from './core/endpoints';
++
++ import { AnthropicProvider } from './providers/anthropic';
++ import { GeminiProvider } from './providers/gemini';
++ import { syncToGitHub } from './utils/github-sync';
++ import { runOnboardingWizard } from './utils/wizard';
++ import { startDashboard } from './ui/dashboard';
++ import { startServer } from './server/index';
+
+-async function main() {
++ async function main() {
+
+   const configManager = new ConfigManager();
+   const config = configManager.loadConfig();
+@@ -218,8 +213,7 @@ async function main() {
+     program.command('sync')
+       .description('Sync all accounts to a GitHub repository secrets')
+       .argument('<repo>', 'Target repository (owner/repo)')
+-      .argument('[token]', 'GitHub Personal Access Token (optional, reads from GITHUB_TOKEN env)')
+-      .action(async (repo, token) => {
++      .action(async (repo) => {
+         await monster.init();
+         const accounts = monster.getAccounts();
+         if (accounts.length === 0) {
+@@ -227,8 +221,9 @@ async function main() {
+           return;
+         }
+         try {
+-          await syncToGitHub(repo, accounts, token);
++          await syncToGitHub(repo, accounts);
+         } catch (err: any) {
++          // Error already logged in syncToGitHub
+           process.exit(1);
+         }
+       });
+@@ -306,142 +301,6 @@ async function main() {
+         startServer(monster, parseInt(options.port));
+       });
+
+-    program.command('dialectics')
+-      .description('Run a dialectics session: split prompt between two models and synthesize.')
+-      .argument('<prompt>', 'The prompt to process')
+-      .option('-a, --model-a <model>', 'First model', 'gemini-3-flash-preview')
+-      .option('-b, --model-b <model>', 'Second model', 'claude-3-7-sonnet-20250219')
+-      .option('-s, --synthesizer <model>', 'Synthesizer model', 'gemini-3-pro-preview')
+-      .action(async (prompt, options) => {
+-          await monster.init();
+-          const engine = new DialecticsEngine(monster);
+-          try {
+-              const result = await engine.synthesize(prompt, options.modelA, options.modelB, options.synthesizer);
+-              console.log('\n=== Synthesis Result ===\n');
+-              console.log(result);
+-          } catch (error) {
+-              console.error('Dialectics failed:', error);
+-              process.exit(1);
+-          }
+-      });
+-
+-    program.command('install-hook')
+-      .description('Install the prepare-commit-msg git hook')
+-      .action(() => {
+-          const gitDir = path.resolve(process.cwd(), '.git');
+-          if (!fs.existsSync(gitDir)) {
+-              console.error('Error: .git directory not found. Are you in a git repository?');
+-              process.exit(1);
+-          }
+-
+-          const hooksDir = path.join(gitDir, 'hooks');
+-          if (!fs.existsSync(hooksDir)) {
+-              fs.mkdirSync(hooksDir, { recursive: true });
+-          }
+-
+-          const hookPath = path.join(hooksDir, 'prepare-commit-msg');
+-
+-          // Determine path to the script
+-          const isTs = __filename.endsWith('.ts');
+-          let scriptPath;
+-          let runner;
+-
+-          if (isTs) {
+-             scriptPath = path.resolve(__dirname, 'scripts/git-hook.ts');
+-             runner = 'npx ts-node';
+-          } else {
+-             scriptPath = path.resolve(__dirname, 'scripts/git-hook.js');
+-             runner = 'node';
+-          }
+-
+-          const hookContent = `#!/bin/sh
+-# OpenCode Auth Monster Hook
+-${runner} "${scriptPath}" "$@"
+-`;
+-
+-          fs.writeFileSync(hookPath, hookContent, { mode: 0o755 });
+-          console.log(`Hook installed at ${hookPath}`);
+-      });
+-
+-    program.command('review')
+-      .description('Perform a code review on a file or git diff')
+-      .argument('[file]', 'File to review (if omitted, reviews staged git diff)')
+-      .option('-m, --model <model>', 'Model to use', 'claude-4.5-opus-thinking')
+-      .action(async (file, options) => {
+-          await monster.init();
+-
+-          let content = '';
+-          if (file) {
+-              try {
+-                  content = fs.readFileSync(file, 'utf-8');
+-              } catch (e) {
+-                  console.error(`Could not read file: ${file}`);
+-                  process.exit(1);
+-              }
+-          } else {
+-              try {
+-                  content = execSync('git diff --cached').toString();
+-                  if (!content.trim()) {
+-                      console.log('No staged changes to review.');
+-                      return;
+-                  }
+-              } catch (e) {
+-                  console.error('Error getting git diff. Are you in a git repo?');
+-                  process.exit(1);
+-              }
+-          }
+-
+-          const prompt = `Please review the following code changes.
+-          Focus on:
+-          1. Bugs and potential runtime errors.
+-          2. Security vulnerabilities.
+-          3. Code style and best practices.
+-          4. Performance improvements.
+-
+-          Code/Diff:
+-          ${content.substring(0, 10000)}
+-          `;
+-
+-          const details = await monster.getAuthDetails(options.model);
+-          if (!details) {
+-              console.error(`Could not resolve model: ${options.model}`);
+-              process.exit(1);
+-          }
+-
+-          // Use getProviderEndpoint utility
+-          const url = getProviderEndpoint(details.provider, details.account, details.modelInProvider);
+-
+-          console.log(`Reviewing with ${options.model}...`);
+-          try {
+-             const response = await monster.request(options.model, url, {
+-                  method: 'POST',
+-                  headers: { 'Content-Type': 'application/json' },
+-                  body: {
+-                      messages: [{ role: 'user', content: prompt }],
+-                      model: details.modelInProvider,
+-                      temperature: 0.2
+-                  }
+-             });
+-
+-             const json = await response.json() as any;
+-             let review = '';
+-
+-             if (details.provider === AuthProvider.Gemini) {
+-                 review = json.candidates?.[0]?.content?.parts?.[0]?.text;
+-             } else if (details.provider === AuthProvider.Anthropic) {
+-                 review = json.content?.[0]?.text;
+-             } else {
+-                 review = json.choices?.[0]?.message?.content;
+-             }
+-
+-             console.log('\n=== Code Review ===\n');
+-             console.log(review || 'No review generated or error parsing response.');
+-
+-          } catch (error) {
+-              console.error('Review failed:', error);
+-          }
+-      });
+-
+     await program.parseAsync(process.argv);
+
+ }
+diff --git a/src/core/cost-estimator.ts b/src/core/cost-estimator.ts
+deleted file mode 100644
+index b262aab..0000000
+--- a/src/core/cost-estimator.ts
++++ /dev/null
+@@ -1,62 +0,0 @@
+-export interface ModelPricing {
+-  inputCostPer1M: number;
+-  outputCostPer1M: number;
+-}
+-
+-const DEFAULT_PRICING: ModelPricing = { inputCostPer1M: 0, outputCostPer1M: 0 };
+-
+-const PRICING_TABLE: Record<string, ModelPricing> = {
+-  // Gemini
+-  'gemini-1.5-flash': { inputCostPer1M: 0.075, outputCostPer1M: 0.30 },
+-  'gemini-1.5-pro': { inputCostPer1M: 3.50, outputCostPer1M: 10.50 },
+-  'gemini-2.0-flash': { inputCostPer1M: 0.10, outputCostPer1M: 0.40 }, // Estimated
+-
+-  // Anthropic
+-  'claude-3-5-sonnet': { inputCostPer1M: 3.00, outputCostPer1M: 15.00 },
+-  'claude-3-haiku': { inputCostPer1M: 0.25, outputCostPer1M: 1.25 },
+-  'claude-3-opus': { inputCostPer1M: 15.00, outputCostPer1M: 75.00 },
+-  'claude-4.5-opus-thinking': { inputCostPer1M: 20.00, outputCostPer1M: 100.00 }, // Estimated
+-
+-  // OpenAI
+-  'gpt-4o': { inputCostPer1M: 5.00, outputCostPer1M: 15.00 },
+-  'gpt-4o-mini': { inputCostPer1M: 0.15, outputCostPer1M: 0.60 },
+-  'o1-preview': { inputCostPer1M: 15.00, outputCostPer1M: 60.00 },
+-  'o1-mini': { inputCostPer1M: 3.00, outputCostPer1M: 12.00 },
+-
+-  // Generic Fallbacks
+-  'gpt-4': { inputCostPer1M: 30.00, outputCostPer1M: 60.00 },
+-  'gpt-3.5-turbo': { inputCostPer1M: 0.50, outputCostPer1M: 1.50 },
+-  'gpt-5.2-pro': { inputCostPer1M: 10.00, outputCostPer1M: 30.00 },
+-};
+-
+-export class CostEstimator {
+-  /**
+-   * Calculates the cost in USD for a given model and token usage.
+-   */
+-  static calculateCost(model: string, inputTokens: number, outputTokens: number): number {
+-    const pricing = this.getPricing(model);
+-    const inputCost = (inputTokens / 1_000_000) * pricing.inputCostPer1M;
+-    const outputCost = (outputTokens / 1_000_000) * pricing.outputCostPer1M;
+-    return inputCost + outputCost;
+-  }
+-
+-  /**
+-   * Estimates token count based on character count (heuristic: ~4 chars per token).
+-   */
+-  static estimateTokens(text: string): number {
+-    if (!text) return 0;
+-    return Math.ceil(text.length / 4);
+-  }
+-
+-  private static getPricing(model: string): ModelPricing {
+-    // Exact match
+-    if (PRICING_TABLE[model]) return PRICING_TABLE[model];
+-
+-    // Fuzzy match / Substring match
+-    // e.g. "claude-3-5-sonnet-20241022" should match "claude-3-5-sonnet"
+-    const key = Object.keys(PRICING_TABLE).find(k => model.includes(k));
+-    if (key) return PRICING_TABLE[key];
+-
+-    return DEFAULT_PRICING;
+-  }
+-}
+diff --git a/src/core/dialectics.ts b/src/core/dialectics.ts
+deleted file mode 100644
+index 357986c..0000000
+--- a/src/core/dialectics.ts
++++ /dev/null
+@@ -1,103 +0,0 @@
+-import { AuthProvider } from './types';
+-import { getProviderEndpoint } from './endpoints';
+-
+-export interface IAuthMonster {
+-  request(model: string, url: string, options: any): Promise<Response>;
+-  getAuthDetails(modelOrProvider?: string | AuthProvider): Promise<any>;
+-}
+-
+-export class DialecticsEngine {
+-  constructor(private monster: IAuthMonster) {}
+-
+-  async synthesize(prompt: string, modelA: string, modelB: string, synthesizerModel: string): Promise<string> {
+-    // 1. Get Details and URLs
+-    const detailsA = await this.monster.getAuthDetails(modelA);
+-    const detailsB = await this.monster.getAuthDetails(modelB);
+-
+-    if (!detailsA) throw new Error(`Could not resolve model: ${modelA}`);
+-    if (!detailsB) throw new Error(`Could not resolve model: ${modelB}`);
+-
+-    const urlA = getProviderEndpoint(detailsA.provider, detailsA.account, detailsA.modelInProvider);
+-    const urlB = getProviderEndpoint(detailsB.provider, detailsB.account, detailsB.modelInProvider);
+-
+-    // 2. Prepare Requests
+-    const body = {
+-        messages: [{ role: 'user', content: prompt }],
+-        model: detailsA.modelInProvider, // Some providers need model in body
+-        temperature: 0.7
+-    };
+-    const bodyB = {
+-        messages: [{ role: 'user', content: prompt }],
+-        model: detailsB.modelInProvider,
+-        temperature: 0.7
+-    };
+-
+-    // 3. Send Requests
+-    console.log(`[Dialectics] Sending to ${modelA} (${detailsA.provider}) and ${modelB} (${detailsB.provider})...`);
+-
+-    const [resA, resB] = await Promise.all([
+-        this.monster.request(modelA, urlA, {
+-            method: 'POST',
+-            headers: { 'Content-Type': 'application/json' },
+-            body: body
+-        }).then(r => r.json().catch(e => ({ error: 'JSON Parse Error', details: e }))),
+-
+-        this.monster.request(modelB, urlB, {
+-            method: 'POST',
+-            headers: { 'Content-Type': 'application/json' },
+-            body: bodyB
+-        }).then(r => r.json().catch(e => ({ error: 'JSON Parse Error', details: e })))
+-    ]);
+-
+-    // 4. Extract Content
+-    const contentA = this.extractContent(detailsA.provider, resA);
+-    const contentB = this.extractContent(detailsB.provider, resB);
+-
+-    // 5. Synthesize
+-    const synthesisPrompt = `
+-I have two responses to the following prompt: "${prompt}"
+-
+-=== Response A (${modelA}) ===
+-${contentA}
+-
+-=== Response B (${modelB}) ===
+-${contentB}
+-
+-Please synthesize these two responses into a single, comprehensive answer.
+-`;
+-
+-    const detailsC = await this.monster.getAuthDetails(synthesizerModel);
+-    if (!detailsC) throw new Error(`Could not resolve synthesizer model: ${synthesizerModel}`);
+-
+-    const urlC = getProviderEndpoint(detailsC.provider, detailsC.account, detailsC.modelInProvider);
+-
+-    console.log(`[Dialectics] Synthesizing with ${synthesizerModel} (${detailsC.provider})...`);
+-
+-    const resC = await this.monster.request(synthesizerModel, urlC, {
+-        method: 'POST',
+-        headers: { 'Content-Type': 'application/json' },
+-        body: {
+-            messages: [{ role: 'user', content: synthesisPrompt }],
+-            model: detailsC.modelInProvider
+-        }
+-    });
+-
+-    const jsonC = await resC.json();
+-    return this.extractContent(detailsC.provider, jsonC);
+-  }
+-
+-  private extractContent(provider: AuthProvider, response: any): string {
+-      if (!response) return "No response";
+-      if (response.error) return `Error: ${JSON.stringify(response.error)}`;
+-
+-      if (provider === AuthProvider.Gemini) {
+-          return response.candidates?.[0]?.content?.parts?.[0]?.text || JSON.stringify(response);
+-      }
+-      if (provider === AuthProvider.Anthropic) {
+-          return response.content?.[0]?.text || JSON.stringify(response);
+-      }
+-
+-      // Default OpenAI structure (used by OpenAI, Grok, DeepSeek, etc.)
+-      return response.choices?.[0]?.message?.content || JSON.stringify(response);
+-  }
+-}
+diff --git a/src/core/endpoints.ts b/src/core/endpoints.ts
+deleted file mode 100644
+index 58c656e..0000000
+--- a/src/core/endpoints.ts
++++ /dev/null
+@@ -1,45 +0,0 @@
+-import { AuthProvider, ManagedAccount } from './types';
+-
+-export function getProviderEndpoint(provider: AuthProvider, account?: ManagedAccount, model?: string): string {
+-  switch (provider) {
+-    case AuthProvider.Anthropic:
+-      return account?.apiKey
+-        ? "https://api.anthropic.com/v1/messages"
+-        : "https://console.anthropic.com/api/v1/messages";
+-    case AuthProvider.Gemini:
+-       // Gemini requires model in URL often
+-       const modelName = model || account?.metadata?.model || 'gemini-2.0-flash';
+-       return `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent`;
+-    case AuthProvider.OpenAI:
+-    case AuthProvider.Copilot: // Copilot is often OpenAI compatible or routed via GitHub
+-      return "https://api.openai.com/v1/chat/completions";
+-    case AuthProvider.Qwen:
+-        return "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions";
+-    case AuthProvider.Zhipu:
+-        return "https://open.bigmodel.cn/api/paas/v4/chat/completions";
+-    case AuthProvider.Minimax:
+-        return "https://api.minimax.chat/v1/text/chatcompletion_v2";
+-
+-    // New Providers
+-    case AuthProvider.DeepSeek:
+-        return "https://api.deepseek.com/chat/completions";
+-    case AuthProvider.Grok:
+-        return "https://api.x.ai/v1/chat/completions";
+-    case AuthProvider.Azure:
+-        if (account?.metadata?.resourceName && account?.metadata?.deploymentId) {
+-            return `https://${account.metadata.resourceName}.openai.azure.com/openai/deployments/${account.metadata.deploymentId}/chat/completions?api-version=2023-05-15`;
+-        }
+-        return "https://api.openai.azure.com/";
+-
+-    // For Cursor and Windsurf, since they use gRPC/Proto and AuthMonster doesn't fully abstract the protocol conversion
+-    // from JSON to Proto for 'request()', we might return a dummy URL or handle it if we knew the JSON proxy.
+-    // For now, we return a URL that might work if there's a JSON bridge, otherwise it might fail.
+-    case AuthProvider.Cursor:
+-       return "https://api2.cursor.sh/llm/chat";
+-    case AuthProvider.Windsurf:
+-        return "https://codeium.com/api/v1/chat";
+-
+-    default:
+-      return "https://api.openai.com/v1/chat/completions";
+-  }
+-}
+diff --git a/src/core/history.ts b/src/core/history.ts
+deleted file mode 100644
+index d132122..0000000
+--- a/src/core/history.ts
++++ /dev/null
+@@ -1,73 +0,0 @@
+-import fs from 'fs';
+-import path from 'path';
+-import { Redactor } from './redactor';
+-
+-export interface HistoryEntry {
+-  timestamp: number;
+-  model: string;
+-  provider: string;
+-  accountId: string;
+-  tokens?: {
+-    input: number;
+-    output: number;
+-  };
+-  cost?: number;
+-  request: any;
+-  response: any;
+-  durationMs: number;
+-  success: boolean;
+-  error?: string;
+-}
+-
+-export class HistoryManager {
+-  private filePath: string;
+-
+-  constructor(storagePath: string) {
+-    this.filePath = path.join(storagePath, 'history.jsonl');
+-  }
+-
+-  async addEntry(entry: Omit<HistoryEntry, 'timestamp'>): Promise<void> {
+-    const fullEntry: HistoryEntry = {
+-      timestamp: Date.now(),
+-      ...entry
+-    };
+-
+-    const redactedEntry = Redactor.redact(fullEntry);
+-    const line = JSON.stringify(redactedEntry) + '\n';
+-
+-    try {
+-      // Ensure directory exists
+-      const dir = path.dirname(this.filePath);
+-      if (!fs.existsSync(dir)) {
+-        await fs.promises.mkdir(dir, { recursive: true });
+-      }
+-
+-      await fs.promises.appendFile(this.filePath, line, 'utf8');
+-    } catch (error) {
+-      console.error('[HistoryManager] Failed to write history:', error);
+-    }
+-  }
+-
+-  // Basic query support (e.g. for replay)
+-  async getRecentEntries(limit: number = 50): Promise<HistoryEntry[]> {
+-    try {
+-        if (!fs.existsSync(this.filePath)) return [];
+-        const content = await fs.promises.readFile(this.filePath, 'utf8');
+-        const lines = content.trim().split('\n');
+-        return lines
+-            .slice(-limit)
+-            .map(line => {
+-                try {
+-                    return JSON.parse(line);
+-                } catch {
+-                    return null;
+-                }
+-            })
+-            .filter((e): e is HistoryEntry => e !== null)
+-            .reverse(); // Newest first
+-    } catch (error) {
+-        console.error('[HistoryManager] Failed to read history:', error);
+-        return [];
+-    }
+-  }
+-}
+diff --git a/src/core/reasoning.ts b/src/core/reasoning.ts
+deleted file mode 100644
+index e0ee0ca..0000000
+--- a/src/core/reasoning.ts
++++ /dev/null
+@@ -1,31 +0,0 @@
+-/**
+- * Enforces reasoning ("thinking") behavior in models by injecting instructions into the system prompt.
+- */
+-export function enforceReasoning(body: any, model?: string): any {
+-    if (!body || typeof body !== 'object') return body;
+-
+-    const reasoningInstruction = "You are a reasoning model. Before answering, you must think step-by-step in a <thinking> block to analyze the user's request, plan your response, and verify your logic. Output the <thinking> block first, then your response.";
+-
+-    const newBody = JSON.parse(JSON.stringify(body)); // Deep copy
+-
+-    // Inject into system prompt (OpenAI/Anthropic style)
+-    if (newBody.messages && Array.isArray(newBody.messages)) {
+-        // Check if system message exists
+-        const systemMsgIndex = newBody.messages.findIndex((m: any) => m.role === 'system');
+-
+-        if (systemMsgIndex > -1) {
+-            const existingContent = newBody.messages[systemMsgIndex].content;
+-            newBody.messages[systemMsgIndex].content = `${existingContent}\n\n${reasoningInstruction}`;
+-        } else {
+-            // Prepend system message
+-            newBody.messages.unshift({ role: 'system', content: reasoningInstruction });
+-        }
+-    }
+-
+-    // Handle Anthropic specific top-level system
+-    if (newBody.system) {
+-         newBody.system = `${newBody.system}\n\n${reasoningInstruction}`;
+-    }
+-
+-    return newBody;
+-}
+diff --git a/src/core/redactor.ts b/src/core/redactor.ts
+deleted file mode 100644
+index 976ab94..0000000
+--- a/src/core/redactor.ts
++++ /dev/null
+@@ -1,57 +0,0 @@
+-export class Redactor {
+-  private static SENSITIVE_HEADERS = new Set([
+-    'authorization',
+-    'x-api-key',
+-    'x-auth-token',
+-    'cookie',
+-    'set-cookie',
+-    'openai-organization',
+-    'anthropic-version'
+-  ]);
+-
+-  private static KEY_PATTERNS = [
+-    /sk-[a-zA-Z0-9]{20,}/g, // OpenAI / Anthropic style
+-    /AIza[a-zA-Z0-9_-]{35}/g, // Google
+-    /ey[a-zA-Z0-9_-]{20,}\.[a-zA-Z0-9_-]{20,}\.[a-zA-Z0-9_-]{20,}/g, // JWT-like
+-    /gh[pousr]-[a-zA-Z0-9]{36}/g // GitHub tokens
+-  ];
+-
+-  /**
+-   * Redacts sensitive information from an object, array, or string.
+-   * Returns a deep copy with sensitive data replaced.
+-   */
+-  static redact(data: any): any {
+-    if (typeof data === 'string') {
+-        return this.redactString(data);
+-    }
+-    if (Array.isArray(data)) {
+-        return data.map(item => this.redact(item));
+-    }
+-    if (typeof data === 'object' && data !== null) {
+-        const copy: any = {};
+-        for (const key in data) {
+-            if (Object.prototype.hasOwnProperty.call(data, key)) {
+-                if (this.SENSITIVE_HEADERS.has(key.toLowerCase())) {
+-                    copy[key] = '[REDACTED]';
+-                } else {
+-                    copy[key] = this.redact(data[key]);
+-                }
+-            }
+-        }
+-        return copy;
+-    }
+-    return data;
+-  }
+-
+-  private static redactString(str: string): string {
+-    let result = str;
+-    for (const pattern of this.KEY_PATTERNS) {
+-        result = result.replace(pattern, (match) => {
+-             // Keep first 3 and last 3 chars for debugging context, redact the rest
+-             if (match.length < 8) return '[REDACTED]';
+-             return match.substring(0, 3) + '...' + match.substring(match.length - 3);
+-        });
+-    }
+-    return result;
+-  }
+-}
+diff --git a/src/core/rotation.ts b/src/core/rotation.ts
+index 8ef4485..63e5c62 100644
+--- a/src/core/rotation.ts
++++ b/src/core/rotation.ts
+@@ -125,10 +125,7 @@ export class AccountRotator {
+       // Check global cooldown manager
+       if (isOnCooldown(acc.provider, acc.id)) return false;
+
+-      // Check explicit health flag
+-      if (acc.isHealthy === false) return false;
+-
+-      // Check health score
++      // Check health
+       if (!this.healthTracker.isUsable(acc)) return false;
+
+       return true;
+diff --git a/src/core/secret-storage.ts b/src/core/secret-storage.ts
+deleted file mode 100644
+index b4fcf1c..0000000
+--- a/src/core/secret-storage.ts
++++ /dev/null
+@@ -1,94 +0,0 @@
+-import { exec } from 'child_process';
+-import * as fs from 'fs';
+-import * as path from 'path';
+-import * as os from 'os';
+-import { promisify } from 'util';
+-
+-const execAsync = promisify(exec);
+-
+-export class SecretStorage {
+-  private useKeychain: boolean;
+-  private storagePath: string;
+-
+-  constructor(storageDir: string) {
+-    this.storagePath = path.join(storageDir, 'auth-monster-secrets.json');
+-    this.useKeychain = os.platform() === 'darwin';
+-  }
+-
+-  async saveSecret(service: string, account: string, secret: string): Promise<void> {
+-    if (this.useKeychain) {
+-      try {
+-        // macOS Keychain
+-        // security add-generic-password -a "account" -s "service" -w "secret" -U
+-        // -U updates if exists
+-        await execAsync(`security add-generic-password -a "${account}" -s "${service}" -w "${secret}" -U`);
+-        return;
+-      } catch (e) {
+-        console.warn('Failed to save to keychain, falling back to file:', e);
+-      }
+-    }
+-
+-    // Fallback: Encrypted file (mock encryption for now, or simple obfuscation)
+-    await this.saveToFile(service, account, secret);
+-  }
+-
+-  async getSecret(service: string, account: string): Promise<string | null> {
+-    if (this.useKeychain) {
+-      try {
+-        // security find-generic-password -a "account" -s "service" -w
+-        const { stdout } = await execAsync(`security find-generic-password -a "${account}" -s "${service}" -w`);
+-        return stdout.trim();
+-      } catch (e) {
+-        // Not found or error
+-      }
+-    }
+-
+-    return this.getFromFile(service, account);
+-  }
+-
+-  async deleteSecret(service: string, account: string): Promise<void> {
+-    if (this.useKeychain) {
+-      try {
+-        await execAsync(`security delete-generic-password -a "${account}" -s "${service}"`);
+-      } catch (e) {}
+-    }
+-    await this.deleteFromFile(service, account);
+-  }
+-
+-  // Simple file-based fallback
+-  private async saveToFile(service: string, account: string, secret: string) {
+-    let data: Record<string, string> = {};
+-    if (fs.existsSync(this.storagePath)) {
+-      try {
+-          data = JSON.parse(fs.readFileSync(this.storagePath, 'utf8'));
+-      } catch(e) {}
+-    }
+-    const key = `${service}:${account}`;
+-    data[key] = Buffer.from(secret).toString('base64'); // Simple obfuscation
+-    fs.writeFileSync(this.storagePath, JSON.stringify(data, null, 2), { mode: 0o600 });
+-  }
+-
+-  private async getFromFile(service: string, account: string): Promise<string | null> {
+-    if (!fs.existsSync(this.storagePath)) return null;
+-    try {
+-        const data = JSON.parse(fs.readFileSync(this.storagePath, 'utf8'));
+-        const key = `${service}:${account}`;
+-        if (data[key]) {
+-          return Buffer.from(data[key], 'base64').toString('utf8');
+-        }
+-    } catch (e) {}
+-    return null;
+-  }
+-
+-  private async deleteFromFile(service: string, account: string) {
+-    if (!fs.existsSync(this.storagePath)) return;
+-    try {
+-        const data = JSON.parse(fs.readFileSync(this.storagePath, 'utf8'));
+-        const key = `${service}:${account}`;
+-        if (data[key]) {
+-          delete data[key];
+-          fs.writeFileSync(this.storagePath, JSON.stringify(data, null, 2), { mode: 0o600 });
+-        }
+-    } catch (e) {}
+-  }
+-}
+diff --git a/src/core/storage.ts b/src/core/storage.ts
+index e62c3ae..43e376e 100644
+--- a/src/core/storage.ts
++++ b/src/core/storage.ts
+@@ -3,11 +3,9 @@ import path from 'path';
+ import { xdgConfig } from 'xdg-basedir';
+ import { lock } from 'proper-lockfile';
+ import { ManagedAccount, AuthProvider } from './types';
+-import { SecretStorage } from './secret-storage';
+
+ export class StorageManager {
+   private storagePath: string;
+-  private secretStorage: SecretStorage;
+
+   constructor(customPath?: string) {
+     const configDir = customPath || path.join(xdgConfig || '', 'opencode');
+@@ -15,7 +13,6 @@ export class StorageManager {
+       fs.mkdirSync(configDir, { recursive: true });
+     }
+     this.storagePath = path.join(configDir, 'auth-monster-accounts.json');
+-    this.secretStorage = new SecretStorage(configDir);
+   }
+
+   async loadAccounts(): Promise<ManagedAccount[]> {
+@@ -25,30 +22,12 @@ export class StorageManager {
+
+     try {
+       const release = await lock(this.storagePath, { retries: 5 });
+-      let accounts: ManagedAccount[] = [];
+       try {
+         const data = fs.readFileSync(this.storagePath, 'utf8');
+-        accounts = JSON.parse(data);
++        return JSON.parse(data);
+       } finally {
+         await release();
+       }
+-
+-      // Rehydrate tokens from secret storage
+-      const hydratedAccounts = await Promise.all(accounts.map(async (acc) => {
+-          // Fallback to what's in JSON if not in secret storage (for legacy data)
+-          const accessToken = await this.secretStorage.getSecret('accessToken', acc.id);
+-          const refreshToken = await this.secretStorage.getSecret('refreshToken', acc.id);
+-          const apiKey = await this.secretStorage.getSecret('apiKey', acc.id);
+-
+-          if (accessToken) acc.tokens.accessToken = accessToken;
+-          if (refreshToken) acc.tokens.refreshToken = refreshToken;
+-          if (apiKey) acc.apiKey = apiKey;
+-
+-          return acc;
+-      }));
+-
+-      return hydratedAccounts;
+-
+     } catch (error) {
+       console.error('Failed to load accounts:', error);
+       return [];
+@@ -67,32 +46,9 @@ export class StorageManager {
+     }
+
+     try {
+-      // 1. Save secrets first
+-      await Promise.all(accounts.map(async (acc) => {
+-          if (acc.tokens.accessToken) {
+-              await this.secretStorage.saveSecret('accessToken', acc.id, acc.tokens.accessToken);
+-          }
+-          if (acc.tokens.refreshToken) {
+-              await this.secretStorage.saveSecret('refreshToken', acc.id, acc.tokens.refreshToken);
+-          }
+-          if (acc.apiKey) {
+-              await this.secretStorage.saveSecret('apiKey', acc.id, acc.apiKey);
+-          }
+-      }));
+-
+-      // 2. Prepare accounts for JSON storage (strip sensitive data)
+-      const sanitizedAccounts = accounts.map(acc => {
+-          const clone = { ...acc, tokens: { ...acc.tokens } };
+-          // Remove sensitive data from the clone that will be saved to disk
+-          clone.tokens.accessToken = '';
+-          clone.tokens.refreshToken = '';
+-          clone.apiKey = '';
+-          return clone;
+-      });
+-
+       const release = await lock(this.storagePath, { retries: 5 });
+       try {
+-        fs.writeFileSync(this.storagePath, JSON.stringify(sanitizedAccounts, null, 2), 'utf8');
++        fs.writeFileSync(this.storagePath, JSON.stringify(accounts, null, 2), 'utf8');
+       } finally {
+         await release();
+       }
+@@ -120,10 +76,6 @@ export class StorageManager {
+     const filtered = accounts.filter(a => a.id !== id);
+     if (accounts.length !== filtered.length) {
+       await this.saveAccounts(filtered);
+-      // Cleanup secrets
+-      await this.secretStorage.deleteSecret('accessToken', id);
+-      await this.secretStorage.deleteSecret('refreshToken', id);
+-      await this.secretStorage.deleteSecret('apiKey', id);
+     }
+   }
+
+diff --git a/src/core/types.ts b/src/core/types.ts
+index 8ba3b03..cde8d8c 100644
+--- a/src/core/types.ts
++++ b/src/core/types.ts
+@@ -11,11 +11,7 @@ export enum AuthProvider {
+   Copilot = 'copilot',
+   Kiro = 'kiro',
+   Zhipu = 'zhipu',
+-  Minimax = 'minimax',
+-  Azure = 'azure',
+-  Grok = 'grok',
+-  DeepSeek = 'deepseek',
+-  Generic = 'generic'
++  Minimax = 'minimax'
+ }
+
+ export type AuthMethod = 'sticky' | 'round-robin' | 'hybrid' | 'quota-optimized';
+@@ -44,13 +40,6 @@ export interface ManagedAccount {
+   cooldownUntil?: number;
+   lastSwitchReason?: string;
+
+-  // Usage Stats (Phase 3)
+-  usage?: {
+-    totalInputTokens: number;
+-    totalOutputTokens: number;
+-    totalCost: number; // USD
+-  };
+-
+   // Quota Management
+   quota?: {
+     limit: number;
+diff --git a/src/index.ts b/src/index.ts
+index 9fb198b..c17cc18 100644
+--- a/src/index.ts
++++ b/src/index.ts
+@@ -10,22 +10,17 @@ import { AccountRotator, RateLimitReason } from './core/rotation';
+ import { UnifiedModelHub } from './core/hub';
+ import { sanitizeCrossModelRequest } from './utils/sanitizer';
+ import { proxyFetch } from './core/proxy';
+-import { CostEstimator } from './core/cost-estimator';
+-import { HistoryManager } from './core/history';
+
+ // Import Providers
+ import { GeminiProvider } from './providers/gemini';
+ import { AnthropicProvider, transformRequest as anthropicTransformRequest, transformResponseText as anthropicTransformResponse } from './providers/anthropic';
+ import { cursorProvider } from './providers/cursor';
+-import { WindsurfProvider, streamChat } from './providers/windsurf';
++import { WindsurfProvider } from './providers/windsurf';
+ import { QwenProvider } from './providers/qwen';
+ import { IFlowProvider } from './providers/iflow';
+ import { KiroProvider } from './providers/kiro';
+ import { ZhipuProvider } from './providers/zhipu';
+ import { MinimaxProvider } from './providers/minimax';
+-import { AzureProvider } from './providers/azure';
+-import { GrokProvider } from './providers/grok';
+-import { DeepSeekProvider } from './providers/deepseek';
+
+ export { RateLimitReason };
+
+@@ -35,7 +30,6 @@ export class AuthMonster {
+   private config: AuthMonsterConfig;
+   private rotator: AccountRotator;
+   private hub: UnifiedModelHub;
+-  private history: HistoryManager;
+   private lastUsedAccountId: string | null = null;
+   private lastWarmupTime: Map<string, number> = new Map();
+
+@@ -44,7 +38,6 @@ export class AuthMonster {
+     this.storage = new StorageManager(context.storagePath);
+     this.rotator = new AccountRotator();
+     this.hub = new UnifiedModelHub();
+-    this.history = new HistoryManager(context.storagePath);
+   }
+
+   async init() {
+@@ -120,109 +113,23 @@ export class AuthMonster {
+     let lastError: any = new Error(`No available accounts for model chain: ${modelChain.join(', ')}`);
+
+     for (const currentModel of modelChain) {
+-      let auth = await this.getAuthDetails(currentModel);
+-
+-      // --- Rate Limit Parking (Phase 3) ---
+-      if (!auth) {
+-        // If no usable accounts found, check if any are just rate-limited and wait
+-        const accountsWithReset = this.accounts.filter(a => a.rateLimitResetTime && a.rateLimitResetTime > Date.now());
+-        if (accountsWithReset.length > 0) {
+-            const earliestReset = Math.min(...accountsWithReset.map(a => a.rateLimitResetTime!));
+-            const waitTime = earliestReset - Date.now();
+-
+-            // Only park if the wait is reasonable (< 60s)
+-            if (waitTime > 0 && waitTime < 60000) {
+-                console.log(`[AuthMonster] All accounts busy. Parking request for ${Math.ceil(waitTime / 1000)}s...`);
+-                await new Promise(resolve => setTimeout(resolve, waitTime + 100)); // Wait + buffer
+-                auth = await this.getAuthDetails(currentModel);
+-            }
+-        }
+-      }
+-
++      const auth = await this.getAuthDetails(currentModel);
+       if (!auth) continue;
+
+-      const startTime = Date.now();
+-      let requestBody = options.body;
+-
+       try {
+         const headers = { ...options.headers, ...auth.headers };
++        let body = options.body;
+
+         // Transform body if it's an object (AI request)
+-        if (requestBody && typeof requestBody === 'object' && !(requestBody instanceof FormData) && !(requestBody instanceof Blob)) {
+-          requestBody = JSON.stringify(this.transformRequest(auth.provider, requestBody, auth.modelInProvider));
+-        }
+-
+-        const targetUrl = this.getRequestUrl(auth.provider, auth.modelInProvider || model, auth.account) || url;
+-
+-        let response: Response;
+-
+-        if (auth.provider === AuthProvider.Windsurf) {
+-           response = await this.handleWindsurfRequest(auth, options);
+-        } else {
+-           response = await proxyFetch(targetUrl, {
+-             ...options,
+-             headers,
+-             body: requestBody
+-           });
++        if (body && typeof body === 'object' && !(body instanceof FormData) && !(body instanceof Blob)) {
++          body = JSON.stringify(this.transformRequest(auth.provider, body, auth.modelInProvider));
+         }
+
+-        // --- Stats & History Collection (Phase 3) ---
+-        const collectStats = async () => {
+-             // console.log("[AuthMonster] Collecting stats...");
+-             const durationMs = Date.now() - startTime;
+-             const responseClone = response.clone();
+-             let responseBody: any;
+-             let inputTokens = 0;
+-             let outputTokens = 0;
+-
+-             try {
+-                 const text = await responseClone.text();
+-                 try { responseBody = JSON.parse(text); } catch { responseBody = text; }
+-             } catch {}
+-
+-             // Extract tokens
+-             if (responseBody && typeof responseBody === 'object' && responseBody.usage) {
+-                 inputTokens = responseBody.usage.prompt_tokens || responseBody.usage.input_tokens || 0;
+-                 outputTokens = responseBody.usage.completion_tokens || responseBody.usage.output_tokens || 0;
+-             }
+-
+-             // Estimate tokens if missing
+-             if (inputTokens === 0 && typeof requestBody === 'string') inputTokens = CostEstimator.estimateTokens(requestBody);
+-             if (outputTokens === 0) {
+-                 if (typeof responseBody === 'string') outputTokens = CostEstimator.estimateTokens(responseBody);
+-                 else if (responseBody?.choices?.[0]?.message?.content) outputTokens = CostEstimator.estimateTokens(responseBody.choices[0].message.content);
+-             }
+-
+-             const cost = CostEstimator.calculateCost(auth!.modelInProvider || currentModel, inputTokens, outputTokens);
+-
+-             // Update Usage
+-             if (!auth!.account.usage) auth!.account.usage = { totalInputTokens: 0, totalOutputTokens: 0, totalCost: 0 };
+-             auth!.account.usage.totalInputTokens += inputTokens;
+-             auth!.account.usage.totalOutputTokens += outputTokens;
+-             auth!.account.usage.totalCost += cost;
+-
+-             // Log to History
+-             let parsedRequest = requestBody;
+-             if (typeof requestBody === 'string') {
+-                 try { parsedRequest = JSON.parse(requestBody); } catch {}
+-             }
+-
+-             await this.history.addEntry({
+-                 model: currentModel,
+-                 provider: auth!.provider,
+-                 accountId: auth!.account.id,
+-                 tokens: { input: inputTokens, output: outputTokens },
+-                 cost,
+-                 request: parsedRequest,
+-                 response: responseBody,
+-                 durationMs,
+-                 success: response.ok,
+-                 error: !response.ok ? `Status ${response.status}` : undefined
+-             });
+-        };
+-
+-        // Don't await stats collection to avoid blocking the response return (fire and forget)
+-        collectStats().catch(err => console.error('[AuthMonster] Stats collection failed:', err));
++        const response = await proxyFetch(url, {
++          ...options,
++          headers,
++          body
++        });
+
+         if (response.status === 429 || response.status === 403) {
+           const text = await response.clone().text().catch(() => '');
+@@ -236,7 +143,10 @@ export class AuthMonster {
+         if (!response.ok) {
+           const errorText = await response.clone().text().catch(() => 'Unknown error');
+           console.warn(`[AuthMonster] Request failed for ${auth.account.email} (${auth.provider}): ${response.status} ${errorText}`);
++          // For non-quota errors, we might still want to report failure but maybe not fallback?
++          // Actually, let's report failure and see if we should continue.
+           await this.reportFailure(auth.account.id);
++          // If it's a 5xx error, maybe we should try another model too.
+           if (response.status >= 500) continue;
+         } else {
+           await this.reportSuccess(auth.account.id);
+@@ -245,19 +155,6 @@ export class AuthMonster {
+         return response;
+       } catch (error) {
+         console.error(`[AuthMonster] Error during request with ${auth.account.email}:`, error);
+-
+-        // Log failure to history
+-        this.history.addEntry({
+-            model: currentModel,
+-            provider: auth.provider,
+-            accountId: auth.account.id,
+-            request: requestBody,
+-            response: null,
+-            durationMs: Date.now() - startTime,
+-            success: false,
+-            error: String(error)
+-        }).catch(() => {});
+-
+         await this.reportFailure(auth.account.id);
+         lastError = error;
+         continue; // Try next in chain
+@@ -341,12 +238,6 @@ export class AuthMonster {
+         return ZhipuProvider.getHeaders(account);
+       case AuthProvider.Minimax:
+         return MinimaxProvider.getHeaders(account);
+-      case AuthProvider.Azure:
+-        return AzureProvider.getHeaders(account);
+-      case AuthProvider.Grok:
+-        return GrokProvider.getHeaders(account);
+-      case AuthProvider.DeepSeek:
+-        return DeepSeekProvider.getHeaders(account);
+       default:
+         // Default header generation fallback
+         const headers: Record<string, string> = {};
+@@ -394,66 +285,6 @@ export class AuthMonster {
+     }
+   }
+
+-  private getRequestUrl(provider: AuthProvider, model: string, account: ManagedAccount): string | null {
+-    if (provider === AuthProvider.Generic ||
+-       (this.config.providers && this.config.providers[provider]?.options?.baseUrl)) {
+-         const baseUrl = this.config.providers[provider]?.options?.baseUrl;
+-         if (baseUrl) {
+-             return `${baseUrl.replace(/\/$/, '')}/chat/completions`;
+-         }
+-    }
+-
+-    switch (provider) {
+-      case AuthProvider.Gemini: return GeminiProvider.getUrl(model, account);
+-      case AuthProvider.Anthropic: return AnthropicProvider.getUrl(model, account);
+-      case AuthProvider.Cursor: return cursorProvider.getUrl(model, account);
+-      case AuthProvider.Windsurf: return WindsurfProvider.getUrl(model, account);
+-      case AuthProvider.Qwen: return QwenProvider.getUrl(model, account);
+-      case AuthProvider.Azure: return AzureProvider.getUrl(model, account);
+-      case AuthProvider.Grok: return GrokProvider.getUrl(model, account);
+-      case AuthProvider.DeepSeek: return DeepSeekProvider.getUrl(model, account);
+-      default: return null;
+-    }
+-  }
+-
+-  private async handleWindsurfRequest(auth: AuthDetails, options: any): Promise<Response> {
+-       let messages: any[] = [];
+-       let model = auth.modelInProvider || 'default';
+-       try {
+-          const bodyObj = typeof options.body === 'string' ? JSON.parse(options.body) : options.body;
+-          if (bodyObj) {
+-            messages = bodyObj.messages || [];
+-            if (bodyObj.model) model = bodyObj.model;
+-          }
+-       } catch (e) {}
+-
+-       const credentials = {
+-          apiKey: auth.account.apiKey || auth.account.tokens.accessToken,
+-          port: auth.account.metadata?.port,
+-          csrfToken: auth.account.metadata?.csrfToken,
+-          version: auth.account.metadata?.version
+-       };
+-
+-       if (!credentials.apiKey || !credentials.port || !credentials.csrfToken) {
+-           throw new Error("Missing Windsurf credentials (port, csrfToken, or apiKey)");
+-       }
+-
+-       const text = await streamChat(credentials as any, { model, messages });
+-
+-       return new Response(JSON.stringify({
+-           id: 'chatcmpl-' + Date.now(),
+-           object: 'chat.completion',
+-           created: Math.floor(Date.now() / 1000),
+-           model: model,
+-           choices: [{
+-               index: 0,
+-               message: { role: 'assistant', content: text },
+-               finish_reason: 'stop'
+-           }],
+-           usage: { prompt_tokens: 0, completion_tokens: 0, total_tokens: 0 }
+-       }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+-  }
+-
+   /**
+    * Returns all managed accounts (including tokens)
+    */
+diff --git a/src/providers/anthropic/index.ts b/src/providers/anthropic/index.ts
+index de79269..151c4b7 100644
+--- a/src/providers/anthropic/index.ts
++++ b/src/providers/anthropic/index.ts
+@@ -33,10 +33,6 @@ export class AnthropicProvider {
+     return headers;
+   }
+
+-  static getUrl(model: string, account: ManagedAccount): string {
+-    return "https://api.anthropic.com/v1/messages";
+-  }
+-
+   static async refreshTokens(account: ManagedAccount): Promise<ManagedAccount> {
+     if (!account.tokens.refreshToken) {
+       return account;
+diff --git a/src/providers/azure/index.ts b/src/providers/azure/index.ts
+deleted file mode 100644
+index aaaee42..0000000
+--- a/src/providers/azure/index.ts
++++ /dev/null
+@@ -1,34 +0,0 @@
+-import { AuthProvider, ManagedAccount } from '../../core/types';
+-
+-export class AzureProvider {
+-  static readonly provider = AuthProvider.Azure;
+-
+-  static getHeaders(account: ManagedAccount): Record<string, string> {
+-    const headers: Record<string, string> = {
+-      'Content-Type': 'application/json',
+-    };
+-
+-    if (account.apiKey) {
+-      headers['api-key'] = account.apiKey;
+-    } else if (account.tokens.accessToken) {
+-      // Azure AD auth support
+-      headers['Authorization'] = `Bearer ${account.tokens.accessToken}`;
+-    }
+-
+-    return headers;
+-  }
+-
+-  static getUrl(model: string, account: ManagedAccount): string {
+-    const resourceName = account.metadata?.resourceName;
+-    const deploymentId = account.metadata?.deploymentId || model;
+-    const apiVersion = account.metadata?.apiVersion || '2024-02-15-preview';
+-
+-    if (!resourceName) {
+-      // Fallback or error? For now return a placeholder that will likely fail DNS if not set,
+-      // reminding user to set metadata.
+-      return `https://YOUR_RESOURCE_NAME.openai.azure.com/openai/deployments/${deploymentId}/chat/completions?api-version=${apiVersion}`;
+-    }
+-
+-    return `https://${resourceName}.openai.azure.com/openai/deployments/${deploymentId}/chat/completions?api-version=${apiVersion}`;
+-  }
+-}
+diff --git a/src/providers/cursor/index.ts b/src/providers/cursor/index.ts
+index a6cd5ea..f9b84f8 100644
+--- a/src/providers/cursor/index.ts
++++ b/src/providers/cursor/index.ts
+@@ -29,10 +29,6 @@ export class CursorProvider {
+     };
+   }
+
+-  getUrl(model: string, account: ManagedAccount): string {
+-    return `${CURSOR_API_BASE_URL}/aiserver.v1.AiService/StreamChat`;
+-  }
+-
+   /**
+    * Refresh the access token using the refresh token
+    */
+diff --git a/src/providers/deepseek/index.ts b/src/providers/deepseek/index.ts
+deleted file mode 100644
+index e90cf39..0000000
+--- a/src/providers/deepseek/index.ts
++++ /dev/null
+@@ -1,23 +0,0 @@
+-import { AuthProvider, ManagedAccount } from '../../core/types';
+-
+-export class DeepSeekProvider {
+-  static readonly provider = AuthProvider.DeepSeek;
+-
+-  static getHeaders(account: ManagedAccount): Record<string, string> {
+-    const headers: Record<string, string> = {
+-      'Content-Type': 'application/json',
+-    };
+-
+-    if (account.apiKey) {
+-      headers['Authorization'] = `Bearer ${account.apiKey}`;
+-    } else if (account.tokens.accessToken) {
+-        headers['Authorization'] = `Bearer ${account.tokens.accessToken}`;
+-    }
+-
+-    return headers;
+-  }
+-
+-  static getUrl(model: string, account: ManagedAccount): string {
+-    return "https://api.deepseek.com/chat/completions";
+-  }
+-}
+diff --git a/src/providers/gemini/index.ts b/src/providers/gemini/index.ts
+index c705fc3..86859fb 100644
+--- a/src/providers/gemini/index.ts
++++ b/src/providers/gemini/index.ts
+@@ -32,10 +32,6 @@ export class GeminiProvider {
+     return headers;
+   }
+
+-  static getUrl(model: string, account: ManagedAccount): string {
+-    return `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
+-  }
+-
+   static async refreshTokens(account: ManagedAccount): Promise<ManagedAccount> {
+     if (!account.tokens.refreshToken) {
+       return account;
+diff --git a/src/providers/grok/index.ts b/src/providers/grok/index.ts
+deleted file mode 100644
+index 2d7be2a..0000000
+--- a/src/providers/grok/index.ts
++++ /dev/null
+@@ -1,23 +0,0 @@
+-import { AuthProvider, ManagedAccount } from '../../core/types';
+-
+-export class GrokProvider {
+-  static readonly provider = AuthProvider.Grok;
+-
+-  static getHeaders(account: ManagedAccount): Record<string, string> {
+-    const headers: Record<string, string> = {
+-      'Content-Type': 'application/json',
+-    };
+-
+-    if (account.apiKey) {
+-      headers['Authorization'] = `Bearer ${account.apiKey}`;
+-    } else if (account.tokens.accessToken) {
+-        headers['Authorization'] = `Bearer ${account.tokens.accessToken}`;
+-    }
+-
+-    return headers;
+-  }
+-
+-  static getUrl(model: string, account: ManagedAccount): string {
+-    return "https://api.x.ai/v1/chat/completions";
+-  }
+-}
+diff --git a/src/providers/iflow/index.ts b/src/providers/iflow/index.ts
+index 2462c5f..a6e7097 100644
+--- a/src/providers/iflow/index.ts
++++ b/src/providers/iflow/index.ts
+@@ -3,7 +3,7 @@ import { proxyFetch } from '../../core/proxy';
+ import { listenForCode } from '../../utils/oauth-server';
+
+ const CLIENT_ID = "10009311001";
+-const CLIENT_SECRET = process.env.IFLOW_CLIENT_SECRET || "";
++const CLIENT_SECRET = process.env.IFLOW_CLIENT_SECRET || "4Z3YjXycVsQvyGF1etiNlIBB4RsqSDtW";
+ const AUTH_URL = "https://iflow.cn/oauth";
+ const TOKEN_URL = "https://iflow.cn/oauth/token";
+ const USER_INFO_URL = "https://iflow.cn/api/oauth/getUserInfo";
+diff --git a/src/providers/qwen/index.ts b/src/providers/qwen/index.ts
+index 9cd4259..169ecf0 100644
+--- a/src/providers/qwen/index.ts
++++ b/src/providers/qwen/index.ts
+@@ -38,10 +38,6 @@ export class QwenProvider {
+     return headers;
+   }
+
+-  static getUrl(model: string, account: ManagedAccount): string {
+-    return "https://chat.qwen.ai/api/v1/chat/completions";
+-  }
+-
+   static async refreshTokens(account: ManagedAccount): Promise<ManagedAccount> {
+     if (!account.tokens.refreshToken) {
+       return account;
+diff --git a/src/providers/windsurf/index.ts b/src/providers/windsurf/index.ts
+index 74bdbda..6b3fcf7 100644
+--- a/src/providers/windsurf/index.ts
++++ b/src/providers/windsurf/index.ts
+@@ -17,11 +17,6 @@ export class WindsurfProvider {
+     return headers;
+   }
+
+-  static getUrl(model: string, account: ManagedAccount): string {
+-    const port = account.metadata?.port || 0;
+-    return `http://localhost:${port}/exa.language_server_pb.LanguageServerService/RawGetChatMessage`;
+-  }
+-
+   static async refreshTokens(account: ManagedAccount): Promise<ManagedAccount> {
+     try {
+       // Re-discover credentials
+diff --git a/src/scripts/git-hook.ts b/src/scripts/git-hook.ts
+deleted file mode 100644
+index 9cf8d7e..0000000
+--- a/src/scripts/git-hook.ts
++++ /dev/null
+@@ -1,86 +0,0 @@
+-import { createAuthMonster } from '../index';
+-import { ConfigManager } from '../core/config';
+-import { getProviderEndpoint } from '../core/endpoints';
+-import { AuthProvider } from '../core/types';
+-import { execSync } from 'child_process';
+-import * as fs from 'fs';
+-
+-async function main() {
+-  const commitMsgFile = process.argv[2];
+-  const source = process.argv[3];
+-
+-  if (source === 'message' || source === 'merge' || source === 'squash') {
+-    process.exit(0);
+-  }
+-
+-  let diff = '';
+-  try {
+-    diff = execSync('git diff --cached').toString();
+-  } catch (e) {
+-    process.exit(0);
+-  }
+-
+-  if (!diff.trim()) {
+-    process.exit(0);
+-  }
+-
+-  const configManager = new ConfigManager();
+-  const config = configManager.loadConfig();
+-  const monster = createAuthMonster({
+-    config,
+-    storagePath: configManager.getConfigDir()
+-  });
+-
+-  await monster.init();
+-
+-  // Prefer a fast model, or fallback to config active
+-  const model = 'gemini-3-flash-preview';
+-  const details = await monster.getAuthDetails(model) || await monster.getAuthDetails(config.active);
+-
+-  if (!details) {
+-      console.error('AuthMonster: No active account found for commit generation.');
+-      process.exit(0);
+-  }
+-
+-  const url = getProviderEndpoint(details.provider, details.account, details.modelInProvider);
+-
+-  const prompt = `Generate a concise and descriptive commit message for the following changes.
+-  Follow the conventional commits specification (e.g. feat: ..., fix: ...).
+-  Only output the commit message, no explanations.
+-
+-  Diff:
+-  ${diff.substring(0, 8000)}`;
+-
+-  try {
+-      console.log('AuthMonster: Generating commit message...');
+-      const response = await monster.request(model, url, {
+-          method: 'POST',
+-          headers: { 'Content-Type': 'application/json' },
+-          body: {
+-              messages: [{ role: 'user', content: prompt }],
+-              model: details.modelInProvider,
+-              temperature: 0.3
+-          }
+-      });
+-
+-      const json = await response.json() as any;
+-      let message = '';
+-
+-      if (details.provider === AuthProvider.Gemini) {
+-          message = json.candidates?.[0]?.content?.parts?.[0]?.text || '';
+-      } else if (details.provider === AuthProvider.Anthropic) {
+-          message = json.content?.[0]?.text || '';
+-      } else {
+-          message = json.choices?.[0]?.message?.content || '';
+-      }
+-
+-      if (message) {
+-          const currentContent = fs.readFileSync(commitMsgFile, 'utf-8');
+-          fs.writeFileSync(commitMsgFile, `${message.trim()}\n\n${currentContent}`);
+-      }
+-  } catch (e) {
+-      console.error('AuthMonster: Failed to generate commit message.', e);
+-  }
+-}
+-
+-main().catch(() => process.exit(0));
+diff --git a/test/core.test.js b/test/core.test.js
+deleted file mode 100644
+index eae242a..0000000
+--- a/test/core.test.js
++++ /dev/null
+@@ -1,113 +0,0 @@
+-const { expect } = require('chai');
+-const { AccountRotator } = require('../src/core/rotation');
+-const { UnifiedModelHub } = require('../src/core/hub');
+-const { AuthProvider } = require('../src/core/types');
+-const { isOnCooldown, applyCooldown, preflightCheck } = require('../src/core/quota-manager');
+-
+-describe('Core Components', () => {
+-
+-    describe('AccountRotator', () => {
+-        let rotator;
+-        let accounts;
+-
+-        beforeEach(() => {
+-            rotator = new AccountRotator();
+-            accounts = [
+-                { id: '1', provider: AuthProvider.Gemini, email: '1@test.com', tokens: {}, isHealthy: true, healthScore: 100 },
+-                { id: '2', provider: AuthProvider.Gemini, email: '2@test.com', tokens: {}, isHealthy: true, healthScore: 90 },
+-                { id: '3', provider: AuthProvider.Gemini, email: '3@test.com', tokens: {}, isHealthy: true, healthScore: 80 }
+-            ];
+-        });
+-
+-        it('should select account using round-robin', () => {
+-            const first = rotator.selectAccount(accounts, 'round-robin');
+-            const second = rotator.selectAccount(accounts, 'round-robin');
+-            const third = rotator.selectAccount(accounts, 'round-robin');
+-
+-            expect(first).to.not.be.null;
+-            expect(second).to.not.be.null;
+-            expect(third).to.not.be.null;
+-
+-            const selectedIds = new Set([first.id, second.id, third.id]);
+-            expect(selectedIds.size).to.equal(3);
+-        });
+-
+-        it('should skip unhealthy accounts', () => {
+-            accounts[1].isHealthy = false;
+-
+-            const selected = [];
+-            for(let i=0; i<5; i++) {
+-                selected.push(rotator.selectAccount(accounts, 'round-robin'));
+-            }
+-
+-            const selectedIds = selected.map(a => a.id);
+-            expect(selectedIds).to.not.include('2');
+-        });
+-    });
+-
+-    describe('UnifiedModelHub', () => {
+-        let hub;
+-        let accounts;
+-
+-        beforeEach(() => {
+-            hub = new UnifiedModelHub();
+-            accounts = [
+-                { id: '1', provider: AuthProvider.Gemini, email: 'gemini@test.com', tokens: {}, isHealthy: true, healthScore: 100 },
+-                { id: '2', provider: AuthProvider.Anthropic, email: 'claude@test.com', tokens: {}, isHealthy: true, healthScore: 100 },
+-                { id: '3', provider: AuthProvider.Windsurf, email: 'windsurf@test.com', tokens: {}, isHealthy: true, healthScore: 100 }
+-            ];
+-        });
+-
+-        it('should resolve gemini-3-flash-preview to Gemini or Windsurf', () => {
+-            const selection = hub.selectModelAccount('gemini-3-flash-preview', accounts);
+-            expect(selection).to.not.be.null;
+-            expect([AuthProvider.Gemini, AuthProvider.Windsurf]).to.include(selection.provider);
+-            expect(selection.modelInProvider).to.equal('gemini-3-flash');
+-        });
+-
+-        it('should fallback if primary provider is missing', () => {
+-            const onlyWindsurf = accounts.filter(a => a.provider === AuthProvider.Windsurf);
+-            const selection = hub.selectModelAccount('gemini-3-flash-preview', onlyWindsurf);
+-            expect(selection).to.not.be.null;
+-            expect(selection.provider).to.equal(AuthProvider.Windsurf);
+-        });
+-
+-        it('should return null for unknown model', () => {
+-            const selection = hub.selectModelAccount('unknown-model', accounts);
+-            expect(selection).to.be.null;
+-        });
+-    });
+-
+-    describe('QuotaManager', () => {
+-        it('should track cooldowns', () => {
+-            const accountId = 'test-id';
+-            const provider = AuthProvider.Gemini;
+-
+-            expect(isOnCooldown(provider, accountId)).to.be.false;
+-
+-            applyCooldown(provider, accountId, 1); // 1 minute
+-
+-            expect(isOnCooldown(provider, accountId)).to.be.true;
+-        });
+-
+-        it('should preflight check allow valid account', () => {
+-            const currentAccount = { id: '1', provider: AuthProvider.Gemini, email: '1@test.com', tokens: {}, isHealthy: true, healthScore: 100, quota: { remaining: 100 } };
+-            const allAccounts = [currentAccount];
+-
+-            const result = preflightCheck(AuthProvider.Gemini, currentAccount, allAccounts);
+-            expect(result.proceed).to.be.true;
+-            expect(result.accountId).to.equal('1');
+-        });
+-
+-        it('should preflight check switch if account has no quota', () => {
+-            const currentAccount = { id: '1', provider: AuthProvider.Gemini, email: '1@test.com', tokens: {}, isHealthy: true, healthScore: 100, quota: { remaining: 0 } };
+-            const healthyAccount = { id: '2', provider: AuthProvider.Gemini, email: '2@test.com', tokens: {}, isHealthy: true, healthScore: 100, quota: { remaining: 100 } };
+-            const allAccounts = [currentAccount, healthyAccount];
+-
+-            const result = preflightCheck(AuthProvider.Gemini, currentAccount, allAccounts);
+-            expect(result.proceed).to.be.true;
+-            expect(result.accountId).to.equal('2');
+-            expect(result.switchedFrom).to.equal('1');
+-        });
+-    });
+-});
+diff --git a/test/integration.test.ts b/test/integration.test.ts
+deleted file mode 100644
+index 4111a0d..0000000
+--- a/test/integration.test.ts
++++ /dev/null
+@@ -1,65 +0,0 @@
+-const { expect } = require('chai');
+-const { UnifiedModelHub } = require('../src/core/hub');
+-const { AuthProvider } = require('../src/core/types');
+-const { SecretStorage } = require('../src/core/secret-storage');
+-const { CostEstimator } = require('../src/core/cost-estimator');
+-const { AuthMonster } = require('../src/index');
+-const path = require('path');
+-const fs = require('fs');
+-const os = require('os');
+-
+-describe('Integration Phases', () => {
+-    let tempDir: any;
+-
+-    before(() => {
+-        tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'auth-monster-test-'));
+-    });
+-
+-    after(() => {
+-        fs.rmSync(tempDir, { recursive: true, force: true });
+-    });
+-
+-    describe('Phase 1: Secure Storage', () => {
+-        it('should instantiate SecretStorage', () => {
+-            const secretStorage = new SecretStorage(tempDir);
+-            expect(secretStorage).to.be.instanceOf(SecretStorage);
+-        });
+-
+-        it('should save and retrieve secret (fallback mode)', async () => {
+-            const secretStorage = new SecretStorage(tempDir);
+-            await secretStorage.saveSecret('testService', 'testAccount', 'secretValue');
+-            const retrieved = await secretStorage.getSecret('testService', 'testAccount');
+-            expect(retrieved).to.equal('secretValue');
+-        });
+-    });
+-
+-    describe('Phase 2: Providers', () => {
+-        it('should have new providers in AuthProvider enum', () => {
+-            expect(AuthProvider.Azure).to.equal('azure');
+-            expect(AuthProvider.Grok).to.equal('grok');
+-            expect(AuthProvider.DeepSeek).to.equal('deepseek');
+-        });
+-
+-        it('should instantiate UnifiedModelHub with new mappings', () => {
+-            const hub = new UnifiedModelHub();
+-            expect(hub).to.be.instanceOf(UnifiedModelHub);
+-        });
+-    });
+-
+-    describe('Phase 3: Traffic & Cost', () => {
+-        it('should calculate cost', () => {
+-            const cost = CostEstimator.calculateCost('gpt-4o', 1000000, 1000000);
+-            expect(cost).to.be.greaterThan(0);
+-        });
+-    });
+-
+-    describe('Phase 4 & 5: UI & Workflows', () => {
+-        it('should instantiate AuthMonster', () => {
+-            const monster = new AuthMonster({
+-                config: { active: AuthProvider.Gemini },
+-                storagePath: tempDir
+-            });
+-            expect(monster).to.be.instanceOf(AuthMonster);
+-        });
+-    });
+-});
+diff --git a/tsconfig.json b/tsconfig.json
+index 6405e8b..45d23b9 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -1,14 +1,105 @@
+ {
+   "compilerOptions": {
+-    "target": "es2020",
+-    "module": "commonjs",
+-    "moduleResolution": "node",
+-    "outDir": "./dist",
+-    "esModuleInterop": true,
+-    "forceConsistentCasingInFileNames": true,
+-    "strict": true,
+-    "skipLibCheck": true
++    /* Visit https://aka.ms/tsconfig to read more about this file */
++
++    /* Projects */
++    // "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
++    // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
++    // "tsBuildInfoFile": "./.tsbuildinfo",              /* Specify the path to .tsbuildinfo incremental compilation file. */
++    // "disableSourceOfProjectReferenceRedirect": true,  /* Disable preferring source files instead of declaration files when referencing composite projects. */
++    // "disableSolutionSearching": true,                 /* Opt a project out of multi-project reference checking when editing. */
++    // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
++
++    /* Language and Environment */
++    "target": "es2020",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
++    // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
++    // "jsx": "preserve",                                /* Specify what JSX code is generated. */
++    // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
++    // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
++    // "jsxFactory": "",                                 /* Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h'. */
++    // "jsxFragmentFactory": "",                         /* Specify the JSX Fragment reference used for fragments when targeting React JSX emit e.g. 'React.Fragment' or 'Fragment'. */
++    // "jsxImportSource": "",                            /* Specify module specifier used to import the JSX factory functions when using 'jsx: react-jsx*'. */
++    // "reactNamespace": "",                             /* Specify the object invoked for 'createElement'. This only applies when targeting 'react' JSX emit. */
++    // "noLib": true,                                    /* Disable including any library files, including the default lib.d.ts. */
++    // "useDefineForClassFields": true,                  /* Emit ECMAScript-standard-compliant class fields. */
++    // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
++
++    /* Modules */
++    "module": "commonjs",                                /* Specify what module code is generated. */
++    // "rootDir": "./",                                  /* Specify the root folder within your source files. */
++    // "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
++    // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
++    // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
++    // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
++    // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
++    // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
++    // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
++    // "moduleSuffixes": [],                             /* List of file name suffixes to search when resolving a module. */
++    // "resolveJsonModule": true,                        /* Enable importing .json files. */
++    // "noResolve": true,                                /* Disallow 'import's, 'require's or '<reference>'s from expanding the number of files TypeScript should add to a project. */
++
++    /* JavaScript Support */
++    // "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
++    // "checkJs": true,                                  /* Enable error reporting in type-checked JavaScript files. */
++    // "maxNodeModuleJsDepth": 1,                        /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */
++
++    /* Emit */
++    // "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
++    // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
++    // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
++    // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
++    // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
++    "outDir": "dist",                                   /* Specify an output folder for all emitted files. */
++    // "removeComments": true,                           /* Disable emitting comments. */
++    // "noEmit": true,                                   /* Disable emitting files from a compilation. */
++    // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
++    // "importsNotUsedAsValues": "remove",               /* Specify emit/checking behavior for imports that are only used for types. */
++    // "downlevelIteration": true,                       /* Emit more compliant, but verbose and less performant JavaScript for iteration. */
++    // "sourceRoot": "",                                 /* Specify the root path for debuggers to find the reference source code. */
++    // "mapRoot": "",                                    /* Specify the location where debugger should locate map files instead of generated locations. */
++    // "inlineSourceMap": true,                          /* Include sourcemap files inside the emitted JavaScript. */
++    // "inlineSources": true,                            /* Include source code in the sourcemaps inside the emitted JavaScript. */
++    // "emitBOM": true,                                  /* Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files. */
++    // "newLine": "crlf",                                /* Set the newline character for emitting files. */
++    // "stripInternal": true,                            /* Disable emitting declarations that have '@internal' in their JSDoc comments. */
++    // "noEmitHelpers": true,                            /* Disable generating custom helper functions like '__extends' in compiled output. */
++    // "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
++    // "preserveConstEnums": true,                       /* Disable erasing 'const enum' declarations in generated code. */
++    // "declarationDir": "./",                           /* Specify the output directory for generated declaration files. */
++    // "preserveValueImports": true,                     /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
++
++    /* Interop Constraints */
++    // "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
++    // "allowSyntheticDefaultImports": true,             /* Allow 'import x from y' when a module doesn't have a default export. */
++    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
++    // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
++    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
++
++    /* Type Checking */
++    "strict": true,                                      /* Enable all strict type-checking options. */
++    // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
++    // "strictNullChecks": true,                         /* When type checking, take into account 'null' and 'undefined'. */
++    // "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
++    // "strictBindCallApply": true,                      /* Check that the arguments for 'bind', 'call', and 'apply' methods match the original function. */
++    // "strictPropertyInitialization": true,             /* Check for class properties that are declared but not set in the constructor. */
++    // "noImplicitThis": true,                           /* Enable error reporting when 'this' is given the type 'any'. */
++    // "useUnknownInCatchVariables": true,               /* Default catch clause variables as 'unknown' instead of 'any'. */
++    // "alwaysStrict": true,                             /* Ensure 'use strict' is always emitted. */
++    // "noUnusedLocals": true,                           /* Enable error reporting when local variables aren't read. */
++    // "noUnusedParameters": true,                       /* Raise an error when a function parameter isn't read. */
++    // "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
++    // "noImplicitReturns": true,                        /* Enable error reporting for codepaths that do not explicitly return in a function. */
++    // "noFallthroughCasesInSwitch": true,               /* Enable error reporting for fallthrough cases in switch statements. */
++    // "noUncheckedIndexedAccess": true,                 /* Add 'undefined' to a type when accessed using an index. */
++    // "noImplicitOverride": true,                       /* Ensure overriding members in derived classes are marked with an override modifier. */
++    // "noPropertyAccessFromIndexSignature": true,       /* Enforces using indexed accessors for keys declared using an indexed type. */
++    // "allowUnusedLabels": true,                        /* Disable error reporting for unused labels. */
++    // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
++
++    /* Completeness */
++    // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
++    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+   },
+-  "include": ["src/**/*", "test/**/*"],
++  "include": ["src/**/*"],
+   "exclude": ["node_modules", "references"]
+ }

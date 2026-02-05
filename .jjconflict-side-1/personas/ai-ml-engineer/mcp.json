@@ -1,0 +1,61 @@
+{
+  "mcpServers": {
+    "serena": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide-assistant"
+      ],
+      "enabled": true
+    },
+    "vibe-check": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@pv-bhat/vibe-check-mcp",
+        "start",
+        "--stdio"
+      ],
+      "environment": {
+        "GEMINI_API_KEY": "<YOUR_GEMINI_API_KEY>"
+      },
+      "enabled": true
+    },
+    "deepwiki": {
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/mcp",
+      "enabled": true
+    },
+    "think-tank": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "mcp-think-tank@2.0.7"
+      ],
+      "environment": {
+        "MEMORY_PATH": "/home/sephiroth/.config/opencode/memory.jsonl"
+      },
+      "enabled": true
+    },
+    "memory": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "chroma-mcp",
+        "--client-type",
+        "persistent",
+        "--data-dir",
+        "./chroma-data"
+      ],
+      "enabled": true,
+      "note": "YAAMCPL Winner: chroma-core/chroma-mcp"
+    }
+  }
+}

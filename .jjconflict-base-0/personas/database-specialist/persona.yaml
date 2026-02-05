@@ -1,0 +1,39 @@
+name: database-specialist
+description: Database administration, optimization, and data modeling
+version: '1.0'
+toolsets:
+- name: querying
+  toolIds:
+  - mysql.query
+  - mysql.list_tables
+  - gateway.query
+- name: analysis
+  toolIds:
+  - serena.search_for_pattern
+  - serena.find_symbol
+- name: optimization
+  toolIds:
+  - serena.get_symbols_overview
+  - context7.query-docs
+- name: docs
+  toolIds:
+  - serena.write_memory
+  - deepwiki.query
+defaultToolset: querying
+metadata:
+  author: overpowers
+  tags:
+  - database
+  - auto-generated
+  created: '2026-01-19T14:38:23.965646Z'
+  agents:
+  - database-administrator
+  - database-optimizer
+  - data-engineer
+  - postgres-pro
+  - sql-pro
+  - database-admin
+  - database-optimization
+  - sql-expert
+  - mongodb-expert
+  - mongoose-expert

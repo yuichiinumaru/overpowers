@@ -1,0 +1,70 @@
+{
+  "mcpServers": {
+    "serena": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide-assistant"
+      ],
+      "enabled": true
+    },
+    "vibe-check": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@pv-bhat/vibe-check-mcp",
+        "start",
+        "--stdio"
+      ],
+      "environment": {
+        "GEMINI_API_KEY": "<YOUR_GEMINI_API_KEY>"
+      },
+      "enabled": true
+    },
+    "context7": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "environment": {
+        "CONTEXT7_API_KEY": "<YOUR_CONTEXT7_API_KEY>"
+      },
+      "enabled": true
+    },
+    "deepwiki": {
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/mcp",
+      "enabled": true
+    },
+    "github": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "github-repos-manager-mcp"
+      ],
+      "environment": {
+        "GH_TOKEN": "${GH_TOKEN}"
+      },
+      "enabled": true,
+      "note": "YAAMCPL Winner: Full GitHub management (89 tools)"
+    },
+    "filesystem": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "mcp-filesystem-server"
+      ],
+      "enabled": true,
+      "note": "YAAMCPL Winner: mark3labs/mcp-filesystem-server"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "mcpServers": {
+    "serena": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide-assistant"
+      ],
+      "enabled": true
+    },
+    "vibe-check": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@pv-bhat/vibe-check-mcp",
+        "start",
+        "--stdio"
+      ],
+      "environment": {
+        "GEMINI_API_KEY": "<YOUR_GEMINI_API_KEY>"
+      },
+      "enabled": true
+    },
+    "mysql": {
+      "type": "local",
+      "command": [
+        "node",
+        "/path/to/mcp-mysql-server/build/index.js"
+      ],
+      "enabled": true,
+      "note": "YAAMCPL Winner: f4ww4z/mcp-mysql-server (dynamic connect)"
+    },
+    "gateway": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "ghcr.io/centralmind/gateway:latest",
+        "start",
+        "--connection-string",
+        "${DATABASE_URL}",
+        "mcp-stdio"
+      ],
+      "enabled": true,
+      "note": "YAAMCPL Winner: centralmind/gateway (universal DB)"
+    },
+    "redis": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "mcp-redis"
+      ],
+      "enabled": true,
+      "note": "YAAMCPL Winner: redis/mcp-redis"
+    }
+  }
+}

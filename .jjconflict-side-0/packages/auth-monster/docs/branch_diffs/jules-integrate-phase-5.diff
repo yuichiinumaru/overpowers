@@ -1,0 +1,77 @@
+diff --git a/src/core/rotation.ts b/src/core/rotation.ts
+index 8ef4485..ef1922d 100644
+--- a/src/core/rotation.ts
++++ b/src/core/rotation.ts
+@@ -125,10 +125,10 @@ export class AccountRotator {
+       // Check global cooldown manager
+       if (isOnCooldown(acc.provider, acc.id)) return false;
+
+-      // Check explicit health flag
+-      if (acc.isHealthy === false) return false;
++      // Check explicit quota if available (Proactive check)
++      if (acc.quota && acc.quota.remaining <= 0) return false;
+
+-      // Check health score
++      // Check health
+       if (!this.healthTracker.isUsable(acc)) return false;
+
+       return true;
+diff --git a/src/index.ts b/src/index.ts
+index 9fb198b..a59af08 100644
+--- a/src/index.ts
++++ b/src/index.ts
+@@ -12,6 +12,7 @@ import { sanitizeCrossModelRequest } from './utils/sanitizer';
+ import { proxyFetch } from './core/proxy';
+ import { CostEstimator } from './core/cost-estimator';
+ import { HistoryManager } from './core/history';
++import { enforceReasoning } from './core/reasoning';
+
+ // Import Providers
+ import { GeminiProvider } from './providers/gemini';
+@@ -364,7 +365,12 @@ export class AuthMonster {
+    */
+   transformRequest(provider: AuthProvider, body: any, modelInProvider?: string): any {
+     // 1. Cross-model signature sanitization (Gemini <-> Claude conflicts)
+-    const sanitizedBody = sanitizeCrossModelRequest(body);
++    let sanitizedBody = sanitizeCrossModelRequest(body);
++
++    // 1.5. Reasoning Enforcer
++    if (this.config.thinking?.enabled) {
++       sanitizedBody = enforceReasoning(sanitizedBody, modelInProvider);
++    }
+
+     // 2. Inject hub-selected model if present
+     if (modelInProvider) {
+diff --git a/src/utils/github-sync.ts b/src/utils/github-sync.ts
+index 9e093e8..658a3e1 100644
+--- a/src/utils/github-sync.ts
++++ b/src/utils/github-sync.ts
+@@ -7,8 +7,9 @@ import { ManagedAccount } from '../core/types';
+  *
+  * @param repo Repository in 'owner/repo' format.
+  * @param accounts List of managed accounts to sync.
++ * @param token Optional GitHub PAT to use for authentication.
+  */
+-export async function syncToGitHub(repo: string, accounts: ManagedAccount[]): Promise<void> {
++export async function syncToGitHub(repo: string, accounts: ManagedAccount[], token?: string): Promise<void> {
+   try {
+     // Check if gh CLI is installed
+     try {
+@@ -37,10 +38,16 @@ export async function syncToGitHub(repo: string, accounts: ManagedAccount[]): Pr
+
+     console.log(`Syncing ${accounts.length} accounts to GitHub secret ${secretName} in ${repo}...`);
+
++    const env = { ...process.env };
++    if (token) {
++        env.GITHUB_TOKEN = token;
++    }
++
+     execSync(command, {
+       input: jsonData,
+       stdio: ['pipe', 'inherit', 'inherit'],
+-      encoding: 'utf8'
++      encoding: 'utf8',
++      env
+     });
+
+     console.log(`Successfully synced!`);

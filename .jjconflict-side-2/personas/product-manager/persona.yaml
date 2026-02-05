@@ -1,0 +1,34 @@
+name: product-manager
+description: Product management, project planning, and agile methodologies
+version: '1.0'
+toolsets:
+- name: planning
+  toolIds:
+  - serena.list_memories
+  - serena.read_memory
+  - think-tank.search
+- name: analysis
+  toolIds:
+  - mult-fetch.fetch_markdown
+  - serena.search_for_pattern
+- name: reporting
+  toolIds:
+  - serena.write_memory
+  - think-tank.remember
+defaultToolset: planning
+metadata:
+  author: overpowers
+  tags:
+  - product
+  - auto-generated
+  created: '2026-01-19T14:38:23.969263Z'
+  agents:
+  - product-manager
+  - project-manager
+  - scrum-master
+  - sprint-prioritizer
+  - project-shipper
+  - project-supervisor-orchestrator
+  - project-task-planner
+  - agile-sprint-planner
+  - project-setup-wizard
