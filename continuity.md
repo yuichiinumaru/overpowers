@@ -1,4 +1,4 @@
-# Overpowers Continuity Ledger
+# overpowers Continuity Ledger
 
 ## Session: 2026-01-19 - Bulk Repository Extraction
 **Operator**: Jules (Agent)

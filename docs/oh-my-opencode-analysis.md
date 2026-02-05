@@ -8,7 +8,7 @@
 
 `oh-my-opencode` is a comprehensive "batteries-included" plugin for OpenCode, heavily inspired by "Oh My Zsh". It transforms OpenCode into a powerful agentic IDE by introducing a multi-agent orchestration system led by "Sisyphus".
 
-Unlike Overpowers, which is a collection of scripts and configs, `oh-my-opencode` is a **TypeScript plugin** that hooks deeply into the OpenCode runtime.
+Unlike overpowers, which is a collection of scripts and configs, `oh-my-opencode` is a **TypeScript plugin** that hooks deeply into the OpenCode runtime.
 
 ## Key Discoveries
 
@@ -31,7 +31,7 @@ The core innovation is **Sisyphus**, an agent designed to be a "disciplined seni
 
 ## Integration Actions
 
-We have extracted and adapted the following components into Overpowers:
+We have extracted and adapted the following components into overpowers:
 
 ### Agents
 - **`agents/sisyphus/sisyphus-orchestrator.md`**: A faithful recreation of the Sisyphus prompt logic, adapted for our markdown-based agent system.
@@ -59,4 +59,4 @@ We have extracted and adapted the following components into Overpowers:
 
 ## Conclusion
 
-`oh-my-opencode` offers a sophisticated *runtime* approach to agent orchestration. Overpowers offers a *configuration* approach. By extracting the high-quality prompts and logic from `oh-my-opencode`, we have significantly upgraded our agent army's intelligence without introducing complex TypeScript dependencies.
+`oh-my-opencode` offers a sophisticated *runtime* approach to agent orchestration. overpowers offers a *configuration* approach. By extracting the high-quality prompts and logic from `oh-my-opencode`, we have significantly upgraded our agent army's intelligence without introducing complex TypeScript dependencies.

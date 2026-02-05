@@ -1,6 +1,6 @@
 #!/bin/bash
 # Test script to verify if the issue is with hidden directories or security
-# Run from: /home/sephiroth/.config/opencode/Overpowers
+# Run from: /home/sephiroth/.config/opencode/overpowers
 
 export OPENCODE_PERMISSION='"allow"'
 

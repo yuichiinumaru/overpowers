@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate comprehensive inventory of Overpowers assets.
+Generate comprehensive inventory of overpowers assets.
 Creates markdown files listing all agents, skills, scripts, workflows, hooks, and services.
 """
 
@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 from collections import defaultdict
 
-OVERPOWERS_ROOT = Path("/home/sephiroth/.config/opencode/Overpowers")
+OVERPOWERS_ROOT = Path("/home/sephiroth/.config/opencode/overpowers")
 DOCS_DIR = OVERPOWERS_ROOT / "docs"
 
 def scan_agents():
@@ -213,9 +213,9 @@ def generate_inventory_md():
     # Calculate totals
     total_scripts = sum(len(s) for s in scripts.values())
     
-    md = f"""# Overpowers Complete Inventory
+    md = f"""# overpowers Complete Inventory
 
-> Auto-generated inventory of all Overpowers assets.
+> Auto-generated inventory of all overpowers assets.
 > Last updated: {os.popen('date -Iseconds').read().strip()}
 
 ## Summary

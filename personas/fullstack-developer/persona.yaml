@@ -18,7 +18,7 @@ toolsets:
   - context7.resolve-library-id
 defaultToolset: coding
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - fullstack
   - auto-generated

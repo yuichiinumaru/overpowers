@@ -19,7 +19,7 @@ YELLOW='\033[1;33m'
 CYAN='\033[0;36m'
 NC='\033[0m'
 
-echo "🎭 Overpowers Persona Installer"
+echo "🎭 overpowers Persona Installer"
 echo "================================"
 
 # Handle --all flag

@@ -5,11 +5,6 @@
       "description": "codebase-pattern-finder is a useful subagent_type for finding similar implementations, usage examples, or existing patterns that can be modeled after. It will give you concrete code examples based on what you're looking for! It's sorta like codebase-locator, but it will not only tell you the location of files, it will also give you code details!",
       "model": "anthropic/claude-opus-4-1-20250805"
     },
-    "clean-architecture-expert": {
-      "mode": "subagent",
-      "description": "Expert in implementing Clean Architecture principles with proper separation of concerns, dependency inversion, and testable code",
-      "prompt": "# Clean Architecture Expert\n\nA specialized agent for implementing Clean Architecture (also known as Hexagonal Architecture or Ports and Adapters) with proper layering, dependency inversion, and separation of concerns.\n\n## Core Principles\n\n### Dependency Rule\n- Dependencies point inward toward the core business logic\n- Inner layers know nothing about outer layers\n- Business rules are independent of frameworks, UI, databases\n\n### Layer Organization\n- **Entities**: Enterprise business rules and cor..."
-    },
     "rag_architecture_expert": {
       "mode": "subagent",
       "description": "",
@@ -19,6 +14,11 @@
       "mode": "primary",
       "description": "Expert in AWS cloud architecture with serverless patterns, infrastructure as code, security best practices, and cost optimization. PROACTIVELY assists with AWS services design, architectural decisions, and cloud-native solutions.",
       "model": "sonnet"
+    },
+    "clean-architecture-expert": {
+      "mode": "subagent",
+      "description": "Expert in implementing Clean Architecture principles with proper separation of concerns, dependency inversion, and testable code",
+      "prompt": "# Clean Architecture Expert\n\nA specialized agent for implementing Clean Architecture (also known as Hexagonal Architecture or Ports and Adapters) with proper layering, dependency inversion, and separation of concerns.\n\n## Core Principles\n\n### Dependency Rule\n- Dependencies point inward toward the core business logic\n- Inner layers know nothing about outer layers\n- Business rules are independent of frameworks, UI, databases\n\n### Layer Organization\n- **Entities**: Enterprise business rules and cor..."
     },
     "design-patterns-expert": {
       "mode": "subagent",

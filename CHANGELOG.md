@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Overpowers toolkit are documented in this file.
+All notable changes to the overpowers toolkit are documented in this file.
 
 > [!CAUTION]
 > **IMMUTABLE HISTORY**: Entries in this file must NEVER be deleted or modified (except typo fixes).
@@ -209,12 +209,12 @@ All notable changes to the Overpowers toolkit are documented in this file.
 ## [2026-01-18] - Antigravity Skills Installer & Subagent Orchestration
 
 ### Added
-- **`install-antigravity-skills.sh`** - Interactive installer for deploying Overpowers skills to Google Antigravity IDE
+- **`install-antigravity-skills.sh`** - Interactive installer for deploying overpowers skills to Google Antigravity IDE
   - 🌐 Multi-language support (English / Português BR)
   - ☢️ **Nuclear Mode** - Install ALL 500+ components with confirmation ("TEM CERTEZA DISSO, BICHO? OLOKO!")
   - 📋 Automatic workflows installation
   - 🔄 Agent-to-skill conversion (392 agents converted inline)
-  - 🔍 Local Overpowers detection before downloading
+  - 🔍 Local overpowers detection before downloading
   
 - **`skills/subagent_orchestration/`** - New skill for OpenCode subagent orchestration
   - `run-subagent.sh` - Run single subagent with auto-permissions
@@ -274,7 +274,7 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ### Changed
 - `lib/skills-core.js` - Added `findAgentsInDir()` and `extractAgentData()` utilities
-- `.opencode/plugin/Overpowers.js` - Added dynamic agent discovery and registration
+- `.opencode/plugin/overpowers.js` - Added dynamic agent discovery and registration
 
 **Author**: Antigravity + Yuichi Inumaru
 
@@ -304,9 +304,9 @@ All notable changes to the Overpowers toolkit are documented in this file.
 ## [2026-01-17] - OpenCode Startup Debugging
 
 ### Fixed
-- Fixed plugin path from `superpowers` to `Overpowers` in `opencode.json`
+- Fixed plugin path from `superpowers` to `overpowers` in `opencode.json`
 - Renamed skill `using-superpowers` to `using-overpowers` for consistency
-- Updated `Overpowers.js` to reference correct skill name
+- Updated `overpowers.js` to reference correct skill name
 - Created `fix-skill-names.py` to correct SKILL.md frontmatter mismatches
 
 ### Removed
@@ -322,8 +322,8 @@ All notable changes to the Overpowers toolkit are documented in this file.
 ## [2026-01-17] - Repository Rebranding
 
 ### Changed
-- Renamed toolkit from "Superpowers" to "Overpowers"
-- Updated all GitHub URLs from `obra/Overpowers` to `yuichiinumaru/overpowers`
+- Renamed toolkit from "Superpowers" to "overpowers"
+- Updated all GitHub URLs from `obra/overpowers` to `yuichiinumaru/overpowers`
 - Updated `LICENSE` copyright holder
 - Updated `README.md` with credits to Jesse Vincent
 - Updated Claude plugin metadata

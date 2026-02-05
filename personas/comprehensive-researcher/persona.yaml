@@ -16,7 +16,7 @@ toolsets:
   - think-tank.remember
 defaultToolset: discovery
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - comprehensive
   - auto-generated

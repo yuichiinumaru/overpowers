@@ -292,9 +292,9 @@ export PRESERVE_OPUS_QUOTA=true  # Use Opus only for complex tasks
 
 ## Related Files
 
-- `/home/sephiroth/.config/opencode/Overpowers/skills/subagent_orchestration/`
-- `/home/sephiroth/.config/opencode/Overpowers/agents/000_ceo_orchestrator.md`
-- `/home/sephiroth/.config/opencode/Overpowers/configure-persona.sh`
+- `/home/sephiroth/.config/opencode/overpowers/skills/subagent_orchestration/`
+- `/home/sephiroth/.config/opencode/overpowers/agents/000_ceo_orchestrator.md`
+- `/home/sephiroth/.config/opencode/overpowers/configure-persona.sh`
 
 ---
 

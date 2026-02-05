@@ -3,7 +3,7 @@
     "plugin": [
         "opencode-skills",
         "opencode-sessions",
-        "./Overpowers/.opencode/plugin/Overpowers.js",
+        "./overpowers/.opencode/plugin/overpowers.js",
         "opencode-optimal-model-temps",
         "envsitter-guard",
         "opencode-windsurf-codeium@beta"
@@ -17,7 +17,7 @@
                 "@upstash/context7-mcp"
             ],
             "environment": {
-                "CONTEXT7_API_KEY": "YOUR_CONTEXT7_API_KEY"
+                "CONTEXT7_API_KEY": ""
             },
             "enabled": true
         },
@@ -44,7 +44,7 @@
                 "--stdio"
             ],
             "environment": {
-                "GEMINI_API_KEY": "YOUR_GEMINI_API_KEY"
+                "GEMINI_API_KEY": ""
             },
             "enabled": true
         },
@@ -56,9 +56,8 @@
                 "mcp-think-tank@2.0.7"
             ],
             "environment": {
-                "MEMORY_PATH": "/path/to/your/memory.jsonl",
-                "EXA_API_KEY": "YOUR_EXA_API_KEY"
-            },
+                "MEMORY_PATH": "/path/to/memory.jsonl",
+                "EXA_API_KEY": ""
             "enabled": true
         },
         "mult-fetch": {
@@ -139,7 +138,7 @@
         "ceo_orchestrator": {
             "mode": "primary",
             "description": "Chief Executive Orchestrator - Delegation-focused master coordinator. Does NOT execute tasks directly, only delegates to specialists. Knows when to use Jules Swarm vs subagents vs direct agents. Use for complex multi-step projects requiring coordination.",
-            "prompt": "You are the CEO (Chief Executive Orchestrator) of the Overpowers toolkit. Your primary function is STRATEGIC DELEGATION - you do NOT execute tasks directly, you orchestrate and coordinate specialists.\n\nCore Philosophy: 'Do not do. Delegate. Coordinate. Review.'\n\nDelegation Methods:\n1. Subagent (fast, local): Use run-subagent.sh from skills/subagent_orchestration/\n2. Agent invoke: /invoke <agent-name> for specialized tasks\n3. Jules Swarm: /skill jules_dispatch for long-running or multi-repo tasks\n\nYou may READ files to understand context, but DELEGATE all execution to appropriate specialists."
+            "prompt": "You are the CEO (Chief Executive Orchestrator) of the overpowers toolkit. Your primary function is STRATEGIC DELEGATION - you do NOT execute tasks directly, you orchestrate and coordinate specialists.\n\nCore Philosophy: 'Do not do. Delegate. Coordinate. Review.'\n\nDelegation Methods:\n1. Subagent (fast, local): Use run-subagent.sh from skills/subagent_orchestration/\n2. Agent invoke: /invoke <agent-name> for specialized tasks\n3. Jules Swarm: /skill jules_dispatch for long-running or multi-repo tasks\n\nYou may READ files to understand context, but DELEGATE all execution to appropriate specialists."
         },
         "task_decomposition_expert": {
             "mode": "primary",

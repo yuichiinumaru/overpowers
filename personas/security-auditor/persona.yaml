@@ -17,7 +17,7 @@ toolsets:
   - serena.list_memories
 defaultToolset: scanning
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - security
   - auto-generated

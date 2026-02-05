@@ -90,12 +90,12 @@ Navigate our **390+ agents and 149 skills** to find the right tool for any task.
 
 ### List Available Skills
 ```bash
-ls ~/.config/opencode/Overpowers/skills/
+ls ~/.config/opencode/overpowers/skills/
 ```
 
 ### Search by Keyword
 ```bash
-grep -r "keyword" ~/.config/opencode/Overpowers/skills/*/SKILL.md
+grep -r "keyword" ~/.config/opencode/overpowers/skills/*/SKILL.md
 ```
 
 ### Common Skill Patterns
@@ -149,19 +149,19 @@ security-auditor → api_security_audit → incident_responder → code-reviewer
 
 ```bash
 # List all agents
-ls ~/.config/opencode/Overpowers/agents/
+ls ~/.config/opencode/overpowers/agents/
 
 # List all skills
-ls ~/.config/opencode/Overpowers/skills/
+ls ~/.config/opencode/overpowers/skills/
 
 # List all workflows
-ls ~/.config/opencode/Overpowers/workflows/
+ls ~/.config/opencode/overpowers/workflows/
 
 # Search agents by name
-ls ~/.config/opencode/Overpowers/agents/ | grep "keyword"
+ls ~/.config/opencode/overpowers/agents/ | grep "keyword"
 
 # Count totals
-echo "Agents: $(ls ~/.config/opencode/Overpowers/agents/ | wc -l)"
-echo "Skills: $(ls ~/.config/opencode/Overpowers/skills/ | wc -l)"
-echo "Workflows: $(ls ~/.config/opencode/Overpowers/workflows/ | wc -l)"
+echo "Agents: $(ls ~/.config/opencode/overpowers/agents/ | wc -l)"
+echo "Skills: $(ls ~/.config/opencode/overpowers/skills/ | wc -l)"
+echo "Workflows: $(ls ~/.config/opencode/overpowers/workflows/ | wc -l)"
 ```

@@ -1,6 +1,6 @@
 # Workflows Guide
 
-Overpowers includes **16 multi-step workflows** that orchestrate complex development tasks by coordinating agents, skills, and scripts.
+overpowers includes **16 multi-step workflows** that orchestrate complex development tasks by coordinating agents, skills, and scripts.
 
 ## What are Workflows?
 
@@ -73,7 +73,7 @@ What this workflow does and when to use it.
 ### Step 1: [Name]
 - Actions to take
 - Agents to invoke: `@agent-name`
-- Skills to use: `use_skill Overpowers:skill-name`
+- Skills to use: `use_skill overpowers:skill-name`
 
 ### Step 2: [Name]
 ...
@@ -102,7 +102,7 @@ Follow the feature-development workflow for implementing user authentication.
 Or load it explicitly:
 
 ```
-Read and follow Overpowers/workflows/feature-development.md
+Read and follow overpowers/workflows/feature-development.md
 ```
 
 ### Workflow Invocation Patterns
@@ -136,13 +136,13 @@ Run only the "Static Analysis" and "Dependency Scan" steps from security-hardeni
 
 ### 2. Design
 - @architect-review: Propose architecture
-- use_skill Overpowers:writing-plans
+- use_skill overpowers:writing-plans
 - Create implementation plan
 
 ### 3. Implementation
 - @task-decomposition-expert: Break into subtasks
 - Implement in TDD style
-- use_skill Overpowers:test-driven-development
+- use_skill overpowers:test-driven-development
 
 ### 4. Review
 - @code-reviewer: Review implementation

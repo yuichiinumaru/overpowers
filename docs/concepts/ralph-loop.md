@@ -15,7 +15,7 @@ The "Ralph Loop" is an autonomous recursive task execution pattern extracted fro
 
 ## Implementation Note
 
-In `oh-my-opencode`, this is implemented as a runtime hook (`src/hooks/ralph-loop`). Since Overpowers is a configuration/script repository, this logic must be implemented via:
+In `oh-my-opencode`, this is implemented as a runtime hook (`src/hooks/ralph-loop`). Since overpowers is a configuration/script repository, this logic must be implemented via:
 1.  **Agent Discipline**: Instructing the agent (via Prompt) to self-iterate.
 2.  **CLI Wrappers**: A script that wraps `opencode` CLI and handles the loop logic (parsing stdout for the completion marker).
 

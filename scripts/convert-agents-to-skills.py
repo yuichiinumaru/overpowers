@@ -97,7 +97,7 @@ def main():
         print()
         print("Examples:")
         print("  python convert-agents-to-skills.py ./agents ./converted-skills")
-        print("  python convert-agents-to-skills.py ~/.config/opencode/Overpowers/agents ~/skills")
+        print("  python convert-agents-to-skills.py ~/.config/opencode/overpowers/agents ~/skills")
         sys.exit(1)
     
     agents_dir = Path(sys.argv[1]).expanduser().resolve()

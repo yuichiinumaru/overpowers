@@ -249,10 +249,10 @@ fi
 echo ""
 echo "Test 4: Testing resolveSkillPath..."
 
-# Create skills in personal and Overpowers locations for testing
+# Create skills in personal and overpowers locations for testing
 mkdir -p "$TEST_HOME/personal-skills/shared-skill"
-mkdir -p "$TEST_HOME/Overpowers-skills/shared-skill"
-mkdir -p "$TEST_HOME/Overpowers-skills/unique-skill"
+mkdir -p "$TEST_HOME/overpowers-skills/shared-skill"
+mkdir -p "$TEST_HOME/overpowers-skills/unique-skill"
 
 cat > "$TEST_HOME/personal-skills/shared-skill/SKILL.md" <<'EOF'
 ---
@@ -262,18 +262,18 @@ description: Personal version
 # Personal Shared
 EOF
 
-cat > "$TEST_HOME/Overpowers-skills/shared-skill/SKILL.md" <<'EOF'
+cat > "$TEST_HOME/overpowers-skills/shared-skill/SKILL.md" <<'EOF'
 ---
 name: shared-skill
-description: Overpowers version
+description: overpowers version
 ---
-# Overpowers Shared
+# overpowers Shared
 EOF
 
-cat > "$TEST_HOME/Overpowers-skills/unique-skill/SKILL.md" <<'EOF'
+cat > "$TEST_HOME/overpowers-skills/unique-skill/SKILL.md" <<'EOF'
 ---
 name: unique-skill
-description: Only in Overpowers
+description: Only in overpowers
 ---
 # Unique
 EOF
@@ -283,8 +283,8 @@ const fs = require('fs');
 const path = require('path');
 
 function resolveSkillPath(skillName, OverpowersDir, personalDir) {
-    const forceOverpowers = skillName.startsWith('Overpowers:');
-    const actualSkillName = forceOverpowers ? skillName.replace(/^Overpowers:/, '') : skillName;
+    const forceOverpowers = skillName.startsWith('overpowers:');
+    const actualSkillName = forceOverpowers ? skillName.replace(/^overpowers:/, '') : skillName;
 
     if (!forceOverpowers && personalDir) {
         const personalPath = path.join(personalDir, actualSkillName);
@@ -304,7 +304,7 @@ function resolveSkillPath(skillName, OverpowersDir, personalDir) {
         if (fs.existsSync(OverpowersSkillFile)) {
             return {
                 skillFile: OverpowersSkillFile,
-                sourceType: 'Overpowers',
+                sourceType: 'overpowers',
                 skillPath: actualSkillName
             };
         }
@@ -313,18 +313,18 @@ function resolveSkillPath(skillName, OverpowersDir, personalDir) {
     return null;
 }
 
-const OverpowersDir = '$TEST_HOME/Overpowers-skills';
+const OverpowersDir = '$TEST_HOME/overpowers-skills';
 const personalDir = '$TEST_HOME/personal-skills';
 
 // Test 1: Shared skill should resolve to personal
 const shared = resolveSkillPath('shared-skill', OverpowersDir, personalDir);
 console.log('SHARED:', JSON.stringify(shared));
 
-// Test 2: Overpowers: prefix should force Overpowers
-const forced = resolveSkillPath('Overpowers:shared-skill', OverpowersDir, personalDir);
+// Test 2: overpowers: prefix should force overpowers
+const forced = resolveSkillPath('overpowers:shared-skill', OverpowersDir, personalDir);
 console.log('FORCED:', JSON.stringify(forced));
 
-// Test 3: Unique skill should resolve to Overpowers
+// Test 3: Unique skill should resolve to overpowers
 const unique = resolveSkillPath('unique-skill', OverpowersDir, personalDir);
 console.log('UNIQUE:', JSON.stringify(unique));
 
@@ -334,24 +334,24 @@ console.log('NOTFOUND:', JSON.stringify(notfound));
 " 2>&1)
 
 if echo "$result" | grep -q 'SHARED:.*"sourceType":"personal"'; then
-    echo "  [PASS] Personal skills shadow Overpowers skills"
+    echo "  [PASS] Personal skills shadow overpowers skills"
 else
     echo "  [FAIL] Personal skills not shadowing correctly"
     echo "  Result: $result"
     exit 1
 fi
 
-if echo "$result" | grep -q 'FORCED:.*"sourceType":"Overpowers"'; then
-    echo "  [PASS] Overpowers: prefix forces Overpowers resolution"
+if echo "$result" | grep -q 'FORCED:.*"sourceType":"overpowers"'; then
+    echo "  [PASS] overpowers: prefix forces overpowers resolution"
 else
-    echo "  [FAIL] Overpowers: prefix not working"
+    echo "  [FAIL] overpowers: prefix not working"
     exit 1
 fi
 
-if echo "$result" | grep -q 'UNIQUE:.*"sourceType":"Overpowers"'; then
-    echo "  [PASS] Unique Overpowers skills are found"
+if echo "$result" | grep -q 'UNIQUE:.*"sourceType":"overpowers"'; then
+    echo "  [PASS] Unique overpowers skills are found"
 else
-    echo "  [FAIL] Unique Overpowers skills not found"
+    echo "  [FAIL] Unique overpowers skills not found"
     exit 1
 fi
 

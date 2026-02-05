@@ -1,4 +1,4 @@
-# Installing Overpowers for OpenCode
+# Installing overpowers for OpenCode
 
 ## Prerequisites
 
@@ -8,11 +8,11 @@
 
 ## Installation Steps
 
-### 1. Install Overpowers
+### 1. Install overpowers
 
 ```bash
-mkdir -p ~/.config/opencode/Overpowers
-git clone https://github.com/yuichiinumaru/Overpowers.git ~/.config/opencode/Overpowers
+mkdir -p ~/.config/opencode/overpowers
+git clone https://github.com/yuichiinumaru/overpowers.git ~/.config/opencode/overpowers
 ```
 
 ### 2. Register the Plugin
@@ -21,14 +21,14 @@ Create a symlink so OpenCode discovers the plugin:
 
 ```bash
 mkdir -p ~/.config/opencode/plugin
-ln -sf ~/.config/opencode/Overpowers/.opencode/plugin/Overpowers.js ~/.config/opencode/plugin/Overpowers.js
+ln -sf ~/.config/opencode/overpowers/.opencode/plugin/overpowers.js ~/.config/opencode/plugin/overpowers.js
 ```
 
 ### 3. Restart OpenCode
 
-Restart OpenCode. The plugin will automatically inject Overpowers context via the chat.message hook.
+Restart OpenCode. The plugin will automatically inject overpowers context via the chat.message hook.
 
-You should see Overpowers is active when you ask "do you have Overpowers?"
+You should see overpowers is active when you ask "do you have overpowers?"
 
 ## Usage
 
@@ -45,7 +45,7 @@ use find_skills tool
 Use the `use_skill` tool to load a specific skill:
 
 ```
-use use_skill tool with skill_name: "Overpowers:brainstorming"
+use use_skill tool with skill_name: "overpowers:brainstorming"
 ```
 
 ### Personal Skills
@@ -69,7 +69,7 @@ description: Use when [condition] - [what it does]
 [Your skill content here]
 ```
 
-Personal skills override Overpowers skills with the same name.
+Personal skills override overpowers skills with the same name.
 
 ### Project Skills
 
@@ -93,17 +93,17 @@ description: Use when [condition] - [what it does]
 [Your skill content here]
 ```
 
-**Skill Priority:** Project skills override personal skills, which override Overpowers skills.
+**Skill Priority:** Project skills override personal skills, which override overpowers skills.
 
 **Skill Naming:**
 - `project:skill-name` - Force project skill lookup
-- `skill-name` - Searches project → personal → Overpowers
-- `Overpowers:skill-name` - Force Overpowers skill lookup
+- `skill-name` - Searches project → personal → overpowers
+- `overpowers:skill-name` - Force overpowers skill lookup
 
 ## Updating
 
 ```bash
-cd ~/.config/opencode/Overpowers
+cd ~/.config/opencode/overpowers
 git pull
 ```
 
@@ -111,13 +111,13 @@ git pull
 
 ### Plugin not loading
 
-1. Check plugin file exists: `ls ~/.config/opencode/Overpowers/.opencode/plugin/Overpowers.js`
+1. Check plugin file exists: `ls ~/.config/opencode/overpowers/.opencode/plugin/overpowers.js`
 2. Check OpenCode logs for errors
 3. Verify Node.js is installed: `node --version`
 
 ### Skills not found
 
-1. Verify skills directory exists: `ls ~/.config/opencode/Overpowers/skills`
+1. Verify skills directory exists: `ls ~/.config/opencode/overpowers/skills`
 2. Use `find_skills` tool to see what's discovered
 3. Check file structure: each skill should have a `SKILL.md` file
 
@@ -131,5 +131,5 @@ When a skill references a Claude Code tool you don't have:
 
 ## Getting Help
 
-- Report issues: https://github.com/yuichiinumaru/Overpowers/issues
-- Documentation: https://github.com/yuichiinumaru/Overpowers
+- Report issues: https://github.com/yuichiinumaru/overpowers/issues
+- Documentation: https://github.com/yuichiinumaru/overpowers

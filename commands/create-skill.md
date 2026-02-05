@@ -350,8 +350,8 @@ wc -w skills/path/SKILL.md
 
 Use skill name only, with explicit requirement markers:
 
-- ✅ Good: `**REQUIRED SUB-SKILL:** Use Overpowers:test-driven-development`
-- ✅ Good: `**REQUIRED BACKGROUND:** You MUST understand Overpowers:systematic-debugging`
+- ✅ Good: `**REQUIRED SUB-SKILL:** Use overpowers:test-driven-development`
+- ✅ Good: `**REQUIRED BACKGROUND:** You MUST understand overpowers:systematic-debugging`
 - ❌ Bad: `See skills/testing/test_driven_development` (unclear if required)
 - ❌ Bad: `@skills/testing/test_driven_development/SKILL.md` (force-loads, burns context)
 
@@ -601,7 +601,7 @@ Run same scenarios WITH skill. Agent should now comply.
 
 Agent found new rationalization? Add explicit counter. Re-test until bulletproof.
 
-**REQUIRED SUB-SKILL:** Use Overpowers:testing-skills-with-subagents for the complete testing methodology:
+**REQUIRED SUB-SKILL:** Use overpowers:testing-skills-with-subagents for the complete testing methodology:
 
 - How to write pressure scenarios
 - Pressure types (time, sunk cost, authority, exhaustion)

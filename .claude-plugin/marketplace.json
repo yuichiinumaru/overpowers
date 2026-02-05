@@ -1,5 +1,5 @@
 {
-  "name": "Overpowers",
+  "name": "overpowers",
   "description": "Massive agentic toolkit for OpenCode/Claude Code",
   "owner": {
     "name": "Yuichi Inumaru",
@@ -7,7 +7,7 @@
   },
   "plugins": [
     {
-      "name": "Overpowers",
+      "name": "overpowers",
       "description": "390+ agents, 149 skills, 228 commands, workflows, and DevOps automation",
       "version": "5.0.0",
       "source": "./",

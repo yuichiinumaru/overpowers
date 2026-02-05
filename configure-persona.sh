@@ -1,6 +1,6 @@
 #!/bin/bash
 # configure-persona.sh
-# Interactive MCP configuration for Overpowers personas
+# Interactive MCP configuration for overpowers personas
 #
 # Features:
 # - Select which MCPs to enable/disable
@@ -80,7 +80,7 @@ declare -A MCP_DESCRIPTIONS=(
 
 print_header() {
     echo -e "${CYAN}╔════════════════════════════════════════════════════════════╗${NC}"
-    echo -e "${CYAN}║${NC}     ${BOLD}🎭 Overpowers MCP Configuration Wizard${NC}                  ${CYAN}║${NC}"
+    echo -e "${CYAN}║${NC}     ${BOLD}🎭 overpowers MCP Configuration Wizard${NC}                  ${CYAN}║${NC}"
     echo -e "${CYAN}╚════════════════════════════════════════════════════════════╝${NC}"
     echo ""
 }

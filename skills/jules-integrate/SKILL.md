@@ -295,6 +295,6 @@ echo "✅ Cleanup complete"
 
 ## Integration
 
-**Previous skill:** `Overpowers:jules-triage` (produces integration plan)
-**Related:** `Overpowers:finishing-a-development-branch` (finalize integration PR)
+**Previous skill:** `overpowers:jules-triage` (produces integration plan)
+**Related:** `overpowers:finishing-a-development-branch` (finalize integration PR)
 **Tracking:** Update `.jules/HARVEST-INDEX.md` and `CONTINUITY.md`

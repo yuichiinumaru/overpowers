@@ -1,8 +1,8 @@
 #!/bin/bash
 # ============================================================================
-# Overpowers Skills Installer for Google Antigravity
+# overpowers Skills Installer for Google Antigravity
 # ============================================================================
-# Installs curated skills from the Overpowers toolkit into Antigravity
+# Installs curated skills from the overpowers toolkit into Antigravity
 # Compatible with Linux, macOS, and Windows (via Git Bash/WSL)
 # ============================================================================
 
@@ -36,12 +36,12 @@ declare -A EN=(
     ["enter_custom_path"]="Enter custom path (or press Enter for default)"
     ["creating_dir"]="Creating directory"
     ["install_path"]="Install path"
-    ["searching_local"]="Searching for local Overpowers installations..."
-    ["found_local"]="Found local Overpowers at"
+    ["searching_local"]="Searching for local overpowers installations..."
+    ["found_local"]="Found local overpowers at"
     ["local_detected"]="Local installation detected."
-    ["use_local"]="Use local Overpowers instead of downloading? [Y/n]"
+    ["use_local"]="Use local overpowers instead of downloading? [Y/n]"
     ["using_local"]="Using local source"
-    ["downloading"]="Downloading Overpowers toolkit from GitHub..."
+    ["downloading"]="Downloading overpowers toolkit from GitHub..."
     ["download_complete"]="Download complete"
     ["no_source"]="No source available (Git failed and no local copy selected)."
     ["select_profile"]="Select installation profile:"
@@ -94,12 +94,12 @@ declare -A PTBR=(
     ["enter_custom_path"]="Digite caminho customizado (ou Enter para padrão)"
     ["creating_dir"]="Criando diretório"
     ["install_path"]="Caminho de instalação"
-    ["searching_local"]="Buscando instalações locais do Overpowers..."
-    ["found_local"]="Overpowers encontrado em"
+    ["searching_local"]="Buscando instalações locais do overpowers..."
+    ["found_local"]="overpowers encontrado em"
     ["local_detected"]="Instalação local detectada."
-    ["use_local"]="Usar Overpowers local ao invés de baixar? [S/n]"
+    ["use_local"]="Usar overpowers local ao invés de baixar? [S/n]"
     ["using_local"]="Usando fonte local"
-    ["downloading"]="Baixando Overpowers do GitHub..."
+    ["downloading"]="Baixando overpowers do GitHub..."
     ["download_complete"]="Download completo"
     ["no_source"]="Nenhuma fonte disponível (Git falhou e cópia local não selecionada)."
     ["select_profile"]="Selecione o perfil de instalação:"
@@ -364,9 +364,9 @@ main() {
     print_step "$(t searching_local)"
     
     LOCAL_PATHS=(
-        "/home/$username/.config/opencode/Overpowers"
-        "/home/$username/.claude/Overpowers"
-        "/home/$username/Overpowers"
+        "/home/$username/.config/opencode/overpowers"
+        "/home/$username/.claude/overpowers"
+        "/home/$username/overpowers"
         "$(pwd)"
     )
     

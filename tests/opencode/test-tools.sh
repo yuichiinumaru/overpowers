@@ -36,8 +36,8 @@ output=$(timeout 60s opencode run --print-logs "Use the find_skills tool to list
 }
 
 # Check for expected patterns in output
-if echo "$output" | grep -qi "Overpowers:brainstorming\|Overpowers:using-Overpowers\|Available skills"; then
-    echo "  [PASS] find_skills tool discovered Overpowers skills"
+if echo "$output" | grep -qi "overpowers:brainstorming\|overpowers:using-overpowers\|Available skills"; then
+    echo "  [PASS] find_skills tool discovered overpowers skills"
 else
     echo "  [FAIL] find_skills did not return expected skills"
     echo "  Output was:"
@@ -76,12 +76,12 @@ else
     exit 1
 fi
 
-# Test 3: Test use_skill with Overpowers: prefix
+# Test 3: Test use_skill with overpowers: prefix
 echo ""
-echo "Test 3: Testing use_skill with Overpowers: prefix..."
-echo "  Running opencode with Overpowers:brainstorming skill..."
+echo "Test 3: Testing use_skill with overpowers: prefix..."
+echo "  Running opencode with overpowers:brainstorming skill..."
 
-output=$(timeout 60s opencode run --print-logs "Use the use_skill tool to load Overpowers:brainstorming and tell me the first few lines of what you received." 2>&1) || {
+output=$(timeout 60s opencode run --print-logs "Use the use_skill tool to load overpowers:brainstorming and tell me the first few lines of what you received." 2>&1) || {
     exit_code=$?
     if [ $exit_code -eq 124 ]; then
         echo "  [FAIL] OpenCode timed out after 60s"
@@ -92,9 +92,9 @@ output=$(timeout 60s opencode run --print-logs "Use the use_skill tool to load O
 
 # Check for expected content from brainstorming skill
 if echo "$output" | grep -qi "brainstorming\|Launching skill\|skill.*loaded"; then
-    echo "  [PASS] use_skill loaded Overpowers:brainstorming skill"
+    echo "  [PASS] use_skill loaded overpowers:brainstorming skill"
 else
-    echo "  [FAIL] use_skill did not load Overpowers:brainstorming correctly"
+    echo "  [FAIL] use_skill did not load overpowers:brainstorming correctly"
     echo "  Output was:"
     echo "$output" | head -50
     exit 1

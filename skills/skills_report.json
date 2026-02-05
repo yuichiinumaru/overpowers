@@ -1624,9 +1624,9 @@
       "priority": false
     },
     {
-      "name": "using-Overpowers",
+      "name": "using-overpowers",
       "description": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
-      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/using-Overpowers",
+      "source_dir": "/home/sephiroth/.config/opencode/skill/51/skills/using-overpowers",
       "repo": "51",
       "has_scripts": false,
       "has_references": false,

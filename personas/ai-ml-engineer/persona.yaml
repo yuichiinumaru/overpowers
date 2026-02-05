@@ -17,7 +17,7 @@ toolsets:
   - serena.get_symbols_overview
 defaultToolset: development
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - ai
   - auto-generated

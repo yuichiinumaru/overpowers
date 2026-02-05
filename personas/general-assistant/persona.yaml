@@ -8,7 +8,7 @@ toolsets:
   - serena.find_symbol
 defaultToolset: default
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - general
   - auto-generated

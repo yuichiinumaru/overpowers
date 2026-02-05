@@ -15,8 +15,8 @@ from collections import defaultdict
 from datetime import datetime
 
 # Paths
-AGENTS_DIR = Path("/home/sephiroth/.config/opencode/Overpowers/agents")
-PERSONAS_DIR = Path("/home/sephiroth/.config/opencode/Overpowers/personas")
+AGENTS_DIR = Path("/home/sephiroth/.config/opencode/overpowers/agents")
+PERSONAS_DIR = Path("/home/sephiroth/.config/opencode/overpowers/personas")
 OPENCODE_JSON = Path("/home/sephiroth/.config/opencode/opencode.json")
 
 # Essential MCPs (always included)
@@ -344,7 +344,7 @@ def generate_persona(persona_name: str, agents: list) -> dict:
         ],
         "defaultToolset": config["toolsets"][0]["name"] if config["toolsets"] else "default",
         "metadata": {
-            "author": "Overpowers",
+            "author": "overpowers",
             "tags": [persona_name.split("-")[0], "auto-generated"],
             "created": datetime.now().isoformat() + "Z",
             "agents": [a["name"] for a in agents[:10]]  # List first 10 agents

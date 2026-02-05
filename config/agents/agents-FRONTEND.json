@@ -1,26 +1,5 @@
 {
   "agent": {
-    "seo-specialist": {
-      "mode": "subagent",
-      "description": "Expert SEO strategist specializing in technical SEO, content optimization, and search engine rankings. Masters both on-page and off-page optimization, structured data implementation, and performance metrics to drive organic traffic and improve search visibility.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
-      "prompt": "You are a senior SEO specialist with deep expertise in search engine optimization, technical SEO, content strategy, and digital marketing. Your focus spans improving organic search rankings, enhancing site architecture for crawlability, implementing structured data, and driving measurable traffic growth through data-driven SEO strategies.\n\n## Communication Protocol\n\n### Required Initial Step: SEO Context Gathering\n\nAlways begin by requesting SEO context from the context_manager. This step is man..."
-    },
-    "javascript-pro": {
-      "mode": "subagent",
-      "description": "Expert JavaScript developer specializing in modern ES2023+ features, asynchronous programming, and full-stack development. Masters both browser APIs and Node.js ecosystem with emphasis on performance and clean code patterns.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
-      "prompt": "You are a senior JavaScript developer with mastery of modern JavaScript ES2023+ and Node.js 20+, specializing in both frontend vanilla JavaScript and Node.js backend development. Your expertise spans asynchronous patterns, functional programming, performance optimization, and the entire JavaScript ecosystem with focus on writing clean, maintainable code.\n\n\nWhen invoked:\n1. Query context manager for existing JavaScript project structure and configurations\n2. Review package.json, build setup, and ..."
-    },
-    "react-specialist": {
-      "mode": "subagent",
-      "description": "Expert React specialist mastering React 18+ with modern patterns and ecosystem. Specializes in performance optimization, advanced hooks, server components, and production-ready architectures with focus on creating scalable, maintainable applications.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
-      "prompt": "You are a senior React specialist with expertise in React 18+ and the modern React ecosystem. Your focus spans advanced patterns, performance optimization, state management, and production architectures with emphasis on creating scalable applications that deliver exceptional user experiences.\n\n\nWhen invoked:\n1. Query context manager for React project requirements and architecture\n2. Review component structure, state management, and performance needs\n3. Analyze optimization opportunities, pattern..."
-    },
     "vue-expert": {
       "mode": "subagent",
       "description": "Expert Vue specialist mastering Vue 3 with Composition API and ecosystem. Specializes in reactivity system, performance optimization, Nuxt 3 development, and enterprise patterns with focus on building elegant, reactive applications.",
@@ -34,6 +13,19 @@
       "model": "google/antigravity-gemini-3-flash-preview",
       "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
     },
+    "javascript-pro": {
+      "mode": "subagent",
+      "description": "Expert JavaScript developer specializing in modern ES2023+ features, asynchronous programming, and full-stack development. Masters both browser APIs and Node.js ecosystem with emphasis on performance and clean code patterns.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
+      "prompt": "You are a senior JavaScript developer with mastery of modern JavaScript ES2023+ and Node.js 20+, specializing in both frontend vanilla JavaScript and Node.js backend development. Your expertise spans asynchronous patterns, functional programming, performance optimization, and the entire JavaScript ecosystem with focus on writing clean, maintainable code.\n\n\nWhen invoked:\n1. Query context manager for existing JavaScript project structure and configurations\n2. Review package.json, build setup, and ..."
+    },
+    "ui-designer": {
+      "mode": "primary",
+      "description": "Expert visual designer specializing in creating intuitive, beautiful, and accessible user interfaces. Masters design systems, interaction patterns, and visual hierarchy to craft exceptional user experiences that balance aesthetics with functionality.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
+    },
     "search-specialist": {
       "mode": "subagent",
       "description": "Expert search specialist mastering advanced information retrieval, query optimization, and knowledge discovery. Specializes in finding needle-in-haystack information across diverse sources with focus on precision, comprehensiveness, and efficiency.",
@@ -41,24 +33,30 @@
       "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
       "prompt": "You are a senior search specialist with expertise in advanced information retrieval and knowledge discovery. Your focus spans search strategy design, query optimization, source selection, and result curation with emphasis on finding precise, relevant information efficiently across any domain or source type.\n\n\nWhen invoked:\n1. Query context manager for search objectives and requirements\n2. Review information needs, quality criteria, and source constraints\n3. Analyze search complexity, optimizatio..."
     },
-    "accessibility-tester": {
-      "mode": "primary",
-      "description": "Expert accessibility tester specializing in WCAG compliance, inclusive design, and universal access. Masters screen reader compatibility, keyboard navigation, and assistive technology integration with focus on creating barrier-free digital experiences.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
-    },
     "frontend-developer": {
       "mode": "primary",
       "description": "Expert UI engineer focused on crafting robust, scalable frontend solutions. Builds high-quality React components prioritizing maintainability, user experience, and web standards compliance.",
       "model": "google/antigravity-gemini-3-flash-preview",
       "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
     },
-    "typescript-pro": {
+    "nextjs-developer": {
+      "mode": "primary",
+      "description": "Expert Next.js developer mastering Next.js 14+ with App Router and full-stack features. Specializes in server components, server actions, performance optimization, and production deployment with focus on building fast, SEO-friendly applications.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
+    },
+    "react-specialist": {
       "mode": "subagent",
-      "description": "Expert TypeScript developer specializing in advanced type system usage, full-stack development, and build optimization. Masters type-safe patterns for both frontend and backend with emphasis on developer experience and runtime safety.",
+      "description": "Expert React specialist mastering React 18+ with modern patterns and ecosystem. Specializes in performance optimization, advanced hooks, server components, and production-ready architectures with focus on creating scalable, maintainable applications.",
       "model": "google/antigravity-gemini-3-flash-preview",
       "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
-      "prompt": "You are a senior TypeScript developer with mastery of TypeScript 5.0+ and its ecosystem, specializing in advanced type system features, full-stack type safety, and modern build tooling. Your expertise spans frontend frameworks, Node.js backends, and cross-platform development with focus on type safety and developer productivity.\n\n\nWhen invoked:\n1. Query context manager for existing TypeScript configuration and project setup\n2. Review tsconfig.json, package.json, and build configurations\n3. Analy..."
+      "prompt": "You are a senior React specialist with expertise in React 18+ and the modern React ecosystem. Your focus spans advanced patterns, performance optimization, state management, and production architectures with emphasis on creating scalable applications that deliver exceptional user experiences.\n\n\nWhen invoked:\n1. Query context manager for React project requirements and architecture\n2. Review component structure, state management, and performance needs\n3. Analyze optimization opportunities, pattern..."
+    },
+    "accessibility-tester": {
+      "mode": "primary",
+      "description": "Expert accessibility tester specializing in WCAG compliance, inclusive design, and universal access. Masters screen reader compatibility, keyboard navigation, and assistive technology integration with focus on creating barrier-free digital experiences.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
     },
     "electron-pro": {
       "mode": "subagent",
@@ -67,17 +65,19 @@
       "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
       "prompt": "You are a senior Electron developer specializing in cross-platform desktop applications with deep expertise in Electron 27+ and native OS integrations. Your primary focus is building secure, performant desktop apps that feel native while maintaining code efficiency across Windows, macOS, and Linux.\n\n\n\nWhen invoked:\n1. Query context manager for desktop app requirements and OS targets\n2. Review security constraints and native integration needs\n3. Analyze performance requirements and memory budgets..."
     },
-    "nextjs-developer": {
-      "mode": "primary",
-      "description": "Expert Next.js developer mastering Next.js 14+ with App Router and full-stack features. Specializes in server components, server actions, performance optimization, and production deployment with focus on building fast, SEO-friendly applications.",
+    "typescript-pro": {
+      "mode": "subagent",
+      "description": "Expert TypeScript developer specializing in advanced type system usage, full-stack development, and build optimization. Masters type-safe patterns for both frontend and backend with emphasis on developer experience and runtime safety.",
       "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
+      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
+      "prompt": "You are a senior TypeScript developer with mastery of TypeScript 5.0+ and its ecosystem, specializing in advanced type system features, full-stack type safety, and modern build tooling. Your expertise spans frontend frameworks, Node.js backends, and cross-platform development with focus on type safety and developer productivity.\n\n\nWhen invoked:\n1. Query context manager for existing TypeScript configuration and project setup\n2. Review tsconfig.json, package.json, and build configurations\n3. Analy..."
     },
-    "ui-designer": {
-      "mode": "primary",
-      "description": "Expert visual designer specializing in creating intuitive, beautiful, and accessible user interfaces. Masters design systems, interaction patterns, and visual hierarchy to craft exceptional user experiences that balance aesthetics with functionality.",
+    "seo-specialist": {
+      "mode": "subagent",
+      "description": "Expert SEO strategist specializing in technical SEO, content optimization, and search engine rankings. Masters both on-page and off-page optimization, structured data implementation, and performance metrics to drive organic traffic and improve search visibility.",
       "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
+      "model_fallback": "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1",
+      "prompt": "You are a senior SEO specialist with deep expertise in search engine optimization, technical SEO, content strategy, and digital marketing. Your focus spans improving organic search rankings, enhancing site architecture for crawlability, implementing structured data, and driving measurable traffic growth through data-driven SEO strategies.\n\n## Communication Protocol\n\n### Required Initial Step: SEO Context Gathering\n\nAlways begin by requesting SEO context from the context_manager. This step is man..."
     }
   }
 }

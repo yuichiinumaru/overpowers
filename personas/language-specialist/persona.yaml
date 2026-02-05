@@ -17,7 +17,7 @@ toolsets:
   - serena.search_for_pattern
 defaultToolset: coding
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - language
   - auto-generated

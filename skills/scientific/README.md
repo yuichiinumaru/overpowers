@@ -89,4 +89,4 @@ Apache 2.0 (inherited from source repository)
 
 ## Version
 
-- **v1.0.0** (2025-01-19): Integrated into Overpowers skills collection
+- **v1.0.0** (2025-01-19): Integrated into overpowers skills collection

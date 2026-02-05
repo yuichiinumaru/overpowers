@@ -16,7 +16,7 @@ toolsets:
   - vibe-check.check_status
 defaultToolset: testing
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - qa
   - auto-generated

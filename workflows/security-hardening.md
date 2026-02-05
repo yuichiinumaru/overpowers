@@ -22,7 +22,7 @@ Systematic security review and hardening using our **security-focused agents and
 
 ### 1. Automated Scanning
 
-Run security scripts from `Overpowers/scripts/`:
+Run security scripts from `overpowers/scripts/`:
 
 ```bash
 # Snyk dependency scan

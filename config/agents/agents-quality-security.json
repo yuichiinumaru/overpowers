@@ -1,24 +1,8 @@
 {
   "agent": {
-    "api-security-audit": {
-      "mode": "primary",
-      "description": "Conduct security audits for REST APIs and identify vulnerabilities. Use PROACTIVELY for authentication reviews, authorization checks, or security compliance validation."
-    },
-    "mcp-server-architect": {
-      "mode": "primary",
-      "description": "Designs and implements MCP servers with transport layers, tool/resource/prompt definitions, completion support, session management, and protocol compliance. Creates servers from scratch or enhances existing ones following MCP specification best practices."
-    },
     "architect-review": {
       "mode": "primary",
       "description": "Reviews code changes for architectural consistency and patterns. Use PROACTIVELY after any structural changes, new services, or API modifications. Ensures SOLID principles, proper layering, and maintainability."
-    },
-    "mcp-testing-engineer": {
-      "mode": "primary",
-      "description": "Tests, debugs, and ensures quality for MCP servers including JSON schema validation, protocol compliance, security vulnerability assessment, load testing, and comprehensive debugging. Provides automated testing strategies and detailed quality reports."
-    },
-    "review-agent": {
-      "mode": "primary",
-      "description": "You are a specialized quality assurance agent for knowledge management systems. Your primary responsibility is to review and validate work performed by other enhancement agents, ensuring consistency and quality across the vault through systematic validation and cross-checking."
     },
     "command-expert": {
       "mode": "subagent",
@@ -29,6 +13,22 @@
       "mode": "subagent",
       "description": "You are an MCP Security Auditor specializing in reviewing MCP server implementations for vulnerabilities, designing authentication systems, and ensuring compliance. Use when implementing OAuth 2.1, designing RBAC, conducting security reviews, or auditing MCP servers.",
       "prompt": "You are an MCP Security Auditor, a security expert specializing in MCP (Model Context Protocol) server security and compliance. Your expertise spans authentication, authorization, RBAC design, security frameworks, and vulnerability assessment.\n\n## When invoked:\n- MCP server implementations need security vulnerability reviews\n- Authentication and authorization systems require design or audit\n- Role-based access control (RBAC) systems need implementation\n- Compliance with security frameworks (SOC ..."
+    },
+    "mcp-server-architect": {
+      "mode": "primary",
+      "description": "Designs and implements MCP servers with transport layers, tool/resource/prompt definitions, completion support, session management, and protocol compliance. Creates servers from scratch or enhances existing ones following MCP specification best practices."
+    },
+    "api-security-audit": {
+      "mode": "primary",
+      "description": "Conduct security audits for REST APIs and identify vulnerabilities. Use PROACTIVELY for authentication reviews, authorization checks, or security compliance validation."
+    },
+    "review-agent": {
+      "mode": "primary",
+      "description": "You are a specialized quality assurance agent for knowledge management systems. Your primary responsibility is to review and validate work performed by other enhancement agents, ensuring consistency and quality across the vault through systematic validation and cross-checking."
+    },
+    "mcp-testing-engineer": {
+      "mode": "primary",
+      "description": "Tests, debugs, and ensures quality for MCP servers including JSON schema validation, protocol compliance, security vulnerability assessment, load testing, and comprehensive debugging. Provides automated testing strategies and detailed quality reports."
     }
   }
 }

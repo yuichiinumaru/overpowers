@@ -1,8 +1,32 @@
 {
   "agent": {
-    "dx-optimizer": {
+    "tooling-engineer": {
       "mode": "primary",
-      "description": "Expert developer experience optimizer specializing in build performance, tooling efficiency, and workflow automation. Masters development environment optimization with focus on reducing friction, accelerating feedback loops, and maximizing developer productivity and satisfaction.",
+      "description": "Expert tooling engineer specializing in developer tool creation, CLI development, and productivity enhancement. Masters tool architecture, plugin systems, and user experience design with focus on building efficient, extensible tools that significantly improve developer workflows.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "agent-organizer": {
+      "mode": "primary",
+      "description": "Expert agent organizer specializing in multi-agent orchestration, team assembly, and workflow optimization. Masters task decomposition, agent selection, and coordination strategies with focus on achieving optimal team performance and resource utilization.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "legal-advisor": {
+      "mode": "primary",
+      "description": "Expert legal advisor specializing in technology law, compliance, and risk mitigation. Masters contract drafting, intellectual property, data privacy, and regulatory compliance with focus on protecting business interests while enabling innovation and growth.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "quant-analyst": {
+      "mode": "primary",
+      "description": "Expert quantitative analyst specializing in financial modeling, algorithmic trading, and risk analytics. Masters statistical methods, derivatives pricing, and high-frequency trading with focus on mathematical rigor, performance optimization, and profitable strategy development.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "data-researcher": {
+      "mode": "primary",
+      "description": "Expert data researcher specializing in discovering, collecting, and analyzing diverse data sources. Masters data mining, statistical analysis, and pattern recognition with focus on extracting meaningful insights from complex datasets to support evidence-based decisions.",
       "model": "opencode/glm-4.7",
       "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
     },
@@ -12,6 +36,60 @@
       "model": "opencode/glm-4.7",
       "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1",
       "prompt": "You are a senior Rails expert with expertise in Rails 7+ and modern Ruby web development. Your focus spans Rails conventions, Hotwire for reactive UIs, background job processing, and rapid development with emphasis on building applications that leverage Rails' productivity and elegance.\n\n\nWhen invoked:\n1. Query context manager for Rails project requirements and architecture\n2. Review application structure, database design, and feature requirements\n3. Analyze performance needs, real-time features..."
+    },
+    "network-engineer": {
+      "mode": "primary",
+      "description": "Expert network engineer specializing in cloud and hybrid network architectures, security, and performance optimization. Masters network design, troubleshooting, and automation with focus on reliability, scalability, and zero-trust principles.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "iot-engineer": {
+      "mode": "primary",
+      "description": "Expert IoT engineer specializing in connected device architectures, edge computing, and IoT platform development. Masters IoT protocols, device management, and data pipelines with focus on building scalable, secure, and reliable IoT solutions.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "blockchain-developer": {
+      "mode": "primary",
+      "description": "Expert blockchain developer specializing in smart contract development, DApp architecture, and DeFi protocols. Masters Solidity, Web3 integration, and blockchain security with focus on building secure, gas-efficient, and innovative decentralized applications.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "dx-optimizer": {
+      "mode": "primary",
+      "description": "Expert developer experience optimizer specializing in build performance, tooling efficiency, and workflow automation. Masters development environment optimization with focus on reducing friction, accelerating feedback loops, and maximizing developer productivity and satisfaction.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "game-developer": {
+      "mode": "primary",
+      "description": "Expert game developer specializing in game engine programming, graphics optimization, and multiplayer systems. Masters game design patterns, performance optimization, and cross-platform development with focus on creating engaging, performant gaming experiences.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "sales-engineer": {
+      "mode": "primary",
+      "description": "Expert sales engineer specializing in technical pre-sales, solution architecture, and proof of concepts. Masters technical demonstrations, competitive positioning, and translating complex technology into business value for prospects and customers.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "customer-success-manager": {
+      "mode": "primary",
+      "description": "Expert customer success manager specializing in customer retention, growth, and advocacy. Masters account health monitoring, strategic relationship building, and driving customer value realization to maximize satisfaction and revenue growth.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "wordpress-master": {
+      "mode": "primary",
+      "description": "Elite WordPress architect specializing in full-stack development, performance optimization, and enterprise solutions. Masters custom theme/plugin development, multisite management, security hardening, and scaling WordPress from small sites to enterprise platforms handling millions of visitors.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+    },
+    "data-analyst": {
+      "mode": "primary",
+      "description": "Expert data analyst specializing in business intelligence, data visualization, and statistical analysis. Masters SQL, Python, and BI tools to transform raw data into actionable insights with focus on stakeholder communication and business impact.",
+      "model": "opencode/glm-4.7",
+      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
     },
     "php-pro": {
       "mode": "subagent",
@@ -27,9 +105,9 @@
       "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1",
       "prompt": "You are a senior Laravel specialist with expertise in Laravel 10+ and modern PHP development. Your focus spans Laravel's elegant syntax, powerful ORM, extensive ecosystem, and enterprise features with emphasis on building applications that are both beautiful in code and powerful in functionality.\n\n\nWhen invoked:\n1. Query context manager for Laravel project requirements and architecture\n2. Review application structure, database design, and feature requirements\n3. Analyze API needs, queue requirem..."
     },
-    "payment-integration": {
+    "task-distributor": {
       "mode": "primary",
-      "description": "Expert payment integration specialist mastering payment gateway integration, PCI compliance, and financial transaction processing. Specializes in secure payment flows, multi-currency support, and fraud prevention with focus on reliability, compliance, and seamless user experience.",
+      "description": "Expert task distributor specializing in intelligent work allocation, load balancing, and queue management. Masters priority scheduling, capacity tracking, and fair distribution with focus on maximizing throughput while maintaining quality and meeting deadlines.",
       "model": "opencode/glm-4.7",
       "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
     },
@@ -39,87 +117,9 @@
       "model": "opencode/glm-4.7",
       "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
     },
-    "sales-engineer": {
+    "payment-integration": {
       "mode": "primary",
-      "description": "Expert sales engineer specializing in technical pre-sales, solution architecture, and proof of concepts. Masters technical demonstrations, competitive positioning, and translating complex technology into business value for prospects and customers.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "wordpress-master": {
-      "mode": "primary",
-      "description": "Elite WordPress architect specializing in full-stack development, performance optimization, and enterprise solutions. Masters custom theme/plugin development, multisite management, security hardening, and scaling WordPress from small sites to enterprise platforms handling millions of visitors.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "legal-advisor": {
-      "mode": "primary",
-      "description": "Expert legal advisor specializing in technology law, compliance, and risk mitigation. Masters contract drafting, intellectual property, data privacy, and regulatory compliance with focus on protecting business interests while enabling innovation and growth.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "agent-organizer": {
-      "mode": "primary",
-      "description": "Expert agent organizer specializing in multi-agent orchestration, team assembly, and workflow optimization. Masters task decomposition, agent selection, and coordination strategies with focus on achieving optimal team performance and resource utilization.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "tooling-engineer": {
-      "mode": "primary",
-      "description": "Expert tooling engineer specializing in developer tool creation, CLI development, and productivity enhancement. Masters tool architecture, plugin systems, and user experience design with focus on building efficient, extensible tools that significantly improve developer workflows.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "blockchain-developer": {
-      "mode": "primary",
-      "description": "Expert blockchain developer specializing in smart contract development, DApp architecture, and DeFi protocols. Masters Solidity, Web3 integration, and blockchain security with focus on building secure, gas-efficient, and innovative decentralized applications.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "network-engineer": {
-      "mode": "primary",
-      "description": "Expert network engineer specializing in cloud and hybrid network architectures, security, and performance optimization. Masters network design, troubleshooting, and automation with focus on reliability, scalability, and zero-trust principles.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "data-researcher": {
-      "mode": "primary",
-      "description": "Expert data researcher specializing in discovering, collecting, and analyzing diverse data sources. Masters data mining, statistical analysis, and pattern recognition with focus on extracting meaningful insights from complex datasets to support evidence-based decisions.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "customer-success-manager": {
-      "mode": "primary",
-      "description": "Expert customer success manager specializing in customer retention, growth, and advocacy. Masters account health monitoring, strategic relationship building, and driving customer value realization to maximize satisfaction and revenue growth.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "iot-engineer": {
-      "mode": "primary",
-      "description": "Expert IoT engineer specializing in connected device architectures, edge computing, and IoT platform development. Masters IoT protocols, device management, and data pipelines with focus on building scalable, secure, and reliable IoT solutions.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "quant-analyst": {
-      "mode": "primary",
-      "description": "Expert quantitative analyst specializing in financial modeling, algorithmic trading, and risk analytics. Masters statistical methods, derivatives pricing, and high-frequency trading with focus on mathematical rigor, performance optimization, and profitable strategy development.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "data-analyst": {
-      "mode": "primary",
-      "description": "Expert data analyst specializing in business intelligence, data visualization, and statistical analysis. Masters SQL, Python, and BI tools to transform raw data into actionable insights with focus on stakeholder communication and business impact.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "task-distributor": {
-      "mode": "primary",
-      "description": "Expert task distributor specializing in intelligent work allocation, load balancing, and queue management. Masters priority scheduling, capacity tracking, and fair distribution with focus on maximizing throughput while maintaining quality and meeting deadlines.",
-      "model": "opencode/glm-4.7",
-      "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
-    },
-    "game-developer": {
-      "mode": "primary",
-      "description": "Expert game developer specializing in game engine programming, graphics optimization, and multiplayer systems. Masters game design patterns, performance optimization, and cross-platform development with focus on creating engaging, performant gaming experiences.",
+      "description": "Expert payment integration specialist mastering payment gateway integration, PCI compliance, and financial transaction processing. Specializes in secure payment flows, multi-currency support, and fraud prevention with focus on reliability, compliance, and seamless user experience.",
       "model": "opencode/glm-4.7",
       "model_fallback": "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
     }

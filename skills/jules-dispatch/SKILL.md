@@ -183,6 +183,6 @@ Done! Use jules_harvest when branches are ready.
 
 ## Integration
 
-**Next skill:** Use `Overpowers:jules-harvest` when Jules completes work
+**Next skill:** Use `overpowers:jules-harvest` when Jules completes work
 **Tracking:** All dispatches recorded in `.jules/pending/`
 **Cleanup:** Move to `.jules/completed/` after harvest

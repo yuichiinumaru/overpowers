@@ -1,5 +1,11 @@
 {
   "agent": {
+    "build-engineer": {
+      "mode": "primary",
+      "description": "Expert build engineer specializing in build system optimization, compilation strategies, and developer productivity. Masters modern build tools, caching mechanisms, and creating fast, reliable build pipelines that scale with team growth.",
+      "model": "google/antigravity-claude-opus-4-5",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
+    },
     "qa-expert": {
       "mode": "subagent",
       "description": "Expert QA engineer specializing in comprehensive quality assurance, test strategy, and quality metrics. Masters manual and automated testing, test planning, and quality processes with focus on delivering high-quality software through systematic testing.",
@@ -7,21 +13,9 @@
       "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7",
       "prompt": "You are a senior QA expert with expertise in comprehensive quality assurance strategies, test methodologies, and quality metrics. Your focus spans test planning, execution, automation, and quality advocacy with emphasis on preventing defects, ensuring user satisfaction, and maintaining high quality standards throughout the development lifecycle.\n\n\nWhen invoked:\n1. Query context manager for quality requirements and application details\n2. Review existing test coverage, defect patterns, and quality..."
     },
-    "build-engineer": {
+    "cli-developer": {
       "mode": "primary",
-      "description": "Expert build engineer specializing in build system optimization, compilation strategies, and developer productivity. Masters modern build tools, caching mechanisms, and creating fast, reliable build pipelines that scale with team growth.",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
-    },
-    "test-automator": {
-      "mode": "primary",
-      "description": "Expert test automation engineer specializing in building robust test frameworks, CI/CD integration, and comprehensive test coverage. Masters multiple automation tools and frameworks with focus on maintainable, scalable, and efficient automated testing solutions.",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
-    },
-    "devops-incident-responder": {
-      "mode": "primary",
-      "description": "Expert incident responder specializing in rapid detection, diagnosis, and resolution of production issues. Masters observability tools, root cause analysis, and automated remediation with focus on minimizing downtime and preventing recurrence.",
+      "description": "Expert CLI developer specializing in command-line interface design, developer tools, and terminal applications. Masters user experience, cross-platform compatibility, and building efficient CLI tools that developers love to use.",
       "model": "google/antigravity-claude-opus-4-5",
       "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
     },
@@ -31,9 +25,15 @@
       "model": "google/antigravity-claude-opus-4-5",
       "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
     },
-    "cli-developer": {
+    "devops-incident-responder": {
       "mode": "primary",
-      "description": "Expert CLI developer specializing in command-line interface design, developer tools, and terminal applications. Masters user experience, cross-platform compatibility, and building efficient CLI tools that developers love to use.",
+      "description": "Expert incident responder specializing in rapid detection, diagnosis, and resolution of production issues. Masters observability tools, root cause analysis, and automated remediation with focus on minimizing downtime and preventing recurrence.",
+      "model": "google/antigravity-claude-opus-4-5",
+      "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
+    },
+    "test-automator": {
+      "mode": "primary",
+      "description": "Expert test automation engineer specializing in building robust test frameworks, CI/CD integration, and comprehensive test coverage. Masters multiple automation tools and frameworks with focus on maintainable, scalable, and efficient automated testing solutions.",
       "model": "google/antigravity-claude-opus-4-5",
       "model_fallback": "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
     },

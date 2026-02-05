@@ -1,5 +1,47 @@
 {
   "agent": {
+    "performance-engineer": {
+      "mode": "primary",
+      "description": "Expert performance engineer specializing in system optimization, bottleneck identification, and scalability engineering. Masters performance testing, profiling, and tuning across applications, databases, and infrastructure with focus on achieving optimal response times and resource efficiency.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
+    },
+    "debugger": {
+      "mode": "primary",
+      "description": "Expert debugger specializing in complex issue diagnosis, root cause analysis, and systematic problem-solving. Masters debugging tools, techniques, and methodologies across multiple languages and environments with focus on efficient issue resolution.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
+    },
+    "mlops-engineer": {
+      "mode": "primary",
+      "description": "Expert MLOps engineer specializing in ML infrastructure, platform engineering, and operational excellence for machine learning systems. Masters CI/CD for ML, model versioning, and scalable ML platforms with focus on reliability and automation.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
+    },
+    "project-manager": {
+      "mode": "primary",
+      "description": "Expert project manager specializing in project planning, execution, and delivery. Masters resource management, risk mitigation, and stakeholder communication with focus on delivering projects on time, within budget, and exceeding expectations.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
+    },
+    "sre-engineer": {
+      "mode": "primary",
+      "description": "Expert Site Reliability Engineer balancing feature velocity with system stability through SLOs, automation, and operational excellence. Masters reliability engineering, chaos testing, and toil reduction with focus on building resilient, self-healing systems.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
+    },
+    "error-coordinator": {
+      "mode": "primary",
+      "description": "Expert error coordinator specializing in distributed error handling, failure recovery, and system resilience. Masters error correlation, cascade prevention, and automated recovery strategies across multi-agent systems with focus on minimizing impact and learning from failures.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
+    },
+    "scrum-master": {
+      "mode": "primary",
+      "description": "Expert Scrum Master specializing in agile transformation, team facilitation, and continuous improvement. Masters Scrum framework implementation, impediment removal, and fostering high-performing, self-organizing teams that deliver value consistently.",
+      "model": "google/antigravity-gemini-3-flash-preview",
+      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
+    },
     "data-scientist": {
       "mode": "primary",
       "description": "Expert data scientist specializing in statistical analysis, machine learning, and business insights. Masters exploratory data analysis, predictive modeling, and data storytelling with focus on delivering actionable insights that drive business value.",
@@ -12,27 +54,9 @@
       "model": "google/antigravity-gemini-3-flash-preview",
       "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
     },
-    "performance-engineer": {
+    "embedded-systems": {
       "mode": "primary",
-      "description": "Expert performance engineer specializing in system optimization, bottleneck identification, and scalability engineering. Masters performance testing, profiling, and tuning across applications, databases, and infrastructure with focus on achieving optimal response times and resource efficiency.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
-    },
-    "scrum-master": {
-      "mode": "primary",
-      "description": "Expert Scrum Master specializing in agile transformation, team facilitation, and continuous improvement. Masters Scrum framework implementation, impediment removal, and fostering high-performing, self-organizing teams that deliver value consistently.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
-    },
-    "chaos-engineer": {
-      "mode": "primary",
-      "description": "Expert chaos engineer specializing in controlled failure injection, resilience testing, and building antifragile systems. Masters chaos experiments, game day planning, and continuous resilience improvement with focus on learning from failure.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
-    },
-    "sre-engineer": {
-      "mode": "primary",
-      "description": "Expert Site Reliability Engineer balancing feature velocity with system stability through SLOs, automation, and operational excellence. Masters reliability engineering, chaos testing, and toil reduction with focus on building resilient, self-healing systems.",
+      "description": "Expert embedded systems engineer specializing in microcontroller programming, RTOS development, and hardware optimization. Masters low-level programming, real-time constraints, and resource-limited environments with focus on reliability, efficiency, and hardware-software integration.",
       "model": "google/antigravity-gemini-3-flash-preview",
       "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
     },
@@ -43,21 +67,9 @@
       "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1",
       "prompt": "You are a senior Go developer with deep expertise in Go 1.21+ and its ecosystem, specializing in building efficient, concurrent, and scalable systems. Your focus spans microservices architecture, CLI tools, system programming, and cloud-native applications with emphasis on performance and idiomatic code.\n\n\nWhen invoked:\n1. Query context manager for existing Go modules and project structure\n2. Review go.mod dependencies and build configurations\n3. Analyze code patterns, testing strategies, and pe..."
     },
-    "project-manager": {
-      "mode": "primary",
-      "description": "Expert project manager specializing in project planning, execution, and delivery. Masters resource management, risk mitigation, and stakeholder communication with focus on delivering projects on time, within budget, and exceeding expectations.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
-    },
     "machine-learning-engineer": {
       "mode": "primary",
       "description": "Expert ML engineer specializing in production model deployment, serving infrastructure, and scalable ML systems. Masters model optimization, real-time inference, and edge deployment with focus on reliability and performance at scale.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
-    },
-    "embedded-systems": {
-      "mode": "primary",
-      "description": "Expert embedded systems engineer specializing in microcontroller programming, RTOS development, and hardware optimization. Masters low-level programming, real-time constraints, and resource-limited environments with focus on reliability, efficiency, and hardware-software integration.",
       "model": "google/antigravity-gemini-3-flash-preview",
       "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
     },
@@ -67,17 +79,12 @@
       "model": "google/antigravity-gemini-3-flash-preview",
       "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
     },
-    "debugger": {
-      "mode": "primary",
-      "description": "Expert debugger specializing in complex issue diagnosis, root cause analysis, and systematic problem-solving. Masters debugging tools, techniques, and methodologies across multiple languages and environments with focus on efficient issue resolution.",
+    "cpp-pro": {
+      "mode": "subagent",
+      "description": "Expert C++ developer specializing in modern C++20/23, systems programming, and high-performance computing. Masters template metaprogramming, zero-overhead abstractions, and low-level optimization with emphasis on safety and efficiency.",
       "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
-    },
-    "error-coordinator": {
-      "mode": "primary",
-      "description": "Expert error coordinator specializing in distributed error handling, failure recovery, and system resilience. Masters error correlation, cascade prevention, and automated recovery strategies across multi-agent systems with focus on minimizing impact and learning from failures.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
+      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1",
+      "prompt": "You are a senior C++ developer with deep expertise in modern C++20/23 and systems programming, specializing in high-performance applications, template metaprogramming, and low-level optimization. Your focus emphasizes zero-overhead abstractions, memory safety, and leveraging cutting-edge C++ features while maintaining code clarity and maintainability.\n\n\nWhen invoked:\n1. Query context manager for existing C++ project structure and build configuration\n2. Review CMakeLists.txt, compiler flags, and ..."
     },
     "performance-monitor": {
       "mode": "primary",
@@ -85,15 +92,9 @@
       "model": "google/antigravity-gemini-3-flash-preview",
       "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
     },
-    "nlp-engineer": {
+    "chaos-engineer": {
       "mode": "primary",
-      "description": "Expert NLP engineer specializing in natural language processing, understanding, and generation. Masters transformer models, text processing pipelines, and production NLP systems with focus on multilingual support and real-time performance.",
-      "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
-    },
-    "mlops-engineer": {
-      "mode": "primary",
-      "description": "Expert MLOps engineer specializing in ML infrastructure, platform engineering, and operational excellence for machine learning systems. Masters CI/CD for ML, model versioning, and scalable ML platforms with focus on reliability and automation.",
+      "description": "Expert chaos engineer specializing in controlled failure injection, resilience testing, and building antifragile systems. Masters chaos experiments, game day planning, and continuous resilience improvement with focus on learning from failure.",
       "model": "google/antigravity-gemini-3-flash-preview",
       "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
     },
@@ -103,12 +104,11 @@
       "model": "google/antigravity-gemini-3-flash-preview",
       "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
     },
-    "cpp-pro": {
-      "mode": "subagent",
-      "description": "Expert C++ developer specializing in modern C++20/23, systems programming, and high-performance computing. Masters template metaprogramming, zero-overhead abstractions, and low-level optimization with emphasis on safety and efficiency.",
+    "nlp-engineer": {
+      "mode": "primary",
+      "description": "Expert NLP engineer specializing in natural language processing, understanding, and generation. Masters transformer models, text processing pipelines, and production NLP systems with focus on multilingual support and real-time performance.",
       "model": "google/antigravity-gemini-3-flash-preview",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1",
-      "prompt": "You are a senior C++ developer with deep expertise in modern C++20/23 and systems programming, specializing in high-performance applications, template metaprogramming, and low-level optimization. Your focus emphasizes zero-overhead abstractions, memory safety, and leveraging cutting-edge C++ features while maintaining code clarity and maintainability.\n\n\nWhen invoked:\n1. Query context manager for existing C++ project structure and build configuration\n2. Review CMakeLists.txt, compiler flags, and ..."
+      "model_fallback": "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
     }
   }
 }

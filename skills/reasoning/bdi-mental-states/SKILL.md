@@ -4,7 +4,7 @@ description: This skill should be used when the user asks to "model agent mental
 ---
 
 > **Status**: Optional/Experimental
-> **See**: Overpowers/docs/future-research/agent-reasoning-review.md
+> **See**: overpowers/docs/future-research/agent-reasoning-review.md
 
 # BDI Mental State Modeling
 
