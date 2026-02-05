@@ -1,5 +1,60 @@
 # Overpowers Continuity Ledger
 
+## Session: 2026-05-24 - Deep Extraction Iteration
+**Operator**: Jules (Agent)
+**Focus**: Maximizing value capture from external sources (Phase 3).
+
+### 🟢 Global State
+- **Completeness**: 🟢 100%. Re-synced all external skills.
+- **Tools**: 🟢 Expanded. Added `sanity-cli` and `linux-tools`.
+
+### 🔄 Active Contexts
+| Component | Status | Notes |
+|:----------|:-------|:------|
+| **Sanity CLI** | 🟢 New | Wrapper for sandbox management. |
+| **Linux Tools** | 🟢 New | Helper scripts in `scripts/linux-tools/`. |
+
+### ⏭️ Next Actions
+1.  **Consolidate**: Review `sanity-cli` vs `sandbox-launcher.sh` and merge if redundant.
+
+## Session: 2026-05-24 - Sandbox & Unified TUI
+**Operator**: Jules (Agent)
+**Focus**: Infrastructure isolation and user experience improvement.
+
+### 🟢 Global State
+- **Sandbox**: 🟢 Ready. Docker-based isolation available in `sandbox/`.
+- **UX**: 🟢 Unified. `./overpowers` script provides a central menu for all tasks.
+- **Documentation**: 🟢 Updated. Analysis and reports added.
+
+### 🔄 Active Contexts
+| Component | Status | Notes |
+|:----------|:-------|:------|
+| **Sandbox** | 🟢 New | Supports Host UID mapping, Supervisor, and SSH. |
+| **Installer** | 🟢 New | CLI menu for agents, skills, and sandbox. |
+
+### ⏭️ Next Actions
+1.  **Test**: Verify Docker build on a machine with Docker installed.
+2.  **Expand**: Add `install-personas.sh` logic if not fully implemented.
+
+## Session: 2026-05-24 - Legacy Code Assimilation
+**Operator**: Jules (Agent)
+**Focus**: Extraction of valuable assets from external Antigravity repositories.
+
+### 🟢 Global State
+- **Skills**: 🟢 Expanded. Added 19 new skills (Total ~226).
+- **Knowledge**: 🟢 Enabled. Python-based Knowledge Management System active in `scripts/knowledge/`.
+- **References**: 🟢 Secured. External code isolated in `references/external_source/`.
+
+### 🔄 Active Contexts
+| Component | Status | Notes |
+|:----------|:-------|:------|
+| **Knowledge System** | 🟢 Active | `save-knowledge.py` writes to `docs/knowledge/` |
+| **New Skills** | ⚠️ Unverified | 19 new skills added, need individual testing (e.g., `remotion`) |
+
+### ⏭️ Next Actions
+1.  **Test**: Verify the `remotion` and `notebooklm` skills.
+2.  **Index**: Run `validate-index.py` to initialize the knowledge index.
+
 ## Session: 2026-05-24 - Project Knowledge Optimization
 **Operator**: Jules (Agent)
 **Focus**: Deep codebase analysis and creation of SYSTEM_KNOWLEDGE_GRAPH.md
@@ -73,6 +128,7 @@
 ### 📋 Session History
 | Date | Focus | Outcome |
 |:-----|:------|:--------|
+| 2026-05-24 | Legacy Code Assimilation | Extracted 19 skills and Knowledge scripts from Antigravity repos. |
 | 2026-05-24 | Project Knowledge Optimization | Created SYSTEM_KNOWLEDGE_GRAPH.md and verified counts. |
 | 2026-05-24 | Browser Automation | Extracted browser skills and finalized cleanup. |
 | 2026-05-24 | BMAD Deepening | Ported complex workflows for Game Dev and Creative agents. |
