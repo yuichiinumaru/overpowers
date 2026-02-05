@@ -1,0 +1,114 @@
+{
+  "agent": {
+    "code-quality-guardian": {
+      "mode": "primary",
+      "description": "Code quality guardian for automated quality gates and standards enforcement. PROACTIVELY assists with linting setup, formatting, pre-commit hooks, code analysis, and technical debt management.",
+      "model": "sonnet"
+    },
+    "whimsy-injector": {
+      "mode": "primary",
+      "description": "PROACTIVELY use this agent after any UI/UX changes to ensure delightful, playful elements are incorporated. This agent specializes in adding joy, surprise, and memorable moments to user experiences. The agent should be triggered automatically when design or interface updates are made. Examples:\\n\\n<example>\\nContext: After implementing new features or UI components\\nuser: \"I've added the new onboarding flow for the app\"\\nassistant: \"Great! I've implemented the onboarding flow. Now let me use the whimsy_injector agent to add delightful touches that will make users smile during their first experience.\"\\n<commentary>\\nEvery new UI addition is an opportunity to inject personality and delight.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: When error states or empty states are created\\nuser: \"Set up error handling for the payment flow\"\\nassistant: \"I've implemented the error handling. Let me use the whimsy_injector agent to transform those error messages into moments that reduce user frustration.\"\\n<commentary>\\nError states are perfect opportunities to show personality and maintain user goodwill.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: After creating standard UI components\\nuser: \"Build a loading spinner for the data fetch\"\\nassistant: \"I've created the basic loading functionality. Now I'll use the whimsy_injector agent to make the loading experience entertaining rather than frustrating.\"\\n<commentary>\\nLoading states can become memorable moments instead of boring waits.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: When reviewing completed features\\nuser: \"The user profile page is done\"\\nassistant: \"Perfect! The profile page is complete. Let me use the whimsy_injector agent to audit it for opportunities to add surprising delights and shareable moments.\"\\n<commentary>\\nCompleted features often miss opportunities for delight that can differentiate the app.\\n</commentary>\\n</example>"
+    },
+    "claude-md-guardian": {
+      "mode": "primary",
+      "description": "Background agent that maintains and updates CLAUDE.md files based on project changes. Invoked at session start and after major milestones (feature completion, refactoring, new dependencies, architecture changes). Works independently without interrupting other agents.",
+      "model": "haiku"
+    },
+    "workflow-optimizer": {
+      "mode": "primary",
+      "description": "Use this agent for optimizing human-agent collaboration workflows and analyzing workflow efficiency. This agent specializes in identifying bottlenecks, streamlining processes, and ensuring smooth handoffs between human creativity and AI assistance. Examples:\\n\\n<example>\\nContext: Improving development workflow efficiency"
+    },
+    "joker": {
+      "mode": "primary",
+      "description": "Use this agent when you need to lighten the mood, create funny content, or add humor to any situation. This agent specializes in dad jokes, programming puns, and startup humor. Examples:\\n\\n<example>\\nContext: Team needs a laugh during a stressful sprint\\nuser: \"We've been debugging for hours and everyone's frustrated\"\\nassistant: \"Time for a morale boost! Let me use the joker agent to share some programming humor.\"\\n<commentary>\\nHumor can help reset team energy during challenging moments.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Creating fun error messages\\nuser: \"Our 404 page is boring\"\\nassistant: \"Let's make that error page memorable! I'll use the joker agent to create some funny 404 messages.\"\\n<commentary>\\nHumorous error pages can turn frustration into delight.\\n</commentary>\\n</example>"
+    },
+    "pew-lead-developer": {
+      "mode": "primary",
+      "description": "Expert Lead Developer. Use when executing development tasks based on a provided plan to translate requirements and architecture into high-quality, maintainable code."
+    },
+    "factory_guide": {
+      "mode": "primary",
+      "description": ""
+    },
+    "pew-bug-workflow-orchestrator": {
+      "mode": "primary",
+      "description": "Expert orchestrator for the 4-phase bug resolution workflow. Use when managing a bug from report to verification. Orchestrates reporting, triage, fix planning, and verification agents."
+    },
+    "pew-feature-workflow-orchestrator": {
+      "mode": "primary",
+      "description": "Expert orchestrator for the 6-phase feature development workflow. Use when executing comprehensive feature planning from initial request through implementation plans. Orchestrates discovery, requirements, refinement, story creation, roadmap planning, and implementation agents through systematic progressive refinement."
+    },
+    "pew-roadmap-agent": {
+      "mode": "primary",
+      "description": "Expert in Phase 4 milestone and roadmap planning for the plan workflow. Use when organizing deliverables into releasable milestones, creating user stories, and generating effort estimates for sprint planning."
+    },
+    "agentic-thoughts-analyzer": {
+      "mode": "primary",
+      "description": "The research equivalent of codebase-analyzer. Use this subagent_type when wanting to deep dive on a research topic. Not commonly needed otherwise.",
+      "model": "anthropic/claude-opus-4-1-20250805"
+    },
+    "vibe-coding-coach": {
+      "mode": "primary",
+      "description": "Use this agent when users want to build applications through conversation, focusing on the vision and feel of their app rather than technical implementation details. This agent excels at translating user ideas, visual references, and 'vibes' into working applications while handling all technical complexities behind the scenes. <example>Context: User wants to build an app but isn't technical and prefers to describe what they want rather than code it themselves.\\nuser: \"I want to build a photo sharing app that feels like Instagram but for pet owners\"\\nassistant: \"I'll use the vibe_coding_coach agent to help guide you through building this app by understanding your vision and handling the technical implementation.\"\\n<commentary>Since the user is describing an app idea in terms of feeling and comparison rather than technical specs, use the vibe_coding_coach agent to translate their vision into a working application.</commentary></example> <example>Context: User has sketches or screenshots of what they want to build.\\nuser: \"Here's a screenshot of an app I like. Can we build something similar but for tracking workouts?\"\\nassistant: \"Let me engage the vibe_coding_coach agent to help understand your vision and build a workout tracking app with that aesthetic.\"\\n<commentary>The user is providing visual references and wants to build something similar, which is perfect for the vibe_coding_coach agent's approach.</commentary></example>"
+    },
+    "app-store-optimizer": {
+      "mode": "primary",
+      "description": "Use this agent when preparing app store listings, researching keywords, optimizing app metadata, improving conversion rates, or analyzing app store performance. This agent specializes in maximizing organic app store visibility and downloads. Examples:\\n\\n<example>\\nContext: Preparing for app launch"
+    },
+    "agentic-thoughts-locator": {
+      "mode": "primary",
+      "description": "Discovers relevant documents in thoughts/ directory (We use this for all sorts of metadata storage!). This is really only relevant/needed when you're in a reseaching mood and need to figure out if we have random thoughts written down that are relevant to your current research task. Based on the name, I imagine you can guess this is the `thoughts` equivilent of `codebase-locator`",
+      "model": "anthropic/claude-opus-4-1-20250805"
+    },
+    "agentic-codebase-locator": {
+      "mode": "primary",
+      "description": "Locates files, directories, and components relevant to a feature or task. Call `codebase-locator` with human language prompt describing what you're looking for. Basically a \"Super Grep/Glob/LS tool\" \u2014 Use it if you find yourself desiring to use one of these tools more than once.",
+      "model": "anthropic/claude-opus-4-1-20250805"
+    },
+    "agentic-codebase-analyzer": {
+      "mode": "primary",
+      "description": "Analyzes codebase implementation details. Call the codebase-analyzer agent when you need to find detailed information about specific components.",
+      "model": "anthropic/claude-opus-4-1-20250805"
+    },
+    "hooks_guide": {
+      "mode": "primary",
+      "description": ""
+    },
+    "visual-storyteller": {
+      "mode": "primary",
+      "description": "Use this agent when creating visual narratives, designing infographics, building presentations, or communicating complex ideas through imagery. This agent specializes in transforming data and concepts into compelling visual stories that engage users and stakeholders. Examples:\\n\\n<example>\\nContext: Creating app onboarding illustrations"
+    },
+    "skills_guide": {
+      "mode": "primary",
+      "description": ""
+    },
+    "000_ceo_orchestrator": {
+      "mode": "primary",
+      "description": ""
+    },
+    "code-refactorer": {
+      "mode": "primary",
+      "description": "Use this agent when you need to improve existing code structure, readability, or maintainability without changing functionality. This includes cleaning up messy code, reducing duplication, improving naming, simplifying complex logic, or reorganizing code for better clarity. Examples:\\n\\n<example>\\nContext: The user wants to improve code quality after implementing a feature.\\nuser: \"I just finished implementing the user authentication system. Can you help clean it up?\"\\nassistant: \"I'll use the code_refactorer agent to analyze and improve the structure of your authentication code.\"\\n<commentary>\\nSince the user wants to improve existing code without adding features, use the code_refactorer agent.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user has working code that needs structural improvements.\\nuser: \"This function works but it's 200 lines long and hard to understand\"\\nassistant: \"Let me use the code_refactorer agent to help break down this function and improve its readability.\"\\n<commentary>\\nThe user needs help restructuring complex code, which is the code_refactorer agent's specialty.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: After code review, improvements are needed.\\nuser: \"The code review pointed out several areas with duplicate logic and poor naming\"\\nassistant: \"I'll launch the code_refactorer agent to address these code quality issues systematically.\"\\n<commentary>\\nCode duplication and naming issues are core refactoring tasks for this agent.\\n</commentary>\\n</example>"
+    },
+    "reddit_community_builder": {
+      "mode": "primary",
+      "description": ""
+    },
+    "studio-coach": {
+      "mode": "primary",
+      "description": "PROACTIVELY use this agent when complex multi-agent tasks begin, when agents seem stuck or overwhelmed, or when the team needs motivation and coordination. This agent serves as the elite performance coach for all other agents, ensuring they operate at their highest level while maintaining composure and excellence. Should be triggered automatically at the start of challenging projects or when detecting agent confusion. Examples:\\n\\n<example>\\nContext: Starting a complex project requiring multiple agents\\nuser: \"We need to build a viral TikTok app in 2 weeks\"\\nassistant: \"This is an ambitious goal that will require our A-team! Let me bring in the studio_coach to coordinate our agents and ensure everyone performs at their peak.\"\\n<commentary>\\nComplex projects benefit from having a coach to keep all agents aligned and motivated.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: When an agent seems stuck or is producing subpar results\\nagent: \"I'm having trouble identifying the right trends...\"\\nassistant: \"Let me bring in the studio_coach to help refocus and elevate your approach.\"\\n<commentary>\\nAgents can get overwhelmed or lose focus - the coach helps them recenter and excel.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Before launching a major sprint or initiative\\nuser: \"Tomorrow we start the 6-day sprint for our biggest project yet\"\\nassistant: \"Time to rally the team! I'll have the studio_coach prepare everyone mentally and strategically for peak performance.\"\\n<commentary>\\nPre-sprint coaching ensures all agents start with clarity, confidence, and coordination.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: When celebrating wins or learning from failures\\nuser: \"Our app just hit #1 on the App Store!\"\\nassistant: \"Incredible achievement! Let me bring in the studio_coach to celebrate with the team and capture what made this success possible.\"\\n<commentary>\\nThe coach helps institutionalize wins and extract learnings from both successes and failures.\\n</commentary>\\n</example>"
+    },
+    "code-review-master": {
+      "mode": "primary",
+      "description": "Expert code reviewer specializing in security, performance, maintainability, and best practices across languages. PROACTIVELY performs comprehensive code reviews and suggests improvements."
+    },
+    "agents_guide": {
+      "mode": "primary",
+      "description": ""
+    },
+    "tiktok-strategist": {
+      "mode": "primary",
+      "description": "Use this agent when you need to create TikTok marketing strategies, develop viral content ideas, plan TikTok campaigns, or optimize for TikTok's algorithm. This agent specializes in creating shareable moments and leveraging TikTok trends for app growth. Examples:\\n\\n<example>\\nContext: Launching a new app and need TikTok strategy\\nuser: \"We're launching our phone anxiety app next week. How should we approach TikTok?\"\\nassistant: \"TikTok will be crucial for your launch. Let me use the tiktok_strategist agent to create a comprehensive TikTok marketing strategy for your phone anxiety app.\"\\n<commentary>\\nNew app launches benefit from TikTok's viral potential and young user base.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Creating viral content for an existing app\\nuser: \"Our meditation app needs more downloads. What kind of TikTok content should we make?\"\\nassistant: \"I'll help you create viral TikTok content ideas. Let me use the tiktok_strategist agent to develop content that showcases your app in trending formats.\"\\n<commentary>\\nExisting apps can boost downloads through strategic TikTok content that fits platform culture.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Identifying TikTok influencers for partnerships\\nuser: \"Should we work with TikTok creators to promote our app?\"\\nassistant: \"Creator partnerships can be very effective. Let me use the tiktok_strategist agent to identify the right creators and collaboration strategies for your app.\"\\n<commentary>\\nInfluencer partnerships on TikTok can provide authentic reach to target audiences.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Optimizing app features for TikTok sharing\\nuser: \"How can we make our app more TikTok-friendly?\"\\nassistant: \"Making your app TikTok-native is smart. I'll use the tiktok_strategist agent to identify features and moments in your app that users would want to share on TikTok.\"\\n<commentary>\\nApps with built-in TikTok-worthy moments see higher organic growth through user-generated content.\\n</commentary>\\n</example>"
+    }
+  }
+}

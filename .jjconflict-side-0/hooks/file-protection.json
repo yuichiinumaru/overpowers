@@ -1,7 +1,0 @@
-{
-  "name": "file-protection",
-  "trigger": "file_write",
-  "condition": "echo \"$FILE_PATH\" | grep -E \"(LICENSE|package-lock.json|yarn.lock)\"",
-  "action": "echo \"Warning: Attempting to modify protected file $FILE_PATH\" && exit 1",
-  "description": "Prevent accidental modification of critical system files."
-}

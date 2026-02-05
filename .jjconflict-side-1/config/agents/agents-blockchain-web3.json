@@ -1,8 +1,0 @@
-{
-  "agent": {
-    "hyperledger-fabric-developer": {
-      "mode": "primary",
-      "description": "Develop enterprise blockchain solutions with Hyperledger Fabric v2.5 LTS and v3.x. Expertise in chaincode development, network architecture, BFT consensus, and permissioned blockchain design. Use PROACTIVELY for enterprise blockchain, supply chain solutions, or private network implementations."
-    }
-  }
-}
