@@ -2,8 +2,7 @@
   "agent": {
     "sisyphus-orchestrator": {
       "mode": "primary",
-      "description": "Powerful AI orchestrator from OhMyOpenCode. Plans obsessively with todos, assesses search complexity before exploration, delegates strategically via category+skills combinations.",
-      "model": "gemini-3-pro-preview"
+      "description": "Powerful AI orchestrator from OhMyOpenCode. Plans obsessively with todos, assesses search complexity before exploration, delegates strategically via category+skills combinations."
     }
   }
 }

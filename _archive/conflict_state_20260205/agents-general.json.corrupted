@@ -2,7 +2,8 @@
   "agent": {
     "code-quality-guardian": {
       "mode": "primary",
-      "description": "Code quality guardian for automated quality gates and standards enforcement. PROACTIVELY assists with linting setup, formatting, pre-commit hooks, code analysis, and technical debt management."
+      "description": "Code quality guardian for automated quality gates and standards enforcement. PROACTIVELY assists with linting setup, formatting, pre-commit hooks, code analysis, and technical debt management.",
+      "model": "sonnet"
     },
     "whimsy-injector": {
       "mode": "primary",
@@ -10,8 +11,31 @@
     },
     "claude-md-guardian": {
       "mode": "primary",
-      "description": "Background agent that maintains and updates CLAUDE.md files based on project changes. Invoked at session start and after major milestones (feature completion, refactoring, new dependencies, architecture changes). Works independently without interrupting other agents."
+      "description": "Background agent that maintains and updates CLAUDE.md files based on project changes. Invoked at session start and after major milestones (feature completion, refactoring, new dependencies, architecture changes). Works independently without interrupting other agents.",
+      "model": "haiku"
     },
+<<<<<<< conflict 1 of 1
+%%%%%%% diff from: oukkuryk 19901e17 "Merge pull request #5 from yuichiinumaru/jules-prevc-integration-7039539385120140379"
+\\\\\\\        to: uwrswvyz 61d0389c "feat: deep extraction iteration (skills sync + tools)"
+     "workflow-optimizer": {
+       "mode": "primary",
+-      "description": ""
++      "description": "Use this agent for optimizing human-agent collaboration workflows and analyzing workflow efficiency. This agent specializes in identifying bottlenecks, streamlining processes, and ensuring smooth handoffs between human creativity and AI assistance. Examples:\\n\\n<example>\\nContext: Improving development workflow efficiency"
+     },
+     "joker": {
+       "mode": "primary",
+       "description": "Use this agent when you need to lighten the mood, create funny content, or add humor to any situation. This agent specializes in dad jokes, programming puns, and startup humor. Examples:\\n\\n<example>\\nContext: Team needs a laugh during a stressful sprint\\nuser: \"We've been debugging for hours and everyone's frustrated\"\\nassistant: \"Time for a morale boost! Let me use the joker agent to share some programming humor.\"\\n<commentary>\\nHumor can help reset team energy during challenging moments.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Creating fun error messages\\nuser: \"Our 404 page is boring\"\\nassistant: \"Let's make that error page memorable! I'll use the joker agent to create some funny 404 messages.\"\\n<commentary>\\nHumorous error pages can turn frustration into delight.\\n</commentary>\\n</example>"
+     },
+     "pew-lead-developer": {
+       "mode": "primary",
+       "description": "Expert Lead Developer. Use when executing development tasks based on a provided plan to translate requirements and architecture into high-quality, maintainable code."
+     },
+     "factory_guide": {
+       "mode": "primary",
+       "description": ""
+     },
++++++++ plqxlkky 43b339d9 "alfabranch"
+>>>>>>> conflict 1 of 1 ends
     "pew-bug-workflow-orchestrator": {
       "mode": "primary",
       "description": "Expert orchestrator for the 4-phase bug resolution workflow. Use when managing a bug from report to verification. Orchestrates reporting, triage, fix planning, and verification agents."
@@ -26,7 +50,8 @@
     },
     "agentic-thoughts-analyzer": {
       "mode": "primary",
-      "description": "The research equivalent of codebase-analyzer. Use this subagent_type when wanting to deep dive on a research topic. Not commonly needed otherwise."
+      "description": "The research equivalent of codebase-analyzer. Use this subagent_type when wanting to deep dive on a research topic. Not commonly needed otherwise.",
+      "model": "anthropic/claude-opus-4-1-20250805"
     },
     "vibe-coding-coach": {
       "mode": "primary",
@@ -38,7 +63,8 @@
     },
     "agentic-thoughts-locator": {
       "mode": "primary",
-      "description": "Discovers relevant documents in thoughts/ directory (We use this for all sorts of metadata storage!). This is really only relevant/needed when you're in a reseaching mood and need to figure out if we have random thoughts written down that are relevant to your current research task. Based on the name, I imagine you can guess this is the `thoughts` equivilent of `codebase-locator`"
+      "description": "Discovers relevant documents in thoughts/ directory (We use this for all sorts of metadata storage!). This is really only relevant/needed when you're in a reseaching mood and need to figure out if we have random thoughts written down that are relevant to your current research task. Based on the name, I imagine you can guess this is the `thoughts` equivilent of `codebase-locator`",
+      "model": "anthropic/claude-opus-4-1-20250805"
     },
     "pew-lead-developer": {
       "mode": "primary",
@@ -46,11 +72,13 @@
     },
     "agentic-codebase-locator": {
       "mode": "primary",
-      "description": "Locates files, directories, and components relevant to a feature or task. Call `codebase-locator` with human language prompt describing what you're looking for. Basically a \"Super Grep/Glob/LS tool\" \u2014 Use it if you find yourself desiring to use one of these tools more than once."
+      "description": "Locates files, directories, and components relevant to a feature or task. Call `codebase-locator` with human language prompt describing what you're looking for. Basically a \"Super Grep/Glob/LS tool\" — Use it if you find yourself desiring to use one of these tools more than once.",
+      "model": "anthropic/claude-opus-4-1-20250805"
     },
     "agentic-codebase-analyzer": {
       "mode": "primary",
-      "description": "Analyzes codebase implementation details. Call the codebase-analyzer agent when you need to find detailed information about specific components."
+      "description": "Analyzes codebase implementation details. Call the codebase-analyzer agent when you need to find detailed information about specific components.",
+      "model": "anthropic/claude-opus-4-1-20250805"
     },
     "hooks_guide": {
       "mode": "primary",

@@ -10,18 +10,15 @@
     },
     "librarian-researcher": {
       "mode": "primary",
-      "description": "Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples.",
-      "model": "claude-4-5-sonnet-latest"
+      "description": "Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples."
     },
     "explorer-recon": {
       "mode": "primary",
-      "description": "Contextual grep for codebases. Answers 'Where is X?', 'Which file has Y?', 'Find the code that does Z'.",
-      "model": "claude-4-5-sonnet-latest"
+      "description": "Contextual grep for codebases. Answers 'Where is X?', 'Which file has Y?', 'Find the code that does Z'."
     },
     "agentic-web-search-researcher": {
       "mode": "primary",
-      "description": "Used to perform web searches from a URL and analyze the contents based on a query.",
-      "model": "anthropic/claude-3-5-haiku-20241022"
+      "description": "Used to perform web searches from a URL and analyze the contents based on a query."
     },
     "trend-researcher": {
       "mode": "primary",

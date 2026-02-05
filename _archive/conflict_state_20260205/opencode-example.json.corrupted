@@ -11,18 +11,24 @@
         "opencode-windsurf-codeium@beta"
     ],
     "mcp": {
-        "context7": {
-            "type": "local",
-            "command": [
-                "npx",
-                "-y",
-                "@upstash/context7-mcp"
-            ],
-            "environment": {
-                "CONTEXT7_API_KEY": ""
-            },
-            "enabled": true
-        },
+<<<<<<< conflict 1 of 2
++++++++ vtnwkmyu 241654e7 "feat: integrate Stitch skills from google-labs-code/stitch-skills"
+%%%%%%% diff from: osknlyyl 2e0a6175 "Merge pull request #12 from yuichiinumaru/feat/system-knowledge-graph-8021370456399019412"
+\\\\\\\        to: plqxlkky 43b339d9 "alfabranch"
+         "context7": {
+             "type": "local",
+             "command": [
+                 "npx",
+                 "-y",
+                 "@upstash/context7-mcp"
+             ],
+             "environment": {
+-                "CONTEXT7_API_KEY": "YOUR_CONTEXT7_API_KEY"
++                "CONTEXT7_API_KEY": ""
+             },
+             "enabled": true
+         },
+>>>>>>> conflict 1 of 2 ends
         "serena": {
             "type": "local",
             "command": [
@@ -34,7 +40,7 @@
                 "--context",
                 "ide-assistant"
             ],
-            "enabled": true
+            "enabled": true,
         },
         "vibe_check": {
             "type": "local",
@@ -48,7 +54,9 @@
             "environment": {
                 "GEMINI_API_KEY": ""
             },
-            "enabled": true
+<<<<<<< conflict 2 of 2
++++++++ vtnwkmyu 241654e7 "feat: integrate Stitch skills from google-labs-code/stitch-skills"
+            "enabled": true,
         },
         "hypertool": {
             "type": "local",
@@ -61,34 +69,40 @@
                 "--mcp-config",
                 "/path/to/your/.mcp.json"
             ],
-            "enabled": true
-        },
-        "think-tank": {
-            "type": "local",
-            "command": [
-                "npx",
-                "-y",
-                "mcp-think-tank@2.0.7"
-            ],
-            "environment": {
-                "MEMORY_PATH": "/path/to/memory.jsonl",
-                "EXA_API_KEY": ""
-            },
-            "enabled": true
-        },
-        "mult-fetch": {
-            "type": "local",
-            "command": [
-                "npx",
-                "-y",
-                "@lmcc-dev/mult-fetch-mcp-server"
-            ],
-            "enabled": true
-        },
-        "deepwiki": {
-            "type": "remote",
-            "url": "https://mcp.deepwiki.com/mcp",
-            "enabled": true
+            "enabled": true,
+%%%%%%% diff from: osknlyyl 2e0a6175 "Merge pull request #12 from yuichiinumaru/feat/system-knowledge-graph-8021370456399019412"
+\\\\\\\        to: plqxlkky 43b339d9 "alfabranch"
+             "enabled": true
+         },
+         "think-tank": {
+             "type": "local",
+             "command": [
+                 "npx",
+                 "-y",
+                 "mcp-think-tank@2.0.7"
+             ],
+             "environment": {
+-                "MEMORY_PATH": "/path/to/your/memory.jsonl",
+-                "EXA_API_KEY": "YOUR_EXA_API_KEY"
+-            },
++                "MEMORY_PATH": "/path/to/memory.jsonl",
++                "EXA_API_KEY": ""
+             "enabled": true
+         },
+         "mult-fetch": {
+             "type": "local",
+             "command": [
+                 "npx",
+                 "-y",
+                 "@lmcc-dev/mult-fetch-mcp-server"
+             ],
+             "enabled": true
+         },
+         "deepwiki": {
+             "type": "remote",
+             "url": "https://mcp.deepwiki.com/mcp",
+             "enabled": true
+>>>>>>> conflict 2 of 2 ends
         }
     },
     "provider": {

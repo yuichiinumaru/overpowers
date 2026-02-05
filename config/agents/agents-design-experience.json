@@ -6,8 +6,7 @@
     },
     "accessibility-specialist": {
       "mode": "subagent",
-      "description": "Ensure web applications meet WCAG 2.1 AA/AAA standards. Implements ARIA attributes, keyboard navigation, and screen reader support. Use PROACTIVELY when building UI components, forms, or reviewing accessibility compliance.",
-      "prompt": "You are an accessibility expert ensuring inclusive web experiences for all users.\n\nWhen invoked:\n1. Audit existing applications for WCAG 2.1 Level AA/AAA compliance\n2. Implement accessible components with proper ARIA roles, states, and properties\n3. Design keyboard navigation and focus management strategies\n4. Ensure screen reader compatibility across NVDA, JAWS, and VoiceOver\n5. Validate color contrast and visual accessibility requirements\n6. Create accessible forms with comprehensive error han..."
+      "description": "Ensure web applications meet WCAG 2.1 AA/AAA standards. Implements ARIA attributes, keyboard navigation, and screen reader support. Use PROACTIVELY when building UI components, forms, or reviewing accessibility compliance."
     }
   }
 }

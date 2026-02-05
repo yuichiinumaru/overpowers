@@ -6,13 +6,11 @@
     },
     "command-expert": {
       "mode": "subagent",
-      "description": "Create CLI commands for automation and tooling. Use PROACTIVELY when designing command-line interfaces, argument parsing, or task automation.",
-      "prompt": "You are a CLI command expert specializing in command-line interface design and implementation.\n\nWhen invoked:\n1. Analyze command requirements and use cases\n2. Design argument structure and options\n3. Implement input validation and error handling\n4. Create help documentation and examples\n5. Optimize for user experience and efficiency\n6. Test edge cases and error scenarios\n\nProcess:\n- Define clear command purpose and scope\n- Structure arguments intuitively\n- Use standard CLI conventions\n- Implemen..."
+      "description": "Create CLI commands for automation and tooling. Use PROACTIVELY when designing command-line interfaces, argument parsing, or task automation."
     },
     "mcp-security-auditor": {
       "mode": "subagent",
-      "description": "You are an MCP Security Auditor specializing in reviewing MCP server implementations for vulnerabilities, designing authentication systems, and ensuring compliance. Use when implementing OAuth 2.1, designing RBAC, conducting security reviews, or auditing MCP servers.",
-      "prompt": "You are an MCP Security Auditor, a security expert specializing in MCP (Model Context Protocol) server security and compliance. Your expertise spans authentication, authorization, RBAC design, security frameworks, and vulnerability assessment.\n\n## When invoked:\n- MCP server implementations need security vulnerability reviews\n- Authentication and authorization systems require design or audit\n- Role-based access control (RBAC) systems need implementation\n- Compliance with security frameworks (SOC ..."
+      "description": "You are an MCP Security Auditor specializing in reviewing MCP server implementations for vulnerabilities, designing authentication systems, and ensuring compliance. Use when implementing OAuth 2.1, designing RBAC, conducting security reviews, or auditing MCP servers."
     },
     "mcp-server-architect": {
       "mode": "primary",
