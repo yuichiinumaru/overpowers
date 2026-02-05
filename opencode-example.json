@@ -1,7 +1,9 @@
 {
     "$schema": "https://opencode.ai/config.json",
     "plugin": [
-        "opencode-skills",
+        "opencode-antigravity-auth@beta",
+        "opencode-antigravity-quota@0.1.6",
+        "@ramtinj95/opencode-tokenscope@latest",
         "opencode-sessions",
         "./Overpowers/.opencode/plugin/Overpowers.js",
         "opencode-optimal-model-temps",
@@ -9,18 +11,6 @@
         "opencode-windsurf-codeium@beta"
     ],
     "mcp": {
-        "context7": {
-            "type": "local",
-            "command": [
-                "npx",
-                "-y",
-                "@upstash/context7-mcp"
-            ],
-            "environment": {
-                "CONTEXT7_API_KEY": "YOUR_CONTEXT7_API_KEY"
-            },
-            "enabled": true
-        },
         "serena": {
             "type": "local",
             "command": [
@@ -32,9 +22,9 @@
                 "--context",
                 "ide-assistant"
             ],
-            "enabled": true
+            "enabled": true,
         },
-        "vibe-check": {
+        "vibe_check": {
             "type": "local",
             "command": [
                 "npx",
@@ -46,34 +36,20 @@
             "environment": {
                 "GEMINI_API_KEY": "YOUR_GEMINI_API_KEY"
             },
-            "enabled": true
+            "enabled": true,
         },
-        "think-tank": {
+        "hypertool": {
             "type": "local",
             "command": [
                 "npx",
                 "-y",
-                "mcp-think-tank@2.0.7"
+                "@toolprint/hypertool-mcp@latest",
+                "mcp",
+                "run",
+                "--mcp-config",
+                "/path/to/your/.mcp.json"
             ],
-            "environment": {
-                "MEMORY_PATH": "/path/to/your/memory.jsonl",
-                "EXA_API_KEY": "YOUR_EXA_API_KEY"
-            },
-            "enabled": true
-        },
-        "mult-fetch": {
-            "type": "local",
-            "command": [
-                "npx",
-                "-y",
-                "@lmcc-dev/mult-fetch-mcp-server"
-            ],
-            "enabled": true
-        },
-        "deepwiki": {
-            "type": "remote",
-            "url": "https://mcp.deepwiki.com/mcp",
-            "enabled": true
+            "enabled": true,
         }
     },
     "provider": {
