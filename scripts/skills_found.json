@@ -1,0 +1,20 @@
+[
+    {
+        "github_link": "https://github.com/ccxt/ccxt/tree/master/.claude/skills/ccxt-python",
+        "title": "ccxt-python.md",
+        "url": "https://skillsmp.com/skills/ccxt-ccxt-claude-skills-ccxt-python-skill-md",
+        "local_path": "downloaded_skills/ccxt-python_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/ccxt/ccxt/tree/master/.claude/skills/ccxt-typescript",
+        "title": "ccxt-typescript.md",
+        "url": "https://skillsmp.com/skills/ccxt-ccxt-claude-skills-ccxt-typescript-skill-md",
+        "local_path": "downloaded_skills/ccxt-typescript_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/ccxt/ccxt/tree/master/.claude/skills/ccxt-php",
+        "title": "ccxt-php.md",
+        "url": "https://skillsmp.com/skills/ccxt-ccxt-claude-skills-ccxt-php-skill-md",
+        "local_path": "downloaded_skills/ccxt-php_SKILL.md"
+    }
+]
