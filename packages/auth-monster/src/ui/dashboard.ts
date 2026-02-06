@@ -8,7 +8,7 @@ export function startDashboard(monster: AuthMonster) {
     title: 'Auth Monster Dashboard'
   });
 
-  const grid = new contrib.grid({rows: 12, cols: 12, screen: screen});
+  const grid = new contrib.grid({ rows: 12, cols: 12, screen: screen });
 
   // Health Gauge
   const gauge = grid.set(0, 0, 4, 4, contrib.gauge, {
@@ -35,12 +35,12 @@ export function startDashboard(monster: AuthMonster) {
     label: 'Accounts',
     width: '30%',
     height: '30%',
-    border: {type: 'line', fg: 'cyan'},
+    border: { type: 'line', fg: 'cyan' },
     columnSpacing: 10,
     columnWidth: [15, 30, 10, 10, 20]
   });
 
-  screen.key(['escape', 'q', 'C-c'], function(ch: any, key: any) {
+  screen.key(['escape', 'q', 'C-c'], function (ch: any, key: any) {
     return process.exit(0);
   });
 
@@ -62,16 +62,16 @@ export function startDashboard(monster: AuthMonster) {
 
     // Update Table
     const tableData = accounts.map(a => [
-        a.provider,
-        a.email,
-        a.isHealthy ? 'Healthy' : 'Unhealthy',
-        a.healthScore.toString(),
-        a.lastUsed ? new Date(a.lastUsed).toLocaleTimeString() : 'Never'
+      a.provider,
+      a.email,
+      a.isHealthy ? 'Healthy' : 'Unhealthy',
+      (a.healthScore ?? 70).toString(),
+      a.lastUsed ? new Date(a.lastUsed).toLocaleTimeString() : 'Never'
     ]);
 
     table.setData({
-        headers: ['Provider', 'Email', 'Status', 'Score', 'Last Used'],
-        data: tableData
+      headers: ['Provider', 'Email', 'Status', 'Score', 'Last Used'],
+      data: tableData
     });
 
     screen.render();

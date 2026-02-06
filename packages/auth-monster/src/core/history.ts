@@ -22,8 +22,13 @@ export interface HistoryEntry {
 export class HistoryManager {
   private filePath: string;
 
-  constructor(storagePath: string) {
-    this.filePath = path.join(storagePath, 'history.jsonl');
+  constructor(storagePath?: string) {
+    let configDir = storagePath;
+    if (!configDir) {
+      const home = process.env.HOME || process.env.USERPROFILE || '/tmp';
+      configDir = path.join(home, '.config', 'opencode');
+    }
+    this.filePath = path.join(configDir, 'history.jsonl');
   }
 
   async addEntry(entry: Omit<HistoryEntry, 'timestamp'>): Promise<void> {
@@ -51,23 +56,23 @@ export class HistoryManager {
   // Basic query support (e.g. for replay)
   async getRecentEntries(limit: number = 50): Promise<HistoryEntry[]> {
     try {
-        if (!fs.existsSync(this.filePath)) return [];
-        const content = await fs.promises.readFile(this.filePath, 'utf8');
-        const lines = content.trim().split('\n');
-        return lines
-            .slice(-limit)
-            .map(line => {
-                try {
-                    return JSON.parse(line);
-                } catch {
-                    return null;
-                }
-            })
-            .filter((e): e is HistoryEntry => e !== null)
-            .reverse(); // Newest first
+      if (!fs.existsSync(this.filePath)) return [];
+      const content = await fs.promises.readFile(this.filePath, 'utf8');
+      const lines = content.trim().split('\n');
+      return lines
+        .slice(-limit)
+        .map(line => {
+          try {
+            return JSON.parse(line);
+          } catch {
+            return null;
+          }
+        })
+        .filter((e): e is HistoryEntry => e !== null)
+        .reverse(); // Newest first
     } catch (error) {
-        console.error('[HistoryManager] Failed to read history:', error);
-        return [];
+      console.error('[HistoryManager] Failed to read history:', error);
+      return [];
     }
   }
 }
