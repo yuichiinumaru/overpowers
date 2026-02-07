@@ -1,3 +1,10 @@
+// Load environment variables from ~/.config/opencode/.env
+import dotenv from 'dotenv';
+import path from 'path';
+const envPath = path.join(process.env.HOME || process.env.USERPROFILE || '/tmp', '.config', 'opencode', '.env');
+dotenv.config({ path: envPath });
+
+import fs from 'fs';
 import {
   AuthProvider,
   AuthMonsterConfig,
@@ -31,7 +38,7 @@ import { GenericProvider } from './providers/generic';
 
 export { RateLimitReason };
 
-export class AuthMonster {
+class AuthMonsterInternal {
   private storage: StorageManager;
   private accounts: ManagedAccount[] = [];
   private config: AuthMonsterConfig;
@@ -42,7 +49,11 @@ export class AuthMonster {
   private lastWarmupTime: Map<string, number> = new Map();
 
   constructor(context: PluginContext) {
-    this.config = context.config;
+    try {
+      fs.appendFileSync('/tmp/auth-monster-debug.log', `[${new Date().toISOString()}] Context Keys: ${Object.keys(context).join(', ')}\n`);
+    } catch (e) { }
+
+    this.config = context.config || { active: 'gemini', fallback: [], method: 'sticky', providers: {} } as any;
     this.storage = new StorageManager(context.storagePath);
     this.rotator = new AccountRotator();
     this.hub = new UnifiedModelHub();
@@ -471,24 +482,6 @@ export class AuthMonster {
     return this.accounts;
   }
 
-  /**
-   * Returns health info for all accounts
-   */
-  getAllAccountsStatus() {
-    return this.accounts.map(acc => ({
-      id: acc.id,
-      email: acc.email,
-      provider: acc.provider,
-      isHealthy: acc.isHealthy,
-      healthScore: acc.healthScore ?? 70, // Default initial score if not set
-      consecutiveFailures: acc.consecutiveFailures ?? 0,
-      lastUsed: acc.lastUsed,
-      cooldownUntil: acc.cooldownUntil,
-      rateLimitResetTime: acc.rateLimitResetTime,
-      lastSwitchReason: acc.lastSwitchReason
-    }));
-  }
-
   async addAccount(account: ManagedAccount) {
     await this.storage.addAccount(account);
     await this.init(); // Refresh local cache
@@ -522,9 +515,172 @@ export class AuthMonster {
       await this.storage.saveAccounts(this.accounts);
     }
   }
+
+  /**
+   * Returns health info for all accounts
+   */
+  getAllAccountsStatus(): AccountStatus[] {
+    return this.accounts.map(acc => ({
+      id: acc.id,
+      email: acc.email,
+      provider: acc.provider,
+      isHealthy: acc.isHealthy,
+      healthScore: acc.healthScore ?? 70,
+      consecutiveFailures: acc.consecutiveFailures ?? 0,
+      lastUsed: acc.lastUsed,
+      cooldownUntil: acc.cooldownUntil,
+      rateLimitResetTime: acc.rateLimitResetTime,
+      lastSwitchReason: acc.lastSwitchReason
+    }));
+  }
 }
 
-// Example usage/factory
-export function createAuthMonster(context: PluginContext) {
-  return new AuthMonster(context);
+export interface AccountStatus {
+  id: string;
+  email?: string;
+  provider: AuthProvider;
+  isHealthy: boolean;
+  healthScore?: number;
+  consecutiveFailures?: number;
+  lastUsed?: number;
+  cooldownUntil?: number;
+  rateLimitResetTime?: number;
+  lastError?: string;
+  lastSwitchReason?: string;
 }
+
+/**
+ * AuthMonster Plugin Factory
+ * This function returns a new AuthMonster instance.
+ */
+export function AuthMonsterFactory(context: PluginContext): AuthMonsterInternal {
+  return new AuthMonsterInternal(context);
+}
+
+export interface AuthMonsterConstructor {
+  new(context: PluginContext): AuthMonsterInternal;
+  (context: PluginContext): AuthMonsterInternal;
+}
+
+// Export the factory with the name AuthMonster to maintain compatibility with imports
+export const AuthMonster = AuthMonsterFactory as any as AuthMonsterConstructor;
+export type AuthMonster = AuthMonsterInternal;
+
+// Compatibility factory function
+export function createAuthMonster(context: PluginContext) {
+  return new AuthMonsterInternal(context);
+}
+
+// ============================================================================
+// OpenCode Plugin Interface - Auth Hook for Browser OAuth
+// ============================================================================
+
+interface OAuthAuthorizationResult {
+  url: string;
+  instructions: string;
+  method: "auto" | "code";
+  callback: (codeInput?: string) => Promise<{ type: "success" | "failed";[key: string]: any }>;
+}
+
+interface AuthMethod {
+  label: string;
+  type: "oauth" | "api";
+  provider?: string;
+  authorize?: (inputs?: Record<string, string>) => Promise<OAuthAuthorizationResult>;
+}
+
+interface PluginResult {
+  auth: {
+    provider: string;
+    loader: (getAuth: () => Promise<any>, provider: any) => Promise<{ apiKey: string; fetch?: typeof fetch }>;
+    methods: AuthMethod[];
+  };
+  event?: (payload: any) => void;
+  tool?: Record<string, unknown>;
+}
+
+/**
+ * OpenCode Plugin Entry Point
+ * This is the main export that OpenCode loads, providing auth hooks for browser OAuth.
+ */
+export async function AuthMonsterPlugin({ client, directory }: { client: any; directory: string }): Promise<PluginResult> {
+  const storagePath = path.join(directory || process.env.HOME || '', '.config', 'opencode');
+  const storage = new StorageManager(storagePath);
+
+  return {
+    auth: {
+      provider: "google",
+      methods: [
+        {
+          label: "Google OAuth (Auth Monster)",
+          type: "oauth",
+          authorize: async (inputs?: Record<string, string>) => {
+            // Use existing GeminiProvider.login() which handles:
+            // - PKCE generation
+            // - Opening browser with OAuth URL
+            // - Local callback server on port 1455
+            // - Token exchange
+            try {
+              const tokens = await GeminiProvider.login();
+
+              // Save account to storage
+              const accounts = await storage.loadAccounts();
+              const newAccount: ManagedAccount = {
+                id: `gemini-${Date.now()}`,
+                email: tokens.email,
+                provider: AuthProvider.Gemini,
+                tokens: {
+                  accessToken: tokens.accessToken,
+                  refreshToken: tokens.refreshToken,
+                  expiryDate: tokens.expiryDate,
+                  tokenType: tokens.tokenType
+                },
+                metadata: tokens.metadata,
+                isHealthy: true,
+                healthScore: 100,
+                consecutiveFailures: 0,
+                lastUsed: Date.now()
+              };
+              accounts.push(newAccount);
+              await storage.saveAccounts(accounts);
+
+              return {
+                url: "",
+                instructions: `✓ Authenticated as ${tokens.email}`,
+                method: "auto" as const,
+                callback: async () => ({
+                  type: "success" as const,
+                  refresh: tokens.refreshToken,
+                  access: tokens.accessToken,
+                  expires: tokens.expiryDate,
+                  email: tokens.email,
+                  projectId: tokens.metadata?.projectId || ""
+                })
+              };
+            } catch (error) {
+              return {
+                url: "",
+                instructions: `Authentication failed: ${error instanceof Error ? error.message : String(error)}`,
+                method: "auto" as const,
+                callback: async () => ({
+                  type: "failed" as const,
+                  error: error instanceof Error ? error.message : String(error)
+                })
+              };
+            }
+          }
+        }
+      ],
+      loader: async (getAuth, provider) => {
+        // This is called when the provider is used for API requests
+        const auth = await getAuth();
+
+        // For now, return empty apiKey - actual auth is handled by AuthMonsterInternal
+        return { apiKey: "" };
+      }
+    }
+  };
+}
+
+// Default export for OpenCode plugin compatibility
+export default AuthMonsterPlugin;
