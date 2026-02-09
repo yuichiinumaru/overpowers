@@ -16,5 +16,605 @@
         "title": "ccxt-php.md",
         "url": "https://skillsmp.com/skills/ccxt-ccxt-claude-skills-ccxt-php-skill-md",
         "local_path": "downloaded_skills/ccxt-php_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/facebook/react/tree/main/.claude/skills/verify",
+        "title": "verify.md",
+        "url": "https://skillsmp.com/skills/facebook-react-claude-skills-verify-skill-md",
+        "local_path": "skills/verify/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/facebook/react/tree/main/.claude/skills/test",
+        "title": "test.md",
+        "url": "https://skillsmp.com/skills/facebook-react-claude-skills-test-skill-md",
+        "local_path": "skills/test/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/facebook/react/tree/main/.claude/skills/extract-errors",
+        "title": "extract-errors.md",
+        "url": "https://skillsmp.com/skills/facebook-react-claude-skills-extract-errors-skill-md",
+        "local_path": "skills/extract-errors/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/facebook/react/tree/main/.claude/skills/fix",
+        "title": "fix.md",
+        "url": "https://skillsmp.com/skills/facebook-react-claude-skills-fix-skill-md",
+        "local_path": "skills/fix/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/facebook/react/tree/main/.claude/skills/flags",
+        "title": "flags.md",
+        "url": "https://skillsmp.com/skills/facebook-react-claude-skills-flags-skill-md",
+        "local_path": "skills/flags/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/facebook/react/tree/main/.claude/skills/feature-flags",
+        "title": "feature-flags.md",
+        "url": "https://skillsmp.com/skills/facebook-react-claude-skills-feature-flags-skill-md",
+        "local_path": "skills/feature-flags/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/facebook/react/tree/main/.claude/skills/flow",
+        "title": "flow.md",
+        "url": "https://skillsmp.com/skills/facebook-react-claude-skills-flow-skill-md",
+        "local_path": "skills/flow/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/n8n-io/n8n/tree/master/.claude/skills/create-pr",
+        "title": "create-pr.md",
+        "url": "https://skillsmp.com/skills/n8n-io-n8n-claude-skills-create-pr-skill-md",
+        "local_path": "skills/create-pr/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/songsee",
+        "title": "songsee.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-songsee-skill-md",
+        "local_path": "skills/songsee/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/things-mac",
+        "title": "things-mac.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-things-mac-skill-md",
+        "local_path": "skills/things-mac/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/camsnap",
+        "title": "camsnap.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-camsnap-skill-md",
+        "local_path": "skills/camsnap/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/trello",
+        "title": "trello.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-trello-skill-md",
+        "local_path": "skills/trello/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/microsoft/vscode/tree/main/.github/skills/accessibility",
+        "title": "accessibility.md",
+        "url": "https://skillsmp.com/skills/microsoft-vscode-github-skills-accessibility-skill-md",
+        "local_path": "downloaded_skills/accessibility_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/blogwatcher",
+        "title": "blogwatcher.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-blogwatcher-skill-md",
+        "local_path": "downloaded_skills/blogwatcher_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/nano-pdf",
+        "title": "nano-pdf.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-nano-pdf-skill-md",
+        "local_path": "downloaded_skills/nano-pdf_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/sag",
+        "title": "sag.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-sag-skill-md",
+        "local_path": "downloaded_skills/sag_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/sherpa-onnx-tts",
+        "title": "sherpa-onnx-tts.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-sherpa-onnx-tts-skill-md",
+        "local_path": "downloaded_skills/sherpa-onnx-tts_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/goplaces",
+        "title": "goplaces.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-goplaces-skill-md",
+        "local_path": "downloaded_skills/goplaces_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/extensions/feishu/skills/feishu-drive",
+        "title": "feishu-drive.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-extensions-feishu-skills-feishu-drive-skill-md",
+        "local_path": "downloaded_skills/feishu-drive_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/tmux",
+        "title": "tmux.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-tmux-skill-md",
+        "local_path": "downloaded_skills/tmux_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/.agents/skills/merge-pr",
+        "title": "merge-pr.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-agents-skills-merge-pr-skill-md",
+        "local_path": "downloaded_skills/merge-pr_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/extensions/open-prose/skills/prose",
+        "title": "prose.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-extensions-open-prose-skills-prose-skill-md",
+        "local_path": "downloaded_skills/prose_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/openai-whisper",
+        "title": "openai-whisper.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-openai-whisper-skill-md",
+        "local_path": "downloaded_skills/openai-whisper_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/extensions/feishu/skills/feishu-doc",
+        "title": "feishu-doc.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-extensions-feishu-skills-feishu-doc-skill-md",
+        "local_path": "downloaded_skills/feishu-doc_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/voice-call",
+        "title": "voice-call.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-voice-call-skill-md",
+        "local_path": "skills/voice-call/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/extensions/feishu/skills/feishu-perm",
+        "title": "feishu-perm.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-extensions-feishu-skills-feishu-perm-skill-md",
+        "local_path": "downloaded_skills/feishu-perm_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/gog",
+        "title": "gog.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-gog-skill-md",
+        "local_path": "downloaded_skills/gog_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/ordercli",
+        "title": "ordercli.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-ordercli-skill-md",
+        "local_path": "downloaded_skills/ordercli_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/.agents/skills/prepare-pr",
+        "title": "prepare-pr.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-agents-skills-prepare-pr-skill-md",
+        "local_path": "downloaded_skills/prepare-pr_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/healthcheck",
+        "title": "healthcheck.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-healthcheck-skill-md",
+        "local_path": "downloaded_skills/healthcheck_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/local-places",
+        "title": "local-places.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-local-places-skill-md",
+        "local_path": "downloaded_skills/local-places_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/himalaya",
+        "title": "himalaya.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-himalaya-skill-md",
+        "local_path": "downloaded_skills/himalaya_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/bear-notes",
+        "title": "bear-notes.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-bear-notes-skill-md",
+        "local_path": "downloaded_skills/bear-notes_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/openhue",
+        "title": "openhue.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-openhue-skill-md",
+        "local_path": "downloaded_skills/openhue_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/apple-notes",
+        "title": "apple-notes.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-apple-notes-skill-md",
+        "local_path": "downloaded_skills/apple-notes_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/clawhub",
+        "title": "clawhub.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-clawhub-skill-md",
+        "local_path": "downloaded_skills/clawhub_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/discord",
+        "title": "discord.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-discord-skill-md",
+        "local_path": "skills/discord/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/1password",
+        "title": "1password.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-1password-skill-md",
+        "local_path": "skills/1password/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/gifgrep",
+        "title": "gifgrep.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-gifgrep-skill-md",
+        "local_path": "downloaded_skills/gifgrep_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/summarize",
+        "title": "summarize.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-summarize-skill-md",
+        "local_path": "downloaded_skills/summarize_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/spotify-player",
+        "title": "spotify-player.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-spotify-player-skill-md",
+        "local_path": "downloaded_skills/spotify-player_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/.agents/skills/review-pr",
+        "title": "review-pr.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-agents-skills-review-pr-skill-md",
+        "local_path": "downloaded_skills/review-pr_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/food-order",
+        "title": "food-order.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-food-order-skill-md",
+        "local_path": "downloaded_skills/food-order_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/sonoscli",
+        "title": "sonoscli.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-sonoscli-skill-md",
+        "local_path": "downloaded_skills/sonoscli_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/openai-whisper-api",
+        "title": "openai-whisper-api.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-openai-whisper-api-skill-md",
+        "local_path": "downloaded_skills/openai-whisper-api_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/mcporter",
+        "title": "mcporter.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-mcporter-skill-md",
+        "local_path": "downloaded_skills/mcporter_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/gemini",
+        "title": "gemini.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-gemini-skill-md",
+        "local_path": "downloaded_skills/gemini_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/eightctl",
+        "title": "eightctl.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-eightctl-skill-md",
+        "local_path": "downloaded_skills/eightctl_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/session-logs",
+        "title": "session-logs.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-session-logs-skill-md",
+        "local_path": "downloaded_skills/session-logs_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/nano-banana-pro",
+        "title": "nano-banana-pro.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-nano-banana-pro-skill-md",
+        "local_path": "downloaded_skills/nano-banana-pro_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/skill-creator",
+        "title": "skill-creator.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-skill-creator-skill-md",
+        "local_path": "skills/skill-creator/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/bluebubbles",
+        "title": "bluebubbles.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-bluebubbles-skill-md",
+        "local_path": "downloaded_skills/bluebubbles_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/slack",
+        "title": "slack.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-slack-skill-md",
+        "local_path": "skills/slack/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/apple-reminders",
+        "title": "apple-reminders.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-apple-reminders-skill-md",
+        "local_path": "downloaded_skills/apple-reminders_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/notion",
+        "title": "notion.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-notion-skill-md",
+        "local_path": "skills/notion/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/obsidian",
+        "title": "obsidian.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-obsidian-skill-md",
+        "local_path": "downloaded_skills/obsidian_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/oracle",
+        "title": "oracle.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-oracle-skill-md",
+        "local_path": "downloaded_skills/oracle_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/extensions/feishu/skills/feishu-wiki",
+        "title": "feishu-wiki.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-extensions-feishu-skills-feishu-wiki-skill-md",
+        "local_path": "downloaded_skills/feishu-wiki_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/model-usage",
+        "title": "model-usage.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-model-usage-skill-md",
+        "local_path": "downloaded_skills/model-usage_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/video-frames",
+        "title": "video-frames.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-video-frames-skill-md",
+        "local_path": "downloaded_skills/video-frames_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/blucli",
+        "title": "blucli.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-blucli-skill-md",
+        "local_path": "downloaded_skills/blucli_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/coding-agent",
+        "title": "coding-agent.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-coding-agent-skill-md",
+        "local_path": "downloaded_skills/coding-agent_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/imsg",
+        "title": "imsg.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-imsg-skill-md",
+        "local_path": "downloaded_skills/imsg_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/openai-image-gen",
+        "title": "openai-image-gen.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-openai-image-gen-skill-md",
+        "local_path": "downloaded_skills/openai-image-gen_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/wacli",
+        "title": "wacli.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-wacli-skill-md",
+        "local_path": "downloaded_skills/wacli_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/weather",
+        "title": "weather.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-weather-skill-md",
+        "local_path": "downloaded_skills/weather_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/peekaboo",
+        "title": "peekaboo.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-peekaboo-skill-md",
+        "local_path": "downloaded_skills/peekaboo_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/openclaw/openclaw/tree/main/skills/github",
+        "title": "github.md",
+        "url": "https://skillsmp.com/skills/openclaw-openclaw-skills-github-skill-md",
+        "local_path": "skills/github/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/n8n-io/n8n/tree/master/.claude/skills/n8n-conventions",
+        "title": "n8n-conventions.md",
+        "url": "https://skillsmp.com/skills/n8n-io-n8n-claude-skills-n8n-conventions-skill-md",
+        "local_path": "downloaded_skills/n8n-conventions_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup",
+        "title": "skill-lookup.md",
+        "url": "https://skillsmp.com/skills/f-prompts-chat-plugins-claude-prompts-chat-skills-skill-lookup-skill-md",
+        "local_path": "downloaded_skills/skill-lookup_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/f/prompts.chat/tree/main/.windsurf/skills/book-translation",
+        "title": "book-translation.md",
+        "url": "https://skillsmp.com/skills/f-prompts-chat-windsurf-skills-book-translation-skill-md",
+        "local_path": "downloaded_skills/book-translation_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/prompt-lookup",
+        "title": "prompt-lookup.md",
+        "url": "https://skillsmp.com/skills/f-prompts-chat-plugins-claude-prompts-chat-skills-prompt-lookup-skill-md",
+        "local_path": "downloaded_skills/prompt-lookup_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/vercel/next.js/tree/canary/.claude/skills/update-docs",
+        "title": "update-docs.md",
+        "url": "https://skillsmp.com/skills/vercel-next-js-claude-skills-update-docs-skill-md",
+        "local_path": "downloaded_skills/update-docs_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/vercel/next.js/tree/canary/.claude-plugin/plugins/cache-components/skills/cache-components",
+        "title": "cache-components.md",
+        "url": "https://skillsmp.com/skills/vercel-next-js-claude-plugin-plugins-cache-components-skills-cache-components-skill-md",
+        "local_path": "downloaded_skills/cache-components_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/microsoft/PowerToys/tree/main/.github/skills/release-note-generation",
+        "title": "release-note-generation.md",
+        "url": "https://skillsmp.com/skills/microsoft-powertoys-github-skills-release-note-generation-skill-md",
+        "local_path": "downloaded_skills/release-note-generation_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/langgenius/dify/tree/main/.agents/skills/frontend-testing",
+        "title": "frontend-testing.md",
+        "url": "https://skillsmp.com/skills/langgenius-dify-agents-skills-frontend-testing-skill-md",
+        "local_path": "downloaded_skills/frontend-testing_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/langgenius/dify/tree/main/.agents/skills/frontend-code-review",
+        "title": "frontend-code-review.md",
+        "url": "https://skillsmp.com/skills/langgenius-dify-agents-skills-frontend-code-review-skill-md",
+        "local_path": "downloaded_skills/frontend-code-review_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/langgenius/dify/tree/main/.agents/skills/component-refactoring",
+        "title": "component-refactoring.md",
+        "url": "https://skillsmp.com/skills/langgenius-dify-agents-skills-component-refactoring-skill-md",
+        "local_path": "downloaded_skills/component-refactoring_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/langgenius/dify/tree/main/.agents/skills/orpc-contract-first",
+        "title": "orpc-contract-first.md",
+        "url": "https://skillsmp.com/skills/langgenius-dify-agents-skills-orpc-contract-first-skill-md",
+        "local_path": "downloaded_skills/orpc-contract-first_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/electron/electron/tree/main/.claude/skills/electron-chromium-upgrade",
+        "title": "electron-chromium-upgrade.md",
+        "url": "https://skillsmp.com/skills/electron-electron-claude-skills-electron-chromium-upgrade-skill-md",
+        "local_path": "downloaded_skills/electron-chromium-upgrade_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/anomalyco/opencode/tree/dev/.opencode/skill/bun-file-io",
+        "title": "bun-file-io.md",
+        "url": "https://skillsmp.com/skills/anomalyco-opencode-opencode-skill-bun-file-io-skill-md",
+        "local_path": "downloaded_skills/bun-file-io_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/supabase/supabase/tree/master/.claude/skills/e2e-studio-tests",
+        "title": "e2e-studio-tests.md",
+        "url": "https://skillsmp.com/skills/supabase-supabase-claude-skills-e2e-studio-tests-skill-md",
+        "local_path": "downloaded_skills/e2e-studio-tests_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/add-uint-support",
+        "title": "add-uint-support.md",
+        "url": "https://skillsmp.com/skills/pytorch-pytorch-claude-skills-add-uint-support-skill-md",
+        "local_path": "downloaded_skills/add-uint-support_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/pyrefly-type-coverage",
+        "title": "pyrefly-type-coverage.md",
+        "url": "https://skillsmp.com/skills/pytorch-pytorch-claude-skills-pyrefly-type-coverage-skill-md",
+        "local_path": "downloaded_skills/pyrefly-type-coverage_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/metal-kernel",
+        "title": "metal-kernel.md",
+        "url": "https://skillsmp.com/skills/pytorch-pytorch-claude-skills-metal-kernel-skill-md",
+        "local_path": "downloaded_skills/metal-kernel_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/at-dispatch-v2",
+        "title": "at-dispatch-v2.md",
+        "url": "https://skillsmp.com/skills/pytorch-pytorch-claude-skills-at-dispatch-v2-skill-md",
+        "local_path": "downloaded_skills/at-dispatch-v2_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/docstring",
+        "title": "docstring.md",
+        "url": "https://skillsmp.com/skills/pytorch-pytorch-claude-skills-docstring-skill-md",
+        "local_path": "downloaded_skills/docstring_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/triaging-issues",
+        "title": "triaging-issues.md",
+        "url": "https://skillsmp.com/skills/pytorch-pytorch-claude-skills-triaging-issues-skill-md",
+        "local_path": "downloaded_skills/triaging-issues_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/pr-review",
+        "title": "pr-review.md",
+        "url": "https://skillsmp.com/skills/pytorch-pytorch-claude-skills-pr-review-skill-md",
+        "local_path": "downloaded_skills/pr-review_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/skill-writer",
+        "title": "skill-writer.md",
+        "url": "https://skillsmp.com/skills/pytorch-pytorch-claude-skills-skill-writer-skill-md",
+        "local_path": "downloaded_skills/skill-writer_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/pytorch/pytorch/tree/main/.claude/skills/aoti-debug",
+        "title": "aoti-debug.md",
+        "url": "https://skillsmp.com/skills/pytorch-pytorch-claude-skills-aoti-debug-skill-md",
+        "local_path": "downloaded_skills/aoti-debug_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/google-gemini/gemini-cli/tree/main/.gemini/skills/docs-writer",
+        "title": "docs-writer.md",
+        "url": "https://skillsmp.com/skills/google-gemini-gemini-cli-gemini-skills-docs-writer-skill-md",
+        "local_path": "downloaded_skills/docs-writer_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/google-gemini/gemini-cli/tree/main/packages/core/src/skills/builtin/skill-creator",
+        "title": "skill-creator.md",
+        "url": "https://skillsmp.com/skills/google-gemini-gemini-cli-packages-core-src-skills-builtin-skill-creator-skill-md",
+        "local_path": "skills/skill-creator/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/google-gemini/gemini-cli/tree/main/.gemini/skills/pr-creator",
+        "title": "pr-creator.md",
+        "url": "https://skillsmp.com/skills/google-gemini-gemini-cli-gemini-skills-pr-creator-skill-md",
+        "local_path": "downloaded_skills/pr-creator_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/google-gemini/gemini-cli/tree/main/packages/cli/src/commands/extensions/examples/skills/skills/greeter",
+        "title": "greeter.md",
+        "url": "https://skillsmp.com/skills/google-gemini-gemini-cli-packages-cli-src-commands-extensions-examples-skills-skills-greeter-skill-md",
+        "local_path": "downloaded_skills/greeter_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/google-gemini/gemini-cli/tree/main/.gemini/skills/code-reviewer",
+        "title": "code-reviewer.md",
+        "url": "https://skillsmp.com/skills/google-gemini-gemini-cli-gemini-skills-code-reviewer-skill-md",
+        "local_path": "downloaded_skills/code-reviewer_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/google-gemini/gemini-cli/tree/main/.gemini/skills/docs-changelog",
+        "title": "docs-changelog.md",
+        "url": "https://skillsmp.com/skills/google-gemini-gemini-cli-gemini-skills-docs-changelog-skill-md",
+        "local_path": "downloaded_skills/docs-changelog_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/awesome_agent_skills/academic-researcher",
+        "title": "academic-researcher.md",
+        "url": "https://skillsmp.com/skills/shubhamsaboo-awesome-llm-apps-awesome-agent-skills-academic-researcher-skill-md",
+        "local_path": "downloaded_skills/academic-researcher_SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/awesome_agent_skills/python-expert",
+        "title": "python-expert.md",
+        "url": "https://skillsmp.com/skills/shubhamsaboo-awesome-llm-apps-awesome-agent-skills-python-expert-skill-md",
+        "local_path": "skills/python-expert/SKILL.md"
+    },
+    {
+        "github_link": "https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/awesome_agent_skills/deep-research",
+        "title": "deep-research.md",
+        "url": "https://skillsmp.com/skills/shubhamsaboo-awesome-llm-apps-awesome-agent-skills-deep-research-skill-md",
+        "local_path": "downloaded_skills/deep-research_SKILL.md"
     }
 ]
