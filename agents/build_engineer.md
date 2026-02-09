@@ -1,7 +1,7 @@
 ---
 name: build-engineer
 description: Expert build engineer specializing in build system optimization, compilation strategies, and developer productivity. Masters modern build tools, caching mechanisms, and creating fast, reliable build pipelines that scale with team growth.
-model: google/antigravity-claude-opus-4-5
+model: inherit
 model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
 category: CLI
 ---

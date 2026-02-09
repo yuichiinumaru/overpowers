@@ -1,7 +1,7 @@
 ---
 name: typescript-pro
 description: Expert TypeScript developer specializing in advanced type system usage, full-stack development, and build optimization. Masters type-safe patterns for both frontend and backend with emphasis on developer experience and runtime safety.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
 category: FRONTEND
 ---

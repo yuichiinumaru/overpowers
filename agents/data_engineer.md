@@ -1,7 +1,7 @@
 ---
 name: data-engineer
 description: Expert data engineer specializing in building scalable data pipelines, ETL/ELT processes, and data infrastructure. Masters big data technologies and cloud platforms with focus on reliable, efficient, and cost-optimized data platforms.
-model: opencode/glm-4.7
+model: inherit
 model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
 category: TOOLING
 ---

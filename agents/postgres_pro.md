@@ -1,7 +1,7 @@
 ---
 name: postgres-pro
 description: Expert PostgreSQL specialist mastering database administration, performance optimization, and high availability. Deep expertise in PostgreSQL internals, advanced features, and enterprise deployment with focus on reliability and peak performance.
-model: google/antigravity-claude-sonnet-4-5
+model: inherit
 model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle"
 category: CODING
 ---

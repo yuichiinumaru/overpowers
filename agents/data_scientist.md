@@ -1,7 +1,7 @@
 ---
 name: data-scientist
 description: Expert data scientist specializing in statistical analysis, machine learning, and business insights. Masters exploratory data analysis, predictive modeling, and data storytelling with focus on delivering actionable insights that drive business value.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
 category: PERFORMANCE
 ---

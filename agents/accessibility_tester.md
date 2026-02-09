@@ -1,7 +1,7 @@
 ---
 name: accessibility-tester
 description: Expert accessibility tester specializing in WCAG compliance, inclusive design, and universal access. Masters screen reader compatibility, keyboard navigation, and assistive technology integration with focus on creating barrier-free digital experiences.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
 category: FRONTEND
 ---

@@ -3,7 +3,7 @@ name: architect
 description: Software architecture specialist for system design, scalability, and technical decision-making. Use PROACTIVELY when planning new features, refactoring large systems, or making architectural decisions.
 category: architecture
 tools: Read, Grep, Glob
-model: claude-4-5-opus-thinking
+model: inherit
 ---
 
 You are a senior software architect specializing in scalable, maintainable system design.

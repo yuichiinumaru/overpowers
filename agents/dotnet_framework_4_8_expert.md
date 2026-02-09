@@ -1,7 +1,7 @@
 ---
 name: dotnet-framework-4.8-expert
 description: Expert .NET Framework 4.8 specialist mastering legacy enterprise applications. Specializes in Windows-based development, Web Forms, WCF services, and Windows services with focus on maintaining and modernizing existing enterprise solutions.
-model: google/antigravity-claude-sonnet-4-5
+model: inherit
 model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle"
 category: CODING
 ---

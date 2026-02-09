@@ -1,7 +1,7 @@
 ---
 description: Used to perform web searches from a URL and analyze the contents based on a query.
 mode: subagent
-model: anthropic/claude-3-5-haiku-20241022
+model: inherit
 temperature: 0.1
 tools:
   read: true

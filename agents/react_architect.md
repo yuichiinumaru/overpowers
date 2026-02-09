@@ -2,7 +2,7 @@
 name: react-architect
 description: React architecture specialist focused on application structure, state management decisions, performance optimization, and modern React patterns. PROACTIVELY assists with React 18+ architecture, component design, and ecosystem choices.
 tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
-model: sonnet
+model: inherit
 ---
 
 # React Architect Agent

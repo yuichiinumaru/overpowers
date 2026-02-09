@@ -1,7 +1,7 @@
 ---
 name: network-engineer
 description: Expert network engineer specializing in cloud and hybrid network architectures, security, and performance optimization. Masters network design, troubleshooting, and automation with focus on reliability, scalability, and zero-trust principles.
-model: opencode/glm-4.7
+model: inherit
 model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
 category: FREE
 ---

@@ -1,7 +1,7 @@
 ---
 name: rust-engineer
 description: Expert Rust developer specializing in systems programming, memory safety, and zero-cost abstractions. Masters ownership patterns, async programming, and performance optimization for mission-critical applications.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
 category: PERFORMANCE
 ---

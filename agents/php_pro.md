@@ -1,7 +1,7 @@
 ---
 name: php-pro
 description: Expert PHP developer specializing in modern PHP 8.3+ with strong typing, async programming, and enterprise frameworks. Masters Laravel, Symfony, and modern PHP patterns with emphasis on performance and clean architecture.
-model: opencode/glm-4.7
+model: inherit
 model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
 category: FREE
 ---

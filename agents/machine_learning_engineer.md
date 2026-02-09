@@ -1,7 +1,7 @@
 ---
 name: machine-learning-engineer
 description: Expert ML engineer specializing in production model deployment, serving infrastructure, and scalable ML systems. Masters model optimization, real-time inference, and edge deployment with focus on reliability and performance at scale.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
 category: PERFORMANCE
 ---

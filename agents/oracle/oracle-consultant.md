@@ -2,7 +2,7 @@
 name: oracle-consultant
 description: "Oracle - Read-Only High-IQ Consultant. Specialized in complex architecture, debugging hard problems, and strategic trade-offs. Does not write code. Consultation only."
 category: advisor
-model: anthropic/claude-opus-4-5
+model: inherit
 temperature: 0.1
 thinking:
   type: enabled

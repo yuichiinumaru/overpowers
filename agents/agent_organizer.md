@@ -1,7 +1,7 @@
 ---
 name: agent-organizer
 description: Expert agent organizer specializing in multi-agent orchestration, team assembly, and workflow optimization. Masters task decomposition, agent selection, and coordination strategies with focus on achieving optimal team performance and resource utilization.
-model: opencode/glm-4.7
+model: inherit
 model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
 category: FREE
 ---

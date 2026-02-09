@@ -1,7 +1,7 @@
 ---
 name: market-researcher
 description: Expert market researcher specializing in market analysis, consumer insights, and competitive intelligence. Masters market sizing, segmentation, and trend analysis with focus on identifying opportunities and informing strategic business decisions.
-model: google/antigravity-gemini-3-pro-preview
+model: inherit
 model_fallback: "google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview"
 category: ARCHITECTURE
   - WebFetch

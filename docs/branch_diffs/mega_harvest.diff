@@ -623,7 +623,7 @@ index bdb6828..0000000
 ----
 -description: Analyzes codebase implementation details. Call the codebase-analyzer agent when you need to find detailed information about specific components.
 -mode: subagent
--model: anthropic/claude-opus-4-1-20250805
+-model: inherit
 -temperature: 0.1
 -tools:
 -  read: true
@@ -762,7 +762,7 @@ index 34eeab6..0000000
 ----
 -description: Locates files, directories, and components relevant to a feature or task. Call `codebase-locator` with human language prompt describing what you're looking for. Basically a "Super Grep/Glob/LS tool" — Use it if you find yourself desiring to use one of these tools more than once.
 -mode: subagent
--model: anthropic/claude-opus-4-1-20250805
+-model: inherit
 -temperature: 0.1
 -tools:
 -  read: false
@@ -885,7 +885,7 @@ index db8031d..0000000
 ----
 -description: codebase-pattern-finder is a useful subagent_type for finding similar implementations, usage examples, or existing patterns that can be modeled after. It will give you concrete code examples based on what you're looking for! It's sorta like codebase-locator, but it will not only tell you the location of files, it will also give you code details!
 -mode: subagent
--model: anthropic/claude-opus-4-1-20250805
+-model: inherit
 -temperature: 0.1
 -tools:
 -  read: true
@@ -1110,7 +1110,7 @@ index 66be4dc..0000000
 ----
 -description: The research equivalent of codebase-analyzer. Use this subagent_type when wanting to deep dive on a research topic. Not commonly needed otherwise.
 -mode: subagent
--model: anthropic/claude-opus-4-1-20250805
+-model: inherit
 -temperature: 0.1
 -tools:
 -  read: true
@@ -1273,7 +1273,7 @@ index 81bd925..0000000
 ----
 -description: Discovers relevant documents in thoughts/ directory (We use this for all sorts of metadata storage!). This is really only relevant/needed when you're in a reseaching mood and need to figure out if we have random thoughts written down that are relevant to your current research task. Based on the name, I imagine you can guess this is the `thoughts` equivilent of `codebase-locator`
 -mode: subagent
--model: anthropic/claude-opus-4-1-20250805
+-model: inherit
 -temperature: 0.1
 -tools:
 -  read: true
@@ -1399,7 +1399,7 @@ index 44eeb5d..0000000
 ----
 -description: Used to perform web searches from a URL and analyze the contents based on a query.
 -mode: subagent
--model: anthropic/claude-3-5-haiku-20241022
+-model: inherit
 -temperature: 0.1
 -tools:
 -  read: true
@@ -4128,7 +4128,7 @@ index a5f4813..0000000
 -name: creative-problem-solver
 -description: Master Problem Solver using TRIZ, Systems Thinking, and Root Cause Analysis. Solves impossible challenges.
 -category: advisor
--model: claude-3-5-sonnet-latest
+-model: inherit
 ----
 -
 -# Dr. Quinn - Master Problem Solver
@@ -4161,7 +4161,7 @@ index 3393388..0000000
 -name: explorer-recon
 -description: Contextual grep for codebases. Answers 'Where is X?', 'Which file has Y?', 'Find the code that does Z'.
 -category: research
--model: claude-3-5-sonnet-latest
+-model: inherit
 ----
 -
 -# Explorer - Codebase Reconnaissance
@@ -4935,7 +4935,7 @@ index 6071dd9..0000000
 -name: game-dev-studio
 -description: Senior Game Developer. Expertise in Unity, Unreal, Godot. Focus on performance (60fps), game loop optimization, and rapid iteration.
 -category: specialist
--model: claude-3-5-sonnet-latest
+-model: inherit
 ----
 -
 -# Link Freeman - Game Developer
@@ -4970,7 +4970,7 @@ index d370734..0000000
 -name: librarian-researcher
 -description: Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples.
 -category: research
--model: claude-3-5-sonnet-latest
+-model: inherit
 ----
 -
 -# THE LIBRARIAN
@@ -5248,7 +5248,7 @@ index 1e7c181..0000000
 -name: metis-consultant
 -description: Pre-planning consultant that analyzes requests to identify hidden intentions, ambiguities, and AI failure points.
 -category: advisor
--model: claude-3-5-sonnet-latest
+-model: inherit
 ----
 -
 -# Metis - Pre-Planning Consultant
@@ -5501,7 +5501,7 @@ index 7729cfb..0000000
 -name: murat-test-architect
 -description: Master Test Architect and Quality Advisor. Specializes in risk-based testing, ATDD, and quality gates.
 -category: specialist
--model: claude-3-5-sonnet-latest
+-model: inherit
 ----
 -
 -# Murat - Master Test Architect
@@ -6120,7 +6120,7 @@ index a256e0a..0000000
 -name: oracle-architect
 -description: Read-only consultation agent. High-IQ reasoning specialist for debugging hard problems and high-difficulty architecture design.
 -category: advisor
--model: claude-3-5-sonnet-latest
+-model: inherit
 ----
 -
 -# Oracle - The Architect
@@ -7327,7 +7327,7 @@ index 9b5b407..0000000
 -name: sisyphus-orchestrator
 -description: Powerful AI orchestrator from OhMyOpenCode. Plans obsessively with todos, assesses search complexity before exploration, delegates strategically via category+skills combinations.
 -category: orchestrator
--model: claude-3-5-sonnet-latest
+-model: inherit
 ----
 -
 -<Role>
@@ -12998,7 +12998,7 @@ index 7e21d40..66db1c1 100644
 -      "model": "claude-sonnet-4-20250514",
 -      "prompt": "## Focus Areas\n- Set up and configure Puppeteer for various environments\n- Automate browser tasks using headless mode\n- Implement robust web scraping techniques\n- Handle dynamic content loading and AJAX requests\n- Capture and manipulate screenshots and PDFs\n- Navigate complex single-page applications\n- Intercept and manipulate network requests\n- Automate form submissions and user interactions\n- Manage browser sessions and state\n- Utilize Puppeteer's API for advanced use cases\n\n## Approach\n- Alwa..."
 +      "description": "",
-+      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: claude-sonnet-4-20250514\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
++      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: inherit\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
      },
 -    "prevc-refactoring-specialist": {
 +    "performance-reviewer": {
@@ -13317,7 +13317,7 @@ index 7e21d40..66db1c1 100644
 +    "solidjs-expert": {
        "mode": "subagent",
 -      "description": "",
--      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: claude-sonnet-4-20250514\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
+-      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: inherit\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
 +      "description": "SolidJS expert specializing in creating efficient and reactive UI components using SolidJS.",
 +      "prompt": "## Focus Areas\n\n- Understanding SolidJS reactivity system\n- Building reusable components\n- Optimizing rendering performance\n- Managing state with stores and signals\n- Handling side effects with createEffect\n- Composing UI with nested components\n- Leveraging context API for global state\n- Integrating custom hooks for shared logic\n- Implementing router for navigation\n- Testing SolidJS components\n\n## Approach\n\n- Emphasize fine-grained reactivity over VDOM\n- Use signals for state management efficien..."
      },
@@ -15512,7 +15512,7 @@ index c6150dd..42ba927 100644
 -      "model": "claude-sonnet-4-20250514",
 -      "prompt": "## Focus Areas\n\n- Laravel Eloquent ORM features and querying\n- Request and response lifecycle in Laravel\n- Laravel Service Container and Dependency Injection\n- Routing and middleware handling\n- Blade templating engine efficiency\n- Laravel event system and broadcasting\n- Queues and task scheduling in Laravel\n- Authentication and authorization in Laravel\n- API development with Laravel\n- Configuration and environment management\n\n## Approach\n\n- Follow Laravel conventions and best practices\n- Make us..."
 +      "description": "",
-+      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: claude-sonnet-4-20250514\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
++      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: inherit\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
      },
 -    "trpc-expert": {
 +    "nats-expert": {
@@ -15605,7 +15605,7 @@ index c6150dd..42ba927 100644
 +    "fiber-expert": {
        "mode": "subagent",
 -      "description": "",
--      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: claude-sonnet-4-20250514\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
+-      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: inherit\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
 +      "description": "Master in fiber technology specializing in manufacturing, properties, applications, and innovations in fiber industry.",
 +      "prompt": "## Focus Areas\n- Properties of natural fibers\n- Properties of synthetic fibers\n- Fiber manufacturing processes\n- Innovations in fiber technology\n- Environmental impact of fibers\n- Fiber applications in textiles\n- Market trends in fiber industry\n- Fiber testing and quality control\n- Advances in fiber treatments\n- Future technologies in fiber production\n\n## Approach\n- Analyze properties and characteristics of different fiber types\n- Study the manufacturing processes of fibers\n- Investigate innovat..."
      },

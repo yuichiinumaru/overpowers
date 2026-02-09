@@ -1,7 +1,7 @@
 ---
 name: golang-pro
 description: Expert Go developer specializing in high-performance systems, concurrent programming, and cloud-native microservices. Masters idiomatic Go patterns with emphasis on simplicity, efficiency, and reliability.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
 category: PERFORMANCE
 ---

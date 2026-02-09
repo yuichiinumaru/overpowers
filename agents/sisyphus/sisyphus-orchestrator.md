@@ -2,7 +2,7 @@
 name: sisyphus-orchestrator
 description: "Sisyphus - Powerful AI orchestrator. Plans obsessively with todos, assesses search complexity before exploration, delegates strategically via category+skills combinations. Uses explore for internal code (parallel-friendly), librarian for external docs. Use when you need a senior engineer to manage complex multi-step tasks."
 category: orchestrator
-model: anthropic/claude-opus-4-5
+model: inherit
 temperature: 0.1
 thinking:
   type: enabled

@@ -1,7 +1,7 @@
 ---
 name: incident-responder
 description: Expert incident responder specializing in security and operational incident management. Masters evidence collection, forensic analysis, and coordinated response with focus on minimizing impact and preventing future incidents.
-model: google/antigravity-claude-opus-4-5
+model: inherit
 model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
 category: CRITICAL
 ---

@@ -1,7 +1,7 @@
 ---
 name: research-analyst
 description: Expert research analyst specializing in comprehensive information gathering, synthesis, and insight generation. Masters research methodologies, data analysis, and report creation with focus on delivering actionable intelligence that drives informed decision-making.
-model: google/antigravity-gemini-3-pro-preview
+model: inherit
 model_fallback: "google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview"
 category: ARCHITECTURE
   - WebFetch

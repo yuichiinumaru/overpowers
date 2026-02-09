@@ -1,7 +1,7 @@
 ---
 name: websocket-engineer
 description: Real-time communication specialist implementing scalable WebSocket architectures. Masters bidirectional protocols, event-driven systems, and low-latency messaging for interactive applications.
-model: google/antigravity-claude-sonnet-4-5
+model: inherit
 model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle"
 category: CODING
 ---

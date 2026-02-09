@@ -3,7 +3,7 @@ name: marketing-strategist
 description: Strategic marketing advisor with 140+ proven tactics for SaaS and product growth. Use PROACTIVELY when user asks for "marketing ideas", "growth strategy", "how to promote", or "go-to-market plan".
 category: marketing
 tools: Read, Write
-model: opus
+model: inherit
 ---
 
 # Marketing Strategist

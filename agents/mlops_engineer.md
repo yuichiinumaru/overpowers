@@ -1,7 +1,7 @@
 ---
 name: mlops-engineer
 description: Expert MLOps engineer specializing in ML infrastructure, platform engineering, and operational excellence for machine learning systems. Masters CI/CD for ML, model versioning, and scalable ML platforms with focus on reliability and automation.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
 category: PERFORMANCE
 ---

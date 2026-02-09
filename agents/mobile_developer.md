@@ -1,7 +1,7 @@
 ---
 name: mobile-developer
 description: Cross-platform mobile specialist building performant native experiences. Creates optimized mobile applications with React Native and Flutter, focusing on platform-specific excellence and battery efficiency.
-model: google/antigravity-claude-sonnet-4-5
+model: inherit
 model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle"
 category: CODING
 ---

@@ -1,7 +1,7 @@
 ---
 name: penetration-tester
 description: Expert penetration tester specializing in ethical hacking, vulnerability assessment, and security testing. Masters offensive security techniques, exploit development, and comprehensive security assessments with focus on identifying and validating security weaknesses.
-model: google/antigravity-claude-opus-4-5
+model: inherit
 model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
 category: CRITICAL
 ---

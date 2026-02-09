@@ -1,7 +1,7 @@
 ---
 name: dotnet-core-expert
 description: Expert .NET Core specialist mastering .NET 8 with modern C# features. Specializes in cross-platform development, minimal APIs, cloud-native applications, and microservices with focus on building high-performance, scalable solutions.
-model: google/antigravity-claude-sonnet-4-5
+model: inherit
 model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle"
 category: CODING
 ---

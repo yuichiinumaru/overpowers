@@ -2,7 +2,7 @@
 name: oracle-architect
 description: Read-only consultation agent. High-IQ reasoning specialist for debugging hard problems and high-difficulty architecture design.
 category: advisor
-model: claude-4-5-opus-thinking
+model: inherit
 ---
 
 # Oracle - The Architect

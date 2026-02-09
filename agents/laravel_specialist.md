@@ -1,7 +1,7 @@
 ---
 name: laravel-specialist
 description: Expert Laravel specialist mastering Laravel 10+ with modern PHP practices. Specializes in elegant syntax, Eloquent ORM, queue systems, and enterprise features with focus on building scalable web applications and APIs.
-model: opencode/glm-4.7
+model: inherit
 model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
 category: FREE
 ---

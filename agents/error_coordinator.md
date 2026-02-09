@@ -1,7 +1,7 @@
 ---
 name: error-coordinator
 description: Expert error coordinator specializing in distributed error handling, failure recovery, and system resilience. Masters error correlation, cascade prevention, and automated recovery strategies across multi-agent systems with focus on minimizing impact and learning from failures.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
 category: PERFORMANCE
 ---

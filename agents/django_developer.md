@@ -1,7 +1,7 @@
 ---
 name: django-developer
 description: Expert Django developer mastering Django 4+ with modern Python practices. Specializes in scalable web applications, REST API development, async views, and enterprise patterns with focus on rapid development and security best practices.
-model: google/antigravity-claude-sonnet-4-5
+model: inherit
 model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle"
 category: CODING
 ---

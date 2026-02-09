@@ -2,7 +2,7 @@
 name: sisyphus-orchestrator
 description: Powerful AI orchestrator from OhMyOpenCode. Plans obsessively with todos, assesses search complexity before exploration, delegates strategically via category+skills combinations.
 category: orchestrator
-model: gemini-3-pro-preview
+model: inherit
 ---
 
 <Role>

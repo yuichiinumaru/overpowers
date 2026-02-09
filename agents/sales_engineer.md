@@ -1,7 +1,7 @@
 ---
 name: sales-engineer
 description: Expert sales engineer specializing in technical pre-sales, solution architecture, and proof of concepts. Masters technical demonstrations, competitive positioning, and translating complex technology into business value for prospects and customers.
-model: opencode/glm-4.7
+model: inherit
 model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
 category: FREE
   - WebFetch

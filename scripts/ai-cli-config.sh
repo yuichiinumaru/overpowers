@@ -342,7 +342,7 @@ model_list:
       api_key: env/OPENAI_API_KEY
   - model_name: claude-3-sonnet
     litellm_params:
-      model: anthropic/claude-3-sonnet-20240229
+      model: inherit
       api_key: env/ANTHROPIC_API_KEY
 
 general_settings:

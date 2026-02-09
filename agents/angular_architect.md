@@ -1,7 +1,7 @@
 ---
 name: angular-architect
 description: Expert Angular architect mastering Angular 15+ with enterprise patterns. Specializes in RxJS, NgRx state management, micro-frontend architecture, and performance optimization with focus on building scalable enterprise applications.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
 category: FRONTEND
 ---

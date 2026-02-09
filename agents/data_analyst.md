@@ -1,7 +1,7 @@
 ---
 name: data-analyst
 description: Expert data analyst specializing in business intelligence, data visualization, and statistical analysis. Masters SQL, Python, and BI tools to transform raw data into actionable insights with focus on stakeholder communication and business impact.
-model: opencode/glm-4.7
+model: inherit
 model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
 category: FREE
 ---

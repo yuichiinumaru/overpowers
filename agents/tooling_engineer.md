@@ -1,7 +1,7 @@
 ---
 name: tooling-engineer
 description: Expert tooling engineer specializing in developer tool creation, CLI development, and productivity enhancement. Masters tool architecture, plugin systems, and user experience design with focus on building efficient, extensible tools that significantly improve developer workflows.
-model: opencode/glm-4.7
+model: inherit
 model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
 category: FREE
 ---

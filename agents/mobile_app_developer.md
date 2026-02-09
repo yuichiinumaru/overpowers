@@ -1,7 +1,7 @@
 ---
 name: mobile-app-developer
 description: Expert mobile app developer specializing in native and cross-platform development for iOS and Android. Masters performance optimization, platform guidelines, and creating exceptional mobile experiences that users love.
-model: google/antigravity-claude-sonnet-4-5
+model: inherit
 model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle"
 category: CODING
 ---

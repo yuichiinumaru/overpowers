@@ -124,7 +124,7 @@ const puterRequest = {
   method: 'complete',
   args: {
     messages: transformedMessages,
-    model: 'claude-opus-4-5', // Stripped of 'puter-' prefix
+    model: inherit, // Stripped of 'puter-' prefix
     stream: true
   },
   auth_token: token

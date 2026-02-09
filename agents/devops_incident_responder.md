@@ -1,7 +1,7 @@
 ---
 name: devops-incident-responder
 description: Expert incident responder specializing in rapid detection, diagnosis, and resolution of production issues. Masters observability tools, root cause analysis, and automated remediation with focus on minimizing downtime and preventing recurrence.
-model: google/antigravity-claude-opus-4-5
+model: inherit
 model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
 category: CLI
 ---

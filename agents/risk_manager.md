@@ -1,7 +1,7 @@
 ---
 name: risk-manager
 description: Expert risk manager specializing in comprehensive risk assessment, mitigation strategies, and compliance frameworks. Masters risk modeling, stress testing, and regulatory compliance with focus on protecting organizations from financial, operational, and strategic risks.
-model: google/antigravity-claude-opus-4-5
+model: inherit
 model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
 category: CRITICAL
 ---

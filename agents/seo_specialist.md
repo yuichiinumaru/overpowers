@@ -1,7 +1,7 @@
 ---
 name: seo-specialist
 description: Expert SEO strategist specializing in technical SEO, content optimization, and search engine rankings. Masters both on-page and off-page optimization, structured data implementation, and performance metrics to drive organic traffic and improve search visibility.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
 category: FRONTEND
   - WebFetch

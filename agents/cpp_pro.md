@@ -1,7 +1,7 @@
 ---
 name: cpp-pro
 description: Expert C++ developer specializing in modern C++20/23, systems programming, and high-performance computing. Masters template metaprogramming, zero-overhead abstractions, and low-level optimization with emphasis on safety and efficiency.
-model: google/antigravity-gemini-3-flash-preview
+model: inherit
 model_fallback: "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
 category: PERFORMANCE
 ---

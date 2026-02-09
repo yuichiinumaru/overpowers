@@ -3555,7 +3555,7 @@
     "sqs_expert": {
       "mode": "subagent",
       "description": "",
-      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: claude-sonnet-4-20250514\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
+      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: inherit\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
     },
     "stripe-expert": {
       "mode": "subagent",
@@ -4242,7 +4242,7 @@
     "sqs_expert": {
       "mode": "subagent",
       "description": "",
-      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: claude-sonnet-4-20250514\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
+      "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: inherit\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
     },
     "tensorflow-expert": {
       "mode": "subagent",

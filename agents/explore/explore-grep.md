@@ -2,7 +2,7 @@
 name: explore-grep
 description: "Explore - Contextual Grep for Codebases. Finds files and patterns internally. Answers 'Where is X?', 'Find code that does Z'. Fires multiple tools in parallel."
 category: exploration
-model: google/gemini-3-flash
+model: inherit
 temperature: 0.1
 ---
 
