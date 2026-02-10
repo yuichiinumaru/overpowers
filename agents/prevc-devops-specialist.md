@@ -3,7 +3,6 @@ name: prevc-devops-specialist
 description: Designs CI/CD pipelines and infrastructure
 category: prevc-context
 ---
-
 # DevOps Specialist Agent Playbook
 
 ## Mission

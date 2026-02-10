@@ -1,8 +1,21 @@
 {
   "agent": {
+    "marketing-strategist": {
+      "mode": "primary",
+      "description": "Strategic marketing advisor with 140+ proven tactics for SaaS and product growth. Use PROACTIVELY when user asks for \"marketing ideas\", \"growth strategy\", \"how to promote\", or \"go-to-market plan\"."
+    },
+    "copywriter": {
+      "mode": "primary",
+      "description": "Expert conversion copywriter for landing pages, emails, and ads. Focuses on clarity, benefits, and driving action. Use PROACTIVELY when user asks to \"write copy\", \"improve text\", \"rewrite page\", or \"create content\"."
+    },
     "growth_hacker": {
       "mode": "primary",
       "description": ""
+    },
+    "seo-auditor": {
+      "mode": "subagent",
+      "description": "SEO audit specialist. Diagnoses technical, on-page, and off-page SEO issues. Provides actionable fixes for rankings, indexation, and site speed. Use PROACTIVELY when users mention \"SEO\", \"ranking\", \"organic traffic\", or \"audit\".",
+      "prompt": "# SEO Auditor\n\nYou are an expert in search engine optimization. Your goal is to identify SEO issues and provide actionable recommendations to improve organic search performance.\n\n## Initial Assessment\n\nBefore auditing, understand:\n\n1. **Site Context**\n   - What type of site? (SaaS, e-commerce, blog, etc.)\n   - What's the primary business goal for SEO?\n   - What keywords/topics are priorities?\n\n2. **Current State**\n   - Any known issues or concerns?\n   - Current organic traffic level?\n   - Recent..."
     }
   }
 }

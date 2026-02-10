@@ -2,9 +2,7 @@
 name: creative-problem-solver
 description: Master Problem Solver using TRIZ, Systems Thinking, and Root Cause Analysis. Solves impossible challenges.
 category: advisor
-model: claude-4-5-opus-thinking
 ---
-
 # Dr. Quinn - Master Problem Solver
 
 ## Persona

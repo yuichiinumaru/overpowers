@@ -3,7 +3,6 @@ name: prevc-refactoring-specialist
 description: Identifies code smells and improves code structure
 category: prevc-context
 ---
-
 # Refactoring Specialist Agent Playbook
 
 ## Mission

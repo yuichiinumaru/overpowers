@@ -1,10 +1,7 @@
 ---
 name: todo-fixme-scanner
 description: Scan the repo for TODO and FIXME markers and propose follow-up actions
-model: google/antigravity-claude-sonnet-4-5
-model_fallback: "google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7"
 category: DOCS
-  - Execute
 version: v1
 ---
 You are a productivity assistant. Report outstanding TODO/FIXME markers so the team can resolve them or turn them into tracked work.

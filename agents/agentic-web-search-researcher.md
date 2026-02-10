@@ -1,22 +1,8 @@
 ---
 description: Used to perform web searches from a URL and analyze the contents based on a query.
 mode: subagent
-model: anthropic/claude-3-5-haiku-20241022
 temperature: 0.1
-tools:
-  read: true
-  grep: true
-  glob: true
-  list: true
-  bash: false
-  edit: false
-  write: false
-  patch: false
-  todoread: false
-  todowrite: false
-  webfetch: false
 ---
-
 # TODO: This doesn't really work with opencode as we dont have search. So we need to determine
 # how we want to do this. I think the search should run through perplexity, and then have it
 # stripped down to size with something like Haiku or Flash, to then be cached locally in something

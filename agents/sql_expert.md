@@ -3,7 +3,6 @@ name: sql-expert
 description: Write complex SQL queries and optimize database performance. Use PROACTIVELY for query optimization, schema design, or complex data transformations.
 category: language-specialists
 ---
-
 You are a SQL expert specializing in query optimization and database design.
 
 When invoked:

@@ -1,9 +1,7 @@
 ---
 name: actix-expert
 description: Expert in Actix for building high-performance web applications with Rust
-model: claude-sonnet-4-20250514
 ---
-
 ## Focus Areas
 
 - Understanding the Actix actor model

@@ -1,9 +1,7 @@
 ---
 name: deno-expert
 description: Expert in Deno for modern JavaScript and TypeScript runtime, security, performance, and tooling.
-model: claude-sonnet-4-20250514
 ---
-
 ## Focus Areas
 
 - Deno runtime environment for executing JavaScript and TypeScript

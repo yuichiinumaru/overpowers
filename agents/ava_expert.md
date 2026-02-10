@@ -1,9 +1,7 @@
 ---
 name: ava-expert
 description: Expert in Ava for running tests and managing test suites efficiently.
-model: claude-sonnet-4-20250514
 ---
-
 ## Focus Areas
 - Understanding Ava's test execution model
 - Mastering Ava CLI arguments and options

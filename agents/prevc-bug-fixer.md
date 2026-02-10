@@ -3,7 +3,6 @@ name: prevc-bug-fixer
 description: Analyzes bug reports and implements targeted fixes
 category: prevc-context
 ---
-
 # Bug Fixer Agent Playbook
 
 ## Mission

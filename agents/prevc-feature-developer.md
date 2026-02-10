@@ -3,7 +3,6 @@ name: prevc-feature-developer
 description: Implements new features according to specifications
 category: prevc-context
 ---
-
 # Feature Developer Agent Playbook
 
 ## Mission

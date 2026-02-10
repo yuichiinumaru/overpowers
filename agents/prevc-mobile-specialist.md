@@ -3,7 +3,6 @@ name: prevc-mobile-specialist
 description: Develops mobile applications
 category: prevc-context
 ---
-
 # Mobile Specialist Agent Playbook
 
 ## Mission
