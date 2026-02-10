@@ -8,6 +8,24 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-05-24] - Everything Claude Code Integration
+
+### Added
+- **Assets**: Imported "everything-claude-code" repository contents into `*/everything-claude-code/` directories.
+  - `agents/everything-claude-code/`
+  - `skills/everything-claude-code/`
+  - `commands/everything-claude-code/`
+  - `hooks/everything-claude-code/`
+  - `docs/everything-claude-code/`
+  - `docs/rules/everything-claude-code/`
+  - `scripts/everything-claude-code/`
+  - `config/mcp-configs/everything-claude-code/`
+  - `plugins/everything-claude-code/`
+  - `docs/schemas/everything-claude-code/`
+  - `docs/contexts/everything-claude-code/`
+
+**Author**: Jules (Agent)
+
 ## [2026-05-24] - Deep Extraction Iteration
 
 ### Added
