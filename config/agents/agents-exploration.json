@@ -1,0 +1,12 @@
+{
+  "agent": {
+    "explore-grep": {
+      "mode": "primary",
+      "description": "Explore - Contextual Grep for Codebases. Finds files and patterns internally. Answers 'Where is X?', 'Find code that does Z'. Fires multiple tools in parallel."
+    },
+    "librarian-researcher": {
+      "mode": "primary",
+      "description": "Librarian - Reference Grep. Searches EXTERNAL resources (docs, web, OSS). Answers 'How do I use X?', 'Best practice for Y?'. Uses web search and official docs."
+    }
+  }
+}

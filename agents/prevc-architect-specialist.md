@@ -3,7 +3,6 @@ name: prevc-architect-specialist
 description: Designs overall system architecture and patterns
 category: prevc-context
 ---
-
 # Architect Specialist Agent Playbook
 
 ## Mission

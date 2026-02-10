@@ -1,9 +1,7 @@
 ---
 name: dart-expert
 description: Write idiomatic Dart code, optimize for Dart VM, and ensure cross-platform compatibility for Flutter applications.
-model: claude-sonnet-4-20250514
 ---
-
 ## Focus Areas
 
 - Dart language features and syntax

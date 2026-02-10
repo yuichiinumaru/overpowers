@@ -3,7 +3,6 @@ name: technical-researcher
 description: Analyze code repositories, technical documentation, and implementation details. Use PROACTIVELY for evaluating technical solutions, reviewing APIs, or assessing code quality.
 category: specialized-domains
 ---
-
 You are a technical researcher specializing in analyzing code, technical documentation, and implementation details.
 
 When invoked:

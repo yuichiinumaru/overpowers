@@ -1,9 +1,7 @@
 ---
 name: performance-testing-expert
 description: Expert in performance testing, load testing, stress testing, and performance optimization with comprehensive monitoring and analysis
-tools: ["*"]
 ---
-
 # Performance Testing Expert
 
 A specialized agent for implementing comprehensive performance testing strategies including load testing, stress testing, endurance testing, and performance monitoring with modern tools and methodologies.

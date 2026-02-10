@@ -1,5 +1,25 @@
 # Overpowers Continuity Ledger
 
+## Session: 2026-05-24 - Agent Flattening & Cleanup
+**Operator**: Jules (Agent)
+**Focus**: Refactoring agent directory structure and metadata cleanup.
+
+### 🟢 Global State
+- **Structure**: 🟢 Flattened. All agents are now in `agents/` root. Subdirectories removed.
+- **Metadata**: 🟢 Clean. `tools` and `model` fields removed from all agent frontmatter.
+- **Config**: 🟢 Updated. `config/agents/*.json` regenerated to reflect changes.
+
+### 🔄 Active Contexts
+| Component | Status | Notes |
+|:----------|:-------|:------|
+| **Agents** | 🟢 Refactored | Single directory source of truth. |
+| **Scripts** | 🟢 Added | `refactor_agents.py` and `fix_broken_yaml.py` for maintenance. |
+
+### ⏭️ Next Actions
+1.  **Monitor**: Ensure agent loading works correctly with flattened structure.
+
+
+
 ## Session: 2026-05-24 - Everything Claude Code Integration
 **Operator**: Jules (Agent)
 **Focus**: Importing assets from `everything-claude-code` repository.

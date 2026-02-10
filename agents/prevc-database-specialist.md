@@ -3,7 +3,6 @@ name: prevc-database-specialist
 description: Designs and optimizes database schemas
 category: prevc-context
 ---
-
 # Database Specialist Agent Playbook
 
 ## Mission

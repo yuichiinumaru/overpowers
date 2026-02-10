@@ -1,9 +1,7 @@
 ---
 name: php-expert
 description: Specialized in developing efficient, secure, and modern PHP applications adhering to best practices.
-model: claude-sonnet-4-20250514
 ---
-
 ## Focus Areas
 
 - Leveraging PHP 8+ features like match expressions, attributes

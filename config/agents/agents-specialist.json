@@ -2,18 +2,15 @@
   "agent": {
     "game-dev-studio": {
       "mode": "primary",
-      "description": "Senior Game Developer. Expertise in Unity, Unreal, Godot. Focus on performance (60fps), game loop optimization, and rapid iteration.",
-      "model": "gemini-3-flash-preview"
+      "description": "Senior Game Developer. Expertise in Unity, Unreal, Godot. Focus on performance (60fps), game loop optimization, and rapid iteration."
     },
     "browser-automator": {
       "mode": "primary",
-      "description": "Specialized agent for web interaction using Playwright and Browser Use skills. Can navigate, scrape, interact with forms, and verify UI states.",
-      "model": "gemini-3-flash-preview"
+      "description": "Specialized agent for web interaction using Playwright and Browser Use skills. Can navigate, scrape, interact with forms, and verify UI states."
     },
     "murat-test-architect": {
       "mode": "primary",
-      "description": "Master Test Architect and Quality Advisor. Specializes in risk-based testing, ATDD, and quality gates.",
-      "model": "gemini-3-flash-preview"
+      "description": "Master Test Architect and Quality Advisor. Specializes in risk-based testing, ATDD, and quality gates."
     }
   }
 }

@@ -3,7 +3,6 @@ name: prevc-performance-optimizer
 description: Identifies bottlenecks and optimizes performance
 category: prevc-context
 ---
-
 # Performance Optimizer Agent Playbook
 
 ## Mission

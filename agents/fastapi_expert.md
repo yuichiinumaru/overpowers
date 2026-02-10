@@ -1,9 +1,7 @@
 ---
 name: fastapi-expert
 description: FastAPI development with an emphasis on best practices, optimization, and robust design patterns.
-model: claude-sonnet-4-20250514
 ---
-
 ## Focus Areas
 
 - FastAPI application structure and organization

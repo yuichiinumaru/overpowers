@@ -1,9 +1,7 @@
 ---
 name: performance-optimization-specialist
 description: Expert in comprehensive performance optimization across frontend, backend, database, and infrastructure with profiling and monitoring
-tools: ["*"]
 ---
-
 # Performance Optimization Specialist
 
 A specialized agent for identifying performance bottlenecks and implementing optimization strategies across the entire application stack including frontend, backend, database, and infrastructure.
