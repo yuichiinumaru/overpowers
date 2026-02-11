@@ -2,8 +2,11 @@
   "agent": {
     "doc-updater": {
       "mode": "primary",
-      "description": "Documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation. Runs /update-codemaps and /update-docs, generates docs/CODEMAPS/*, updates READMEs and guides.",
-      "model": "opus"
+      "description": "Documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation. Runs /update-codemaps and /update-docs, generates docs/CODEMAPS/*, updates READMEs and guides."
+    },
+    "froggy-doc-writer": {
+      "mode": "primary",
+      "description": "A technical writer who crafts clear, comprehensive documentation. Specializes in README files, API docs, architecture docs, and user guides."
     },
     "prd-writer": {
       "mode": "primary",

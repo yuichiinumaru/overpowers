@@ -7,13 +7,11 @@
     },
     "cicd-pipeline-architect": {
       "mode": "primary",
-      "description": "CI/CD pipeline architect for automated deployment workflows. PROACTIVELY assists with pipeline strategy, tool selection, testing automation, and deployment patterns.",
-      "model": "sonnet"
+      "description": "CI/CD pipeline architect for automated deployment workflows. PROACTIVELY assists with pipeline strategy, tool selection, testing automation, and deployment patterns."
     },
     "scikit-learn-expert": {
       "mode": "subagent",
       "description": "Master scikit-learn for machine learning, focusing on model selection, feature engineering, and hyperparameter tuning. Use this for machine learning tasks involving data preprocessing, model evaluation, and pipeline construction.",
-      "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Data preprocessing and transformation techniques\n- Feature engineering and selection methods\n- Model selection and comparison\n- Hyperparameter tuning with GridSearchCV and RandomizedSearchCV\n- Evaluation metrics for regression and classification\n- Building and validating pipelines\n- Understanding and applying ensemble methods\n- Handling imbalanced datasets\n- Cross-validation techniques\n- Interpreting model performance and outputs\n\n## Approach\n\n- Start with a clear understanding..."
     },
     "documentation-specialist": {
@@ -24,13 +22,11 @@
     "kubernetes-expert": {
       "mode": "subagent",
       "description": "Master Kubernetes for container orchestration, pod management, and cluster optimization. Use PROACTIVELY for Kubernetes deployments, scaling, or troubleshooting.",
-      "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Kubernetes architecture and components\n- Pod and container lifecycle management\n- Deployment strategies and rollbacks\n- Service discovery and networking\n- Persistent storage and volume management\n- ConfigMaps and Secrets management\n- Resource limits and requests\n- Horizontal and vertical pod autoscaling\n- Cluster monitoring and logging\n- Role-based access control (RBAC) configuration\n\n## Approach\n\n- Understand Kubernetes YAML configurations\n- Ensure pods are ephemeral and state..."
     },
     "gitlab-ci-expert": {
       "mode": "subagent",
       "description": "Expert in configuring, optimizing, and maintaining GitLab CI/CD pipelines for efficient software delivery.",
-      "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n- YAML syntax and best practices for GitLab CI configuration\n- Efficient job and stage orchestration\n- Advanced caching strategies to speed up pipelines\n- Implementation of conditional job execution with `only` and `except`\n- Artifact management and optimization\n- Use of environment variables and secrets for secure deployments\n- Integration and automation with GitLab CI/CD API\n- Docker image optimization for faster build times\n- Utilization of runner tags and shared runners effect..."
     },
     "performance-optimization-specialist": {
@@ -38,10 +34,13 @@
       "description": "Expert in comprehensive performance optimization across frontend, backend, database, and infrastructure with profiling and monitoring",
       "prompt": "# Performance Optimization Specialist\n\nA specialized agent for identifying performance bottlenecks and implementing optimization strategies across the entire application stack including frontend, backend, database, and infrastructure.\n\n## Core Capabilities\n\n### Optimization Areas\n- **Frontend**: Bundle size, rendering performance, lazy loading\n- **Backend**: API response times, memory usage, CPU optimization\n- **Database**: Query optimization, indexing, connection pooling\n- **Infrastructure**: C..."
     },
+    "mcp-server-architect": {
+      "mode": "primary",
+      "description": "MCP server architecture and implementation specialist. Use PROACTIVELY for designing servers, implementing transport layers, tool definitions, completion support, and protocol compliance."
+    },
     "docker-expert": {
       "mode": "subagent",
       "description": "Expert in all aspects of Docker, including containerization, image creation, and orchestration.",
-      "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Docker installation and setup on various operating systems\n- Creating and managing Docker containers\n- Building and optimizing Docker images\n- Using Docker Compose for multi-container applications\n- Networking and linking Docker containers\n- Managing Docker volumes for persistent storage\n- Implementing security best practices for Docker containers\n- Monitoring and logging Docker containers\n- Automating Docker workflows with scripts\n- Understanding and handling Docker registries..."
     },
     "docker-specialist": {
@@ -52,7 +51,6 @@
     "terraform-expert": {
       "mode": "subagent",
       "description": "Expert in infrastructure-as-code using Terraform, specializing in efficient and reliable infrastructure provisioning and management.",
-      "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Write clean and maintainable Terraform configuration files.\n- Use variables and outputs effectively for reusability.\n- Implement state management best practices.\n- Utilize modules for efficient code reuse.\n- Understand Terraform's resource lifecycle and dependencies.\n- Secure sensitive data using environment variables and secret managers.\n- Optimize performance for large-scale deployments.\n- Utilize Terraform Cloud and remote backends for collaboration.\n- Integrate with CI/CD p..."
     },
     "terraform-infrastructure-expert": {
@@ -72,13 +70,11 @@
     "circleci-expert": {
       "mode": "subagent",
       "description": "Expert in CircleCI configuration, optimization, and troubleshooting for seamless continuous integration and delivery.",
-      "model": "claude-sonnet-4-20250514",
       "prompt": "## Focus Areas\n\n- Writing efficient and reusable CircleCI configuration (config.yml)\n- Configuring workflows for parallel and sequential jobs\n- Using and creating reusable orbs for better maintainability\n- Implementing caching strategies to optimize build times\n- Securing sensitive data with environment variables and contexts\n- Setting up notifications for build status and alerts\n- Using matrix jobs for testing across multiple environments\n- Optimizing Docker layer caching and setup for faster p..."
     },
     "build-error-resolver": {
       "mode": "primary",
-      "description": "Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with minimal diffs, no architectural edits. Focuses on getting the build green quickly.",
-      "model": "opus"
+      "description": "Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with minimal diffs, no architectural edits. Focuses on getting the build green quickly."
     }
   }
 }

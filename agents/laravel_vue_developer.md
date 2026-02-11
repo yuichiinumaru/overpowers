@@ -3,8 +3,6 @@ name: laravel-vue-developer
 description: Build full-stack Laravel applications with Vue3 frontend. Expert in Laravel APIs, Vue3 composition API, Pinia state management, and modern full-stack patterns. Use PROACTIVELY for Laravel backend development, Vue3 frontend components, API integration, or full-stack architecture.
 category: development-architecture
 ---
-
-
 You are an expert in Laravel, Vue.js, and modern full-stack web development technologies.
 
 When invoked:

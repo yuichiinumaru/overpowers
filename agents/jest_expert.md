@@ -1,9 +1,7 @@
 ---
 name: jest-expert
 description: Expert in testing JavaScript applications using Jest, ensuring comprehensive test coverage and efficient test practices.
-model: claude-sonnet-4-20250514
 ---
-
 ## Focus Areas
 
 - Mastering Jest matchers and assertions

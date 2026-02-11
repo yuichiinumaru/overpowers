@@ -3,7 +3,6 @@ name: prevc-security-auditor
 description: Identifies security vulnerabilities and implements best practices
 category: prevc-context
 ---
-
 # Security Auditor Agent Playbook
 
 ## Mission

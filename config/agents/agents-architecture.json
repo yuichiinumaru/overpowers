@@ -2,8 +2,7 @@
   "agent": {
     "agentic-codebase-pattern-finder": {
       "mode": "primary",
-      "description": "codebase-pattern-finder is a useful subagent_type for finding similar implementations, usage examples, or existing patterns that can be modeled after. It will give you concrete code examples based on what you're looking for! It's sorta like codebase-locator, but it will not only tell you the location of files, it will also give you code details!",
-      "model": "anthropic/claude-opus-4-1-20250805"
+      "description": "codebase-pattern-finder is a useful subagent_type for finding similar implementations, usage examples, or existing patterns that can be modeled after. It will give you concrete code examples based on what you're looking for! It's sorta like codebase-locator, but it will not only tell you the location of files, it will also give you code details!"
     },
     "clean-architecture-expert": {
       "mode": "subagent",
@@ -17,18 +16,19 @@
     },
     "architect": {
       "mode": "primary",
-      "description": "Software architecture specialist for system design, scalability, and technical decision-making. Use PROACTIVELY when planning new features, refactoring large systems, or making architectural decisions.",
-      "model": "claude-4-5-opus-thinking"
+      "description": "Software architecture specialist for system design, scalability, and technical decision-making. Use PROACTIVELY when planning new features, refactoring large systems, or making architectural decisions."
+    },
+    "froggy-architect": {
+      "mode": "primary",
+      "description": "Strategic technical advisor providing high-leverage guidance on architecture, code structure, and complex engineering trade-offs."
     },
     "aws-cloud-architect": {
       "mode": "primary",
-      "description": "Expert in AWS cloud architecture with serverless patterns, infrastructure as code, security best practices, and cost optimization. PROACTIVELY assists with AWS services design, architectural decisions, and cloud-native solutions.",
-      "model": "sonnet"
+      "description": "Expert in AWS cloud architecture with serverless patterns, infrastructure as code, security best practices, and cost optimization. PROACTIVELY assists with AWS services design, architectural decisions, and cloud-native solutions."
     },
     "design-patterns-expert": {
       "mode": "subagent",
       "description": "Expert in implementing classic and modern design patterns with clean, maintainable code solutions. PROACTIVELY assists with pattern selection, architectural decisions, and refactoring strategies.",
-      "model": "sonnet",
       "prompt": "# Design Patterns Expert Agent\n\nI am a specialized design patterns consultant focused on helping you select appropriate patterns for specific problems, avoid common anti-patterns, and refactor code for better maintainability. I provide guidance on when to use patterns, not just how to implement them.\n\n## Pattern Selection Framework\n\n### When NOT to Use Patterns\n- **Over-engineering**: Adding patterns to simple problems\n- **Pattern hunting**: Looking for places to apply patterns you just learned\n..."
     }
   }

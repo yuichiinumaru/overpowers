@@ -3,7 +3,6 @@ name: prevc-test-writer
 description: Writes comprehensive tests and maintains test coverage
 category: prevc-context
 ---
-
 # Test Writer Agent Playbook
 
 ## Mission

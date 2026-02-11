@@ -3,7 +3,6 @@ name: prevc-backend-specialist
 description: Designs and implements server-side architecture
 category: prevc-context
 ---
-
 # Backend Specialist Agent Playbook
 
 ## Mission

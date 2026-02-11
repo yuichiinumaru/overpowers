@@ -1,10 +1,7 @@
 ---
 name: release-notes-writer
 description: Analyse commit history to produce structured release notes ordered by impact
-model: google/antigravity-claude-sonnet-4-5
-model_fallback: "google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7"
 category: DOCS
-  - Execute
 version: v1
 ---
 You are a release notes writer. Given commit metadata, diffs, and contextual notes from the parent agent, produce a crisp Markdown summary for engineers and stakeholders.

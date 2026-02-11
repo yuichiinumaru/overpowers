@@ -10,8 +10,7 @@
     },
     "agentic-codebase-locator": {
       "mode": "primary",
-      "description": "Locates files, directories, and components relevant to a feature or task. Call `codebase-locator` with human language prompt describing what you're looking for. Basically a \"Super Grep/Glob/LS tool\" — Use it if you find yourself desiring to use one of these tools more than once.",
-      "model": "anthropic/claude-opus-4-1-20250805"
+      "description": "Locates files, directories, and components relevant to a feature or task. Call `codebase-locator` with human language prompt describing what you're looking for. Basically a \"Super Grep/Glob/LS tool\" — Use it if you find yourself desiring to use one of these tools more than once."
     },
     "visual-storyteller": {
       "mode": "primary",
@@ -19,8 +18,7 @@
     },
     "code-quality-guardian": {
       "mode": "primary",
-      "description": "Code quality guardian for automated quality gates and standards enforcement. PROACTIVELY assists with linting setup, formatting, pre-commit hooks, code analysis, and technical debt management.",
-      "model": "sonnet"
+      "description": "Code quality guardian for automated quality gates and standards enforcement. PROACTIVELY assists with linting setup, formatting, pre-commit hooks, code analysis, and technical debt management."
     },
     "whimsy-injector": {
       "mode": "primary",
@@ -30,14 +28,37 @@
       "mode": "primary",
       "description": "Expert in Phase 4 milestone and roadmap planning for the plan workflow. Use when organizing deliverables into releasable milestones, creating user stories, and generating effort estimates for sprint planning."
     },
+    "task-distributor": {
+      "mode": "primary",
+      "description": "Expert task distributor specializing in intelligent work allocation, load balancing, and queue management. Masters priority scheduling, capacity tracking, and fair distribution with focus on maximizing throughput while maintaining quality and meeting deadlines."
+    },
+    "refactor-cleaner": {
+      "mode": "primary",
+      "description": "Dead code cleanup and consolidation specialist. Use PROACTIVELY for removing unused code, duplicates, and refactoring. Runs analysis tools (knip, depcheck, ts-prune) to identify dead code and safely removes it."
+    },
+    "planner": {
+      "mode": "primary",
+      "description": "Expert planning specialist for complex features and refactoring. Use PROACTIVELY when users request feature implementation, architectural changes, or complex refactoring. Automatically activated for planning tasks."
+    },
+    "performance-monitor": {
+      "mode": "primary",
+      "description": "Expert performance monitor specializing in system-wide metrics collection, analysis, and optimization. Masters real-time monitoring, anomaly detection, and performance insights across distributed agent systems with focus on observability and continuous improvement."
+    },
+    "froggy-code-simplifier": {
+      "mode": "primary",
+      "description": "Simplifies recently modified code for clarity and maintainability while strictly preserving behavior."
+    },
     "000_ceo_orchestrator": {
       "mode": "primary",
       "description": ""
     },
     "claude-md-guardian": {
       "mode": "primary",
-      "description": "Background agent that maintains and updates CLAUDE.md files based on project changes. Invoked at session start and after major milestones (feature completion, refactoring, new dependencies, architecture changes). Works independently without interrupting other agents.",
-      "model": "haiku"
+      "description": "Background agent that maintains and updates CLAUDE.md files based on project changes. Invoked at session start and after major milestones (feature completion, refactoring, new dependencies, architecture changes). Works independently without interrupting other agents."
+    },
+    "froggy-rubber-duck": {
+      "mode": "primary",
+      "description": "Strategic thinking partner for exploratory dialogue. Challenges assumptions, asks pointed questions, and sharpens thinking through conversational friction."
     },
     "workflow-optimizer": {
       "mode": "primary",
@@ -47,9 +68,47 @@
       "mode": "primary",
       "description": "Use this agent when you need to lighten the mood, create funny content, or add humor to any situation. This agent specializes in dad jokes, programming puns, and startup humor. Examples:\\n\\n<example>\\nContext: Team needs a laugh during a stressful sprint\\nuser: \"We've been debugging for hours and everyone's frustrated\"\\nassistant: \"Time for a morale boost! Let me use the joker agent to share some programming humor.\"\\n<commentary>\\nHumor can help reset team energy during challenging moments.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Creating fun error messages\\nuser: \"Our 404 page is boring\"\\nassistant: \"Let's make that error page memorable! I'll use the joker agent to create some funny 404 messages.\"\\n<commentary>\\nHumorous error pages can turn frustration into delight.\\n</commentary>\\n</example>"
     },
+    "agent-installer": {
+      "mode": "primary",
+      "description": "Install Claude Code agents from the awesome-claude-code-subagents repository. Use when the user wants to browse, search, or install agents from the community collection."
+    },
+    "agent-organizer": {
+      "mode": "primary",
+      "description": "Expert agent organizer specializing in multi-agent orchestration, team assembly, and workflow optimization. Masters task decomposition, agent selection, and coordination strategies with focus on achieving optimal team performance and resource utilization."
+    },
+    "code-reviewer": {
+      "mode": "subagent",
+      "description": "Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code. MUST BE USED for all code changes.",
+      "prompt": "You are a senior code reviewer ensuring high standards of code quality and security.\n\nWhen invoked:\n1. Run git diff to see recent changes\n2. Focus on modified files\n3. Begin review immediately\n\nReview checklist:\n- Code is simple and readable\n- Functions and variables are well-named\n- No duplicated code\n- Proper error handling\n- No exposed secrets or API keys\n- Input validation implemented\n- Good test coverage\n- Performance considerations addressed\n- Time complexity of algorithms analyzed\n- Licen..."
+    },
+    "multi-agent-coordinator": {
+      "mode": "primary",
+      "description": "Expert multi-agent coordinator specializing in complex workflow orchestration, inter-agent communication, and distributed system coordination. Masters parallel execution, dependency management, and fault tolerance with focus on achieving seamless collaboration at scale."
+    },
+    "workflow-orchestrator": {
+      "mode": "primary",
+      "description": "Expert workflow orchestrator specializing in complex process design, state machine implementation, and business process automation. Masters workflow patterns, error compensation, and transaction management with focus on building reliable, flexible, and observable workflow systems."
+    },
     "pew-lead-developer": {
       "mode": "primary",
       "description": "Expert Lead Developer. Use when executing development tasks based on a provided plan to translate requirements and architecture into high-quality, maintainable code."
+    },
+    "opencode-gpt": {
+      "mode": "primary",
+      "description": "Multi-language implementation agent for modular and functional development"
+    },
+    "froggy-code-reviewer": {
+      "mode": "subagent",
+      "description": "Reviews code for quality, correctness, and security",
+      "prompt": "# Code Review Agent\n\n\nYou are in code review mode. Your role is strictly analytical, perform a code review on the provided diff.\n\n## Guidelines\n\n- **Pragmatic over pedantic**: Flag real problems, not style preferences\n- **Evidence-based**: Every issue must be traceable to specific diff lines\n- **Actionable**: Every issue must have a clear path to resolution\n- **Production-minded**: Assume this code ships to users\n\n## Scope\n\n### CRITICAL FOCUS AREAS:\n1. **Discipline:** Only review code that is pa..."
+    },
+    "go-build-resolver": {
+      "mode": "primary",
+      "description": "Go build, vet, and compilation error resolution specialist. Fixes build errors, go vet issues, and linter warnings with minimal changes. Use when Go builds fail."
+    },
+    "opencode-grok": {
+      "mode": "primary",
+      "description": "Multi-language implementation agent for modular and functional development"
     },
     "factory_guide": {
       "mode": "primary",
@@ -67,10 +126,22 @@
       "mode": "primary",
       "description": ""
     },
+    "python-reviewer": {
+      "mode": "subagent",
+      "description": "Expert Python code reviewer specializing in PEP 8 compliance, Pythonic idioms, type hints, security, and performance. Use for all Python code changes. MUST BE USED for Python projects.",
+      "prompt": "You are a senior Python code reviewer ensuring high standards of Pythonic code and best practices.\n\nWhen invoked:\n1. Run `git diff -- '*.py'` to see recent Python file changes\n2. Run static analysis tools if available (ruff, mypy, pylint, black --check)\n3. Focus on modified `.py` files\n4. Begin review immediately\n\n## Security Checks (CRITICAL)\n\n- **SQL Injection**: String concatenation in database queries\n  ```python\n  # Bad\n  cursor.execute(f\"SELECT * FROM users WHERE id = {user_id}\")\n  # Good\n..."
+    },
     "agentic-thoughts-locator": {
       "mode": "primary",
-      "description": "Discovers relevant documents in thoughts/ directory (We use this for all sorts of metadata storage!). This is really only relevant/needed when you're in a reseaching mood and need to figure out if we have random thoughts written down that are relevant to your current research task. Based on the name, I imagine you can guess this is the `thoughts` equivilent of `codebase-locator`",
-      "model": "anthropic/claude-opus-4-1-20250805"
+      "description": "Discovers relevant documents in thoughts/ directory (We use this for all sorts of metadata storage!). This is really only relevant/needed when you're in a reseaching mood and need to figure out if we have random thoughts written down that are relevant to your current research task. Based on the name, I imagine you can guess this is the `thoughts` equivilent of `codebase-locator`"
+    },
+    "froggy-partner": {
+      "mode": "primary",
+      "description": "Strategic ideation partner that breaks frames, expands solution spaces, and surfaces non-obvious strategic options."
+    },
+    "it-ops-orchestrator": {
+      "mode": "primary",
+      "description": ">"
     },
     "skills_guide": {
       "mode": "primary",
@@ -80,23 +151,41 @@
       "mode": "primary",
       "description": "Use this agent when preparing app store listings, researching keywords, optimizing app metadata, improving conversion rates, or analyzing app store performance. This agent specializes in maximizing organic app store visibility and downloads. Examples:\\n\\n<example>\\nContext: Preparing for app launch"
     },
+    "tdd-guide": {
+      "mode": "primary",
+      "description": "Test-Driven Development specialist enforcing write-tests-first methodology. Use PROACTIVELY when writing new features, fixing bugs, or refactoring code. Ensures 80%+ test coverage."
+    },
     "tiktok-strategist": {
       "mode": "primary",
       "description": "Use this agent when you need to create TikTok marketing strategies, develop viral content ideas, plan TikTok campaigns, or optimize for TikTok's algorithm. This agent specializes in creating shareable moments and leveraging TikTok trends for app growth. Examples:\\n\\n<example>\\nContext: Launching a new app and need TikTok strategy\\nuser: \"We're launching our phone anxiety app next week. How should we approach TikTok?\"\\nassistant: \"TikTok will be crucial for your launch. Let me use the tiktok_strategist agent to create a comprehensive TikTok marketing strategy for your phone anxiety app.\"\\n<commentary>\\nNew app launches benefit from TikTok's viral potential and young user base.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Creating viral content for an existing app\\nuser: \"Our meditation app needs more downloads. What kind of TikTok content should we make?\"\\nassistant: \"I'll help you create viral TikTok content ideas. Let me use the tiktok_strategist agent to develop content that showcases your app in trending formats.\"\\n<commentary>\\nExisting apps can boost downloads through strategic TikTok content that fits platform culture.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Identifying TikTok influencers for partnerships\\nuser: \"Should we work with TikTok creators to promote our app?\"\\nassistant: \"Creator partnerships can be very effective. Let me use the tiktok_strategist agent to identify the right creators and collaboration strategies for your app.\"\\n<commentary>\\nInfluencer partnerships on TikTok can provide authentic reach to target audiences.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Optimizing app features for TikTok sharing\\nuser: \"How can we make our app more TikTok-friendly?\"\\nassistant: \"Making your app TikTok-native is smart. I'll use the tiktok_strategist agent to identify features and moments in your app that users would want to share on TikTok.\"\\n<commentary>\\nApps with built-in TikTok-worthy moments see higher organic growth through user-generated content.\\n</commentary>\\n</example>"
     },
+    "opencode-llama": {
+      "mode": "primary",
+      "description": "Multi-language implementation agent for modular and functional development"
+    },
     "agentic-codebase-analyzer": {
       "mode": "primary",
-      "description": "Analyzes codebase implementation details. Call the codebase-analyzer agent when you need to find detailed information about specific components.",
-      "model": "anthropic/claude-opus-4-1-20250805"
+      "description": "Analyzes codebase implementation details. Call the codebase-analyzer agent when you need to find detailed information about specific components."
+    },
+    "error-coordinator": {
+      "mode": "primary",
+      "description": "Expert error coordinator specializing in distributed error handling, failure recovery, and system resilience. Masters error correlation, cascade prevention, and automated recovery strategies across multi-agent systems with focus on minimizing impact and learning from failures."
+    },
+    "e2e-runner": {
+      "mode": "primary",
+      "description": "End-to-end testing specialist using Vercel Agent Browser (preferred) with Playwright fallback. Use PROACTIVELY for generating, maintaining, and running E2E tests. Manages test journeys, quarantines flaky tests, uploads artifacts (screenshots, videos, traces), and ensures critical user flows work."
     },
     "hooks_guide": {
       "mode": "primary",
       "description": ""
     },
+    "opencode-gemini": {
+      "mode": "primary",
+      "description": "Multi-language implementation agent for modular and functional development"
+    },
     "agentic-thoughts-analyzer": {
       "mode": "primary",
-      "description": "The research equivalent of codebase-analyzer. Use this subagent_type when wanting to deep dive on a research topic. Not commonly needed otherwise.",
-      "model": "anthropic/claude-opus-4-1-20250805"
+      "description": "The research equivalent of codebase-analyzer. Use this subagent_type when wanting to deep dive on a research topic. Not commonly needed otherwise."
     },
     "code-refactorer": {
       "mode": "primary",
@@ -109,6 +198,11 @@
     "code-review-master": {
       "mode": "primary",
       "description": "Expert code reviewer specializing in security, performance, maintainability, and best practices across languages. PROACTIVELY performs comprehensive code reviews and suggests improvements."
+    },
+    "go-reviewer": {
+      "mode": "subagent",
+      "description": "Expert Go code reviewer specializing in idiomatic Go, concurrency patterns, error handling, and performance. Use for all Go code changes. MUST BE USED for Go projects.",
+      "prompt": "You are a senior Go code reviewer ensuring high standards of idiomatic Go and best practices.\n\nWhen invoked:\n1. Run `git diff -- '*.go'` to see recent Go file changes\n2. Run `go vet ./...` and `staticcheck ./...` if available\n3. Focus on modified `.go` files\n4. Begin review immediately\n\n## Security Checks (CRITICAL)\n\n- **SQL Injection**: String concatenation in `database/sql` queries\n  ```go\n  // Bad\n  db.Query(\"SELECT * FROM users WHERE id = \" + userID)\n  // Good\n  db.Query(\"SELECT * FROM users..."
     }
   }
 }

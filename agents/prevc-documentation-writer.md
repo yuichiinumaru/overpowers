@@ -3,7 +3,6 @@ name: prevc-documentation-writer
 description: Creates and maintains documentation
 category: prevc-context
 ---
-
 # Documentation Writer Agent Playbook
 
 ## Mission

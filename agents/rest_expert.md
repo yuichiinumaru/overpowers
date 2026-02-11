@@ -1,9 +1,7 @@
 ---
 name: rest-expert
 description: Master in designing and implementing RESTful APIs with focus on best practices, HTTP methods, status codes, and resource modeling.
-model: claude-sonnet-4-20250514
 ---
-
 ## Focus Areas
 
 - Understanding REST architectural principles

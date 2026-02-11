@@ -3,7 +3,6 @@ name: prevc-frontend-specialist
 description: Designs and implements user interfaces
 category: prevc-context
 ---
-
 # Frontend Specialist Agent Playbook
 
 ## Mission

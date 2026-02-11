@@ -129,6 +129,62 @@ def get_skills_from_url(driver, start_url, limit, download, seen_urls):
         print(f"Processando chunk {i//chunk_size + 1} ({len(chunk)} skills)...", flush=True)
         results = extract_github_links(driver, chunk)
         all_results.extend(results)
+def get_skills(keyword=None, limit=10, all_mode=False, download=False):
+    driver = setup_driver()
+    base_url = "https://skillsmp.com/"
+
+    url = f"{base_url}?q={keyword}" if keyword else base_url
+    print(f"Acessando: {url}", flush=True)
+    driver.get(url)
+    time.sleep(5)
+
+    max_extract = 1000 if all_mode else limit
+    all_cards = []
+    seen_urls = set()
+
+    while len(all_cards) < max_extract:
+        print(f"Extraindo cards... (total: {len(all_cards)})", flush=True)
+        cards = driver.execute_script(r"""
+            return Array.from(document.querySelectorAll('a'))
+                .filter(a => a.href.includes('/skills/'))
+                .map(a => ({ title: a.innerText.split('\n')[0], url: a.href }))
+        """)
+
+        for c in cards:
+            if c['url'] not in seen_urls:
+                all_cards.append(c)
+                seen_urls.add(c['url'])
+                if len(all_cards) >= max_extract:
+                    break
+
+        if len(all_cards) >= max_extract:
+            break
+
+        clicked = driver.execute_script("""
+            const btns = Array.from(document.querySelectorAll('button'));
+            const nextBtn = btns.find(b => b.innerText === '→');
+            if (nextBtn) {
+                nextBtn.click();
+                return true;
+            }
+            return false;
+        """)
+        if not clicked:
+            print("Fim das páginas ou botão '→' não encontrado.", flush=True)
+            break
+        time.sleep(2)
+
+    print(f"Total de {len(all_cards)} cards encontrados. Extraindo links do GitHub...", flush=True)
+
+    chunk_size = 50
+    all_results = []
+    for i in range(0, len(all_cards), chunk_size):
+        chunk = all_cards[i:i + chunk_size]
+        print(f"Processando chunk {i//chunk_size + 1} ({len(chunk)} skills)...", flush=True)
+        results = extract_github_links(driver, chunk)
+        all_results.extend(results)
+    
+    driver.quit()
     
     if download and all_results:
         dest_dir = "downloaded_skills"
@@ -196,12 +252,23 @@ def main():
     # Merge and save
     merged = {item['url']: item for item in old_data}
     for item in all_new_results:
+    # Merge with existing
+    tracking_file = 'scripts/skills_found.json'
+    if os.path.exists(tracking_file):
+        with open(tracking_file, 'r', encoding='utf-8') as f:
+            old_data = json.load(f)
+    else:
+        old_data = []
+
+    merged = {item['url']: item for item in old_data}
+    for item in results:
         merged[item['url']] = item
 
     with open(tracking_file, 'w', encoding='utf-8') as f:
         json.dump(list(merged.values()), f, indent=4, ensure_ascii=False)
 
     print(f"\nFinalizado! {len(all_new_results)} novas skills processadas. Total em tracking: {len(merged)}", flush=True)
+    print(f"\nFinalizado! {len(results)} skills processadas. Total em tracking: {len(merged)}", flush=True)
 
 if __name__ == "__main__":
     main()
