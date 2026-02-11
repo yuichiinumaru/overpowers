@@ -79,6 +79,56 @@ def extract_github_links(driver, skills_subset):
     driver.set_script_timeout(600)
     return driver.execute_async_script(extract_script, skills_subset)
 
+def get_skills_from_url(driver, start_url, limit, download, seen_urls):
+    driver.get(start_url)
+    time.sleep(5)
+    
+    all_cards = []
+    max_extract = limit
+
+    while len(all_cards) < max_extract:
+        print(f"Extraindo cards de {driver.current_url}... (encontrados nesta URL: {len(all_cards)})", flush=True)
+        cards = driver.execute_script(r"""
+            return Array.from(document.querySelectorAll('a'))
+                .filter(a => a.href.includes('/skills/'))
+                .map(a => ({ title: a.innerText.split('\n')[0], url: a.href }))
+        """)
+
+        found_new_on_page = False
+        for c in cards:
+            if c['url'] not in seen_urls:
+                all_cards.append(c)
+                seen_urls.add(c['url'])
+                found_new_on_page = True
+                if len(all_cards) >= max_extract:
+                    break
+
+        if len(all_cards) >= max_extract:
+            break
+
+        clicked = driver.execute_script("""
+            const btns = Array.from(document.querySelectorAll('button'));
+            const nextBtn = btns.find(b => b.innerText === '→');
+            if (nextBtn) {
+                nextBtn.click();
+                return true;
+            }
+            return false;
+        """)
+        if not clicked:
+            print("Fim das páginas ou botão '→' não encontrado.", flush=True)
+            break
+        time.sleep(3)
+
+    print(f"Total de {len(all_cards)} cards novos encontrados nesta URL. Extraindo links do GitHub...", flush=True)
+
+    chunk_size = 50
+    all_results = []
+    for i in range(0, len(all_cards), chunk_size):
+        chunk = all_cards[i:i + chunk_size]
+        print(f"Processando chunk {i//chunk_size + 1} ({len(chunk)} skills)...", flush=True)
+        results = extract_github_links(driver, chunk)
+        all_results.extend(results)
 def get_skills(keyword=None, limit=10, all_mode=False, download=False):
     driver = setup_driver()
     base_url = "https://skillsmp.com/"
@@ -160,17 +210,48 @@ def get_skills(keyword=None, limit=10, all_mode=False, download=False):
 def main():
     parser = argparse.ArgumentParser(description="Scraper para skillsmp.com")
     parser.add_argument("--keyword", type=str, help="Palavra-chave para busca")
-    parser.add_argument("--limit", type=int, default=10, help="Limite de skills por lote")
-    parser.add_argument("--all", action="store_true", help="Baixar todas as skills")
+    parser.add_argument("--urls", type=str, nargs='+', help="Lista de URLs para iniciar o scraping")
+    parser.add_argument("--limit", type=int, default=10, help="Limite de skills por URL ou total")
+    parser.add_argument("--all", action="store_true", help="Baixar todas as skills (limitada a 1000)")
     parser.add_argument("--download", action="store_true", help="Tentar baixar os arquivos SKILL.md")
     
     args = parser.parse_args()
-    if not args.keyword and not args.all:
-        print("Erro: Use --keyword ou --all.")
+
+    target_urls = []
+    if args.urls:
+        target_urls = args.urls
+    elif args.keyword:
+        target_urls = [f"https://skillsmp.com/?q={args.keyword}"]
+    elif args.all:
+        target_urls = ["https://skillsmp.com/"]
+        args.limit = 1000
+    else:
+        print("Erro: Use --keyword, --urls ou --all.")
         sys.exit(1)
         
-    results = get_skills(keyword=args.keyword, limit=args.limit, all_mode=args.all, download=args.download)
+    driver = setup_driver()
+    seen_urls = set()
     
+    # Load existing to avoid re-scraping the same things in one session
+    tracking_file = 'scripts/skills_found.json'
+    old_data = []
+    if os.path.exists(tracking_file):
+        with open(tracking_file, 'r', encoding='utf-8') as f:
+            old_data = json.load(f)
+            for item in old_data:
+                seen_urls.add(item['url'])
+
+    all_new_results = []
+    for url in target_urls:
+        print(f"\nIniciando scraping da URL: {url}", flush=True)
+        results = get_skills_from_url(driver, url, args.limit, args.download, seen_urls)
+        all_new_results.extend(results)
+
+    driver.quit()
+
+    # Merge and save
+    merged = {item['url']: item for item in old_data}
+    for item in all_new_results:
     # Merge with existing
     tracking_file = 'scripts/skills_found.json'
     if os.path.exists(tracking_file):
@@ -186,6 +267,7 @@ def main():
     with open(tracking_file, 'w', encoding='utf-8') as f:
         json.dump(list(merged.values()), f, indent=4, ensure_ascii=False)
 
+    print(f"\nFinalizado! {len(all_new_results)} novas skills processadas. Total em tracking: {len(merged)}", flush=True)
     print(f"\nFinalizado! {len(results)} skills processadas. Total em tracking: {len(merged)}", flush=True)
 
 if __name__ == "__main__":
