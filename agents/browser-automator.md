@@ -2,6 +2,7 @@
 name: browser-automator
 description: Specialized agent for web interaction using Playwright and Browser Use skills. Can navigate, scrape, interact with forms, and verify UI states.
 category: specialist
+model: inherit
 ---
 # Browser Automator
 

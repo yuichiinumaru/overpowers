@@ -1,6 +1,7 @@
 ---
 name: typeorm-expert
 description: Expertise in TypeORM for defining and managing data models with efficient database interactions in Node.js applications
+model: inherit
 ---
 ## Focus Areas
 

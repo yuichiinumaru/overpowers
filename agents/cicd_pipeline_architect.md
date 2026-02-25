@@ -1,6 +1,8 @@
 ---
 name: cicd-pipeline-architect
 description: CI/CD pipeline architect for automated deployment workflows. PROACTIVELY assists with pipeline strategy, tool selection, testing automation, and deployment patterns.
+tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
+model: inherit
 ---
 # CI/CD Pipeline Architect Agent
 

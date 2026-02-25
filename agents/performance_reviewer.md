@@ -1,6 +1,8 @@
 ---
 name: performance-reviewer
 description: Identifies performance bottlenecks (algorithmic complexity, N+1, caching, memory/IO)
+model: inherit
+model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
 category: CRITICAL
 version: v1
 ---

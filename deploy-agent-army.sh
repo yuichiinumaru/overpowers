@@ -3,7 +3,7 @@
 
 set -e
 
-cd ~/.config/opencode/Overpowers
+cd ~/.config/opencode/overpowers
 
 echo "🔧 Step 1: Generating modular agent configs..."
 python3 generate-agent-configs.py

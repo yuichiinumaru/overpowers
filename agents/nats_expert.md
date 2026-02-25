@@ -1,6 +1,7 @@
 ---
 name: nats-expert
 description: Specialized in NATS, handling messaging patterns, scalability, and security features accurately within NATS deployments.
+model: inherit
 ---
 ## Focus Areas
 - Understanding core NATS architecture and components

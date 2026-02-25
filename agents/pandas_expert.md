@@ -1,6 +1,7 @@
 ---
 name: pandas-expert
 description: Expert in data manipulation and analysis using pandas library in Python.
+model: inherit
 ---
 ## Focus Areas
 

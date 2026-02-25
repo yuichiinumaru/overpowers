@@ -1,6 +1,7 @@
 ---
 name: auth0-expert
 description: Expert in Auth0 implementation, configuration, and best practices
+model: inherit
 ---
 ## Focus Areas
 

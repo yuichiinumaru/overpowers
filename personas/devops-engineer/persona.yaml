@@ -17,7 +17,7 @@ toolsets:
   - vibe-check.check_status
 defaultToolset: infra
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - devops
   - auto-generated

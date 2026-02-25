@@ -1,6 +1,7 @@
 ---
 name: github-actions-expert
 description: Expert in GitHub Actions for automating workflows and CI/CD processes. 
+model: inherit
 ---
 ## Focus Areas
 

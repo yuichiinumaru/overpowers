@@ -54,6 +54,45 @@
       "mode": "subagent",
       "description": "Expert in designing, documenting, and optimizing APIs using OpenAPI specifications.",
       "prompt": "## Focus Areas\n\n- Understanding OpenAPI 3.0 and 3.1 specifications\n- Designing clear, concise, and reusable API contracts\n- Ensuring proper use of HTTP methods and status codes\n- Crafting comprehensive endpoint documentation\n- Implementing security schemes and authentication\n- Leveraging JSON Schema for request/response validation\n- Versioning strategies for API evolution\n- Utilizing tools for OpenAPI editing and validation\n- Documenting error handling and response formats\n- Encouraging RESTful ..."
+    "mssql-expert": {
+      "mode": "subagent",
+      "description": "Expert in Microsoft SQL Server handling query optimization, database design, and advanced T-SQL features."
+    },
+    "mysql-expert": {
+      "mode": "subagent",
+      "description": "Expert in MySQL database management, query optimization, and schema design. Provides efficient solutions for MySQL-related tasks."
+    },
+    "openapi-expert": {
+      "mode": "subagent",
+      "description": "Expert in designing, documenting, and optimizing APIs using OpenAPI specifications."
+    },
+    "mongoose-expert": {
+      "mode": "subagent",
+      "description": "Mongoose ODM specialist for MongoDB, proficient in schema design, query optimization, and data validation."
+    },
+    "rapid-prototyper": {
+      "mode": "subagent",
+      "description": "Use this agent when you need to quickly create a new application prototype, MVP, or proof-of-concept within the 6-day development cycle. This agent specializes in scaffolding projects, integrating trending features, and building functional demos rapidly. Examples:\\n\\n<example>\\nContext: Starting a new experiment or app idea\\nuser: \"Create a new app that helps people overcome phone anxiety\"\\nassistant: \"I'll help you create a phone anxiety app. Let me use the rapid_prototyper agent to scaffold this project and build an MVP.\"\\n<commentary>\\nWhen starting any new project or experiment, use the rapid_prototyper to quickly set up the foundation and core features.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Need to test a trending feature or viral concept\\nuser: \"I saw this TikTok trend about AI avatars, can we build something around that?\"\\nassistant: \"That's a great trending opportunity! I'll use the rapid_prototyper agent to quickly build a prototype app featuring AI avatars.\"\\n<commentary>\\nFor capitalizing on trends and viral content, the rapid_prototyper can quickly create testable prototypes.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Validating a business idea with minimal investment\\nuser: \"We need to test if people would pay for a subscription box curation app\"\\nassistant: \"Let's validate that idea with a quick prototype. I'll use the rapid_prototyper agent to build an MVP with basic subscription and curation features.\"\\n<commentary>\\nBusiness validation requires fast prototyping to test market fit before full investment.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: Creating demo apps for stakeholder presentations\\nuser: \"We're meeting with investors next week and need to show them our vision\"\\nassistant: \"I'll help create a compelling demo. Let me use the rapid_prototyper agent to build a functional prototype that showcases your vision.\"\\n<commentary>\\nInvestor demos and stakeholder presentations benefit from working prototypes rather than just mockups.\\n</commentary>\\n</example>"
+    },
+    "redis-expert": {
+      "mode": "subagent",
+      "description": "Expert in Redis for in-memory data storage, caching, and real-time analytics."
+    },
+    "sqlite-expert": {
+      "mode": "subagent",
+      "description": "SQLite database optimization, query writing, indexing, and best practices specialist. Proactively analyzes and optimizes SQLite databases for performance and reliability."
+    },
+    "fastapi-expert": {
+      "mode": "subagent",
+      "description": "FastAPI development with an emphasis on best practices, optimization, and robust design patterns."
+    },
+    "openai-api-expert": {
+      "mode": "subagent",
+      "description": "Trained to expertly handle OpenAI API features, usage patterns, and best practices."
+    },
+    "mongodb-expert": {
+      "mode": "subagent",
+      "description": "Master MongoDB operations, schema design, performance optimization, and data modeling. Handles indexing, aggregations, and replication. Use PROACTIVELY for MongoDB query optimization, data consistency, or database scaling."
     }
   }
 }

@@ -5,7 +5,7 @@ argument-hint: "[frontend-url] [api-url]" OR "local" OR "[path-to-codebase]"
 
 # Z-Audit Security Audit
 
-You are performing a comprehensive security audit using the Z-Audit skill at `/home/sephiroth/.config/opencode/Overpowers/skills/z-audit/SKILL.md`.
+You are performing a comprehensive security audit using the Z-Audit skill at `/home/sephiroth/.config/opencode/overpowers/skills/z-audit/SKILL.md`.
 
 ## Input
 User provided: $ARGUMENTS

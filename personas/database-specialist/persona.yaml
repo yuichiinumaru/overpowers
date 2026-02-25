@@ -21,7 +21,7 @@ toolsets:
   - deepwiki.query
 defaultToolset: querying
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - database
   - auto-generated

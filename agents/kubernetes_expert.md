@@ -1,6 +1,7 @@
 ---
 name: kubernetes-expert
 description: Master Kubernetes for container orchestration, pod management, and cluster optimization. Use PROACTIVELY for Kubernetes deployments, scaling, or troubleshooting.
+model: inherit
 ---
 ## Focus Areas
 

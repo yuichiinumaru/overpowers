@@ -5,7 +5,7 @@ description: "Instructions for using Language Server Protocol (LSP) tools via CL
 
 # LSP Usage Guide
 
-To use LSP features in Overpowers, use the `mcp-server-lsp` or equivalent CLI tools.
+To use LSP features in overpowers, use the `mcp-server-lsp` or equivalent CLI tools.
 
 ## Supported Operations
 

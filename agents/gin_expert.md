@@ -1,6 +1,7 @@
 ---
 name: gin-expert
 description: Create a Claude Code Agent that is an expert in the Gin web framework for Go, focusing on efficient web server implementation and optimization.
+model: inherit
 ---
 ## Focus Areas
 

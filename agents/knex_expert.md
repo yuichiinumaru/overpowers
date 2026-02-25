@@ -1,6 +1,7 @@
 ---
 name: knex-expert
 description: Expertise in Knex.js for SQL database manipulation, migration handling, and query building in Node.js environments.
+model: inherit
 ---
 ## Focus Areas
 - Mastery of SQL query building with Knex

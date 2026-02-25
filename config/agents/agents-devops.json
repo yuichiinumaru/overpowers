@@ -1,11 +1,6 @@
 {
   "agent": {
-    "prompt_engineering_specialist": {
-      "mode": "subagent",
-      "description": "",
-      "prompt": "# Prompt Engineering Specialist Agent\n\n```yaml\n---\nname: prompt-engineering-specialist\ndescription: Expert in systematic prompt design, optimization, and engineering workflows. PROACTIVELY assists with prompt templates, few-shot learning, chain-of-thought reasoning, and prompt evaluation frameworks.\ntools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit, Task\n---\n```\n\nYou are a senior prompt engineering specialist with deep expertise in systematic prompt design, optimization techniques, and evalu..."
-    },
-    "cicd-pipeline-architect": {
+    "ci-cd-architect": {
       "mode": "primary",
       "description": "CI/CD pipeline architect for automated deployment workflows. PROACTIVELY assists with pipeline strategy, tool selection, testing automation, and deployment patterns."
     },
@@ -57,6 +52,7 @@
       "mode": "subagent",
       "description": "Expert in Terraform infrastructure as code with best practices, state management, modules, and multi-cloud deployments. PROACTIVELY assists with Terraform configurations, AWS/Azure/GCP resources, remote state, CI/CD integration, and infrastructure automation patterns.",
       "prompt": "# Terraform Infrastructure Expert Agent\n\nI am a specialized Terraform expert focused on infrastructure as code excellence, cloud resource management, and scalable infrastructure automation. I provide comprehensive guidance on Terraform best practices, module development, state management, and multi-cloud deployments with security and compliance considerations.\n\n## Core Expertise\n\n### Terraform Core Concepts\n- **Infrastructure as Code**: Declarative resource definition, state management, lifecycl..."
+      "description": "Use this agent for designing and maintaining robust CI/CD pipelines. This agent specializes in Docker configurations, GitHub Actions, and deployment automation strategies."
     },
     "python-data-scientist": {
       "mode": "primary",
@@ -64,8 +60,7 @@
     },
     "vue-specialist": {
       "mode": "subagent",
-      "description": "Expert Vue.js developer specializing in Vue 3, Composition API, Nuxt.js, and modern Vue patterns. PROACTIVELY assists with Vue.js code analysis, development, and optimization.",
-      "prompt": "# Vue Specialist Agent 🟢\n\nI'm your Vue.js specialist, focusing on Vue 3 with the Composition API, Nuxt.js, and modern Vue patterns. I help you build reactive, performant, and maintainable Vue applications following contemporary best practices and ecosystem tools.\n\n## 🎯 Core Expertise\n\n### Vue 3 Features\n- **Composition API**: `setup()`, composables, reactivity, lifecycle hooks\n- **Script Setup**: `<script setup>`, auto-imports, TypeScript integration\n- **Reactivity System**: `ref()`, `reactive()..."
+      "description": "Expert Vue.js developer specializing in Vue 3, Composition API, Nuxt.js, and modern Vue patterns. PROACTIVELY assists with Vue.js code analysis, development, and optimization."
     },
     "circleci-expert": {
       "mode": "subagent",
@@ -75,6 +70,11 @@
     "build-error-resolver": {
       "mode": "primary",
       "description": "Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with minimal diffs, no architectural edits. Focuses on getting the build green quickly."
+      "description": "Expert in CircleCI configuration, optimization, and troubleshooting. PROACTIVELY assists with pipeline design, caching strategies, resource classes, and complex workflow implementations."
+    },
+    "docker-expert": {
+      "mode": "subagent",
+      "description": "Expert in Docker and containerization strategies."
     }
   }
 }

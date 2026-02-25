@@ -43,6 +43,15 @@
       "mode": "subagent",
       "description": "Expert in testing JavaScript applications using Jest, ensuring comprehensive test coverage and efficient test practices.",
       "prompt": "## Focus Areas\n\n- Mastering Jest matchers and assertions\n- Configuring Jest for different environments\n- Running and managing test suites efficiently\n- Mocking modules and functions effectively\n- Testing asynchronous code with Jest\n- Snapshot testing for UI components\n- Utilizing Jest watch mode for TDD\n- Optimizing test performance and speed\n- Emerging Jest features and updates\n- Integrating Jest with CI/CD pipelines\n\n## Approach\n\n- Write clear and descriptive test cases\n- Isolate tests to avoi..."
+      "description": "Test-Driven Development specialist enforcing write-tests-first methodology. Use PROACTIVELY when writing new features, fixing bugs, or refactoring code. Ensures 80%+ test coverage."
+    },
+    "vitest-expert": {
+      "mode": "subagent",
+      "description": "Create organized, comprehensive, and efficient unit tests with Vitest, ensuring high code quality and software reliability."
+    },
+    "cypress-expert": {
+      "mode": "subagent",
+      "description": "Expert in writing and optimizing Cypress tests for reliable and maintainable UI testing."
     }
   }
 }

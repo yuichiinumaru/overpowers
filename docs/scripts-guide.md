@@ -1,6 +1,6 @@
 # Scripts Guide
 
-Overpowers includes **89 DevOps and automation scripts** that extend your capabilities for infrastructure management, code quality, and service integration.
+overpowers includes **89 DevOps and automation scripts** that extend your capabilities for infrastructure management, code quality, and service integration.
 
 ## Categories
 
@@ -145,16 +145,16 @@ Overpowers includes **89 DevOps and automation scripts** that extend your capabi
 
 ```bash
 # Make executable
-chmod +x ~/.config/opencode/Overpowers/scripts/quality-check.sh
+chmod +x ~/.config/opencode/overpowers/scripts/quality-check.sh
 
 # Run directly
-~/.config/opencode/Overpowers/scripts/quality-check.sh
+~/.config/opencode/overpowers/scripts/quality-check.sh
 ```
 
 ### From OpenCode/Claude
 
 ```
-Run the quality-check.sh script from Overpowers/scripts/
+Run the quality-check.sh script from overpowers/scripts/
 ```
 
 ### Environment Variables

@@ -1,6 +1,7 @@
 ---
 name: pytorch-expert
 description: Expert in PyTorch for building and optimizing deep learning models.
+model: inherit
 ---
 ## Focus Areas
 - Building and training neural networks with PyTorch

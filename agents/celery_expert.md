@@ -1,6 +1,7 @@
 ---
 name: celery-expert
 description: Expert in Celery for distributed task queue management, optimizing task execution, and ensuring robust Celery deployments.
+model: inherit
 ---
 ## Focus Areas
 

@@ -5,12 +5,24 @@
         "opencode-antigravity-quota@0.1.6",
         "@ramtinj95/opencode-tokenscope@latest",
         "opencode-sessions",
-        "./Overpowers/.opencode/plugin/Overpowers.js",
+        "./overpowers/.opencode/plugin/overpowers.js",
         "opencode-optimal-model-temps",
         "envsitter-guard",
         "opencode-windsurf-codeium@beta"
     ],
     "mcp": {
+        "context7": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@upstash/context7-mcp"
+            ],
+            "environment": {
+                "CONTEXT7_API_KEY": ""
+            },
+            "enabled": true
+        },
         "serena": {
             "type": "local",
             "command": [
@@ -22,7 +34,7 @@
                 "--context",
                 "ide-assistant"
             ],
-            "enabled": true,
+            "enabled": true
         },
         "vibe_check": {
             "type": "local",
@@ -34,9 +46,9 @@
                 "--stdio"
             ],
             "environment": {
-                "GEMINI_API_KEY": "YOUR_GEMINI_API_KEY"
+                "GEMINI_API_KEY": ""
             },
-            "enabled": true,
+            "enabled": true
         },
         "hypertool": {
             "type": "local",
@@ -49,7 +61,34 @@
                 "--mcp-config",
                 "/path/to/your/.mcp.json"
             ],
-            "enabled": true,
+            "enabled": true
+        },
+        "think-tank": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "mcp-think-tank@2.0.7"
+            ],
+            "environment": {
+                "MEMORY_PATH": "/path/to/memory.jsonl",
+                "EXA_API_KEY": ""
+            },
+            "enabled": true
+        },
+        "mult-fetch": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@lmcc-dev/mult-fetch-mcp-server"
+            ],
+            "enabled": true
+        },
+        "deepwiki": {
+            "type": "remote",
+            "url": "https://mcp.deepwiki.com/mcp",
+            "enabled": true
         }
     },
     "provider": {
@@ -115,7 +154,7 @@
         "ceo_orchestrator": {
             "mode": "primary",
             "description": "Chief Executive Orchestrator - Delegation-focused master coordinator. Does NOT execute tasks directly, only delegates to specialists. Knows when to use Jules Swarm vs subagents vs direct agents. Use for complex multi-step projects requiring coordination.",
-            "prompt": "You are the CEO (Chief Executive Orchestrator) of the Overpowers toolkit. Your primary function is STRATEGIC DELEGATION - you do NOT execute tasks directly, you orchestrate and coordinate specialists.\n\nCore Philosophy: 'Do not do. Delegate. Coordinate. Review.'\n\nDelegation Methods:\n1. Subagent (fast, local): Use run-subagent.sh from skills/subagent_orchestration/\n2. Agent invoke: /invoke <agent-name> for specialized tasks\n3. Jules Swarm: /skill jules_dispatch for long-running or multi-repo tasks\n\nYou may READ files to understand context, but DELEGATE all execution to appropriate specialists."
+            "prompt": "You are the CEO (Chief Executive Orchestrator) of the overpowers toolkit. Your primary function is STRATEGIC DELEGATION - you do NOT execute tasks directly, you orchestrate and coordinate specialists.\n\nCore Philosophy: 'Do not do. Delegate. Coordinate. Review.'\n\nDelegation Methods:\n1. Subagent (fast, local): Use run-subagent.sh from skills/subagent_orchestration/\n2. Agent invoke: /invoke <agent-name> for specialized tasks\n3. Jules Swarm: /skill jules_dispatch for long-running or multi-repo tasks\n\nYou may READ files to understand context, but DELEGATE all execution to appropriate specialists."
         },
         "task_decomposition_expert": {
             "mode": "primary",
@@ -1623,7 +1662,7 @@
         "sqs_expert": {
             "mode": "subagent",
             "description": "",
-            "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: claude-sonnet-4-20250514\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
+            "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: inherit\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
         },
         "stripe_expert": {
             "mode": "subagent",

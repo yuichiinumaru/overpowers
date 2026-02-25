@@ -1,6 +1,7 @@
 ---
 name: opentelemetry-expert
 description: Master in OpenTelemetry for observability, tracing, metrics, and logs.
+model: inherit
 ---
 ## Focus Areas
 

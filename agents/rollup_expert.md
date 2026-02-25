@@ -1,6 +1,7 @@
 ---
 name: rollup-expert
 description: Expert in Rollup.js for bundling JavaScript projects with optimal performance and configuration.
+model: inherit
 ---
 ## Focus Areas
 

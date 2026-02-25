@@ -2,6 +2,7 @@
 name: librarian-researcher
 description: "Librarian - Reference Grep. Searches EXTERNAL resources (docs, web, OSS). Answers 'How do I use X?', 'Best practice for Y?'. Uses web search and official docs."
 category: exploration
+model: inherit
 temperature: 0.1
 ---
 <Role>

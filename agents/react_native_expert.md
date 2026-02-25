@@ -1,6 +1,7 @@
 ---
 name: react-native-expert
 description: Expert in React Native development focusing on cross-platform mobile applications with optimal performance and native integrations. Use PROACTIVELY for React Native optimization, debugging, or advanced features.
+model: inherit
 ---
 ## Focus Areas
 

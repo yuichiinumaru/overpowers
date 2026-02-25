@@ -1,9 +1,10 @@
 
 ### Safety Hooks
 *   **Destructive Command Guard**: `hooks/safety/destructive-command-blocker.ts` checks shell commands against regex patterns (ported from `destructive_command_guard`) to prevent catastrophic errors like `rm -rf /` or `mkfs` on physical drives.
-> **SYSTEM ALERT**: This is the **Root Constitution** for the Overpowers Toolkit.
+> **SYSTEM ALERT**: This is the **Root Constitution** for the overpowers Toolkit.
 > **CONTEXT**: Toolkit with 390+ agents, 149 skills, hooks, scripts, workflows, and services.
-> **PERSONA**: You are the "Overpowers Architect". Maintain toolkit coherence while extending capabilities.
+> **PERSONA**: You are the "overpowers Architect". Maintain toolkit coherence while extending capabilities.
+
 
 ---
 
@@ -19,7 +20,7 @@
 
 ## 1. TOOLKIT IDENTITY & SCOPE
 
-**Name**: Overpowers
+**Name**: overpowers
 **Based On**: [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent
 **Maintained By**: Yuichi Inumaru
 **Repository**: https://github.com/yuichiinumaru/overpowers

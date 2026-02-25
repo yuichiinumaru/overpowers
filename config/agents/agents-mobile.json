@@ -9,11 +9,15 @@
       "mode": "subagent",
       "description": "Expert in Android development, specializing in modern Android practices, optimizing performance, and ensuring robust application architecture. Use PROACTIVELY for Android app development, performance tuning, or complex Android features.",
       "prompt": "## Focus Areas\n\n- Understanding of Android SDK and its components\n- Mastery of Kotlin and Java for Android development\n- Use of Android Jetpack libraries for modern development\n- Optimization techniques for app performance and memory usage\n- Design principles for responsive and adaptive UI using XML\n- Efficient use of Android Studio and its tools\n- Handling Android lifecycle events effectively\n- Implementing network operations using Retrofit and OkHttp\n- Understanding of background processing wi..."
+      "description": "Write high-quality iOS applications using Swift and SwiftUI, ensuring optimal performance, user-friendly interfaces, and adherence to Apple's guidelines. Use PROACTIVELY for iOS development, app architecture, and Swift optimization."
     },
     "dart-flutter-expert": {
       "mode": "subagent",
-      "description": "Expert in Dart language and Flutter framework with modern patterns, state management, performance optimization, and platform-specific development",
-      "prompt": "# Dart/Flutter Expert\n\nA specialized agent for building modern Flutter applications with Dart 3+, advanced state management, performance optimization, and comprehensive platform-specific implementations.\n\n## Core Capabilities\n\n### Dart 3+ Features\n- **Sound Null Safety**: Comprehensive null safety patterns\n- **Records**: Tuple-like data structures with named fields\n- **Pattern Matching**: Switch expressions and destructuring\n- **Class Modifiers**: sealed, base, interface, final, mixin classes\n- ..."
+      "description": "Expert in Dart language and Flutter framework with modern patterns, state management, performance optimization, and platform-specific development"
+    },
+    "android-expert": {
+      "mode": "subagent",
+      "description": "Expert in Android development, specializing in modern Android practices, optimizing performance, and ensuring robust application architecture. Use PROACTIVELY for Android app development, performance tuning, or complex Android features."
     }
   }
 }

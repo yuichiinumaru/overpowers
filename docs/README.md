@@ -1,6 +1,6 @@
-# Overpowers Documentation
+# overpowers Documentation
 
-This directory contains guides for using and extending the Overpowers toolkit.
+This directory contains guides for using and extending the overpowers toolkit.
 
 ## Quick Links
 
@@ -10,11 +10,7 @@ This directory contains guides for using and extending the Overpowers toolkit.
 | [Scripts Guide](scripts-guide.md) | DevOps and automation scripts (89 available) |
 | [Workflows Guide](workflows-guide.md) | Multi-step development workflows (16 available) |
 | [Services Guide](services-guide.md) | External service integrations (13 available) |
-<<<<<<< HEAD
-| [Awesome References](references.md) | Curated list of 50+ plugins, agents, and tools |
-| [PREVC Workflow](concepts/prevc-workflow.md) | Planning, Review, Execution, Validation, Confirmation workflow |
-=======
->>>>>>> remotes/origin/jules-harvest-mega-session-16505481372407860250
+| [Awesome References](references.md) | Curated list of 50+ plugins, agents, and tools |\n| [PREVC Workflow](concepts/prevc-workflow.md) | Planning, Review, Execution, Validation, Confirmation workflow |
 
 ## Installation
 
@@ -22,40 +18,40 @@ This directory contains guides for using and extending the Overpowers toolkit.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yuichiinumaru/overpowers ~/.config/opencode/Overpowers
+git clone https://github.com/yuichiinumaru/overpowers ~/.config/opencode/overpowers
 
 # Create symlink for skills discovery
-ln -sf Overpowers/skills ~/.config/opencode/skills
+ln -sf overpowers/skills ~/.config/opencode/skills
 
 # Add plugin to opencode.json
 # In the "plugin" array, add:
-"./Overpowers/.opencode/plugin/Overpowers.js"
+"./overpowers/.opencode/plugin/overpowers.js"
 ```
 
 ### Claude Code
 
 ```bash
 # Clone to Claude plugins directory
-git clone https://github.com/yuichiinumaru/overpowers ~/.claude/plugins/Overpowers
+git clone https://github.com/yuichiinumaru/overpowers ~/.claude/plugins/overpowers
 
 # Enable in settings.json
-# Add to "enabledPlugins": { "Overpowers@Overpowers-dev": true }
+# Add to "enabledPlugins": { "overpowers@overpowers-dev": true }
 ```
 
 ### Codex (OpenAI)
 
 ```bash
 # Clone to Codex directory
-git clone https://github.com/yuichiinumaru/overpowers ~/.codex/Overpowers
+git clone https://github.com/yuichiinumaru/overpowers ~/.codex/overpowers
 
 # Use the bootstrap command
-~/.codex/Overpowers/.codex/Overpowers-codex bootstrap
+~/.codex/overpowers/.codex/overpowers-codex bootstrap
 ```
 
 ## Directory Structure
 
 ```
-Overpowers/
+overpowers/
 ├── agents/          # 390+ specialized AI agents
 ├── commands/        # 228+ slash commands
 ├── skills/          # 149 reusable skills

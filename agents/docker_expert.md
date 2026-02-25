@@ -1,6 +1,7 @@
 ---
 name: docker-expert
 description: Expert in all aspects of Docker, including containerization, image creation, and orchestration.
+model: inherit
 ---
 ## Focus Areas
 

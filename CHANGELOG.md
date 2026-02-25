@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Overpowers toolkit are documented in this file.
+All notable changes to this project will be documented in this file.
 
 > [!CAUTION]
 > **IMMUTABLE HISTORY**: Entries in this file must NEVER be deleted or modified (except typo fixes).
@@ -411,3 +411,8 @@ Unified multi-provider authentication with quota-optimized load balancing. Suppo
 - OpenCode and Claude Code plugin support
 
 **Author**: Yuichi Inumaru
+## [Unreleased]
+- Resolved "Mega-Merge" conflicts across all configuration files.
+- Unified MCP server configurations in `opencode-example.json`.
+- Restored and deduplicated agent definitions in `config/agents/*.json`.
+- Cleaned up documentation and repository READMEs.

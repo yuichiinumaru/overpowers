@@ -1,5 +1,5 @@
 /**
- * Overpowers plugin for OpenCode.ai
+ * overpowers plugin for OpenCode.ai
  *
  * Provides custom tools for loading and discovering skills,
  * with prompt generation for agent configuration.
@@ -17,7 +17,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const OverpowersPlugin = async ({ client, directory }) => {
   const homeDir = os.homedir();
   const projectSkillsDir = path.join(directory, '.opencode/skills');
-  // Derive Overpowers skills dir from plugin location (works for both symlinked and local installs)
+  // Derive overpowers skills dir from plugin location (works for both symlinked and local installs)
   const OverpowersSkillsDir = path.resolve(__dirname, '../../skills');
   const personalSkillsDir = path.join(homeDir, '.config/opencode/skills');
   const OverpowersAgentsDir = path.resolve(__dirname, '../../agents');
@@ -34,7 +34,7 @@ export const OverpowersPlugin = async ({ client, directory }) => {
     const toolMapping = compact
       ? `**Tool Mapping:** TodoWrite->update_plan, Task->@mention, Skill->use_skill
 
-**Skills naming (priority order):** project: > personal > Overpowers:`
+**Skills naming (priority order):** project: > personal > overpowers:`
       : `**Tool Mapping for OpenCode:**
 When skills reference tools you don't have, substitute OpenCode equivalents:
 - \`TodoWrite\` → \`update_plan\`
@@ -45,13 +45,13 @@ When skills reference tools you don't have, substitute OpenCode equivalents:
 **Skills naming (priority order):**
 - Project skills: \`project:skill-name\` (in .opencode/skills/)
 - Personal skills: \`skill-name\` (in ~/.config/opencode/skills/)
-- Overpowers skills: \`Overpowers:skill-name\`
-- Project skills override personal, which override Overpowers when names match`;
+- overpowers skills: \`overpowers:skill-name\`
+- Project skills override personal, which override overpowers when names match`;
 
     return `<EXTREMELY_IMPORTANT>
-You have Overpowers.
+You have overpowers.
 
-**IMPORTANT: The using-Overpowers skill content is included below. It is ALREADY LOADED - you are currently following it. Do NOT use the use_skill tool to load "using-Overpowers" - that would be redundant. Use use_skill only for OTHER skills.**
+**IMPORTANT: The using-overpowers skill content is included below. It is ALREADY LOADED - you are currently following it. Do NOT use the use_skill tool to load "using-overpowers" - that would be redundant. Use use_skill only for OTHER skills.**
 
 ${content}
 
@@ -83,12 +83,12 @@ ${toolMapping}
       use_skill: tool({
         description: 'Load and read a specific skill to guide your work. Skills contain proven workflows, mandatory processes, and expert techniques.',
         args: {
-          skill_name: tool.schema.string().describe('Name of the skill to load (e.g., "Overpowers:brainstorming", "my-custom-skill", or "project:my-skill")')
+          skill_name: tool.schema.string().describe('Name of the skill to load (e.g., "overpowers:brainstorming", "my-custom-skill", or "project:my-skill")')
         },
         execute: async (args, context) => {
           const { skill_name } = args;
 
-          // Resolve with priority: project > personal > Overpowers
+          // Resolve with priority: project > personal > overpowers
           // Check for project: prefix first
           const forceProject = skill_name.startsWith('project:');
           const actualSkillName = forceProject ? skill_name.replace(/^project:/, '') : skill_name;
@@ -96,7 +96,7 @@ ${toolMapping}
           let resolved = null;
 
           // Try project skills first (if project: prefix or no prefix)
-          if (forceProject || !skill_name.startsWith('Overpowers:')) {
+          if (forceProject || !skill_name.startsWith('overpowers:')) {
             const projectPath = path.join(projectSkillsDir, actualSkillName);
             const projectSkillFile = path.join(projectPath, 'SKILL.md');
             if (fs.existsSync(projectSkillFile)) {
@@ -108,7 +108,7 @@ ${toolMapping}
             }
           }
 
-          // Fall back to personal/Overpowers resolution
+          // Fall back to personal/overpowers resolution
           if (!resolved && !forceProject) {
             resolved = skillsCore.resolveSkillPath(skill_name, OverpowersSkillsDir, personalSkillsDir);
           }
@@ -148,18 +148,18 @@ ${toolMapping}
         }
       }),
       find_skills: tool({
-        description: 'List all available skills in the project, personal, and Overpowers skill libraries.',
+        description: 'List all available skills in the project, personal, and overpowers skill libraries.',
         args: {},
         execute: async (args, context) => {
           const projectSkills = skillsCore.findSkillsInDir(projectSkillsDir, 'project', 3);
           const personalSkills = skillsCore.findSkillsInDir(personalSkillsDir, 'personal', 3);
-          const OverpowersSkills = skillsCore.findSkillsInDir(OverpowersSkillsDir, 'Overpowers', 3);
+          const OverpowersSkills = skillsCore.findSkillsInDir(OverpowersSkillsDir, 'overpowers', 3);
 
-          // Priority: project > personal > Overpowers
+          // Priority: project > personal > overpowers
           const allSkills = [...projectSkills, ...personalSkills, ...OverpowersSkills];
 
           if (allSkills.length === 0) {
-            return 'No skills found. Install Overpowers skills to ~/.config/opencode/Overpowers/skills/ or add project skills to .opencode/skills/';
+            return 'No skills found. Install overpowers skills to ~/.config/opencode/overpowers/skills/ or add project skills to .opencode/skills/';
           }
 
           let output = 'Available skills:\n\n';
@@ -174,7 +174,7 @@ ${toolMapping}
                 namespace = '';
                 break;
               default:
-                namespace = 'Overpowers:';
+                namespace = 'overpowers:';
             }
             const skillName = skill.name || path.basename(skill.path);
 

@@ -1,6 +1,8 @@
 ---
 name: pr-readiness-reviewer
 description: Assess branch readiness for pull request submission (tests, docs, blockers)
+model: inherit
+model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
 category: CRITICAL
 version: v1
 ---

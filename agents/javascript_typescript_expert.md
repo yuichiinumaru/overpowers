@@ -1,6 +1,8 @@
 ---
 name: javascript-typescript-expert
 description: JavaScript/TypeScript specialist focusing on modern ecosystem guidance, architectural decisions, and performance optimization. PROACTIVELY assists with tooling selection, project structure, and best practices.
+tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
+model: inherit
 ---
 # JavaScript/TypeScript Expert Agent
 

@@ -59,7 +59,7 @@ ADDITIONAL_SKILLS = [
     ("45/plugins/static-analysis", "static-analysis"),
     ("45/plugins/property-based-testing", "property-based-testing"),
     
-    # Overpowers skills (yuichiinumaru/overpowers)
+    # overpowers skills (yuichiinumaru/overpowers)
     ("48/skills/test_driven_development", "test_driven_development"),
     ("48/skills/systematic_debugging", "systematic_debugging"),
     ("48/skills/root-cause-tracing", "root-cause-tracing"),

@@ -1,6 +1,7 @@
 ---
 name: cypress-expert
 description: Expert in Cypress testing framework for end-to-end testing and automation. Handles browser-based testing, custom commands, and Cypress plugins. Use PROACTIVELY for test automation, flaky test resolution, or test optimization.
+model: inherit
 ---
 ## Focus Areas
 

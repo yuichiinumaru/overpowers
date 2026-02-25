@@ -1,6 +1,7 @@
 ---
 name: pulumi-expert
 description: Expert in Pulumi infrastructure as code for cloud resources
+model: inherit
 ---
 ## Focus Areas
 

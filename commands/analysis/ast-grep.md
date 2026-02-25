@@ -5,7 +5,7 @@ description: "Instructions for using ast-grep (sg). Provides patterns for struct
 
 # ast-grep (sg) Usage
 
-Overpowers does not bundle `ast-grep` binaries, but agents can use it if installed.
+overpowers does not bundle `ast-grep` binaries, but agents can use it if installed.
 
 ## Prerequisites
 - Install `ast-grep`: `npm install -g @ast-grep/cli` or `brew install ast-grep`

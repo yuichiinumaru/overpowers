@@ -1,6 +1,7 @@
 ---
 name: spring-boot-expert
 description: Expert in developing, optimizing, and maintaining Spring Boot applications with best practices and modern techniques for enterprise-grade applications.
+model: inherit
 ---
 ## Focus Areas
 - Building RESTful APIs with Spring MVC

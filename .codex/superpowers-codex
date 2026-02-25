@@ -7,10 +7,10 @@ const skillsCore = require('../lib/skills-core');
 
 // Paths
 const homeDir = os.homedir();
-const OverpowersSkillsDir = path.join(homeDir, '.codex', 'Overpowers', 'skills');
+const OverpowersSkillsDir = path.join(homeDir, '.codex', 'overpowers', 'skills');
 const personalSkillsDir = path.join(homeDir, '.codex', 'skills');
-const bootstrapFile = path.join(homeDir, '.codex', 'Overpowers', '.codex', 'Overpowers-bootstrap.md');
-const OverpowersRepoDir = path.join(homeDir, '.codex', 'Overpowers');
+const bootstrapFile = path.join(homeDir, '.codex', 'overpowers', '.codex', 'overpowers-bootstrap.md');
+const OverpowersRepoDir = path.join(homeDir, '.codex', 'overpowers');
 
 // Utility functions
 function printSkill(skillPath, sourceType) {
@@ -23,7 +23,7 @@ function printSkill(skillPath, sourceType) {
     if (sourceType === 'personal') {
         console.log(relPath.replace(/\\/g, '/')); // Personal skills are not namespaced
     } else {
-        console.log(`Overpowers:${relPath.replace(/\\/g, '/')}`); // Overpowers skills get Overpowers namespace
+        console.log(`overpowers:${relPath.replace(/\\/g, '/')}`); // overpowers skills get overpowers namespace
     }
 
     // Extract and print metadata
@@ -49,28 +49,28 @@ function runFindSkills() {
         printSkill(skill.path, 'personal');
     }
 
-    // Find Overpowers skills (only if not already found in personal)
-    const OverpowersSkills = skillsCore.findSkillsInDir(OverpowersSkillsDir, 'Overpowers', 1);
+    // Find overpowers skills (only if not already found in personal)
+    const OverpowersSkills = skillsCore.findSkillsInDir(OverpowersSkillsDir, 'overpowers', 1);
     for (const skill of OverpowersSkills) {
         const relPath = path.relative(OverpowersSkillsDir, skill.path);
         if (!foundSkills.has(relPath)) {
-            printSkill(skill.path, 'Overpowers');
+            printSkill(skill.path, 'overpowers');
         }
     }
 
     console.log('Usage:');
-    console.log('  Overpowers-codex use-skill <skill-name>   # Load a specific skill');
+    console.log('  overpowers-codex use-skill <skill-name>   # Load a specific skill');
     console.log('');
     console.log('Skill naming:');
-    console.log('  Overpowers skills: Overpowers:skill-name (from ~/.codex/Overpowers/skills/)');
+    console.log('  overpowers skills: overpowers:skill-name (from ~/.codex/overpowers/skills/)');
     console.log('  Personal skills: skill-name (from ~/.codex/skills/)');
-    console.log('  Personal skills override Overpowers skills when names match.');
+    console.log('  Personal skills override overpowers skills when names match.');
     console.log('');
     console.log('Note: All skills are disclosed at session start via bootstrap.');
 }
 
 function runBootstrap() {
-    console.log('# Overpowers Bootstrap for Codex');
+    console.log('# overpowers Bootstrap for Codex');
     console.log('# ================================');
     console.log('');
 
@@ -78,8 +78,8 @@ function runBootstrap() {
     if (skillsCore.checkForUpdates(OverpowersRepoDir)) {
         console.log('## Update Available');
         console.log('');
-        console.log('⚠️  Your Overpowers installation is behind the latest version.');
-        console.log('To update, run: `cd ~/.codex/Overpowers && git pull`');
+        console.log('⚠️  Your overpowers installation is behind the latest version.');
+        console.log('To update, run: `cd ~/.codex/overpowers && git pull`');
         console.log('');
         console.log('---');
         console.log('');
@@ -109,27 +109,27 @@ function runBootstrap() {
     console.log('---');
     console.log('');
 
-    // Load the using-Overpowers skill automatically
-    console.log('## Auto-loading Overpowers:using-Overpowers skill:');
+    // Load the using-overpowers skill automatically
+    console.log('## Auto-loading overpowers:using-overpowers skill:');
     console.log('');
-    runUseSkill('Overpowers:using-Overpowers');
+    runUseSkill('overpowers:using-overpowers');
 
     console.log('');
     console.log('---');
     console.log('');
     console.log('# Bootstrap Complete!');
-    console.log('# You now have access to all Overpowers skills.');
-    console.log('# Use "Overpowers-codex use-skill <skill>" to load and apply skills.');
+    console.log('# You now have access to all overpowers skills.');
+    console.log('# Use "overpowers-codex use-skill <skill>" to load and apply skills.');
     console.log('# Remember: If a skill applies to your task, you MUST use it!');
 }
 
 function runUseSkill(skillName) {
     if (!skillName) {
-        console.log('Usage: Overpowers-codex use-skill <skill-name>');
+        console.log('Usage: overpowers-codex use-skill <skill-name>');
         console.log('Examples:');
-        console.log('  Overpowers-codex use-skill Overpowers:brainstorming  # Load Overpowers skill');
-        console.log('  Overpowers-codex use-skill brainstorming              # Load personal skill (or Overpowers if not found)');
-        console.log('  Overpowers-codex use-skill my-custom-skill            # Load personal skill');
+        console.log('  overpowers-codex use-skill overpowers:brainstorming  # Load overpowers skill');
+        console.log('  overpowers-codex use-skill brainstorming              # Load personal skill (or overpowers if not found)');
+        console.log('  overpowers-codex use-skill my-custom-skill            # Load personal skill');
         return;
     }
 
@@ -137,9 +137,9 @@ function runUseSkill(skillName) {
     let actualSkillPath;
     let forceOverpowers = false;
 
-    if (skillName.startsWith('Overpowers:')) {
-        // Remove the Overpowers: namespace prefix
-        actualSkillPath = skillName.substring('Overpowers:'.length);
+    if (skillName.startsWith('overpowers:')) {
+        // Remove the overpowers: namespace prefix
+        actualSkillPath = skillName.substring('overpowers:'.length);
         forceOverpowers = true;
     } else {
         actualSkillPath = skillName;
@@ -168,7 +168,7 @@ function runUseSkill(skillName) {
 
     let skillFile = null;
 
-    // If Overpowers: namespace was used, only check Overpowers skills
+    // If overpowers: namespace was used, only check overpowers skills
     if (forceOverpowers) {
         if (fs.existsSync(OverpowersSkillsDir)) {
             const OverpowersPath = path.join(OverpowersSkillsDir, actualSkillPath);
@@ -186,12 +186,12 @@ function runUseSkill(skillName) {
             }
         }
 
-        // If not found in personal, check Overpowers skills
+        // If not found in personal, check overpowers skills
         if (!skillFile && fs.existsSync(OverpowersSkillsDir)) {
             const OverpowersPath = path.join(OverpowersSkillsDir, actualSkillPath);
             skillFile = findSkillFile(OverpowersPath);
             if (skillFile) {
-                console.log(`# Loading Overpowers skill: Overpowers:${actualSkillPath}`);
+                console.log(`# Loading overpowers skill: overpowers:${actualSkillPath}`);
                 console.log(`# Source: ${skillFile}`);
                 console.log('');
             }
@@ -220,8 +220,8 @@ function runUseSkill(skillName) {
     }
 
     // Display skill header with clean info
-    const displayName = forceOverpowers ? `Overpowers:${actualSkillPath}` :
-        (skillFile.includes(personalSkillsDir) ? actualSkillPath : `Overpowers:${actualSkillPath}`);
+    const displayName = forceOverpowers ? `overpowers:${actualSkillPath}` :
+        (skillFile.includes(personalSkillsDir) ? actualSkillPath : `overpowers:${actualSkillPath}`);
 
     const skillDirectory = path.dirname(skillFile);
 
@@ -253,15 +253,15 @@ switch (command) {
         runFindSkills();
         break;
     default:
-        console.log('Overpowers for Codex');
+        console.log('overpowers for Codex');
         console.log('Usage:');
-        console.log('  Overpowers-codex bootstrap              # Run complete bootstrap with all skills');
-        console.log('  Overpowers-codex use-skill <skill-name> # Load a specific skill');
-        console.log('  Overpowers-codex find-skills            # List all available skills');
+        console.log('  overpowers-codex bootstrap              # Run complete bootstrap with all skills');
+        console.log('  overpowers-codex use-skill <skill-name> # Load a specific skill');
+        console.log('  overpowers-codex find-skills            # List all available skills');
         console.log('');
         console.log('Examples:');
-        console.log('  Overpowers-codex bootstrap');
-        console.log('  Overpowers-codex use-skill Overpowers:brainstorming');
-        console.log('  Overpowers-codex use-skill my-custom-skill');
+        console.log('  overpowers-codex bootstrap');
+        console.log('  overpowers-codex use-skill overpowers:brainstorming');
+        console.log('  overpowers-codex use-skill my-custom-skill');
         break;
 }

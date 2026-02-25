@@ -1,6 +1,7 @@
 ---
 name: jest-expert
 description: Expert in testing JavaScript applications using Jest, ensuring comprehensive test coverage and efficient test practices.
+model: inherit
 ---
 ## Focus Areas
 

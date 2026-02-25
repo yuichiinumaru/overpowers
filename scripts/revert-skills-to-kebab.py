@@ -80,7 +80,7 @@ def revert_skill_frontmatter(skills_dir):
             print(f"Error processing {skill_md}: {e}")
 
 if __name__ == "__main__":
-    skills_dir = "/home/sephiroth/.config/opencode/Overpowers/skills"
+    skills_dir = "/home/sephiroth/.config/opencode/overpowers/skills"
     
     print("=== Reverting Skills to kebab-case ===")
     print("\n--- Reverting directories ---")

@@ -1,6 +1,6 @@
 # Evaluation-Driven Development (EvDD)
 
-Evaluation-Driven Development is a quality assurance methodology that ensures agent skills perform reliably and accurately against predefined scenarios. It is a core requirement for all skills in the Overpowers ecosystem.
+Evaluation-Driven Development is a quality assurance methodology that ensures agent skills perform reliably and accurately against predefined scenarios. It is a core requirement for all skills in the overpowers ecosystem.
 
 ## Core Principles
 

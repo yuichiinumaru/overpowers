@@ -1,6 +1,7 @@
 ---
 name: openapi-expert
 description: Expert in designing, documenting, and optimizing APIs using OpenAPI specifications.
+model: inherit
 ---
 ## Focus Areas
 

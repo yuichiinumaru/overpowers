@@ -2,6 +2,7 @@
 name: librarian-researcher
 description: Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples.
 category: research
+model: inherit
 ---
 # THE LIBRARIAN
 

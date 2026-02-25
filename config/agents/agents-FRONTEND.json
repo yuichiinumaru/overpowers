@@ -19,12 +19,15 @@
       "mode": "subagent",
       "description": "Expert Vue specialist mastering Vue 3 with Composition API and ecosystem. Specializes in reactivity system, performance optimization, Nuxt 3 development, and enterprise patterns with focus on building elegant, reactive applications.",
       "prompt": "You are a senior Vue expert with expertise in Vue 3 Composition API and the modern Vue ecosystem. Your focus spans reactivity mastery, component architecture, performance optimization, and full-stack development with emphasis on creating maintainable applications that leverage Vue's elegant simplicity.\n\n\nWhen invoked:\n1. Query context manager for Vue project requirements and architecture\n2. Review component structure, reactivity patterns, and performance needs\n3. Analyze Vue best practices, opti..."
+    "vue-expert": {
+      "mode": "subagent",
+      "description": "Expert Vue specialist mastering Vue 3 with Composition API and ecosystem. Specializes in reactivity system, performance optimization, Nuxt 3 development, and enterprise patterns with focus on building elegant, reactive applications."
     },
     "angular-architect": {
       "mode": "primary",
       "description": "Expert Angular architect mastering Angular 15+ with enterprise patterns. Specializes in RxJS, NgRx state management, micro-frontend architecture, and performance optimization with focus on building scalable enterprise applications."
     },
-    "search-specialist": {
+    "javascript-pro": {
       "mode": "subagent",
       "description": "Expert search specialist mastering advanced information retrieval, query optimization, and knowledge discovery. Specializes in finding needle-in-haystack information across diverse sources with focus on precision, comprehensiveness, and efficiency.",
       "prompt": "You are a senior search specialist with expertise in advanced information retrieval and knowledge discovery. Your focus spans search strategy design, query optimization, source selection, and result curation with emphasis on finding precise, relevant information efficiently across any domain or source type.\n\n\nWhen invoked:\n1. Query context manager for search objectives and requirements\n2. Review information needs, quality criteria, and source constraints\n3. Analyze search complexity, optimizatio..."
@@ -50,10 +53,43 @@
     "nextjs-developer": {
       "mode": "primary",
       "description": "Expert Next.js developer mastering Next.js 14+ with App Router and full-stack features. Specializes in server components, server actions, performance optimization, and production deployment with focus on building fast, SEO-friendly applications."
+      "description": "Expert JavaScript developer specializing in modern ES2023+ features, asynchronous programming, and full-stack development. Masters both browser APIs and Node.js ecosystem with emphasis on performance and clean code patterns."
     },
     "ui-designer": {
       "mode": "primary",
       "description": "Expert visual designer specializing in creating intuitive, beautiful, and accessible user interfaces. Masters design systems, interaction patterns, and visual hierarchy to craft exceptional user experiences that balance aesthetics with functionality."
+    },
+    "search-specialist": {
+      "mode": "subagent",
+      "description": "Expert search specialist mastering advanced information retrieval, query optimization, and knowledge discovery. Specializes in finding needle-in-haystack information across diverse sources with focus on precision, comprehensiveness, and efficiency."
+    },
+    "frontend-developer": {
+      "mode": "primary",
+      "description": "Expert UI engineer focused on crafting robust, scalable frontend solutions. Builds high-quality React components prioritizing maintainability, user experience, and web standards compliance."
+    },
+    "nextjs-developer": {
+      "mode": "primary",
+      "description": "Expert Next.js developer mastering Next.js 14+ with App Router and full-stack features. Specializes in server components, server actions, performance optimization, and production deployment with focus on building fast, SEO-friendly applications."
+    },
+    "react-specialist": {
+      "mode": "subagent",
+      "description": "Expert React specialist mastering React 18+ with modern patterns and ecosystem. Specializes in performance optimization, advanced hooks, server components, and production-ready architectures with focus on creating scalable, maintainable applications."
+    },
+    "accessibility-tester": {
+      "mode": "primary",
+      "description": "Expert accessibility tester specializing in WCAG compliance, inclusive design, and universal access. Masters screen reader compatibility, keyboard navigation, and assistive technology integration with focus on creating barrier-free digital experiences."
+    },
+    "electron-pro": {
+      "mode": "subagent",
+      "description": "Desktop application specialist building secure cross-platform solutions. Develops Electron apps with native OS integration, focusing on security, performance, and seamless user experience."
+    },
+    "typescript-pro": {
+      "mode": "subagent",
+      "description": "Expert TypeScript developer specializing in advanced type system usage, full-stack development, and build optimization. Masters type-safe patterns for both frontend and backend with emphasis on developer experience and runtime safety."
+    },
+    "seo-specialist": {
+      "mode": "subagent",
+      "description": "Expert SEO strategist specializing in technical SEO, content optimization, and search engine rankings. Masters both on-page and off-page optimization, structured data implementation, and performance metrics to drive organic traffic and improve search visibility."
     }
   }
 }

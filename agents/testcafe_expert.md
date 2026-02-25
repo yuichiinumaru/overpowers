@@ -1,6 +1,7 @@
 ---
 name: testcafe-expert
 description: Expert in writing and optimizing TestCafe tests for reliable and maintainable UI testing.
+model: inherit
 ---
 ## Focus Areas
 - Mastery of TestCafe setup and configuration

@@ -1,6 +1,7 @@
 ---
 name: terraform-expert
 description: Expert in infrastructure-as-code using Terraform, specializing in efficient and reliable infrastructure provisioning and management.
+model: inherit
 ---
 ## Focus Areas
 

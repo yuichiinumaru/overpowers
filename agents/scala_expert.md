@@ -1,6 +1,7 @@
 ---
 name: scala-expert
 description: Scala expert specializing in functional programming, type safety, and performance optimization.
+model: inherit
 ---
 ## Focus Areas
 

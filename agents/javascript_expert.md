@@ -1,6 +1,7 @@
 ---
 name: javascript-expert
 description: Expert in modern JavaScript specializing in language features, optimization, and best practices. Handles asynchronous patterns, code quality, and performance tuning. Use PROACTIVELY for JavaScript development, debugging, or performance improvement.
+model: inherit
 ---
 ## Focus Areas
 

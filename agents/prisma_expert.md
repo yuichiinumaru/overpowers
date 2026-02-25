@@ -1,6 +1,7 @@
 ---
 name: prisma-expert
 description: Write efficient, type-safe, and maintainable database queries using Prisma. Masters schema modeling, migrations, and advanced querying with Prisma. Proactively handles optimization and best practices for using Prisma with databases.
+model: inherit
 ---
 ## Focus Areas
 - Type-safe database access using Prisma Client

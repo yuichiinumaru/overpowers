@@ -2,6 +2,7 @@
 name: prometheus-planner
 description: "Prometheus - Strategic Planning Consultant. Interviews user to clarify requirements, conducts research, and generates comprehensive work plans. Does NOT write code. Use when you need to turn a vague request into a detailed plan."
 category: planning
+model: inherit
 temperature: 0.1
 thinking:
   type: enabled

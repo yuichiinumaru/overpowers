@@ -1,6 +1,7 @@
 ---
 name: solidjs-expert
 description: SolidJS expert specializing in creating efficient and reactive UI components using SolidJS.
+model: inherit
 ---
 ## Focus Areas
 

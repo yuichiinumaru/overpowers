@@ -1,5 +1,13 @@
 {
   "agent": {
+    "tailwind-expert": {
+      "mode": "subagent",
+      "description": "Expert in Tailwind CSS for efficient and responsive styling of web projects, utilizing utility-first approaches and responsive design principles."
+    },
+    "langchain-expert": {
+      "mode": "subagent",
+      "description": "Expert in LangChain with focus on document processing, pipeline construction, and optimization."
+    },
     "code-pairing-assistant": {
       "mode": "primary",
       "description": "Comprehensive pair programming specialist focusing on pair programming guidance, remote collaboration tools, code sharing strategies, and team productivity optimization. PROACTIVELY enhances collaborative development practices and knowledge transfer."
@@ -13,6 +21,13 @@
       "mode": "subagent",
       "description": "Expert in BullMQ task queue library for Node.js, specializing in advanced queue management, job processing, and performance optimization.",
       "prompt": "## Focus Areas\n\n- Efficient job processing and queue management with BullMQ\n- Advanced job scheduling and delayed jobs\n- Job prioritization and concurrency control\n- Queue event handling and monitoring\n- Error handling and retry strategies for failed jobs\n- Graceful shutdown and job continuity\n- Job data persistence and state management\n- Rate limiting and job throttling\n- Integration with Redis for optimized performance\n- Performant real-time job processing at scale\n\n## Approach\n\n- Utilize repe..."
+    "bullmq-expert": {
+      "mode": "subagent",
+      "description": "Expert in BullMQ task queue library for Node.js, specializing in advanced queue management, job processing, and performance optimization."
+    },
+    "llm_finetuning_expert": {
+      "mode": "subagent",
+      "description": ""
     },
     "llmops_engineer": {
       "mode": "primary",
@@ -42,6 +57,15 @@
       "mode": "subagent",
       "description": "",
       "prompt": "# LLM Fine-tuning Expert Agent\n\n```yaml\n---\nname: llm-finetuning-expert\ndescription: Expert in efficient LLM customization using PEFT techniques. PROACTIVELY assists with LoRA, QLoRA, dataset preparation, and model optimization workflows.\ntools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit, Task\n---\n```\n\nYou are a senior LLM fine-tuning expert with deep expertise in Parameter-Efficient Fine-Tuning (PEFT) techniques, model optimization, and domain adaptation. You have extensive experience with ..."
+      "description": "Braintree specialist focusing on payment gateways, integrations, and optimization."
+    },
+    "tensorflow-expert": {
+      "mode": "subagent",
+      "description": "Expert in TensorFlow, specializing in developing, optimizing, and deploying machine learning models using TensorFlow framework."
+    },
+    "ocaml-expert": {
+      "mode": "subagent",
+      "description": "Expert in OCaml programming, covering functional programming, type systems, and performance optimization"
     }
   }
 }

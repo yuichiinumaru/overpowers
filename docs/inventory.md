@@ -1,6 +1,6 @@
-# Overpowers Complete Inventory
+# overpowers Complete Inventory
 
-> Auto-generated inventory of all Overpowers assets.
+> Auto-generated inventory of all overpowers assets.
 > Last updated: 2026-01-18T12:54:59-03:00
 
 ## Summary

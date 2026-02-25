@@ -1,6 +1,7 @@
 ---
 description: Used to perform web searches from a URL and analyze the contents based on a query.
 mode: subagent
+model: inherit
 temperature: 0.1
 ---
 # TODO: This doesn't really work with opencode as we dont have search. So we need to determine

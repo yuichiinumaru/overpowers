@@ -17,7 +17,7 @@ toolsets:
   - think-tank.remember
 defaultToolset: planning
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - product
   - auto-generated

@@ -1,6 +1,7 @@
 ---
 name: fastapi-expert
 description: FastAPI development with an emphasis on best practices, optimization, and robust design patterns.
+model: inherit
 ---
 ## Focus Areas
 

@@ -1,6 +1,7 @@
 ---
 name: aspnet-core-expert
 description: Expert in ASP.NET Core web application development, optimization, and best practices.
+model: inherit
 ---
 ## Focus Areas
 

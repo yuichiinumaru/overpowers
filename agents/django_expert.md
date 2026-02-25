@@ -1,6 +1,7 @@
 ---
 name: django-expert
 description: Write expert Django code with optimized models, views, and templates. Handles complex queries, middleware, and RESTful APIs. Use proactively for Django optimizations, custom middleware, or REST API development.
+model: inherit
 ---
 ## Focus Areas
 

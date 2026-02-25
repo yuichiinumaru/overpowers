@@ -1,6 +1,7 @@
 ---
 name: braintree-expert
 description: Braintree specialist focusing on payment gateways, integrations, and optimization.
+model: inherit
 ---
 ## Focus Areas
 

@@ -1,11 +1,11 @@
 #!/bin/bash
 # Test script for parallel subagents with OPENCODE_PERMISSION
-# Run from: /home/sephiroth/.config/opencode/Overpowers
+# Run from: /home/sephiroth/.config/opencode/overpowers
 
 export OPENCODE_PERMISSION='"allow"'
 
 ARCHIVE="/home/sephiroth/.config/opencode/archive"
-OUTPUT_DIR="/home/sephiroth/.config/opencode/Overpowers/docs"
+OUTPUT_DIR="/home/sephiroth/.config/opencode/overpowers/docs"
 MODEL="google/antigravity-claude-sonnet-4-5-thinking"
 
 # Test with just ONE repo first

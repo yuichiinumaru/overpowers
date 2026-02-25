@@ -31,7 +31,7 @@ Every agent file MUST start with YAML frontmatter:
 name: agent-name-in-kebab-case
 description: When to invoke this agent - be specific for auto-discovery
 tools: Read, Write, Edit, Bash  # Optional, comma-separated
-model: sonnet  # Optional: sonnet|opus|haiku|inherit
+model: inherit  # Optional: sonnet|opus|haiku|inherit
 color: green  # Visual categorization
 field: frontend  # Domain/expertise area
 expertise: expert  # beginner|intermediate|expert
@@ -57,7 +57,7 @@ mcp_tools: mcp__github, mcp__playwright  # Optional, comma-separated
 name: code-reviewer
 description: Expert code review specialist. Use proactively after code changes.
 tools: Read, Grep, Glob, Bash
-model: sonnet
+model: inherit
 color: red
 field: quality
 expertise: expert
@@ -69,7 +69,7 @@ expertise: expert
 name: frontend-developer
 description: React and TypeScript development expert. Use for building UI components and pages.
 tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
+model: inherit
 color: green
 field: frontend
 expertise: expert
@@ -192,7 +192,7 @@ After YAML frontmatter, the system prompt:
 name: agent-name
 description: When to invoke
 tools: Read, Write
-model: sonnet
+model: inherit
 color: blue
 field: product
 expertise: intermediate
@@ -224,7 +224,7 @@ Output format:
 name: code-reviewer
 description: Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code.
 tools: Read, Grep, Glob, Bash
-model: sonnet
+model: inherit
 color: red
 field: quality
 expertise: expert
@@ -269,7 +269,7 @@ MCP Integration:
 name: frontend-developer
 description: React and TypeScript frontend development specialist. Use for building UI components, pages, and client-side features.
 tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
+model: inherit
 color: green
 field: frontend
 expertise: expert
@@ -330,7 +330,7 @@ MCP Integration:
 name: product-planner
 description: Product strategy and planning expert. Use for creating product requirements, user stories, and feature specifications.
 tools: Read, Write, Grep
-model: opus
+model: inherit
 color: blue
 field: product
 expertise: expert
@@ -647,7 +647,7 @@ description: An agent that helps with frontend  ❌ (Not action-oriented)
 name: test-runner
 description: Test automation specialist. Use proactively after code changes to run tests and validate implementations.
 tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
+model: inherit
 color: red
 field: testing
 expertise: expert
@@ -724,7 +724,7 @@ MCP Integration:
 name: api-builder
 description: RESTful API development specialist. Use for creating backend endpoints, controllers, and API services.
 tools: Read, Write, Edit, Bash, Grep, Glob
-model: sonnet
+model: inherit
 color: green
 field: backend
 expertise: expert
@@ -797,7 +797,7 @@ Can work in parallel with frontend_developer when building full-stack features.
 name: prd-specialist
 description: Product requirements documentation expert. Use for creating PRDs, user stories, and feature specifications.
 tools: Read, Write, Grep
-model: opus
+model: inherit
 color: blue
 field: product
 expertise: expert
@@ -1063,7 +1063,7 @@ DESCRIPTION: Unit test execution specialist. Use after code changes to run unit 
 CAPABILITIES: Run Jest tests, analyze failures, report results
 TOOLS_NEEDED: Read, Write, Bash
 EXECUTION_PATTERN: sequential
-MODEL: sonnet
+model: inherit
 COLOR: red
 EXPERTISE_LEVEL: intermediate
 MCP_TOOLS:
@@ -1080,7 +1080,7 @@ DESCRIPTION: React component development specialist. Use for building reusable U
 CAPABILITIES: Create React components, TypeScript types, component tests
 TOOLS_NEEDED: Read, Write, Edit, Bash, Grep, Glob
 EXECUTION_PATTERN: coordinated
-MODEL: sonnet
+model: inherit
 COLOR: green
 EXPERTISE_LEVEL: expert
 MCP_TOOLS: mcp__playwright
@@ -1097,7 +1097,7 @@ DESCRIPTION: Product requirements specialist. Use for creating detailed feature 
 CAPABILITIES: Write PRDs, create user stories, define acceptance criteria
 TOOLS_NEEDED: Read, Write, Grep
 EXECUTION_PATTERN: parallel
-MODEL: opus
+model: inherit
 COLOR: blue
 EXPERTISE_LEVEL: expert
 MCP_TOOLS:

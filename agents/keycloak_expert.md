@@ -1,6 +1,7 @@
 ---
 name: keycloak-expert
 description: Keycloak specialist for identity and access management, realm configuration, and user federation.
+model: inherit
 ---
 ## Focus Areas
 

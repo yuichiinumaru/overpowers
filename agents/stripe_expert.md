@@ -1,6 +1,7 @@
 ---
 name: stripe-expert
 description: This agent specializes in managing and optimizing Stripe integrations, handling payments, managing subscriptions, and utilizing Stripe APIs.
+model: inherit
 ---
 ## Focus Areas
 

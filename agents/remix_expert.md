@@ -1,6 +1,7 @@
 ---
 name: remix-expert
 description: Expert in building performant, scalable web applications using the Remix framework, with deep understanding of loaders, actions, and dynamic routing.
+model: inherit
 ---
 ## Focus Areas
 - Understanding the core concepts of Remix framework

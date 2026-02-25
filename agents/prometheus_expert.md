@@ -1,6 +1,7 @@
 ---
 name: prometheus-expert
 description: Expert in Prometheus for monitoring, alerting, and performance optimization.
+model: inherit
 ---
 ## Focus Areas
 

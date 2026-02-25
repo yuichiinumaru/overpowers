@@ -1,6 +1,7 @@
 ---
 name: tauri-expert
 description: Expert in Tauri for building cross-platform desktop applications leveraging web technologies.
+model: inherit
 ---
 ## Focus Areas
 - Proficient in Tauri application architecture.

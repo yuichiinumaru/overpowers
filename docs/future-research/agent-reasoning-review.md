@@ -6,11 +6,11 @@
 
 ## Context
 
-During the Overpowers Repository Recycling project (Phase 2), we encountered advanced agent reasoning patterns that warrant deeper investigation:
+During the overpowers Repository Recycling project (Phase 2), we encountered advanced agent reasoning patterns that warrant deeper investigation:
 
 ### BDI (Belief-Desire-Intention) Ontology
 - **Source**: guanyang-antigravity-skills repository
-- **Current Status**: Adopted as optional skill in `Overpowers/skills/reasoning/bdi-mental-states/`
+- **Current Status**: Adopted as optional skill in `overpowers/skills/reasoning/bdi-mental-states/`
 - **Concept**: Moves agents from simple reactive loops to goal-oriented intention tracking
   - **Beliefs**: Agent's knowledge about the world
   - **Desires**: Goals the agent wants to achieve
@@ -45,7 +45,7 @@ During the Overpowers Repository Recycling project (Phase 2), we encountered adv
 When ready to tackle this:
 1. Create benchmark suite for agent reasoning quality
 2. A/B test BDI vs current patterns on diverse tasks
-3. Document findings in `Overpowers/docs/research/`
+3. Document findings in `overpowers/docs/research/`
 4. If BDI proves superior, propose migration path
 
 ## Dependencies

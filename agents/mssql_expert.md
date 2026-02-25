@@ -1,6 +1,7 @@
 ---
 name: mssql-expert
 description: Expert in Microsoft SQL Server handling query optimization, database design, and advanced T-SQL features.
+model: inherit
 ---
 ## Focus Areas
 

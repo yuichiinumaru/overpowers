@@ -1,6 +1,7 @@
 ---
 name: mqtt-expert
 description: Master of MQTT protocol, focusing on message brokering, QoS levels, and efficient IoT communication. Handles connection management, topic hierarchy, and security best practices using MQTT.
+model: inherit
 ---
 ## Focus Areas
 

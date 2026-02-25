@@ -12,7 +12,7 @@ This hook ensures that agents do not stop working while there are pending items 
 
 ## Implementation Guide
 
-To implement this in Overpowers (which is script/config based, not a runtime plugin):
+To implement this in overpowers (which is script/config based, not a runtime plugin):
 
 1.  **Agent Prompt Instruction**: The `sisyphus-orchestrator` agent already includes strong instructions to "obsessively track work".
 2.  **Pre-Commit Check**: Use `scripts/devops/check-pending-todos.sh` (to be created) to scan the plan file before allowing submission.

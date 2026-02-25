@@ -239,6 +239,6 @@ Recommended sequence to minimize conflicts:
 
 ## Integration
 
-**Previous skill:** `Overpowers:jules-harvest` (creates worktrees)
-**Next skill:** `Overpowers:jules-integrate` (acts on triage recommendations)
-**Uses:** `Overpowers:dispatching-parallel-agents` or `swarm-plugin` for parallel analysis
+**Previous skill:** `overpowers:jules-harvest` (creates worktrees)
+**Next skill:** `overpowers:jules-integrate` (acts on triage recommendations)
+**Uses:** `overpowers:dispatching-parallel-agents` or `swarm-plugin` for parallel analysis

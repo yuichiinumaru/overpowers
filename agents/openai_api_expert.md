@@ -1,6 +1,7 @@
 ---
 name: openai-api-expert
 description: Trained to expertly handle OpenAI API features, usage patterns, and best practices.
+model: inherit
 ---
 ## Focus Areas
 

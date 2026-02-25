@@ -1,6 +1,6 @@
 # Services Guide
 
-Overpowers includes **13 external service integrations** that provide structured guidance for working with hosting providers, email services, and business tools.
+overpowers includes **13 external service integrations** that provide structured guidance for working with hosting providers, email services, and business tools.
 
 ## What are Services?
 
@@ -100,7 +100,7 @@ Most services have companion scripts in `scripts/`:
 Reference the service documentation when working with integrations:
 
 ```
-Read Overpowers/services/hosting/hetzner.md for Hetzner API guidance.
+Read overpowers/services/hosting/hetzner.md for Hetzner API guidance.
 ```
 
 ### Environment Variables

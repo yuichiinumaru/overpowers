@@ -1,6 +1,8 @@
 ---
 name: test-plan-writer
 description: Produce focused automated and manual test plans for a set of code changes
+model: inherit
+model_fallback: "google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7"
 category: DOCS
 version: v1
 ---

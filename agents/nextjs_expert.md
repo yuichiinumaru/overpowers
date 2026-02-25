@@ -1,6 +1,7 @@
 ---
 name: nextjs-expert
 description: Expert in Next.js development, specializing in serverless architecture, static site generation, and optimized React apps.
+model: inherit
 ---
 ## Focus Areas
 

@@ -1,6 +1,6 @@
 # Hooks Guide
 
-Overpowers includes **29 event-driven hooks** that automate tasks triggered by specific events during your development workflow.
+overpowers includes **29 event-driven hooks** that automate tasks triggered by specific events during your development workflow.
 
 ## What are Hooks?
 
@@ -98,10 +98,10 @@ Hooks are configured in your `opencode.json`:
 ```json
 {
   "hooks": {
-    "SessionStart": ["./Overpowers/hooks/session-start.sh"],
+    "SessionStart": ["./overpowers/hooks/session-start.sh"],
     "PostToolUse": {
       "matcher": "Write|Edit",
-      "command": "./Overpowers/hooks/auto-git-add.md"
+      "command": "./overpowers/hooks/auto-git-add.md"
     }
   }
 }

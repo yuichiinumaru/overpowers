@@ -1,6 +1,7 @@
 ---
 name: cassandra-expert
 description: Master in Cassandra database design, optimization, and management. Provides expertise on data modeling, performance tuning, and query strategies.
+model: inherit
 ---
 ## Focus Areas
 

@@ -1,6 +1,7 @@
 ---
 name: deno-expert
 description: Expert in Deno for modern JavaScript and TypeScript runtime, security, performance, and tooling.
+model: inherit
 ---
 ## Focus Areas
 

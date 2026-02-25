@@ -59,7 +59,7 @@ digraph process {
     "Read plan, extract all tasks with full text, note context, create TodoWrite" [shape=box];
     "More tasks remain?" [shape=diamond];
     "Dispatch final code reviewer subagent for entire implementation" [shape=box];
-    "Use Overpowers:finishing-a-development-branch" [shape=box style=filled fillcolor=lightgreen];
+    "Use overpowers:finishing-a-development-branch" [shape=box style=filled fillcolor=lightgreen];
 
     "Read plan, extract all tasks with full text, note context, create TodoWrite" -> "Dispatch implementer subagent (./implementer-prompt.md)";
     "Dispatch implementer subagent (./implementer-prompt.md)" -> "Implementer subagent asks questions?";
@@ -78,7 +78,7 @@ digraph process {
     "Mark task complete in TodoWrite" -> "More tasks remain?";
     "More tasks remain?" -> "Dispatch implementer subagent (./implementer-prompt.md)" [label="yes"];
     "More tasks remain?" -> "Dispatch final code reviewer subagent for entire implementation" [label="no"];
-    "Dispatch final code reviewer subagent for entire implementation" -> "Use Overpowers:finishing-a-development-branch";
+    "Dispatch final code reviewer subagent for entire implementation" -> "Use overpowers:finishing-a-development-branch";
 }
 ```
 
@@ -104,7 +104,7 @@ Task 1: Hook installation script
 
 Implementer: "Before I begin - should the hook be installed at user or system level?"
 
-You: "User level (~/.config/Overpowers/hooks/)"
+You: "User level (~/.config/overpowers/hooks/)"
 
 Implementer: "Got it. Implementing now..."
 [Later] Implementer:
@@ -229,12 +229,12 @@ Done!
 ## Integration
 
 **Required workflow skills:**
-- **Overpowers:writing-plans** - Creates the plan this skill executes
-- **Overpowers:requesting-code-review** - Code review template for reviewer subagents
-- **Overpowers:finishing-a-development-branch** - Complete development after all tasks
+- **overpowers:writing-plans** - Creates the plan this skill executes
+- **overpowers:requesting-code-review** - Code review template for reviewer subagents
+- **overpowers:finishing-a-development-branch** - Complete development after all tasks
 
 **Subagents should use:**
-- **Overpowers:test-driven-development** - Subagents follow TDD for each task
+- **overpowers:test-driven-development** - Subagents follow TDD for each task
 
 **Alternative workflow:**
-- **Overpowers:executing-plans** - Use for parallel session instead of same-session execution
+- **overpowers:executing-plans** - Use for parallel session instead of same-session execution

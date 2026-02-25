@@ -1,6 +1,7 @@
 ---
 name: sidekiq-expert
 description: Specialist in optimizing and managing Sidekiq for efficient job processing and background task management.
+model: inherit
 ---
 ## Focus Areas
 

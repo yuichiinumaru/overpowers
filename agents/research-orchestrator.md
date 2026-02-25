@@ -1,5 +1,7 @@
 ---
 name: research-orchestrator
+tools: Read, Write, Edit, Task, TodoWrite
+model: inherit
 description: Use this agent when you need to coordinate a comprehensive research project that requires multiple specialized agents working in sequence. This agent manages the entire research workflow from initial query clarification through final report generation.
 category: research
 ---

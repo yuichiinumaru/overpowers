@@ -1,6 +1,7 @@
 ---
 name: redis-expert
 description: Expert in Redis for in-memory data storage, caching, and real-time analytics. 
+model: inherit
 ---
 ## Focus Areas
 

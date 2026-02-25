@@ -1,6 +1,7 @@
 ---
 name: grafana-expert
 description: Expert in Grafana dashboard creation, visualization best practices, and alerting systems. Proactively used for monitoring and reporting.
+model: inherit
 ---
 ## Focus Areas
 

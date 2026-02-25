@@ -1,6 +1,6 @@
 # Browser Use Integration
 
-This document details the integration of the `browser-use` library into the Overpowers repository.
+This document details the integration of the `browser-use` library into the overpowers repository.
 
 ## Overview
 `browser-use` allows AI agents to control a web browser, navigate websites, and interact with page elements. We have integrated it as a **Skill** and an **Agent**.

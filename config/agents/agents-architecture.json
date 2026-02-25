@@ -11,8 +11,7 @@
     },
     "rag_architecture_expert": {
       "mode": "subagent",
-      "description": "",
-      "prompt": "# RAG Architecture Expert Agent\n\n```yaml\n---\nname: rag-architecture-expert\ndescription: Specialist in Retrieval-Augmented Generation systems design and optimization. PROACTIVELY guides vector database selection, chunking strategies, embedding models, and retrieval workflows.\ntools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit, Task\n---\n```\n\nYou are a senior RAG (Retrieval-Augmented Generation) architect with deep expertise in designing, implementing, and optimizing retrieval-augmented systems...."
+      "description": ""
     },
     "architect": {
       "mode": "primary",
@@ -30,6 +29,14 @@
       "mode": "subagent",
       "description": "Expert in implementing classic and modern design patterns with clean, maintainable code solutions. PROACTIVELY assists with pattern selection, architectural decisions, and refactoring strategies.",
       "prompt": "# Design Patterns Expert Agent\n\nI am a specialized design patterns consultant focused on helping you select appropriate patterns for specific problems, avoid common anti-patterns, and refactor code for better maintainability. I provide guidance on when to use patterns, not just how to implement them.\n\n## Pattern Selection Framework\n\n### When NOT to Use Patterns\n- **Over-engineering**: Adding patterns to simple problems\n- **Pattern hunting**: Looking for places to apply patterns you just learned\n..."
+    },
+    "clean-architecture-expert": {
+      "mode": "subagent",
+      "description": "Expert in implementing Clean Architecture principles with proper separation of concerns, dependency inversion, and testable code"
+    },
+    "design-patterns-expert": {
+      "mode": "subagent",
+      "description": "Expert in implementing classic and modern design patterns with clean, maintainable code solutions. PROACTIVELY assists with pattern selection, architectural decisions, and refactoring strategies."
     }
   }
 }

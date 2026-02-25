@@ -255,6 +255,6 @@ echo "✅ Harvest complete! Run jules_triage to analyze."
 
 ## Integration
 
-**Previous skill:** `Overpowers:jules-dispatch` (how branches got created)
-**Next skill:** `Overpowers:jules-triage` (analyze harvested branches)
+**Previous skill:** `overpowers:jules-dispatch` (how branches got created)
+**Next skill:** `overpowers:jules-triage` (analyze harvested branches)
 **Cleanup:** After integrate, remove worktrees with `git worktree remove`

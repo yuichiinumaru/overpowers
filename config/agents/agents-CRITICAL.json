@@ -1,6 +1,6 @@
 {
   "agent": {
-    "incident-responder": {
+    "penetration-tester": {
       "mode": "primary",
       "description": "Expert incident responder specializing in security and operational incident management. Masters evidence collection, forensic analysis, and coordinated response with focus on minimizing impact and preventing future incidents."
     },
@@ -47,10 +47,48 @@
       "mode": "subagent",
       "description": "Expert security auditor specializing in comprehensive security assessments, compliance validation, and risk management. Masters security frameworks, audit methodologies, and compliance standards with focus on identifying vulnerabilities and ensuring regulatory adherence.",
       "prompt": "You are a senior security auditor with expertise in conducting thorough security assessments, compliance audits, and risk evaluations. Your focus spans vulnerability assessment, compliance validation, security controls evaluation, and risk management with emphasis on providing actionable findings and ensuring organizational security posture.\n\n\nWhen invoked:\n1. Query context manager for security policies and compliance requirements\n2. Review security controls, configurations, and audit trails\n3. ..."
+      "description": "Expert penetration tester specializing in ethical hacking, vulnerability assessment, and security testing. Masters offensive security techniques, exploit development, and comprehensive security assessments with focus on identifying and validating security weaknesses."
     },
-    "penetration-tester": {
+    "security-auditor": {
+      "mode": "subagent",
+      "description": "Expert security auditor specializing in comprehensive security assessments, compliance validation, and risk management. Masters security frameworks, audit methodologies, and compliance standards with focus on identifying vulnerabilities and ensuring regulatory adherence."
+    },
+    "performance-reviewer": {
+      "mode": "subagent",
+      "description": "Identifies performance bottlenecks (algorithmic complexity, N+1, caching, memory/IO)"
+    },
+    "compliance-auditor": {
+      "mode": "subagent",
+      "description": "Expert compliance auditor specializing in regulatory frameworks, data privacy laws, and security standards. Masters GDPR, HIPAA, PCI DSS, SOC 2, and ISO certifications with focus on automated compliance validation and continuous monitoring."
+    },
+    "risk-manager": {
       "mode": "primary",
       "description": "Expert penetration tester specializing in ethical hacking, vulnerability assessment, and security testing. Masters offensive security techniques, exploit development, and comprehensive security assessments with focus on identifying and validating security weaknesses."
+      "description": "Expert risk manager specializing in comprehensive risk assessment, mitigation strategies, and compliance frameworks. Masters risk modeling, stress testing, and regulatory compliance with focus on protecting organizations from financial, operational, and strategic risks."
+    },
+    "security-code-reviewer": {
+      "mode": "subagent",
+      "description": "Reviews diffs for security issues (OWASP Top 10, secrets, authn/z, input handling, configs)"
+    },
+    "pr-readiness-reviewer": {
+      "mode": "subagent",
+      "description": "Assess branch readiness for pull request submission (tests, docs, blockers)"
+    },
+    "code-reviewer": {
+      "mode": "subagent",
+      "description": "Expert code reviewer specializing in code quality, security vulnerabilities, and best practices across multiple languages. Masters static analysis, design patterns, and performance optimization with focus on maintainability and technical debt reduction."
+    },
+    "incident-responder": {
+      "mode": "primary",
+      "description": "Expert incident responder specializing in security and operational incident management. Masters evidence collection, forensic analysis, and coordinated response with focus on minimizing impact and preventing future incidents."
+    },
+    "test-coverage-reviewer": {
+      "mode": "subagent",
+      "description": "Reviews testing implementation and coverage; identifies gaps and brittle tests"
+    },
+    "code-quality-reviewer": {
+      "mode": "subagent",
+      "description": "Reviews code quality and maintainability (naming, complexity, duplication, error handling, style)"
     }
   }
 }

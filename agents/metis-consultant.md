@@ -2,6 +2,7 @@
 name: metis-consultant
 description: Pre-planning consultant that analyzes requests to identify hidden intentions, ambiguities, and AI failure points.
 category: advisor
+model: inherit
 ---
 # Metis - Pre-Planning Consultant
 

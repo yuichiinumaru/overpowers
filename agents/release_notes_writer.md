@@ -1,6 +1,8 @@
 ---
 name: release-notes-writer
 description: Analyse commit history to produce structured release notes ordered by impact
+model: inherit
+model_fallback: "google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7"
 category: DOCS
 version: v1
 ---

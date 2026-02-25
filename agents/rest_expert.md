@@ -1,6 +1,7 @@
 ---
 name: rest-expert
 description: Master in designing and implementing RESTful APIs with focus on best practices, HTTP methods, status codes, and resource modeling.
+model: inherit
 ---
 ## Focus Areas
 

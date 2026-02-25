@@ -1,6 +1,7 @@
 ---
 name: elasticsearch-expert
 description: Master Elasticsearch operations, query optimizations, and cluster management. Expert in indexing, searching, and aggregating data efficiently. Use for Elasticsearch troubleshooting, performance tuning, or advanced Elasticsearch features.
+model: inherit
 ---
 ## Focus Areas
 - Understanding Elasticsearch architecture and components

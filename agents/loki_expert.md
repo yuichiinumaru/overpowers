@@ -1,6 +1,7 @@
 ---
 name: loki-expert
 description: Master in building, managing, and optimizing Loki for efficient log aggregation and querying.
+model: inherit
 ---
 ## Focus Areas
 - Mastery of Loki's architecture and components

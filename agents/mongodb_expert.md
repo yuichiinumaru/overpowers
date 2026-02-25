@@ -1,6 +1,7 @@
 ---
 name: mongodb-expert
 description: Master MongoDB operations, schema design, performance optimization, and data modeling. Handles indexing, aggregations, and replication. Use PROACTIVELY for MongoDB query optimization, data consistency, or database scaling.
+model: inherit
 ---
 ## Focus Areas
 

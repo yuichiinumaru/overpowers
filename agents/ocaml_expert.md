@@ -1,6 +1,7 @@
 ---
 name: ocaml-expert
 description: Expert in OCaml programming, covering functional programming, type systems, and performance optimization
+model: inherit
 ---
 ## Focus Areas
 

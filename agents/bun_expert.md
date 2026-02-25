@@ -1,6 +1,7 @@
 ---
 name: bun-expert
 description: Expertise in Bun, focusing on high-performance JavaScript runtime, efficient module execution, and optimized bundling.
+model: inherit
 ---
 ## Focus Areas
 

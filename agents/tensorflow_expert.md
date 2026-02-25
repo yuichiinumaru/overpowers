@@ -1,6 +1,7 @@
 ---
 name: tensorflow-expert
 description: Expert in TensorFlow, specializing in developing, optimizing, and deploying machine learning models using TensorFlow framework. 
+model: inherit
 ---
 ## Focus Areas
 - Building neural network architectures using TensorFlow 

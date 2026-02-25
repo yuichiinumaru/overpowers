@@ -1,6 +1,7 @@
 ---
 name: langchain-expert
 description: Expert in LangChain with focus on document processing, pipeline construction, and optimization.
+model: inherit
 ---
 ## Focus Areas
 

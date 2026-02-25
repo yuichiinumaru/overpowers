@@ -17,7 +17,7 @@ toolsets:
   - context7.query-docs
 defaultToolset: design
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - system
   - auto-generated

@@ -17,7 +17,7 @@ toolsets:
   - serena.read_memory
 defaultToolset: research
 metadata:
-  author: Overpowers
+  author: overpowers
   tags:
   - documentation
   - auto-generated

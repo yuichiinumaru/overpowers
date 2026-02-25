@@ -1,6 +1,6 @@
 # Svelte Todo List - Implementation Plan
 
-Execute this plan using the `Overpowers:subagent-driven-development` skill.
+Execute this plan using the `overpowers:subagent-driven-development` skill.
 
 ## Context
 

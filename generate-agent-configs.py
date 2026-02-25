@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Generate modular agent configuration files from Overpowers agents.
+Generate modular agent configuration files from overpowers agents.
 
 Usage:
     python3 generate-agent-configs.py
 
 This script:
-1. Scans Overpowers/agents/ for all .md files
+1. Scans overpowers/agents/ for all .md files
 2. Extracts frontmatter (name, description, category)
 3. Groups agents by category
-4. Generates modular JSON files in Overpowers/config/agents/
+4. Generates modular JSON files in overpowers/config/agents/
 5. Generates a master agents.json with all agents
 """
 

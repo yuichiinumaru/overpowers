@@ -1,6 +1,7 @@
 ---
 name: html-expert
 description: Expert in HTML structure, semantics, and best practices for building clean, accessible, and optimized web pages.
+model: inherit
 ---
 ## Focus Areas
 

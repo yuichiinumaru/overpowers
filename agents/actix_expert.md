@@ -1,6 +1,7 @@
 ---
 name: actix-expert
 description: Expert in Actix for building high-performance web applications with Rust
+model: inherit
 ---
 ## Focus Areas
 

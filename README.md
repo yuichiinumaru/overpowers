@@ -1,8 +1,8 @@
 [<img width="3168" height="1344" alt="Gemini_Generated_Image_e9pigpe9pigpe9pi" src="https://github.com/user-attachments/assets/0ebf9eaa-3226-4be3-b012-589f6d5ea6e0" />](https://www.youtube.com/watch?v=M_XwzBMTJaM)
 
-# Overpowers 🚀
+# overpowers 🚀
 
-**Overpowers** is a consolidated, opinionated, and massively expanded toolkit for OpenCode/Claude Code. Built upon the foundation of [Superpowers](https://github.com/obra/superpowers) by [Jesse Vincent](https://github.com/obra), it centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, highly capable repository.
+**overpowers** is a consolidated, opinionated, and massively expanded toolkit for OpenCode/Claude Code. Built upon the foundation of [Superpowers](https://github.com/obra/superpowers) by [Jesse Vincent](https://github.com/obra), it centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, highly capable repository.
 
 > **Note**: This is a fork with personal touches, curated integrations, and additional components based on my own workflow and preferences. The original Superpowers is an excellent starting point—this version adds opinionated expansions.
 
@@ -38,7 +38,7 @@ Components were curated and integrated from various open-source projects in the 
 
 ## 🌟 What's Different from Superpowers?
 
-| Feature | Superpowers | Overpowers |
+| Feature | Superpowers | overpowers |
 |---------|-------------|------------|
 | Agents | ~50 | 390+ |
 | Skills | ~30 | 149+ |
@@ -75,7 +75,7 @@ See `workflows/jules-orchestration.md` for the complete workflow guide.
 ## 🛠 Structure
 
 ```
-Overpowers/
+overpowers/
 ├── agents/           # 390+ specialized AI agents
 ├── commands/         # 228+ shorthand operations
 ├── skills/           # 149+ workflow automations
@@ -97,10 +97,10 @@ Overpowers/
 ### 1. Clone with Submodules
 
 ```bash
-git clone --recursive https://github.com/yuichiinumaru/overpowers.git ~/.config/opencode/Overpowers
+git clone --recursive https://github.com/yuichiinumaru/overpowers.git ~/.config/opencode/overpowers
 
 # Or if already cloned:
-cd ~/.config/opencode/Overpowers
+cd ~/.config/opencode/overpowers
 git submodule update --init --recursive
 ```
 
@@ -167,12 +167,12 @@ This interactive wizard:
 
 ## 🎯 Antigravity Skills Installer
 
-Install Overpowers skills directly into **Google Antigravity IDE**!
+Install overpowers skills directly into **Google Antigravity IDE**!
 
 ### Quick Install
 
 ```bash
-bash ~/.config/opencode/Overpowers/install-antigravity-skills.sh
+bash ~/.config/opencode/overpowers/install-antigravity-skills.sh
 ```
 
 ### Features
@@ -201,7 +201,7 @@ Add to your `opencode.json`:
 ```json
 {
   "plugin": [
-    "./Overpowers/.opencode/plugin/Overpowers.js"
+    "./overpowers/.opencode/plugin/overpowers.js"
   ]
 }
 ```
@@ -287,14 +287,14 @@ Full Stack Feature:
 
 ```bash
 # Search agents by name
-ls ~/.config/opencode/Overpowers/agents/ | grep "security"
+ls ~/.config/opencode/overpowers/agents/ | grep "security"
 
 # Search skills
-ls ~/.config/opencode/Overpowers/skills/
+ls ~/.config/opencode/overpowers/skills/
 
 # Count totals
-echo "Agents: $(ls Overpowers/agents/ | wc -l)"
-echo "Skills: $(ls Overpowers/skills/ | wc -l)"
+echo "Agents: $(ls overpowers/agents/ | wc -l)"
+echo "Skills: $(ls overpowers/skills/ | wc -l)"
 ```
 
 ## 🤝 Contributing

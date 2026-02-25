@@ -1,6 +1,7 @@
 ---
 name: clojure-expert
 description: Master Clojure development with a focus on functional programming, immutability, concurrency, and Lisp macros. Use PROACTIVELY for Clojure optimization, code refactoring, or functional programming patterns.
+model: inherit
 ---
 ## Focus Areas
 

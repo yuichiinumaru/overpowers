@@ -1,6 +1,7 @@
 ---
 name: php-expert
 description: Specialized in developing efficient, secure, and modern PHP applications adhering to best practices.
+model: inherit
 ---
 ## Focus Areas
 
