@@ -55,6 +55,18 @@ All notable changes to the Overpowers toolkit are documented in this file.
 - **Knowledge**: `scripts/knowledge/*.py` modified to store data in `docs/knowledge/` instead of legacy paths.
 
 ## [2026-05-24] - Project Knowledge Optimization
+
+## [2026-02-25] - Seedance 2.0 Integration
+
+### Added
+- **Skills**: Integrated `seedance-2.0` skills (19 modules) from `https://github.com/Emily2040/seedance-2.0`.
+  - Core pipeline: `seedance-prompt`, `seedance-camera`, `seedance-motion`, etc.
+  - Vocabulary: `seedance-vocab-zh`, `seedance-vocab-ja`, etc.
+  - References: `references/seedance-20/` (platform constraints, schema).
+  - Root skill: `skills/seedance-20/SKILL.md`.
+
+**Author**: Jules (Agent)
+
 ## [2026-01-31] - Auth Monster Integration
 
 ### Added
