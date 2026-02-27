@@ -75,11 +75,11 @@ read:
   - "~/git/aidevops/AGENTS.md"
 
 # Model configuration
-model: "openrouter/anthropic/claude-sonnet-4"
-weak-model: "openrouter/anthropic/claude-3-5-haiku"
+model: "openrouter/google/antigravity-claude-sonnet-4"
+weak-model: "openrouter/google/antigravity-claude-4-5-haiku"
 
 # Editor settings
-editor-model: "openrouter/anthropic/claude-sonnet-4"
+editor-model: "openrouter/google/antigravity-claude-sonnet-4"
 edit-format: "diff"
 
 # Git integration
@@ -124,7 +124,7 @@ configure_openai_cli() {
 
 default_model: "gpt-4"
 max_tokens: 4096
-temperature: 0.1
+
 
 # Auto-include AGENTS.md context
 system_message: |
@@ -342,7 +342,7 @@ model_list:
       api_key: env/OPENAI_API_KEY
   - model_name: claude-3-sonnet
     litellm_params:
-      model: anthropic/claude-3-sonnet-20240229
+      model: google/antigravity-claude-3-sonnet-20240229
       api_key: env/ANTHROPIC_API_KEY
 
 general_settings:

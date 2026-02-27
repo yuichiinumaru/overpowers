@@ -596,7 +596,7 @@ show_status() {
     echo "  - SendGrid API keys"
     echo "  - Shopify API keys"
     echo "  - OpenAI API keys"
-    echo "  - Anthropic/Claude API keys"
+    echo "  - google/antigravity-Claude API keys"
     echo "  - Linear API keys"
     echo "  - 1Password service account tokens"
     echo "  - Database connection strings"

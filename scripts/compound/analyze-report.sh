@@ -7,7 +7,7 @@
 #
 # Environment variables (uses first one found):
 #   ANTHROPIC_API_KEY     - Anthropic API directly
-#   OPENROUTER_API_KEY    - OpenRouter (uses claude-sonnet-4-20250514)
+#   OPENROUTER_API_KEY    - OpenRouter (uses antigravity-gemini-3-flash)
 #   AI_GATEWAY_URL        - Any OpenAI-compatible endpoint (requires AI_GATEWAY_API_KEY)
 
 set -e
@@ -153,7 +153,7 @@ case "$PROVIDER" in
       -H "Content-Type: application/json" \
       -H "Authorization: Bearer $OPENROUTER_API_KEY" \
       -d "{
-        \"model\": \"anthropic/claude-opus-4.5\",
+        \"model\": \"google/antigravity-claude-opus-4.5\",
         \"max_tokens\": 1024,
         \"messages\": [{\"role\": \"user\", \"content\": $PROMPT_ESCAPED}]
       }")
@@ -161,7 +161,7 @@ case "$PROVIDER" in
     ;;
 
   gateway)
-    MODEL="${AI_GATEWAY_MODEL:-anthropic/claude-opus-4.5}"
+    MODEL="${AI_GATEWAY_MODEL:-google/antigravity-claude-opus-4.5}"
     RESPONSE=$(curl -s "${AI_GATEWAY_URL}/chat/completions" \
       -H "Content-Type: application/json" \
       -H "Authorization: Bearer $AI_GATEWAY_AUTH_TOKEN" \

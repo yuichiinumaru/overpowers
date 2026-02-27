@@ -3,7 +3,7 @@
 ## Automated Model Fallback
 *   **Script**: `skills/subagent-orchestration/scripts/run-subagent.sh`
 *   **Mechanism**:
-    1.  Attempts execution with Primary Model (Default: `google/antigravity-claude-sonnet-4-5-thinking`).
+    1.  Attempts execution with Primary Model (Default: `google/antigravity-gemini-3-flash`).
     2.  Captures `stdout`/`stderr` to a temporary buffer.
     3.  Scans output for Regex triggers: `rate.?limit`, `quota`, `429`, `exceeded`.
     4.  **Fallback Trigger**: If caught, automatically re-runs task with Fallback Model.
