@@ -7,6 +7,7 @@
     "mcp": {
         "serena": {
             "type": "local",
+            "enabled": true,
             "command": [
                 "uvx",
                 "--from",
@@ -15,22 +16,19 @@
                 "start-mcp-server",
                 "--context",
                 "ide-assistant"
-            ],
-            "enabled": true,
+            ]
         },
         "vibe_check": {
             "type": "local",
+            "enabled": true,
             "command": [
-                "npx",
-                "-y",
-                "@pv-bhat/vibe-check-mcp",
-                "start",
-                "--stdio"
+                "node",
+                "<YOUR_HOME_DIR>/.config/opencode/mcp/vibe-check/build/index.js"
             ],
             "environment": {
-                "GEMINI_API_KEY": "YOUR_GEMINI_API_KEY"
-            },
-            "enabled": true,
+                "GEMINI_API_KEY": "{env:GEMINI_API_KEY}",
+                "MCP_TRANSPORT": "stdio"
+            }
         },
         "hypertool": {
             "type": "local",
@@ -43,7 +41,96 @@
                 "--mcp-config",
                 "/path/to/your/.mcp.json"
             ],
+            "enabled": true
+        },
+        "hyperbrowser": {
+            "type": "local",
             "enabled": true,
+            "command": [
+                "npx",
+                "--yes",
+                "hyperbrowser-mcp"
+            ],
+            "environment": {
+                "HYPERBROWSER_API_KEY": "{env:HYPERBROWSER_API_KEY}"
+            }
+        },
+        "genkit-mcp-server": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "npx",
+                "-y",
+                "genkit-cli@^1.28.0",
+                "mcp",
+                "--explicitProjectRoot",
+                "--no-update-notification",
+                "--non-interactive"
+            ]
+        },
+        "memcord": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "<YOUR_HOME_DIR>/.config/opencode/mcp/memcord/.venv/bin/python",
+                "-m",
+                "memcord.server"
+            ],
+            "environment": {
+                "PYTHONPATH": "<YOUR_HOME_DIR>/.config/opencode/mcp/memcord/src",
+                "MEMCORD_ENABLE_ADVANCED": "true"
+            }
+        },
+        "semgrep": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "node",
+                "<YOUR_HOME_DIR>/.config/opencode/mcp/semgrep/build/index.js"
+            ],
+            "environment": {
+                "PATH": "/usr/local/bin:/usr/bin:/bin:<YOUR_HOME_DIR>/.local/bin"
+            }
+        },
+        "in_memoria": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "node",
+                "<YOUR_HOME_DIR>/.config/opencode/mcp/in-memoria/dist/index.js",
+                "server"
+            ]
+        },
+        "playwright_browser": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "npx",
+                "-y",
+                "@playwright/mcp@latest"
+            ]
+        },
+        "context7": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "npx",
+                "-y",
+                "@upstash/context7-mcp"
+            ],
+            "environment": {
+                "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+            }
+        },
+        "notebooklm": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "uvx",
+                "--from",
+                "<YOUR_HOME_DIR>/.config/opencode/mcp/notebooklm-mcp-cli",
+                "notebooklm-mcp"
+            ]
         }
     }
 }

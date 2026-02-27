@@ -8,6 +8,14 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-02-27] - YouTube Skill Mining Agent & Workflow
+
+### Added
+- **Agents**: Created `youtube-ripper` agent (`agents/youtube-ripper.md`) focused on cyclical deep extraction of YouTube tech videos to construct skills.
+- **Workflows**: Created `youtube-skill-mining` (`workflows/youtube-skill-mining.md`) defining the 3-phase autonomous "rip and build" execution loop.
+
+**Author**: Antigravity
+
 ## [2026-05-24] - Deep Extraction Iteration
 
 ### Added
