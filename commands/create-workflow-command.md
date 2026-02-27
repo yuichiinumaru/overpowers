@@ -137,7 +137,7 @@ Create the main command file with this pattern:
 description: <Workflow description>
 argument-hint: <Required arguments>
 allowed-tools: Task, Read
-model: sonnet
+
 ---
 
 # <Workflow Name>
@@ -261,7 +261,7 @@ Resume agent using agent_id:
 description: Execute feature implementation through research, planning, and coding phases
 argument-hint: [feature-description]
 allowed-tools: Task, Read, TodoWrite
-model: sonnet
+
 ---
 
 # Implement Feature

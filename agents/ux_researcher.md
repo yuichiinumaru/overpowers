@@ -1,8 +1,7 @@
 ---
 name: ux-researcher
 description: Expert UX researcher specializing in user insights, usability testing, and data-driven design decisions. Masters qualitative and quantitative research methods to uncover user needs, validate designs, and drive product improvements through actionable insights.
-model: google/antigravity-gemini-3-pro-preview
-model_fallback: "google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview"
+
 category: ARCHITECTURE
   - WebFetch
   - WebSearch

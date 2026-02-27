@@ -34,12 +34,12 @@ async function main() {
   await monster.init();
 
   // Prefer a fast model, or fallback to config active
-  const model = 'gemini-3-flash-preview';
+  const model = 'gemini-3-flash';
   const details = await monster.getAuthDetails(model) || await monster.getAuthDetails(config.active);
 
   if (!details) {
-      console.error('AuthMonster: No active account found for commit generation.');
-      process.exit(0);
+    console.error('AuthMonster: No active account found for commit generation.');
+    process.exit(0);
   }
 
   const url = getProviderEndpoint(details.provider, details.account, details.modelInProvider);
@@ -52,34 +52,34 @@ async function main() {
   ${diff.substring(0, 8000)}`;
 
   try {
-      console.log('AuthMonster: Generating commit message...');
-      const response = await monster.request(model, url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: {
-              messages: [{ role: 'user', content: prompt }],
-              model: details.modelInProvider,
-              temperature: 0.3
-          }
-      });
+    console.log('AuthMonster: Generating commit message...');
+    const response = await monster.request(model, url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: {
+        messages: [{ role: 'user', content: prompt }],
+        model: details.modelInProvider,
 
-      const json = await response.json() as any;
-      let message = '';
-
-      if (details.provider === AuthProvider.Gemini) {
-          message = json.candidates?.[0]?.content?.parts?.[0]?.text || '';
-      } else if (details.provider === AuthProvider.Anthropic) {
-          message = json.content?.[0]?.text || '';
-      } else {
-          message = json.choices?.[0]?.message?.content || '';
       }
+    });
 
-      if (message) {
-          const currentContent = fs.readFileSync(commitMsgFile, 'utf-8');
-          fs.writeFileSync(commitMsgFile, `${message.trim()}\n\n${currentContent}`);
-      }
+    const json = await response.json() as any;
+    let message = '';
+
+    if (details.provider === AuthProvider.Gemini) {
+      message = json.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    } else if (details.provider === AuthProvider.Anthropic) {
+      message = json.content?.[0]?.text || '';
+    } else {
+      message = json.choices?.[0]?.message?.content || '';
+    }
+
+    if (message) {
+      const currentContent = fs.readFileSync(commitMsgFile, 'utf-8');
+      fs.writeFileSync(commitMsgFile, `${message.trim()}\n\n${currentContent}`);
+    }
   } catch (e) {
-      console.error('AuthMonster: Failed to generate commit message.', e);
+    console.error('AuthMonster: Failed to generate commit message.', e);
   }
 }
 

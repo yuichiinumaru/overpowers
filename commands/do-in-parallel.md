@@ -266,19 +266,19 @@ Launch ALL agents in a SINGLE response. Do NOT wait for one agent to complete be
 Use Task tool:
   description: "Parallel: simplify error handling in src/services/user.ts"
   prompt: [CoT prefix + task body for user.ts + critique suffix]
-  model: sonnet
+  
 
 [Task 2]
 Use Task tool:
   description: "Parallel: simplify error handling in src/services/order.ts"
   prompt: [CoT prefix + task body for order.ts + critique suffix]
-  model: sonnet
+  
 
 [Task 3]
 Use Task tool:
   description: "Parallel: simplify error handling in src/services/payment.ts"
   prompt: [CoT prefix + task body for payment.ts + critique suffix]
-  model: sonnet
+  
 
 [All 3 tasks launched simultaneously - results collected when all complete]
 ```

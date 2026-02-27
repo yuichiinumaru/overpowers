@@ -55,7 +55,7 @@
     "provider": {
         "google": {
             "models": {
-                "antigravity-claude-sonnet-4-5-thinking": {
+                "antigravity-gemini-3-flash": {
                     "name": "Claude Sonnet 4.5 Thinking (Antigravity)",
                     "limit": {
                         "context": 1000000,
@@ -84,21 +84,21 @@
                         }
                     }
                 },
-                "antigravity-claude-opus-4-5": {
+                "antigravity-claude-opus-4-5-thinking": {
                     "name": "Claude Opus 4.5 (Antigravity)",
                     "limit": {
                         "context": 200000,
                         "output": 64000
                     }
                 },
-                "antigravity-gemini-3-pro-preview": {
+                "antigravity-gemini-3-pro": {
                     "name": "Gemini 3 Pro (Antigravity)",
                     "limit": {
                         "context": 1048576,
                         "output": 65535
                     }
                 },
-                "antigravity-gemini-3-flash-preview": {
+                "antigravity-gemini-3-flash": {
                     "name": "Gemini 3 Flash (Antigravity)",
                     "limit": {
                         "context": 1048576,
@@ -110,7 +110,7 @@
     },
     "agent": {
         "build": {
-            "model": "google/gemini-3-flash-preview"
+            "model": "google/antigravity-gemini-3-flash"
         },
         "ceo_orchestrator": {
             "mode": "primary",
@@ -1623,7 +1623,7 @@
         "sqs_expert": {
             "mode": "subagent",
             "description": "",
-            "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    model: claude-sonnet-4-20250514\n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
+            "prompt": "---\n    name: sqs-expert\n    description: Expertise in Amazon SQS for reliable, scalable message queuing. \n    \n    ---\n    \n    ## Focus Areas\n    - Understanding SQS standard and FIFO queue types\n    - Message durability and retention configurations\n    - Visibility timeouts and long polling\n    - Dead letter queues for handling failed messages\n    - Access control through IAM policies\n    - Message ordering and deduplication \n    - Monitoring SQS with CloudWatch..."
         },
         "stripe_expert": {
             "mode": "subagent",

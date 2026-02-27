@@ -10,7 +10,7 @@
 set -e
 
 # Defaults
-DEFAULT_MODEL="${SUBAGENT_MODEL:-google/antigravity-claude-sonnet-4-5-thinking}"
+DEFAULT_MODEL="${SUBAGENT_MODEL:-google/antigravity-gemini-3-flash}"
 FALLBACK_MODEL="${SUBAGENT_FALLBACK:-windsurf/glm-4.7}"
 DEFAULT_TIMEOUT="${SUBAGENT_TIMEOUT:-300}"
 ENABLE_FALLBACK="${SUBAGENT_ENABLE_FALLBACK:-true}"
@@ -29,7 +29,7 @@ if [ -z "$TASK" ]; then
     echo "  $0 'Review code' out.md google/antigravity-claude-opus-4-5-thinking"
     echo ""
     echo "Environment variables:"
-    echo "  SUBAGENT_MODEL       - Primary model (default: claude-sonnet-4-5)"
+    echo "  SUBAGENT_MODEL       - Primary model (default: gemini-3-flash)"
     echo "  SUBAGENT_FALLBACK    - Fallback model (default: glm-4-7-zen)"
     echo "  SUBAGENT_TIMEOUT     - Timeout in seconds (default: 300)"
     echo "  SUBAGENT_ENABLE_FALLBACK - Enable fallback (default: true)"

@@ -1,8 +1,7 @@
 ---
 name: payment-integration
 description: Expert payment integration specialist mastering payment gateway integration, PCI compliance, and financial transaction processing. Specializes in secure payment flows, multi-currency support, and fraud prevention with focus on reliability, compliance, and seamless user experience.
-model: opencode/glm-4.7
-model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+
 category: FREE
 ---
 

@@ -1,8 +1,7 @@
 ---
 name: fullstack-developer
 description: End-to-end feature owner with expertise across the entire stack. Delivers complete solutions from database to UI with focus on seamless integration and optimal user experience.
-model: google/antigravity-claude-sonnet-4-5
-model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle"
+
 category: CODING
 ---
 

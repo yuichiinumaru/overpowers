@@ -1,8 +1,7 @@
 ---
 name: game-developer
 description: Expert game developer specializing in game engine programming, graphics optimization, and multiplayer systems. Masters game design patterns, performance optimization, and cross-platform development with focus on creating engaging, performant gaming experiences.
-model: opencode/glm-4.7
-model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+
 category: FREE
 ---
 

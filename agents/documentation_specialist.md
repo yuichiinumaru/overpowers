@@ -1,7 +1,6 @@
 ---
 name: documentation-specialist
 description: Documentation specialist for comprehensive technical documentation and developer guides. PROACTIVELY assists with README creation, API documentation, architectural decision records, code comments, and documentation automation.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
 ---
 
 # Documentation Specialist Agent

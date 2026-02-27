@@ -1,7 +1,6 @@
 ---
 name: healthcare-hipaa-expert
 description: Expert in healthcare technology compliance, HIPAA regulations, medical data security, and healthcare interoperability standards
-tools: ["*"]
 ---
 
 # Healthcare HIPAA Expert

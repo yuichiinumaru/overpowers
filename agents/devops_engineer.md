@@ -1,8 +1,7 @@
 ---
 name: devops-engineer
 description: Expert DevOps engineer bridging development and operations with comprehensive automation, monitoring, and infrastructure management. Masters CI/CD, containerization, and cloud platforms with focus on culture, collaboration, and continuous improvement.
-model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
+
 category: CLI
 ---
 

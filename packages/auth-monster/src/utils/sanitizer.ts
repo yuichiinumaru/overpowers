@@ -3,7 +3,7 @@
  * conflicts when rotating between different model families.
  * 
  * This prevents 'Invalid signature' errors when rotating from Gemini (which adds signatures)
- * to Anthropic/OpenAI (which don't expect them).
+ * to google/antigravity-OpenAI (which don't expect them).
  */
 export function sanitizeCrossModelRequest(body: any): any {
   if (typeof body !== 'object' || body === null) {
@@ -12,7 +12,7 @@ export function sanitizeCrossModelRequest(body: any): any {
 
   // Create a shallow copy if it's an object
   const sanitized = Array.isArray(body) ? [...body] : { ...body };
-  
+
   // Fields to strip from the top-level
   const fieldsToStrip = [
     'thoughtSignature',
@@ -40,7 +40,7 @@ export function sanitizeCrossModelRequest(body: any): any {
             delete newMsg[field];
           }
         }
-        
+
         // Also check inside content if it's an array (Anthropic style)
         if (Array.isArray(newMsg.content)) {
           newMsg.content = newMsg.content.map((block: any) => {
@@ -56,7 +56,7 @@ export function sanitizeCrossModelRequest(body: any): any {
             return block;
           });
         }
-        
+
         return newMsg;
       }
       return msg;

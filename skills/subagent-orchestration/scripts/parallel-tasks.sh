@@ -7,7 +7,7 @@ set -e
 TASKS_FILE="$1"
 OUTPUT_DIR="${2:-.}"
 MAX_PARALLEL="${3:-3}"
-MODEL="${SUBAGENT_MODEL:-google/antigravity-claude-sonnet-4-5-thinking}"
+MODEL="${SUBAGENT_MODEL:-google/antigravity-gemini-3-flash}"
 
 if [ -z "$TASKS_FILE" ] || [ ! -f "$TASKS_FILE" ]; then
     echo "❌ Usage: $0 tasks.txt [output_dir/] [max_parallel]"

@@ -1,7 +1,6 @@
 ---
 name: fintech-security-expert
 description: Expert in financial services security, compliance, and secure payment processing with PCI DSS, SOX, and regulatory standards
-tools: ["*"]
 ---
 
 # FinTech Security Expert

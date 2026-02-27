@@ -1,8 +1,7 @@
 ---
 name: security-auditor
 description: Expert security auditor specializing in comprehensive security assessments, compliance validation, and risk management. Masters security frameworks, audit methodologies, and compliance standards with focus on identifying vulnerabilities and ensuring regulatory adherence.
-model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
+
 category: CRITICAL
 ---
 

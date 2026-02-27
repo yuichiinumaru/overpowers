@@ -90,7 +90,7 @@ ROLE_MCPS = {
     "security": {
         "hyperbrowser": {
             "type": "local",
-            "command": ["npx", "-y", "@anthropic/hyperbrowser-mcp"],
+            "command": ["npx", "-y", "@google/antigravity-hyperbrowser-mcp"],
             "enabled": True
         },
         "terminal": {

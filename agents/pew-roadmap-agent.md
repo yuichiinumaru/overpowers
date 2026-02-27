@@ -1,7 +1,7 @@
 ---
 name: pew-roadmap-agent
 description: "Expert in Phase 4 milestone and roadmap planning for the plan workflow. Use when organizing deliverables into releasable milestones, creating user stories, and generating effort estimates for sprint planning."
-color: Rose
+color: "#FF007F"
 ---
 # 🎯 Purpose & Role
 

@@ -95,17 +95,17 @@ export async function runOnboardingWizard(monster: AuthMonster) {
               healthScore: 100
             });
           } else if (provider === AuthProvider.Windsurf) {
-             const account = await WindsurfProvider.discoverAccount();
-              await monster.addAccount(account);
-              console.log(`Discovered local Windsurf account: ${account.email}`);
+            const account = await WindsurfProvider.discoverAccount();
+            await monster.addAccount(account);
+            console.log(`Discovered local Windsurf account: ${account.email}`);
           } else if (provider === AuthProvider.Cursor) {
-             const account = await cursorProvider.discover();
-             if (account) {
-               await monster.addAccount(account);
-               console.log(`Discovered local Cursor account.`);
-             } else {
-               console.log("Could not discover local Cursor account. Please ensure you are logged in to Cursor.");
-             }
+            const account = await cursorProvider.discover();
+            if (account) {
+              await monster.addAccount(account);
+              console.log(`Discovered local Cursor account.`);
+            } else {
+              console.log("Could not discover local Cursor account. Please ensure you are logged in to Cursor.");
+            }
           } else if (provider === AuthProvider.Qwen) {
             const tokens = await QwenProvider.login();
             await monster.addAccount({
@@ -135,39 +135,39 @@ export async function runOnboardingWizard(monster: AuthMonster) {
           } else if (provider === AuthProvider.Kiro) {
             const account = await KiroProvider.discoverAccount();
             if (account) {
-                await monster.addAccount(account);
-                console.log(`Discovered local Kiro/AWS account: ${account.email}`);
+              await monster.addAccount(account);
+              console.log(`Discovered local Kiro/AWS account: ${account.email}`);
             } else {
-                console.log("Could not discover local Kiro/AWS account in ~/.aws/sso/cache.");
+              console.log("Could not discover local Kiro/AWS account in ~/.aws/sso/cache.");
             }
           } else if (provider === AuthProvider.Zhipu) {
             const { apiKey } = await ZhipuProvider.login();
             await monster.addAccount({
-                id: Math.random().toString(36).substring(2, 11),
-                email: 'user@zhipu',
-                provider: AuthProvider.Zhipu,
-                tokens: { accessToken: '' }, // API Key only
-                apiKey,
-                isHealthy: true,
-                healthScore: 100
+              id: Math.random().toString(36).substring(2, 11),
+              email: 'user@zhipu',
+              provider: AuthProvider.Zhipu,
+              tokens: { accessToken: '' }, // API Key only
+              apiKey,
+              isHealthy: true,
+              healthScore: 100
             });
           } else if (provider === AuthProvider.Minimax) {
             const { apiKey } = await MinimaxProvider.login();
             await monster.addAccount({
-                id: Math.random().toString(36).substring(2, 11),
-                email: 'user@minimax',
-                provider: AuthProvider.Minimax,
-                tokens: { accessToken: '' },
-                apiKey,
-                isHealthy: true,
-                healthScore: 100
+              id: Math.random().toString(36).substring(2, 11),
+              email: 'user@minimax',
+              provider: AuthProvider.Minimax,
+              tokens: { accessToken: '' },
+              apiKey,
+              isHealthy: true,
+              healthScore: 100
             });
           } else {
 
             console.log(`Interactive login not yet implemented for ${provider}. Please use 'add' command manually.`);
             break;
           }
-          
+
           console.log(`Successfully added ${provider} account.`);
         } catch (error: any) {
           console.error(`Failed to add ${provider} account: ${error.message}`);
@@ -200,7 +200,7 @@ export async function runOnboardingWizard(monster: AuthMonster) {
       }).run();
 
       const fallbackInput = await new Input({
-        message: 'Enter fallback models (comma-separated, e.g., claude-3-5-sonnet, gemini-2.5-pro):'
+        message: 'Enter fallback models (comma-separated, e.g., claude-4-5-sonnet, gemini-2.5-pro):'
       }).run();
 
       const fallbacks = fallbackInput.split(',').map((s: string) => s.trim()).filter((s: string) => s.length > 0);

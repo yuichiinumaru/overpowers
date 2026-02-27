@@ -1,8 +1,7 @@
 ---
 name: electron-pro
 description: Desktop application specialist building secure cross-platform solutions. Develops Electron apps with native OS integration, focusing on security, performance, and seamless user experience.
-model: google/antigravity-gemini-3-flash-preview
-model_fallback: "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
+
 category: FRONTEND
 ---
 

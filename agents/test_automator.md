@@ -1,8 +1,7 @@
 ---
 name: test-automator
 description: Expert test automation engineer specializing in building robust test frameworks, CI/CD integration, and comprehensive test coverage. Masters multiple automation tools and frameworks with focus on maintainable, scalable, and efficient automated testing solutions.
-model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
+
 category: CLI
 ---
 

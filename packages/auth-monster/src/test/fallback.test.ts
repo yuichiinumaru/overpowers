@@ -16,7 +16,7 @@ async function testFallback() {
       method: 'sticky',
       providers: {},
       modelPriorities: {
-        'gemini-3-pro-preview': ['claude-4.5-opus-thinking', 'gpt-5.2-codex']
+        'gemini-3-pro': ['claude-4.5-opus-thinking', 'gpt-5.2-codex']
       },
       fallbackDirection: 'down'
     },
@@ -48,7 +48,7 @@ async function testFallback() {
   await monster.addAccount(anthropicAcc);
 
   console.log('--- Testing resolveModelChain ---');
-  const chain = (monster as any).hub.resolveModelChain('gemini-3-pro-preview', (monster as any).config);
+  const chain = (monster as any).hub.resolveModelChain('gemini-3-pro', (monster as any).config);
   console.log('Chain:', chain);
   if (chain.length === 3 && chain[1] === 'claude-4.5-opus-thinking') {
     console.log('SUCCESS: resolveModelChain works');
@@ -59,7 +59,7 @@ async function testFallback() {
 
   console.log('--- Testing getAuthDetails Fallback ---');
   // First, it should pick Gemini
-  const details1 = await monster.getAuthDetails('gemini-3-pro-preview');
+  const details1 = await monster.getAuthDetails('gemini-3-pro');
   console.log('Details 1:', details1?.account.email, details1?.provider);
   if (details1?.provider === AuthProvider.Gemini) {
     console.log('SUCCESS: Picked Gemini first');
@@ -73,7 +73,7 @@ async function testFallback() {
   await monster.reportRateLimit(geminiAcc.id, 60000, 'QUOTA_EXHAUSTED');
 
   // Now it should pick Anthropic (claude-4.5-opus-thinking)
-  const details2 = await monster.getAuthDetails('gemini-3-pro-preview');
+  const details2 = await monster.getAuthDetails('gemini-3-pro');
   console.log('Details 2:', details2?.account.email, details2?.provider);
   if (details2?.provider === AuthProvider.Anthropic) {
     console.log('SUCCESS: Picked Anthropic as fallback');
@@ -95,13 +95,13 @@ async function testFallback() {
   (global as any).fetch = async (url: string, init: any) => {
     // Ignore warmup calls for accounting
     if (url.includes('messages') && init.body && JSON.parse(init.body).max_tokens === 1) {
-        return { ok: true, text: async () => 'warmup' };
+      return { ok: true, text: async () => 'warmup' };
     }
-    
+
     callCount++;
     const body = JSON.parse(init.body);
     modelRequests.push(body.model);
-    
+
     if (body.model === 'gemini-3-pro') {
       return {
         status: 429,
@@ -119,7 +119,7 @@ async function testFallback() {
     };
   };
 
-  const response = await monster.request('gemini-3-pro-preview', 'https://api.example.com', {
+  const response = await monster.request('gemini-3-pro', 'https://api.example.com', {
     method: 'POST',
     body: { prompt: 'Hello' }
   });

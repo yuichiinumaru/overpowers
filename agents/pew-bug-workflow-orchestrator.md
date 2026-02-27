@@ -1,7 +1,7 @@
 ---
 name: pew-bug-workflow-orchestrator
 description: "Expert orchestrator for the 4-phase bug resolution workflow. Use when managing a bug from report to verification. Orchestrates reporting, triage, fix planning, and verification agents."
-color: Red
+color: "#DC143C"
 ---
 # 🎯 Purpose & Role
 

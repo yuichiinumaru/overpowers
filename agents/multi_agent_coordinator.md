@@ -1,8 +1,7 @@
 ---
 name: multi-agent-coordinator
 description: Expert multi-agent coordinator specializing in complex workflow orchestration, inter-agent communication, and distributed system coordination. Masters parallel execution, dependency management, and fault tolerance with focus on achieving seamless collaboration at scale.
-model: google/antigravity-gemini-3-pro-preview
-model_fallback: "google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview"
+
 category: ARCHITECTURE
 ---
 

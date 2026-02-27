@@ -1,8 +1,7 @@
 ---
 name: nlp-engineer
 description: Expert NLP engineer specializing in natural language processing, understanding, and generation. Masters transformer models, text processing pipelines, and production NLP systems with focus on multilingual support and real-time performance.
-model: google/antigravity-gemini-3-flash-preview
-model_fallback: "google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1"
+
 category: PERFORMANCE
 ---
 

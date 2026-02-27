@@ -4,7 +4,6 @@
 ---
 name: rag-architecture-expert
 description: Specialist in Retrieval-Augmented Generation systems design and optimization. PROACTIVELY guides vector database selection, chunking strategies, embedding models, and retrieval workflows.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit, Task
 ---
 ```
 

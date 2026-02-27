@@ -31,7 +31,7 @@ Every slash command MUST start with YAML frontmatter:
 description: One-line clear purpose of what this command does
 argument-hint: [arg1] [arg2]
 allowed-tools: Bash(git status:*), Bash(git diff:*), Read, Write
-model: claude-4-5-sonnet-20241022
+
 disable-model-invocation: false
 ---
 ```
@@ -324,7 +324,7 @@ name: command-name
 description: |
   Multi-line description for complex purpose
   explaining specialized role
-color: yellow
+color: "#FFD700"
 ---
 
 You are a [specialized role] focusing on [domain expertise].
@@ -367,7 +367,7 @@ name: openapi-expert
 description: |
   Synchronize OpenAPI specification with actual API implementation
   ensuring complete documentation coverage
-color: yellow
+color: "#FFD700"
 ---
 
 You are an OpenAPI specification expert specializing in maintaining synchronization between REST API implementations and their OpenAPI documentation.

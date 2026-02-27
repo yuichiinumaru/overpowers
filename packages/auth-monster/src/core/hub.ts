@@ -32,13 +32,13 @@ export class UnifiedModelHub {
    */
   private initializeDefaultMappings() {
     // Gemini 3 Flash & Pro
-    this.addMapping('gemini-3-flash-preview', [
+    this.addMapping('gemini-3-flash', [
       { provider: AuthProvider.Gemini, modelInProvider: 'gemini-3-flash' },
       { provider: AuthProvider.Windsurf, modelInProvider: 'gemini-3-flash' },
       { provider: AuthProvider.Kiro, modelInProvider: 'gemini-3-flash' }
     ]);
 
-    this.addMapping('gemini-3-pro-preview', [
+    this.addMapping('gemini-3-pro', [
       { provider: AuthProvider.Gemini, modelInProvider: 'gemini-3-pro' },
       { provider: AuthProvider.Windsurf, modelInProvider: 'gemini-3-pro' }
     ]);
@@ -61,117 +61,117 @@ export class UnifiedModelHub {
 
     // Claude 3.7 Sonnet (Latest)
     this.addMapping('claude-3-7-sonnet-20250219', [
-        { provider: AuthProvider.Anthropic, modelInProvider: 'claude-3-7-sonnet-20250219' },
-        { provider: AuthProvider.Windsurf, modelInProvider: 'claude-3-7-sonnet' },
-        { provider: AuthProvider.Cursor, modelInProvider: 'claude-3.7-sonnet' }
+      { provider: AuthProvider.Anthropic, modelInProvider: 'claude-3-7-sonnet-20250219' },
+      { provider: AuthProvider.Windsurf, modelInProvider: 'claude-3-7-sonnet' },
+      { provider: AuthProvider.Cursor, modelInProvider: 'claude-3.7-sonnet' }
     ]);
 
     // Claude 4.5 Sonnet (Internal ID -> Provider ID)
-    this.addMapping('claude-sonnet-4-5', [
-        { provider: AuthProvider.Anthropic, modelInProvider: 'CLAUDE_SONNET_4_5_20250929_V1_0' },
-        { provider: AuthProvider.Cursor, modelInProvider: 'claude-4.5-sonnet' }
+    this.addMapping('gemini-3-flash', [
+      { provider: AuthProvider.Anthropic, modelInProvider: 'CLAUDE_SONNET_4_5_20250929_V1_0' },
+      { provider: AuthProvider.Cursor, modelInProvider: 'claude-4.5-sonnet' }
     ]);
 
     // DeepSeek R1 (Reasoning)
     this.addMapping('deepseek-r1', [
-        { provider: AuthProvider.Qwen, modelInProvider: 'deepseek-r1' }, // Qwen provider often proxies DeepSeek
-        { provider: AuthProvider.Windsurf, modelInProvider: 'deepseek-reasoner' },
-        { provider: AuthProvider.Generic, modelInProvider: 'deepseek-r1' } // Local Ollama fallback
+      { provider: AuthProvider.Qwen, modelInProvider: 'deepseek-r1' }, // Qwen provider often proxies DeepSeek
+      { provider: AuthProvider.Windsurf, modelInProvider: 'deepseek-reasoner' },
+      { provider: AuthProvider.Generic, modelInProvider: 'deepseek-r1' } // Local Ollama fallback
     ]);
 
     // Qwen 3 Coder Plus
     this.addMapping('qwen3-coder-plus', [
-        { provider: AuthProvider.Qwen, modelInProvider: 'qwen3-coder-plus' }
+      { provider: AuthProvider.Qwen, modelInProvider: 'qwen3-coder-plus' }
     ]);
 
     // --- MARK VI: EXPANSION (Protocol: NET_CRAWLER) ---
 
     // Anthropic: Claude 4.5 Haiku
     this.addMapping('claude-haiku-4-5', [
-        { provider: AuthProvider.Anthropic, modelInProvider: 'claude-haiku-4-5-20251001' },
-        { provider: AuthProvider.Windsurf, modelInProvider: 'claude-haiku-4.5' }
+      { provider: AuthProvider.Anthropic, modelInProvider: 'claude-haiku-4-5-20251001' },
+      { provider: AuthProvider.Windsurf, modelInProvider: 'claude-haiku-4.5' }
     ]);
 
     // Gemini: 2.5 Family (The "Workhorse" Suite)
     this.addMapping('gemini-2.5-pro', [
-        { provider: AuthProvider.Gemini, modelInProvider: 'gemini-2.5-pro' },
-        { provider: AuthProvider.Windsurf, modelInProvider: 'gemini-2.5-pro' }
+      { provider: AuthProvider.Gemini, modelInProvider: 'gemini-2.5-pro' },
+      { provider: AuthProvider.Windsurf, modelInProvider: 'gemini-2.5-pro' }
     ]);
     this.addMapping('gemini-2.5-flash', [
-        { provider: AuthProvider.Gemini, modelInProvider: 'gemini-2.5-flash' },
-        { provider: AuthProvider.Windsurf, modelInProvider: 'gemini-2.5-flash' }
+      { provider: AuthProvider.Gemini, modelInProvider: 'gemini-2.5-flash' },
+      { provider: AuthProvider.Windsurf, modelInProvider: 'gemini-2.5-flash' }
     ]);
     this.addMapping('gemini-2.5-flash-lite', [
-        { provider: AuthProvider.Gemini, modelInProvider: 'gemini-2.5-flash-lite' }
+      { provider: AuthProvider.Gemini, modelInProvider: 'gemini-2.5-flash-lite' }
     ]);
     this.addMapping('gemini-2.5-flash-image', [
-        { provider: AuthProvider.Gemini, modelInProvider: 'gemini-2.5-flash-image' }
+      { provider: AuthProvider.Gemini, modelInProvider: 'gemini-2.5-flash-image' }
     ]);
 
     // OpenAI: GPT-5 Family
     this.addMapping('gpt-5.2-pro', [
-        { provider: AuthProvider.OpenAI, modelInProvider: 'gpt-5.2-pro' },
-        { provider: AuthProvider.Copilot, modelInProvider: 'gpt-5.2-pro' }
+      { provider: AuthProvider.OpenAI, modelInProvider: 'gpt-5.2-pro' },
+      { provider: AuthProvider.Copilot, modelInProvider: 'gpt-5.2-pro' }
     ]);
     this.addMapping('gpt-5-mini', [
-        { provider: AuthProvider.OpenAI, modelInProvider: 'gpt-5-mini' }
+      { provider: AuthProvider.OpenAI, modelInProvider: 'gpt-5-mini' }
     ]);
     this.addMapping('gpt-5-nano', [
-        { provider: AuthProvider.OpenAI, modelInProvider: 'gpt-5-nano' }
+      { provider: AuthProvider.OpenAI, modelInProvider: 'gpt-5-nano' }
     ]);
 
     // OpenAI: Deep Research (Reasoning)
     this.addMapping('o3-deep-research', [
-        { provider: AuthProvider.OpenAI, modelInProvider: 'o3-deep-research' }
+      { provider: AuthProvider.OpenAI, modelInProvider: 'o3-deep-research' }
     ]);
     this.addMapping('o4-mini-deep-research', [
-        { provider: AuthProvider.OpenAI, modelInProvider: 'o4-mini-deep-research' }
+      { provider: AuthProvider.OpenAI, modelInProvider: 'o4-mini-deep-research' }
     ]);
 
     // OpenAI: Sora (Video)
     this.addMapping('sora-2', [
-        { provider: AuthProvider.OpenAI, modelInProvider: 'sora-2' }
+      { provider: AuthProvider.OpenAI, modelInProvider: 'sora-2' }
     ]);
     this.addMapping('sora-2-pro', [
-        { provider: AuthProvider.OpenAI, modelInProvider: 'sora-2-pro' }
+      { provider: AuthProvider.OpenAI, modelInProvider: 'sora-2-pro' }
     ]);
 
     // DeepSeek: V3.2 Exp
     this.addMapping('deepseek-v3.2-exp', [
-        { provider: AuthProvider.Qwen, modelInProvider: 'deepseek-v3.2-exp' }, // Via Qwen Proxy
-        { provider: AuthProvider.Generic, modelInProvider: 'deepseek-v3.2-exp' } // Via Generic/Local
+      { provider: AuthProvider.Qwen, modelInProvider: 'deepseek-v3.2-exp' }, // Via Qwen Proxy
+      { provider: AuthProvider.Generic, modelInProvider: 'deepseek-v3.2-exp' } // Via Generic/Local
     ]);
 
     // Qwen Models
     this.addMapping('qwen-max', [
-        { provider: AuthProvider.Qwen, modelInProvider: 'qwen-max' }
+      { provider: AuthProvider.Qwen, modelInProvider: 'qwen-max' }
     ]);
     this.addMapping('qwen-plus', [
-        { provider: AuthProvider.Qwen, modelInProvider: 'qwen-plus' }
+      { provider: AuthProvider.Qwen, modelInProvider: 'qwen-plus' }
     ]);
     this.addMapping('qwen-turbo', [
-        { provider: AuthProvider.Qwen, modelInProvider: 'qwen-turbo' }
+      { provider: AuthProvider.Qwen, modelInProvider: 'qwen-turbo' }
     ]);
 
     // iFlow Models
     this.addMapping('iflow-chat', [
-        { provider: AuthProvider.IFlow, modelInProvider: 'iflow-chat' }
+      { provider: AuthProvider.IFlow, modelInProvider: 'iflow-chat' }
     ]);
 
     // Kiro (AWS) Models
     this.addMapping('codewhisperer', [
-        { provider: AuthProvider.Kiro, modelInProvider: 'codewhisperer-analysis' }
+      { provider: AuthProvider.Kiro, modelInProvider: 'codewhisperer-analysis' }
     ]);
     this.addMapping('amazon-q-dev', [
-        { provider: AuthProvider.Kiro, modelInProvider: 'amazon-q-developer' }
+      { provider: AuthProvider.Kiro, modelInProvider: 'amazon-q-developer' }
     ]);
 
     // Generic / Llama Models (Default placeholders)
     this.addMapping('llama-3-8b', [
-        { provider: AuthProvider.Generic, modelInProvider: 'llama3:8b' }
+      { provider: AuthProvider.Generic, modelInProvider: 'llama3:8b' }
     ]);
     this.addMapping('mistral', [
-        { provider: AuthProvider.Generic, modelInProvider: 'mistral' }
+      { provider: AuthProvider.Generic, modelInProvider: 'mistral' }
     ]);
   }
 
@@ -185,15 +185,15 @@ export class UnifiedModelHub {
   public resolveModelChain(requestedModel: string, config: AuthMonsterConfig): string[] {
     const modelName = requestedModel.toLowerCase();
     const fallbacks = config.modelPriorities[modelName] || [];
-    
+
     // The chain starts with the requested model
     const chain = [modelName, ...fallbacks];
-    
+
     // Handle directionality if requested (though usually fallbacks are already ordered)
     // If 'up', we might want to prioritize smarter models in the fallbacks.
     // However, the prompt says "ordered array of fallback models" in config, 
     // so we'll respect that order mostly.
-    
+
     if (config.fallbackDirection === 'up') {
       // In a real implementation, we might have a 'smarts' score for each model.
       // For now, we'll assume the user-provided order is what they want, 
@@ -219,21 +219,21 @@ export class UnifiedModelHub {
     modelId: string,
     thinking?: string | number
   ): { valid: boolean; value?: string | number; warning?: string } {
-      if (thinking === undefined) return { valid: true };
-      return validateThinking(provider, modelId, thinking);
+    if (thinking === undefined) return { valid: true };
+    return validateThinking(provider, modelId, thinking);
   }
 
   /**
    * Selects the best (Provider, Account) combination to serve a request for a model.
    * Uses fallback chain if primary model has no available accounts.
    * 
-   * @param modelName Generic model name (e.g., 'gemini-3-flash-preview')
+   * @param modelName Generic model name (e.g., 'gemini-3-flash')
    * @param allAccounts List of all managed accounts across all providers
    * @param config Optional config to resolve fallbacks
    * @returns The selected provider, account, and provider-specific model name
    */
   public selectModelAccount(
-    modelName: string, 
+    modelName: string,
     allAccounts: ManagedAccount[],
     config?: AuthMonsterConfig
   ): { provider: AuthProvider, account: ManagedAccount, modelInProvider: string } | null {
@@ -242,14 +242,14 @@ export class UnifiedModelHub {
 
     // If config is provided, resolve the full fallback chain
     if (config) {
-        modelsToTry = this.resolveModelChain(modelName, config);
+      modelsToTry = this.resolveModelChain(modelName, config);
     }
 
     for (const model of modelsToTry) {
-        const selection = this.attemptSelectModelAccount(model, allAccounts);
-        if (selection) {
-            return selection;
-        }
+      const selection = this.attemptSelectModelAccount(model, allAccounts);
+      if (selection) {
+        return selection;
+      }
     }
 
     return null;
@@ -260,14 +260,14 @@ export class UnifiedModelHub {
     allAccounts: ManagedAccount[]
   ): { provider: AuthProvider, account: ManagedAccount, modelInProvider: string } | null {
     const hubEntries = this.modelMap.get(modelName.toLowerCase());
-    
+
     // If no explicit mapping, we can't route via Hub
     if (!hubEntries) return null;
 
     // 1. Gather all candidates (Account + Provider Model Info)
-    const candidates: Array<{ 
-      provider: AuthProvider, 
-      account: ManagedAccount, 
+    const candidates: Array<{
+      provider: AuthProvider,
+      account: ManagedAccount,
       modelInProvider: string,
       score: number,
       remainingQuota: number
@@ -275,7 +275,7 @@ export class UnifiedModelHub {
 
     for (const entry of hubEntries) {
       const providerAccounts = allAccounts.filter(a => a.provider === entry.provider);
-      
+
       for (const account of providerAccounts) {
         // Filter out unhealthy or rate-limited accounts
         if (!this.isAccountUsable(account)) continue;
@@ -346,11 +346,11 @@ export class UnifiedModelHub {
    */
   private getRemainingQuota(account: ManagedAccount, model: string): number {
     if (!account.quota) return 1000; // Default high value if untracked
-    
+
     if (account.quota.modelSpecific?.[model]) {
       return account.quota.modelSpecific[model].remaining;
     }
-    
+
     return account.quota.remaining;
   }
 

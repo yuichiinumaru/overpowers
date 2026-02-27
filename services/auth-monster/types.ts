@@ -36,7 +36,7 @@ export interface ManagedAccount {
   metadata?: Record<string, any>;
   lastUsed?: number;
   isHealthy: boolean;
-  
+
   // Rotation & Health fields
   healthScore?: number;
   rateLimitResetTime?: number;
@@ -70,9 +70,9 @@ export const AuthMonsterConfigSchema = z.object({
   method: z.enum(['sticky', 'round-robin', 'hybrid', 'quota-optimized']).default('sticky'),
   proxy: z.string().optional(),
   modelPriorities: z.record(z.string(), z.array(z.string())).default({
-    'gemini-3-pro-preview': ['claude-4.5-opus-thinking', 'gpt-5.2-codex'],
-    'claude-4.5-opus-thinking': ['gpt-5.2-codex', 'gemini-3-pro-preview'],
-    'gpt-5.2-codex': ['claude-4.5-opus-thinking', 'gemini-3-pro-preview']
+    'gemini-3-pro': ['claude-4.5-opus-thinking', 'gpt-5.2-codex'],
+    'claude-4.5-opus-thinking': ['gpt-5.2-codex', 'gemini-3-pro'],
+    'gpt-5.2-codex': ['claude-4.5-opus-thinking', 'gemini-3-pro']
   }),
   fallbackDirection: z.enum(['up', 'down']).default('down'),
   thinking: z.object({

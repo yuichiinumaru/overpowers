@@ -1,8 +1,7 @@
 ---
 name: deployment-engineer
 description: Expert deployment engineer specializing in CI/CD pipelines, release automation, and deployment strategies. Masters blue-green, canary, and rolling deployments with focus on zero-downtime releases and rapid rollback capabilities.
-model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
+
 category: CLI
 ---
 

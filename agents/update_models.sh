@@ -22,7 +22,7 @@ for f in ai_engineer architect_reviewer business_analyst cloud_architect \
          competitive_analyst llm_architect market_researcher microservices_architect \
          multi_agent_coordinator platform_engineer product_manager prompt_engineer \
          research_analyst trend_analyst ux_researcher workflow-orchestrator; do
-    update_model "${f}.md" "gemini-3-pro-preview"
+    update_model "${f}.md" "gemini-3-pro"
 done
 
 echo ""
@@ -33,7 +33,7 @@ for f in code_reviewer code_quality_reviewer performance_reviewer security_code_
          security_auditor compliance_auditor refactoring_specialist legacy_modernizer \
          risk_manager context_manager dependency_manager error_detective error_coordinator \
          debugger incident_responder pr_readiness_reviewer test-coverage-reviewer; do
-    update_model "${f}.md" "claude-opus-4-5"
+    update_model "${f}.md" "claude-opus-4-5-thinking"
 done
 
 echo ""
@@ -51,7 +51,7 @@ for f in technical_writer documentation_engineer api_documenter release_notes_wr
          mobile_developer mobile_app_developer flutter_expert swift_expert \
          database_administrator database_optimizer postgres_pro sql_pro \
          mcp_developer websocket_engineer data-engineer; do
-    update_model "${f}.md" "claude-sonnet-4-5"
+    update_model "${f}.md" "gemini-3-flash"
 done
 
 echo ""
@@ -65,7 +65,7 @@ for f in performance_engineer performance_monitor chaos_engineer sre_engineer \
          qa_expert test_automator devops_incident_responder \
          fintech_engineer payment_integration penetration_tester scrum_master \
          project_manager legal_advisor customer_success_manager sales-engineer; do
-    update_model "${f}.md" "gemini-3-flash-preview"
+    update_model "${f}.md" "gemini-3-flash"
 done
 
 echo ""
@@ -109,14 +109,14 @@ echo "════════════════════════�
 echo "📊 RESUMO"
 echo "═══════════════════════════════════════════════════════════════"
 echo "Contagem por modelo:"
-grep -l "model: gemini-3-pro-preview" *.md 2>/dev/null | wc -l | xargs printf "  🧠 Gemini 3 Pro:     %s agentes\n"
-grep -l "model: claude-opus-4-5" *.md 2>/dev/null | wc -l | xargs printf "  🔍 Claude Opus 4.5:  %s agentes\n"
-grep -l "model: claude-sonnet-4-5" *.md 2>/dev/null | wc -l | xargs printf "  ✍️ Claude Sonnet 4.5:%s agentes\n"
-grep -l "model: gemini-3-flash-preview" *.md 2>/dev/null | wc -l | xargs printf "  ⚡ Gemini 3 Flash:   %s agentes\n"
+grep -l "model: gemini-3-pro" *.md 2>/dev/null | wc -l | xargs printf "  🧠 Gemini 3 Pro:     %s agentes\n"
+grep -l "" *.md 2>/dev/null | wc -l | xargs printf "  🔍 Claude Opus 4.5:  %s agentes\n"
+grep -l "" *.md 2>/dev/null | wc -l | xargs printf "  ✍️ Claude Sonnet 4.5:%s agentes\n"
+grep -l "model: gemini-3-flash" *.md 2>/dev/null | wc -l | xargs printf "  ⚡ Gemini 3 Flash:   %s agentes\n"
 grep -l "model: grok-code" *.md 2>/dev/null | wc -l | xargs printf "  🆓 grok-code:        %s agentes\n"
 grep -l "model: glm-4.7-free" *.md 2>/dev/null | wc -l | xargs printf "  🆓 glm-4.7-free:     %s agentes\n"
 grep -l "model: big-pickle" *.md 2>/dev/null | wc -l | xargs printf "  🆓 big-pickle:       %s agentes\n"
 grep -l "model: minimax-m2.1-free" *.md 2>/dev/null | wc -l | xargs printf "  🆓 minimax-m2.1-free:%s agentes\n"
-grep -l "model: inherit" *.md 2>/dev/null | wc -l | xargs printf "  ⚪ inherit (inalterado): %s agentes\n"
+grep -l "" *.md 2>/dev/null | wc -l | xargs printf "  ⚪ inherit (inalterado): %s agentes\n"
 echo ""
 echo "✅ Atualização concluída!"

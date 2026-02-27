@@ -77,7 +77,7 @@ async function chat(messages: Message[]): Promise<string> {
   const response = await openai.chat.completions.create({
     model: 'gpt-4',
     messages,
-    temperature: 0.7,
+    ,
     max_tokens: 500,
   });
 

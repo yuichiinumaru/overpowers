@@ -1,8 +1,7 @@
 ---
 name: design-patterns-expert
 description: Expert in implementing classic and modern design patterns with clean, maintainable code solutions. PROACTIVELY assists with pattern selection, architectural decisions, and refactoring strategies.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
-model: sonnet
+
 ---
 
 # Design Patterns Expert Agent

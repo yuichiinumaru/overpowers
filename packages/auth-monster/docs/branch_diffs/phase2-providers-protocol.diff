@@ -3461,9 +3461,9 @@ index 4dfe65f..a1a6ab6 100644
 -    program.command('dialectics')
 -      .description('Run a dialectics session: split prompt between two models and synthesize.')
 -      .argument('<prompt>', 'The prompt to process')
--      .option('-a, --model-a <model>', 'First model', 'gemini-3-flash-preview')
+-      .option('-a, --model-a <model>', 'First model', 'gemini-3-flash')
 -      .option('-b, --model-b <model>', 'Second model', 'claude-3-7-sonnet-20250219')
--      .option('-s, --synthesizer <model>', 'Synthesizer model', 'gemini-3-pro-preview')
+-      .option('-s, --synthesizer <model>', 'Synthesizer model', 'gemini-3-pro')
 -      .action(async (prompt, options) => {
 -          await monster.init();
 -          const engine = new DialecticsEngine(monster);
@@ -3571,7 +3571,7 @@ index 4dfe65f..a1a6ab6 100644
 -                  body: {
 -                      messages: [{ role: 'user', content: prompt }],
 -                      model: details.modelInProvider,
--                      temperature: 0.2
+-                      
 -                  }
 -             });
 -
@@ -3672,7 +3672,7 @@ index b262aab..0000000
 -  'gemini-2.0-flash': { inputCostPer1M: 0.10, outputCostPer1M: 0.40 }, // Estimated
 -
 -  // Anthropic
--  'claude-3-5-sonnet': { inputCostPer1M: 3.00, outputCostPer1M: 15.00 },
+-  'claude-4-5-sonnet': { inputCostPer1M: 3.00, outputCostPer1M: 15.00 },
 -  'claude-3-haiku': { inputCostPer1M: 0.25, outputCostPer1M: 1.25 },
 -  'claude-3-opus': { inputCostPer1M: 15.00, outputCostPer1M: 75.00 },
 -  'claude-4.5-opus-thinking': { inputCostPer1M: 20.00, outputCostPer1M: 100.00 }, // Estimated
@@ -3713,7 +3713,7 @@ index b262aab..0000000
 -    if (PRICING_TABLE[model]) return PRICING_TABLE[model];
 -
 -    // Fuzzy match / Substring match
--    // e.g. "claude-3-5-sonnet-20241022" should match "claude-3-5-sonnet"
+-    // e.g. "claude-4-5-sonnet-thinking" should match "claude-4-5-sonnet"
 -    const key = Object.keys(PRICING_TABLE).find(k => model.includes(k));
 -    if (key) return PRICING_TABLE[key];
 -
@@ -3752,12 +3752,12 @@ index 357986c..0000000
 -    const body = {
 -        messages: [{ role: 'user', content: prompt }],
 -        model: detailsA.modelInProvider, // Some providers need model in body
--        temperature: 0.7
+-        
 -    };
 -    const bodyB = {
 -        messages: [{ role: 'user', content: prompt }],
 -        model: detailsB.modelInProvider,
--        temperature: 0.7
+-        
 -    };
 -
 -    // 3. Send Requests
@@ -3989,12 +3989,12 @@ index 0000000..a2b192c
 +     */
 +    initializeDefaultMappings() {
 +        // Gemini 3 Flash & Pro
-+        this.addMapping('gemini-3-flash-preview', [
++        this.addMapping('gemini-3-flash', [
 +            { provider: types_1.AuthProvider.Gemini, modelInProvider: 'gemini-3-flash' },
 +            { provider: types_1.AuthProvider.Windsurf, modelInProvider: 'gemini-3-flash' },
 +            { provider: types_1.AuthProvider.Kiro, modelInProvider: 'gemini-3-flash' }
 +        ]);
-+        this.addMapping('gemini-3-pro-preview', [
++        this.addMapping('gemini-3-pro', [
 +            { provider: types_1.AuthProvider.Gemini, modelInProvider: 'gemini-3-pro' },
 +            { provider: types_1.AuthProvider.Windsurf, modelInProvider: 'gemini-3-pro' }
 +        ]);
@@ -4018,7 +4018,7 @@ index 0000000..a2b192c
 +            { provider: types_1.AuthProvider.Cursor, modelInProvider: 'claude-3.7-sonnet' }
 +        ]);
 +        // Claude 4.5 Sonnet (Internal ID -> Provider ID)
-+        this.addMapping('claude-sonnet-4-5', [
++        this.addMapping('gemini-3-flash', [
 +            { provider: types_1.AuthProvider.Anthropic, modelInProvider: 'CLAUDE_SONNET_4_5_20250929_V1_0' },
 +            { provider: types_1.AuthProvider.Cursor, modelInProvider: 'claude-4.5-sonnet' }
 +        ]);
@@ -4145,7 +4145,7 @@ index 0000000..a2b192c
 +     * Selects the best (Provider, Account) combination to serve a request for a model.
 +     * Uses fallback chain if primary model has no available accounts.
 +     *
-+     * @param modelName Generic model name (e.g., 'gemini-3-flash-preview')
++     * @param modelName Generic model name (e.g., 'gemini-3-flash')
 +     * @param allAccounts List of all managed accounts across all providers
 +     * @param config Optional config to resolve fallbacks
 +     * @returns The selected provider, account, and provider-specific model name
@@ -5554,9 +5554,9 @@ index 0000000..09ff863
 +    method: zod_1.z.enum(['sticky', 'round-robin', 'hybrid', 'quota-optimized']).default('sticky'),
 +    proxy: zod_1.z.string().optional(),
 +    modelPriorities: zod_1.z.record(zod_1.z.string(), zod_1.z.array(zod_1.z.string())).default({
-+        'gemini-3-pro-preview': ['claude-4.5-opus-thinking', 'gpt-5.2-codex'],
-+        'claude-4.5-opus-thinking': ['gpt-5.2-codex', 'gemini-3-pro-preview'],
-+        'gpt-5.2-codex': ['claude-4.5-opus-thinking', 'gemini-3-pro-preview']
++        'gemini-3-pro': ['claude-4.5-opus-thinking', 'gpt-5.2-codex'],
++        'claude-4.5-opus-thinking': ['gpt-5.2-codex', 'gemini-3-pro'],
++        'gpt-5.2-codex': ['claude-4.5-opus-thinking', 'gemini-3-pro']
 +    }),
 +    fallbackDirection: zod_1.z.enum(['up', 'down']).default('down'),
 +    thinking: zod_1.z.object({
@@ -6154,11 +6154,11 @@ index 9fb198b..a22176a 100644
          await this.reportFailure(auth.account.id);
          lastError = error;
          continue; // Try next in chain
-diff --git a/src/providers/anthropic/index.js b/src/providers/anthropic/index.js
+diff --git a/src/providers/google/antigravity-index.js b/src/providers/google/antigravity-index.js
 new file mode 100644
 index 0000000..ad11525
 --- /dev/null
-+++ b/src/providers/anthropic/index.js
++++ b/src/providers/google/antigravity-index.js
 @@ -0,0 +1,116 @@
 +"use strict";
 +Object.defineProperty(exports, "__esModule", { value: true });
@@ -6276,11 +6276,11 @@ index 0000000..ad11525
 +}
 +exports.AnthropicProvider = AnthropicProvider;
 +AnthropicProvider.provider = types_1.AuthProvider.Anthropic;
-diff --git a/src/providers/anthropic/transform.js b/src/providers/anthropic/transform.js
+diff --git a/src/providers/google/antigravity-transform.js b/src/providers/google/antigravity-transform.js
 new file mode 100644
 index 0000000..4bccd53
 --- /dev/null
-+++ b/src/providers/anthropic/transform.js
++++ b/src/providers/google/antigravity-transform.js
 @@ -0,0 +1,86 @@
 +"use strict";
 +Object.defineProperty(exports, "__esModule", { value: true });
@@ -8736,11 +8736,11 @@ index 0000000..4d5a1c7
 +    'claude-3-haiku': types_1.ModelEnum.CLAUDE_3_HAIKU_20240307,
 +    'claude-3-haiku-20240307': types_1.ModelEnum.CLAUDE_3_HAIKU_20240307,
 +    'claude-3.5-sonnet': types_1.ModelEnum.CLAUDE_3_5_SONNET_20241022,
-+    'claude-3-5-sonnet': types_1.ModelEnum.CLAUDE_3_5_SONNET_20241022,
-+    'claude-3-5-sonnet-20241022': types_1.ModelEnum.CLAUDE_3_5_SONNET_20241022,
++    'claude-4-5-sonnet': types_1.ModelEnum.CLAUDE_3_5_SONNET_20241022,
++    'claude-4-5-sonnet-thinking': types_1.ModelEnum.CLAUDE_3_5_SONNET_20241022,
 +    'claude-3.5-haiku': types_1.ModelEnum.CLAUDE_3_5_HAIKU_20241022,
-+    'claude-3-5-haiku': types_1.ModelEnum.CLAUDE_3_5_HAIKU_20241022,
-+    'claude-3-5-haiku-20241022': types_1.ModelEnum.CLAUDE_3_5_HAIKU_20241022,
++    'claude-4-5-haiku': types_1.ModelEnum.CLAUDE_3_5_HAIKU_20241022,
++    'claude-4-5-haiku-20241022': types_1.ModelEnum.CLAUDE_3_5_HAIKU_20241022,
 +    'claude-3.7-sonnet': types_1.ModelEnum.CLAUDE_3_7_SONNET_20250219,
 +    'claude-3-7-sonnet': types_1.ModelEnum.CLAUDE_3_7_SONNET_20250219,
 +    'claude-3-7-sonnet-20250219': types_1.ModelEnum.CLAUDE_3_7_SONNET_20250219,
@@ -9400,7 +9400,7 @@ index 9cf8d7e..0000000
 -  await monster.init();
 -
 -  // Prefer a fast model, or fallback to config active
--  const model = 'gemini-3-flash-preview';
+-  const model = 'gemini-3-flash';
 -  const details = await monster.getAuthDetails(model) || await monster.getAuthDetails(config.active);
 -
 -  if (!details) {
@@ -9425,7 +9425,7 @@ index 9cf8d7e..0000000
 -          body: {
 -              messages: [{ role: 'user', content: prompt }],
 -              model: details.modelInProvider,
--              temperature: 0.3
+-              
 -          }
 -      });
 -
@@ -9707,7 +9707,7 @@ index 0000000..ad5539d
 +            method: 'sticky',
 +            providers: {},
 +            modelPriorities: {
-+                'gemini-3-pro-preview': ['claude-4.5-opus-thinking', 'gpt-5.2-codex']
++                'gemini-3-pro': ['claude-4.5-opus-thinking', 'gpt-5.2-codex']
 +            },
 +            fallbackDirection: 'down'
 +        },
@@ -9734,7 +9734,7 @@ index 0000000..ad5539d
 +    await monster.addAccount(geminiAcc);
 +    await monster.addAccount(anthropicAcc);
 +    console.log('--- Testing resolveModelChain ---');
-+    const chain = monster.hub.resolveModelChain('gemini-3-pro-preview', monster.config);
++    const chain = monster.hub.resolveModelChain('gemini-3-pro', monster.config);
 +    console.log('Chain:', chain);
 +    if (chain.length === 3 && chain[1] === 'claude-4.5-opus-thinking') {
 +        console.log('SUCCESS: resolveModelChain works');
@@ -9745,7 +9745,7 @@ index 0000000..ad5539d
 +    }
 +    console.log('--- Testing getAuthDetails Fallback ---');
 +    // First, it should pick Gemini
-+    const details1 = await monster.getAuthDetails('gemini-3-pro-preview');
++    const details1 = await monster.getAuthDetails('gemini-3-pro');
 +    console.log('Details 1:', details1?.account.email, details1?.provider);
 +    if (details1?.provider === types_1.AuthProvider.Gemini) {
 +        console.log('SUCCESS: Picked Gemini first');
@@ -9758,7 +9758,7 @@ index 0000000..ad5539d
 +    console.log('Reporting rate limit on Gemini account...');
 +    await monster.reportRateLimit(geminiAcc.id, 60000, 'QUOTA_EXHAUSTED');
 +    // Now it should pick Anthropic (claude-4.5-opus-thinking)
-+    const details2 = await monster.getAuthDetails('gemini-3-pro-preview');
++    const details2 = await monster.getAuthDetails('gemini-3-pro');
 +    console.log('Details 2:', details2?.account.email, details2?.provider);
 +    if (details2?.provider === types_1.AuthProvider.Anthropic) {
 +        console.log('SUCCESS: Picked Anthropic as fallback');
@@ -9800,7 +9800,7 @@ index 0000000..ad5539d
 +            text: async () => 'Success from ' + body.model
 +        };
 +    };
-+    const response = await monster.request('gemini-3-pro-preview', 'https://api.example.com', {
++    const response = await monster.request('gemini-3-pro', 'https://api.example.com', {
 +        method: 'POST',
 +        body: { prompt: 'Hello' }
 +    });
@@ -9859,7 +9859,7 @@ index 0000000..e5285f3
 +        tokens: { accessToken: 'token1' },
 +        isHealthy: true,
 +        healthScore: 100,
-+        metadata: { model: 'claude-3-5-sonnet-20241022' }
++        metadata: { model: 'claude-4-5-sonnet-thinking' }
 +    };
 +    const account2 = {
 +        id: 'acc2',
@@ -9868,7 +9868,7 @@ index 0000000..e5285f3
 +        tokens: { accessToken: 'token2' },
 +        isHealthy: true,
 +        healthScore: 100,
-+        metadata: { model: 'claude-3-5-sonnet-20241022' }
++        metadata: { model: 'claude-4-5-sonnet-thinking' }
 +    };
 +    await monster.addAccount(account1);
 +    await monster.addAccount(account2);
@@ -10517,7 +10517,7 @@ index 0000000..01f436e
 + * conflicts when rotating between different model families.
 + *
 + * This prevents 'Invalid signature' errors when rotating from Gemini (which adds signatures)
-+ * to Anthropic/OpenAI (which don't expect them).
++ * to google/antigravity-OpenAI (which don't expect them).
 + */
 +function sanitizeCrossModelRequest(body) {
 +    if (typeof body !== 'object' || body === null) {
@@ -10824,7 +10824,7 @@ index 0000000..2813072
 +                initial: 'claude-3-7-sonnet-20250219'
 +            }).run();
 +            const fallbackInput = await new Input({
-+                message: 'Enter fallback models (comma-separated, e.g., claude-3-5-sonnet, gemini-2.5-pro):'
++                message: 'Enter fallback models (comma-separated, e.g., claude-4-5-sonnet, gemini-2.5-pro):'
 +            }).run();
 +            const fallbacks = fallbackInput.split(',').map((s) => s.trim()).filter((s) => s.length > 0);
 +            if (fallbacks.length > 0) {
@@ -10915,8 +10915,8 @@ index eae242a..0000000
 -            ];
 -        });
 -
--        it('should resolve gemini-3-flash-preview to Gemini or Windsurf', () => {
--            const selection = hub.selectModelAccount('gemini-3-flash-preview', accounts);
+-        it('should resolve gemini-3-flash to Gemini or Windsurf', () => {
+-            const selection = hub.selectModelAccount('gemini-3-flash', accounts);
 -            expect(selection).to.not.be.null;
 -            expect([AuthProvider.Gemini, AuthProvider.Windsurf]).to.include(selection.provider);
 -            expect(selection.modelInProvider).to.equal('gemini-3-flash');
@@ -10924,7 +10924,7 @@ index eae242a..0000000
 -
 -        it('should fallback if primary provider is missing', () => {
 -            const onlyWindsurf = accounts.filter(a => a.provider === AuthProvider.Windsurf);
--            const selection = hub.selectModelAccount('gemini-3-flash-preview', onlyWindsurf);
+-            const selection = hub.selectModelAccount('gemini-3-flash', onlyWindsurf);
 -            expect(selection).to.not.be.null;
 -            expect(selection.provider).to.equal(AuthProvider.Windsurf);
 -        });

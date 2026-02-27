@@ -30,7 +30,7 @@ async function testStability() {
     tokens: { accessToken: 'token1' },
     isHealthy: true,
     healthScore: 100,
-    metadata: { model: 'claude-3-5-sonnet-20241022' }
+    metadata: { model: 'claude-4-5-sonnet-thinking' }
   };
 
   const account2 = {
@@ -40,7 +40,7 @@ async function testStability() {
     tokens: { accessToken: 'token2' },
     isHealthy: true,
     healthScore: 100,
-    metadata: { model: 'claude-3-5-sonnet-20241022' }
+    metadata: { model: 'claude-4-5-sonnet-thinking' }
   };
 
   await monster.addAccount(account1);

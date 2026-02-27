@@ -240,7 +240,7 @@ while IFS= read -r f; do
 ---
 description: Read ~/.aidevops/agents/${rel_path}
 mode: subagent
-temperature: 0.2
+
 tools:
   read: true
   bash: true

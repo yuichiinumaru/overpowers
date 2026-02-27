@@ -287,8 +287,8 @@ Default configuration (recommended for power users):
     const config: AuthConfig = {
         accounts: discovered,
         primaryModel: 'claude-4.5-opus-thinking',
-        fallbackChain: ['gpt-5.2-codex', 'claude-4.5-sonnet', 'gemini-3-pro-preview'],
-        bulkModel: 'gemini-3-flash-preview'
+        fallbackChain: ['gpt-5.2-codex', 'claude-4.5-sonnet', 'gemini-3-pro'],
+        bulkModel: 'gemini-3-flash'
     };
 
     const configPath = path.join(os.homedir(), '.config', 'opencode', 'auth-monster-config.json');

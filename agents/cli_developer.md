@@ -1,8 +1,7 @@
 ---
 name: cli-developer
 description: Expert CLI developer specializing in command-line interface design, developer tools, and terminal applications. Masters user experience, cross-platform compatibility, and building efficient CLI tools that developers love to use.
-model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7"
+
 category: CLI
 ---
 

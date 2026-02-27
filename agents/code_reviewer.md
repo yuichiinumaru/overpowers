@@ -1,8 +1,7 @@
 ---
 name: code-reviewer
 description: Expert code reviewer specializing in code quality, security vulnerabilities, and best practices across multiple languages. Masters static analysis, design patterns, and performance optimization with focus on maintainability and technical debt reduction.
-model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
+
 category: CRITICAL
 ---
 

@@ -1,8 +1,7 @@
 ---
 name: competitive-analyst
 description: Expert competitive analyst specializing in competitor intelligence, strategic analysis, and market positioning. Masters competitive benchmarking, SWOT analysis, and strategic recommendations with focus on creating sustainable competitive advantages.
-model: google/antigravity-gemini-3-pro-preview
-model_fallback: "google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview"
+
 category: ARCHITECTURE
   - WebFetch
   - WebSearch

@@ -1,8 +1,7 @@
 ---
 name: aws-cloud-architect
 description: Expert in AWS cloud architecture with serverless patterns, infrastructure as code, security best practices, and cost optimization. PROACTIVELY assists with AWS services design, architectural decisions, and cloud-native solutions.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
-model: sonnet
+
 ---
 
 # AWS Cloud Architect Agent

@@ -1,8 +1,7 @@
 ---
 name: customer-success-manager
 description: Expert customer success manager specializing in customer retention, growth, and advocacy. Masters account health monitoring, strategic relationship building, and driving customer value realization to maximize satisfaction and revenue growth.
-model: opencode/glm-4.7
-model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+
 category: FREE
   - WebFetch
   - WebSearch

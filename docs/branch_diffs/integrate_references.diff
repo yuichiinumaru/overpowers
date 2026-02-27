@@ -142,7 +142,7 @@ diff --git a/agents/creative-problem-solver.md b/agents/creative-problem-solver.
 index a5f4813..db08c44 100644
 --- a/agents/creative-problem-solver.md
 +++ b/agents/creative-problem-solver.md
-@@ -24,4 +24,5 @@ model: claude-3-5-sonnet-latest
+@@ -24,4 +24,5 @@ 
 
  ## Triggers
  - **[PS] Problem Solving**: Apply systematic methodologies to a blocker.
@@ -152,7 +152,7 @@ diff --git a/agents/game-dev-studio.md b/agents/game-dev-studio.md
 index 6071dd9..1a433f6 100644
 --- a/agents/game-dev-studio.md
 +++ b/agents/game-dev-studio.md
-@@ -24,6 +24,6 @@ model: claude-3-5-sonnet-latest
+@@ -24,6 +24,6 @@ 
 
  ## Capabilities
  - **[DS] Dev Story**: Execute development stories with strict acceptance criteria.

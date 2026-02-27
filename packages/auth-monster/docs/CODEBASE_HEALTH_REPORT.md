@@ -6,7 +6,7 @@
 ## 1. Architectural Alignment
 The codebase exhibits a high degree of alignment with the documented architecture in `README.md` and `AGENTS.md`.
 - **Core Loop:** The `UnifiedModelHub` -> `AccountRotator` -> `Provider` flow is implemented exactly as described.
-- **Conventions:** `AGENTS.md` conventions (Port 1455, mcp_ prefix, etc.) are strictly enforced in the code (e.g., `src/providers/anthropic/transform.ts`).
+- **Conventions:** `AGENTS.md` conventions (Port 1455, mcp_ prefix, etc.) are strictly enforced in the code (e.g., `src/providers/google/antigravity-transform.ts`).
 - **Modularity:** Providers are well-isolated in `src/providers/`, sharing a common interface implicitly (though strict TypeScript interface enforcement could be tighter).
 
 ## 2. Key Components Analysis

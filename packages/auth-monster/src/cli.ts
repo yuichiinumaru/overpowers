@@ -127,9 +127,9 @@ async function main() {
   program.command('dialectics')
     .description('Run a dialectics session: split prompt between two models and synthesize.')
     .argument('<prompt>', 'The prompt to process')
-    .option('-a, --model-a <model>', 'First model', 'gemini-3-flash-preview')
+    .option('-a, --model-a <model>', 'First model', 'gemini-3-flash')
     .option('-b, --model-b <model>', 'Second model', 'claude-3-7-sonnet-20250219')
-    .option('-s, --synthesizer <model>', 'Synthesizer model', 'gemini-3-pro-preview')
+    .option('-s, --synthesizer <model>', 'Synthesizer model', 'gemini-3-pro')
     .action(async (prompt, options) => {
       await monster.init();
       const engine = new DialecticsEngine(monster);
@@ -236,7 +236,7 @@ ${runner} "${scriptPath}" "$@"
           body: {
             messages: [{ role: 'user', content: prompt }],
             model: details.modelInProvider,
-            temperature: 0.2
+            
           }
         });
 

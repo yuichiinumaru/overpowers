@@ -14,7 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 ARCHIVE_DIR = Path("/home/sephiroth/.config/opencode/archive")
 OUTPUT_DIR = Path("/home/sephiroth/.config/opencode/Overpowers/docs")
 INVENTORY_FILE = OUTPUT_DIR / "inventory.md"
-MODEL = "google/antigravity-claude-sonnet-4-5-thinking"
+MODEL = "google/antigravity-gemini-3-flash"
 MAX_PARALLEL = 3  # Number of concurrent subagents
 
 # Prompt template

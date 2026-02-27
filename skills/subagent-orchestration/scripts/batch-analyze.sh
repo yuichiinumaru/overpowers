@@ -6,7 +6,7 @@ set -e
 
 OUTPUT_DIR="${2:-./analysis}"
 MAX_PARALLEL="${3:-3}"
-MODEL="${SUBAGENT_MODEL:-google/antigravity-claude-sonnet-4-5-thinking}"
+MODEL="${SUBAGENT_MODEL:-google/antigravity-gemini-3-flash}"
 
 # Collect directories from args
 DIRS=()

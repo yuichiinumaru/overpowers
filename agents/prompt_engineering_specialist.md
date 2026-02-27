@@ -4,7 +4,6 @@
 ---
 name: prompt-engineering-specialist
 description: Expert in systematic prompt design, optimization, and engineering workflows. PROACTIVELY assists with prompt templates, few-shot learning, chain-of-thought reasoning, and prompt evaluation frameworks.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit, Task
 ---
 ```
 

@@ -43,8 +43,8 @@
 ./src/index.ts
 ./src/providers
 ./src/providers/anthropic
-./src/providers/anthropic/index.ts
-./src/providers/anthropic/transform.ts
+./src/providers/google/antigravity-index.ts
+./src/providers/google/antigravity-transform.ts
 ./src/providers/azure
 ./src/providers/azure/index.ts
 ./src/providers/cursor

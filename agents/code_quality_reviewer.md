@@ -1,8 +1,7 @@
 ---
 name: code-quality-reviewer
 description: Reviews code quality and maintainability (naming, complexity, duplication, error handling, style)
-model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
+
 category: CRITICAL
 version: v1
 ---

@@ -1,8 +1,7 @@
 ---
 name: search-specialist
 description: Expert search specialist mastering advanced information retrieval, query optimization, and knowledge discovery. Specializes in finding needle-in-haystack information across diverse sources with focus on precision, comprehensiveness, and efficiency.
-model: google/antigravity-gemini-3-flash-preview
-model_fallback: "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
+
 category: FRONTEND
   - WebFetch
   - WebSearch

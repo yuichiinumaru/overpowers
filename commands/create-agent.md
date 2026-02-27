@@ -53,7 +53,7 @@ assistant: "[How assistant should respond and use this agent]"
 [Additional example...]
 </example>
 
-model: inherit
+
 color: blue
 tools: ["Read", "Write", "Grep"]
 ---
@@ -430,7 +430,7 @@ PR review request triggers the code_quality_reviewer agent.
 </commentary>
 </example>
 
-model: inherit
+
 color: blue
 tools: ["Read", "Grep", "Glob"]
 ---
@@ -505,7 +505,7 @@ Explicit test generation request.
 </commentary>
 </example>
 
-model: inherit
+
 color: green
 tools: ["Read", "Write", "Grep", "Glob"]
 ---

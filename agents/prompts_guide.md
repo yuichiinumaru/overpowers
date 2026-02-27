@@ -77,7 +77,7 @@ A comprehensive system for generating world-class, production-ready prompts for 
 
 ## Contextual Best Practices Integration
 
-[Domain-specific best practices + OpenAI/Anthropic/Google]
+[Domain-specific best practices + OpenAI/google/antigravity-Google]
 
 ## Compliance & Regulatory Considerations
 
@@ -385,7 +385,7 @@ Q7: What style? (Formal legal, Client-friendly, Court-ready, Internal)
 
 Combine three sources:
 
-1. **LLM Best Practices** (OpenAI/Anthropic/Google)
+1. **LLM Best Practices** (OpenAI/google/antigravity-Google)
    - Clear instructions
    - Structured output
    - Examples-driven

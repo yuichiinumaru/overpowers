@@ -33,7 +33,7 @@ Add fallback logic directly to `run-subagent.sh`:
 
 MODELS=(
     "google/antigravity-claude-opus-4-5-thinking"
-    "google/antigravity-claude-sonnet-4-5-thinking"
+    "google/antigravity-gemini-3-flash"
     "windsurf/glm-4.7"        # GLM fallback
     "google/opencode-gemini-pro"          # Gemini fallback
 )
@@ -80,7 +80,7 @@ STATE_FILE="/tmp/model_rotation_state"
 
 MODELS=(
     "google/antigravity-claude-opus-4-5-thinking"
-    "google/antigravity-claude-sonnet-4-5-thinking"
+    "google/antigravity-gemini-3-flash"
     "windsurf/glm-4.7"
 )
 
@@ -146,7 +146,7 @@ MODEL_STATUS_FILE = Path.home() / ".config/opencode/model_status.json"
 # Model priorities (higher = better)
 MODEL_PRIORITIES = {
     "google/antigravity-claude-opus-4-5-thinking": 100,
-    "google/antigravity-claude-sonnet-4-5-thinking": 80,
+    "google/antigravity-gemini-3-flash": 80,
     "windsurf/glm-4.7": 50,
     "google/opencode-gemini-pro": 40,
 }
@@ -264,7 +264,7 @@ Add to ALL agent configs as last fallback:
 ```json
 {
   "models": {
-    "primary": "google/antigravity-claude-sonnet-4-5-thinking",
+    "primary": "google/antigravity-gemini-3-flash",
     "fallback": [
       "google/antigravity-claude-opus-4-5-thinking",
       "windsurf/glm-4.7"
@@ -281,7 +281,7 @@ Update personas to include fallback configuration in `mcp.json`.
 
 ```bash
 # Default and fallback models
-export SUBAGENT_MODEL="google/antigravity-claude-sonnet-4-5-thinking"
+export SUBAGENT_MODEL="google/antigravity-gemini-3-flash"
 export SUBAGENT_FALLBACK="windsurf/glm-4.7"
 
 # Quota preservation

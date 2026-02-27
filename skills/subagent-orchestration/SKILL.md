@@ -21,7 +21,7 @@ Launch multiple OpenCode subagents in parallel to distribute complex tasks acros
 cd /home/sephiroth/work
 
 # Single subagent
-OPENCODE_PERMISSION='"allow"' opencode run "Your task here" --model google/antigravity-claude-sonnet-4-5-thinking
+OPENCODE_PERMISSION='"allow"' opencode run "Your task here" --model google/antigravity-gemini-3-flash
 
 # Using the orchestrator script
 ./scripts/run-subagent.sh "Analyze this codebase" output.md
@@ -74,15 +74,15 @@ Check database/ for N+1 queries
 
 | Use Case | Recommended Model |
 |----------|-------------------|
-| Fast analysis | `google/antigravity-claude-sonnet-4-5-thinking` |
+| Fast analysis | `google/antigravity-gemini-3-flash` |
 | Complex reasoning | `google/antigravity-claude-opus-4-5-thinking` |
-| Code generation | `google/antigravity-claude-sonnet-4-5-thinking` |
+| Code generation | `google/antigravity-gemini-3-flash` |
 
 ## Environment Variables
 
 ```bash
 export OPENCODE_PERMISSION='"allow"'  # Required for non-interactive
-export SUBAGENT_MODEL="google/antigravity-claude-sonnet-4-5-thinking"
+export SUBAGENT_MODEL="google/antigravity-gemini-3-flash"
 export SUBAGENT_TIMEOUT=300  # 5 minutes max per task
 ```
 

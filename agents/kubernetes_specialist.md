@@ -1,8 +1,7 @@
 ---
 name: kubernetes-specialist
 description: Expert Kubernetes specialist mastering container orchestration, cluster management, and cloud-native architectures. Specializes in production-grade deployments, security hardening, and performance optimization with focus on scalability and reliability.
-model: opencode/glm-4.7
-model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
+
 category: TOOLING
 ---
 

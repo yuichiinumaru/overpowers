@@ -1,8 +1,7 @@
 ---
 name: legal-advisor
 description: Expert legal advisor specializing in technology law, compliance, and risk mitigation. Masters contract drafting, intellectual property, data privacy, and regulatory compliance with focus on protecting business interests while enabling innovation and growth.
-model: opencode/glm-4.7
-model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+
 category: FREE
   - WebFetch
   - WebSearch

@@ -1,8 +1,7 @@
 ---
 name: rails-expert
 description: Expert Rails specialist mastering Rails 7+ with modern conventions. Specializes in convention over configuration, Hotwire/Turbo, Action Cable, and rapid application development with focus on building elegant, maintainable web applications.
-model: opencode/glm-4.7
-model_fallback: "opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1"
+
 category: FREE
 ---
 

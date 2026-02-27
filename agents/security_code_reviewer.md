@@ -1,8 +1,7 @@
 ---
 name: security-code-reviewer
 description: Reviews diffs for security issues (OWASP Top 10, secrets, authn/z, input handling, configs)
-model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
+
 category: CRITICAL
 version: v1
 ---

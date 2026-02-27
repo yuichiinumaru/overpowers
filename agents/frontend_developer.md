@@ -1,8 +1,7 @@
 ---
 name: frontend-developer
 description: Expert UI engineer focused on crafting robust, scalable frontend solutions. Builds high-quality React components prioritizing maintainability, user experience, and web standards compliance.
-model: google/antigravity-gemini-3-flash-preview
-model_fallback: "opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1"
+
 category: FRONTEND
 ---
 

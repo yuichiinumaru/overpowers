@@ -36,7 +36,7 @@ describe('Core Components', () => {
             accounts[1].isHealthy = false;
 
             const selected = [];
-            for(let i=0; i<5; i++) {
+            for (let i = 0; i < 5; i++) {
                 selected.push(rotator.selectAccount(accounts, 'round-robin'));
             }
 
@@ -58,8 +58,8 @@ describe('Core Components', () => {
             ];
         });
 
-        it('should resolve gemini-3-flash-preview to Gemini or Windsurf', () => {
-            const selection = hub.selectModelAccount('gemini-3-flash-preview', accounts);
+        it('should resolve gemini-3-flash to Gemini or Windsurf', () => {
+            const selection = hub.selectModelAccount('gemini-3-flash', accounts);
             expect(selection).to.not.be.null;
             expect([AuthProvider.Gemini, AuthProvider.Windsurf]).to.include(selection.provider);
             expect(selection.modelInProvider).to.equal('gemini-3-flash');
@@ -67,7 +67,7 @@ describe('Core Components', () => {
 
         it('should fallback if primary provider is missing', () => {
             const onlyWindsurf = accounts.filter(a => a.provider === AuthProvider.Windsurf);
-            const selection = hub.selectModelAccount('gemini-3-flash-preview', onlyWindsurf);
+            const selection = hub.selectModelAccount('gemini-3-flash', onlyWindsurf);
             expect(selection).to.not.be.null;
             expect(selection.provider).to.equal(AuthProvider.Windsurf);
         });

@@ -13,7 +13,7 @@ Create and manage Jira issues using the Jira REST API or MCP.
 ### Option 1: Jira MCP Server
 Install the Jira MCP server for seamless integration:
 ```bash
-npx @anthropic/create-mcp-server jira
+npx @google/antigravity-create-mcp-server jira
 ```
 
 ### Option 2: Direct API

@@ -32,7 +32,7 @@
       "command": [
         "npx",
         "-y",
-        "@anthropic/hyperbrowser-mcp"
+        "@google/antigravity-hyperbrowser-mcp"
       ],
       "enabled": true
     },

@@ -12,7 +12,7 @@ const PRICING_TABLE: Record<string, ModelPricing> = {
   'gemini-2.0-flash': { inputCostPer1M: 0.10, outputCostPer1M: 0.40 }, // Estimated
 
   // Anthropic
-  'claude-3-5-sonnet': { inputCostPer1M: 3.00, outputCostPer1M: 15.00 },
+  'claude-4-5-sonnet': { inputCostPer1M: 3.00, outputCostPer1M: 15.00 },
   'claude-3-haiku': { inputCostPer1M: 0.25, outputCostPer1M: 1.25 },
   'claude-3-opus': { inputCostPer1M: 15.00, outputCostPer1M: 75.00 },
   'claude-4.5-opus-thinking': { inputCostPer1M: 20.00, outputCostPer1M: 100.00 }, // Estimated
@@ -53,7 +53,7 @@ export class CostEstimator {
     if (PRICING_TABLE[model]) return PRICING_TABLE[model];
 
     // Fuzzy match / Substring match
-    // e.g. "claude-3-5-sonnet-20241022" should match "claude-3-5-sonnet"
+    // e.g. "claude-4-5-sonnet-thinking" should match "claude-4-5-sonnet"
     const key = Object.keys(PRICING_TABLE).find(k => model.includes(k));
     if (key) return PRICING_TABLE[key];
 

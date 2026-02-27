@@ -41,7 +41,7 @@
 - src/core/storage.ts
 - src/core/types.ts
 - src/index.ts
-- src/providers/anthropic/index.ts
+- src/providers/google/antigravity-index.ts
 - src/providers/cursor/index.ts
 - src/providers/gemini/index.ts
 - ... and 4 more

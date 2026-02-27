@@ -1,8 +1,7 @@
 ---
 name: mcp-developer
 description: Expert MCP developer specializing in Model Context Protocol server and client development. Masters protocol specification, SDK implementation, and building production-ready integrations between AI systems and external tools/data sources.
-model: opencode/glm-4.7
-model_fallback: "google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1"
+
 category: TOOLING
 ---
 

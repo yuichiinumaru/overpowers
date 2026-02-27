@@ -4,7 +4,7 @@
 
 export OPENCODE_PERMISSION='"allow"'
 
-MODEL="google/antigravity-claude-sonnet-4-5-thinking"
+MODEL="google/antigravity-gemini-3-flash"
 TEST_DIR="/home/sephiroth/work"
 
 echo "🧪 Testing subagent with NON-HIDDEN directory"

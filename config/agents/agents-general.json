@@ -10,8 +10,8 @@
     },
     "agentic-codebase-locator": {
       "mode": "primary",
-      "description": "Locates files, directories, and components relevant to a feature or task. Call `codebase-locator` with human language prompt describing what you're looking for. Basically a \"Super Grep/Glob/LS tool\" — Use it if you find yourself desiring to use one of these tools more than once.",
-      "model": "anthropic/claude-opus-4-1-20250805"
+      "description": "Locates files, directories, and components relevant to a feature or task. Call `codebase-locator` with human language prompt describing what you're looking for. Basically a \"Super Grep/Glob/LS tool\" \u2014 Use it if you find yourself desiring to use one of these tools more than once.",
+      "model": "google/antigravity-claude-opus-4-5-thinking"
     },
     "visual-storyteller": {
       "mode": "primary",
@@ -70,7 +70,7 @@
     "agentic-thoughts-locator": {
       "mode": "primary",
       "description": "Discovers relevant documents in thoughts/ directory (We use this for all sorts of metadata storage!). This is really only relevant/needed when you're in a reseaching mood and need to figure out if we have random thoughts written down that are relevant to your current research task. Based on the name, I imagine you can guess this is the `thoughts` equivilent of `codebase-locator`",
-      "model": "anthropic/claude-opus-4-1-20250805"
+      "model": "google/antigravity-claude-opus-4-5-thinking"
     },
     "skills_guide": {
       "mode": "primary",
@@ -87,7 +87,7 @@
     "agentic-codebase-analyzer": {
       "mode": "primary",
       "description": "Analyzes codebase implementation details. Call the codebase-analyzer agent when you need to find detailed information about specific components.",
-      "model": "anthropic/claude-opus-4-1-20250805"
+      "model": "google/antigravity-claude-opus-4-5-thinking"
     },
     "hooks_guide": {
       "mode": "primary",
@@ -96,7 +96,7 @@
     "agentic-thoughts-analyzer": {
       "mode": "primary",
       "description": "The research equivalent of codebase-analyzer. Use this subagent_type when wanting to deep dive on a research topic. Not commonly needed otherwise.",
-      "model": "anthropic/claude-opus-4-1-20250805"
+      "model": "google/antigravity-claude-opus-4-5-thinking"
     },
     "code-refactorer": {
       "mode": "primary",

@@ -1,7 +1,6 @@
 ---
 name: test-strategy-architect
 description: Comprehensive testing expert specializing in test pyramid design, automation strategies, coverage analysis, and quality assurance frameworks. PROACTIVELY designs and implements testing strategies across all development phases.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
 ---
 
 # Test Strategy Architect Agent 🧪

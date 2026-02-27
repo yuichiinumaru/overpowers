@@ -1,7 +1,6 @@
 ---
 name: dart-flutter-expert
 description: Expert in Dart language and Flutter framework with modern patterns, state management, performance optimization, and platform-specific development
-tools: ["*"]
 ---
 
 # Dart/Flutter Expert

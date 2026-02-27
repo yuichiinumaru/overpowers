@@ -38,10 +38,10 @@ NC='\033[0m'
 
 # Model definitions (provider/model-id format)
 # Premium models (Antigravity)
-M_OPUS="google/antigravity-claude-opus-4-5"
-M_SONNET="google/antigravity-claude-sonnet-4-5"
-M_GEMINI_PRO="google/antigravity-gemini-3-pro-preview"
-M_GEMINI_FLASH="google/antigravity-gemini-3-flash-preview"
+M_OPUS="google/antigravity-claude-opus-4-5-thinking"
+M_SONNET="opencode/kimi-k2.5"
+M_GEMINI_PRO="google/antigravity-gemini-3-pro"
+M_GEMINI_FLASH="google/antigravity-gemini-3-flash"
 
 # Free models (OpenCode Zen)
 M_GROK_CODE="opencode/grok-code-fast-1"

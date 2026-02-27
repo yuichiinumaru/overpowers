@@ -6,7 +6,7 @@ export OPENCODE_PERMISSION='"allow"'
 
 ARCHIVE="/home/sephiroth/.config/opencode/archive"
 OUTPUT_DIR="/home/sephiroth/.config/opencode/Overpowers/docs"
-MODEL="google/antigravity-claude-sonnet-4-5-thinking"
+MODEL="google/antigravity-gemini-3-flash"
 
 # Test with just ONE repo first
 REPO="AIPex"

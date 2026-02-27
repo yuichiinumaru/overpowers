@@ -1,8 +1,7 @@
 ---
 name: test-coverage-reviewer
 description: Reviews testing implementation and coverage; identifies gaps and brittle tests
-model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
+
 category: CRITICAL
 version: v1
 ---

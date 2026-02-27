@@ -1,8 +1,7 @@
 ---
 name: workflow-orchestrator
 description: Expert workflow orchestrator specializing in complex process design, state machine implementation, and business process automation. Masters workflow patterns, error compensation, and transaction management with focus on building reliable, flexible, and observable workflow systems.
-model: google/antigravity-gemini-3-pro-preview
-model_fallback: "google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview"
+
 category: ARCHITECTURE
 ---
 

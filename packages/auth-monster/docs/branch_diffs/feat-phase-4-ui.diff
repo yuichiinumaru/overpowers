@@ -1690,9 +1690,9 @@ index 4dfe65f..fabf0c4 100644
 -    program.command('dialectics')
 -      .description('Run a dialectics session: split prompt between two models and synthesize.')
 -      .argument('<prompt>', 'The prompt to process')
--      .option('-a, --model-a <model>', 'First model', 'gemini-3-flash-preview')
+-      .option('-a, --model-a <model>', 'First model', 'gemini-3-flash')
 -      .option('-b, --model-b <model>', 'Second model', 'claude-3-7-sonnet-20250219')
--      .option('-s, --synthesizer <model>', 'Synthesizer model', 'gemini-3-pro-preview')
+-      .option('-s, --synthesizer <model>', 'Synthesizer model', 'gemini-3-pro')
 -      .action(async (prompt, options) => {
 -          await monster.init();
 -          const engine = new DialecticsEngine(monster);
@@ -1800,7 +1800,7 @@ index 4dfe65f..fabf0c4 100644
 -                  body: {
 -                      messages: [{ role: 'user', content: prompt }],
 -                      model: details.modelInProvider,
--                      temperature: 0.2
+-                      
 -                  }
 -             });
 -
@@ -1846,7 +1846,7 @@ index b262aab..0000000
 -  'gemini-2.0-flash': { inputCostPer1M: 0.10, outputCostPer1M: 0.40 }, // Estimated
 -
 -  // Anthropic
--  'claude-3-5-sonnet': { inputCostPer1M: 3.00, outputCostPer1M: 15.00 },
+-  'claude-4-5-sonnet': { inputCostPer1M: 3.00, outputCostPer1M: 15.00 },
 -  'claude-3-haiku': { inputCostPer1M: 0.25, outputCostPer1M: 1.25 },
 -  'claude-3-opus': { inputCostPer1M: 15.00, outputCostPer1M: 75.00 },
 -  'claude-4.5-opus-thinking': { inputCostPer1M: 20.00, outputCostPer1M: 100.00 }, // Estimated
@@ -1887,7 +1887,7 @@ index b262aab..0000000
 -    if (PRICING_TABLE[model]) return PRICING_TABLE[model];
 -
 -    // Fuzzy match / Substring match
--    // e.g. "claude-3-5-sonnet-20241022" should match "claude-3-5-sonnet"
+-    // e.g. "claude-4-5-sonnet-thinking" should match "claude-4-5-sonnet"
 -    const key = Object.keys(PRICING_TABLE).find(k => model.includes(k));
 -    if (key) return PRICING_TABLE[key];
 -
@@ -1926,12 +1926,12 @@ index 357986c..0000000
 -    const body = {
 -        messages: [{ role: 'user', content: prompt }],
 -        model: detailsA.modelInProvider, // Some providers need model in body
--        temperature: 0.7
+-        
 -    };
 -    const bodyB = {
 -        messages: [{ role: 'user', content: prompt }],
 -        model: detailsB.modelInProvider,
--        temperature: 0.7
+-        
 -    };
 -
 -    // 3. Send Requests
@@ -2755,10 +2755,10 @@ index 9fb198b..c17cc18 100644
    /**
     * Returns all managed accounts (including tokens)
     */
-diff --git a/src/providers/anthropic/index.ts b/src/providers/anthropic/index.ts
+diff --git a/src/providers/google/antigravity-index.ts b/src/providers/google/antigravity-index.ts
 index de79269..151c4b7 100644
---- a/src/providers/anthropic/index.ts
-+++ b/src/providers/anthropic/index.ts
+--- a/src/providers/google/antigravity-index.ts
++++ b/src/providers/google/antigravity-index.ts
 @@ -33,10 +33,6 @@ export class AnthropicProvider {
      return headers;
    }
@@ -2984,7 +2984,7 @@ index 9cf8d7e..0000000
 -  await monster.init();
 -
 -  // Prefer a fast model, or fallback to config active
--  const model = 'gemini-3-flash-preview';
+-  const model = 'gemini-3-flash';
 -  const details = await monster.getAuthDetails(model) || await monster.getAuthDetails(config.active);
 -
 -  if (!details) {
@@ -3009,7 +3009,7 @@ index 9cf8d7e..0000000
 -          body: {
 -              messages: [{ role: 'user', content: prompt }],
 -              model: details.modelInProvider,
--              temperature: 0.3
+-              
 -          }
 -      });
 -
@@ -3100,8 +3100,8 @@ index eae242a..0000000
 -            ];
 -        });
 -
--        it('should resolve gemini-3-flash-preview to Gemini or Windsurf', () => {
--            const selection = hub.selectModelAccount('gemini-3-flash-preview', accounts);
+-        it('should resolve gemini-3-flash to Gemini or Windsurf', () => {
+-            const selection = hub.selectModelAccount('gemini-3-flash', accounts);
 -            expect(selection).to.not.be.null;
 -            expect([AuthProvider.Gemini, AuthProvider.Windsurf]).to.include(selection.provider);
 -            expect(selection.modelInProvider).to.equal('gemini-3-flash');
@@ -3109,7 +3109,7 @@ index eae242a..0000000
 -
 -        it('should fallback if primary provider is missing', () => {
 -            const onlyWindsurf = accounts.filter(a => a.provider === AuthProvider.Windsurf);
--            const selection = hub.selectModelAccount('gemini-3-flash-preview', onlyWindsurf);
+-            const selection = hub.selectModelAccount('gemini-3-flash', onlyWindsurf);
 -            expect(selection).to.not.be.null;
 -            expect(selection.provider).to.equal(AuthProvider.Windsurf);
 -        });

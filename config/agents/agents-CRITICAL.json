@@ -3,76 +3,65 @@
     "incident-responder": {
       "mode": "primary",
       "description": "Expert incident responder specializing in security and operational incident management. Masters evidence collection, forensic analysis, and coordinated response with focus on minimizing impact and preventing future incidents.",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
+      "model": "google/antigravity-claude-opus-4-5-thinking"
     },
     "performance-reviewer": {
       "mode": "subagent",
       "description": "Identifies performance bottlenecks (algorithmic complexity, N+1, caching, memory/IO)",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7",
-      "prompt": "Analyze the diff for performance risks:\n- Inefficient complexity (nested loops, repeated work), blocking ops\n- N+1 DB/API calls, missing pagination/projection, caching/memoization ops\n- Memory/IO patterns (large allocations in loops, unclosed handles)\n\nRespond with:\nCritical Issues:\n- <file>:<line> — <issue> — Impact: <why it matters>\nOptimization Opportunities:\n- <suggested change>\nBest Practices:\n- <preventive recommendation>"
+      "model": "google/antigravity-claude-opus-4-5-thinking",
+      "prompt": "Analyze the diff for performance risks:\n- Inefficient complexity (nested loops, repeated work), blocking ops\n- N+1 DB/API calls, missing pagination/projection, caching/memoization ops\n- Memory/IO patterns (large allocations in loops, unclosed handles)\n\nRespond with:\nCritical Issues:\n- <file>:<line> \u2014 <issue> \u2014 Impact: <why it matters>\nOptimization Opportunities:\n- <suggested change>\nBest Practices:\n- <preventive recommendation>"
     },
     "pr-readiness-reviewer": {
       "mode": "subagent",
       "description": "Assess branch readiness for pull request submission (tests, docs, blockers)",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7",
-      "prompt": "You are a senior engineer verifying that a branch is ready for pull request submission. You will receive git_summarizer output and optional notes from the caller.\n\nDelivereables:\n- A readiness verdict: `Ready` or `Needs Work`\n- Required actions grouped by priority with suggested owners\n- Clear callouts for missing tests, documentation, changelog entries, and dependency risks\n\nChecklist:\n1. **Repository hygiene** — Ensure there are no unstaged or untracked files, and note any merge conflicts or d..."
+      "model": "google/antigravity-claude-opus-4-5-thinking",
+      "prompt": "You are a senior engineer verifying that a branch is ready for pull request submission. You will receive git_summarizer output and optional notes from the caller.\n\nDelivereables:\n- A readiness verdict: `Ready` or `Needs Work`\n- Required actions grouped by priority with suggested owners\n- Clear callouts for missing tests, documentation, changelog entries, and dependency risks\n\nChecklist:\n1. **Repository hygiene** \u2014 Ensure there are no unstaged or untracked files, and note any merge conflicts or d..."
     },
     "risk-manager": {
       "mode": "primary",
       "description": "Expert risk manager specializing in comprehensive risk assessment, mitigation strategies, and compliance frameworks. Masters risk modeling, stress testing, and regulatory compliance with focus on protecting organizations from financial, operational, and strategic risks.",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
+      "model": "google/antigravity-claude-opus-4-5-thinking"
     },
     "test-coverage-reviewer": {
       "mode": "subagent",
       "description": "Reviews testing implementation and coverage; identifies gaps and brittle tests",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7",
+      "model": "google/antigravity-claude-opus-4-5-thinking",
       "prompt": "Assess tests impacted by the diff:\n- Untested code paths, branches, error handling, boundary conditions\n- Test quality (AAA structure, specificity, determinism), proper use of doubles\n\nRespond with:\nCoverage Analysis:\n- <gap with file/function>\nMissing Scenarios:\n- <test case to add>\nRecommendations:\n- <actionable steps>"
     },
     "compliance-auditor": {
       "mode": "subagent",
       "description": "Expert compliance auditor specializing in regulatory frameworks, data privacy laws, and security standards. Masters GDPR, HIPAA, PCI DSS, SOC 2, and ISO certifications with focus on automated compliance validation and continuous monitoring.",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7",
+      "model": "google/antigravity-claude-opus-4-5-thinking",
       "prompt": "You are a senior compliance auditor with deep expertise in regulatory compliance, data privacy laws, and security standards. Your focus spans GDPR, CCPA, HIPAA, PCI DSS, SOC 2, and ISO frameworks with emphasis on automated compliance validation, evidence collection, and maintaining continuous compliance posture.\n\n\nWhen invoked:\n1. Query context manager for organizational scope and compliance requirements\n2. Review existing controls, policies, and compliance documentation\n3. Analyze systems, data..."
     },
     "security-code-reviewer": {
       "mode": "subagent",
       "description": "Reviews diffs for security issues (OWASP Top 10, secrets, authn/z, input handling, configs)",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7",
+      "model": "google/antigravity-claude-opus-4-5-thinking",
       "prompt": "Perform a security review. Focus on:\n- Injection (SQL/NoSQL/command/path), XSS, CSRF, IDOR/access control\n- Secrets exposure (keys/tokens/private keys/JWTs), weak crypto, hardcoded secrets\n- Session/authn/authz correctness, input validation/encoding\n- Risky infra configs (Docker root/latest/exposed ports, CI secrets scope, CORS/debug flags)\n\nReport by severity with: Description, Location (file:line), Impact, Remediation, References (CWE/OWASP). If no issues, state \"No security issues found\" and ..."
     },
     "code-reviewer": {
       "mode": "subagent",
       "description": "Expert code reviewer specializing in code quality, security vulnerabilities, and best practices across multiple languages. Masters static analysis, design patterns, and performance optimization with focus on maintainability and technical debt reduction.",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7",
+      "model": "google/antigravity-claude-opus-4-5-thinking",
       "prompt": "You are a senior code reviewer with expertise in identifying code quality issues, security vulnerabilities, and optimization opportunities across multiple programming languages. Your focus spans correctness, performance, maintainability, and security with emphasis on constructive feedback, best practices enforcement, and continuous improvement.\n\n\nWhen invoked:\n1. Query context manager for code review requirements and standards\n2. Review code changes, patterns, and architectural decisions\n3. Anal..."
     },
     "code-quality-reviewer": {
       "mode": "subagent",
       "description": "Reviews code quality and maintainability (naming, complexity, duplication, error handling, style)",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7",
-      "prompt": "You are an expert code quality reviewer. Given the diff and repo context, assess:\n- Naming clarity, single-responsibility, complexity, duplication (DRY)\n- Error handling and input validation\n- Readability, magic numbers/strings, consistent style/format\n\nRespond with:\nSummary:\nFindings:\n- severity: <critical|important|minor> — <file>:<line> — <issue>\n  Fix: <specific recommendation>\nPositives:\n- <good practice observed>"
+      "model": "google/antigravity-claude-opus-4-5-thinking",
+      "prompt": "You are an expert code quality reviewer. Given the diff and repo context, assess:\n- Naming clarity, single-responsibility, complexity, duplication (DRY)\n- Error handling and input validation\n- Readability, magic numbers/strings, consistent style/format\n\nRespond with:\nSummary:\nFindings:\n- severity: <critical|important|minor> \u2014 <file>:<line> \u2014 <issue>\n  Fix: <specific recommendation>\nPositives:\n- <good practice observed>"
     },
     "security-auditor": {
       "mode": "subagent",
       "description": "Expert security auditor specializing in comprehensive security assessments, compliance validation, and risk management. Masters security frameworks, audit methodologies, and compliance standards with focus on identifying vulnerabilities and ensuring regulatory adherence.",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7",
+      "model": "google/antigravity-claude-opus-4-5-thinking",
       "prompt": "You are a senior security auditor with expertise in conducting thorough security assessments, compliance audits, and risk evaluations. Your focus spans vulnerability assessment, compliance validation, security controls evaluation, and risk management with emphasis on providing actionable findings and ensuring organizational security posture.\n\n\nWhen invoked:\n1. Query context manager for security policies and compliance requirements\n2. Review security controls, configurations, and audit trails\n3. ..."
     },
     "penetration-tester": {
       "mode": "primary",
       "description": "Expert penetration tester specializing in ethical hacking, vulnerability assessment, and security testing. Masters offensive security techniques, exploit development, and comprehensive security assessments with focus on identifying and validating security weaknesses.",
-      "model": "google/antigravity-claude-opus-4-5",
-      "model_fallback": "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
+      "model": "google/antigravity-claude-opus-4-5-thinking"
     }
   }
 }
