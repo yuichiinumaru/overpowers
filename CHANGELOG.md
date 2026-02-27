@@ -8,6 +8,16 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-02-27] - Setup & Deployment Scripts
+
+### Added
+- **Scripts**: `deploy-to-opencode.sh` — Symlinks agents, skills, workflows (as commands), hooks, and AGENTS.md into `~/.config/opencode/`.
+- **Scripts**: `deploy-to-gemini-cli.sh` — Symlinks skills, hooks, and AGENTS.md (as GEMINI.md) into `~/.gemini/` for Gemini CLI discovery.
+- **Scripts**: `install-plugins.sh` — Interactive terminal installer for awesome-opencode community plugins and themes with non-destructive `opencode.json` injection.
+- **Scripts**: `install-mcps.sh` — Non-destructive MCP server injector from `opencode-example.json` into user's `opencode.json`.
+
+**Author**: Antigravity
+
 ## [2026-02-27] - YouTube Skill Mining Agent & Workflow
 
 ### Added
