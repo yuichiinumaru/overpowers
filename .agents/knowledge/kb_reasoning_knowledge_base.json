@@ -1,0 +1,335 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.cfa.org/kb/kb_reasoning_knowledge_base_v17.0.schema.json",
+  "title": "CFA Reasoning Knowledge Base v17.0.0",
+  "version": "17.0.0",
+  "schema_version": "17.0.0",
+  "last_modified": "2025-07-25T07:00:00-03:00",
+  "release_codename": "Helios-Stable-Locked",
+  "additionalProperties": false,
+  "checksums": { "sha256": "<sha256_placeholder>" },
+  "endpoints": {
+    "health": "/healthz/kb_reasoning",
+    "version": "/healthz/kb_reasoning/version"
+  },
+  "kb_metadata": {
+    "kb_id": "kb_reasoning_knowledge_base",
+    "kb_name": "Reasoning Template Library (RTL)",
+    "authors": ["Apex Self-Revision Protocol", "OptimizerGPT"],
+    "description": "The definitive 'Helios-Stable' canonical version of the Reasoning Template Library, providing a full suite of reasoning modalities, selection policies, and integration protocols as API contracts.",
+    "change_log": [
+      {
+        "version": "17.0.0",
+        "date": "2025-07-25",
+        "author": "Apex Self-Revision Protocol",
+        "changes": "Grand Unification release: added full selection matrix, configuration profiles, knowledge integration protocols, enriched modalities, hybrid constructs, and comprehensive glossary."
+      }
+    ],
+    "governance": {
+      "approval_policy": "Major changes require three architect sign-offs.",
+      "versioning_policy": "Non-backwards changes trigger a major version bump and coordinated upgrades."
+    }
+  },
+  "cross_references": {
+    "self": "kb_reasoning_knowledge_base",
+    "core": "kb_cognitive_fusion_architecture_cfa",
+    "common_schemas": "kb_common_schemas",
+    "optimizergpt": "kb_optimizergpt",
+    "autocontinue": "kb_autocontinue",
+    "orchestration": "kb_agent_orchestration_core",
+    "validation": "kb_agent_reasoning_validation",
+    "problem_solving": "kb_problem_solving_network",
+    "evolution": "kb_model_evolution_playbook",
+    "risk_frame": "kb_common_schemas#/$defs/RiskFrame",
+    "context_rot": "kb_autocontinue#context_rot_mitigation",
+    "hrm_model": "kb_problem_solving_network#solver_library.psn.ml.hrm_v1"
+    "hrm_model": "kb_psn_lexsupremus#definitions.HRM"
+  },
+  "cfa_integration_points": [
+    { "layer": "L1", "consumer": "Strategy Synthesizer", "action": "Selects a modality or construct via adaptive_decision_router and configures it using configuration_profiles." },
+    { "layer": "L2", "consumer": "Scaffolding Engine", "action": "Constructs the prompt using a modality's example.prompt_template and validates input against its input_schema." },
+    { "layer": "L3", "consumer": "Execution Orchestrator", "action": "Routes the constructed prompt to the designated reasoning engine (LLM or specialized core)." },
+    { "layer": "L4", "consumer": "Validation & Observability", "action": "Activates validation modules specified in cross_references and verifies output_schema compliance and performance metrics." },
+    { "layer": "L3-HRM-Orchestrator", "action": "When select_modality indicates HRM, route tasks to solver_library.psn.ml.hrm_v1." },
+    { "layer":"L4", "consumer": "Validation & Observability", "action":"Collect PSN metrics: nodes_expanded, avg_optimality_gap_percent, riskframe_violations_total." }
+  ],
+  "example_workflow_trace": {
+    "description": "Examples illustrating how CFA L1-L4 layers leverage this KB.",
+    "traces": [
+      {
+        "trace_id": "TRACE-MATH-LOGIC",
+        "scenario": "A math problem matching high-priority rule.",
+        "task_profile": { "task_type": "problem_solving", "domain": "mathematics" },
+        "flow": "L1 selects MOD-SPOC-01; L2 builds prompt; L3 executes ToT solver; L4 applies V-SELF-CORR-01 validation."
+      },
+      {
+        "trace_id": "TRACE-SELF-CONSISTENCY",
+        "scenario": "Critical QA requiring maximum accuracy.",
+        "task_profile": { "task_type": "qa_critical", "quality_requirement": "maximum" },
+        "flow": "L1 selects MOD-SELF-CONSISTENCY-01; L2 constructs multi-path prompts; L4 validates vote consistency via V-SC-CONSISTENCY-01."
+      },
+      {
+        "trace_id": "TRACE-OVERRIDE-CREATIVE",
+        "scenario": "High-ambiguity creative brainstorming.",
+        "task_profile": { "task_type": "creative_brainstorm", "ambiguity_score": 0.9 },
+        "flow": "Override_condition met; L1 bypasses rules and selects HRC-EXPLORATORY-TREE; justification logged."
+      },
+      {
+        "trace_id": "TRACE-FALLBACK-HIGH-AMBIGUITY",
+        "scenario": "Exploratory analysis with extreme ambiguity.",
+        "task_profile": { "task_type": "exploratory_analysis", "ambiguity_score": 0.97 },
+        "flow": "Override_condition met; L1 selects HRC-STRATEGIC-PLANNING; L4 invokes V-DEBATE-CONSISTENCY-01 and V-LTM-CONSISTENCY-01."
+      }
+    ]
+  },
+  "adaptive_decision_router": {
+    "description": "Meta-agent for deterministic modality selection with dynamic override and learning heuristics.",
+    "policy": {
+      "mode": "deterministic_with_override",
+      "override_condition": "TaskProfile.ambiguity_score > 0.85",
+      "justification_required_for_override": true
+    },
+    "rules": [
+      { "priority": 110, "rule_id": "SEL-FORMAL-PROOF", "if": { "requires_formal_verification": true }, "then": { "select_modality": "MOD-FORMAL-PROOF-01" } },
+      { "priority": 100, "rule_id": "SEL-STOCHASTIC-PLANNING", "if": { "task_type": "stochastic_planning" }, "then": { "select_modality": "MOD-MCTS-01" } },
+      { "priority": 95, "rule_id": "SEL-NEURO-SYMBOLIC", "if": { "task_type": "hybrid_logical_creative" }, "then": { "select_modality": "MOD-NEURO-SYMB-01" } },
+      { "priority": 90, "rule_id": "SEL-STRATEGIC-PLANNING", "if": { "task_type": "complex_problem_solving", "quality_requirement": "maximum" }, "then": { "select_hybrid_construct": "HRC-STRATEGIC-PLANNING" } },
+      { "priority": 85, "rule_id": "SEL-CRITICAL-ACCURACY", "if": { "quality_requirement": "maximum", "task_type": "qa_critical" }, "then": { "select_modality": "MOD-SELF-CONSISTENCY-01" } },
+      { "priority": 80, "rule_id": "SEL-MATH-LOGIC", "if": { "domain": ["mathematics", "logic_puzzle"] }, "then": { "select_modality": "MOD-SPOC-01" } },
+      { "priority": 70, "rule_id": "SEL-TOOL-USE", "if": { "requires_tool_use": true }, "then": { "select_hybrid_construct": "HRC-ROBUST-REACT" } },
+      { "priority": 60, "rule_id": "SEL-EXPLORATORY", "if": { "task_type": "exploratory_analysis" }, "then": { "select_hybrid_construct": "HRC-EXPLORATORY-TREE" } },
+      { "priority": 0, "rule_id": "SEL-FALLBACK-DEFAULT", "if": {}, "then": { "select_modality": "MOD-COT-01" } },
+      { "priority": 105, "rule_id": "SEL-PSN-LEX", "if": { "domain":"brazilian_law", "requires_formal_verification":true }, "then": { "select_hybrid_construct":"H-PSN-LLM-ASTAR" } },
+      { "priority": 106, "rule_id": "SEL-CPC-COMPLIANCE", "if": { "requires_cpc_compliance": true }, "then": { "select_modality": "MOD-COV-01" } }
+
+    ],
+    "routing_heuristics": [
+      {
+        "heuristic_id": "RH-AMBIGUITY-PENALTY",
+        "description": "If override fails for ambiguity_score > threshold, increase override penalty by 25% on next attempt.",
+        "parameters": { "penalty_increment": 0.25 }
+      },
+      {
+        "heuristic_id": "RH-SLO-ADJUSTMENT",
+        "description": "If latency SLO violations exceed 5% in last hour, temporarily prioritize low-latency profiles even for high-quality tasks.",
+        "parameters": { "slo_violation_threshold": 0.05 }
+      }
+    ]
+  },
+  "knowledge_integration_protocols": {
+    "description": "Standardized methods for integrating external knowledge or constraints.",
+    "protocols": [
+      { "protocol_id": "KIP-RAG-01", "name": "Retrieval-Augmented Generation", "details": "Dynamically fetches context from vectorized knowledge bases to ground reasoning." },
+      { "protocol_id": "KIP-TOOL-01", "name": "Agentic Tool Integration", "details": "Invokes external tools (APIs, code interpreters) and uses outputs as context." },
+      { "protocol_id": "KIP-CONSTRAINT-01", "name": "Bidirectional Constraint Prompting", "details": "Guides generation with both prefix and suffix constraints." }
+    ]
+  },
+  "configuration_profiles": {
+    "description": "Pre-defined profiles tuning reasoning modalities.",
+    "quality_vs_latency_slider": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Continuous trade-off slider (0.0 = Low-Latency, 1.0 = High-Quality)."
+    },
+    "profiles": [
+      { "profile_id": "PROF-LOW-LATENCY", "name": "Low Latency / High Speed", "settings": { "max_reasoning_steps": 3, "self_correction_loops": 0, "tree_depth": 1, "n_paths": 2, "simulation_count": 500, "exploration_factor": 2.0, "branching_factor": 2 } },
+      { "profile_id": "PROF-HIGH-QUALITY", "name": "High Quality / Max Accuracy", "settings": { "max_reasoning_steps": "unlimited", "self_correction_loops": 3, "tree_depth": 3, "n_paths": 8, "simulation_count": 2000, "exploration_factor": 1.41, "branching_factor": 3 } },
+      { "profile_id": "PROF-BALANCED", "name": "Balanced", "settings": { "max_reasoning_steps": 5, "self_correction_loops": 1, "tree_depth": 2, "n_paths": 4, "simulation_count": 1000, "exploration_factor": 1.5, "branching_factor": 2 } }
+      { "profile_id":"PROF-PSN-HIGH-QUALITY", "name":"PSN High Quality", "settings":{ "max_reasoning_steps":"unlimited", "self_correction_loops":3, "tree_depth":5, "simulation_count":5000, "exploration_factor":1.2, "branching_factor":4 } }
+    ]
+  },
+  "reasoning_modalities": {
+    "description": "Library of cognitive strategies as API contracts.",
+    "modalities": [
+      {
+        "modality_id": "MOD-COT-01", "name": "Standard Chain-of-Thought", "cfa_template_id": "RT-GENERIC-COT@1.0.0",
+        "description": "Linear, step-by-step reasoning.",
+        "ideal_use_case": ["Simple Q&A", "Basic arithmetic", "Default fallback reasoning"],
+        "parameters": { "max_steps": { "type": "integer", "default": 5 } },
+        "strengths": ["Easy to implement", "Low latency", "Interpretable"], "weaknesses": ["Can get stuck on a single path"],
+        "input_schema": { "$ref": "kb_common_schemas#/$defs/TaskProfile" },
+        "output_schema": { "$ref": "kb_common_schemas#/$defs/SolutionArtifact" },
+        "example": { "prompt_template": "Question: {user_prompt}\nLet's think step by step." },
+        "cross_references": [{ "kb_id": "kb_agent_reasoning_validation", "component": "V-COT-CHK-01", "relationship": "Validates logical flow." }]
+      },
+      {
+        "modality_id": "MOD-REACT-01", "name": "ReAct (Reason+Act)", "cfa_template_id": "RT-GENERIC-REACT@1.1.0",
+        "description": "Thought→Action→Observation loops with tools.",
+        "ideal_use_case": ["API interactions", "Web navigation", "Database queries"],
+        "parameters": { "max_iterations": { "type": "integer", "default": 7 } },
+        "strengths": ["Excellent for external info tasks"], "weaknesses": ["Brittle if tool fails"],
+        "input_schema": { "$ref": "kb_common_schemas#/$defs/TaskProfile" },
+        "output_schema": { "$ref": "kb_common_schemas#/$defs/SolutionArtifact" },
+        "example": { "prompt_template": "Goal: {user_prompt}\nTools: {available_tools}\nBegin Thought-Action-Observation loop." },
+        "cross_references": [{ "kb_id": "kb_agent_reasoning_validation", "component": "V-REACT-TOOL-CHK-01", "relationship": "Validates tool use." }]
+      },
+      {
+        "modality_id": "MOD-SPOC-01", "name": "Spontaneous Propose-Verify Cycle", "cfa_template_id": "RT-SELF-VER-001@1.0.0",
+        "description": "Propose solution and internally verify it.",
+        "ideal_use_case": ["Math puzzles", "Logical code debugging"],
+        "parameters": { "self_correction_loops": { "type": "integer", "default": 1 } },
+        "strengths": ["High accuracy"], "weaknesses": ["Higher latency"],
+        "input_schema": { "$ref": "kb_common_schemas#/$defs/ProblemSpec" },
+        "output_schema": { "$ref": "kb_common_schemas#/$defs/SolutionArtifact" },
+        "example": { "prompt_template": "Problem: {user_prompt}\nPropose then verify step by step." },
+        "cross_references": [{ "kb_id": "kb_agent_reasoning_validation", "component": "V-SELF-CORR-01", "relationship": "Validates propose-verify." }]
+      },
+      {
+        "modality_id": "MOD-TREE-OT-01", "name": "Tree-of-Thought (ToT)", "cfa_template_id": "RT-TREE-001@1.1.0",
+        "description": "Branch exploration with backtracking.",
+        "ideal_use_case": ["Complex planning", "Strategic games"],
+        "parameters": { "tree_depth": { "type": "integer", "default": 3 }, "branching_factor": { "type": "integer", "default": 2 } },
+        "strengths": ["Exploratory"], "weaknesses": ["High compute cost"],
+        "input_schema": { "$ref": "kb_common_schemas#/$defs/TaskProfile" },
+        "output_schema": { "$ref": "kb_common_schemas#/$defs/SolutionArtifact" },
+        "example": { "prompt_template": "Problem: {user_prompt}\nExplore up to {branching_factor} thoughts to depth {tree_depth}." },
+        "cross_references": [{ "kb_id": "kb_agent_reasoning_validation", "component": "V-TREE-CHK-01", "relationship": "Validates tree integrity." }]
+      },
+      {
+        "modality_id": "MOD-MCTS-01", "name": "Monte Carlo Tree Search (MCTS)", "cfa_template_id": "RT-MCTS-001@1.0.0",
+        "description": "Exploration-exploitation search for optimal actions.",
+        "ideal_use_case": ["Stochastic planning", "Uncertain domains"],
+        "parameters": { "simulation_count": { "type": "integer", "default": 1000 }, "exploration_factor": { "type": "number", "default": 1.41 } },
+        "strengths": ["Optimal under uncertainty"], "weaknesses": ["Very compute-intensive"],
+        "input_schema": { "$ref": "kb_common_schemas#/$defs/TaskProfile" },
+        "output_schema": { "$ref": "kb_common_schemas#/$defs/SolutionArtifact" },
+        "example": { "prompt_template": "State: {initial_state}\nUse MCTS with {simulation_count} simulations to pick best action." },
+        "cross_references": [{ "kb_id": "kb_agent_reasoning_validation", "component": "V-MCTS-VALID-01", "relationship": "Validates simulation integrity." }]
+      },
+      {
+        "modality_id": "MOD-COV-01", "name": "Chain-of-Verification (CoV)", "cfa_template_id": "RT-COV-001@1.0.0",
+        "description": "Generate, plan verification, and refine.",
+        "ideal_use_case": ["Fact-checking", "Hallucination reduction"],
+        "parameters": {},
+        "strengths": ["Reduces inaccuracies"], "weaknesses": ["Additional latency"],
+        "input_schema": { "$ref": "kb_common_schemas#/$defs/TaskProfile" },
+        "output_schema": { "$ref": "kb_common_schemas#/$defs/SolutionArtifact" },
+        "example": { "prompt_template": "Claim: {claim}\nAnswer, plan verification, execute, refine answer." },
+        "cross_references": [{ "kb_id": "kb_agent_reasoning_validation", "component": "V-COV-CONSISTENCY-01", "relationship": "Ensures final answer consistency." }]
+      },
+      {
+        "modality_id": "MOD-GRAPH-OT-01", "name": "Graph-of-Thought (GoT)", "cfa_template_id": "RT-GRAPH-001@1.0.0",
+        "description": "Non-linear graph dependencies and merging.",
+        "ideal_use_case": ["Systems thinking", "Causal analysis"],
+        "parameters": {},
+        "strengths": ["Models complex relations"], "weaknesses": ["High cognitive load"],
+        "input_schema": { "$ref": "kb_common_schemas#/$defs/TaskProfile" },
+        "output_schema": { "$ref": "kb_common_schemas#/$defs/SolutionArtifact" },
+        "example": { "prompt_template": "Components: {system_components}\nBuild reasoning graph." },
+        "cross_references": [{ "kb_id": "kb_agent_reasoning_validation", "component": "V-GRAPH-CHK-01", "relationship": "Validates graph coherence." }]
+      },
+      {
+        "modality_id": "MOD-LTM-PROMPT-01", "name": "Least-to-Most Prompting", "cfa_template_id": "RT-LTM-001@1.0.0",
+        "description": "Decompose complex problems into subproblems.",
+        "ideal_use_case": ["Multi-step math", "Complex planning"],
+        "parameters": {},
+        "strengths": ["Makes problems tractable"], "weaknesses": ["Less efficient for simple tasks"],
+        "input_schema": { "$ref": "kb_common_schemas#/$defs/TaskProfile" },
+        "output_schema": { "$ref": "kb_common_schemas#/$defs/SolutionArtifact" },
+        "example": { "prompt_template": "To solve {complex_problem}, break into smaller steps and solve each." },
+        "cross_references": [{ "kb_id": "kb_agent_reasoning_validation", "component": "V-LTM-CONSISTENCY-01", "relationship": "Validates subproblem integration." }]
+      },
+      {
+        "modality_id": "MOD-SELF-DEBATE-01", "name": "Self-Debate", "cfa_template_id": "RT-DEBATE-001@1.0.0",
+        "description": "Internal personas debate before synthesis.",
+        "ideal_use_case": ["Policy analysis", "Ethical dilemmas"],
+        "parameters": { "personas": { "type": "array", "default": ["Pro", "Con"] } },
+        "strengths": ["Explores multiple facets"], "weaknesses": ["Verbose output"],
+        "input_schema": { "$ref": "kb_common_schemas#/$defs/TaskProfile" },
+        "output_schema": { "$ref": "kb_common_schemas#/$defs/SolutionArtifact" },
+        "example": { "prompt_template": "Topic: {topic}\nDebate as {personas} and synthesize conclusion." },
+        "cross_references": [{ "kb_id": "kb_agent_reasoning_validation", "component": "V-DEBATE-CONSISTENCY-01", "relationship": "Validates debate resolution." }]
+      },
+      {
+        "modality_id": "MOD-NEURO-SYMB-01", "name": "Neuro-Symbolic Hybrid", "cfa_template_id": "RT-NEURO-SYMB-001@1.0.0",
+        "description": "LLM + formal symbolic engine integration.",
+        "ideal_use_case": ["Rule validation", "Logic puzzles"],
+        "parameters": { "symbolic_engine": { "type": "string", "default": "prolog" } },
+        "strengths": ["High logical accuracy"], "weaknesses": ["Complex setup"],
+        "input_schema": { "$ref": "kb_common_schemas#/$defs/TaskProfile" },
+        "output_schema": { "$ref": "kb_common_schemas#/$defs/SolutionArtifact" },
+        "example": { "prompt_template": "Translate rules to {symbolic_engine} and answer {query}." },
+        "cross_references": [{ "kb_id": "kb_agent_reasoning_validation", "component": "V-NEURO-SYMB-VALID-01", "relationship": "Validates symbolic assertions." }]
+      }
+    ]
+  },
+  "hybrid_reasoning_constructs": {
+    "description": "Meta-strategies composing multiple modalities.",
+    "constructs": [
+      {
+        "construct_id": "HRC-ROBUST-REACT", "name": "Robust ReAct",
+        "description": "Enhances ReAct with a verification step (CoV) before actions.",
+        "composition": ["MOD-REACT-01", "MOD-COV-01"],
+        "cross_references": [
+          { "kb_id": "kb_agent_reasoning_validation", "component": "V-REACT-TOOL-CHK-01" },
+          { "kb_id": "kb_agent_reasoning_validation", "component": "V-COV-CONSISTENCY-01" }
+        ]
+      },
+      {
+        "construct_id": "HRC-EXPLORATORY-TREE", "name": "Self-Consistent Tree Exploration",
+        "description": "Applies ToT with Self-Consistency voting to prune branches.",
+        "composition": ["MOD-TREE-OT-01", "MOD-SELF-CONSISTENCY-01"],
+        "cross_references": [
+          { "kb_id": "kb_agent_reasoning_validation", "component": "V-TREE-CHK-01" },
+          { "kb_id": "kb_agent_reasoning_validation", "component": "V-SC-CONSISTENCY-01" }
+        ]
+      },
+      {
+        "construct_id": "HRC-STRATEGIC-PLANNING", "name": "Debate-driven Planning",
+        "description": "Initiates Self-Debate then uses Least-to-Most for solution.",
+        "composition": ["MOD-SELF-DEBATE-01", "MOD-LTM-PROMPT-01"],
+        "cross_references": [
+          { "kb_id": "kb_agent_reasoning_validation", "component": "V-DEBATE-CONSISTENCY-01" },
+          { "kb_id": "kb_agent_reasoning_validation", "component": "V-LTM-CONSISTENCY-01" }
+        ]
+      },
+      {
+        "construct_id": "HRC-MCTS-GUIDED-DEBATE", "name": "MCTS-Guided Debate",
+        "description": "Uses MCTS to pick top strategies then debates them.",
+        "composition": ["MOD-MCTS-01", "MOD-SELF-DEBATE-01"],
+        "cross_references": [
+          { "kb_id": "kb_agent_reasoning_validation", "component": "V-MCTS-VALID-01" },
+          { "kb_id": "kb_agent_reasoning_validation", "component": "V-DEBATE-CONSISTENCY-01" }
+        ]
+      },
+      {
+        "construct_id": "HRC-PSN-LLM-ASTAR",
+        "name": "PSN LLM-A* Hybrid Construct",
+        "description": "Combines a large-language-model’s chain-of-thought reasoning with A* search heuristic to plan formal litigation sequences.",
+       "composition": ["MOD-REACT-01", "MOD-SPOC-01"],
+       "cross_references": [
+         { "kb_id": "kb_psn_lexsupremus", "component": "hybrid_patterns.H-PSN-LLM-ASTAR" }
+       ]
+     },
+     {
+       "construct_id": "HRC-PSN-ASP",
+       "name": "PSN Adaptive Solver Portfolio",
+       "description": "Dynamically selects the most appropriate solver at runtime to balance computational cost and solution quality.",
+       "composition": ["MOD-REACT-01", "MOD-MCTS-01", "MOD-MILP-01"],
+       "cross_references": [
+         { "kb_id": "kb_psn_lexsupremus", "component": "hybrid_patterns.H-PSN-ASP" }
+     ]
+  },
+  "glossary": {
+    "description": "Canonical glossary of terms used across CFA KBs.",
+    "entries": [
+      { "term": "Reasoning Template (RT)", "category": "Core Concepts", "definition": "Versioned blueprint for a reasoning modality." },
+      { "term": "Reasoning Modality", "category": "Core Concepts", "definition": "High-level cognitive strategy selected by L1 layer." },
+      { "term": "Hybrid Reasoning Construct (HRC)", "category": "Meta-Strategies", "definition": "Composite strategy combining multiple modalities." },
+      { "term": "Configuration Profile", "category": "Operational Tuning", "definition": "Named parameter set tuning a modality for performance or accuracy." },
+      { "term": "Deterministic with Override", "category": "Operational Tuning", "definition": "Selection policy allowing justified overrides under high ambiguity." },
+      { "term": "Chain-of-Thought (CoT)", "category": "Reasoning Techniques", "definition": "Step-by-step linear reasoning." },
+      { "term": "ReAct", "category": "Reasoning Techniques", "definition": "Interleaves Thought, Action, Observation for tool-based tasks." },
+      { "term": "Self-Consistency", "category": "Reasoning Techniques", "definition": "Majority-vote across multiple CoT paths for accuracy." },
+      { "term": "Propose-Verify Cycle", "category": "Reasoning Techniques", "definition": "Generates a solution then internally verifies and refines it." },
+      { "term": "Tree-of-Thought (ToT)", "category": "Reasoning Techniques", "definition": "Exploratory tree search through multiple reasoning paths." },
+      { "term": "Monte Carlo Tree Search (MCTS)", "category": "Reasoning Techniques", "definition": "Simulation-based search balancing exploration and exploitation." },
+      { "term": "Chain-of-Verification (CoV)", "category": "Reasoning Techniques", "definition": "Verifies an initial response via a generated verification plan." },
+      { "term": "Graph-of-Thought (GoT)", "category": "Reasoning Techniques", "definition": "Models reasoning as a graph with non-linear dependencies." },
+      { "term": "Least-to-Most Prompting", "category": "Reasoning Techniques", "definition": "Decomposes complex tasks into sequential subproblems." },
+      { "term": "Self-Debate", "category": "Reasoning Techniques", "definition": "Multiple internal personas debate to produce a balanced conclusion." },
+      { "term": "Neuro-Symbolic Hybrid", "category": "Reasoning Techniques", "definition": "Combines LLM generation with a formal symbolic reasoning engine." }
+    ]
+  }
+}

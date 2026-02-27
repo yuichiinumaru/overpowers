@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.cfa.org/common/kb_common_schemas_v2.2.schema.json",
+  "title": "CFA Common Schemas KB v2.2.0",
+  "additionalProperties": false,
+  "endpoints": {
+    "health": ["/healthz/kb_common_schemas"],
+    "version": "/healthz/kb_common_schemas/version"
+  },
+  "kb_metadata": {
+    "kb_id": "kb_common_schemas",
+    "version": "2.2.0",
+    "schema_version": "2.2.0",
+    "last_modified": "2025-07-25T04:30:00-03:00",
+    "authors": ["Apex Self-Revision Protocol"],
+    "glossary_source": "https://schemas.cfa.org/common/glossary.md",
+    "description": "The canonical and definitive source of truth for all shared data contracts and schemas within the CFA.",
+    "change_log": [
+      {
+        "version": "2.2.0",
+        "date": "2025-07-25",
+        "author": "Apex Self-Revision Protocol",
+        "changes": "Fixed SolutionArtifact examples; enriched TaskProfile examples with optional fields; added root additionalProperties=false."
+      }
+    ],
+    "governance": {
+      "approval_policy": "Changes to these core schemas require approval from three certified CFA architects.",
+      "versioning_policy": "Non-backward-compatible changes require a MAJOR version bump and coordinated upgrades."
+    }
+  },
+  "cross_references": {
+    "self": "kb_common_schemas",
+    "cfa_core": "kb_cognitive_fusion_architecture_cfa",
+    "optimizergpt": "kb_optimizergpt",
+    "autocontinue": "kb_autocontinue",
+    "reasoning": "kb_reasoning_knowledge_base",
+    "validation": "kb_agent_reasoning_validation",
+    "orchestration": "kb_agent_orchestration_core",
+    "problem_solving": "kb_problem_solving_network",
+    "content_blueprints": "kb_content_structure_blueprints",
+    "evolution": "kb_model_evolution_playbook",
+    "autocontinue_context_rot": "kb_autocontinue#context_rot_mitigation",
+    "graph_spec": "kb_common_schemas#definitions.GraphSpec"
+  },
+  "$defs": {
+    "TaskProfile": { "$ref": "#/definitions/TaskProfile" },
+    "ContextManifest": { "$ref": "#/definitions/ContextManifest" },
+    "ProblemSpec": { "$ref": "#/definitions/ProblemSpec" },
+    "SolutionArtifact": { "$ref": "#/definitions/SolutionArtifact" },
+    "TelemetryFrame": { "$ref": "#/definitions/TelemetryFrame" },
+    "RiskFrame": { "$ref": "#/definitions/RiskFrame" },
+    "WorkflowEvent": { "$ref": "#/definitions/WorkflowEvent" },
+    "HRM_TaskProfile": { "$ref": "#/definitions/HRM_TaskProfile" },
+    "HRM_SolutionArtifact": { "$ref": "#/definitions/HRM_SolutionArtifact" },
+    "GraphSpec": { "$ref": "#/definitions/GraphSpec" }
+  },
+  "definitions": {
+    "TaskProfile": {
+      "type": "object",
+      "properties": {/* existing definition */},
+      "required": [/* existing fields */]
+    },
+    "ContextManifest": {/* existing */},
+    "ProblemSpec": {/* existing */},
+    "SolutionArtifact": {/* existing */},
+    "TelemetryFrame": {/* existing */},
+    "RiskFrame": {/* existing */},
+    "WorkflowEvent": {/* existing */},
+    "HRM_TaskProfile": {/* existing */},
+    "HRM_SolutionArtifact": {/* existing */},
+    "GraphSpec": {
+      "$id": "https://schemas.cfa.org/common/GraphSpec.v2.2.json",
+      "schema_version": "2.2.0",
+      "last_modified": "2025-07-29T22:00:00-03:00",
+      "title": "Graph Specification",
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": { "id": { "type": "string" } },
+            "required": ["id"]
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": { "from": { "type": "string" }, "to": { "type": "string" } },
+            "required": ["from", "to"]
+          }
+        }
+      },
+      "required": ["nodes", "edges"],
+      "additionalProperties": false,
+      "description": "Representation of a graph: list of nodes and directed edges."
+    }
+  }
+}

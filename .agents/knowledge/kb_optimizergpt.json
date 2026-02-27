@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.cfa.org/kb/kb_optimizergpt_v6.1.schema.json",
+  "title": "CFA OptimizerGPT KB v6.1.0",
+  "version": "6.1.0",
+  "schema_version": "6.1.0",
+  "last_modified": "2025-07-25T05:00:00-03:00",
+  "release_codename": "Helios-Stable-Locked",
+  "additionalProperties": false,
+  "checksums": {
+    "sha256": "<sha256_placeholder>"
+  },
+  "endpoints": {
+    "health": "/healthz/kb_optimizergpt",
+    "version": "/healthz/kb_optimizergpt/version"
+  },
+  "kb_metadata": {
+    "kb_id": "kb_optimizergpt",
+    "kb_name": "Instructional Playbook for Context Engineering and Instructional Design",
+    "authors": ["Apex Self-Revision Protocol", "OptimizerGPT"],
+    "glossary_source": "https://schemas.cfa.org/common/glossary.md",
+    "description": "Playbook for prompt engineering, context management, security protocols, and performance optimization guiding the L2 Scaffolding Engine.",
+    "change_log": [
+      {
+        "version": "6.1.0",
+        "date": "2025-07-25",
+        "author": "Apex Self-Revision Protocol",
+        "changes": "Merged core principles, enriched context patterns, added guardrail assertions and goal recitation, unified snake_case IDs, expanded cross_references."
+      },
+      {
+        "version": "6.0.0",
+        "date": "2025-07-25",
+        "author": "Apex Self-Revision Protocol",
+        "changes": "Definitive 'Helios-Stable' release with strict schemas and initial unification."
+      },
+      {
+        "version": "5.x and below",
+        "date": "2025-07-24",
+        "author": "Apex Self-Revision Protocol",
+        "changes": "Previous iterations varied in structure and schema strictness; superseded by v6.x."
+      }
+    ],
+    "governance": {
+      "approval_policy": "Major changes require three architect sign-offs.",
+      "versioning_policy": "Non-backwards changes trigger a major version bump and coordinated upgrades."
+    }
+  },
+  "cross_references": {
+    "self": "kb_optimizergpt",
+    "core": "kb_cognitive_fusion_architecture_cfa",
+    "common_schemas": "kb_common_schemas",
+    "autocontinue": "kb_autocontinue",
+    "reasoning": "kb_reasoning_knowledge_base",
+    "validation": "kb_agent_reasoning_validation",
+    "orchestration": "kb_agent_orchestration_core",
+    "problem_solving": "kb_problem_solving_network",
+    "content_blueprints": "kb_content_structure_blueprints",
+    "evolution": "kb_model_evolution_playbook",
+    "risk_frame": "kb_common_schemas#/$defs/RiskFrame",
+    "hrm_model": "kb_problem_solving_network#solver_library.psn.ml.hrm_v1"
+  },
+  "core_design_principles": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "Guiding principles for prompt and instruction design.",
+    "principles": [
+      { "id": "idp_clarity_01",     "name": "clarity_over_cleverness",      "description": "Instructions must be unambiguous and easily parsable." },
+      { "id": "idp_specificity_01", "name": "granular_specificity",         "description": "Define formats, constraints, and steps explicitly to avoid vagueness." },
+      { "id": "idp_efficiency_01",  "name": "cognitive_efficiency",         "description": "Minimize token count and cognitive load without sacrificing clarity." },
+      { "id": "idp_robustness_01",  "name": "robustness_by_design",         "description": "Anticipate failure modes and build resilient instructions." },
+      { "id": "idp_schema_01",      "name": "schema_driven_composition",    "description": "Compose instructions based on schema for consistency and validation." },
+      { "id": "idp_xref_01",        "name": "consistent_cross_referencing", "description": "Ensure all components and KBs are cross-referenced for integrity." }
+    ]
+  },
+  "context_engineering_framework": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "Framework for managing various context types for LLM interactions.",
+    "context_types": [
+      { "type": "instructional_context",    "description": "Core directives, rules, and persona definitions." },
+      { "type": "data_context",             "description": "User-provided data and information needed for the task." },
+      { "type": "volatile_memory_context",  "description": "Short-term conversation history or scratchpad." },
+      { "type": "persistent_memory_context","description": "Long-term memories, user preferences, and learned knowledge." }
+    ],
+    "management_techniques": [
+      { "id": "cmt_prune_01",   "name": "contextual_pruning",          "description": "Automatically remove low-relevance context segments based on semantic scoring.", "cross_references": ["kb_autocontinue"] },
+      { "id": "cmt_summarize_01","name": "hierarchical_summarization",   "description": "Generate multi-level summaries to preserve key information across long contexts." },
+      { "id": "cmt_tool_01",    "name": "agentic_tool_use",            "description": "Leverage external tools for context enrichment (e.g., knowledge bases, calculators)." },
+      { "id": "cmt_rag_01",     "name": "retrieval_augmented_generation","description": "Dynamically fetch relevant information from vector stores to enrich data_context at runtime." },
+      { "id": "cmt_ltm_01",     "name": "long_term_memory",            "description": "Utilize external databases or file systems to manage persistent_memory_context.", "cross_references": ["kb_model_evolution_playbook"] }
+    ],
+    "volatile_memory_strategies": [
+      { "id": "vms_recitation_01", "name": "recitation_for_goal_persistence", "description": "For long-running tasks, maintain and periodically re-read a goal summary from a `_goal_recitation.md` file to prevent focus drift.", "cross_references": ["kb_autocontinue","cmt_ltm_01"] }
+    ]
+  },
+  "instructional_design_patterns": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "Reusable prompt templates for common tasks.",
+    "patterns": [
+      {
+        "pattern_id": "IDP-META-01",
+        "id": "pat_meta_01",
+        "name": "meta_prompting",
+        "template": "Refine the user’s query before answering: …",
+        "use_case": "automated prompt engineering",
+        "description": "Ask the model to act as its own prompt engineer and polish the input.",
+        "examples": ["Refine 'How to bake bread?' into 'Provide a detailed step-by-step bread recipe with tips for variations.'"]
+      },
+      {
+        "id": "pat_persona_01",
+        "name": "persona_priming",
+        "template": "You are {persona}.",
+        "use_case": "defining agent persona",
+        "description": "Establishes a clear role, persona, and tone for consistent agent behavior.",
+        "examples": ["You are a helpful assistant specialized in medical advice."]
+      },
+      {
+        "id": "pat_step_01",
+        "name": "step_by_step",
+        "template": "Break down the task into steps: 1. …",
+        "use_case": "chain_of_thought reasoning",
+        "description": "Instructs the model to think step-by-step to break down complex problems.",
+        "examples": ["Break down the task into steps: 1. Gather requirements; 2. Outline solution; 3. Review answer."]
+      },
+      {
+        "pattern_id": "IDP-REACT-01",
+        "id": "pat_react_01",
+        "name": "react_self_correction",
+        "template": "Think, act, observe, then self-correct: …",
+        "use_case": "action-observation loops",
+        "description": "Combine thought→action→observation loops with an explicit self-correction step.",
+        "examples": ["Think: outline steps; Act: generate output; Observe: check consistency; Self-correct: refine mistakes."]
+      },
+      {
+        "id": "pat_masking_01",
+        "name": "tool_masking_bias_decay",
+        "template": "[Tool Masking with Bias Decay]…",
+        "use_case": "dynamic tool gating",
+        "description": "Apply a decaying negative bias to tool logits, preserving context while guiding behavior.",
+        "parameters": {
+          "initial_bias":        { "type": "number", "default": -100.0 },
+          "default_decay_rate":  { "type": "number", "default": 0.03 },
+          "autotune_enabled":    { "type": "boolean", "default": true }
+        },
+        "examples": ["[Tool Masking with Bias Decay] Activate translator tool with decay rate 0.05."]
+      }
+    ]
+  },
+  "instructional_implementation_standards": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "Standards and lint rules for prompt code and schemas.",
+    "rules": [
+      { "id": "iis_delimiters_01", "name": "step_delimiters",                "description": "Use <step_1>, <step_2> to structure sequential instructions." },
+      { "id": "iis_enumeration_01","name": "enumerated_constraints",         "description": "List all rules as a numbered list for clarity." },
+      { "id": "iis_schema_01",     "name": "granular_output_schema",        "description": "Provide detailed schema with types and examples within the prompt, referencing `kb_common_schemas`." },
+      { "id": "iis_validate_01",   "name": "schema_taskprofile_validation","description": "Ensure every prompt template conforms to the TaskProfile schema in `kb_common_schemas`." },
+      { "id": "iis_length_01",     "name": "prompt_length_limit",            "description": "Limit prompts to a maximum of 1024 tokens by default." }
+    ]
+  },
+  "instructional_security_protocols": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "Security and compliance checks during prompt execution.",
+    "policies": [
+      { "id": "sec_hatch_01",    "name": "escape_hatch_prevention",   "description": "Block injections that break JSON structure." },
+      { "id": "sec_injection_01","name": "prompt_injection_guard",    "description": "Detect and sanitize harmful user inputs." },
+      { "id": "sec_assertion_01","name": "guardrail_assertions",      "description": "Embed explicit ASSERT statements (e.g., 'ASSERT: Do not use personal data')." },
+      { "id": "sec_valid_01",    "name": "embedded_self_validation", "description": "Produce a validation block (e.g., validation:{constraints_met:true,safety_check:'pass'})."}
+      ,
+      {
+        "id": "sec_artifact_01",
+        "name": "secure_artifact_handling",
+        "description": "Implement data tagging ('public','confidential') and a strict mime-type whitelist.",
+        "rules": [
+          "Enforce mandatory data tagging on write.",
+          "Validate against mime-type whitelist on upload.",
+          "Block injection of confidential content into prompts."
+        ]
+      }
+    ]
+  },
+  "performance_optimization": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "Guidelines and metrics for meeting latency, cost, and token targets.",
+    "metrics": [
+      { "name": "prompt_construction_ms", "description": "Time in milliseconds to assemble and validate the prompt.", "target_p95_ms": 200 },
+      { "name": "token_count",           "description": "Number of tokens in the final prompt.", "max_tokens": 1024 },
+      { "name": "prompt_cost_usd",       "description": "Estimated cost in USD for running the prompt.", "max_cost_usd": 0.01 }
+    ],
+    "techniques": [
+      { "id": "pop_prune_01",   "name": "contextual_pruning",       "description": "Elide less relevant conversation parts to conserve tokens." },
+      { "id": "pop_compress_01","name": "instruction_compression",   "description": "Use concise language and abbreviations to reduce prompt size." }
+    ],
+    "latency_vs_quality_policy": {
+      "description": "Heuristics for selecting patterns based on latency requirements.",
+      "rules": [
+        "IF quality_requirement == 'low' THEN prefer simple patterns.",
+        "IF quality_requirement == 'maximum' THEN always use multi-step reasoning patterns."
+      ]
+    },
+    "cross_references": ["kb_model_evolution_playbook", "kb_common_schemas"]
+  },
+  "cfa_integration_points": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "How this KB integrates with and is governed by the broader CFA ecosystem.",
+    "points": [
+      { "integration": "Consumed by L2 Scaffolding Engine for prompt assembly." },
+      { "integration": "Triggers policies in kb_autocontinue for long-running tasks." },
+      { "integration": "Governed by manifest in kb_cognitive_fusion_architecture_cfa." }
+    ]
+  }
+}

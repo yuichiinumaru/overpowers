@@ -23,7 +23,7 @@
             "enabled": true,
             "command": [
                 "node",
-                "<YOUR_HOME_DIR>/.config/opencode/mcp/vibe-check/build/index.js"
+                "{env:VIBE_CHECK_PATH}"
             ],
             "environment": {
                 "GEMINI_API_KEY": "{env:GEMINI_API_KEY}",
@@ -39,7 +39,7 @@
                 "mcp",
                 "run",
                 "--mcp-config",
-                "/path/to/your/.mcp.json"
+                "{env:HYPERTOOL_MCP_CONFIG_PATH}"
             ],
             "enabled": true
         },
@@ -72,12 +72,12 @@
             "type": "local",
             "enabled": true,
             "command": [
-                "<YOUR_HOME_DIR>/.config/opencode/mcp/memcord/.venv/bin/python",
+                "{env:MEMCORD_PYTHON_PATH}",
                 "-m",
                 "memcord.server"
             ],
             "environment": {
-                "PYTHONPATH": "<YOUR_HOME_DIR>/.config/opencode/mcp/memcord/src",
+                "PYTHONPATH": "{env:MEMCORD_SRC_PATH}",
                 "MEMCORD_ENABLE_ADVANCED": "true"
             }
         },
@@ -86,10 +86,10 @@
             "enabled": true,
             "command": [
                 "node",
-                "<YOUR_HOME_DIR>/.config/opencode/mcp/semgrep/build/index.js"
+                "{env:SEMGREP_PATH}"
             ],
             "environment": {
-                "PATH": "/usr/local/bin:/usr/bin:/bin:<YOUR_HOME_DIR>/.local/bin"
+                "PATH": "{env:SEMGREP_SYSTEM_PATH}"
             }
         },
         "in_memoria": {
@@ -97,7 +97,7 @@
             "enabled": true,
             "command": [
                 "node",
-                "<YOUR_HOME_DIR>/.config/opencode/mcp/in-memoria/dist/index.js",
+                "{env:IN_MEMORIA_PATH}",
                 "server"
             ]
         },
@@ -128,7 +128,7 @@
             "command": [
                 "uvx",
                 "--from",
-                "<YOUR_HOME_DIR>/.config/opencode/mcp/notebooklm-mcp-cli",
+                "{env:NOTEBOOKLM_PATH}",
                 "notebooklm-mcp"
             ]
         }

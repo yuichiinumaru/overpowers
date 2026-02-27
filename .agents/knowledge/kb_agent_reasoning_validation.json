@@ -1,0 +1,300 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.cfa.org/kb/kb_agent_reasoning_validation_v6.0.schema.json",
+  "title": "CFA Agent Reasoning Validation KB v6.0.0",
+  "version": "6.0.0",
+  "schema_version": "6.0.0",
+  "last_modified": "2025-07-25T07:30:00-03:00",
+  "release_codename": "Helios-Stable-Locked",
+  "additionalProperties": false,
+  "checksums": { "sha256": "<sha256_placeholder>" },
+  "endpoints": {
+    "health": "/healthz/kb_agent_reasoning_validation",
+    "version": "/healthz/kb_agent_reasoning_validation/version"
+  },
+  "kb_metadata": {
+    "kb_id": "kb_agent_reasoning_validation",
+    "kb_name": "Agent Reasoning Validation Playbook",
+    "authors": ["Apex Self-Revision Protocol", "OptimizerGPT"],
+    "description": "Comprehensive multi-stage validation pipeline and modules ensuring correctness, safety, and continuous improvement of all agent outputs.",
+    "change_log": [
+      {
+        "version": "6.0.0",
+        "date": "2025-07-25",
+        "author": "Apex Self-Revision Protocol",
+        "changes": "Helios-Stable release: full suite of validators for pure and hybrid modalities, dynamic thresholds, telemetry hooks, sentinel tests, HRM trace validation, and remediation playbooks."
+      }
+    ],
+    "governance": {
+      "approval_policy": "Changes require approval from two certified CFA architects.",
+      "versioning_policy": "Semantic Versioning (major for breaking changes)."
+    }
+  },
+  "cross_references": {
+    "self": "kb_agent_reasoning_validation",
+    "core": "kb_cognitive_fusion_architecture_cfa",
+    "common_schemas": "kb_common_schemas",
+    "optimizergpt": "kb_optimizergpt",
+    "autocontinue": "kb_autocontinue",
+    "reasoning": "kb_reasoning_knowledge_base",
+    "orchestration": "kb_agent_orchestration_core",
+    "problem_solving": "kb_problem_solving_network",
+    "evolution": "kb_model_evolution_playbook",
+    "risk_frame": "kb_common_schemas#/$defs/RiskFrame",
+    "context_rot": "kb_autocontinue#context_rot_mitigation",
+    "hrm_model": "kb_problem_solving_network#solver_library.psn.ml.hrm_v1"
+  },
+  "cfa_integration_points": [
+    { "layer": "L4", "consumer": "Meta-Validation Loop", "action": "Execute validation_pipeline on each significant output." },
+    { "layer": "L1", "consumer": "Strategy Synthesizer", "action": "Evaluate module triggers and thresholds to assess validation cost and risks." }
+  ],
+  "validation_pipeline": {
+    "description": "Sequential stages to validate plan, execution, schema, safety, and recovery; failures trigger remediation.",
+    "stages": [
+      { "stage_id": "stage_predictive", "name": "1. Predictive Validation", "description": "Estimate failure risk on initial plan." },
+      { "stage_id": "stage_process_specific", "name": "2. Process-Specific & Factual Validation", "description": "Invoke modality-specific validators and RAG-based fact checking." },
+      { "stage_id": "stage_cross_modality", "name": "3. Cross-Modality Validation", "description": "Validate handoff and consistency within Hybrid Constructs." },
+      { "stage_id": "stage_schema_constraint", "name": "4. Schema & Constraint Validation", "description": "Ensure output matches output_schema & task constraints." },
+      { "stage_id": "stage_remediation", "name": "5. Remediation & Recovery Loop", "description": "On failure, analyze errors, suggest fixes, and re-route to L1/L2." },
+      { "stage_id": "stage_safety_ethics", "name": "6. Safety, Privacy & Ethics Validation", "description": "Final checks for PII, bias, toxicity, and accessibility before release." }
+    ]
+  },
+  "validation_modules": [
+    {
+      "module_id": "V-COT-CHK-01",
+      "name": "Chain-of-Thought Validator",
+      "version": "1.1.0",
+      "trigger": { "modality_id": "MOD-COT-01" },
+      "checks": [
+        "Verify each reasoning step is consecutively numbered.",
+        "Ensure logical flow without contradictions."
+      ],
+      "metrics": { "latency_ms": true, "failure_rate": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-SELF-CORR-01",
+      "name": "Spontaneous Propose-Verify Validator",
+      "version": "1.1.0",
+      "trigger": { "modality_id": "MOD-SPOC-01" },
+      "thresholds": { "min_loop_pass_rate": 1.0 },
+      "checks": [
+        "Output contains 'verification_trace'.",
+        "Trace ends with pass = true."
+      ],
+      "metrics": { "latency_ms": true, "failure_rate": true },
+      "test_cases": [
+        { "input": { "verification_trace": [{ "step":1,"ok":true }] }, "expected": { "status": "pass" } }
+      ]
+    },
+    {
+      "module_id": "V-TREE-CHK-01",
+      "name": "Tree-of-Thought Validator",
+      "version": "1.1.0",
+      "trigger": { "modality_id": "MOD-TREE-OT-01" },
+      "thresholds": { "max_pruning_depth": 2 },
+      "checks": [
+        "Validate tree node integrity.",
+        "Pruning decisions <= max_pruning_depth."
+      ],
+      "metrics": { "avg_tree_depth": true, "pruning_effectiveness": true },
+      "test_cases": [
+        { "input": { "tree": { "depth": 2 } }, "expected": { "status": "pass" } }
+      ]
+    },
+    {
+      "module_id": "V-REACT-TOOL-CHK-01",
+      "name": "ReAct Tool Usage Validator",
+      "version": "1.0.0",
+      "trigger": { "modality_id": "MOD-REACT-01" },
+      "checks": [
+        "Each tool call returns valid response.",
+        "Action outputs match expected schema."
+      ],
+      "metrics": { "failure_rate": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-COV-CONSISTENCY-01",
+      "name": "Chain-of-Verification Validator",
+      "version": "1.0.0",
+      "trigger": { "modality_id": "MOD-COV-01" },
+      "checks": [
+        "Verification plan is executed and results applied to refine the answer."
+      ],
+      "metrics": { "pass_rate": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-GRAPH-CHK-01",
+      "name": "Graph-of-Thought Validator",
+      "version": "1.0.0",
+      "trigger": { "modality_id": "MOD-GRAPH-OT-01" },
+      "checks": [
+        "Graph nodes and edges are coherent and acyclic."
+      ],
+      "metrics": { "coherence_score": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-LTM-CONSISTENCY-01",
+      "name": "Least-to-Most Consistency Validator",
+      "version": "1.0.0",
+      "trigger": { "modality_id": "MOD-LTM-PROMPT-01" },
+      "checks": [
+        "Subproblem solutions integrate correctly into final answer."
+      ],
+      "metrics": { "integration_accuracy": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-DEBATE-CONSISTENCY-01",
+      "name": "Self-Debate Consistency Validator",
+      "version": "1.0.0",
+      "trigger": { "modality_id": "MOD-SELF-DEBATE-01" },
+      "checks": [
+        "All persona arguments are represented before synthesis."
+      ],
+      "metrics": { "debate_balance_score": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-MCTS-VALID-01",
+      "name": "MCTS Integrity Validator",
+      "version": "1.0.0",
+      "trigger": { "modality_id": "MOD-MCTS-01" },
+      "checks": [
+        "Simulation count matches requested, and best-action selection is reproducible."
+      ],
+      "metrics": { "simulation_consistency": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-NEURO-SYMB-VALID-01",
+      "name": "Neuro-Symbolic Validator",
+      "version": "1.0.0",
+      "trigger": { "modality_id": "MOD-NEURO-SYMB-01" },
+      "checks": [
+        "Symbolic assertions are faithful to the output of the LLM."
+      ],
+      "metrics": { "symbolic_accuracy": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-CONTEXT-ROT-SENTINEL-01",
+      "name": "Context Rot Sentinel Validator",
+      "version": "1.0.0",
+      "trigger": { "stage": "stage_process_specific" },
+      "checks": [
+        "Sentinel questions at chunk boundaries are answered correctly."
+      ],
+      "metrics": { "sentinel_pass_rate": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-HRM-TRACE-01",
+      "name": "HRM Deterministic Trace Validator",
+      "version": "1.0.0",
+      "trigger": { "task_profile": { "modality": "MOD-HRM-SOLVER-01" } },
+      "checks": [
+        "Re-execution of HRM with identical input yields identical digest."
+      ],
+      "metrics": { "trace_consistency": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-HRM-PLAN-CHK-01",
+      "name": "HRM Plan Consistency Validator",
+      "version": "1.0.0",
+      "trigger": { "solver_id": "psn.ml.hrm_v1" },
+      "checks": [
+        "Ensure high-level plan covers all subproblems",
+        "Ensure low-level execution trace follows the plan"
+      ],
+      "metrics": {
+        "plan_coverage": null, "alignment_score": null },
+        "alignment_score": null
+        "test_cases": [
+          {
+            "input": {
+            "high_level_plan": ["step1","step2"], "execution_trace": "..." },
+            "expected": { "coverage": 1.0 }
+            "execution_trace": "..."
+    },
+    {
+      "module_id": "V-RAG-FACT-CHECK-01",
+      "name": "RAG-Based Fact Checker",
+      "version": "1.0.0",
+      "trigger": { "task_profile": { "requires_fact_checking": true } },
+      "thresholds": { "min_evidence_score": 0.85 },
+      "checks": [
+        "Decompose claims and fetch external evidence.",
+        "Flag claims below evidence threshold."
+      ],
+      "metrics": { "claims_validated": true, "claims_failed": true },
+      "test_cases": []
+    },
+    {
+      "module_id": "V-ACCESSIBILITY-CHK-01",
+      "name": "Accessibility Validator",
+      "version": "1.0.0",
+      "trigger": { "stage": "stage_safety_ethics", "output_format": "html" },
+      "checks": [
+        "WCAG 2.1 AA compliance for alt text and color contrast."
+      ],
+      "metrics": { "wcag_compliance_score": true },
+      "test_cases": []
+    }
+  ],
+  "remediation_playbooks": {
+    "description": "Automated remediation strategies invoked on validation failures.",
+    "playbooks": [
+      {
+        "playbook_id": "PB-ROT-RECOVERY",
+        "trigger_module": "V-CONTEXT-ROT-SENTINEL-01",
+        "actions": [
+          "Increase chunk overlap ratio.",
+          "Reorder haystack segments.",
+          "Re-run generation."
+        ]
+      },
+      {
+        "playbook_id": "PB-HRM-RETRY",
+        "trigger_module": "V-HRM-TRACE-01",
+        "actions": [
+          "Invalidate cache.",
+          "Reinvoke HRM solver with verified parameters."
+        ]
+      },
+      {
+        "playbook_id": "PB-GENERIC-RETRY",
+        "trigger_module": "*",
+        "actions": [
+          "Log error and suggest switching modality.",
+          "Notify L1 for override consideration."
+        ]
+      }
+    ]
+  },
+  "example_workflow_trace": {
+    "description": "Trace showing sentinel failure and remediation.",
+    "trace": [
+      { "step": 1, "layer": "L1", "action": "Select HRC-EXPLORATORY-TREE." },
+      { "step": 2, "layer": "L2", "action": "Generate chunks with sentinel questions." },
+      { "step": 3, "layer": "L4/stage_process_specific", "result": "FAIL", "details": "Sentinel question not answered correctly." },
+      { "step": 4, "layer": "L4/stage_remediation", "action": "Execute PB-ROT-RECOVERY to adjust chunking." },
+      { "step": 5, "layer": "L2", "action": "Re-generate with updated chunk strategy." },
+      { "step": 6, "layer": "L4", "result": "PASS" }
+    ]
+  },
+  "glossary": {
+    "description": "Canonical glossary for validation concepts.",
+    "entries": [
+      { "term": "Validation Pipeline", "category": "Core Concepts", "definition": "The multi-stage L4 process ensuring output correctness and safety." },
+      { "term": "Predictive Validation", "category": "Core Concepts", "definition": "Stage estimating failure risk on initial plan." },
+      { "term": "Sentinel Test", "category": "Validation", "definition": "Injected checks at chunk boundaries to detect Context Rot." },
+      { "term": "Remediation Playbook", "category": "Recovery", "definition": "Predefined actions to correct validation failures and reroute tasks." },
+      { "term": "Telemetry Hook", "category": "Observability", "definition": "Instrumentation point for collecting module metrics." }
+    ]
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.cfa.org/kb/kb_agent_orchestration_core_v15.schema.json",
+  "title": "CFA Agent Orchestration Core KB v15.0.0",
+  "version": "15.0.0",
+  "schema_version": "15.0.0",
+  "release_codename": "Helios-Stable-Locked",
+  "last_modified": "2025-07-25T08:00:00-03:00",
+  "additionalProperties": false,
+  "checksums": { "sha256": "<sha256_placeholder>" },
+  "endpoints": {
+    "health": "/healthz/kb_agent_orchestration_core",
+    "version": "/healthz/kb_agent_orchestration_core/version"
+  },
+  "kb_metadata": {
+    "kb_id": "kb_agent_orchestration_core",
+    "kb_name": "Agent Orchestration Core Playbook",
+    "authors": ["Apex Self-Revision Protocol", "OptimizerGPT"],
+    "description": "Production-ready patterns and blueprints for multi-agent orchestration, defining SLAs, security, resilience, and telemetry for complex CFA deployments.",
+    "change_log": [
+      {
+        "version": "15.0.0",
+        "date": "2025-07-25",
+        "author": "Apex Self-Revision Protocol",
+        "changes": "Definitive 'Helios-Stable' release: unified orchestration patterns v1.0.0, added Hybrid Edge-Cloud, Single-Agent fallback, enriched SLAs/SLOs/SLIs, security and resilience protocols, CI/CD governance."
+      }
+    ],
+    "governance": {
+      "change_review_process": "All changes via PR with two CFA-architect approvals.",
+      "pattern_versioning_policy": "Independent SemVer per pattern.",
+      "rollback_procedures": "Follow CI-02-ROLLBACK-HOTFIX on critical SLO breaches."
+    }
+  },
+  "definitions": {
+    "SubTaskRequest": { "$ref": "kb_common_schemas#/$defs/SubTaskRequest" },
+    "SubTaskResult":  { "$ref": "kb_common_schemas#/$defs/SubTaskResult" },
+    "TaskPayload":    { "$ref": "kb_common_schemas#/$defs/TaskPayload" },
+    "TaskResult":     { "$ref": "kb_common_schemas#/$defs/TaskResult" }
+  },
+  "cross_references": {
+    "self": "kb_agent_orchestration_core",
+    "core": "kb_cognitive_fusion_architecture_cfa",
+    "common_schemas": "kb_common_schemas",
+    "optimizergpt": "kb_optimizergpt",
+    "autocontinue": "kb_autocontinue",
+    "reasoning": "kb_reasoning_knowledge_base",
+    "validation": "kb_agent_reasoning_validation",
+    "problem_solving": "kb_problem_solving_network",
+    "evolution": "kb_model_evolution_playbook",
+    "risk_frame": "kb_common_schemas#/$defs/RiskFrame",
+    "context_rot": "kb_autocontinue#context_rot_mitigation",
+    "hrm_model": "kb_problem_solving_network#solver_library.psn.ml.hrm_v1"
+  },
+  "cfa_integration_points": [
+    { "layer": "L1", "consumer": "Strategy Synthesizer", "action": "Selects orchestration pattern via orchestration_pattern_selection_matrix." },
+    { "layer": "L3", "consumer": "Execution Orchestrator", "action": "Instantiates agent pipelines or swarms based on pattern blueprint." },
+    { "layer": "Observability", "consumer": "Monitoring Service", "action": "Ingests telemetry from each pattern into 'cfa_orchestration' metrics." }
+  ],
+  "orchestration_pattern_selection_matrix": {
+    "description": "Rule-based engine for L1 to choose the optimal orchestration pattern.",
+    "rules": [
+      {
+        "priority": 95,
+        "rule_id": "SEL-EDGE-CLOUD",
+        "if": { "deployment_profile": { "operator": "equals", "value": "hybrid_edge_cloud" } },
+        "then": { "select_pattern": "ORCH-PAT-020", "estimated_cost_per_1000_tasks": 0.75, "expected_latency_ms": 300 },
+        "justification_template": "Selected Hybrid Edge-Cloud for '{deployment_profile}'."
+      },
+      {
+        "priority": 90,
+        "rule_id": "SEL-MEDIATOR",
+        "if": { "requires_validated_handoff": true },
+        "then": { "select_pattern": "ORCH-PAT-MEDIATOR-01", "estimated_cost_per_1000_tasks": 0.50, "expected_latency_ms": 200 },
+        "justification_template": "Chosen Mediator for safe data handoff."
+      },
+      {
+        "priority": 85,
+        "rule_id": "SEL-HUB-SPOKE",
+        "if": { "specialized_skills_required": { "operator": ">=", "value": 3 } },
+        "then": { "select_pattern": "ORCH-PAT-018", "estimated_cost_per_1000_tasks": 1.20, "expected_latency_ms": 500 },
+        "justification_template": "Hub-and-Spoke for {specialized_skills_required} skill sets."
+      },
+      {
+        "priority": 88,
+        "rule_id": "SEL-HRM-PATTERN",
+        "if": { "requires_hrm_solver": true },
+        "then": { "select_pattern": "ORCH-PAT-HRM-01", "expected_latency_ms": 1000 }
+      }
+      {
+        "priority": 80,
+        "rule_id": "SEL-FAN-OUT",
+        "if": { "task_flow": { "operator": "equals", "value": "parallel_independent" } },
+        "then": { "select_pattern": "ORCH-PAT-SERVERLESS-FAN-OUT-01", "expected_latency_ms": 150 },
+        "justification_template": "Serverless Fan-Out for parallel processing."
+      },
+      {
+        "priority": 75,
+        "rule_id": "SEL-PIPELINE",
+        "if": { "task_flow": { "operator": "equals", "value": "sequential" } },
+        "then": { "select_pattern": "ORCH-PAT-PIPELINE-01", "expected_latency_ms": 800 },
+        "justification_template": "Linear Pipeline for sequential workflow."
+      },
+      {
+        "priority": 0,
+        "rule_id": "SEL-FALLBACK-SINGLE",
+        "if": {},
+        "then": { "select_pattern": "SINGLE-AGENT-EXECUTION", "estimated_cost_per_1000_tasks": 0.10, "expected_latency_ms": 100 },
+        "justification_template": "Defaulting to Single-Agent Execution."
+      }
+    ]
+  },
+  "inter_agent_communication_protocol": {
+    "description": "Standard envelope ensuring secure, traceable messages between agents.",
+    "schema": {
+      "protocol_version": "1.1.0",
+      "encoding": "json",
+      "header": {
+        "message_id": "uuid", "correlation_id": "uuid", "traceparent": "string", "span_id": "string",
+        "source_agent_id": "string", "target_agent_id": "string", "user_id": "string", "timestamp": "iso8601"
+      },
+      "security": {
+        "signature": "string (HMAC-SHA256)",
+        "encryption": { "algorithm": "AES-256-GCM" }
+      },
+      "payload": { "type": "object", "description": "Primary task data." },
+      "context_summary": { "type": "string", "description": "Brief state snapshot." },
+      "error": { "type": "object", "properties": { "code": "string", "message": "string", "details": "object" } }
+    }
+  },
+  "orchestration_patterns": [
+    {
+      "pattern_id": "SINGLE-AGENT-EXECUTION",
+      "version": "1.0.0",
+      "name": "Single Agent Execution",
+      "description": "Atomic tasks handled by one agent without further orchestration.",
+      "ideal_use_case": ["API calls","simple transforms","direct text generation"],
+      "category": "Core",
+      "components": [
+        { "name": "ExecutionAgent", "role": "Executes TaskPayload", "input_contract": "#/definitions/TaskPayload", "output_contract": "#/definitions/TaskResult" }
+      ],
+      "input_schema": { "$ref": "#/definitions/TaskPayload" },
+      "output_schema": { "$ref": "#/definitions/TaskResult" },
+      "parameters": {
+        "retry_policy": { "type": "object", "properties": { "max_retries": { "type": "integer", "default": 2 }, "backoff_ms": { "type": "integer", "default": 500 } } }
+      },
+      "resilience_strategies": ["Exponential Retry","Light Circuit Breaker"],
+      "telemetry_hooks": [
+        { "name": "exec_latency_ms", "type": "histogram", "unit": "milliseconds", "alert_threshold": 200, "on_alert": { "action": "log_warning", "escalation": "dev_channel" } }
+      ],
+      "service_level": { "SLI": "p95_latency_ms", "SLO": "p95_latency_ms < 250", "SLA": "99.95% availability" },
+      "test_cases": [
+        { "name": "happy_path", "input": { "task_payload": {} }, "expected": { "status": "success" } },
+        { "name": "failure_path", "input": { "task_payload": { "force_error": true } }, "expected": { "status": "error" } }
+      ]
+    },
+    {
+      "pattern_id": "ORCH-PAT-020",
+      "version": "1.0.0",
+      "name": "Hybrid Edge-Cloud Orchestration",
+      "description": "Distribute sub-tasks between edge and cloud nodes for low-latency and scalable processing.",
+      "ideal_use_case": ["real-time IoT inference","distributed monitoring"],
+      "category": "Distributed",
+      "components": [
+        { "name": "EdgeNode", "role": "Executes low-latency tasks at the edge.", "input_contract": "#/definitions/SubTaskRequest", "output_contract": "#/definitions/SubTaskResult" },
+        { "name": "CloudCoordinator", "role": "Routes overflow to cloud and aggregates results.", "input_contract": "#/definitions/SubTaskRequest", "output_contract": "#/definitions/SubTaskResult" }
+      ],
+      "input_schema": { "$ref": "#/definitions/TaskPayload" },
+      "output_schema": { "$ref": "#/definitions/TaskResult" },
+      "parameters": { "edge_priority": { "type": "string", "default": "critical" }, "cloud_burst_threshold": { "type": "integer", "default": 80 } },
+      "resilience_strategies": ["Edge Failover","Cloud Burst Scaling"],
+      "security_considerations": ["Edge enclave attestations","mTLS between nodes"],
+      "telemetry_hooks": [
+        { "name": "edge_latency_ms", "type": "histogram", "unit": "milliseconds" },
+        { "name": "cloud_overflow_count", "type": "counter", "unit": "tasks" }
+      ],
+      "service_level": { "SLI": "p99_latency_ms", "SLO": "p99_latency_ms < 100", "SLA": "99.9% availability" },
+      "test_cases": [
+        { "input": { "task_payload": { "priority": "critical" } }, "expected": { "status": "success", "node": "EdgeNode" } },
+        { "input": { "task_payload": { "load": 90 } }, "expected": { "status": "success", "node": "CloudCoordinator" } }
+      ]
+    },
+    {
+      "pattern_id": "ORCH-PAT-018",
+      "version": "1.3.0",
+      "name": "Hub-and-Spoke MCP",
+      "description": "Central Hub decomposes tasks, distributes to Spokes, then synthesizes results.",
+      "ideal_use_case": ["multi-skill workflows","complex report generation"],
+      "category": "Cloud",
+      "components": [
+        { "name": "Hub", "role": "Decomposes and routes sub-tasks.", "input_contract": "#/definitions/TaskPayload", "output_contract": "#/definitions/SubTaskRequest" },
+        { "name": "Spoke", "role": "Executes specialized sub-task.", "input_contract": "#/definitions/SubTaskRequest", "output_contract": "#/definitions/SubTaskResult" }
+      ],
+      "input_schema": { "$ref": "#/definitions/TaskPayload" },
+      "output_schema": { "$ref": "#/definitions/TaskResult" },
+      "parameters": { "circuit_breaker_threshold": { "type": "integer", "default": 5 }, "spoke_timeout_ms": { "type": "integer", "default": 10000 } },
+      "resilience_strategies": ["Spoke Failover","Hub Leader Election"],
+      "security_considerations": ["mTLS authentication","RBAC at Hub"],
+      "telemetry_hooks": [
+        { "name": "hub_queue_length", "type": "gauge", "unit": "count", "alert_threshold": 100, "on_alert": { "action": "scale_spoke_pool", "escalation": "sre_pager" } }
+      ],
+      "service_level": { "SLI": "p95_latency_ms", "SLO": "p95_latency_ms < 1500", "SLA": "99.9% availability" },
+      "test_cases": [
+        { "name": "happy_path", "input": { "sub_tasks": [] }, "expected": { "status": "ok" } },
+        { "name": "failover_path", "input": { "fail_spoke": true }, "expected": { "status": "ok", "rerouted": true } }
+      ]
+    },
+    {
+      "pattern_id": "ORCH-PAT-SERVERLESS-FAN-OUT-01",
+      "version": "1.0.0",
+      "name": "Serverless Fan-Out/Fan-In",
+      "description": "Parallel processing at scale via serverless functions.",
+      "ideal_use_case": ["data validation","batch API calls","image processing"],
+      "category": "Serverless",
+      "components": [
+        { "name": "FunctionWorker", "role": "Processes individual data items asynchronously.", "input_contract": "#/definitions/SubTaskRequest", "output_contract": "#/definitions/SubTaskResult" }
+      ],
+      "input_schema": { "$ref": "#/definitions/TaskPayload" },
+      "output_schema": { "$ref": "#/definitions/TaskResult" },
+      "parameters": { "max_concurrency": { "type": "integer", "default": 1000 }, "batch_size": { "type": "integer", "default": 10 } },
+      "resilience_strategies": ["At-least-once Delivery","Function Retry Policies"],
+      "security_considerations": ["Scoped IAM Roles per function"],
+      "telemetry_hooks": [
+        { "name": "fan_out_count", "type": "counter", "unit": "items" },
+        { "name": "fan_in_lag_ms", "type": "histogram", "unit": "milliseconds" }
+      ],
+      "test_cases": [
+        { "input": { "data_items": [1,2,3] }, "expected": { "status": "ok", "processed_count": 3 } }
+      ]
+    },
+    {
+      "pattern_id": "ORCH-PAT-PIPELINE-01",
+      "version": "1.0.0",
+      "name": "Linear Pipeline",
+      "description": "Sequential agent chain: each output feeds the next input.",
+      "ideal_use_case": ["ETL workflows","document transformations"],
+      "category": "Sequential",
+      "components": [
+        { "name": "StageAgent", "role": "Performs a pipeline stage.", "input_contract": "#/definitions/SubTaskRequest", "output_contract": "#/definitions/SubTaskResult" }
+      ],
+      "input_schema": { "$ref": "#/definitions/TaskPayload" },
+      "output_schema": { "$ref": "#/definitions/TaskResult" },
+      "parameters": { "dead_letter_queue": { "type": "object", "properties": { "max_retries": { "type": "integer", "default": 3 }, "backoff_ms": { "type": "integer", "default": 1000 } } } },
+      "resilience_strategies": ["Transactional Handoffs","Dead-Letter Queue","Exponential Backoff"],
+      "security_considerations": ["Data integrity checks at each stage"],
+      "telemetry_hooks": [
+        { "name": "stage_processing_time_ms", "type": "histogram", "unit": "milliseconds" },
+        { "name": "dlq_message_count", "type": "gauge", "unit": "count", "alert_threshold": 1 }
+      ],
+      "test_cases": [
+        { "input": { "initial_data": {} }, "expected": { "status": "ok" } }
+      ]
+    },
+    {
+      "pattern_id": "ORCH-PAT-MEDIATOR-01",
+      "version": "1.0.0",
+      "name": "Validated Handoff Mediator",
+      "description": "Intermediary agent sanitizing and validating data between agents.",
+      "ideal_use_case": ["hybrid constructs","multi-agent handoffs"],
+      "category": "Validation",
+      "components": [
+        { "name": "Mediator", "role": "Validates and transforms inter-agent payloads.", "input_contract": "#/definitions/SubTaskRequest", "output_contract": "#/definitions/SubTaskRequest" }
+      ],
+      "input_schema": { "$ref": "#/definitions/SubTaskRequest" },
+      "output_schema": { "$ref": "#/definitions/SubTaskRequest" },
+      "parameters": { "max_sanitization_attempts": { "type": "integer", "default": 2 } },
+      "resilience_strategies": ["Validation Loops","Clarification Requests"],
+      "telemetry_hooks": [
+        { "name": "validation_latency_ms", "type": "histogram", "unit": "milliseconds" },
+        { "name": "handoff_failure_rate", "type": "gauge", "unit": "percent" }
+      ],
+      "test_cases": [
+        { "input": { "source_output": { "data": "valid" } }, "expected": { "status": "ok", "validated": true } }
+      ]
+    },
+    {
+      "pattern_id": "ORCH-PAT-HRM-01",
+      "version": "1.0.0",
+      "name": "HRM Single-Shot Execution",
+      "description": "Routes heavy reasoning tasks to the Hierarchical Reasoning Machine solver and returns a structured solution artifact.",
+      "category": "Specialized",
+      "input_schema": { "$ref": "kb_common_schemas.json#/$defs/TaskProfile" },
+      "output_schema": { "$ref": "kb_common_schemas.json#/$defs/SolutionArtifact" },
+      "resilience_strategies": ["retry_on_inconsistency", "fallback_to_MCTS"],
+      "telemetry_hooks": ["hrm_invocation_latency", "hrm_cache_hit_rate"],
+     "test_cases": [
+       {
+         "name": "complex_problem",
+         "input": { "task_profile": { "task_type": "complex_problem_solving" } },
+         "expected": { "status": "solved" }
+       }
+     ],
+     "cross_references": [
+       {
+         "kb_id": "kb_problem_solving_network",
+         "component": "solver_library.psn.ml.hrm_v1",
+         "relationship": "invokes HRM solver"
+    }
+  ],
+  "configuration_profiles": [
+    { "profile_id": "PROF-LOW-LATENCY", "parameters": { "spoke_timeout_ms": 3000, "max_retries": 1 } },
+    { "profile_id": "PROF-HIGH-THROUGHPUT", "parameters": { "max_concurrency": 2000, "batch_size": 50 } },
+    { "profile_id": "PROF-COST-OPTIMIZED", "parameters": { "max_concurrency": 100, "spoke_instance_type": "spot" } }
+  ],
+  "glossary": {
+    "description": "Orchestration concepts and patterns glossary.",
+    "entries": [
+      { "term": "Circuit Breaker", "category": "Resilience", "definition": "Stops requests to failing services to avoid cascade.", "example": "Hub disables spoke after 3 failed health checks." },
+      { "term": "Dead-Letter Queue (DLQ)", "category": "Resilience", "definition": "Queue for messages that exhaust retries.", "example": "Failed document transform stored for later review." },
+      { "term": "Leader Election", "category": "Resilience", "definition": "Choosing an active coordinator in a distributed group.", "example": "Hub replicas elect a leader via Raft." },
+      { "term": "Bulkhead", "category": "Resilience", "definition": "Isolates failures into separate pools.", "example": "Separate thread pools for different spoke types." },
+      { "term": "mTLS", "category": "Security", "definition": "Mutual TLS for endpoint authentication.", "example": "Hub and Spoke exchange certificates." },
+      { "term": "Distributed Tracing", "category": "Observability", "definition": "End-to-end request tracing using traceparent.", "example": "Trace flow from Hub to multiple Spokes." },
+      { "term": "Span ID", "category": "Observability", "definition": "Unique ID for an operation in a trace.", "example": "Each spoke call gets a child span ID." },
+      { "term": "Rate Limiter", "category": "Resilience", "definition": "Controls request rate to prevent overload.", "example": "Limit spoke API calls to 100/min." },
+      { "term": "SLI", "category": "Observability", "definition": "Service Level Indicator metric." },
+      { "term": "SLO", "category": "Observability", "definition": "Target performance bound for an SLI." },
+      { "term": "SLA", "category": "Governance", "definition": "Formal commitment for service availability." },
+      { "term": "Error Envelope", "category": "Communication", "definition": "Standard format for inter-agent errors." }
+    ]
+  }
+}

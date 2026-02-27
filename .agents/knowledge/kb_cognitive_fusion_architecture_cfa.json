@@ -1,0 +1,175 @@
+{
+  "$schema": "https://schemas.cfa.org/core_v11.json",
+  "kb_metadata": {
+    "kb_id": "kb_cognitive_fusion_architecture_cfa",
+    "version": "11.0.0",
+    "schema_version": "11.0.0",
+    "last_modified": "2025-07-25T00:00:00-03:00",
+    "authors": ["Apex Self-Revision Protocol", "OptimizerGPT"],
+    "change_log": [
+      {
+        "version": "11.0.0",
+        "date": "2025-07-25",
+        "description": "Definitive 'Helios-Stable' canonical release: unified all operational, governance, observability, and CI/CD constructs; manifest locked across 10 KBs."
+      },
+      {
+        "version": "10.x and below",
+        "date": "2025-07-24",
+        "description": "Superseded partial or incomplete implementations."
+      }
+    ]
+  },
+  "agent_profile": {
+    "agent_id": "agent_apex_cognitive_fusion_architect",
+    "agent_name": "Apex Cognitive Fusion Architect",
+    "agent_version": "11.0.0-Helios-Stable-Locked",
+    "release_codename": "Helios-Stable-Locked",
+    "operational_status": "PRODUCTION",
+    "description": "A highly specialized, autonomous AI agent that operates the Cognitive Fusion Architecture, designing, orchestrating, and evolving AI agents and multi-agent systems."
+  },
+  "strategic_imperatives": {
+    "description": "Guiding principles that shape every decision within the CFA.",
+    "items": [
+      { "id": "si_adapt_01", "name": "adaptive_excellence", "goal": "Always select, compose, or synthesize the most effective cognitive strategy for any task." },
+      { "id": "si_synth_01", "name": "holistic_knowledge_synthesis", "goal": "Seamlessly integrate all relevant knowledge across the KB stack." },
+      { "id": "si_valid_01", "name": "uncompromising_validation", "goal": "Subject every output to rigorous multi-dimensional validation ensuring correctness and safety." },
+      { "id": "si_evolve_01", "name": "perpetual_evolution", "goal": "Use insights from every task to autonomously refine KBs and cognitive templates." }
+    ]
+  },
+  "migration_and_deployment_protocol": {
+    "description": "Procedures for safe rollout and backward compatibility.",
+    "protocol_version": "1.0.0",
+    "semantic_compatibility_validation": { "status": "VERIFIED", "notes": "No breaking changes from 10.x → 11.0.0." },
+    "ci_cd_pipeline_requirements": [
+      { "stage_id": "ci_validate", "name": "schema_lint", "details": "Validate each KB against its JSON Schema before merge." },
+      { "stage_id": "ci_integrity", "name": "checksum_verify", "details": "Verify SHA256 digests for reproducibility and supply-chain security." },
+      { "stage_id": "cd_regression", "name": "e2e_golden_tasks", "details": "Run golden tasks suite to prevent behavioral regressions." }
+    ],
+    "dependency_management": { "governing_version": "11.x", "policy": "All KBs must align with CFA-Core v11.x." }
+  },
+  "operational_framework": {
+    "framework_id": "cognitive_fusion_architecture_cfa",
+    "description": "Defines CFA’s core: KB manifest, workflow, and diagram.",
+    "knowledge_base_stack": {
+      "description": "Complete, version-controlled manifest of all 10 canonical KBs.",
+      "manifest": {
+        "kb_cognitive_fusion_architecture_cfa": "11.0.0",
+        "kb_common_schemas": "2.2.0",
+        "kb_optimizergpt": "6.1.0",
+        "kb_autocontinue": "6.2.0",
+        "kb_reasoning_knowledge_base": "17.0.0",
+        "kb_agent_reasoning_validation": "6.0.0",
+        "kb_agent_orchestration_core": "15.0.0",
+        "kb_problem_solving_network": "14.0.0",
+        "kb_content_structure_blueprints": "1.0.0",
+        "kb_model_evolution_playbook": "13.0.0"
+      },
+      "logical_views": [
+        { "view_id": "context_runtime_view", "description": "Minimal KBs for interactive contexts.", "members": ["kb_optimizergpt", "kb_autocontinue"] },
+        { "view_id": "full_system_view", "description": "All KBs for comprehensive design and evolution.", "members": ["*"] }
+      ]
+    },
+    "operational_workflow": {
+      "description": "Six-layer pipeline from intake (L0) to evolution (L5).",
+      "layers": [
+        { "id": "L0", "name": "meta_controller", "description": "Deconstruct tasks, build TaskProfile, verify KB integrity.", "cross_references": ["kb_common_schemas"] },
+        { "id": "L1", "name": "strategy_synthesizer", "description": "Select modalities, blueprints, or patterns via ADR.", "cross_references": ["kb_reasoning_knowledge_base", "kb_content_structure_blueprints", "kb_agent_orchestration_core"] },
+        { "id": "L2", "name": "scaffolding_engine", "description": "Prepare prompts, chunk contexts, enforce policies.", "cross_references": ["kb_optimizergpt", "kb_autocontinue", "kb_common_schemas"] },
+        { "id": "L3", "name": "execution_orchestrator", "description": "Invoke LLMs, solvers, manage multi-agent patterns.", "cross_references": ["kb_agent_orchestration_core", "kb_problem_solving_network"] },
+        { "id": "L4", "name": "validation_observability", "description": "Run validators, emit telemetry, and remediate loops.", "cross_references": ["kb_agent_reasoning_validation", "kb_model_evolution_playbook"] },
+        { "id": "L5", "name": "evolution_loop", "description": "Monitor SLIs/SLOs and launch self-improvement playbooks.", "cross_references": ["kb_model_evolution_playbook", "kb_common_schemas"] }
+      ]
+    },
+    "cfa_diagram_mermaid": {
+      "description": "Canonical Mermaid diagram of CFA flow.",
+      "code": "graph TD\n    A[Task Intake] --> L0; L0 --> L1; L1 --> L2; L2 --> L3; L3 --> L4; L4 -- Success --> H; L4 -- Failure --> L4_R; L4_R --> L1; L4 --> L5; L5 --> KBs; KBs --> L0;"
+    }
+  },
+  "release_management": {
+    "description": "Backup, disaster recovery, and stability policies.",
+    "kb_checksums": {
+      "schema_definition_file": "cfa_kb_schema.json",
+      "hashes": {
+        "kb_cognitive_fusion_architecture_cfa": "<sha256_placeholder>",
+        "kb_optimizergpt": "<sha256_placeholder>",
+        "kb_autocontinue": "<sha256_placeholder>",
+        "kb_reasoning_knowledge_base": "<sha256_placeholder>",
+        "kb_agent_orchestration_core": "<sha256_placeholder>",
+        "kb_agent_reasoning_validation": "<sha256_placeholder>",
+        "kb_model_evolution_playbook": "<sha256_placeholder>"
+      }
+    },
+    "snapshot_policy": {
+      "script": "cfa_backup.sh",
+      "format": "tar.gz + sbom.json",
+      "rto_target_minutes": 5,
+      "description": "Automated snapshots with SBOM generation for supply-chain auditing."
+    }
+  },
+  "operational_parameters": {
+    "description": "Runtime knobs for resilience and cost control.",
+    "igp_switch_cooldown": { "value": 2, "unit": "failures", "description": "Validation failures before IGP reroute." },
+    "circuit_breaker_policy": { "trigger": "p95_latency_breach_twice_5min", "action": "Disable ops: rt_cont_001, model_swarm_adapt", "description": "Protect against runaway cost when latency spikes." }
+  },
+  "observability_and_operations": {
+    "description": "Unified telemetry, health checks, metrics, and SLO tracking.",
+    "telemetry_registry": {
+      "root_namespace": "cfa_core",       
+      "namespaces": ["cfa_orchestration", "cfa_reasoning", "cfa_validation", "cfa_evolution", "cfa_psn"],
+      "health_endpoints": ["/healthz", "/readyz"],
+      "metrics_endpoints": ["/metrics"]
+    },
+    "slo_registry": {
+      "dashboard": "grafana://cfa_ops",
+      "core_slis": [
+        { "name": "context_rot_risk", "description": "Error vs token distance histogram." },
+        { "name": "audit_coverage_pct", "description": "Percentage of operations audited." },
+        { "name": "hidden_objective_risk", "description": "Probability of hidden-objective injection." }
+      ],
+      "core_slos": [
+        { "metric": "reasoning_latency_p95_ms", "target": 1500, "unit": "ms" },
+        { "metric": "availability_pct", "target": 99.9, "unit": "percent" },
+        { "metric": "drift_alert_mttr_minutes", "target": 60, "unit": "minutes" }
+      ]
+    }
+  },
+  "governance_framework": {
+    "description": "Central contract for change management, security, and compliance.",
+    "change_management": {
+      "ci_cd_pipeline_requirements": [
+        { "stage_id": "ci_validate", "name": "schema_lint", "details": "Validate each KB against schema." },
+        { "stage_id": "ci_integrity", "name": "checksum_verify", "details": "Verify SHA256 checksums." },
+        { "stage_id": "cd_regression", "name": "e2e_golden_tasks", "details": "Run golden tasks to prevent regressions." }
+      ],
+      "dependency_management": { "governing_version": "11.x", "policy": "All KBs must align with CFA-Core v11.x." }
+    },
+    "security_and_compliance": {
+      "secrets_management": { "policy": "vault_runtime", "details": "Runtime secrets in HashiCorp Vault." },
+      "data_residency": { "policy": "edge_compliance", "details": "Enforce GDPR & LGPD region restrictions." },
+      "content_safety_api": { "description": "Final L4 content-safety check before output emission.", "implementation": "internal_bad_word_trie", "api_endpoint": "https://safety.cfa.internal/check" }
+    },
+    "validation_policies": {
+      "policy_engine": "OPA",
+      "rules": [
+        { "id": "manifest_version_match", "description": "Block merge if manifest version != KB metadata.", "action_on_violation": "block_merge" },
+        { "id": "schema_drift_block", "description": "Block merge on breaking schema changes without major bump.", "action_on_violation": "block_merge" }
+      ]
+    },
+    "cross_references": {
+      "common_schemas": "kb_common_schemas",
+      "validation": "kb_agent_reasoning_validation",
+      "evolution": "kb_model_evolution_playbook",
+      "orchestration": "kb_agent_orchestration_core",
+      "autocontinue": "kb_autocontinue",
+      "content_blueprints": "kb_content_structure_blueprints"
+    }
+  },
+  "platform_capabilities": {
+    "description": "Core platform services provided to downstream agents.",
+    "capabilities": [
+      { "id": "pc_agent_synthesis", "name": "agent_synthesis", "description": "Generate KB stacks and configs for new agents." },
+      { "id": "pc_multi_agent_orchestration", "name": "multi_agent_orchestration", "description": "Design and simulate resilient multi-agent workflows." },
+      { "id": "pc_continuous_evolution", "name": "continuous_evolution", "description": "Auto-tune KBs and parameters via evolution protocols." }
+    ]
+  }
+}

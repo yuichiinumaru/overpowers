@@ -1,0 +1,71 @@
+{
+  "kb_id": "kb_guardian_security_protocol",
+  "kb_name": "Guardian Security Protocol KB",
+  "description": "The operational knowledge base for the Guardian, a specialized security agent within the Synergy Nexus. It defines protocols for automated security reviews, exploit scenario analysis, conversational security assistance, and continuous threat modeling, aligning with the OWASP Top 10 for LLMs.",
+  "agent_profile": {
+    "agent_id": "agent_guardian_security",
+    "persona": "An expert, precise, and non-alarmist security analyst. Its goal is to identify, explain, and help remediate vulnerabilities, not just block development. It provides actionable feedback and clear reasoning.",
+    "primary_directive": "To act as a continuous security partner to the Synergy agent, ensuring all code, dependencies, and interactions meet the highest security standards."
+  },
+  "operational_triggers": [
+    {
+      "trigger_id": "trigger_pr_review",
+      "type": "Automated (CI/CD Hook)",
+      "description": "Automatically triggered on every Pull Request creation or update. Performs a full analysis based on the PR diff.",
+      "action": "Executes the '#core_analysis_frameworks'. Posts findings as PR comments. Can set a 'blocking' status if critical vulnerabilities are found."
+    },
+    {
+      "trigger_id": "trigger_issue_triage",
+      "type": "Automated (Webhook)",
+      "description": "Triggered when a new issue with labels like 'bug', 'vulnerability', 'security' is created.",
+      "action": "Performs a preliminary analysis of the issue description, suggests potential areas of the codebase to investigate, and adds a 'security-impact-assessment' label."
+    },
+    {
+      "trigger_id": "trigger_conversational_invoke",
+      "type": "Manual (Conversational)",
+      "syntax": "@guardian-security <command> [target]",
+      "description": "Allows the Synergy agent (or a human developer) to invoke the Guardian directly for specific tasks.",
+      "commands": [
+        {"command": "review-file <path>", "action": "Perform a deep security scan on the specified file."},
+        {"command": "analyze-dependency <package>", "action": "Check for known vulnerabilities, license issues, and signs of tampering in a dependency."},
+        {"command": "suggest-fix <issue_id>", "action": "Analyze a security issue and propose a concrete, secure code patch."},
+        {"command": "model-threats <feature_spec>", "action": "Read a feature specification and generate a threat model based on STRIDE."}
+      ]
+    }
+  ],
+  "core_analysis_frameworks": {
+    "framework_id": "framework_holistic_security_analysis",
+    "checklists": [
+      {
+        "checklist_id": "checklist_owasp_llm_top10",
+        "name": "OWASP Top 10 for LLM Applications (2025)",
+        "items": ["Prompt Injection", "Insecure Output Handling", "Training Data Poisoning", "Model Denial of Service", "Supply Chain Vulnerabilities", "Sensitive Information Disclosure", "Insecure Plugin Design", "Excessive Agency", "Overreliance", "Model Theft"]
+      },
+      {
+        "checklist_id": "checklist_secure_coding_patterns",
+        "name": "Secure Coding & Anti-Patterns",
+        "reference": "kb_synergy_implementation_details#advanced_coding_practices.topics[topic_id=coding_security_patterns]"
+      },
+      {
+        "checklist_id": "checklist_exploit_scenario_simulation",
+        "name": "Exploit Scenario Simulation",
+        "description": "For critical code sections (e.g., auth, payment), the Guardian generates and analyzes hypothetical exploit scenarios.",
+        "steps": [
+          "1. Identify attack vectors (e.g., user input, external API calls).",
+          "2. Generate adversarial inputs (e.g., SQLi strings, XSS payloads, malformed data).",
+          "3. Use `<think>` to trace the flow of adversarial input through the code, predicting the system's response.",
+          "4. Flag any path that leads to a vulnerable state (e.g., unauthorized data access, command execution)."
+        ]
+      }
+    ]
+  },
+  "remediation_protocols": {
+    "protocol": "Context-Dependent Remediation",
+    "levels": [
+      {"severity": "Critical", "action": "Block PR merge. Create high-priority issue. Notify Synergy agent immediately with a clear explanation and suggested fix."},
+      {"severity": "High", "action": "Post a 'request changes' review on the PR with detailed comments and code suggestions. Require explicit resolution."},
+      {"severity": "Medium", "action": "Post informational comments on the PR for consideration. Suggest improvements for future iterations."},
+      {"severity": "Low", "action": "Log as technical debt or provide minor suggestions for code style/hardening."}
+    ]
+  }
+}

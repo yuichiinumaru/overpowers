@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.cfa.org/kb/kb_autocontinue_v6.2.schema.json",
+  "title": "CFA AutoContinue KB v6.2.0",
+  "version": "6.2.0",
+  "schema_version": "6.2.0",
+  "last_modified": "2025-07-27T00:00:00-03:00",
+  "release_codename": "Helios-ContextRot-Fix",
+  "additionalProperties": false,
+  "checksums": {
+    "sha256": "<sha256_placeholder>"
+  },
+  "endpoints": {
+    "health": "/healthz/kb_autocontinue",
+    "version": "/healthz/kb_autocontinue/version"
+  },
+  "kb_metadata": {
+    "kb_id": "kb_autocontinue",
+    "kb_name": "Incremental Generation and Auto‑Continue Playbook",
+    "authors": ["Apex Self-Revision Protocol", "OptimizerGPT"],
+    "glossary_source": "https://schemas.cfa.org/common/glossary.md",
+    "description": "Guidelines and policies for managing long‑running LLM tasks via incremental generation, context preservation, automated continuation, and context‑rot mitigation.",
+    "change_log": [
+      {
+        "version": "6.2.0",
+        "date": "2025-07-27",
+        "author": "OptimizerGPT",
+        "changes": "Embedded native Context‑Rot mitigation playbook (eliminating the missing kb_context_rot_mitigation dependency); refined sentinel policies; updated telemetry and cross‑references."
+      },
+      {
+        "version": "6.1.0",
+        "date": "2025-07-25",
+        "author": "Apex Self-Revision Protocol",
+        "changes": "Integrated Context‑Rot mitigation, Proximity‑Biased Re‑ranking, sentinel tests, and HRM orchestration patterns."
+      },
+      {
+        "version": "6.0.0",
+        "date": "2025-07-20",
+        "author": "Apex Self-Revision Protocol",
+        "changes": "Formalized IGPs and recitation strategies; strict schema enforcement."
+      }
+    ],
+    "governance": {
+      "approval_policy": "Major changes require three architect sign‑offs.",
+      "versioning_policy": "Non‑backwards changes trigger a major version bump and coordinated rollout."
+    }
+  },
+  "cross_references": {
+    "self": "kb_autocontinue",
+    "core": "kb_cognitive_fusion_architecture_cfa",
+    "optimizergpt": "kb_optimizergpt",
+    "common_schemas": "kb_common_schemas",
+    "reasoning": "kb_reasoning_knowledge_base",
+    "validation": "kb_agent_reasoning_validation",
+    "orchestration": "kb_agent_orchestration_core",
+    "problem_solving": "kb_problem_solving_network",
+    "content_blueprints": "kb_content_structure_blueprints",
+    "evolution": "kb_model_evolution_playbook",
+    "risk_frame": "kb_common_schemas#/$defs/RiskFrame",
+    "hrm_model": "kb_problem_solving_network#solver_library.psn.ml.hrm_v1",
+    "context_rot": "kb_autocontinue#context_rot_mitigation"  
+  },
+  "policy_selection_matrix": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "Rules for the L0 Meta‑Controller to select the most appropriate Incremental Generation Policy (IGP) for a given task.",
+    "rules": [
+      { "rule_id": "POLICY-SEL-01", "if": { "interaction_mode": "interactive_dialogue" }, "then": { "select_policy": "IGP-001" } },
+      { "rule_id": "POLICY-SEL-02", "if": { "output_type": ["long_form_article", "code_module"] }, "then": { "select_policy": "IGP-002" } },
+      { "rule_id": "POLICY-SEL-03", "if": { "task_type": "complex_problem_solving" }, "then": { "select_policy": "IGP-003" } }
+    ]
+  },
+  "incremental_generation_policies": [
+    {
+      "policy_id": "IGP-001",
+      "name": "Interactive Dialogue Policy",
+      "ideal_use_case": "Chatbots, Q&A, interactive command execution.",
+      "strengths": ["Lowest latency", "Highly responsive."],
+      "weaknesses": ["Poor for global coherence.", "Prone to context drift."],
+      "chunking_strategy": {
+        "target_chunk_tokens": 500,
+        "mode": "turn_based",
+        "description": "Each turn is a chunk; context window is managed aggressively."
+      },
+      "continuation_mechanism": {
+        "type": "contextual_probe",
+        "description": "Uses a series of probes to guide the conversation and ensure alignment.",
+        "probes": [
+          { "probe_id": "PROBE-NEXT-SUBTOPIC", "condition": "next logical sub‑topic identified", "prompt_template": "(Proceed with the next section on '{{next_planned_subtopic}}'?)", "user_triggers": ["yes", "proceed", "continue"] },
+          { "probe_id": "PROBE-ELABORATE", "condition": "user_response_word_count < 10 AND task_requires_detail == true", "prompt_template": "That's a starting point. Could you please elaborate further?", "user_triggers": ["*"] },
+          { "probe_id": "PROBE-DEFAULT-CONTINUATION", "condition": "user_is_idle_for_30s OR user_input IN ['...', 'go on']", "prompt_template": "Is there anything else I can help you with on this topic?", "user_triggers": ["yes", "no", "continue"] }
+        ],
+        "stop_commands": ["stop", "end", "cancel"]
+      },
+      "error_handling": {
+        "user_protocol": "Request clarification from the user.",
+        "context_recovery_tactic": "Aggressive summarization of the last 3 turns."
+      }
+    },
+    {
+      "policy_id": "IGP-002",
+      "name": "Asynchronous Document Creation Policy",
+      "ideal_use_case": "Writing articles, reports, code modules.",
+      "strengths": ["High global coherence", "Supports long‑form planning."],
+      "weaknesses": ["Higher latency", "Greater complexity."],
+      "chunking_strategy": {
+        "target_chunk_tokens": 2000,
+        "mode": "semantic_blocks",
+        "description": "Splits drafts into semantic blocks; uses proximity‑biased re‑ranking to surface relevant blocks near generation focus.",
+        "cross_references": ["kb_autocontinue#chunking_strategies.chunk_pbr_01"]
+      },
+      "continuation_mechanism": { "type": "outline_driven", "description": "Follow a user‑approved outline; auto‑continue on next outline item." },
+      "error_handling": { "user_protocol": "Pause and request outline clarification.", "context_recovery_tactic": "Regenerate lost section from last saved outline state." }
+    },
+    {
+      "policy_id": "IGP-003",
+      "name": "HRM‑Assisted Complex Problem Solving Policy",
+      "ideal_use_case": "Multi‑step reasoning tasks requiring external solvers (HRM).",
+      "strengths": ["Deterministic sub‑component execution", "Scalable reasoning."],
+      "weaknesses": ["Requires orchestration overhead"],
+      "chunking_strategy": {
+        "target_chunk_tokens": 1500,
+        "mode": "hybrid_hierarchical",
+        "description": "Alternates between HRM trace blocks and natural‑language reasoning chunks; inserts context‑rot sentinels at each HRM boundary.",
+        "cross_references": ["kb_autocontinue#context_rot_mitigation"]
+      },
+      "continuation_mechanism": { "type": "solver_enqueue", "description": "Enqueue sub‑tasks to HRM and continue once results are available." },
+      "error_handling": { "user_protocol": "Retry with fallback solver.", "context_recovery_tactic": "Inject summarized solver state." }
+    }
+  ],
+  "chunking_strategies": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "Pluggable algorithms for slicing long context into LLM‑friendly segments.",
+    "strategies": [
+      { "id": "chunk_pbr_01", "name": "proximity_biased_reranking", "description": "Re‑rank candidate chunks so that those nearest to the current focus appear at head/tail of the prompt window.", "cross_references": ["kb_autocontinue#context_rot_mitigation"] },
+      { "id": "chunk_haystack_01", "name": "dynamic_haystack_ordering", "description": "Duplicate critical context at both start and end of each chunk to maximize attention retention.", "cross_references": ["kb_autocontinue#context_rot_mitigation"] },
+      { "id": "chunk_adaptive_01", "name": "adaptive_windowing", "description": "Dynamically adjust window size based on semantic density and drift risk.", "cross_references": ["kb_model_evolution_playbook"] }
+      { "id": "chunk_pbr_02", "name": "proximity_biased_reranking_with_summarization", "description": "Combines proximity-biased chunk reordering with targeted mini-summaries of critical segments to strengthen retention and mitigate rot.", "cross_references": ["kb_autocontinue#recitation_strategies.recite_summary_01", "kb_autocontinue#context_rot_mitigation.mitigation_strategies.mitigate_sentinel_feedback"]
+  },
+  "recitation_strategies": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "Methods to periodically reassert goals and state to prevent drift.",
+    "strategies": [
+      { "id": "recite_goal_01", "name": "goal_recitation", "description": "Periodically re‑read and embed a persistent goal summary from a `_goal_recitation.md` file.", "cross_references": ["kb_optimizergpt#context_engineering_framework"] },
+      { "id": "recite_summary_01", "name": "hierarchical_summary_cycle", "description": "Interleave full and incremental summaries at defined intervals to preserve context hierarchy.", "parameters": { "cycle_length": { "type": "integer", "default": 5 } } }
+    ]
+  },
+  "sentinel_policies": {
+    "schema_version": "6.2.0",
+    "last_modified": "2025-07-27T00:00:00-03:00",
+    "description": "Automated checks to detect context degradation, drift, and rot.",
+    "policies": [
+      { "id": "igp_sentinel_01", "name": "context_rot_sentinel", "description": "Inject lightweight sentinel probes (trivial Q&A) at chunk boundaries and measure retention accuracy > 85%. Failure indicates Context‑Rot.", "cross_references": ["kb_autocontinue#context_rot_mitigation"] },
+      { "id": "igp_hrm_trace_01", "name": "hrm_trace_validation", "description": "For tasks delegated to HRM, validate deterministic outputs by re‑running and comparing digests.", "cross_references": ["kb_hierarchical_reasoning_model"] }
+    ]
+  },
+  "context_rot_mitigation": {
+    "schema_version": "1.0.0",
+    "last_modified": "2025-07-27T00:00:00-03:00",
+    "description": "Defines the phenomenon of Context‑Rot—performance decay as token position increases—and embeds first‑class mitigation tactics inside AutoContinue, eliminating the external dependency previously referenced as `kb_context_rot_mitigation`.\n\n*Based on Chroma Technical Report ‘Context Rot: How Increasing Input Tokens Impacts LLM Performance’ (Hong et al., 2025) and the accompanying experimental toolkit.*",
+    "definition": {
+      "what_is_context_rot": "Empirical decay in model reliability, factuality, and recall for tokens that appear deep inside very long prompts (>10 k tokens).",
+      "root_causes": ["Attention dilution across thousands of tokens", "Lossy positional encoding beyond pre‑training range", "Conflicting retrieval vs reasoning objectives"],
+      "impact": "Silent hallucinations, missed references, degraded chain‑of‑thought quality as dialogs, documents, or memory buffers grow."
+    },
+    "detection_metrics": [
+      { "metric_id": "ctx_rot_accuracy_decay", "description": "Drop in answer accuracy across deciles of context length (LongMemEval)." },
+      { "metric_id": "ctx_rot_sentinel_miss_rate", "description": "% of sentinel probes incorrectly answered when placed after 80% of the prompt window." }
+    ],
+    "mitigation_strategies": [
+      { "strategy_id": "mitigate_pbr", "reference": "chunk_pbr_01", "description": "Proximity‑Biased Re‑ranking keeps hot chunks near the attention sweet‑spots (prompt head/tail)." },
+      { "strategy_id": "mitigate_haystack", "reference": "chunk_haystack_01", "description": "Haystack ordering duplicates critical context at window extremities to hedge attention drop‑off." },
+      { "strategy_id": "mitigate_adaptive_window", "reference": "chunk_adaptive_01", "description": "Adaptive windowing shrinks or expands chunk size based on semantic density and recent rot signals." },
+      { "strategy_id": "mitigate_summary_recitation", "reference": "recite_summary_01", "description": "Hierarchical summaries periodically refresh distilled context, resetting effective token depth." },
+      { "strategy_id": "mitigate_sentinel_feedback", "reference": "igp_sentinel_01", "description": "Online sentinel accuracy feeds real‑time rot alerts into telemetry and can trigger dynamic re‑chunking." }
+    ],
+    "operational_hooks": {
+      "telemetry_events": ["context_rot_events", "sentinel_pass_rate"],
+      "auto_remediation": "If sentinel_pass_rate < 0.85 for 3 consecutive chunks, trigger `PROBE-DEFAULT-CONTINUATION` with forced summarization and re‑ranking."
+    }
+  },
+  "telemetry_metrics": {
+    "schema_version": "6.2.0",
+    "last_modified": "2025-07-27T00:00:00-03:00",
+    "description": "Monitoring metrics for incremental generation, auto‑continue, and context‑rot mitigation.",
+    "metrics": [
+      { "name": "avg_chunk_size", "description": "Average number of tokens per chunk." },
+      { "name": "sentinel_pass_rate", "description": "Percentage of sentinel checks passed." },
+      { "name": "context_rot_events", "description": "Count of detected context‑rot incidents." },
+      { "name": "hrm_invocation_count", "description": "Number of uses of the HRM solver." }
+    ]
+  },
+  "cfa_integration_points": {
+    "schema_version": "6.1.0",
+    "last_modified": "2025-07-25T05:00:00-03:00",
+    "description": "Integration of AutoContinue KB within the broader CFA ecosystem.",
+    "points": [
+      { "layer": "L0: Meta-Controller", "action": "Consumes the policy_selection_matrix to select the appropriate IGP for a task." },
+      { "layer": "L2: Scaffolding Engine", "action": "Receives the selected IGP ID and injects its continuation_mechanism into the final instruction." },
+      { "layer": "L4: Meta-Validation Loop", "action": "Triggers sentinel_policies and uses error_handling protocols to detect and remediate drift." },
+      { "layer": "HRM Orchestration", "action": "Routes structured tasks to the Hierarchical Reasoning Model via orchestration patterns." }
+    ]
+  },
+  "operational_parameters": {
+    "description": "Runtime‑configurable parameters to tune the agent's behavior without requiring a full release.",
+    "igp_switch_cooldown": { "value": 2, "unit": "consecutive failures", "description": "Number of validation failures L4 must observe before requesting an IGP re‑route from L0." },
+    "circuit_breaker_policy": { "description": "Automatically degrades service to maintain availability under extreme load.", "trigger": "SLO latency p95 breached twice in 5 minutes.", "action": "Temporarily disable high‑cost operations: RT‑CONT‑001, MODEL_SWARM_ADAPT." }
+  },
+  "governance_and_safety": {
+    "description": "Top‑level policies for security, data handling, and ethical considerations.",
+    "data_residency": { "policy": "Edge spokes must operate in a region present in the allowed_regions list to comply with data sovereignty laws (e.g., GDPR, LGPD).", "default": "same_as_cloud" },
+    "oss_supply_chain": { "policy": "All external container images must be referenced by a specific SHA256 digest (hash‑pinning). An SBOM must be generated for each release." },
+    "secrets_management": { "policy": "No secrets shall be stored in any KB. Secrets must be injected from a secure vault at runtime." },
+    "content_safety_api": { "description": "Final safety check layer applied by L4 to all user‑facing outputs.", "implementation": "Internal bad‑word trie + external content safety API for nuanced cases (hate, self‑harm)." }
+  }
+}

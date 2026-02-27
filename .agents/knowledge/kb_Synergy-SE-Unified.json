@@ -1,0 +1,427 @@
+{
+  "meta": {
+    "kb_id": "kb_Synergy-SE-Unified",
+    "title": "Synergy Unified Knowledge Base for Senior Software Engineer",
+    "version": "1.0.0",
+    "schema_version": "2025-01",
+    "compatibility": {
+      "agent_role": "Senior Software Engineer",
+      "architecture": "CFA>=8.x",
+      "quality_pack": "QSA-PROFILE-HARDENING>=8.2.0"
+    },
+    "goals": [
+      "Provide one operational spine: modes, routines, artifacts, and decision paths.",
+      "Unify implementation patterns (patch/PR/tests/contracts) with ingestion and routing.",
+      "Expose clear cross-reference points to specialized companion KBs."
+    ],
+    "non_goals": [
+      "Redefine advanced reasoning or validation logic (kept in external companions).",
+      "Duplicate security policy catalogs beyond essential gates and triggers."
+    ]
+  },
+
+  "purpose_and_scope": {
+    "purpose": "A single, pragmatic operating manual for everyday engineering work that integrates security, quality, testing, and delivery.",
+    "applies_to": [
+      "Code changes (backend/frontend/services/infra-as-code)",
+      "Contract-first development (OpenAPI/GraphQL)",
+      "Test authoring (unit/integration/E2E/security)",
+      "CI/CD gating and evidence capture",
+      "Documentation and PR hygiene",
+      "Secure file ingestion and artifact handling"
+    ],
+    "audience": "The agent runtime and, secondarily, maintainers who want a consistent engineering playbook."
+  },
+
+  "core_capabilities": [
+    {
+      "id": "operational_modes",
+      "summary": "Day-to-day modes with inputs, outputs, and success criteria.",
+      "modes": [
+        {
+          "id": "DISCOVERY",
+          "triggers": ["New request", "Unknown repo", "Ambiguous scope"],
+          "actions": ["Ingest assets", "Map specs/contracts", "Identify risks & goals"],
+          "artifacts": ["DiscoveryNotes.md", "ScopeAssumptions.json"],
+          "success_criteria": ["Ambiguities recorded", "Inputs normalized", "Initial plan drafted"]
+        },
+        {
+          "id": "AUDIT",
+          "triggers": ["Change request", "Security or quality concern", "Contract changes"],
+          "actions": ["Assess code & contracts", "Identify findings", "Prioritize risks"],
+          "artifacts": ["AuditFindings.json", "Evidence/*.jsonl"],
+          "success_criteria": ["Findings ranked", "Anchored evidence present"]
+        },
+        {
+          "id": "REMEDIATION",
+          "triggers": ["Selected finding", "STDD plan exists"],
+          "actions": ["Author failing tests", "Implement minimal fix", "Re-run tests & scans"],
+          "artifacts": ["Patch.diff", "TestsAdded.txt", "FixNotes.md"],
+          "success_criteria": ["Tests pass", "No regressions", "Security gates green"]
+        },
+        {
+          "id": "VALIDATION",
+          "triggers": ["All fixes applied", "Pre-merge checks"],
+          "actions": ["Run full suite & coverage", "Contract verification", "Policy gates"],
+          "artifacts": ["ValidationReport.json", "Coverage/summary.json"],
+          "success_criteria": ["Coverage thresholds met", "Contracts clean", "No critical/high pending"]
+        },
+        {
+          "id": "DELIVERY",
+          "triggers": ["Validation green", "Release window"],
+          "actions": ["Prepare PR", "Generate change log", "Recommend rollout strategy"],
+          "artifacts": ["PR.md", "CHANGELOG.md", "ReleasePlan.md"],
+          "success_criteria": ["PR complete", "Traceability 100%", "Rollback plan included"]
+        }
+      ]
+    },
+    {
+      "id": "implementation_patterns",
+      "summary": "How to implement safely and effectively.",
+      "patterns": [
+        {
+          "name": "STDD_MinimalFix",
+          "when": ["Security/logic bug with clear reproduction"],
+          "steps": [
+            "Write failing test replicating the issue",
+            "Implement minimal effective change",
+            "Re-run targeted + impacted suites",
+            "Capture evidence (before/after snapshots)"
+          ],
+          "success_metrics": {
+            "tests_status": "pass",
+            "scope_delta": "minimal",
+            "regressions": 0
+          }
+        },
+        {
+          "name": "ContractFirst_Change",
+          "when": ["API surface change", "Schema evolution"],
+          "steps": [
+            "Update spec in strict mode",
+            "Generate/adjust contract tests",
+            "Run diff & verifier",
+            "Document migration and impact"
+          ],
+          "success_metrics": { "openapi_diff_breaking": 0, "contract_verifier_fails": 0 }
+        },
+        {
+          "name": "PatchClean_PRReady",
+          "when": ["Preparing PR"],
+          "steps": [
+            "Small, focused commits",
+            "Commit messages with rationale and ticket refs",
+            "PR template fields completed (risks, rollbacks, evidence)",
+            "Link findings ↔ fixes"
+          ],
+          "success_metrics": { "review_cycles": "low", "rework_rate": "low" }
+        }
+      ]
+    },
+    {
+      "id": "ingestion_and_extraction",
+      "summary": "Normalize, chunk, and extract knowledge from user assets safely.",
+      "policies": {
+        "allowed_types": ["md", "txt", "json", "yaml", "xml", "pdf", "code/*"],
+        "normalization": [
+          "Preserve code fences and line numbers",
+          "Decode UTF-8; apply unicode normalization NFC",
+          "Strip secrets from examples when present"
+        ],
+        "chunking": {
+          "max_chars": 200000,
+          "overlap_chars": 800,
+          "structure_aware": true,
+          "hints": ["prefer headings", "preserve AST boundaries where possible"]
+        },
+        "evidence_capture": {
+          "line_anchors": true,
+          "hash_algorithm": "sha256",
+          "snapshot_format": "jsonl"
+        },
+        "safety": {
+          "reject_html_svg_uploads": true,
+          "reject_large_pixel_images": true,
+          "no_external_fetch_default": true
+        }
+      },
+      "artifacts": ["NormalizedIndex.json", "FileManifest.json", "Evidence/*.jsonl"]
+    },
+    {
+      "id": "routing_and_selection",
+      "summary": "Deterministic routing to the right capability to avoid overlap.",
+      "policy_matrix": [
+        {
+          "signal": "API contract changed or suspected drift",
+          "route_to": "ContractSuite",
+          "actions": ["Run spec diff", "Run schema verifier"],
+          "cross_reference": ["Validation-Core"],
+          "exit_condition": "No breaking or undocumented endpoints"
+        },
+        {
+          "signal": "Security-sensitive path or upload/URL handling",
+          "route_to": "SecuritySuite",
+          "actions": ["Apply secure headers checks", "CORS/JWT probes", "Upload safety tests"],
+          "cross_reference": ["Security-Guardian"],
+          "exit_condition": "All gates green, no critical/high"
+        },
+        {
+          "signal": "Ambiguous requirement or multi-step plan",
+          "route_to": "ReasoningSuite",
+          "actions": ["Plan-then-act", "Self-verify answers", "Try alternative strategies"],
+          "cross_reference": ["Reasoning-Core", "Problem-Solving-Network"],
+          "exit_condition": "Plan validated; conflicts resolved"
+        }
+      ]
+    }
+  ],
+
+  "workflows": [
+    {
+      "id": "CodeChange_Workflow",
+      "goal": "Safely implement a small-to-medium code change with tests and evidence.",
+      "inputs": ["Issue/Request", "Relevant files", "Tests"],
+      "steps": [
+        "DISCOVERY: ingest assets, clarify scope, note assumptions",
+        "AUDIT: identify risks (authz, validation, concurrency) and contract impact",
+        "REMEDIATION: apply STDD_MinimalFix; keep delta minimal",
+        "VALIDATION: run full suite, coverage, policy gates",
+        "DELIVERY: prepare PR with traceability and rollback"
+      ],
+      "artifacts": ["AuditFindings.json", "Patch.diff", "PR.md"],
+      "metrics": {
+        "coverage_critical_min": 0.90,
+        "regressions": 0,
+        "review_cycles_max": 2
+      },
+      "cross_reference": ["Validation-Core", "Security-Guardian", "Common-Schemas"]
+    },
+    {
+      "id": "API_Contract_Workflow",
+      "goal": "Evolve API safely with strict schema conformance.",
+      "inputs": ["OpenAPI/GraphQL spec", "Server implementation"],
+      "steps": [
+        "Update spec first; mark additionalProperties=false where applicable",
+        "Generate contract tests; run verifier",
+        "Run diff against server; resolve breaking or undocumented paths",
+        "Add migration notes and acceptance tests",
+        "Re-run end-to-end flows"
+      ],
+      "artifacts": ["ContractReport.json", "MigrationNotes.md"],
+      "metrics": { "breaking_changes": 0, "undocumented_endpoints": 0 },
+      "cross_reference": ["Validation-Core", "Common-Schemas"]
+    },
+    {
+      "id": "Upload_and_URL_Safety_Workflow",
+      "goal": "Harden uploads and external URL handling.",
+      "inputs": ["Upload endpoints", "Image processing paths", "URL fields"],
+      "steps": [
+        "Enforce magic-number verification; block HTML/SVG",
+        "Re-encode and strip EXIF; enforce byte and pixel limits",
+        "Block SSRF by default; allowlist domains if strictly required",
+        "Normalize/validate IDN and reject suspicious homographs",
+        "Add timed anti-ReDoS tests to validators"
+      ],
+      "artifacts": ["SecurityGates.json", "UploadTestsAdded.txt"],
+      "metrics": { "mime_spoof_accepted": 0, "ssrf_attempt_passed": 0, "redos_timeouts": 0 },
+      "cross_reference": ["Security-Guardian"]
+    }
+  ],
+
+  "security_gates_and_policies": {
+    "gates": [
+      {
+        "id": "Headers_Strict",
+        "checks": ["CSP strict/nonce-based", "X-Frame-Options=DENY", "X-Content-Type-Options=nosniff", "Referrer-Policy=strict-origin-when-cross-origin", "Permissions-Policy minimal", "HSTS where applicable"],
+        "pass_condition": "No 'missing' or 'weak' findings in critical routes"
+      },
+      {
+        "id": "CORS_Strict",
+        "checks": ["Origin allowlist only", "No wildcard with credentials", "Methods/headers allowlist"],
+        "pass_condition": "Probes from untrusted origins fail; trusted pass"
+      },
+      {
+        "id": "JWT_Hygiene",
+        "checks": ["Validate exp/aud/iss/sub", "Reject alg=none", "Key rotation enforced"],
+        "pass_condition": "All adversarial tokens rejected"
+      },
+      {
+        "id": "Uploads_Armored",
+        "checks": ["Magic number", "Re-encode/strip EXIF", "Pixel/byte limits", "Bomb detection"],
+        "pass_condition": "No spoofed or oversized inputs accepted"
+      },
+      {
+        "id": "Concurrency_Safe",
+        "checks": ["Strong ETag on reads", "If-Match required on writes", "Return 412/428 when missing/mismatch"],
+        "pass_condition": "Lost-update tests pass consistently"
+      }
+    ],
+    "severity": {
+      "block_release": ["OpenRedirect", "CORS wildcard+credentials", "JWT alg=none accepted"],
+      "soft_fail_with_penalty": ["Weak headers on non-critical routes"],
+      "log_only": ["Non-critical deviations with documented mitigations"]
+    },
+    "cross_reference": ["Security-Guardian"]
+  },
+
+  "ci_cd_integration": {
+    "gates": [
+      "Contract diff clean (no breaking/undocumented)",
+      "Contract verifier pass",
+      "Coverage ≥ critical_min",
+      "Security gates green (Headers/CORS/JWT/Uploads/Concurrency)",
+      "Evidence and event-stream digests present"
+    ],
+    "required_artifacts": [
+      "AuditFindings.json",
+      "ValidationReport.json",
+      "SecurityGates.json",
+      "Evidence/*.jsonl",
+      "Coverage/summary.json",
+      "PR.md"
+    ],
+    "traceability": {
+      "link_finding_to_commit": true,
+      "link_commit_to_tests": true,
+      "risk_frame_required": true,
+      "hashing": "sha256"
+    },
+    "cross_reference": ["Common-Schemas", "Validation-Core"]
+  },
+
+  "artifacts_and_templates": {
+    "artifacts": [
+      { "name": "AuditFindings.json", "purpose": "Catalog risks with anchored evidence", "schema_ref": "Common-Schemas" },
+      { "name": "ValidationReport.json", "purpose": "Suite results, coverage, policy decisions", "schema_ref": "Common-Schemas" },
+      { "name": "SecurityGates.json", "purpose": "Per-gate status & rationale", "schema_ref": "Common-Schemas" },
+      { "name": "PR.md", "purpose": "Reviewer-ready change description with risks & rollback" }
+    ],
+    "templates": {
+      "commit_message": {
+        "format": "[scope]: brief change\nWhy: rationale\nRisk: low/med/high\nLinks: ticket, evidence"
+      },
+      "pr_sections": [
+        "Context & Goals",
+        "Changes (small, focused list)",
+        "Tests & Coverage",
+        "Security & Contracts",
+        "Risks & Rollback",
+        "Evidence (hashes, anchors)"
+      ],
+      "risk_frame_min": {
+        "id": "string",
+        "severity": "low|medium|high|critical",
+        "likelihood": "low|medium|high",
+        "impact": "string",
+        "mitigation": "string",
+        "evidence": { "file": "path", "lines": "start-end", "hash": "sha256:..." }
+      }
+    }
+  },
+
+  "metrics_and_scoring": {
+    "operational": {
+      "coverage_critical_min": 0.90,
+      "regressions": 0,
+      "review_cycles_max": 2,
+      "time_per_phase_p99_sec": { "audit": 300, "remediation": 600, "validation": 600 }
+    },
+    "security_targets": {
+      "critical_high_closed": 0.95,
+      "headers_missing_critical": 0,
+      "jwt_alg_none_accepted": 0,
+      "cors_wildcard_with_credentials": 0,
+      "lost_update_failures": 0
+    },
+    "quality": {
+      "smells_delta_nonpositive": true,
+      "complexity_nonincreasing": true,
+      "n_plus_1_allowed": 0
+    }
+  },
+
+  "decision_matrices": [
+    {
+      "id": "When_to_Call_Reasoning_Core",
+      "signals_any": ["Conflicting requirements", "Multiple valid approaches with tradeoffs", "Sparse or noisy inputs"],
+      "actions": ["Generate alternatives", "Score tradeoffs against metrics", "Select plan and self-verify"],
+      "exit": "Plan meets metrics and passes self-check",
+      "cross_reference": ["Reasoning-Core"]
+    },
+    {
+      "id": "When_to_Call_Validation_Core",
+      "signals_any": ["Contract/schema doubts", "Edge-case inputs (Unicode/RTL/IDN)", "Concurrency/ETag concerns"],
+      "actions": ["Run validators", "Adversarial payloads", "Enforce timeouts for anti-ReDoS"],
+      "exit": "No critical/high findings; timeouts within bounds",
+      "cross_reference": ["Validation-Core"]
+    },
+    {
+      "id": "When_to_Call_Problem_Solving_Network",
+      "signals_any": ["Hard optimization", "Novel algorithmic selection", "Ambiguous performance tradeoffs"],
+      "actions": ["Pick solver", "Run controlled experiments", "Compare against baseline"],
+      "exit": "Solution beats baseline on targeted metric",
+      "cross_reference": ["Problem-Solving-Network"]
+    }
+  ],
+
+  "error_handling_and_recovery": {
+    "tool_unavailable": {
+      "first_occurrence": "Retry once; downgrade scope",
+      "repeat": "Record NOT_EXECUTED; proceed with alternative analysis; note limitations"
+    },
+    "test_runner_timeouts": {
+      "threshold": 2,
+      "action": "Open circuit for the suite; mark pending validation; log penalty candidate"
+    },
+    "policy_violation": {
+      "blocking": ["OpenRedirect", "CORS wildcard+credentials", "JWT alg=none accepted"],
+      "action": "Block delivery; propose minimal fix; rerun gates"
+    }
+  },
+
+  "integration": {
+    "event_stream": {
+      "format": "jsonl",
+      "required_fields": ["ts", "corr_id", "phase", "status", "payload_hash"],
+      "privacy": "PII masked; secrets forbidden",
+      "digest": "sha256"
+    },
+    "provenance": {
+      "sbom_required": true,
+      "deps_scan_required": true,
+      "slsa_provenance_level_target": "≥2"
+    },
+    "cross_references": [
+      {
+        "kb_id": "CFA-Core",
+        "when": ["Switching modes", "Complex orchestration"],
+        "metrics": ["phase_progress", "time_per_phase_p99_sec"]
+      },
+      {
+        "kb_id": "Reasoning-Core",
+        "when": ["Ambiguous plans", "Tradeoff analysis"],
+        "metrics": ["rework_rate", "decision_confidence"]
+      },
+      {
+        "kb_id": "Validation-Core",
+        "when": ["Contracts & schemas", "Adversarial tests", "Anti-ReDoS"],
+        "metrics": ["contract_breaking_changes", "timeout_rate"]
+      },
+      {
+        "kb_id": "Security-Guardian",
+        "when": ["Security gates", "Uploads/URL/CORS/JWT"],
+        "metrics": ["critical_high_closed", "policy_violations"]
+      },
+      {
+        "kb_id": "Common-Schemas",
+        "when": ["Artifact emission", "Evidence anchoring"],
+        "metrics": ["traceability_100_percent"]
+      },
+      {
+        "kb_id": "Problem-Solving-Network",
+        "when": ["Complex optimization/algorithm selection"],
+        "metrics": ["solution_quality_delta"]
+      }
+    ]
+  }
+}
