@@ -30,7 +30,7 @@
 | `tool-design` | Copy | Tool building patterns. |
 
 **Exclusions**:
-- `using-superpowers` (Redundant with `using-overpowers`).
+- `using-overpowers` (Redundant with `using-overpowers`).
 
 ## 2. Knowledge Scripts Assimilation
 **Strategy**: Extract Python scripts into `scripts/knowledge/`.

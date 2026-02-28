@@ -8,6 +8,18 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2026-02-28] - Gemini CLI Orchestration Integration
+
+### Added
+- **Skills**: `gemini-cli-delegation` for headless/YOLO subagent delegation.
+- **Skills**: `gemini-cli-administration` for settings, MCP, and extension management.
+- **Agents**: `gemini-cli-orchestrator` to fan-out background tasks using `gemini -y`.
+- **Workflows**: `gemini-batch-refactor` for massively parallel file processing via the orchestrator.
+
+**Author**: Antigravity
+
+---
+
 ## [2026-02-28] - Scripts Cleanup & Docs Reorganization
 
 ### Added

@@ -66,7 +66,7 @@
 | `using-git-worktrees` | Git worktree usage methodology | Yes (`using-git-worktrees` skill) |
 | `dispatching-parallel-agents` | Parallel agent orchestration methodology | Yes (`dispatching-parallel-agents` skill) |
 | `executing-plans` | Plan execution methodology | Yes (`executing-plans` skill) |
-| `using-superpowers` | Meta-skill for skill discovery | Yes (`using-overpowers` skill) |
+| `using-overpowers` | Meta-skill for skill discovery | Yes (`using-overpowers` skill) |
 | `writing-skills` | Skill creation methodology | Yes (`writing-skills` skill) |
 | `writing-plans-v1` | Plan writing methodology | Yes (`writing-plans` skill) |
 
@@ -206,7 +206,7 @@
 | `using-git-worktrees` | `using-git-worktrees` skill |
 | `dispatching-parallel-agents` | `dispatching-parallel-agents` skill |
 | `executing-plans` | `executing-plans` skill |
-| `using-superpowers` | `using-overpowers` skill |
+| `using-overpowers` | `using-overpowers` skill |
 | `writing-skills` | `writing-skills` skill |
 | `writing-plans-v1` | `writing-plans` skill |
 | `mcp-builder` | `mcp-builder` skill |

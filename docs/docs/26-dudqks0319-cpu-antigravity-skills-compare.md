@@ -362,7 +362,7 @@ These skills are redundant with Overpowers or lower quality.
 | Skill | Reason to Ignore |
 |-------|------------------|
 | `base` | Overpowers has own base/foundation |
-| `using-superpowers` | Overpowers-specific concept |
+| `using-overpowers` | Overpowers-specific concept |
 | `iterative-development` | Check if redundant |
 | `project-tooling` | Generic, likely covered |
 | `team-coordination` | Generic, likely covered |

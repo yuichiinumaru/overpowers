@@ -1,9 +1,9 @@
-
-### Safety Hooks
-*   **Destructive Command Guard**: `hooks/safety/destructive-command-blocker.ts` checks shell commands against regex patterns (ported from `destructive_command_guard`) to prevent catastrophic errors like `rm -rf /` or `mkfs` on physical drives.
 > **SYSTEM ALERT**: This is the **Root Constitution** for the Overpowers Toolkit.
-> **CONTEXT**: Toolkit with 390+ agents, 149 skills, hooks, scripts, workflows, and services.
+> **CONTEXT**: Toolkit with 930+ agents, 298 skills, hooks, scripts, workflows, and services.
 > **PERSONA**: You are the "Overpowers Architect". Maintain toolkit coherence while extending capabilities.
+>
+> **AUDIENCE**: This file is read by **ALL agents** — including Jules, Antigravity, and OpenCode agents.
+> Platform-specific rules (e.g. Jujutsu VCS, Antigravity-only conventions) live in `.agents/rules/`.
 
 ---
 
@@ -27,13 +27,26 @@
 ### 📦 Core Components
 | Component | Count | Location |
 |:----------|:------|:---------|
-| Agents | 414+ | `agents/` |
-| Skills | 149 | `skills/` |
-| Commands | 228+ | `commands/` |
-| Hooks | 29 | `hooks/` |
-| Scripts | 89 | `scripts/` |
-| Workflows | 16 | `workflows/` |
-| Services | 13 | `services/` |
+| Agents | 937 | `agents/` |
+| Skills | 298 | `skills/` |
+| Workflows | 266 | `workflows/` |
+| Hooks | 38 | `hooks/` |
+| Scripts | 44 | `scripts/` |
+| Templates | 3 | `templates/` |
+| Docs/Tasks | 10+ | `docs/tasks/` |
+
+### 📁 Directory Organization
+
+| Directory | Purpose |
+|:----------|:--------|
+| `agents/` | Agent prompt files (`.md`). Flat directory, prefixed by category (e.g. `sec--`, `ops--`, `mobile--`). |
+| `skills/` | Reusable skill packages. Each is a directory with a `SKILL.md` inside. Some have `scripts/` or `references/`. |
+| `workflows/` | Step-by-step workflow definitions (`.md` with YAML frontmatter). |
+| `hooks/` | Git/CLI hooks and automation triggers. |
+| `scripts/` | Global utility scripts (installers, generators). Skill-specific scripts live inside `skills/<name>/scripts/`. |
+| `templates/` | Canonical templates for creating new agents, skills, and workflows. |
+| `docs/` | Project documentation, task definitions, planning docs, and analysis reports. |
+| `.agents/` | Orchestration layer: prompts for Jules, rules for Antigravity, reports, and memories. |
 
 ---
 
@@ -139,8 +152,20 @@ Every modification to this repository **MUST** be accompanied by an entry in `CH
 name: kebab-case-name
 description: Brief description of purpose and when to use
 category: optional-category
+color: "#FF5733"
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
 ---
 ```
+
+> [!IMPORTANT]
+> The `tools` field **must be a record** (key-value map), not an array or string.
+> The `color` field **must be a double-quoted hex code** — never a named color word.
+> See `.agents/rules/opencode-formatting.md` for details.
 
 ### Model Preferences
 - **Reasoning/Coding**: `gemini-3-pro`, `claude-4-5-opus-thinking`
@@ -195,7 +220,7 @@ python3 fix-skill-names.py
 *   **Cleanup**: Kill the tmux session after publish.
 
 ### Safety Hooks
-*   **Destructive Command Guard**: `hooks/safety/destructive-command-blocker.ts` checks shell commands against regex patterns (ported from `destructive_command_guard`) to prevent catastrophic errors like `rm -rf /` or `mkfs` on physical drives.
+*   **Destructive Command Guard**: `hooks/safety/destructive-command-blocker.ts` checks shell commands against regex patterns to prevent catastrophic commands like `rm -rf /` or `mkfs` on physical drives.
 
 ---
 

@@ -28,7 +28,7 @@ The following 20 skills are unique to `antigravity-skills` and should be extract
 17. `project-development`
 18. `remotion`
 19. `tool-design`
-20. `using-superpowers`
+20. `using-overpowers`
 
 ## Knowledge Scripts Identified
 Found in `andy-universal-agent-rules/.agent/scripts/`:
@@ -39,7 +39,7 @@ Found in `andy-universal-agent-rules/.agent/scripts/`:
 - `detect-environment.py`
 
 ## Strategy
-- **Skills**: Copy unique skills to `skills/`. Rename `using-superpowers` to `using-overpowers` (if applicable) or adapt it.
+- **Skills**: Copy unique skills to `skills/`. Rename `using-overpowers` to `using-overpowers` (if applicable) or adapt it.
 - **Scripts**: Extract knowledge scripts to `scripts/knowledge/` and create wrappers or aliases if needed.
 ## Deep Re-Audit Findings
 ### AntigravityManager
@@ -188,7 +188,7 @@ theme-factory
 tool-design
 ui-ux-pro-max
 using-git-worktrees
-using-superpowers
+using-overpowers
 verification-before-completion
 web-artifacts-builder
 webapp-testing

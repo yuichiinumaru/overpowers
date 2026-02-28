@@ -210,7 +210,7 @@ This repository contains a **high-quality, production-ready collection** of 80 s
 | Skill | Description | Quality | Special Assets |
 |-------|-------------|---------|----------------|
 | `base` | Universal coding patterns, constraints, TDD workflow | ⭐⭐⭐⭐⭐ | Foundation skill |
-| `using-superpowers` | Meta-skill for skill system itself | ⭐⭐⭐⭐ | |
+| `using-overpowers` | Meta-skill for skill system itself | ⭐⭐⭐⭐ | |
 
 ---
 
