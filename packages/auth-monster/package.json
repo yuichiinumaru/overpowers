@@ -2,10 +2,11 @@
   "name": "opencode-auth-monster",
   "version": "1.0.0",
   "description": "Multi-provider OAuth toolkit for OpenCode and Claude Code",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "bin": {
-    "opencode-monster": "dist/cli.js"
+    "opencode-monster": "dist/src/cli.js",
+    "auth-monster-setup": "dist/src/bin/auth-setup.js"
   },
   "files": [
     "dist",
