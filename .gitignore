@@ -3,7 +3,7 @@
 # Local State & Caches
 .beads/
 .codemap/
-+.jules/
+.jules/
 
 # Log files
 *.log

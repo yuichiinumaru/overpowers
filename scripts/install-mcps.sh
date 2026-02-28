@@ -19,6 +19,22 @@
 
 set -euo pipefail
 
+FAST_MODE=0
+ENV_FILE=""
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --env)
+      ENV_FILE="$2"
+      shift 2
+      ;;
+    *)
+      # Ignore other args for now, let install.sh handle them primarily
+      shift
+      ;;
+  esac
+done
+
 # --- Colors ---
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -101,7 +117,13 @@ fi
 if [[ "${scan_choice}" == "1" ]]; then
     echo ""
     echo -e "  ${CYAN}Scanning installed MCPs...${NC}"
-    if python3 "${SCRIPT_DIR}/extract-installed-mcps.py"; then
+    
+    EXTRACT_CMD=("python3" "${SCRIPT_DIR}/extract-installed-mcps.py")
+    if [[ -n "${ENV_FILE}" ]]; then
+        EXTRACT_CMD+=("--env" "${ENV_FILE}")
+    fi
+
+    if "${EXTRACT_CMD[@]}"; then
         echo -e "  ${GREEN}[✓]${NC} Successfully extracted user MCPs and ENV variables."
     else
         echo -e "  ${YELLOW}[!]${NC} Scanning failed or encountered an error."
@@ -142,8 +164,13 @@ else
     echo -e "  ${YELLOW}[!]${NC} No .env found. Let's set one up."
     
     if [[ "${FAST_MODE:-0}" == "1" ]]; then
-        cp "${ENV_TEMPLATE}" "${CENTRAL_ENV}"
-        echo -e "  ${GREEN}[✓]${NC} Template copied to ${CYAN}${CENTRAL_ENV}${NC}"
+        if [[ -n "${ENV_FILE}" && -f "${ENV_FILE}" ]]; then
+            cp "${ENV_FILE}" "${CENTRAL_ENV}"
+            echo -e "  ${GREEN}[✓]${NC} External ENV copied to ${CYAN}${CENTRAL_ENV}${NC}"
+        else
+            cp "${ENV_TEMPLATE}" "${CENTRAL_ENV}"
+            echo -e "  ${GREEN}[✓]${NC} Template copied to ${CYAN}${CENTRAL_ENV}${NC}"
+        fi
         env_choice="1"
     else
         echo ""

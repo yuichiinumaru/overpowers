@@ -24,10 +24,23 @@
 set -euo pipefail
 
 FAST_MODE=0
-while getopts "f" opt; do
-  case "$opt" in
-    f) FAST_MODE=1 ;;
-    *) echo "Usage: $0 [-f]" >&2; exit 1 ;;
+ENV_FILE=""
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -f|--fast)
+      FAST_MODE=1
+      export FAST_MODE=1
+      shift
+      ;;
+    -e|--env)
+      ENV_FILE="$2"
+      shift 2
+      ;;
+    *)
+      echo "Usage: $0 [-f|--fast] [-e|--env <file>]" >&2
+      exit 1
+      ;;
   esac
 done
 
@@ -120,7 +133,7 @@ for platform in "${SELECTED_PLATFORMS[@]}"; do
             ;;
         gemini)
             echo -e "  ${BOLD}▸ Gemini CLI${NC}"
-            bash "${SCRIPT_DIR}/skills/vercel-deploy/scripts/deploy-to-gemini-cli.sh"
+            bash "${SCRIPT_DIR}/scripts/deploy-to-gemini-cli.sh"
             ;;
         antigravity)
             echo -e "  ${BOLD}▸ Antigravity${NC}"
@@ -140,7 +153,11 @@ echo ""
 if [[ "${FAST_MODE}" == "1" ]]; then
     echo -e "  ${CYAN}Fast mode: Auto-installing MCPs.${NC}"
     export FAST_MODE=1
-    bash "${SCRIPT_DIR}/scripts/install-mcps.sh"
+    if [[ -n "${ENV_FILE}" ]]; then
+        bash "${SCRIPT_DIR}/scripts/install-mcps.sh" --env "${ENV_FILE}"
+    else
+        bash "${SCRIPT_DIR}/scripts/install-mcps.sh"
+    fi
 else
     echo -e "  Do you also want to install ${BOLD}MCP servers${NC} (model context protocol)"
     echo -e "  into your platform configs?"

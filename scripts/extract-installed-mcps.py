@@ -14,6 +14,7 @@ Usage:
 import os
 import json
 import re
+import argparse
 
 CONFIG_LOCATIONS = [
     os.path.expanduser("~/.opencode/opencode.json"),
@@ -33,7 +34,7 @@ def load_json(path):
             print(f"Warning: Failed to parse {path} - {e}")
     return {}
 
-def extract():
+def extract(env_path=None):
     all_mcps = {}
     env_vars = set()
 
@@ -60,12 +61,19 @@ def extract():
                     if k not in ["PATH", "PYTHONPATH"]:
                         env_vars.add(k)
 
-    # Output env vars to .env.example
-    env_example_path = os.path.join(os.path.dirname(__file__), "..", ".env.example")
+    # Determine where we are outputting these variables. 
+    # Default is repo root .env.example, unless --env was provided.
+    if env_path:
+        target_env = env_path
+        if not os.path.exists(target_env):
+            # If the user-provided env doesn't exist yet, we'll create it
+            open(target_env, 'w').close()
+    else:
+        target_env = os.path.join(os.path.dirname(__file__), "..", ".env.example")
     
     existing_envs = set()
-    if os.path.exists(env_example_path):
-        with open(env_example_path, "r") as f:
+    if os.path.exists(target_env):
+        with open(target_env, "r") as f:
             for line in f:
                 if "=" in line and not line.startswith("#"):
                     existing_envs.add(line.split("=")[0].strip())
@@ -73,11 +81,11 @@ def extract():
     new_vars = sorted([v for v in env_vars if v not in existing_envs])
     
     if new_vars:
-        with open(env_example_path, "a") as f:
+        with open(target_env, "a") as f:
             f.write("\n# --- Extracted User Variables ---\n")
             for var in new_vars:
                 f.write(f"{var}=''\n")
-        print(f"--- Appended {len(new_vars)} new variables to .env.example ---")
+        print(f"--- Appended {len(new_vars)} new variables to {target_env} ---")
     else:
         print("--- No new environment variables found to append. ---")
 
@@ -89,4 +97,8 @@ def extract():
     print(f"\n--- Extracted {len(all_mcps)} user MCPs to {output_file} ---")
 
 if __name__ == "__main__":
-    extract()
+    parser = argparse.ArgumentParser(description="Extract user MCPs and ENV vars.")
+    parser.add_argument("--env", type=str, help="Path to an existing .env file to check/append keys to", default="")
+    args = parser.parse_args()
+
+    extract(env_path=args.env if args.env else None)
