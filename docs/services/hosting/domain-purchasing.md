@@ -84,39 +84,39 @@ Comprehensive domain purchasing, availability checking, and management across mu
 
 ```bash
 # Check single domain availability
-./.agent/scripts/spaceship-helper.sh check-availability personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh check-availability personal example.com
 
 # Bulk check multiple domains
-./.agent/scripts/spaceship-helper.sh bulk-check personal example.com example.net example.org
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh bulk-check personal example.com example.net example.org
 
 # Check with pricing information
-./.agent/scripts/spaceship-helper.sh check-availability personal premium-domain.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh check-availability personal premium-domain.com
 ```
 
 ### **Domain Purchasing:**
 
 ```bash
 # Purchase domain (with confirmation prompt)
-./.agent/scripts/spaceship-helper.sh purchase personal mynewdomain.com 1 true
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh purchase personal mynewdomain.com 1 true
 
 # Purchase domain for multiple years
-./.agent/scripts/spaceship-helper.sh purchase personal longterm-project.com 3 true
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh purchase personal longterm-project.com 3 true
 
 # Purchase without auto-renewal
-./.agent/scripts/spaceship-helper.sh purchase personal temporary-project.com 1 false
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh purchase personal temporary-project.com 1 false
 ```
 
 ### **Domain Portfolio Management:**
 
 ```bash
 # List all registered domains
-./.agent/scripts/spaceship-helper.sh domains personal
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh domains personal
 
 # Get domain details including expiration
-./.agent/scripts/spaceship-helper.sh domain-details personal mydomain.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh domain-details personal mydomain.com
 
 # Monitor domains expiring soon
-./.agent/scripts/spaceship-helper.sh monitor-expiration personal 30
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh monitor-expiration personal 30
 ```
 
 ## 🛡️ **Purchasing Security & Best Practices**
@@ -125,7 +125,7 @@ Comprehensive domain purchasing, availability checking, and management across mu
 
 ```bash
 # Example purchase flow with confirmation:
-$ ./.agent/scripts/spaceship-helper.sh purchase personal newproject.com 1 true
+$ ./.agent/skills/infrastructure/scripts/spaceship-helper.sh purchase personal newproject.com 1 true
 
 [INFO] Checking availability before purchase...
 [SUCCESS] Domain newproject.com is available for registration
@@ -165,12 +165,12 @@ y
 
 ```bash
 # Comprehensive domain research
-./.agent/scripts/spaceship-helper.sh bulk-check personal \
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh bulk-check personal \
   myproject.com myproject.net myproject.org \
   myproject.io myproject.app myproject.dev
 
 # Check premium domain pricing
-./.agent/scripts/spaceship-helper.sh check-availability personal premium-name.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh check-availability personal premium-name.com
 ```
 
 ### **TLD Recommendations:**
@@ -214,7 +214,7 @@ The AI assistant can help with:
 
 ```bash
 # AI can manage domains by project:
-./.agent/scripts/setup-wizard-helper.sh assess
+./.agent/skills/auth-setup/scripts/setup-wizard-helper.sh assess
 # Based on project type, AI recommends and can purchase:
 # - Primary domain (.com)
 # - Development domain (.dev)
@@ -228,22 +228,22 @@ The AI assistant can help with:
 
 ```bash
 # Get comprehensive portfolio overview
-./.agent/scripts/spaceship-helper.sh domains personal
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh domains personal
 
 # Monitor expiration dates
-./.agent/scripts/spaceship-helper.sh monitor-expiration personal 60
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh monitor-expiration personal 60
 
 # Audit domain configuration
-./.agent/scripts/spaceship-helper.sh audit personal mydomain.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh audit personal mydomain.com
 ```
 
 ### **Cost Analysis:**
 
 ```bash
 # Calculate total domain costs
-for domain in $(./.agent/scripts/spaceship-helper.sh domains personal | awk '{print $1}'); do
+for domain in $(./.agent/skills/infrastructure/scripts/spaceship-helper.sh domains personal | awk '{print $1}'); do
     echo "Analyzing costs for: $domain"
-    ./.agent/scripts/spaceship-helper.sh domain-details personal $domain | grep -E "(price|renewal|expiration)"
+    ./.agent/skills/infrastructure/scripts/spaceship-helper.sh domain-details personal $domain | grep -E "(price|renewal|expiration)"
 done
 ```
 
@@ -254,32 +254,32 @@ done
 ```bash
 # Complete project setup with domain
 1. Domain research and purchase:
-   ./.agent/scripts/spaceship-helper.sh bulk-check personal myproject.com myproject.dev
-   ./.agent/scripts/spaceship-helper.sh purchase personal myproject.com 1 true
+   ./.agent/skills/infrastructure/scripts/spaceship-helper.sh bulk-check personal myproject.com myproject.dev
+   ./.agent/skills/infrastructure/scripts/spaceship-helper.sh purchase personal myproject.com 1 true
 
 2. DNS configuration:
-   ./.agent/scripts/dns-helper.sh add cloudflare personal myproject.com @ A 192.168.1.100
-   ./.agent/scripts/dns-helper.sh add cloudflare personal myproject.com www CNAME myproject.com
+   ./.agent/skills/infrastructure/scripts/dns-helper.sh add cloudflare personal myproject.com @ A 192.168.1.100
+   ./.agent/skills/infrastructure/scripts/dns-helper.sh add cloudflare personal myproject.com www CNAME myproject.com
 
 3. SSL certificate setup:
    # Automatic with Cloudflare or manual certificate installation
 
 4. Project deployment:
-   ./.agent/scripts/coolify-helper.sh deploy production myproject myproject.com
+   ./.agent/skills/infrastructure/scripts/coolify-helper.sh deploy production myproject myproject.com
 ```
 
 ### **Multi-Environment Domain Strategy:**
 
 ```bash
 # Purchase domains for different environments
-./.agent/scripts/spaceship-helper.sh purchase personal myproject.com 1 true      # Production
-./.agent/scripts/spaceship-helper.sh purchase personal myproject.dev 1 true     # Development
-./.agent/scripts/spaceship-helper.sh purchase personal myproject.app 1 true     # Mobile app
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh purchase personal myproject.com 1 true      # Production
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh purchase personal myproject.dev 1 true     # Development
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh purchase personal myproject.app 1 true     # Mobile app
 
 # Configure DNS for each environment
-./.agent/scripts/dns-helper.sh add cloudflare personal myproject.com @ A 192.168.1.100
-./.agent/scripts/dns-helper.sh add cloudflare personal myproject.dev @ A 192.168.1.101
-./.agent/scripts/dns-helper.sh add cloudflare personal myproject.app @ A 192.168.1.102
+./.agent/skills/infrastructure/scripts/dns-helper.sh add cloudflare personal myproject.com @ A 192.168.1.100
+./.agent/skills/infrastructure/scripts/dns-helper.sh add cloudflare personal myproject.dev @ A 192.168.1.101
+./.agent/skills/infrastructure/scripts/dns-helper.sh add cloudflare personal myproject.app @ A 192.168.1.102
 ```
 
 ## 📚 **Best Practices**

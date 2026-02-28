@@ -120,7 +120,7 @@ for platform in "${SELECTED_PLATFORMS[@]}"; do
             ;;
         gemini)
             echo -e "  ${BOLD}▸ Gemini CLI${NC}"
-            bash "${SCRIPT_DIR}/scripts/deploy-to-gemini-cli.sh"
+            bash "${SCRIPT_DIR}/skills/vercel-deploy/scripts/deploy-to-gemini-cli.sh"
             ;;
         antigravity)
             echo -e "  ${BOLD}▸ Antigravity${NC}"

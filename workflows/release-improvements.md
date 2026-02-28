@@ -5,8 +5,8 @@
 ## Quick Reference
 
 - **Problem Solved**: VERSION file, GitHub Release, and README badge out of sync
-- **Version Manager**: `.agent/scripts/version-manager.sh release [major|minor|patch]`
-- **Validator**: `.agent/scripts/validate-version-consistency.sh [version]`
+- **Version Manager**: `.agent/skills/github-release-management/scripts/version-manager.sh release [major|minor|patch]`
+- **Validator**: `.agent/skills/github-release-management/scripts/validate-version-consistency.sh [version]`
 - **Files Synced**: VERSION, README.md badge, sonar-project.properties, setup.sh
 - **GitHub Actions**: `.github/workflows/version-validation.yml` (validates on push/PR)
 - **Process**: Bump → Update all refs → Validate → Create tag → Create release
@@ -40,7 +40,7 @@ The release process had a synchronization issue where:
 
 ### 3. **Created Version Validation Script**
 
-- **Standalone validator**: `.agent/scripts/validate-version-consistency.sh`
+- **Standalone validator**: `.agent/skills/github-release-management/scripts/validate-version-consistency.sh`
 - **Comprehensive checking**: Validates all version references across files
 - **Clear reporting**: Color-coded success/error messages
 - **Flexible usage**: Can validate current version or specific version
@@ -61,12 +61,12 @@ The release process had a synchronization issue where:
 
 ### Scripts Enhanced
 
-- `.agent/scripts/version-manager.sh` - Enhanced validation and README badge updates
-- `.agent/scripts/auto-version-bump.sh` - Fixed regex pattern for macOS compatibility
+- `.agent/skills/github-release-management/scripts/version-manager.sh` - Enhanced validation and README badge updates
+- `.agent/skills/github-release-management/scripts/auto-version-bump.sh` - Fixed regex pattern for macOS compatibility
 
 ### New Scripts Created
 
-- `.agent/scripts/validate-version-consistency.sh` - Standalone version validator
+- `.agent/skills/github-release-management/scripts/validate-version-consistency.sh` - Standalone version validator
 - `.github/workflows/version-validation.yml` - GitHub Actions workflow
 
 ### Documentation Updated
@@ -80,20 +80,20 @@ The release process had a synchronization issue where:
 
 ```bash
 # Validate current version
-./.agent/scripts/validate-version-consistency.sh
+./.agent/skills/github-release-management/scripts/validate-version-consistency.sh
 
 # Validate specific version
-./.agent/scripts/validate-version-consistency.sh 1.6.0
+./.agent/skills/github-release-management/scripts/validate-version-consistency.sh 1.6.0
 
 # Through version manager
-./.agent/scripts/version-manager.sh validate
+./.agent/skills/github-release-management/scripts/version-manager.sh validate
 ```
 
 ### Enhanced Release Process
 
 ```bash
 # Complete release with validation
-./.agent/scripts/version-manager.sh release patch
+./.agent/skills/github-release-management/scripts/version-manager.sh release patch
 
 # The process now:
 # 1. Bumps version in VERSION file

@@ -89,10 +89,10 @@ Most services have companion scripts in `scripts/`:
 
 ```bash
 # Example: Hetzner server management
-./scripts/hetzner-helper.sh create-server --name myserver --type cx21
+./skills/infrastructure/scripts/hetzner-helper.sh create-server --name myserver --type cx21
 
 # Example: DNS management
-./scripts/dns-helper.sh list-records example.com
+./skills/infrastructure/scripts/dns-helper.sh list-records example.com
 ```
 
 ### Loading Service Docs
@@ -160,9 +160,9 @@ hcloud firewall add-rule web-firewall --direction in --protocol tcp --port 80
 ## Helper Script
 
 ```bash
-./scripts/hetzner-helper.sh create-server myserver cx21
-./scripts/hetzner-helper.sh setup-firewall web
-./scripts/hetzner-helper.sh deploy-app myserver ./app
+./skills/infrastructure/scripts/hetzner-helper.sh create-server myserver cx21
+./skills/infrastructure/scripts/hetzner-helper.sh setup-firewall web
+./skills/infrastructure/scripts/hetzner-helper.sh deploy-app myserver ./app
 ```
 ```
 

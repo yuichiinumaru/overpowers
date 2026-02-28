@@ -502,7 +502,7 @@ show_help() {
 Coolify CLI Helper - Comprehensive self-hosted deployment and management
 
 USAGE:
-  ./.agent/scripts/coolify-cli-helper.sh [COMMAND] [CONTEXT] [OPTIONS...]
+  ./.agent/skills/infrastructure/scripts/coolify-cli-helper.sh [COMMAND] [CONTEXT] [OPTIONS...]
 
 COMMANDS:
   Local Development (No Context Required):
