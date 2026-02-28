@@ -122,6 +122,10 @@ Every modification to this repository **MUST** be accompanied by an entry in `CH
 * Do not break existing agent/skill interfaces without versioning.
 * Deprecated features stay for at least 2 versions before removal.
 
+### V. The Law of Shared Consciousness
+* All agents (Jules, OpenCode, Antigravity) must persist architectural discoveries, bug resolutions, and structural knowledge as `.md` files in `.agents/memories/`. 
+* This directory is symlinked to the global `.serena/memories/` folder to ensure shared consciousness across all coding platforms.
+
 ---
 
 ## 5. SECURITY BOUNDARIES
