@@ -606,7 +606,7 @@ show_help() {
 Vercel CLI Helper - Comprehensive Vercel deployment and project management
 
 USAGE:
-  ./.agent/scripts/vercel-cli-helper.sh [COMMAND] [ACCOUNT] [OPTIONS...]
+  ./.agent/skills/vercel-deploy/scripts/vercel-cli-helper.sh [COMMAND] [ACCOUNT] [OPTIONS...]
 
 COMMANDS:
   Project Management:

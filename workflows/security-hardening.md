@@ -26,13 +26,13 @@ Run security scripts from `Overpowers/scripts/`:
 
 ```bash
 # Snyk dependency scan
-./scripts/snyk-helper.sh
+./skills/sast-configuration/scripts/snyk-helper.sh
 
 # SonarCloud code analysis
-./scripts/sonarcloud-cli.sh analyze
+./skills/sast-configuration/scripts/sonarcloud-cli.sh analyze
 
 # Secret detection
-./scripts/secretlint-helper.sh
+./skills/sast-configuration/scripts/secretlint-helper.sh
 ```
 
 ### 2. Dependencies Audit

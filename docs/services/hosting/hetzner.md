@@ -92,40 +92,40 @@ cp configs/hetzner-config.json.txt configs/hetzner-config.json
 
 ```bash
 # List all servers across accounts
-./.agent/scripts/hetzner-helper.sh list
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh list
 
 # List servers for specific account
-./.agent/scripts/hetzner-helper.sh list main
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh list main
 
 # Create new server
-./.agent/scripts/hetzner-helper.sh create main web-server cx11 ubuntu-20.04
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh create main web-server cx11 ubuntu-20.04
 
 # Connect to server
-./.agent/scripts/hetzner-helper.sh connect main web-server
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh connect main web-server
 
 # Server operations
-./.agent/scripts/hetzner-helper.sh start main web-server
-./.agent/scripts/hetzner-helper.sh stop main web-server
-./.agent/scripts/hetzner-helper.sh reboot main web-server
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh start main web-server
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh stop main web-server
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh reboot main web-server
 ```
 
 ### **API Operations:**
 
 ```bash
 # Raw API calls
-./.agent/scripts/hetzner-helper.sh api main servers GET
-./.agent/scripts/hetzner-helper.sh api main images GET
-./.agent/scripts/hetzner-helper.sh api main server-types GET
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main servers GET
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main images GET
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main server-types GET
 
 # Server details
-./.agent/scripts/hetzner-helper.sh api main servers/12345 GET
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main servers/12345 GET
 ```
 
 ### **MCP Server Integration:**
 
 ```bash
 # Start MCP server for specific account
-./.agent/scripts/hetzner-helper.sh mcp-start main
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh mcp-start main
 
 # Test MCP server
 curl http://localhost:8081/health
@@ -145,13 +145,13 @@ curl http://localhost:8081/health
 
 ```bash
 # SSH key management
-./.agent/scripts/hetzner-helper.sh exec main web-server 'cat ~/.ssh/authorized_keys'
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh exec main web-server 'cat ~/.ssh/authorized_keys'
 
 # Firewall configuration
-./.agent/scripts/hetzner-helper.sh exec main web-server 'ufw status'
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh exec main web-server 'ufw status'
 
 # Security updates
-./.agent/scripts/hetzner-helper.sh exec main web-server 'apt update && apt upgrade -y'
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh exec main web-server 'apt update && apt upgrade -y'
 ```
 
 ### **Network Security:**
@@ -179,24 +179,24 @@ curl -H "Authorization: Bearer YOUR_TOKEN" https://api.hetzner.cloud/v1/servers
 
 ```bash
 # Check server status
-./.agent/scripts/hetzner-helper.sh api main servers/12345 GET
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main servers/12345 GET
 
 # Verify SSH key is added
-./.agent/scripts/hetzner-helper.sh api main ssh_keys GET
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main ssh_keys GET
 
 # Check firewall rules
-./.agent/scripts/hetzner-helper.sh api main firewalls GET
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main firewalls GET
 ```
 
 #### **Server Performance Issues:**
 
 ```bash
 # Check server metrics
-./.agent/scripts/hetzner-helper.sh exec main web-server 'htop'
-./.agent/scripts/hetzner-helper.sh exec main web-server 'iostat -x 1'
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh exec main web-server 'htop'
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh exec main web-server 'iostat -x 1'
 
 # Monitor network
-./.agent/scripts/hetzner-helper.sh exec main web-server 'iftop'
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh exec main web-server 'iftop'
 ```
 
 ## 📊 **Performance Optimization**
@@ -217,13 +217,13 @@ curl -H "Authorization: Bearer YOUR_TOKEN" https://api.hetzner.cloud/v1/servers
 
 ```bash
 # Private networks for internal communication
-./.agent/scripts/hetzner-helper.sh api main networks POST
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main networks POST
 
 # Load balancers for high availability
-./.agent/scripts/hetzner-helper.sh api main load_balancers POST
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main load_balancers POST
 
 # Floating IPs for failover
-./.agent/scripts/hetzner-helper.sh api main floating_ips POST
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main floating_ips POST
 ```
 
 ## 🔄 **Backup & Disaster Recovery**
@@ -232,20 +232,20 @@ curl -H "Authorization: Bearer YOUR_TOKEN" https://api.hetzner.cloud/v1/servers
 
 ```bash
 # Enable automatic backups
-./.agent/scripts/hetzner-helper.sh api main servers/12345/actions/enable_backup POST
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main servers/12345/actions/enable_backup POST
 
 # Create manual snapshot
-./.agent/scripts/hetzner-helper.sh api main servers/12345/actions/create_image POST
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main servers/12345/actions/create_image POST
 ```
 
 ### **Volume Snapshots:**
 
 ```bash
 # Create volume snapshot
-./.agent/scripts/hetzner-helper.sh api main volumes/12345/actions/create_snapshot POST
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main volumes/12345/actions/create_snapshot POST
 
 # Restore from snapshot
-./.agent/scripts/hetzner-helper.sh api main volumes POST
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh api main volumes POST
 ```
 
 ## 🐳 **Container & Kubernetes**
@@ -254,10 +254,10 @@ curl -H "Authorization: Bearer YOUR_TOKEN" https://api.hetzner.cloud/v1/servers
 
 ```bash
 # Install Docker
-./.agent/scripts/hetzner-helper.sh exec main web-server 'curl -fsSL https://get.docker.com | sh'
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh exec main web-server 'curl -fsSL https://get.docker.com | sh'
 
 # Docker Compose
-./.agent/scripts/hetzner-helper.sh exec main web-server 'curl -L "https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose'
+./.agent/skills/infrastructure/scripts/hetzner-helper.sh exec main web-server 'curl -L "https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose'
 ```
 
 ### **Kubernetes Integration:**

@@ -85,77 +85,77 @@ cp configs/spaceship-config.json.txt configs/spaceship-config.json
 
 ```bash
 # List all Spaceship accounts
-./.agent/scripts/spaceship-helper.sh accounts
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh accounts
 
 # List domains for account
-./.agent/scripts/spaceship-helper.sh domains personal
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh domains personal
 
 # Get domain details
-./.agent/scripts/spaceship-helper.sh domain-details personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh domain-details personal example.com
 
 # Audit complete domain configuration
-./.agent/scripts/spaceship-helper.sh audit personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh audit personal example.com
 ```
 
 ### **DNS Management:**
 
 ```bash
 # List DNS records
-./.agent/scripts/spaceship-helper.sh dns-records personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh dns-records personal example.com
 
 # Add DNS record
-./.agent/scripts/spaceship-helper.sh add-dns personal example.com www A 192.168.1.100 3600
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh add-dns personal example.com www A 192.168.1.100 3600
 
 # Update DNS record
-./.agent/scripts/spaceship-helper.sh update-dns personal example.com record-id www A 192.168.1.101 3600
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh update-dns personal example.com record-id www A 192.168.1.101 3600
 
 # Delete DNS record
-./.agent/scripts/spaceship-helper.sh delete-dns personal example.com record-id
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh delete-dns personal example.com record-id
 ```
 
 ### **Nameserver Management:**
 
 ```bash
 # Get current nameservers
-./.agent/scripts/spaceship-helper.sh nameservers personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh nameservers personal example.com
 
 # Update to Cloudflare nameservers
-./.agent/scripts/spaceship-helper.sh update-ns personal example.com ns1.cloudflare.com ns2.cloudflare.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh update-ns personal example.com ns1.cloudflare.com ns2.cloudflare.com
 
 # Update to Route 53 nameservers
-./.agent/scripts/spaceship-helper.sh update-ns personal example.com ns-1.awsdns-01.com ns-2.awsdns-02.net ns-3.awsdns-03.org ns-4.awsdns-04.co.uk
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh update-ns personal example.com ns-1.awsdns-01.com ns-2.awsdns-02.net ns-3.awsdns-03.org ns-4.awsdns-04.co.uk
 ```
 
 ### **Domain Management:**
 
 ```bash
 # Check domain availability
-./.agent/scripts/spaceship-helper.sh check-availability personal newdomain.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh check-availability personal newdomain.com
 
 # Get domain contacts
-./.agent/scripts/spaceship-helper.sh contacts personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh contacts personal example.com
 
 # Lock domain
-./.agent/scripts/spaceship-helper.sh lock personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh lock personal example.com
 
 # Unlock domain
-./.agent/scripts/spaceship-helper.sh unlock personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh unlock personal example.com
 
 # Check transfer status
-./.agent/scripts/spaceship-helper.sh transfer-status personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh transfer-status personal example.com
 ```
 
 ### **Monitoring & Automation:**
 
 ```bash
 # Monitor domain expiration (30 days warning)
-./.agent/scripts/spaceship-helper.sh monitor-expiration personal 30
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh monitor-expiration personal 30
 
 # Monitor domain expiration (60 days warning)
-./.agent/scripts/spaceship-helper.sh monitor-expiration personal 60
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh monitor-expiration personal 60
 
 # Audit all aspects of a domain
-./.agent/scripts/spaceship-helper.sh audit personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh audit personal example.com
 ```
 
 ## 🛡️ **Security Best Practices**
@@ -173,13 +173,13 @@ cp configs/spaceship-config.json.txt configs/spaceship-config.json
 
 ```bash
 # Enable domain lock for protection
-./.agent/scripts/spaceship-helper.sh lock personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh lock personal example.com
 
 # Monitor transfer status
-./.agent/scripts/spaceship-helper.sh transfer-status personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh transfer-status personal example.com
 
 # Regular security audit
-./.agent/scripts/spaceship-helper.sh audit personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh audit personal example.com
 ```
 
 ### **DNS Security:**
@@ -197,7 +197,7 @@ cp configs/spaceship-config.json.txt configs/spaceship-config.json
 
 ```bash
 # Verify API credentials
-./.agent/scripts/spaceship-helper.sh accounts
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh accounts
 
 # Check API key permissions in Spaceship dashboard
 # Ensure API key has required permissions for operations
@@ -207,10 +207,10 @@ cp configs/spaceship-config.json.txt configs/spaceship-config.json
 
 ```bash
 # Check DNS records
-./.agent/scripts/spaceship-helper.sh dns-records personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh dns-records personal example.com
 
 # Verify nameservers
-./.agent/scripts/spaceship-helper.sh nameservers personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh nameservers personal example.com
 
 # Check DNS propagation externally
 dig @8.8.8.8 example.com
@@ -221,13 +221,13 @@ nslookup example.com 8.8.8.8
 
 ```bash
 # Check domain status
-./.agent/scripts/spaceship-helper.sh domain-details personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh domain-details personal example.com
 
 # Verify domain lock status
-./.agent/scripts/spaceship-helper.sh audit personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh audit personal example.com
 
 # Check transfer status if domain issues persist
-./.agent/scripts/spaceship-helper.sh transfer-status personal example.com
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh transfer-status personal example.com
 ```
 
 ## 📊 **Monitoring & Analytics**
@@ -236,11 +236,11 @@ nslookup example.com 8.8.8.8
 
 ```bash
 # Monitor all domains for expiration
-./.agent/scripts/spaceship-helper.sh monitor-expiration personal 30
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh monitor-expiration personal 30
 
 # Audit multiple domains
 for domain in example.com another.com; do
-    ./.agent/scripts/spaceship-helper.sh audit personal $domain
+    ./.agent/skills/infrastructure/scripts/spaceship-helper.sh audit personal $domain
 done
 ```
 
@@ -253,7 +253,7 @@ ACCOUNT="personal"
 THRESHOLD=30
 
 # Check expiring domains
-EXPIRING=$(./.agent/scripts/spaceship-helper.sh monitor-expiration $ACCOUNT $THRESHOLD)
+EXPIRING=$(./.agent/skills/infrastructure/scripts/spaceship-helper.sh monitor-expiration $ACCOUNT $THRESHOLD)
 
 if [[ -n "$EXPIRING" ]]; then
     echo "Domains expiring soon:"
@@ -275,20 +275,20 @@ fi
 
 ```bash
 # Backup DNS records for a domain
-./.agent/scripts/spaceship-helper.sh dns-records personal example.com > dns-backup-example.com-$(date +%Y%m%d).txt
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh dns-records personal example.com > dns-backup-example.com-$(date +%Y%m%d).txt
 
 # Backup all domain configurations
-./.agent/scripts/spaceship-helper.sh audit personal example.com > domain-audit-example.com-$(date +%Y%m%d).txt
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh audit personal example.com > domain-audit-example.com-$(date +%Y%m%d).txt
 ```
 
 ### **Configuration Backup:**
 
 ```bash
 # Export domain list
-./.agent/scripts/spaceship-helper.sh domains personal > domains-backup-$(date +%Y%m%d).txt
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh domains personal > domains-backup-$(date +%Y%m%d).txt
 
 # Backup nameserver configurations
-./.agent/scripts/spaceship-helper.sh nameservers personal example.com > ns-backup-example.com-$(date +%Y%m%d).txt
+./.agent/skills/infrastructure/scripts/spaceship-helper.sh nameservers personal example.com > ns-backup-example.com-$(date +%Y%m%d).txt
 ```
 
 ## 📚 **Best Practices**

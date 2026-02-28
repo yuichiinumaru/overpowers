@@ -88,42 +88,42 @@ sudo apt-get install sshpass  # Linux
 
 ```bash
 # List all Hostinger sites
-./.agent/scripts/hostinger-helper.sh list
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh list
 
 # Connect to a site
-./.agent/scripts/hostinger-helper.sh connect example.com
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh connect example.com
 
 # Upload files to a site
-./.agent/scripts/hostinger-helper.sh upload example.com /local/path /remote/path
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh upload example.com /local/path /remote/path
 
 # Download files from a site
-./.agent/scripts/hostinger-helper.sh download example.com /remote/path /local/path
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh download example.com /remote/path /local/path
 
 # Execute command on server
-./.agent/scripts/hostinger-helper.sh exec example.com 'ls -la'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'ls -la'
 ```
 
 ### **File Management:**
 
 ```bash
 # Upload website files
-./.agent/scripts/hostinger-helper.sh upload example.com ./dist/ /domains/example.com/public_html/
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh upload example.com ./dist/ /domains/example.com/public_html/
 
 # Backup website
-./.agent/scripts/hostinger-helper.sh download example.com /domains/example.com/public_html/ ./backup/
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh download example.com /domains/example.com/public_html/ ./backup/
 
 # Update specific files
-./.agent/scripts/hostinger-helper.sh upload example.com ./index.html /domains/example.com/public_html/index.html
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh upload example.com ./index.html /domains/example.com/public_html/index.html
 ```
 
 ### **Database Operations:**
 
 ```bash
 # Access MySQL (if available)
-./.agent/scripts/hostinger-helper.sh exec example.com 'mysql -u username -p database_name'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'mysql -u username -p database_name'
 
 # Backup database
-./.agent/scripts/hostinger-helper.sh exec example.com 'mysqldump -u username -p database_name > backup.sql'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'mysqldump -u username -p database_name > backup.sql'
 ```
 
 ## 🛡️ **Security Considerations**
@@ -146,8 +146,8 @@ sudo apt-get install sshpass  # Linux
 
 ```bash
 # Set proper permissions for web files
-./.agent/scripts/hostinger-helper.sh exec example.com 'chmod 644 /domains/example.com/public_html/*.html'
-./.agent/scripts/hostinger-helper.sh exec example.com 'chmod 755 /domains/example.com/public_html/scripts/'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'chmod 644 /domains/example.com/public_html/*.html'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'chmod 755 /domains/example.com/public_html/scripts/'
 ```
 
 ## 🔍 **Troubleshooting**
@@ -174,13 +174,13 @@ sudo apt-get install sshpass  # Linux
 
 ```bash
 # Check destination path exists
-./.agent/scripts/hostinger-helper.sh exec example.com 'ls -la /domains/example.com/'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'ls -la /domains/example.com/'
 
 # Verify disk space
-./.agent/scripts/hostinger-helper.sh exec example.com 'df -h'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'df -h'
 
 # Check file permissions
-./.agent/scripts/hostinger-helper.sh exec example.com 'ls -la /domains/example.com/public_html/'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'ls -la /domains/example.com/public_html/'
 ```
 
 ## 📊 **Performance Optimization**
@@ -189,14 +189,14 @@ sudo apt-get install sshpass  # Linux
 
 ```bash
 # Enable compression (if supported)
-./.agent/scripts/hostinger-helper.sh exec example.com 'echo "gzip on;" >> /domains/example.com/.htaccess'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'echo "gzip on;" >> /domains/example.com/.htaccess'
 
 # Optimize images before upload
 # Use tools like imagemin or tinypng before uploading
 
 # Monitor resource usage
-./.agent/scripts/hostinger-helper.sh exec example.com 'top'
-./.agent/scripts/hostinger-helper.sh exec example.com 'df -h'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'top'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'df -h'
 ```
 
 ### **Caching Strategies:**
@@ -214,7 +214,7 @@ sudo apt-get install sshpass  # Linux
 # Create backup script
 #!/bin/bash
 DATE=$(date +%Y%m%d_%H%M%S)
-./.agent/scripts/hostinger-helper.sh download example.com /domains/example.com/public_html/ ./backups/example.com_$DATE/
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh download example.com /domains/example.com/public_html/ ./backups/example.com_$DATE/
 ```
 
 ### **Deployment Workflow:**
@@ -222,10 +222,10 @@ DATE=$(date +%Y%m%d_%H%M%S)
 ```bash
 # Build and deploy
 npm run build
-./.agent/scripts/hostinger-helper.sh upload example.com ./dist/ /domains/example.com/public_html/
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh upload example.com ./dist/ /domains/example.com/public_html/
 
 # Verify deployment
-./.agent/scripts/hostinger-helper.sh exec example.com 'ls -la /domains/example.com/public_html/'
+./.agent/skills/infrastructure/scripts/hostinger-helper.sh exec example.com 'ls -la /domains/example.com/public_html/'
 ```
 
 ## 📚 **Best Practices**

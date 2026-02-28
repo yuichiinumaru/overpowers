@@ -226,9 +226,9 @@ main() {
     echo ""
 
     # Optional CodeRabbit CLI review (if available)
-    if [[ -f ".agent/scripts/coderabbit-cli.sh" ]] && command -v coderabbit &> /dev/null; then
+    if [[ -f ".agent/skills/code-auditor/scripts/coderabbit-cli.sh" ]] && command -v coderabbit &> /dev/null; then
         print_info "🤖 Running CodeRabbit CLI review..."
-        if bash .agent/scripts/coderabbit-cli.sh review > /dev/null 2>&1; then
+        if bash .agent/skills/code-auditor/scripts/coderabbit-cli.sh review > /dev/null 2>&1; then
             print_success "CodeRabbit CLI review completed"
         else
             print_info "CodeRabbit CLI review skipped (setup required)"
@@ -244,10 +244,10 @@ main() {
         print_error "❌ Quality violations detected ($total_violations total)"
         echo ""
         print_info "To fix issues automatically, run:"
-        print_info "  ./.agent/scripts/quality-fix.sh"
+        print_info "  ./.agent/skills/code-auditor/scripts/quality-fix.sh"
         echo ""
         print_info "To check current status, run:"
-        print_info "  ./.agent/scripts/quality-check.sh"
+        print_info "  ./.agent/skills/code-auditor/scripts/quality-check.sh"
         echo ""
         print_info "To bypass this check (not recommended), use:"
         print_info "  git commit --no-verify"

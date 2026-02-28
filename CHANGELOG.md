@@ -30,7 +30,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - **Skills**: Re-synchronized ALL skills from `antigravity-skills` to ensure 100% asset coverage.
-- **Tools**: Extracted `sanity-cli` to `scripts/sanity-cli`.
+- **Tools**: Extracted `sanity-cli` to `skills/verification-quality/scripts/sanity-cli`.
 - **Tools**: Extracted Linux helper scripts to `scripts/linux-tools/`.
 - **Documentation**: `docs/INTEGRATION_REPORT_PHASE_3.md`.
 

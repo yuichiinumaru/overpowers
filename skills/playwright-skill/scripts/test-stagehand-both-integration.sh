@@ -6,7 +6,7 @@
 
 # Source shared constants
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)" || exit
-source "${SCRIPT_DIR}/../../.agent/scripts/shared-constants.sh"
+source "${SCRIPT_DIR}/../../../../.agent/scripts/shared-constants.sh"
 
 # Colors for output
 readonly BLUE='\033[0;34m'
@@ -124,8 +124,8 @@ test_documentation_completeness() {
     print_info "Testing documentation completeness..."
     
     local docs=(
-        "${SCRIPT_DIR}/../../.agent/STAGEHAND.md"
-        "${SCRIPT_DIR}/../../.agent/STAGEHAND-PYTHON.md"
+        "${SCRIPT_DIR}/../../../../.agent/STAGEHAND.md"
+        "${SCRIPT_DIR}/../../../../.agent/STAGEHAND-PYTHON.md"
         "${SCRIPT_DIR}/../../.agent/BROWSER-AUTOMATION.md"
         "${SCRIPT_DIR}/../../README.md"
     )
@@ -161,8 +161,8 @@ test_documentation_completeness() {
 test_helper_consistency() {
     print_info "Testing helper script consistency..."
     
-    local js_helper="${SCRIPT_DIR}/../../.agent/scripts/stagehand-helper.sh"
-    local python_helper="${SCRIPT_DIR}/../../.agent/scripts/stagehand-python-helper.sh"
+    local js_helper="${SCRIPT_DIR}/../../../../.agent/skills/playwright-skill/scripts/stagehand-helper.sh"
+    local python_helper="${SCRIPT_DIR}/../../../../.agent/skills/playwright-skill/scripts/stagehand-python-helper.sh"
     
     if [[ -f "$js_helper" ]] && [[ -f "$python_helper" ]]; then
         # Check if both have similar command structure
@@ -234,15 +234,15 @@ $(if [[ -f "${TEST_RESULTS_DIR}/python-test.log" ]]; then echo "See: python-test
 ## Next Steps
 
 ### JavaScript Setup
-1. Run: \`bash .agent/scripts/stagehand-helper.sh setup\`
-2. Test: \`bash .agent/scripts/setup-mcp-integrations.sh stagehand\`
+1. Run: \`bash .agent/skills/playwright-skill/scripts/stagehand-helper.sh setup\`
+2. Test: \`bash .agent/skills/aws-mcp-setup/scripts/setup-mcp-integrations.sh stagehand\`
 
 ### Python Setup
-1. Run: \`bash .agent/scripts/stagehand-python-helper.sh setup\`
-2. Test: \`bash .agent/scripts/setup-mcp-integrations.sh stagehand-python\`
+1. Run: \`bash .agent/skills/playwright-skill/scripts/stagehand-python-helper.sh setup\`
+2. Test: \`bash .agent/skills/aws-mcp-setup/scripts/setup-mcp-integrations.sh stagehand-python\`
 
 ### Both Versions
-1. Run: \`bash .agent/scripts/setup-mcp-integrations.sh stagehand-both\`
+1. Run: \`bash .agent/skills/aws-mcp-setup/scripts/setup-mcp-integrations.sh stagehand-both\`
 
 ## Files Created
 

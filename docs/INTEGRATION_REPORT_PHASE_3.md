@@ -15,7 +15,7 @@ Executed a deep "Deca-Loop" extraction pass to ensure maximum value capture from
 
 ## 2. Tool Extraction
 **Source**: `sanity-gravity`
-**Action**: Extracted `sanity-cli` -> `scripts/sanity-cli`.
+**Action**: Extracted `sanity-cli` -> `skills/verification-quality/scripts/sanity-cli`.
 **Note**: This CLI wrapper helps manage the docker sandbox (init, up, down).
 
 **Source**: `antigravity-tools-linux`
@@ -28,4 +28,4 @@ Executed a deep "Deca-Loop" extraction pass to ensure maximum value capture from
 - **antigravity-account-switcher**: Pure Electron app. No reusable logic found.
 
 ## 4. Next Steps
-- Verify `scripts/sanity-cli` works with our new `sandbox/` structure (might need path adjustments).
+- Verify `skills/verification-quality/scripts/sanity-cli` works with our new `sandbox/` structure (might need path adjustments).

@@ -13,7 +13,7 @@
 # This script symlinks overpowers assets so Gemini CLI can use them globally.
 #
 # Usage:
-#   ./scripts/deploy-to-gemini-cli.sh
+#   ./skills/vercel-deploy/scripts/deploy-to-gemini-cli.sh
 #
 # Mapping:
 #   overpowers/skills/     -> ~/.gemini/skills

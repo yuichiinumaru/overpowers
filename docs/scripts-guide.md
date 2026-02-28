@@ -145,10 +145,10 @@ Overpowers includes **89 DevOps and automation scripts** that extend your capabi
 
 ```bash
 # Make executable
-chmod +x ~/.config/opencode/Overpowers/scripts/quality-check.sh
+chmod +x ~/.config/opencode/Overpowers/skills/code-auditor/scripts/quality-check.sh
 
 # Run directly
-~/.config/opencode/Overpowers/scripts/quality-check.sh
+~/.config/opencode/Overpowers/skills/code-auditor/scripts/quality-check.sh
 ```
 
 ### From OpenCode/Claude

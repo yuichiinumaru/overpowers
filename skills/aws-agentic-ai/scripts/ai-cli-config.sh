@@ -8,7 +8,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)" || exit
 readonly SCRIPT_DIR
-REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)" || exit
+REPO_ROOT="$(cd "$SCRIPT_DIR/../../../.." && pwd)" || exit
 readonly REPO_ROOT
 readonly AGENTS_FILE="$HOME/AGENTS.md"
 readonly REPO_AGENTS_FILE="$REPO_ROOT/AGENTS.md"

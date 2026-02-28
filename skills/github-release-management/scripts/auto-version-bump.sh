@@ -21,7 +21,7 @@ print_error() { local msg="$1"; echo -e "${RED}[ERROR]${NC} $msg" >&2; return 0;
 
 # Repository root directory
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)" || exit
-VERSION_MANAGER="$REPO_ROOT/.agent/scripts/version-manager.sh"
+VERSION_MANAGER="$REPO_ROOT/.agent/skills/github-release-management/scripts/version-manager.sh"
 
 # Function to determine version bump type from commit message
 determine_bump_type() {

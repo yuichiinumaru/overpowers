@@ -140,10 +140,10 @@ main() {
             
             # Files with known SonarCloud issues
             local files=(
-                ".agent/scripts/setup-mcp-integrations.sh"
-                ".agent/scripts/validate-mcp-integrations.sh"
-                ".agent/scripts/setup-linters-wizard.sh"
-                ".agent/scripts/setup-wizard-helper.sh"
+                ".agent/skills/aws-mcp-setup/scripts/setup-mcp-integrations.sh"
+                ".agent/skills/aws-mcp-setup/scripts/validate-mcp-integrations.sh"
+                ".agent/skills/code-auditor/scripts/setup-linters-wizard.sh"
+                ".agent/skills/auth-setup/scripts/setup-wizard-helper.sh"
             )
             
             for file in "${files[@]}"; do

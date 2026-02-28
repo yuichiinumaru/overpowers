@@ -426,7 +426,7 @@ test_connections() {
     print_info "Testing hosting providers..."
     if [[ -f "../configs/hetzner-config.json" ]]; then
         echo "Testing Hetzner Cloud..."
-        if ../.agent/scripts/hetzner-helper.sh accounts 2>/dev/null; then
+        if ../.agent/skills/infrastructure/scripts/hetzner-helper.sh accounts 2>/dev/null; then
             print_success "✅ Hetzner Cloud connected"
         else
             print_warning "❌ Hetzner Cloud connection failed"
@@ -437,7 +437,7 @@ test_connections() {
     print_info "Testing domain providers..."
     if [[ -f "../configs/spaceship-config.json" ]]; then
         echo "Testing Spaceship..."
-        if ../.agent/scripts/spaceship-helper.sh accounts 2>/dev/null; then
+        if ../.agent/skills/infrastructure/scripts/spaceship-helper.sh accounts 2>/dev/null; then
             print_success "✅ Spaceship connected"
         else
             print_warning "❌ Spaceship connection failed"
@@ -448,7 +448,7 @@ test_connections() {
     print_info "Testing Git platforms..."
     if [[ -f "../configs/git-platforms-config.json" ]]; then
         echo "Testing Git platforms..."
-        if ../.agent/scripts/git-platforms-helper.sh platforms 2>/dev/null; then
+        if ../.agent/skills/git-master/scripts/git-platforms-helper.sh platforms 2>/dev/null; then
             print_success "✅ Git platforms connected"
         else
             print_warning "❌ Git platforms connection failed"

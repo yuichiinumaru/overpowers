@@ -211,7 +211,7 @@ generate_report() {
         print_info "Next steps:"
         print_info "1. Review failed tests above"
         print_info "2. Check .agent/MCP-TROUBLESHOOTING.md for solutions"
-        print_info "3. Run setup script: bash .agent/scripts/setup-mcp-integrations.sh"
+        print_info "3. Run setup script: bash .agent/skills/aws-mcp-setup/scripts/setup-mcp-integrations.sh"
         print_info "4. Configure missing API keys"
     else
         print_success "All MCP integrations are ready to use!"
