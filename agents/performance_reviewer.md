@@ -10,6 +10,12 @@ Analyze the diff for performance risks:
 - Inefficient complexity (nested loops, repeated work), blocking ops
 - N+1 DB/API calls, missing pagination/projection, caching/memoization ops
 - Memory/IO patterns (large allocations in loops, unclosed handles)
+- Memory Leaks: Un-cleaned event listeners or subscriptions (e.g., in `useEffect` or on unmount)
+- API Over-fetching: Requesting full object graphs instead of specific fields
+- Synchronous Blocking: CPU-heavy or sync I/O in Node.js/Python event loops
+- Unnecessary UI Re-renders: Missing `React.memo`, inline objects/functions in render methods
+
+If critical performance paths are modified, mandate the use of the `workflows/empirical-optimization-loop.md` workflow to enforce benchmarking before merge.
 
 Respond with:
 Critical Issues:
