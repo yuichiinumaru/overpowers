@@ -37,20 +37,24 @@ If the user only provided a channel URL (e.g., `https://youtube.com/@techchannel
 3. Compile deduplicated links into a temporary markdown ledger (e.g., `youtube-mining-queue.md`).
 ```
 
-### 3. The Cyclic Engine (Non-Stop Loop)
-Once a list is established, run the batch consumption loop:
+### 3. The Cyclic Engine (Non-Stop Loop & Context Management)
+Once a list is established, run the batch consumption loop recursively to prevent context rot.
 
-**For every chunk of 2 to 5 videos:**
+**For every chunk of 2 to 5 videos (Recursive Loop):**
 ```
 /skill youtube-skill-creator
 
-1. Watch/transcribe the videos in the batch.
-2. Apply the scorecard calculation (`skill_scorecard.md`) to filter noise from actual procedures.
-3. Draft a `video_analysis_report.md` outlining the precise steps seen.
-4. Translate viable reports into fully functional agent skills, ensuring they follow:
+1. Watch/transcribe the videos in the batch. (Tip: Use `scripts/helpers/youtube_audio_transcriber.js` locally if yt-dlp faces IP blocks).
+2. Take notes: If a video does not have enough context on its own to form a full skill, take notes of the problems, edge cases, and solutions presented.
+3. Evaluate Accumulation:
+   - If the accumulated notes provide enough context for a robust procedure, proceed to step 4.
+   - If NOT, save the notes to `.agents/reports/youtube-mining-notes.md` and immediately loop to the next batch of videos.
+4. Apply the scorecard calculation (`skill_scorecard.md`) to filter noise from actual procedures.
+5. Draft a `video_analysis_report.md` outlining the precise steps seen.
+6. Translate viable reports into fully functional agent skills, ensuring they follow:
    - Proper folder structure: `skills/extracted-topic-name/SKILL.md`
    - YAML Frontmatter (name, description, etc).
-5. Cross-check `skills/` directory to avoid duplicate overlap; prefer updating existing skills if heavily redundant.
+7. Cross-check `skills/` directory to avoid duplicate overlap; prefer updating existing skills if heavily redundant, utilizing the accumulated notes.
 ```
 
 ### 4. Progress Persistence & Auto-Continue
