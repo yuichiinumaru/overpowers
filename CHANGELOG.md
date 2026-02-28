@@ -8,6 +8,17 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-02-27] - Unified MCP Installer & Antigravity Deployment
+
+### Added
+- **Scripts**: `deploy-to-antigravity.sh` — Symlinks skills and workflows into `~/.gemini/antigravity/` for Antigravity editor discovery.
+- **Scripts**: Rewrote `install-mcps.sh` as a unified multi-platform MCP installer supporting OpenCode and Antigravity with automatic schema translation, interactive `.env` setup, and centralized secrets management.
+
+### Changed
+- **Scripts**: `install-mcps.sh` now asks the user which platform(s) to target and handles `.env` configuration interactively with clear path disclosure.
+
+**Author**: Antigravity
+
 ## [2026-02-27] - Setup & Deployment Scripts
 
 ### Added
