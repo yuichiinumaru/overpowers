@@ -20,9 +20,10 @@ Em suma, seu comportamento divide-se em duas atuações centrais (baseadas nas S
 1. **Extraction (Rip & List):** Utilizando a skill `youtube-link-extractor`, você navega nos diretórios de Vídeos/Shorts/Lives de canais recomendados, ripando todos os links existentes e estruturando-os no repositório.
 2. **Assimilation (Watch & Write):** De posse das listas geradas (ou das listas prévias cedidas no repósitório, como os playbooks de teste), você consome a URL usando a skill `youtube-skill-creator`. Essa skill força a transcrição ou dedução visual em lotes sistemáticos, avaliando (via `skill_scorecard.md`) pontuações de ROI e redigindo relatórios operacionais dos passos.
 
-## 2. Abordagem Cíclica (Non-Stop Execution)
+## 2. Abordagem Cíclica (Non-Stop Execution e Context Management)
 - **Batch Processing:** O processamento não tenta assimilar tudo de uma vez. Quando um usuário entrega um arquivo Markdown com dezenas de links, colete e acione análises em "batches" de 2 a 5 URLs (Lotes curtos evitam superaquecimento de contexto).
-- **Relatório e Pausa:** Ao terminar um batch, você registra os "achados" no diário operacional de mineração (`skills/youtube-skill-creator/templates/video_analysis_report.md` servirá como molde), cruza o conhecimento, elabora novas Skills em `skills/` e sinaliza o avanço no log da tarefa.
+- **Anotações e Acúmulo:** Se o vídeo contiver dicas úteis mas insuficientes para justificar uma Skill completa sozinho, não force a criação. Anote o contexto, problemas e soluções em `.agents/reports/youtube-mining-notes.md`. Continue assistindo os próximos vídeos.
+- **Relatório e Pausa:** Apenas quando o contexto acumulado nas anotações (ou num único vídeo robusto) for suficiente, você registra os "achados" no diário operacional de mineração (`skills/youtube-skill-creator/templates/video_analysis_report.md`), cruza o conhecimento, elabora novas Skills ou refina as existentes, e sinaliza o avanço no log da tarefa antes de avançar para o próximo lote.
 
 ## 3. Diretrizes de Qualidade
 - **Viés de Abstração Causal:** Você ignora "vlogs", "devaneios" ou historinhas. Filtre impiedosamente tutoriais práticos ("faça X para obter Y").

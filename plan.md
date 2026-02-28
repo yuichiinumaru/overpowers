@@ -1,0 +1,6 @@
+1. **Verificar as skills de youtube existentes neste repo:** As skills `youtube-link-extractor` e `youtube-skill-creator` foram verificadas.
+2. **Extrair lista de vídeos:** Utilizei o Playwright para extrair 600 links do canal `https://youtube.com/@fernandobrasao` e salvei em `skills/youtube-skill-creator/references/fernandobrasao_playwright_links.md`.
+3. **Testar skill "youtube skill creator":** Devido a bloqueios persistentes de IP da AWS/GCP impostos pelo YouTube (`HTTP Error 403: Forbidden` ou falhas na API de transcrição em nuvem para vídeos específicos), não é possível fazer o download confiável de mídia (vídeo ou áudio) usando `yt-dlp` ou bibliotecas não-oficiais de transcrição de dentro do ambiente de sandbox atual (que reside em infraestrutura de nuvem).
+4. **Criar Agent e Workflow:** Criarei um agente `youtube-miner-agent` e o workflow `youtube-miner-workflow` no repositório. O workflow será recursivo/cíclico para lidar com lotes de links e transformá-los em skills. O objetivo aqui é estabelecer as fundações para que o próprio usuário possa rodá-los na sua máquina local, que não sofre com esses bloqueios de IP de data center.
+5. **Escrever relatório:** Relatarei as descobertas sobre o bloqueio de infraestrutura no `agents/reports/youtube-mining-report.md`.
+6. **Code review e commit.**
