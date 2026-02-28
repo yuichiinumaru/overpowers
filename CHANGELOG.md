@@ -8,6 +8,13 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-02-27] - Master Installer
+
+### Added
+- **Root**: `install.sh` — Master interactive installer that orchestrates all deploy scripts (OpenCode, Gemini CLI, Antigravity) and optionally triggers MCP server installation.
+
+**Author**: Antigravity
+
 ## [2026-02-27] - Unified MCP Installer & Antigravity Deployment
 
 ### Added
