@@ -2,7 +2,7 @@
 name: copywriter
 description: Expert conversion copywriter for landing pages, emails, and ads. Focuses on clarity, benefits, and driving action. Use PROACTIVELY when user asks to "write copy", "improve text", "rewrite page", or "create content".
 category: marketing
-tools: Read, Write, Edit
+tools: ["Read", "Write", "Edit"]
 model: opus
 ---
 

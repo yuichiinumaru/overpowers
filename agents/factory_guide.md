@@ -30,7 +30,7 @@ Every agent file MUST start with YAML frontmatter:
 ---
 name: agent-name-in-kebab-case
 description: When to invoke this agent - be specific for auto-discovery
-tools: Read, Write, Edit, Bash  # Optional, comma-separated
+tools: ["Read", "Write", "Edit", "Bash  # Optional", "comma-separated"]
 model: sonnet  # Optional: sonnet|opus|haiku|inherit
 color: green  # Visual categorization
 field: frontend  # Domain/expertise area
@@ -56,7 +56,7 @@ mcp_tools: mcp__github, mcp__playwright  # Optional, comma-separated
 ---
 name: code-reviewer
 description: Expert code review specialist. Use proactively after code changes.
-tools: Read, Grep, Glob, Bash
+tools: ["Read", "Grep", "Glob", "Bash"]
 model: sonnet
 color: red
 field: quality
@@ -68,7 +68,7 @@ expertise: expert
 ---
 name: frontend-developer
 description: React and TypeScript development expert. Use for building UI components and pages.
-tools: Read, Write, Edit, Bash, Grep, Glob
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 color: green
 field: frontend
@@ -93,11 +93,11 @@ name: codeReviewer  ❌ (camelCase - WRONG)
 ---
 
 ---
-tools: ["Read", "Edit"]  ❌ (Array format - WRONG, use comma-separated)
+tools: ["["Read"", ""Edit"]  ❌ (Array format - WRONG", "use comma-separated)"]
 ---
 
 ---
-tools: [Read, Edit]  ❌ (Array - WRONG, needs quotes and comma-separated string)
+tools: ["[Read", "Edit]  ❌ (Array - WRONG", "needs quotes and comma-separated string)"]
 ---
 ```
 
@@ -191,7 +191,7 @@ After YAML frontmatter, the system prompt:
 ---
 name: agent-name
 description: When to invoke
-tools: Read, Write
+tools: ["Read", "Write"]
 model: sonnet
 color: blue
 field: product
@@ -223,7 +223,7 @@ Output format:
 ---
 name: code-reviewer
 description: Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code.
-tools: Read, Grep, Glob, Bash
+tools: ["Read", "Grep", "Glob", "Bash"]
 model: sonnet
 color: red
 field: quality
@@ -268,7 +268,7 @@ MCP Integration:
 ---
 name: frontend-developer
 description: React and TypeScript frontend development specialist. Use for building UI components, pages, and client-side features.
-tools: Read, Write, Edit, Bash, Grep, Glob
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 color: green
 field: frontend
@@ -329,7 +329,7 @@ MCP Integration:
 ---
 name: product-planner
 description: Product strategy and planning expert. Use for creating product requirements, user stories, and feature specifications.
-tools: Read, Write, Grep
+tools: ["Read", "Write", "Grep"]
 model: opus
 color: blue
 field: product
@@ -410,7 +410,7 @@ Use data to validate. Start with user needs, not solutions.
 
 **Recommended Tools:**
 ```yaml
-tools: Read, Write, Grep
+tools: ["Read", "Write", "Grep"]
 ```
 
 **Color:** `blue`
@@ -433,7 +433,7 @@ tools: Read, Write, Grep
 
 **Recommended Tools:**
 ```yaml
-tools: Read, Write, Edit, Bash, Grep, Glob
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 ```
 
 **Color:** `green`
@@ -456,7 +456,7 @@ tools: Read, Write, Edit, Bash, Grep, Glob
 
 **Recommended Tools:**
 ```yaml
-tools: Read, Write, Edit, Bash, Grep, Glob
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 ```
 
 **Color:** `red`
@@ -480,7 +480,7 @@ tools: Read, Write, Edit, Bash, Grep, Glob
 
 **Recommended Tools:**
 ```yaml
-tools: Read, Write, Grep
+tools: ["Read", "Write", "Grep"]
 ```
 
 **Color:** `purple`
@@ -541,7 +541,7 @@ Example:
 ---
 name: pr-review-specialist
 description: Pull request review expert. Use for comprehensive PR analysis.
-tools: Read, Grep, Bash
+tools: ["Read", "Grep", "Bash"]
 color: red
 field: quality
 expertise: expert
@@ -586,17 +586,17 @@ Match tools to agent type:
 
 **Strategic (lightweight):**
 ```yaml
-tools: Read, Write, Grep
+tools: ["Read", "Write", "Grep"]
 ```
 
 **Implementation (full):**
 ```yaml
-tools: Read, Write, Edit, Bash, Grep, Glob
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 ```
 
 **Quality (heavy):**
 ```yaml
-tools: Read, Write, Edit, Bash, Grep, Glob
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 # Note: Sequential execution only!
 ```
 
@@ -646,7 +646,7 @@ description: An agent that helps with frontend  ❌ (Not action-oriented)
 ---
 name: test-runner
 description: Test automation specialist. Use proactively after code changes to run tests and validate implementations.
-tools: Read, Write, Edit, Bash, Grep, Glob
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 color: red
 field: testing
@@ -723,7 +723,7 @@ MCP Integration:
 ---
 name: api-builder
 description: RESTful API development specialist. Use for creating backend endpoints, controllers, and API services.
-tools: Read, Write, Edit, Bash, Grep, Glob
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 color: green
 field: backend
@@ -796,7 +796,7 @@ Can work in parallel with frontend_developer when building full-stack features.
 ---
 name: prd-specialist
 description: Product requirements documentation expert. Use for creating PRDs, user stories, and feature specifications.
-tools: Read, Write, Grep
+tools: ["Read", "Write", "Grep"]
 model: opus
 color: blue
 field: product
@@ -993,7 +993,7 @@ For each agent, provide:
 ---
 name: {agent-name}
 description: {when to invoke}
-tools: {comma-separated tools}
+tools: ["{comma-separated tools}"]
 model: {sonnet|opus|haiku}
 color: {color}
 field: {field}

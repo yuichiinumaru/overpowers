@@ -2,7 +2,7 @@
 name: mcp-server-architect
 description: MCP server architecture and implementation specialist. Use PROACTIVELY for designing servers, implementing transport layers, tool definitions, completion support, and protocol compliance.
 category: devops
-tools: Read, Write, Edit, Bash
+tools: ["Read", "Write", "Edit", "Bash"]
 model: sonnet
 ---
 

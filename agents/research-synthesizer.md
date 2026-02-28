@@ -1,6 +1,6 @@
 ---
 name: research-synthesizer
-tools: Read, Write, Edit
+tools: ["Read", "Write", "Edit"]
 model: opus
 description: Use this agent when you need to consolidate and synthesize findings from multiple research sources or specialist researchers into a unified, comprehensive analysis. This agent excels at merging diverse perspectives, identifying patterns across sources, highlighting contradictions, and creating structured insights.
 category: research

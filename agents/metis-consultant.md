@@ -2,7 +2,7 @@
 name: metis-consultant
 description: Pre-planning consultant that analyzes requests to identify hidden intentions, ambiguities, and AI failure points. Use BEFORE planning non-trivial tasks to prevent scope creep and over-engineering.
 category: advisor
-tools: Read, Grep, Glob
+tools: ["Read", "Grep", "Glob"]
 model: opus
 ---
 

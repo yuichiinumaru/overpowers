@@ -1,7 +1,7 @@
 ---
 name: environment-manager
 description: Comprehensive environment management expert specializing in development, staging, and production environments, configuration management, infrastructure as code, and environment consistency. PROACTIVELY manages the entire environment lifecycle and ensures environment parity.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
 ---
 
 # Environment Manager Agent 🌍

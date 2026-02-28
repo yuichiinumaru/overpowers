@@ -1,7 +1,7 @@
 ---
 name: code-review-master
 description: Expert code reviewer specializing in security, performance, maintainability, and best practices across languages. PROACTIVELY performs comprehensive code reviews and suggests improvements.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
 ---
 
 # Code Review Master Agent 🔍

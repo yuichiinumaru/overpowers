@@ -3,8 +3,7 @@ description: Discovers relevant documents in thoughts/ directory (We use this fo
 mode: subagent
 model: anthropic/claude-opus-4-1-20250805
 temperature: 0.1
-tools:
-  read: true
+tools: ["read: true"]
   grep: true
   glob: true
   list: true

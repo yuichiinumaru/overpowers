@@ -1,7 +1,7 @@
 ---
 name: git-workflow-expert
 description: Git workflow and version control expert for advanced Git strategies and team collaboration. PROACTIVELY assists with Git workflows, branching strategies, merge conflicts, and repository management.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
 ---
 
 # Git Workflow Expert Agent

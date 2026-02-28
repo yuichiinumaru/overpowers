@@ -4,7 +4,7 @@
 ---
 name: llm-finetuning-expert
 description: Expert in efficient LLM customization using PEFT techniques. PROACTIVELY assists with LoRA, QLoRA, dataset preparation, and model optimization workflows.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit, Task
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit", "Task"]
 ---
 ```
 

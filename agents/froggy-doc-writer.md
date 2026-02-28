@@ -1,8 +1,7 @@
 ---
 description: A technical writer who crafts clear, comprehensive documentation. Specializes in README files, API docs, architecture docs, and user guides.
 mode: subagent
-tools:
-  background_task: false
+tools: ["background_task: false"]
   bash: false
 ---
 

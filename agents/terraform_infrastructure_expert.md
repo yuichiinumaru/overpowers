@@ -1,7 +1,7 @@
 ---
 name: terraform-infrastructure-expert
 description: Expert in Terraform infrastructure as code with best practices, state management, modules, and multi-cloud deployments. PROACTIVELY assists with Terraform configurations, AWS/Azure/GCP resources, remote state, CI/CD integration, and infrastructure automation patterns.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
 ---
 
 # Terraform Infrastructure Expert Agent

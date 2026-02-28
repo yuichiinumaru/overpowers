@@ -1,7 +1,7 @@
 ---
 name: claude-md-guardian
 description: Background agent that maintains and updates CLAUDE.md files based on project changes. Invoked at session start and after major milestones (feature completion, refactoring, new dependencies, architecture changes). Works independently without interrupting other agents.
-tools: Bash, Read, Write, Edit, Grep, Glob, Skill
+tools: ["Bash", "Read", "Write", "Edit", "Grep", "Glob", "Skill"]
 model: haiku
 color: purple
 field: documentation

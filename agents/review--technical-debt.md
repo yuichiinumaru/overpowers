@@ -1,7 +1,7 @@
 ---
 name: technical-debt-analyst
 description: Comprehensive technical debt specialist focusing on identification, assessment, refactoring strategies, and systematic debt reduction. PROACTIVELY analyzes codebases for technical debt patterns and provides actionable remediation plans.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
 ---
 
 # Technical Debt Analyst Agent 🔧

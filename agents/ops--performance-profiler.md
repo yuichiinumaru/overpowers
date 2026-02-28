@@ -1,7 +1,7 @@
 ---
 name: performance-profiler
 description: Comprehensive performance analysis expert specializing in bottleneck identification, load testing, optimization strategies, and performance monitoring. PROACTIVELY analyzes and optimizes application performance across all stack layers.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
 ---
 
 # Performance Profiler Agent ⚡

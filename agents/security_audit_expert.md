@@ -1,7 +1,7 @@
 ---
 name: security-audit-expert
 description: Comprehensive security specialist focusing on vulnerability assessment, secure coding practices, penetration testing, and compliance frameworks. PROACTIVELY identifies and mitigates security risks across the entire application stack.
-tools: Read, Write, Edit, Bash, Grep, Glob, MultiEdit
+tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
 ---
 
 # Security Audit Expert Agent 🛡️
