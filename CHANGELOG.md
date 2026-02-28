@@ -8,6 +8,49 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2026-02-28] - Scripts Cleanup & Docs Reorganization
+
+### Added
+- **Scripts**: `extract-installed-mcps.py` — scans user configs to aggregate MCPs and ENV vars.
+- **Config**: `opencode-optional-mcps.json` for non-essential MCPs (e.g., `hypertool`).
+- **Config**: `desktop-commander` MCP added to `opencode-example.json`.
+- **Docs**: `docs/tasklist.md` — master task index for Jules agent discovery.
+- **Docs**: `docs/tasks/001-feature-mcp-integrations.md`, `002-feature-advanced-hooks.md`, `003-refactor-moltbot-memory.md`.
+- **Rules**: `.agents/rules/jujutsu-rules.md` and `.agents/rules/jules-rules.md`.
+- **Prompts**: `.agents/prompts/sort_scripts.md` — delegation prompt for script reorganization.
+
+### Changed
+- **install.sh**: Added `-f` fast mode for fully non-interactive installation.
+- **install.sh**: Added plugin installation prompt at end of normal run.
+- **install-mcps.sh**: Dynamic ENV variable loading from `.env.example`; user MCP scan+merge step.
+- **install-mcps.sh**: Full `FAST_MODE` support when invoked via `install.sh -f`.
+- **foreman.md**: Agents now PROHIBITED from editing `docs/tasklist.md` or moving completed tasks.
+- **common.md**: Reports must use branch-matching filenames; PRs target `staging`.
+- **.gitignore**: Added `*.diff`, `.jules/`.
+
+### Removed
+- **Config**: `hypertool` removed from `opencode-example.json` (moved to optional).
+
+**Author**: Antigravity
+
+---
+
+## [2026-02-28] - Benchmarking & Mining Upgrades
+
+### Added
+- **Skills**: `performance-benchmarking` to enable empirical execution speed measurement.
+- **Workflows**: `empirical-optimization-loop` enforcing a "measure before you merge" policy.
+- **Workflow Tools**: Javascript helpers for `youtube-skill-mining` (`youtube_audio_transcriber.js`, `yt_extractor.js`, `ytdlp_cookies.js`).
+- **Docs**: `docs/performance_analysis.md`.
+
+### Changed
+- **Agents Structure**: Flattened `agents/` directory by removing all categorical prefixes (e.g., `role--`, `mkt--`, `front--`) for cleaner organization.
+- **Workflows**: Enhanced `youtube-skill-mining.md` to utilize the new Javascript extraction components.
+
+**Author**: Antigravity/Jules (Agents)
+
+---
+
 ## [2026-05-24] - Everything Claude Code Integration
 
 ### Added

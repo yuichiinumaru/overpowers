@@ -1,0 +1,122 @@
+{
+    "mcp": {
+        "hyperbrowser": {
+            "command": "npx",
+            "args": [
+                "--yes",
+                "hyperbrowser-mcp"
+            ],
+            "env": {
+                "HYPERBROWSER_API_KEY": "hb_a914a2f6cbc7234db880516e16a3"
+            }
+        },
+        "genkit-mcp-server": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "genkit-cli@^1.28.0",
+                "mcp",
+                "--explicitProjectRoot",
+                "--no-update-notification",
+                "--non-interactive"
+            ],
+            "env": {}
+        },
+        "serena": {
+            "type": "local",
+            "command": [
+                "uvx",
+                "--from",
+                "git+https://github.com/oraios/serena",
+                "serena",
+                "start-mcp-server",
+                "--context",
+                "ide-assistant"
+            ],
+            "enabled": true
+        },
+        "vibe_check": {
+            "type": "local",
+            "command": [
+                "node",
+                "/home/sephiroth/.config/opencode/mcp/vibe-check/build/index.js"
+            ],
+            "environment": {
+                "GEMINI_API_KEY": "AIzaSyB4xwJHUA2L7UaeipPAhzfks3MZ5zWVuK4",
+                "MCP_TRANSPORT": "stdio"
+            },
+            "enabled": true
+        },
+        "memcord": {
+            "type": "local",
+            "command": [
+                "/home/sephiroth/.config/opencode/mcp/memcord/.venv/bin/python",
+                "-m",
+                "memcord.server"
+            ],
+            "environment": {
+                "PYTHONPATH": "/home/sephiroth/.config/opencode/mcp/memcord/src",
+                "MEMCORD_ENABLE_ADVANCED": "true"
+            },
+            "enabled": true
+        },
+        "semgrep": {
+            "type": "local",
+            "command": [
+                "node",
+                "/home/sephiroth/.config/opencode/mcp/semgrep/build/index.js"
+            ],
+            "environment": {
+                "PATH": "/usr/local/bin:/usr/bin:/bin:/home/sephiroth/.local/bin"
+            },
+            "enabled": true
+        },
+        "in_memoria": {
+            "type": "local",
+            "command": [
+                "node",
+                "/home/sephiroth/.config/opencode/mcp/in-memoria/dist/index.js",
+                "server"
+            ],
+            "enabled": true
+        },
+        "playwright_browser": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@playwright/mcp@latest"
+            ],
+            "enabled": true
+        },
+        "context7": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@upstash/context7-mcp"
+            ],
+            "environment": {
+                "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+            },
+            "enabled": true
+        },
+        "notebooklm": {
+            "type": "local",
+            "command": [
+                "uvx",
+                "--from",
+                "/home/sephiroth/.config/opencode/mcp/notebooklm-mcp-cli",
+                "notebooklm-mcp"
+            ],
+            "enabled": true
+        },
+        "desktop-commander": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@wonderwhy-er/desktop-commander-mcp"
+            ]
+        }
+    }
+}

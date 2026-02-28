@@ -58,23 +58,55 @@ echo ""
 # =============================================================================
 # Step 1: Choose platforms
 # =============================================================================
-echo -e "  ${BOLD}Which platforms do you want to install MCPs into?${NC}"
-echo ""
-echo -e "    ${GREEN}1)${NC} OpenCode       (${DIM}${OPENCODE_JSON}${NC})"
-echo -e "    ${GREEN}2)${NC} Antigravity    (${DIM}${ANTIGRAVITY_MCP}${NC})"
-echo -e "    ${GREEN}3)${NC} All platforms"
-echo -e "    ${GREEN}q)${NC} Quit"
-echo ""
-read -rp "  Choose [1/2/3/q]: " platform_choice
-
 declare -a PLATFORMS=()
-case "${platform_choice}" in
-    1) PLATFORMS=("opencode") ;;
-    2) PLATFORMS=("antigravity") ;;
-    3) PLATFORMS=("opencode" "antigravity") ;;
-    q|Q) echo "Bye!"; exit 0 ;;
-    *) echo "Invalid choice"; exit 1 ;;
-esac
+
+if [[ "${FAST_MODE:-0}" == "1" ]]; then
+    echo -e "  ${CYAN}Running in FAST MODE. Auto-selecting all platforms.${NC}"
+    PLATFORMS=("opencode" "antigravity")
+else
+    echo -e "  ${BOLD}Which platforms do you want to install MCPs into?${NC}"
+    echo ""
+    echo -e "    ${GREEN}1)${NC} OpenCode       (${DIM}${OPENCODE_JSON}${NC})"
+    echo -e "    ${GREEN}2)${NC} Antigravity    (${DIM}${ANTIGRAVITY_MCP}${NC})"
+    echo -e "    ${GREEN}3)${NC} All platforms"
+    echo -e "    ${GREEN}q)${NC} Quit"
+    echo ""
+    read -rp "  Choose [1/2/3/q]: " platform_choice
+
+    case "${platform_choice}" in
+        1) PLATFORMS=("opencode") ;;
+        2) PLATFORMS=("antigravity") ;;
+        3) PLATFORMS=("opencode" "antigravity") ;;
+        q|Q) echo "Bye!"; exit 0 ;;
+        *) echo "Invalid choice"; exit 1 ;;
+    esac
+fi
+
+# =============================================================================
+# Step 1.5: Scan user MCPs
+# =============================================================================
+if [[ "${FAST_MODE:-0}" == "1" ]]; then
+    echo -e "  ${CYAN}Fast mode: Auto-scanning user MCPs for merging.${NC}"
+    scan_choice="1"
+else
+    echo ""
+    echo -e "  ${BOLD}Do you want to scan your local configs to extract and standardize existing MCPs?${NC}"
+    echo -e "  This will merge your installed MCPs (OpenCode, Antigravity, Gemini) with ours."
+    echo ""
+    echo -e "    ${GREEN}1)${NC} Yes, scan and merge my existing MCPs"
+    echo -e "    ${GREEN}2)${NC} No, just install the repository's MCPs"
+    read -rp "  Choose [1/2]: " scan_choice
+fi
+
+if [[ "${scan_choice}" == "1" ]]; then
+    echo ""
+    echo -e "  ${CYAN}Scanning installed MCPs...${NC}"
+    if python3 "${SCRIPT_DIR}/extract-installed-mcps.py"; then
+        echo -e "  ${GREEN}[✓]${NC} Successfully extracted user MCPs and ENV variables."
+    else
+        echo -e "  ${YELLOW}[!]${NC} Scanning failed or encountered an error."
+    fi
+fi
 
 # =============================================================================
 # Step 2: Handle .env configuration
@@ -96,35 +128,48 @@ echo ""
 # Check if .env already exists
 if [[ -f "${CENTRAL_ENV}" ]]; then
     echo -e "  ${GREEN}[✓]${NC} .env already exists at ${CYAN}${CENTRAL_ENV}${NC}"
-    echo ""
-    echo -e "  Do you want to:"
-    echo -e "    ${GREEN}1)${NC} Keep existing values (just install MCPs)"
-    echo -e "    ${GREEN}2)${NC} Re-enter values now (update .env interactively)"
-    read -rp "  Choose [1/2]: " env_choice
+    
+    if [[ "${FAST_MODE:-0}" == "1" ]]; then
+        env_choice="1"
+    else
+        echo ""
+        echo -e "  Do you want to:"
+        echo -e "    ${GREEN}1)${NC} Keep existing values (just install MCPs)"
+        echo -e "    ${GREEN}2)${NC} Re-enter values now (update .env interactively)"
+        read -rp "  Choose [1/2]: " env_choice
+    fi
 else
     echo -e "  ${YELLOW}[!]${NC} No .env found. Let's set one up."
-    echo ""
-    echo -e "  Do you want to:"
-    echo -e "    ${GREEN}1)${NC} Enter API keys and paths now (interactive)"
-    echo -e "    ${GREEN}2)${NC} Skip — I'll fill them in manually later"
-    read -rp "  Choose [1/2]: " env_choice
-
-    if [[ "${env_choice}" == "2" ]]; then
-        # Copy template
+    
+    if [[ "${FAST_MODE:-0}" == "1" ]]; then
         cp "${ENV_TEMPLATE}" "${CENTRAL_ENV}"
         echo -e "  ${GREEN}[✓]${NC} Template copied to ${CYAN}${CENTRAL_ENV}${NC}"
-        echo -e "  ${YELLOW}[!]${NC} Remember to edit it with your real values before using MCPs!"
-        env_choice="1"  # skip the interactive section
+        env_choice="1"
+    else
+        echo ""
+        echo -e "  Do you want to:"
+        echo -e "    ${GREEN}1)${NC} Enter API keys and paths now (interactive)"
+        echo -e "    ${GREEN}2)${NC} Skip — I'll fill them in manually later"
+        read -rp "  Choose [1/2]: " env_choice
+
+        if [[ "${env_choice}" == "2" ]]; then
+            # Copy template
+            cp "${ENV_TEMPLATE}" "${CENTRAL_ENV}"
+            echo -e "  ${GREEN}[✓]${NC} Template copied to ${CYAN}${CENTRAL_ENV}${NC}"
+            echo -e "  ${YELLOW}[!]${NC} Remember to edit it with your real values before using MCPs!"
+            env_choice="1"  # skip the interactive section
+        fi
     fi
 fi
 
-if [[ "${env_choice}" == "2" || ( ! -f "${CENTRAL_ENV}" && "${env_choice}" == "1" ) ]]; then
+if [[ "${FAST_MODE:-0}" == "0" && ( "${env_choice}" == "2" || ( ! -f "${CENTRAL_ENV}" && "${env_choice}" == "1" ) ) ]]; then
     echo ""
     echo -e "  ${BOLD}Enter your values (press Enter to keep default/empty):${NC}"
     echo ""
 
     # Read defaults from template
     declare -A ENV_DEFAULTS=()
+    declare -a ALL_KEYS=()
     if [[ -f "${ENV_TEMPLATE}" ]]; then
         while IFS= read -r line; do
             [[ "${line}" =~ ^#.*$ || -z "${line}" ]] && continue
@@ -132,16 +177,12 @@ if [[ "${env_choice}" == "2" || ( ! -f "${CENTRAL_ENV}" && "${env_choice}" == "1
             val="${line#*=}"
             val="${val//\'/}"
             ENV_DEFAULTS["${key}"]="${val}"
+            ALL_KEYS+=("${key}")
         done < "${ENV_TEMPLATE}"
     fi
 
     declare -A ENV_VALUES=()
-    for key in GEMINI_API_KEY HYPERBROWSER_API_KEY CONTEXT7_API_KEY \
-               VIBE_CHECK_PATH HYPERTOOL_MCP_CONFIG_PATH \
-               MEMCORD_PYTHON_PATH MEMCORD_SRC_PATH \
-               SEMGREP_PATH SEMGREP_SYSTEM_PATH \
-               IN_MEMORIA_PATH NOTEBOOKLM_PATH; do
-
+    for key in "${ALL_KEYS[@]}"; do
         default="${ENV_DEFAULTS[${key}]:-}"
         if [[ "${key}" == *"API_KEY"* ]]; then
             prompt_label="${YELLOW}${key}${NC}"
@@ -170,16 +211,7 @@ if [[ "${env_choice}" == "2" || ( ! -f "${CENTRAL_ENV}" && "${env_choice}" == "1
         echo "# Generated by install-mcps.sh on $(date +%Y-%m-%d)"
         echo "# ============================================================================="
         echo ""
-        echo "# --- API Keys ---"
-        for key in GEMINI_API_KEY HYPERBROWSER_API_KEY CONTEXT7_API_KEY; do
-            echo "${key}='${ENV_VALUES[${key}]:-}'"
-        done
-        echo ""
-        echo "# --- MCP Server Paths ---"
-        for key in VIBE_CHECK_PATH HYPERTOOL_MCP_CONFIG_PATH \
-                   MEMCORD_PYTHON_PATH MEMCORD_SRC_PATH \
-                   SEMGREP_PATH SEMGREP_SYSTEM_PATH \
-                   IN_MEMORIA_PATH NOTEBOOKLM_PATH; do
+        for key in "${ALL_KEYS[@]}"; do
             echo "${key}='${ENV_VALUES[${key}]:-}'"
         done
     } > "${CENTRAL_ENV}"
@@ -230,7 +262,7 @@ install_opencode() {
     fi
 
     python3 - "${EXAMPLE_JSON}" "${OPENCODE_JSON}" << 'PYEOF'
-import json, sys
+import json, sys, os
 
 with open(sys.argv[1]) as f:
     example = json.load(f)
@@ -238,6 +270,15 @@ with open(sys.argv[2]) as f:
     target = json.load(f)
 
 src_mcps = example.get("mcp", {})
+
+extracted_path = os.path.join(os.path.dirname(sys.argv[1]), "extracted_user_mcps.json")
+if os.path.exists(extracted_path):
+    with open(extracted_path) as f:
+        user_mcps = json.load(f).get("mcp", {})
+        for name, config in user_mcps.items():
+            if name not in src_mcps:
+                src_mcps[name] = config
+
 tgt_mcps = target.get("mcp", {})
 
 for name, config in src_mcps.items():
@@ -275,6 +316,16 @@ with open(sys.argv[1]) as f:
 with open(sys.argv[2]) as f:
     target = json.load(f)
 
+src_mcps = example.get("mcp", {})
+
+extracted_path = os.path.join(os.path.dirname(sys.argv[1]), "extracted_user_mcps.json")
+if os.path.exists(extracted_path):
+    with open(extracted_path) as f:
+        user_mcps = json.load(f).get("mcp", {})
+        for name, config in user_mcps.items():
+            if name not in src_mcps:
+                src_mcps[name] = config
+
 # Load .env for resolving {env:VAR}
 env_vals = {}
 env_path = sys.argv[3]
@@ -294,7 +345,6 @@ def resolve(val):
         return env_vals.get(m.group(1), m.group(0))
     return re.sub(r'\{env:(\w+)\}', repl, str(val))
 
-src_mcps = example.get("mcp", {})
 tgt_mcps = target.get("mcpServers", {})
 
 for name, config in src_mcps.items():

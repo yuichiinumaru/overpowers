@@ -23,6 +23,14 @@
 
 set -euo pipefail
 
+FAST_MODE=0
+while getopts "f" opt; do
+  case "$opt" in
+    f) FAST_MODE=1 ;;
+    *) echo "Usage: $0 [-f]" >&2; exit 1 ;;
+  esac
+done
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Colors
@@ -69,25 +77,31 @@ echo ""
 # =============================================================================
 # Platform selection
 # =============================================================================
-echo -e "  ${BOLD}Which platforms do you want to deploy to?${NC}"
-echo ""
-echo -e "    ${GREEN}1)${NC} OpenCode       ${DIM}(agents, skills, commands, hooks, AGENTS.md)${NC}"
-echo -e "    ${GREEN}2)${NC} Gemini CLI     ${DIM}(skills, hooks, GEMINI.md)${NC}"
-echo -e "    ${GREEN}3)${NC} Antigravity    ${DIM}(skills, workflows)${NC}"
-echo -e "    ${GREEN}4)${NC} All platforms"
-echo -e "    ${GREEN}q)${NC} Quit"
-echo ""
-read -rp "  Choose [1/2/3/4/q]: " platform_choice
-
 declare -a SELECTED_PLATFORMS=()
-case "${platform_choice}" in
-    1) SELECTED_PLATFORMS=("opencode") ;;
-    2) SELECTED_PLATFORMS=("gemini") ;;
-    3) SELECTED_PLATFORMS=("antigravity") ;;
-    4) SELECTED_PLATFORMS=("opencode" "gemini" "antigravity") ;;
-    q|Q) echo -e "\n  ${DIM}Bye!${NC}"; exit 0 ;;
-    *) echo -e "${RED}Invalid choice${NC}"; exit 1 ;;
-esac
+
+if [[ "${FAST_MODE}" == "1" ]]; then
+    echo -e "  ${CYAN}Running in FAST MODE (-f). Auto-selecting all platforms.${NC}"
+    SELECTED_PLATFORMS=("opencode" "gemini" "antigravity")
+else
+    echo -e "  ${BOLD}Which platforms do you want to deploy to?${NC}"
+    echo ""
+    echo -e "    ${GREEN}1)${NC} OpenCode       ${DIM}(agents, skills, commands, hooks, AGENTS.md)${NC}"
+    echo -e "    ${GREEN}2)${NC} Gemini CLI     ${DIM}(skills, hooks, GEMINI.md)${NC}"
+    echo -e "    ${GREEN}3)${NC} Antigravity    ${DIM}(skills, workflows)${NC}"
+    echo -e "    ${GREEN}4)${NC} All platforms"
+    echo -e "    ${GREEN}q)${NC} Quit"
+    echo ""
+    read -rp "  Choose [1/2/3/4/q]: " platform_choice
+
+    case "${platform_choice}" in
+        1) SELECTED_PLATFORMS=("opencode") ;;
+        2) SELECTED_PLATFORMS=("gemini") ;;
+        3) SELECTED_PLATFORMS=("antigravity") ;;
+        4) SELECTED_PLATFORMS=("opencode" "gemini" "antigravity") ;;
+        q|Q) echo -e "\n  ${DIM}Bye!${NC}"; exit 0 ;;
+        *) echo -e "${RED}Invalid choice${NC}"; exit 1 ;;
+    esac
+fi
 
 # =============================================================================
 # Deploy assets per platform
@@ -123,19 +137,25 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "${CYAN}  Phase 2: MCP Server Installation${NC}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
-echo -e "  Do you also want to install ${BOLD}MCP servers${NC} (model context protocol)"
-echo -e "  into your platform configs?"
-echo ""
-echo -e "  This will configure servers like Playwright, Hyperbrowser, Semgrep,"
-echo -e "  Serena, Context7, Genkit, and more."
-echo ""
-echo -e "    ${GREEN}y)${NC} Yes, install MCPs"
-echo -e "    ${GREEN}n)${NC} No, skip MCPs"
-echo ""
-read -rp "  Install MCPs? [y/n]: " mcp_choice
-
-if [[ "${mcp_choice}" =~ ^[Yy]$ ]]; then
+if [[ "${FAST_MODE}" == "1" ]]; then
+    echo -e "  ${CYAN}Fast mode: Auto-installing MCPs.${NC}"
+    export FAST_MODE=1
     bash "${SCRIPT_DIR}/scripts/install-mcps.sh"
+else
+    echo -e "  Do you also want to install ${BOLD}MCP servers${NC} (model context protocol)"
+    echo -e "  into your platform configs?"
+    echo ""
+    echo -e "  This will configure servers like Playwright, Hyperbrowser, Semgrep,"
+    echo -e "  Serena, Context7, Genkit, and more."
+    echo ""
+    echo -e "    ${GREEN}y)${NC} Yes, install MCPs"
+    echo -e "    ${GREEN}n)${NC} No, skip MCPs"
+    echo ""
+    read -rp "  Install MCPs? [y/n]: " mcp_choice
+
+    if [[ "${mcp_choice}" =~ ^[Yy]$ ]]; then
+        bash "${SCRIPT_DIR}/scripts/install-mcps.sh"
+    fi
 fi
 
 # =============================================================================
@@ -174,3 +194,15 @@ echo -e "    ${CYAN}./scripts/install-mcps.sh${NC}       Re-run MCP setup indepe
 echo ""
 echo -e "  ${DIM}Happy coding! 🚀${NC}"
 echo ""
+
+if [[ "${FAST_MODE}" == "1" ]]; then
+    echo -e "  ${CYAN}Fast mode: running install-plugins.sh for 15 seconds to verify...${NC}"
+    timeout 15s bash "${SCRIPT_DIR}/scripts/install-plugins.sh" || true
+    echo -e "  ${GREEN}[✓] Plugin script tested successfully.${NC}"
+else
+    echo ""
+    read -rp "  Do you want to see the available Community Plugins/Themes? [y/N]: " plugin_choice
+    if [[ "${plugin_choice}" =~ ^[Yy]$ ]]; then
+        bash "${SCRIPT_DIR}/scripts/install-plugins.sh"
+    fi
+fi

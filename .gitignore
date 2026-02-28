@@ -3,15 +3,16 @@
 # Local State & Caches
 .beads/
 .codemap/
-.jules/pending/
-.jules/harvested/
-.jules/triage/
++.jules/
 
-# Logs
+# Log files
 *.log
-logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.diff
 
-# Dependencies
+# OS generated files
 node_modules/
 bun.lock*
 pnpm-lock.yaml
@@ -24,7 +25,6 @@ pnpm-lock.yaml
 # OS Files
 .DS_Store
 Thumbs.db
-references/
 node_modules/
 dist/
 coverage/

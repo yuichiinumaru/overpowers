@@ -30,16 +30,12 @@
                 "MCP_TRANSPORT": "stdio"
             }
         },
-        "hypertool": {
+        "desktop-commander": {
             "type": "local",
             "command": [
                 "npx",
                 "-y",
-                "@toolprint/hypertool-mcp@latest",
-                "mcp",
-                "run",
-                "--mcp-config",
-                "{env:HYPERTOOL_MCP_CONFIG_PATH}"
+                "@wonderwhy-er/desktop-commander-mcp"
             ],
             "enabled": true
         },

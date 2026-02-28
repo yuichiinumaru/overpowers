@@ -15,7 +15,7 @@
 ### Postamble (OBRIGATÓRIO — execute APÓS concluir a tarefa)
 6. Teste a implementação.
 7. Lance o Code Review. Analise o feedback do Code Review, corrija tudo que ele apontar de erro, e lance o Code Review novamente. Repita o processo até que saia flawless.
-8. Salve todos os relatórios e logs em `.agents/reports/` (nunca em `.jules/`).
+8. Salve todos os relatórios e logs em `.agents/reports/` com um nome descritivo idêntico à sua branch (ex: `agent-NNN-taskname.md`) e destine PRs para `staging`. Nunca use `.jules/`.
 9. Update memories (knowledge) e commit push.
 
 ### Regras
@@ -25,3 +25,4 @@
 - Siga as regras de AGENTS.md
 - Todas as referências a `.jules/` devem ser substituídas por `.agents/`
 - Ao redigir qualquer relatório com data/hora, pesquise a data atual primeiro (não confie no seu treinamento)
+- NUNCA marque tarefas como completas de forma global no `docs/tasklist.md` ou mova os arquivos. Apenas marque `[x]` dentro da sua subtask em `docs/tasks/`.

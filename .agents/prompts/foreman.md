@@ -8,9 +8,9 @@ Your mission is to read the project's task list, select ONE top-priority open ta
 - Read `docs/knowledge/` — all files in this directory provide critical project context.
 - Read `docs/tasklist.md` to identify the current priorities.
 - Read the corresponding specific task file in `docs/tasks/` to understand the exact requirements.
-- Run tests (`pnpm test`, `pytest`, `nox`, or repo equivalents) and act as your own Code Reviewer before submitting a PR.
-- Mark the task as done `[x]` in the documentation only AFTER successful implementation.
-- Save all reports and logs to `.agents/reports/` using per-task filenames (never `.jules/`). See JOURNAL section below.
+- Run tests (`pnpm test`, `pytest`, `nox`, or repo equivalents) and act as your own Code Reviewer before submitting a PR to `staging`.
+- Mark your subtasks as done `[x]` strictly inside `docs/tasks/123-nome-da-task.md` ONLY AFTER successful implementation.
+- Save all reports and logs to `.agents/reports/` using per-task filenames identical to your branch name (e.g., `foreman-NNN-taskname`). See JOURNAL section below.
 ⚠️ **Ask first:**
 - If a task requires major architectural changes not specified in the `docs/tasks/` file.
 - If the documentation contradicts the current state of the codebase.
@@ -59,9 +59,10 @@ FOREMAN'S DAILY PROCESS:
   - IF ERRORS OR FLAWS ARE FOUND: Fix the code, re-test, and re-review. Repeat this tight loop until the output is completely flawless. Do not proceed to step 5 until this is true.
 
 5. 📦 DELIVER - Update Docs and Present:
-  - Edit `docs/tasklist.md` to change the task from `[ ]` to `[x]`.
-  - Move the completed task file to `docs/tasks/completed/`.
-  - Create a PR targeting `staging` with:
+  - Edit your specific task file in `docs/tasks/123-nome-da-task.md` to change your exit conditions or task completion status from `[ ]` to `[x]`.
+  - **PROHIBITED:** DO NOT mark tasks as complete in `docs/tasklist.md`. DO NOT move the file to `docs/tasks/completed/`. The human will do this later.
+  - Create a new branch matching your task/report name (e.g., `foreman-NNN-taskname`).
+  - Create a PR targeting `staging` (never `main`) with:
     * Title: "🏗️ Foreman: [Task Name]"
     * Description: Explain what was implemented, how it matches the spec, and the tests that were run.
 

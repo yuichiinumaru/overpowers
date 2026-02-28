@@ -1,5 +1,33 @@
 # overpowers Continuity Ledger
 
+## Session: 2026-02-28 - Scripts Cleanup & Docs Reorganization
+**Operator**: Antigravity (Agent)
+**Focus**: Deployment script upgrades, MCP extraction tooling, Jules prompt conventions, and docs/tasks scaffolding.
+
+### 🟢 Global State
+- **Install**: 🟢 `install.sh -f` fast mode operational. Plugin prompt added.
+- **MCPs**: 🟢 `extract-installed-mcps.py` scans user configs and auto-appends to `.env.example`.
+- **MCPs**: 🟢 `install-mcps.sh` dynamically merges user MCPs with repo MCPs.
+- **Config**: 🟢 `desktop-commander` added; `hypertool` moved to optional.
+- **Docs**: 🟢 `docs/tasklist.md` + 3 task files created from planning backlog.
+- **Conventions**: 🟢 Jules agents now prohibited from editing `tasklist.md` or moving completed tasks.
+
+### 🔄 Active Contexts
+| Component | Status | Notes |
+|:----------|:-------|:------|
+| **install.sh** | 🟢 Updated | Fast mode `-f`, plugin prompt |
+| **install-mcps.sh** | 🟢 Updated | Dynamic ENVs, user scan, FAST_MODE |
+| **foreman.md** | 🟢 Updated | Tasklist prohibition, branch naming |
+| **common.md** | 🟢 Updated | Report naming, staging PRs |
+| **docs/tasks/** | 🟢 Created | 3 task files + template |
+
+### ⏭️ Next Actions
+1. **Jules**: Dispatch `sort_scripts.md` prompt to reorganize `scripts/` directory.
+2. **Review**: Audit remaining prompts in `.agents/prompts/` for consistency.
+3. **Populate**: Add more tasks from `docs/tasks/planning/` to `docs/tasklist.md`.
+
+---
+
 ## Session: 2026-02-28 - Mining & Benchmarking Integration
 **Operator**: Antigravity (Agent)
 **Focus**: Safe extraction and integration of performance benchmarking and youtube mining enhancements.
