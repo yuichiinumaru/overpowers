@@ -1,0 +1,28 @@
+{
+  "name": "knowledge-mcp",
+  "version": "1.0.0",
+  "description": "MCP server to interact with the project's docs folder",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node --esm src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "knowledge",
+    "docs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.27.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "type": "module"
+}

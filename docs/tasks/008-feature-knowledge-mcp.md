@@ -1,47 +1,43 @@
-# Task: Implement Local Knowledge MCP Server
+# Task: 008-feature-knowledge-mcp
 
 ## Objective
 
-Create a local MCP server (`knowledge-mcp`) within the `services/` directory to expose the Cognitive Fusion Architecture (CFA) Knowledge Base files located in `.agents/knowledge/`. This enables agents to query and update operational rules using "Progressive Disclosure", saving context window while retaining access to the full neuro-symbolic governance cluster.
+Create a Model Context Protocol (MCP) server for the project's Knowledge base.
+This will allow any AI Assistant using MCP to interact with the project's knowledge base.
 
 ## Test Requirements
 
-- The MCP server must successfully start and register its tools.
-- `list_cfa_knowledge` must return the list of available JSON files in `.agents/knowledge/` without returning their full contents.
-- `get_cfa_knowledge` must return the exact JSON content of a requested KB file.
-- `create_cfa_knowledge` and `update_cfa_knowledge` must function correctly and enforce loading of all existing KBs prior to execution (or require them in the context).
+Automated CLI verification or integration test script outputs.
+- Test that the MCP server starts correctly and can handle requests.
+- Verify basic file reading and searching capabilities over the docs directory.
 
 ## Exit Conditions (GDD/TDD)
 
-- [ ] `services/knowledge-mcp/` directory created with a valid initialized project (TypeScript or Python).
-- [ ] Tools `list_cfa_knowledge`, `get_cfa_knowledge`, `create_cfa_knowledge`, and `update_cfa_knowledge` implemented.
-- [ ] Safe read/write operations mapping explicitly to `.agents/knowledge/`.
-- [ ] Instructions injected into the server explicitly telling the LLM that `create` and `update` require loading the full KB stack into context to operate as a "Synergy CFA Agent Full Power".
-- [ ] MCP is added to the `opencode-example.json` under `mcpServers`.
+- [x] Create a new package or script for the knowledge MCP server.
+- [x] Implement tools for reading knowledge documents and searching the knowledge base.
+- [x] Ensure the MCP server connects and can be used by an MCP client.
+- [x] Update documentation to show how to configure and use the Knowledge MCP server.
 
 ## Details
 
 ### What
 
-Implement a robust, lightweight MCP server to bridge the file system rules with agent tools. 
-
-Subtasks:
-- [ ] Scaffold the MCP server in `services/knowledge-mcp`.
-- [ ] Implement `list_cfa_knowledge()` to return filenames and summaries (from metadata if needed) of `.agents/knowledge/*.json`.
-- [ ] Implement `get_cfa_knowledge(kb_id)` to load specific rules into context.
-- [ ] Implement `create_cfa_knowledge(filename, data)` and `update_cfa_knowledge(filename, data)`. These tools' descriptions **must explicitly enforce** that the agent must load all existing rules into its context *before* invoking this tool, to ensure holistic architectural harmony.
+Implement an MCP server specifically designed to query and retrieve information from the `docs/` directory.
+It should support reading files, listing files, and searching file content.
 
 ### Where
 
-- `services/knowledge-mcp/`
-- `opencode-example.json` (to register the server)
+A new directory like `packages/knowledge-mcp/` or as a script in `scripts/` depending on complexity.
 
 ### How
 
-Use either Python (`mcp` / `fastmcp`) or TypeScript (`@modelcontextprotocol/sdk`). Python might be faster to prototype, but follow the repository's dominant backend language for services if one exists. 
-Ensure path resolution safely targets the root `.agents/knowledge/` folder.
-Make sure the tool descriptions explicitly declare the requirement of loading the full KB context for mutations.
+Use the official MCP SDK (e.g., Python SDK or TypeScript SDK).
+Implement tools like:
+- `read_knowledge_file`: Read the content of a specific file in the `docs/` folder.
+- `search_knowledge`: Search for a specific string or pattern in the knowledge base.
+- `list_knowledge_files`: List available files in a specific knowledge category.
 
 ### Why
 
-JSON KBs are token-heavy if pre-loaded into every prompt. Exposing them via MCP allows agents to dynamically pull only the operational rules they need for the current workflow stage (routing, reasoning, validation). Providing `create` and `update` tools ensures the system can autonomously evolve its own ruleset when operating at high cognitive capacity.
+The knowledge base contains crucial information for agents and users. Providing an MCP interface allows seamless integration with modern AI tools that support the Model Context Protocol, making the project's knowledge more accessible.
+
