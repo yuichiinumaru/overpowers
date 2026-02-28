@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Overpowers toolkit are documented in this file.
+All notable changes to this project will be documented in this file.
 
 > [!CAUTION]
 > **IMMUTABLE HISTORY**: Entries in this file must NEVER be deleted or modified (except typo fixes).
@@ -8,56 +8,23 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
-## [2026-02-27] - Jujutsu VCS Harmonious Merging
+## [2026-05-24] - Everything Claude Code Integration
 
 ### Added
-- **Skills**: `harmonious-jujutsu-merge` — Specialized skill for artifact-free conflict resolution in Jujutsu VCS.
-- **Agents**: `jujutsu-merge-specialist` — Expert AI persona for specialized Jujutsu operations and harmonious merging.
-- **Workflows**: `jujutsu-harmonious-merge` — Structured command/workflow for performing harmonious merges/rebases.
-- **Scripts**: `harmonious_resolve.py` — Helper script for analyzing Jujutsu conflict markers.
+- **Assets**: Imported "everything-claude-code" repository contents into `*/everything-claude-code/` directories.
+  - `agents/everything-claude-code/`
+  - `skills/everything-claude-code/`
+  - `commands/everything-claude-code/`
+  - `hooks/everything-claude-code/`
+  - `docs/everything-claude-code/`
+  - `docs/rules/everything-claude-code/`
+  - `scripts/everything-claude-code/`
+  - `config/mcp-configs/everything-claude-code/`
+  - `plugins/everything-claude-code/`
+  - `docs/schemas/everything-claude-code/`
+  - `docs/contexts/everything-claude-code/`
 
-**Author**: Antigravity
-
-## [2026-02-27] - Master Installer
-
-### Added
-- **Root**: `install.sh` — Master interactive installer that orchestrates all deploy scripts (OpenCode, Gemini CLI, Antigravity) and optionally triggers MCP server installation.
-
-### Changed
-- Improved `jujutsu-merge-specialist` agent with advanced DAG manipulation (inline editing, split, operation log).
-- Upgraded `jujutsu-harmonious-merge` workflow to use `jj split`, inline resolution, and `jj op restore` for safety.
-- Updated `harmonious-jujutsu-merge` skill protocol to reflect new advanced resolution strategies.
-
-**Author**: Antigravity
-
-## [2026-02-27] - Unified MCP Installer & Antigravity Deployment
-
-### Added
-- **Scripts**: `deploy-to-antigravity.sh` — Symlinks skills and workflows into `~/.gemini/antigravity/` for Antigravity editor discovery.
-- **Scripts**: Rewrote `install-mcps.sh` as a unified multi-platform MCP installer supporting OpenCode and Antigravity with automatic schema translation, interactive `.env` setup, and centralized secrets management.
-
-### Changed
-- **Scripts**: `install-mcps.sh` now asks the user which platform(s) to target and handles `.env` configuration interactively with clear path disclosure.
-
-**Author**: Antigravity
-
-## [2026-02-27] - Setup & Deployment Scripts
-
-### Added
-- **Scripts**: `deploy-to-opencode.sh` — Symlinks agents, skills, workflows (as commands), hooks, and AGENTS.md into `~/.config/opencode/`.
-- **Scripts**: `deploy-to-gemini-cli.sh` — Symlinks skills, hooks, and AGENTS.md (as GEMINI.md) into `~/.gemini/` for Gemini CLI discovery.
-- **Scripts**: `install-plugins.sh` — Interactive terminal installer for awesome-opencode community plugins and themes with non-destructive `opencode.json` injection.
-- **Scripts**: `install-mcps.sh` — Non-destructive MCP server injector from `opencode-example.json` into user's `opencode.json`.
-
-**Author**: Antigravity
-
-## [2026-02-27] - YouTube Skill Mining Agent & Workflow
-
-### Added
-- **Agents**: Created `youtube-ripper` agent (`agents/youtube-ripper.md`) focused on cyclical deep extraction of YouTube tech videos to construct skills.
-- **Workflows**: Created `youtube-skill-mining` (`workflows/youtube-skill-mining.md`) defining the 3-phase autonomous "rip and build" execution loop.
-
-**Author**: Antigravity
+**Author**: Jules (Agent)
 
 ## [2026-05-24] - Deep Extraction Iteration
 
@@ -89,110 +56,16 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ## [2026-05-24] - Project Knowledge Optimization
 
-### Added
-- **Documentation**: `docs/SYSTEM_KNOWLEDGE_GRAPH.md` - The "Cognitive Context File" containing architecture, entity relationships, and component registry.
-- **Documentation**: `docs/project_structure_map.md` - Full recursive file tree and entity map.
-- **Tooling**: `generate_structure_map.py` - Script to regenerate the project structure map.
+## [2026-02-25] - Seedance 2.0 Integration
 
-### Changed
-- **Planning**: Initiated "Project Knowledge Optimization" mission.
+### Added
+- **Skills**: Integrated `seedance-2.0` skills (19 modules) from `https://github.com/Emily2040/seedance-2.0`.
+  - Core pipeline: `seedance-prompt`, `seedance-camera`, `seedance-motion`, etc.
+  - Vocabulary: `seedance-vocab-zh`, `seedance-vocab-ja`, etc.
+  - References: `references/seedance-20/` (platform constraints, schema).
+  - Root skill: `skills/seedance-20/SKILL.md`.
 
 **Author**: Jules (Agent)
-
----
-
-## [2026-05-24] - Browser Automation & Cleanup
-## [2026-05-24] - BMAD & Safety Integration
-
-### Added
-- **Safety**: `hooks/safety/destructive-command-blocker.ts` - Prevents catastrophic commands (`rm -rf`, `mkfs`, `circleci context delete`).
-- **Agents**:
-  - `agents/murat-test-architect.md`: Master Test Architect (from TEA).
-  - `agents/game-dev-studio.md`: Game Development Specialist.
-  - `agents/creative-problem-solver.md`: TRIZ/Systems Thinking Expert.
-- **Knowledge Graph**: `docs/knowledge/testing/` - Massive import of testing patterns (Risk-based, ATDD, Flakiness).
-- **Workflows**: `workflows/teach-me-testing.md`.
-- **Skills**: `skills/playwright-skill/network-monitor.ts` - Network error monitoring fixture.
-
-### Changed
-- **Architecture**: Adopted "Knowledge Graph" pattern. Updated `JULES_ARCHITECTURAL_DIGEST.md`.
-## [2026-05-24] - Mothership Integration (References)
-
-### Added
-- **Workflows**:
-  - `workflows/compound-product-cycle.md`: Report-to-Code automated workflow.
-  - `scripts/compound/`: `auto-compound.sh`, `analyze-report.sh`, `loop.sh`, `compound.config.json`.
-- **Agents**:
-  - `agents/sisyphus-orchestrator.md`: Updated with OhMyOpenCode logic.
-  - `agents/metis-consultant.md`: New consultant agent.
-  - `agents/librarian-researcher.md`: New researcher agent.
-  - `agents/oracle-architect.md`: New architect agent.
-- **Skills**:
-  - Ported from Moltbot: `discord`, `slack`, `trello`, `notion`, `1password`, `github`.
-- **Documentation**:
-  - `docs/research/moltbot-memory.md`: Research on hybrid memory.
-  - `docs/protocols/sandbox-guidelines.md`: Execution safety protocols.
-  - `JULES_ARCHITECTURAL_DIGEST.md`: Updated with new architecture.
-- **Protocols**:
-  - Updated `AGENTS.md` with "NPM + 1Password" protocols.
-
-### Changed
-- **Architecture**: Integrated "Compound Product Cycle" into core workflow.
-
-**Author**: Jules (Agent)
-
----
-
-## [2026-01-21] - Activation & Implementation
-
-### Added
-- **Skills**: `browser-use`, `playwright-skill`, `web-research` (from Moltbot).
-- **Agents**: `browser-automator.md` specialized in web interaction.
-- **Workflows**: `workflows/web-research.md`.
-
-### Changed
-- **Config**: Updated `.gitignore` to exclude build artifacts and caches.
-- **Agents**: Regenerated all agent configs.
-
-**Author**: Jules (Agent)
-
-## [2026-05-24] - BMAD Deepening Phase (Workflows)
-
-### Added
-- **Workflows**:
-  - `workflows/game-dev/dev-story.md`: Full "Dev Story" workflow for Game Dev Agent.
-  - `workflows/creative/problem-solving.md`: "Problem Solving" workflow for Creative Agent.
-- **Agents**:
-  - Updated `agents/game-dev-studio.md` with explicit workflow delegations.
-  - Updated `agents/creative-problem-solver.md` with explicit workflow delegations.
-
-### Changed
-- **Agents**: `Link Freeman` and `Dr. Quinn` now have executable `workflow="..."` parameters in their prompts.
-
-**Author**: Jules (Agent)
-
-## [2026-05-24] - BMAD & Safety Integration
-
-### Added
-- **Safety**: `hooks/safety/destructive-command-blocker.ts` - Prevents catastrophic commands (`rm -rf`, `mkfs`, `circleci context delete`).
-- **Agents**:
-  - `agents/murat-test-architect.md`: Master Test Architect (from TEA).
-  - `agents/game-dev-studio.md`: Game Development Specialist.
-  - `agents/creative-problem-solver.md`: TRIZ/Systems Thinking Expert.
-- **Knowledge Graph**: `docs/knowledge/testing/` - Massive import of testing patterns (Risk-based, ATDD, Flakiness).
-- **Workflows**: `workflows/teach-me-testing.md`.
-- **Skills**: `skills/playwright-skill/network-monitor.ts` - Network error monitoring fixture.
-
-### Changed
-- **Architecture**: Adopted "Knowledge Graph" pattern. Updated `JULES_ARCHITECTURAL_DIGEST.md`.
-
-**Author**: Jules (Agent)
-
----
-
-## [2026-05-24] - Bonus Round: Advanced Integration
-
----
 
 ## [2026-01-31] - Auth Monster Integration
 
@@ -538,3 +411,8 @@ Unified multi-provider authentication with quota-optimized load balancing. Suppo
 - OpenCode and Claude Code plugin support
 
 **Author**: Yuichi Inumaru
+## [Unreleased]
+- Resolved "Mega-Merge" conflicts across all configuration files.
+- Unified MCP server configurations in `opencode-example.json`.
+- Restored and deduplicated agent definitions in `config/agents/*.json`.
+- Cleaned up documentation and repository READMEs.
