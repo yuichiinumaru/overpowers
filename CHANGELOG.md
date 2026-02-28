@@ -8,10 +8,25 @@ All notable changes to the Overpowers toolkit are documented in this file.
 
 ---
 
+## [2026-02-27] - Jujutsu VCS Harmonious Merging
+
+### Added
+- **Skills**: `harmonious-jujutsu-merge` — Specialized skill for artifact-free conflict resolution in Jujutsu VCS.
+- **Agents**: `jujutsu-merge-specialist` — Expert AI persona for specialized Jujutsu operations and harmonious merging.
+- **Workflows**: `jujutsu-harmonious-merge` — Structured command/workflow for performing harmonious merges/rebases.
+- **Scripts**: `harmonious_resolve.py` — Helper script for analyzing Jujutsu conflict markers.
+
+**Author**: Antigravity
+
 ## [2026-02-27] - Master Installer
 
 ### Added
 - **Root**: `install.sh` — Master interactive installer that orchestrates all deploy scripts (OpenCode, Gemini CLI, Antigravity) and optionally triggers MCP server installation.
+
+### Changed
+- Improved `jujutsu-merge-specialist` agent with advanced DAG manipulation (inline editing, split, operation log).
+- Upgraded `jujutsu-harmonious-merge` workflow to use `jj split`, inline resolution, and `jj op restore` for safety.
+- Updated `harmonious-jujutsu-merge` skill protocol to reflect new advanced resolution strategies.
 
 **Author**: Antigravity
 
