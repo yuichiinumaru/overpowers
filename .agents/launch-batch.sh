@@ -58,9 +58,9 @@ EOF
 )
 
     # Launch via Jules CLI
-    echo "$INSTRUCTION" | jules remote new \
+    jules remote new "$INSTRUCTION" \
         --repo "yuichiinumaru/overpowers" \
-        --session "-" 2>&1 | head -5
+        2>&1 | head -5
     
     echo "   ✅ Task ${TASK_NAME} dispatched."
     echo ""

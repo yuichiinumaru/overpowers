@@ -9,3 +9,4 @@ Este é o índice principal de tarefas do repositório Overpowers. Agentes Jules
 
 ## ✅ Tarefas Concluídas
 *(Movidas manualmente]*
+- [ ] Phase 9: Launch Knowledge MCP Task (008)
