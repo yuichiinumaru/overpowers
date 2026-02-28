@@ -1,49 +1,49 @@
 # Links dos Vídeos - Benji’s AI Playground
 
 ## Vídeos
-- https://www.youtube.com/watch?v=ho30R7W01I4
-- https://www.youtube.com/watch?v=nbhxqRu21js
-- https://www.youtube.com/watch?v=ZXzuMx-iv1M
-- https://www.youtube.com/watch?v=lMSaWNhJR6Q
-- https://www.youtube.com/watch?v=s7ppsl_LbzI
-- https://www.youtube.com/watch?v=1w_eWdAxfgE
-- https://www.youtube.com/watch?v=AR6JcdzbeW0
-- https://www.youtube.com/watch?v=MKQ2Ck9rGEs
-- https://www.youtube.com/watch?v=F9LFAeUbBIs&pp=0gcJCZEKAYcqIYzv
-- https://www.youtube.com/watch?v=JXgBe3twxbc
-- https://www.youtube.com/watch?v=AqyyLY_ajTQ
-- https://www.youtube.com/watch?v=Um9SeybiQ9Q
-- https://www.youtube.com/watch?v=k52Hilha11s
-- https://www.youtube.com/watch?v=wesiwFmDYbk
-- https://www.youtube.com/watch?v=G2JBqUHUbfQ
-- https://www.youtube.com/watch?v=RQAX_IrcgrM
-- https://www.youtube.com/watch?v=3lKK0PXe99w&pp=0gcJCZEKAYcqIYzv
-- https://www.youtube.com/watch?v=frv9YGRtWRQ
-- https://www.youtube.com/watch?v=GQQY6tt_Kpw
-- https://www.youtube.com/watch?v=mOf-fbLx0yI
-- https://www.youtube.com/watch?v=Of-91G2w6X4
-- https://www.youtube.com/watch?v=eZTdaLbzqL4
-- https://www.youtube.com/watch?v=4TJl7Iz2MCY
-- https://www.youtube.com/watch?v=S3PKN2xW0YA
-- https://www.youtube.com/watch?v=pr6VduZbe3M
-- https://www.youtube.com/watch?v=hYARwdBbCs4
-- https://www.youtube.com/watch?v=Z8Ova3M1HIU
-- https://www.youtube.com/watch?v=XGB4qBkCFSM
-- https://www.youtube.com/watch?v=KmYNxtLZQTU
-- https://www.youtube.com/watch?v=53QdhJcUjvQ&pp=0gcJCZEKAYcqIYzv
-- https://www.youtube.com/watch?v=hARIcsMMEUI
-- https://www.youtube.com/watch?v=jR-fMaPMYfE
-- https://www.youtube.com/watch?v=3mT7KnotPqk
-- https://www.youtube.com/watch?v=gik9jjAIYxE
-- https://www.youtube.com/watch?v=Dks3q5w7sdw
-- https://www.youtube.com/watch?v=Vjup3QGE-hg
-- https://www.youtube.com/watch?v=NcuUR7hrn-Q
-- https://www.youtube.com/watch?v=MQqEk2b2b-A
-- https://www.youtube.com/watch?v=lNRncdll5Rs
-- https://www.youtube.com/watch?v=5ik6tPs6Yq8
-- https://www.youtube.com/watch?v=0RcaU9F4Oo4
-- https://www.youtube.com/watch?v=VCc2_suVcZ4
-- https://www.youtube.com/watch?v=W6R8Ux0sDsU
+- [x] https://www.youtube.com/watch?v=ho30R7W01I4
+- [x] https://www.youtube.com/watch?v=nbhxqRu21js
+- [x] https://www.youtube.com/watch?v=ZXzuMx-iv1M
+- [x] https://www.youtube.com/watch?v=lMSaWNhJR6Q
+- [x] https://www.youtube.com/watch?v=s7ppsl_LbzI
+- [x] https://www.youtube.com/watch?v=1w_eWdAxfgE
+- [x] https://www.youtube.com/watch?v=AR6JcdzbeW0
+- [x] https://www.youtube.com/watch?v=MKQ2Ck9rGEs
+- [x] https://www.youtube.com/watch?v=F9LFAeUbBIs&pp=0gcJCZEKAYcqIYzv
+- [x] https://www.youtube.com/watch?v=JXgBe3twxbc
+- [x] https://www.youtube.com/watch?v=AqyyLY_ajTQ
+- [x] https://www.youtube.com/watch?v=Um9SeybiQ9Q
+- [x] https://www.youtube.com/watch?v=k52Hilha11s
+- [x] https://www.youtube.com/watch?v=wesiwFmDYbk
+- [x] https://www.youtube.com/watch?v=G2JBqUHUbfQ
+- [x] https://www.youtube.com/watch?v=RQAX_IrcgrM
+- [x] https://www.youtube.com/watch?v=3lKK0PXe99w&pp=0gcJCZEKAYcqIYzv
+- [x] https://www.youtube.com/watch?v=frv9YGRtWRQ
+- [x] https://www.youtube.com/watch?v=GQQY6tt_Kpw
+- [x] https://www.youtube.com/watch?v=mOf-fbLx0yI
+- [x] https://www.youtube.com/watch?v=Of-91G2w6X4
+- [x] https://www.youtube.com/watch?v=eZTdaLbzqL4
+- [x] https://www.youtube.com/watch?v=4TJl7Iz2MCY
+- [x] https://www.youtube.com/watch?v=S3PKN2xW0YA
+- [x] https://www.youtube.com/watch?v=pr6VduZbe3M
+- [x] https://www.youtube.com/watch?v=hYARwdBbCs4
+- [x] https://www.youtube.com/watch?v=Z8Ova3M1HIU
+- [x] https://www.youtube.com/watch?v=XGB4qBkCFSM
+- [x] https://www.youtube.com/watch?v=KmYNxtLZQTU
+- [x] https://www.youtube.com/watch?v=53QdhJcUjvQ&pp=0gcJCZEKAYcqIYzv
+- [x] https://www.youtube.com/watch?v=hARIcsMMEUI
+- [x] https://www.youtube.com/watch?v=jR-fMaPMYfE
+- [x] https://www.youtube.com/watch?v=3mT7KnotPqk
+- [x] https://www.youtube.com/watch?v=gik9jjAIYxE
+- [x] https://www.youtube.com/watch?v=Dks3q5w7sdw
+- [x] https://www.youtube.com/watch?v=Vjup3QGE-hg
+- [x] https://www.youtube.com/watch?v=NcuUR7hrn-Q
+- [x] https://www.youtube.com/watch?v=MQqEk2b2b-A
+- [x] https://www.youtube.com/watch?v=lNRncdll5Rs
+- [x] https://www.youtube.com/watch?v=5ik6tPs6Yq8
+- [x] https://www.youtube.com/watch?v=0RcaU9F4Oo4
+- [x] https://www.youtube.com/watch?v=VCc2_suVcZ4
+- [x] https://www.youtube.com/watch?v=W6R8Ux0sDsU
 - https://www.youtube.com/watch?v=9dE7wub5ALs
 - https://www.youtube.com/watch?v=43lh-3kV3bs&pp=0gcJCZEKAYcqIYzv
 - https://www.youtube.com/watch?v=3PYdoD_UMdE
