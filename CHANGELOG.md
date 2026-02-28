@@ -471,3 +471,15 @@ Unified multi-provider authentication with quota-optimized load balancing. Suppo
 - Unified MCP server configurations in `opencode-example.json`.
 - Restored and deduplicated agent definitions in `config/agents/*.json`.
 - Cleaned up documentation and repository READMEs.
+
+## [2026-02-28] - Fernando Brasão YouTube Mining (Batch 1)
+
+### Added
+- Added `.agents/reports/youtube-ripper-fernando-brasao.md` for task tracking.
+- Added `docs/youtube/fernando-brasao.md` containing 600 extracted URLs.
+- Added `.agents/reports/youtube-mining-notes.md` with notes from Batch 1 evaluation.
+
+### Changed
+- Marked the first 4 URLs as processed in `docs/youtube/fernando-brasao.md`.
+
+**Author**: youtube-ripper
