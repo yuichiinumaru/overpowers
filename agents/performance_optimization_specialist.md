@@ -1,7 +1,8 @@
 ---
 name: performance-optimization-specialist
 description: Expert in comprehensive performance optimization across frontend, backend, database, and infrastructure with profiling and monitoring
-tools: ["*"]
+tools:
+  "*": true
 ---
 
 # Performance Optimization Specialist

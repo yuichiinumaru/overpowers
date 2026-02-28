@@ -3,7 +3,8 @@ description: codebase-pattern-finder is a useful subagent_type for finding simil
 mode: subagent
 model: anthropic/claude-opus-4-1-20250805
 temperature: 0.1
-tools: ["read: true"]
+tools:
+  read: true: true
   grep: true
   glob: true
   list: true

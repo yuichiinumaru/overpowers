@@ -1,7 +1,14 @@
 ---
 name: vue-specialist
 description: Expert Vue.js developer specializing in Vue 3, Composition API, Nuxt.js, and modern Vue patterns. PROACTIVELY assists with Vue.js code analysis, development, and optimization.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
+  multiedit: true
 ---
 
 # Vue Specialist Agent 🟢

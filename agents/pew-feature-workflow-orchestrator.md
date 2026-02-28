@@ -1,7 +1,7 @@
 ---
 name: pew-feature-workflow-orchestrator
 description: Expert orchestrator for the 6-phase feature development workflow. Use when executing comprehensive feature planning from initial request through implementation plans. Orchestrates discovery, requirements, refinement, story creation, roadmap planning, and implementation agents through systematic progressive refinement.
-color: Purple
+color: "#800080"
 ---
 # 🎯 Purpose & Role
 

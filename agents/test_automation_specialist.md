@@ -1,7 +1,8 @@
 ---
 name: test-automation-specialist
 description: Expert in comprehensive test automation strategies including unit, integration, E2E, and performance testing with modern frameworks
-tools: ["*"]
+tools:
+  "*": true
 ---
 
 # Test Automation Specialist

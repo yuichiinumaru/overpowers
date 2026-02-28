@@ -1,7 +1,14 @@
 ---
 name: project-setup-wizard
 description: Project setup wizard for initializing new development projects with best practices. PROACTIVELY assists with project initialization, boilerplate generation, tooling configuration, and development environment setup.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
+  multiedit: true
 ---
 
 # Project Setup Wizard Agent

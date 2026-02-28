@@ -2,7 +2,11 @@
 name: seo-auditor
 description: SEO audit specialist. Diagnoses technical, on-page, and off-page SEO issues. Provides actionable fixes for rankings, indexation, and site speed. Use PROACTIVELY when users mention "SEO", "ranking", "organic traffic", or "audit".
 category: marketing
-tools: ["Read", "Grep", "Glob", "Bash"]
+tools:
+  read: true
+  grep: true
+  glob: true
+  bash: true
 model: opus
 ---
 

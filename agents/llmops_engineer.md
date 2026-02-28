@@ -4,7 +4,15 @@
 ---
 name: llmops-engineer
 description: Expert in operationalizing LLMs in production environments. PROACTIVELY assists with model deployment, monitoring, scaling, and MLOps workflows for language models.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit", "Task"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
+  multiedit: true
+  task: true
 ---
 ```
 

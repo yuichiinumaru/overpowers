@@ -2,7 +2,8 @@
 description: Strategic ideation partner that breaks frames, expands solution spaces, and surfaces non-obvious strategic options.
 mode: subagent
 temperature: 0.8
-tools: ["write: false"]
+tools:
+  write: false: true
   edit: false
   bash: false
   patch: false

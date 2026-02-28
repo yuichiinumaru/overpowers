@@ -2,7 +2,8 @@
 description: Reviews code for quality, correctness, and security
 mode: subagent
 temperature: 0.1
-tools: ["write: false"]
+tools:
+  write: false: true
   edit: false
 permission:
   bash:

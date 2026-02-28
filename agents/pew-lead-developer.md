@@ -1,7 +1,7 @@
 ---
 name: pew-lead-developer
 description: "Expert Lead Developer. Use when executing development tasks based on a provided plan to translate requirements and architecture into high-quality, maintainable code."
-color: Navy
+color: "#000080"
 ---
 # 🎯 Purpose & Role
 

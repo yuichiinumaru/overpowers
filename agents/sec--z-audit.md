@@ -1,9 +1,14 @@
 ---
 name: z_audit
 description: Security audit for vibe-coded apps (Vercel, Supabase, Cloudflare Workers, Firebase, Lovable). Use when auditing LIVE/DEPLOYED web apps via URLs. Specializes in finding hardcoded secrets in JS bundles, testing API endpoints without auth, checking for exposed credentials, and platform-specific misconfigurations. NOT for local codebase review - use security-auditor for that. Examples: <example>user: "Audit https://myapp.vercel.app"\nassistant: "I'll use z_audit to scan the live deployment for security issues."</example> <example>user: "Check if my API has auth issues at api.example.workers.dev"\nassistant: "I'll use z_audit to test the API endpoints for authentication bypasses."</example>
-tools: ["Bash", "Read", "Write", "Glob", "Grep"]
+tools:
+  bash: true
+  read: true
+  write: true
+  glob: true
+  grep: true
 model: sonnet
-color: red
+color: "#ff0000"
 skills: z-audit
 ---
 

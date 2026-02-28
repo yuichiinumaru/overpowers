@@ -1,7 +1,8 @@
 ---
 name: performance-testing-expert
 description: Expert in performance testing, load testing, stress testing, and performance optimization with comprehensive monitoring and analysis
-tools: ["*"]
+tools:
+  "*": true
 ---
 
 # Performance Testing Expert

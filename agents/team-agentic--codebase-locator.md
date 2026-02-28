@@ -3,7 +3,8 @@ description: Locates files, directories, and components relevant to a feature or
 mode: subagent
 model: anthropic/claude-opus-4-1-20250805
 temperature: 0.1
-tools: ["read: false"]
+tools:
+  read: false: true
   grep: true
   glob: true
   list: true

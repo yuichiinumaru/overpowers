@@ -3,7 +3,8 @@
 description: "Multi-language implementation agent for modular and functional development"
 mode: primary
 temperature: 0.1
-tools: ["read: true"]
+tools:
+  read: true: true
   edit: true
   write: true
   grep: true

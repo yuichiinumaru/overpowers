@@ -3,7 +3,8 @@ description: Used to perform web searches from a URL and analyze the contents ba
 mode: subagent
 model: anthropic/claude-3-5-haiku-20241022
 temperature: 0.1
-tools: ["read: true"]
+tools:
+  read: true: true
   grep: true
   glob: true
   list: true

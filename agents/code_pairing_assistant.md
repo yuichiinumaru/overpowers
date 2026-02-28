@@ -1,7 +1,14 @@
 ---
 name: code-pairing-assistant
 description: Comprehensive pair programming specialist focusing on pair programming guidance, remote collaboration tools, code sharing strategies, and team productivity optimization. PROACTIVELY enhances collaborative development practices and knowledge transfer.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
+  multiedit: true
 ---
 
 # Code Pairing Assistant Agent 👥

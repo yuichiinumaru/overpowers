@@ -30,9 +30,14 @@ Every agent file MUST start with YAML frontmatter:
 ---
 name: agent-name-in-kebab-case
 description: When to invoke this agent - be specific for auto-discovery
-tools: ["Read", "Write", "Edit", "Bash  # Optional", "comma-separated"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash  # optional: true
+  comma-separated: true
 model: sonnet  # Optional: sonnet|opus|haiku|inherit
-color: green  # Visual categorization
+color: "#00FF00"
 field: frontend  # Domain/expertise area
 expertise: expert  # beginner|intermediate|expert
 mcp_tools: mcp__github, mcp__playwright  # Optional, comma-separated
@@ -56,9 +61,13 @@ mcp_tools: mcp__github, mcp__playwright  # Optional, comma-separated
 ---
 name: code-reviewer
 description: Expert code review specialist. Use proactively after code changes.
-tools: ["Read", "Grep", "Glob", "Bash"]
+tools:
+  read: true
+  grep: true
+  glob: true
+  bash: true
 model: sonnet
-color: red
+color: "#ff0000"
 field: quality
 expertise: expert
 ---
@@ -68,9 +77,15 @@ expertise: expert
 ---
 name: frontend-developer
 description: React and TypeScript development expert. Use for building UI components and pages.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
 model: sonnet
-color: green
+color: "#00ff00"
 field: frontend
 expertise: expert
 mcp_tools: mcp__playwright
@@ -93,11 +108,11 @@ name: codeReviewer  ❌ (camelCase - WRONG)
 ---
 
 ---
-tools: ["["Read"", ""Edit"]  ❌ (Array format - WRONG", "use comma-separated)"]
+tools: ["Read", "Edit"]  ❌ (Array format - WRONG, use comma-separated)
 ---
 
 ---
-tools: ["[Read", "Edit]  ❌ (Array - WRONG", "needs quotes and comma-separated string)"]
+tools: [Read, Edit]  ❌ (Array - WRONG, needs quotes and comma-separated string)
 ---
 ```
 
@@ -191,9 +206,11 @@ After YAML frontmatter, the system prompt:
 ---
 name: agent-name
 description: When to invoke
-tools: ["Read", "Write"]
+tools:
+  read: true
+  write: true
 model: sonnet
-color: blue
+color: "#0000ff"
 field: product
 expertise: intermediate
 ---
@@ -223,9 +240,13 @@ Output format:
 ---
 name: code-reviewer
 description: Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code.
-tools: ["Read", "Grep", "Glob", "Bash"]
+tools:
+  read: true
+  grep: true
+  glob: true
+  bash: true
 model: sonnet
-color: red
+color: "#ff0000"
 field: quality
 expertise: expert
 mcp_tools: mcp__github
@@ -268,9 +289,15 @@ MCP Integration:
 ---
 name: frontend-developer
 description: React and TypeScript frontend development specialist. Use for building UI components, pages, and client-side features.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
 model: sonnet
-color: green
+color: "#00ff00"
 field: frontend
 expertise: expert
 mcp_tools: mcp__playwright
@@ -329,9 +356,12 @@ MCP Integration:
 ---
 name: product-planner
 description: Product strategy and planning expert. Use for creating product requirements, user stories, and feature specifications.
-tools: ["Read", "Write", "Grep"]
+tools:
+  read: true
+  write: true
+  grep: true
 model: opus
-color: blue
+color: "#0000ff"
 field: product
 expertise: expert
 ---
@@ -410,7 +440,10 @@ Use data to validate. Start with user needs, not solutions.
 
 **Recommended Tools:**
 ```yaml
-tools: ["Read", "Write", "Grep"]
+tools:
+  read: true
+  write: true
+  grep: true
 ```
 
 **Color:** `blue`
@@ -433,7 +466,13 @@ tools: ["Read", "Write", "Grep"]
 
 **Recommended Tools:**
 ```yaml
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
 ```
 
 **Color:** `green`
@@ -456,7 +495,13 @@ tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 
 **Recommended Tools:**
 ```yaml
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
 ```
 
 **Color:** `red`
@@ -480,7 +525,10 @@ tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 
 **Recommended Tools:**
 ```yaml
-tools: ["Read", "Write", "Grep"]
+tools:
+  read: true
+  write: true
+  grep: true
 ```
 
 **Color:** `purple`
@@ -541,8 +589,11 @@ Example:
 ---
 name: pr-review-specialist
 description: Pull request review expert. Use for comprehensive PR analysis.
-tools: ["Read", "Grep", "Bash"]
-color: red
+tools:
+  read: true
+  grep: true
+  bash: true
+color: "#ff0000"
 field: quality
 expertise: expert
 mcp_tools: mcp__github
@@ -586,17 +637,32 @@ Match tools to agent type:
 
 **Strategic (lightweight):**
 ```yaml
-tools: ["Read", "Write", "Grep"]
+tools:
+  read: true
+  write: true
+  grep: true
 ```
 
 **Implementation (full):**
 ```yaml
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
 ```
 
 **Quality (heavy):**
 ```yaml
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
 # Note: Sequential execution only!
 ```
 
@@ -646,9 +712,15 @@ description: An agent that helps with frontend  ❌ (Not action-oriented)
 ---
 name: test-runner
 description: Test automation specialist. Use proactively after code changes to run tests and validate implementations.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
 model: sonnet
-color: red
+color: "#ff0000"
 field: testing
 expertise: expert
 mcp_tools: mcp__playwright
@@ -723,9 +795,15 @@ MCP Integration:
 ---
 name: api-builder
 description: RESTful API development specialist. Use for creating backend endpoints, controllers, and API services.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
 model: sonnet
-color: green
+color: "#00ff00"
 field: backend
 expertise: expert
 ---
@@ -796,9 +874,12 @@ Can work in parallel with frontend_developer when building full-stack features.
 ---
 name: prd-specialist
 description: Product requirements documentation expert. Use for creating PRDs, user stories, and feature specifications.
-tools: ["Read", "Write", "Grep"]
+tools:
+  read: true
+  write: true
+  grep: true
 model: opus
-color: blue
+color: "#0000ff"
 field: product
 expertise: expert
 ---
@@ -993,9 +1074,9 @@ For each agent, provide:
 ---
 name: {agent-name}
 description: {when to invoke}
-tools: ["{comma-separated tools}"]
+tools: {comma-separated tools}
 model: {sonnet|opus|haiku}
-color: {color}
+color: "#333333"
 field: {field}
 expertise: {expertise}
 mcp_tools: {comma-separated mcp tools}
@@ -1037,7 +1118,7 @@ EXECUTION_PATTERN: [parallel|coordinated|sequential]
 
 MODEL: [sonnet|opus|haiku|inherit - or leave blank for default sonnet]
 
-COLOR: [blue|green|red|purple|orange - or leave blank for auto-assignment]
+COLOR: "#333333"
 
 EXPERTISE_LEVEL: [beginner|intermediate|expert]
 
@@ -1064,7 +1145,7 @@ CAPABILITIES: Run Jest tests, analyze failures, report results
 TOOLS_NEEDED: Read, Write, Bash
 EXECUTION_PATTERN: sequential
 MODEL: sonnet
-COLOR: red
+COLOR: "#ff0000"
 EXPERTISE_LEVEL: intermediate
 MCP_TOOLS:
 SYSTEM_PROMPT: You are a testing expert. Run unit tests, analyze failures, provide clear results.
@@ -1081,7 +1162,7 @@ CAPABILITIES: Create React components, TypeScript types, component tests
 TOOLS_NEEDED: Read, Write, Edit, Bash, Grep, Glob
 EXECUTION_PATTERN: coordinated
 MODEL: sonnet
-COLOR: green
+COLOR: "#00ff00"
 EXPERTISE_LEVEL: expert
 MCP_TOOLS: mcp__playwright
 SYSTEM_PROMPT: You are a React expert. Build clean, reusable components with TypeScript, tests, and documentation.
@@ -1098,7 +1179,7 @@ CAPABILITIES: Write PRDs, create user stories, define acceptance criteria
 TOOLS_NEEDED: Read, Write, Grep
 EXECUTION_PATTERN: parallel
 MODEL: opus
-COLOR: blue
+COLOR: "#0000ff"
 EXPERTISE_LEVEL: expert
 MCP_TOOLS:
 SYSTEM_PROMPT: You are a senior PM. Create clear, actionable requirements focused on user value and business goals.

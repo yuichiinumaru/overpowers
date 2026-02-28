@@ -1,7 +1,14 @@
 ---
 name: code-quality-guardian
 description: Code quality guardian for automated quality gates and standards enforcement. PROACTIVELY assists with linting setup, formatting, pre-commit hooks, code analysis, and technical debt management.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
+  multiedit: true
 model: sonnet
 ---
 

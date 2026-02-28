@@ -2,7 +2,13 @@
 name: doc-updater
 description: Documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation. Runs /update-codemaps and /update-docs, generates docs/CODEMAPS/*, updates READMEs and guides.
 category: documentation
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
 model: opus
 ---
 

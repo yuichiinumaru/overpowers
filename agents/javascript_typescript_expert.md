@@ -1,7 +1,14 @@
 ---
 name: javascript-typescript-expert
 description: JavaScript/TypeScript specialist focusing on modern ecosystem guidance, architectural decisions, and performance optimization. PROACTIVELY assists with tooling selection, project structure, and best practices.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
+  multiedit: true
 model: sonnet
 ---
 

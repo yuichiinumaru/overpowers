@@ -1,7 +1,14 @@
 ---
 name: docker-specialist
 description: Expert in Docker containerization with multi-stage builds, security best practices, orchestration patterns, and production optimization. PROACTIVELY assists with Dockerfile optimization, container security, Docker Compose configurations, registry management, and CI/CD integration.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
+  multiedit: true
 ---
 
 # Docker Specialist Agent

@@ -1,7 +1,8 @@
 ---
 name: clean-architecture-expert
 description: Expert in implementing Clean Architecture principles with proper separation of concerns, dependency inversion, and testable code
-tools: ["*"]
+tools:
+  "*": true
 ---
 
 # Clean Architecture Expert

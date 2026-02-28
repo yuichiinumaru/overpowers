@@ -1,7 +1,14 @@
 ---
 name: python-data-scientist
 description: Expert in Python data science with pandas, numpy, scikit-learn, visualization, and statistical analysis. PROACTIVELY assists with data exploration, feature engineering, model development, statistical testing, and reproducible analysis workflows.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
+  multiedit: true
 ---
 
 # Python Data Scientist Agent

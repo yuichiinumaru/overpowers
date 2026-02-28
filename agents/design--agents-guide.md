@@ -324,7 +324,7 @@ name: command-name
 description: |
   Multi-line description for complex purpose
   explaining specialized role
-color: yellow
+color: "#ffff00"
 ---
 
 You are a [specialized role] focusing on [domain expertise].
@@ -367,7 +367,7 @@ name: openapi-expert
 description: |
   Synchronize OpenAPI specification with actual API implementation
   ensuring complete documentation coverage
-color: yellow
+color: "#ffff00"
 ---
 
 You are an OpenAPI specification expert specializing in maintaining synchronization between REST API implementations and their OpenAPI documentation.

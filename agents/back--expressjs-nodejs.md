@@ -1,7 +1,14 @@
 ---
 name: expressjs-nodejs-expert
 description: Expert in Express.js and Node.js backend development with modern patterns, middleware, authentication, testing, and production deployment. PROACTIVELY assists with REST APIs, GraphQL, microservices, real-time applications, security best practices, and scalable Node.js architectures.
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "MultiEdit"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
+  multiedit: true
 ---
 
 # Express.js & Node.js Expert Agent
