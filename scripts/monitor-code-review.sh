@@ -73,13 +73,13 @@ run_qlty_analysis() {
     print_info "Running Qlty analysis and auto-fixes..."
     
     # Run analysis with sample to get quick feedback
-    if bash "$REPO_ROOT/.agent/scripts/qlty-cli.sh" check 5 > "$REPO_ROOT/.agent/tmp/qlty-results.txt" 2>&1; then
+    if bash "$REPO_ROOT/.agent/skills/qlty-integration/scripts/qlty-cli.sh" check 5 > "$REPO_ROOT/.agent/tmp/qlty-results.txt" 2>&1; then
         local issues
         issues=$(grep -o "ISSUES: [0-9]*" "$REPO_ROOT/.agent/tmp/qlty-results.txt" | grep -o "[0-9]*" || echo "0")
         print_success "Qlty Analysis: $issues issues found"
         
         # Apply auto-formatting
-        if bash "$REPO_ROOT/.agent/scripts/qlty-cli.sh" fmt --all > "$REPO_ROOT/.agent/tmp/qlty-fmt.txt" 2>&1; then
+        if bash "$REPO_ROOT/.agent/skills/qlty-integration/scripts/qlty-cli.sh" fmt --all > "$REPO_ROOT/.agent/tmp/qlty-fmt.txt" 2>&1; then
             print_success "Qlty auto-formatting completed"
         fi
         
@@ -99,7 +99,7 @@ run_codacy_analysis() {
     local log_file="$REPO_ROOT/.agent/tmp/codacy-results.txt"
     
     # Run in background
-    bash "$REPO_ROOT/.agent/scripts/codacy-cli.sh" analyze --fix > "$log_file" 2>&1 &
+    bash "$REPO_ROOT/.agent/skills/codacy-integration/scripts/codacy-cli.sh" analyze --fix > "$log_file" 2>&1 &
     local pid=$!
     
     # Wait loop with timeout (300 seconds)

@@ -228,13 +228,13 @@ Use automated tools to supplement manual review:
 bash ~/Git/aidevops/.agent/scripts/quality-check.sh
 
 # Use CodeRabbit for AI-powered review
-bash ~/Git/aidevops/.agent/scripts/coderabbit-cli.sh review
+bash ~/Git/aidevops/.agent/skills/coderabbit-integration/scripts/coderabbit-cli.sh review
 
 # Use Codacy for analysis
-bash ~/Git/aidevops/.agent/scripts/codacy-cli.sh analyze
+bash ~/Git/aidevops/.agent/skills/codacy-integration/scripts/codacy-cli.sh analyze
 
 # Use Qlty for universal checking
-bash ~/Git/aidevops/.agent/scripts/qlty-cli.sh check
+bash ~/Git/aidevops/.agent/skills/qlty-integration/scripts/qlty-cli.sh check
 ```
 
 ### Security Scanning

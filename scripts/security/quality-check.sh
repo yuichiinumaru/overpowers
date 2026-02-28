@@ -207,7 +207,7 @@ run_shellcheck() {
 check_secrets() {
     echo -e "${BLUE}🔐 Checking for Exposed Secrets (Secretlint)...${NC}"
     
-    local secretlint_script=".agent/scripts/secretlint-helper.sh"
+    local secretlint_script=".agent/skills/secretlint-integration/scripts/secretlint-helper.sh"
     local violations=0
     
     # Check if secretlint is available
@@ -254,7 +254,7 @@ check_quality_clis() {
     print_info "🤖 Checking AI-Powered Quality CLIs Integration..."
 
     # Secretlint
-    local secretlint_script=".agent/scripts/secretlint-helper.sh"
+    local secretlint_script=".agent/skills/secretlint-integration/scripts/secretlint-helper.sh"
     if [[ -f "$secretlint_script" ]]; then
         if command -v secretlint &> /dev/null || [[ -f "node_modules/.bin/secretlint" ]]; then
             print_success "Secretlint: Integration ready"
@@ -269,7 +269,7 @@ check_quality_clis() {
     echo ""
 
     # CodeRabbit CLI
-    local coderabbit_script=".agent/scripts/coderabbit-cli.sh"
+    local coderabbit_script=".agent/skills/coderabbit-integration/scripts/coderabbit-cli.sh"
     if [[ -f "$coderabbit_script" ]]; then
         if bash "$coderabbit_script" status > /dev/null 2>&1; then
             print_success "CodeRabbit CLI: Integration ready"
@@ -283,7 +283,7 @@ check_quality_clis() {
     fi
 
     # Codacy CLI
-    local codacy_script=".agent/scripts/codacy-cli.sh"
+    local codacy_script=".agent/skills/codacy-integration/scripts/codacy-cli.sh"
     if [[ -f "$codacy_script" ]]; then
         if bash "$codacy_script" status > /dev/null 2>&1; then
             print_success "Codacy CLI: Integration ready"
@@ -297,7 +297,7 @@ check_quality_clis() {
     fi
 
     # SonarScanner CLI
-    local sonar_script=".agent/scripts/sonarscanner-cli.sh"
+    local sonar_script=".agent/skills/sonarcloud-integration/scripts/sonarscanner-cli.sh"
     if [[ -f "$sonar_script" ]]; then
         if bash "$sonar_script" status > /dev/null 2>&1; then
             print_success "SonarScanner CLI: Integration ready"

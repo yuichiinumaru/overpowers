@@ -150,10 +150,10 @@ composer phpcs
 
 ```bash
 # Codacy auto-fix
-bash ~/Git/aidevops/.agent/scripts/codacy-cli.sh analyze --fix
+bash ~/Git/aidevops/.agent/skills/codacy-integration/scripts/codacy-cli.sh analyze --fix
 
 # Qlty auto-format
-bash ~/Git/aidevops/.agent/scripts/qlty-cli.sh fmt --all
+bash ~/Git/aidevops/.agent/skills/qlty-integration/scripts/qlty-cli.sh fmt --all
 
 # ESLint auto-fix
 npx eslint . --fix
@@ -559,6 +559,6 @@ npm run lint:fix
 npm run typecheck
 
 # Quality issues
-bash ~/Git/aidevops/.agent/scripts/codacy-cli.sh analyze --fix
-bash ~/Git/aidevops/.agent/scripts/qlty-cli.sh fmt --all
+bash ~/Git/aidevops/.agent/skills/codacy-integration/scripts/codacy-cli.sh analyze --fix
+bash ~/Git/aidevops/.agent/skills/qlty-integration/scripts/qlty-cli.sh fmt --all
 ```

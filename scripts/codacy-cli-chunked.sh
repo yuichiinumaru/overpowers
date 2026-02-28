@@ -134,7 +134,7 @@ check_codacy_ready() {
 
     if [[ ! -f "$CODACY_CONFIG_FILE" ]]; then
         print_error "Codacy configuration not found"
-        print_info "Run: bash .agent/scripts/codacy-cli.sh init"
+        print_info "Run: bash .agent/skills/codacy-integration/scripts/codacy-cli.sh init"
         return 1
     fi
 

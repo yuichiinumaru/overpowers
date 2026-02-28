@@ -34,10 +34,10 @@ readonly NC='\033[0m' # No Color
 # Common constants
 readonly ERROR_UNKNOWN_COMMAND="Unknown command:"
 # CLI Scripts
-readonly CODERABBIT_SCRIPT=".agent/scripts/coderabbit-cli.sh"
-readonly CODACY_SCRIPT=".agent/scripts/codacy-cli.sh"
-readonly SONAR_SCRIPT=".agent/scripts/sonarscanner-cli.sh"
-readonly SNYK_SCRIPT=".agent/scripts/snyk-helper.sh"
+readonly CODERABBIT_SCRIPT=".agent/skills/coderabbit-integration/scripts/coderabbit-cli.sh"
+readonly CODACY_SCRIPT=".agent/skills/codacy-integration/scripts/codacy-cli.sh"
+readonly SONAR_SCRIPT=".agent/skills/sonarcloud-integration/scripts/sonarscanner-cli.sh"
+readonly SNYK_SCRIPT=".agent/skills/snyk-integration/scripts/snyk-helper.sh"
 
 # CLI Names
 readonly CLI_CODERABBIT="coderabbit"

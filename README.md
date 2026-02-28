@@ -93,7 +93,7 @@ overpowers/
 |--------|---------|
 | `install.sh` | Master installer — orchestrates all deploys + MCPs |
 | `scripts/deploy-to-opencode.sh` | Symlinks agents, skills, commands, hooks → `~/.config/opencode/` |
-| `scripts/deploy-to-gemini-cli.sh` | Symlinks skills, hooks, AGENTS.md → `~/.gemini/` |
+| `skills/expo-deployment/scripts/deploy-to-gemini-cli.sh` | Symlinks skills, hooks, AGENTS.md → `~/.gemini/` |
 | `scripts/deploy-to-antigravity.sh` | Symlinks skills, workflows → `~/.gemini/antigravity/` |
 
 ### Configuration Scripts

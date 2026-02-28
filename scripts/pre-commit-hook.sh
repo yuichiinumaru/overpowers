@@ -226,9 +226,9 @@ main() {
     echo ""
 
     # Optional CodeRabbit CLI review (if available)
-    if [[ -f ".agent/scripts/coderabbit-cli.sh" ]] && command -v coderabbit &> /dev/null; then
+    if [[ -f ".agent/skills/coderabbit-integration/scripts/coderabbit-cli.sh" ]] && command -v coderabbit &> /dev/null; then
         print_info "🤖 Running CodeRabbit CLI review..."
-        if bash .agent/scripts/coderabbit-cli.sh review > /dev/null 2>&1; then
+        if bash .agent/skills/coderabbit-integration/scripts/coderabbit-cli.sh review > /dev/null 2>&1; then
             print_success "CodeRabbit CLI review completed"
         else
             print_info "CodeRabbit CLI review skipped (setup required)"
