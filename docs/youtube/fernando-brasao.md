@@ -4,9 +4,9 @@
 - [x] https://www.youtube.com/watch?v=xAV0WrXigYY
 - [x] https://www.youtube.com/watch?v=yRkCdhDLqk4
 - [x] https://www.youtube.com/watch?v=ckX51ijoOds
-- https://www.youtube.com/watch?v=AVmof6Ptn68
-- https://www.youtube.com/watch?v=DM2MzXxpgdE
-- https://www.youtube.com/watch?v=coQRluyC0nw
+- [x] https://www.youtube.com/watch?v=AVmof6Ptn68
+- [x] https://www.youtube.com/watch?v=DM2MzXxpgdE
+- [x] https://www.youtube.com/watch?v=coQRluyC0nw
 - https://www.youtube.com/watch?v=eWLAepOdAhU
 - https://www.youtube.com/watch?v=5dyCDW4i_-E
 - https://www.youtube.com/watch?v=ZxeLLfm5rZA

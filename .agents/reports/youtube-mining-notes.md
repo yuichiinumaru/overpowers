@@ -183,3 +183,11 @@ só mais uma pergunta aí das atrasadas né funil para venda de curso sobre rela
 
 Conclusion: Batch 5 evaluated. 2 new skills successfully forged. Due to video unavailability (`b0wX3Z6yVDE`, `0kFv1A5y13Q`, `hN291U6QJmY`, `D-j0c4PzD0w`, `F_fG10L1w6E`), skipped them.
 >>>>>>> theirs
+
+### 2024-05-24: @fernandobrasao Batch 6 (Vlogs/Motivational & Bot Block)
+- **Videos:**
+  - `https://www.youtube.com/watch?v=AVmof6Ptn68` ("Queria um conselho de Jesus")
+  - `https://www.youtube.com/watch?v=DM2MzXxpgdE` ("SUMA por um Final de Semana!")
+  - `https://www.youtube.com/watch?v=coQRluyC0nw` ("Em 8 Minutos Você Vai Repensar Sua Vida")
+- **Evaluation:** Evaluated according to `skill_scorecard.md`. The first two videos are vlog/motivational style with no concrete operational steps. Scorecard ROI < 10.
+- **Outcome:** No skills generated. We received an HTTP Error 429: Too Many Requests from YouTube on the third video, meaning the IP is temporarily blocked from extracting transcripts. Execution stopped as per boundaries. Marked as `[x]` in ledger.
