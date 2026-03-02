@@ -191,3 +191,14 @@ Conclusion: Batch 5 evaluated. 2 new skills successfully forged. Due to video un
   - `https://www.youtube.com/watch?v=coQRluyC0nw` ("Em 8 Minutos Você Vai Repensar Sua Vida")
 - **Evaluation:** Evaluated according to `skill_scorecard.md`. The first two videos are vlog/motivational style with no concrete operational steps. Scorecard ROI < 10.
 - **Outcome:** No skills generated. We received an HTTP Error 429: Too Many Requests from YouTube on the third video, meaning the IP is temporarily blocked from extracting transcripts. Execution stopped as per boundaries. Marked as `[x]` in ledger.
+
+### 2024-05-24: @fernandobrasao Batch 7
+- **Videos Processed:**
+  - `https://www.youtube.com/watch?v=kcJK-moS5uE` ("Live #189 - Copywriting para criar conteúdos virais")
+  - `https://www.youtube.com/watch?v=5dyCDW4i_-E` ("Live #192 - Do Zero Ao Incrível em Apenas 21 Dias")
+  - `https://www.youtube.com/watch?v=eWLAepOdAhU` ("Live #194 - Organização Global dos Emails com os Funis")
+- **Other URLs Attempted (429 Error):**
+  - `https://www.youtube.com/watch?v=ZxeLLfm5rZA`
+  - `https://www.youtube.com/watch?v=4ZCgdzx68v4`
+- **Evaluation:** Evaluated according to `skill_scorecard.md`. The transcripts for the successful downloads are largely conversational, unstructured long-form webinar/live formats. While they mention "passo a passo" (step-by-step) theoretically (e.g., "As pessoas amam passos"), they lack a cohesive, codifiable operational recipe (ROI < 15).
+- **Outcome:** No skills generated. We hit HTTP Error 429: Too Many Requests on several links again. Execution halted due to bot protections. Marked as `[x]` in ledger.

@@ -7,11 +7,11 @@
 - [x] https://www.youtube.com/watch?v=AVmof6Ptn68
 - [x] https://www.youtube.com/watch?v=DM2MzXxpgdE
 - [x] https://www.youtube.com/watch?v=coQRluyC0nw
-- https://www.youtube.com/watch?v=eWLAepOdAhU
-- https://www.youtube.com/watch?v=5dyCDW4i_-E
-- https://www.youtube.com/watch?v=ZxeLLfm5rZA
-- https://www.youtube.com/watch?v=4ZCgdzx68v4
-- https://www.youtube.com/watch?v=kcJK-moS5uE
+- [x] https://www.youtube.com/watch?v=eWLAepOdAhU
+- [x] https://www.youtube.com/watch?v=5dyCDW4i_-E
+- [x] https://www.youtube.com/watch?v=ZxeLLfm5rZA
+- [x] https://www.youtube.com/watch?v=4ZCgdzx68v4
+- [x] https://www.youtube.com/watch?v=kcJK-moS5uE
 - https://www.youtube.com/watch?v=w6djDE9azzM
 - https://www.youtube.com/watch?v=D8UJqy5MwQg
 - https://www.youtube.com/watch?v=qkmFtskLYoY
