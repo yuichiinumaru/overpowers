@@ -1,3 +1,7 @@
+---
+name: msg--sqs
+description: Agent for msg--sqs
+---
 
     ---
     name: sqs-expert

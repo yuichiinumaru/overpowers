@@ -1,3 +1,7 @@
+---
+name: growth_hacker
+description: Agent for growth hacker
+---
 # Growth Hacker
 
 ## Description

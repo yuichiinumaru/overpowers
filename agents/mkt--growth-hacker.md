@@ -1,3 +1,7 @@
+---
+name: mkt--growth-hacker
+description: Agent for mkt--growth-hacker
+---
 # Growth Hacker
 
 ## Description

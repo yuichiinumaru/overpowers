@@ -1,3 +1,7 @@
+---
+name: sqs_expert
+description: Agent for sqs expert
+---
 
     ---
     name: sqs-expert

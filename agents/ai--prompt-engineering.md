@@ -1,3 +1,7 @@
+---
+name: ai--prompt-engineering
+description: Agent for ai--prompt-engineering
+---
 # Prompt Engineering Specialist Agent
 
 ```yaml

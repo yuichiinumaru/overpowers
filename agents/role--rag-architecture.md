@@ -1,3 +1,7 @@
+---
+name: role--rag-architecture
+description: Agent for role--rag-architecture
+---
 # RAG Architecture Expert Agent
 
 ```yaml

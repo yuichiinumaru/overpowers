@@ -1,3 +1,7 @@
+---
+name: llmops_engineer
+description: Agent for llmops engineer
+---
 # LLMOps Engineer Agent
 
 ```yaml

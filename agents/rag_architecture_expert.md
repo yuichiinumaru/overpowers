@@ -1,3 +1,7 @@
+---
+name: rag_architecture_expert
+description: Agent for rag architecture expert
+---
 # RAG Architecture Expert Agent
 
 ```yaml

@@ -1,3 +1,7 @@
+---
+name: prompt_engineering_specialist
+description: Agent for prompt engineering specialist
+---
 # Prompt Engineering Specialist Agent
 
 ```yaml

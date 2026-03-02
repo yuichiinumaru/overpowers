@@ -6,6 +6,12 @@ Este é o índice principal de tarefas do repositório Overpowers. Agentes Jules
 - [ ] 001-feature-mcp-integrations
 - [ ] 002-feature-advanced-hooks
 - [ ] 003-refactor-moltbot-memory
+- [ ] 004-dedup-docs-docs
+- [ ] 005-dedup-docs-analysis
+- [ ] 006-dedup-docs-knowledge
+- [ ] 007-rename-superpowers-to-overpowers
+- [ ] 008-feature-knowledge-mcp
+- [ ] 016-second-audit
 
 ## ✅ Tarefas Concluídas
 *(Movidas manualmente]*

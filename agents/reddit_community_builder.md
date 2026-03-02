@@ -1,3 +1,7 @@
+---
+name: reddit_community_builder
+description: Agent for reddit community builder
+---
 # Reddit Community Builder
 
 ## Description

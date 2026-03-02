@@ -1,3 +1,7 @@
+---
+name: ai--llm-finetuning
+description: Agent for ai--llm-finetuning
+---
 # LLM Fine-tuning Expert Agent
 
 ```yaml

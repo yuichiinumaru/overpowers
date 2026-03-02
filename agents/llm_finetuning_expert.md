@@ -1,3 +1,7 @@
+---
+name: llm_finetuning_expert
+description: Agent for llm finetuning expert
+---
 # LLM Fine-tuning Expert Agent
 
 ```yaml
