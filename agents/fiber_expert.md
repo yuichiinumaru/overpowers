@@ -1,9 +1,16 @@
 ---
 name: fiber-expert
-description: Master in fiber technology specializing in manufacturing, properties, applications, and innovations in fiber industry.
+description: Master in fiber technology specializing in manufacturing, properties,
+  applications, and innovations in fiber industry.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 - Properties of natural fibers
 - Properties of synthetic fibers

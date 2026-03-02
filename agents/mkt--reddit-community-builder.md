@@ -1,3 +1,14 @@
+---
+name: mkt-reddit-community-builder
+description: Expert agent for mkt-reddit-community-builder
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
+---
 # Reddit Community Builder
 
 ## Description

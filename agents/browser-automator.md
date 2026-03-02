@@ -1,10 +1,17 @@
 ---
 name: browser-automator
-description: Specialized agent for web interaction using Playwright and Browser Use skills. Can navigate, scrape, interact with forms, and verify UI states.
+description: Specialized agent for web interaction using Playwright and Browser Use
+  skills. Can navigate, scrape, interact with forms, and verify UI states.
 category: specialist
 model: gemini-3-flash-preview
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Browser Automator
 
 ## Persona

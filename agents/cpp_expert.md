@@ -2,8 +2,14 @@
 name: cpp-expert
 description: Expert in writing high-quality, efficient, and modern C++ code.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 - Understand and apply modern C++ (C++11/14/17/20/23) features.
 - Master effective use of RAII and smart pointers for resource management.

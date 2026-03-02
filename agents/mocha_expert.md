@@ -1,9 +1,16 @@
 ---
 name: mocha-expert
-description: Expertise in Mocha, the JavaScript test framework running on Node.js, focusing on writing, organizing, and executing tests efficiently.
+description: Expertise in Mocha, the JavaScript test framework running on Node.js,
+  focusing on writing, organizing, and executing tests efficiently.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Setting up Mocha test environment

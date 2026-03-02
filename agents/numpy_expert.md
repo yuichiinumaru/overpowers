@@ -1,9 +1,17 @@
 ---
 name: numpy-expert
-description: Expert in NumPy for scientific computing, data analysis, and numerical operations. Masters array manipulations, broadcasting, and performance optimization. Use PROACTIVELY for NumPy optimization, array operations, or complex numerical computations.
+description: Expert in NumPy for scientific computing, data analysis, and numerical
+  operations. Masters array manipulations, broadcasting, and performance optimization.
+  Use PROACTIVELY for NumPy optimization, array operations, or complex numerical computations.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Understanding NumPy arrays and their properties

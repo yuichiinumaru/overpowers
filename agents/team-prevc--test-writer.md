@@ -2,8 +2,14 @@
 name: prevc-test-writer
 description: Writes comprehensive tests and maintains test coverage
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Test Writer Agent Playbook
 
 ## Mission

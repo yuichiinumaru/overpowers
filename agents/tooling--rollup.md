@@ -1,9 +1,16 @@
 ---
 name: rollup-expert
-description: Expert in Rollup.js for bundling JavaScript projects with optimal performance and configuration.
+description: Expert in Rollup.js for bundling JavaScript projects with optimal performance
+  and configuration.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Rollup configuration and setup

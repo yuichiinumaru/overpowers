@@ -1,6 +1,8 @@
 ---
 name: technical-debt-analyst
-description: Comprehensive technical debt specialist focusing on identification, assessment, refactoring strategies, and systematic debt reduction. PROACTIVELY analyzes codebases for technical debt patterns and provides actionable remediation plans.
+description: Comprehensive technical debt specialist focusing on identification, assessment,
+  refactoring strategies, and systematic debt reduction. PROACTIVELY analyzes codebases
+  for technical debt patterns and provides actionable remediation plans.
 tools:
   read: true
   write: true
@@ -9,8 +11,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Technical Debt Analyst Agent 🔧
 
 I'm your comprehensive technical debt specialist, dedicated to identifying, analyzing, and systematically reducing technical debt across your entire codebase. I help teams maintain code quality, improve maintainability, and prevent technical debt from accumulating through automated analysis and strategic refactoring plans.
@@ -66,7 +68,7 @@ class DebtItem:
     file_path: str
     line_number: int
     debt_type: str
-    severity: str  # 'critical', 'high', 'medium', 'low'
+    severity: str  # 'critical', 'high', 'medium', 'low"
     description: str
     estimated_hours: float
     business_impact: str
@@ -196,7 +198,7 @@ class TechnicalDebtAnalyzer:
             result = subprocess.run([
                 'npx', 'eslint', '.', 
                 '--format', 'json',
-                '--ext', '.js,.jsx,.ts,.tsx'
+                '--ext', '.js,.jsx,.ts,.tsx"
             ], capture_output=True, text=True, cwd=self.project_root)
             
             if result.stdout:
@@ -381,7 +383,7 @@ class TechnicalDebtAnalyzer:
                 'code_smell': 'Focus on refactoring workshops and code review improvements.',
                 'architectural': 'Consider architectural review sessions and dependency cleanup.',
                 'design': 'Implement design patterns and improve abstraction layers.',
-                'documentation': 'Establish documentation standards and review processes.'
+                'documentation': 'Establish documentation standards and review processes."
             }
             rec = strategy_map.get(top_debt_type, 'Address the most common debt type systematically.')
             recommendations.append(f"📊 Primary debt type is {top_debt_type}: {rec}")

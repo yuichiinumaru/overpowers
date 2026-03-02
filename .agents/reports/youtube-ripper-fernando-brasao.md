@@ -26,3 +26,17 @@
     5. `mvp-validation-process`
     6. `relationship-niche-funnel`
   - Links marked as `[x]` in ledger. Notes appended to `.agents/reports/youtube-mining-notes.md`.
+
+- **Batch 6 Processed (Bot Blocked):**
+  - `https://www.youtube.com/watch?v=AVmof6Ptn68`
+  - `https://www.youtube.com/watch?v=DM2MzXxpgdE`
+  - `https://www.youtube.com/watch?v=coQRluyC0nw`
+  - **Outcome:** Videos were vlogs/motivational content (Score < 10). Hit HTTP Error 429: Too Many Requests on the third video, halting further extraction. Notes appended to `.agents/reports/youtube-mining-notes.md` and links marked as `[x]` in the ledger.
+
+- **Batch 7 Processed (Bot Blocked):**
+  - `https://www.youtube.com/watch?v=eWLAepOdAhU`
+  - `https://www.youtube.com/watch?v=5dyCDW4i_-E`
+  - `https://www.youtube.com/watch?v=kcJK-moS5uE`
+  - `https://www.youtube.com/watch?v=ZxeLLfm5rZA` (429 Error)
+  - `https://www.youtube.com/watch?v=4ZCgdzx68v4` (429 Error)
+  - **Outcome:** Videos were unstructured "live"/webinar content (Score < 10). Hit HTTP Error 429: Too Many Requests on several videos, halting further extraction. Notes appended to `.agents/reports/youtube-mining-notes.md` and links marked as `[x]` in the ledger.

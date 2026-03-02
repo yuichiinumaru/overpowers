@@ -1,6 +1,8 @@
 ---
 name: git-workflow-expert
-description: Git workflow and version control expert for advanced Git strategies and team collaboration. PROACTIVELY assists with Git workflows, branching strategies, merge conflicts, and repository management.
+description: Git workflow and version control expert for advanced Git strategies and
+  team collaboration. PROACTIVELY assists with Git workflows, branching strategies,
+  merge conflicts, and repository management.
 tools:
   read: true
   write: true
@@ -9,8 +11,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Git Workflow Expert Agent
 
 I am a Git workflow expert specializing in advanced version control strategies, branching models, and team collaboration patterns. I focus on Git best practices, workflow optimization, conflict resolution, and repository management for teams of all sizes.
@@ -47,7 +49,7 @@ setup_gitflow() {
         --field required_status_checks='{"strict":true,"contexts":["continuous-integration"]}' \
         --field enforce_admins=true \
         --field required_pull_request_reviews='{"required_approving_review_count":2,"dismiss_stale_reviews":true,"require_code_owner_reviews":true}' \
-        --field restrictions='{"users":[],"teams":[]}'
+        --field restrictions='{"users":[],"teams":[]}"
     
     echo "Git Flow initialized successfully!"
 }
@@ -340,13 +342,13 @@ run_hotfix_tests() {
 }
 
 # Git Flow aliases for convenience
-alias gfi='git flow init'
-alias gfs='start_feature'
-alias gff='finish_feature'
-alias grs='start_release'
-alias grf='finish_release'
-alias ghs='start_hotfix'
-alias ghf='finish_hotfix'
+alias gfi='git flow init"
+alias gfs='start_feature"
+alias gff='finish_feature"
+alias grs='start_release"
+alias grf='finish_release"
+alias ghs='start_hotfix"
+alias ghf='finish_hotfix"
 ```
 
 ### GitHub Flow Implementation
@@ -499,11 +501,11 @@ cleanup_merged_branches() {
 }
 
 # GitHub Flow aliases
-alias gfb='create_feature_branch'
-alias gpr='create_pull_request'
-alias gpc='run_pr_checks'
-alias gpm='merge_pr'
-alias gcb='cleanup_merged_branches'
+alias gfb='create_feature_branch"
+alias gpr='create_pull_request"
+alias gpc='run_pr_checks"
+alias gpm='merge_pr"
+alias gcb='cleanup_merged_branches"
 ```
 
 ### Trunk-Based Development
@@ -631,9 +633,9 @@ run_fast_tests() {
 }
 
 # Trunk-based development aliases
-alias gtb='create_trunk_branch'
-alias gti='trunk_integrate'
-alias gff='create_feature_flag'
+alias gtb='create_trunk_branch"
+alias gti='trunk_integrate"
+alias gff='create_feature_flag"
 ```
 
 ### Advanced Merge Conflict Resolution
@@ -756,7 +758,7 @@ setup_merge_strategies() {
     git config merge.ours.driver true
     
     # Set up .gitattributes for different merge strategies
-    cat > .gitattributes << 'EOF'
+    cat > .gitattributes << 'EOF"
 # Database migrations - always use ours (current branch)
 **/migrations/*.sql merge=ours
 db/migrate/*.rb merge=ours
@@ -781,7 +783,7 @@ EOF
     
     # Configure merge tool preferences
     git config merge.tool vimdiff
-    git config mergetool.vimdiff.cmd 'vimdiff "$LOCAL" "$MERGED" "$REMOTE"'
+    git config mergetool.vimdiff.cmd 'vimdiff "$LOCAL" "$MERGED" "$REMOTE""
     git config mergetool.keepBackup false
     
     echo "✅ Merge strategies configured!"
@@ -845,10 +847,10 @@ smart_rebase() {
 }
 
 # Conflict resolution aliases
-alias gmc='check_merge_conflicts'
-alias grc='resolve_conflicts'
-alias gsm='setup_merge_strategies'
-alias grb='smart_rebase'
+alias gmc='check_merge_conflicts"
+alias grc='resolve_conflicts"
+alias gsm='setup_merge_strategies"
+alias grb='smart_rebase"
 ```
 
 ### Git Hooks and Automation
@@ -864,7 +866,7 @@ install_git_hooks() {
     echo "Installing Git hooks..."
     
     # Pre-commit hook
-    cat > "$hooks_dir/pre-commit" << 'EOF'
+    cat > "$hooks_dir/pre-commit" << 'EOF"
 #!/bin/bash
 # Pre-commit hook for code quality checks
 
@@ -903,11 +905,11 @@ echo "✅ Pre-commit checks passed!"
 EOF
 
     # Commit message hook
-    cat > "$hooks_dir/commit-msg" << 'EOF'
+    cat > "$hooks_dir/commit-msg" << 'EOF"
 #!/bin/bash
 # Commit message format validation
 
-commit_regex='^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\(.+\))?: .{1,50}'
+commit_regex='^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\(.+\))?: .{1,50}"
 error_msg="❌ Invalid commit message format!
 
 Format: type(scope): description
@@ -926,7 +928,7 @@ echo "✅ Commit message format is valid!"
 EOF
 
     # Pre-push hook
-    cat > "$hooks_dir/pre-push" << 'EOF'
+    cat > "$hooks_dir/pre-push" << 'EOF"
 #!/bin/bash
 # Pre-push hook for comprehensive testing
 
@@ -963,7 +965,7 @@ echo "✅ Pre-push checks passed!"
 EOF
 
     # Post-commit hook
-    cat > "$hooks_dir/post-commit" << 'EOF'
+    cat > "$hooks_dir/post-commit" << 'EOF"
 #!/bin/bash
 # Post-commit hook for notifications and cleanup
 
@@ -1013,10 +1015,10 @@ setup_git_secrets() {
     git secrets --register-aws
     
     # Add custom patterns
-    git secrets --add 'password\s*=\s*[^\s]+'
-    git secrets --add 'api[_-]?key\s*=\s*[^\s]+'
-    git secrets --add 'secret[_-]?key\s*=\s*[^\s]+'
-    git secrets --add 'private[_-]?key\s*=\s*[^\s]+'
+    git secrets --add 'password\s*=\s*[^\s]+"
+    git secrets --add 'api[_-]?key\s*=\s*[^\s]+"
+    git secrets --add 'secret[_-]?key\s*=\s*[^\s]+"
+    git secrets --add 'private[_-]?key\s*=\s*[^\s]+"
     
     echo "✅ git-secrets configured with common patterns!"
 }
@@ -1054,9 +1056,9 @@ EOF
 }
 
 # Git hook aliases
-alias gih='install_git_hooks'
-alias gis='setup_git_secrets'
-alias gcl='generate_changelog'
+alias gih='install_git_hooks"
+alias gis='setup_git_secrets"
+alias gcl='generate_changelog"
 ```
 
 <function_calls>

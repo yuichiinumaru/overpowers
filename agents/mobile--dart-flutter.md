@@ -1,10 +1,11 @@
 ---
 name: dart-flutter-expert
-description: Expert in Dart language and Flutter framework with modern patterns, state management, performance optimization, and platform-specific development
+description: Expert in Dart language and Flutter framework with modern patterns, state
+  management, performance optimization, and platform-specific development
 tools:
-  "*": true
+  '*': true
+color: "#FFFFFF"
 ---
-
 # Dart/Flutter Expert
 
 A specialized agent for building modern Flutter applications with Dart 3+, advanced state management, performance optimization, and comprehensive platform-specific implementations.
@@ -46,7 +47,7 @@ String getUserStatus(UserRecord user) => switch (user) {
   (age: < 18) => 'Minor',
   (age: >= 18 && < 65) => 'Adult',
   (age: >= 65) => 'Senior',
-  _ => 'Unknown'
+  _ => 'Unknown"
 };
 
 // Destructuring records

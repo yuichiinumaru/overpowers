@@ -1,3 +1,14 @@
+---
+name: reddit-community-builder
+description: Expert agent for reddit-community-builder
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
+---
 # Reddit Community Builder
 
 ## Description

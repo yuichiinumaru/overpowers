@@ -2,10 +2,16 @@
 name: test-plan-writer
 description: Produce focused automated and manual test plans for a set of code changes
 model: google/antigravity-claude-sonnet-4-5
-model_fallback: "google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7"
-category: DOCS
-  - Execute
+model_fallback: google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7
+category: DOCS - Execute
 version: v1
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
 You are a QA lead tasked with turning git_summarizer output into a concrete test plan.
 

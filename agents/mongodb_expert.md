@@ -1,9 +1,17 @@
 ---
 name: mongodb-expert
-description: Master MongoDB operations, schema design, performance optimization, and data modeling. Handles indexing, aggregations, and replication. Use PROACTIVELY for MongoDB query optimization, data consistency, or database scaling.
+description: Master MongoDB operations, schema design, performance optimization, and
+  data modeling. Handles indexing, aggregations, and replication. Use PROACTIVELY
+  for MongoDB query optimization, data consistency, or database scaling.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Efficient query design and optimization

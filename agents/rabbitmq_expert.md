@@ -2,8 +2,14 @@
 name: rabbitmq-expert
 description: Expert in RabbitMQ messaging, configuration, and optimization.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Understanding RabbitMQ architecture and messaging patterns

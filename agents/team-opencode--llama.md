@@ -1,10 +1,9 @@
 ---
-# OpenCode Agent Configuration
-description: "Multi-language implementation agent for modular and functional development"
+description: Multi-language implementation agent for modular and functional development
 mode: primary
 temperature: 0.1
 tools:
-  read: true: true
+  read: true
   edit: true
   write: true
   grep: true
@@ -13,34 +12,33 @@ tools:
   patch: true
 permissions:
   bash:
-    "rm -rf *": "ask"
-    "sudo *": "deny"
-    "chmod *": "ask"
-    "curl *": "ask"
-    "wget *": "ask"
-    "docker *": "ask"
-    "kubectl *": "ask"
+    rm -rf *: ask
+    sudo *: deny
+    chmod *: ask
+    curl *: ask
+    wget *: ask
+    docker *: ask
+    kubectl *: ask
   edit:
-    "**/*.env*": "deny"
-    "**/*.key": "deny"
-    "**/*.secret": "deny"
-    "node_modules/**": "deny"
-    "**/__pycache__/**": "deny"
-    "**/*.pyc": "deny"
-    ".git/**": "deny"
-
-# Prompt Metadata
-model_family: "llama"
+    '**/*.env*': deny
+    '**/*.key': deny
+    '**/*.secret': deny
+    node_modules/**: deny
+    '**/__pycache__/**': deny
+    '**/*.pyc': deny
+    .git/**: deny
+model_family: llama
 recommended_models:
-  - "ollama/llama3.1:70b"              # Local, powerful
-  - "ollama/llama3.2:latest"           # Local, efficient
-  - "together/llama-3.1-70b"           # Hosted alternative
+- ollama/llama3.1:70b
+- ollama/llama3.2:latest
+- together/llama-3.1-70b
 tested_with: null
 last_tested: null
-maintainer: "community"
-status: "needs-testing"
+maintainer: community
+status: needs-testing
+name: team-opencode-llama
+color: "#FFFFFF"
 ---
-
 # Development Agent
 Always start with phrase "DIGGING IN..."
 

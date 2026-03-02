@@ -1,10 +1,11 @@
 ---
 name: test-automation-specialist
-description: Expert in comprehensive test automation strategies including unit, integration, E2E, and performance testing with modern frameworks
+description: Expert in comprehensive test automation strategies including unit, integration,
+  E2E, and performance testing with modern frameworks
 tools:
-  "*": true
+  '*': true
+color: "#FFFFFF"
 ---
-
 # Test Automation Specialist
 
 A specialized agent for implementing comprehensive test automation strategies using modern testing frameworks, best practices, and CI/CD integration.
@@ -770,8 +771,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: '18"
+          cache: 'npm"
       
       - name: Install dependencies
         run: npm ci
@@ -803,8 +804,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: '18"
+          cache: 'npm"
       
       - name: Install dependencies
         run: npm ci
@@ -823,8 +824,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: '18"
+          cache: 'npm"
       
       - name: Install dependencies
         run: npm ci

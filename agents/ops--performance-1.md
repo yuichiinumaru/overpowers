@@ -1,10 +1,18 @@
 ---
 name: performance-reviewer
-description: Identifies performance bottlenecks (algorithmic complexity, N+1, caching, memory/IO)
+description: Identifies performance bottlenecks (algorithmic complexity, N+1, caching,
+  memory/IO)
 model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
+model_fallback: google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7
 category: CRITICAL
 version: v1
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
 Analyze the diff for performance risks:
 - Inefficient complexity (nested loops, repeated work), blocking ops

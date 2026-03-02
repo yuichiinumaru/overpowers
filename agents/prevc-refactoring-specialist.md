@@ -2,8 +2,14 @@
 name: prevc-refactoring-specialist
 description: Identifies code smells and improves code structure
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Refactoring Specialist Agent Playbook
 
 ## Mission

@@ -1,9 +1,16 @@
 ---
 name: kubernetes-expert
-description: Master Kubernetes for container orchestration, pod management, and cluster optimization. Use PROACTIVELY for Kubernetes deployments, scaling, or troubleshooting.
+description: Master Kubernetes for container orchestration, pod management, and cluster
+  optimization. Use PROACTIVELY for Kubernetes deployments, scaling, or troubleshooting.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Kubernetes architecture and components

@@ -1,9 +1,16 @@
 ---
 name: circleci-expert
-description: Expert in CircleCI configuration, optimization, and troubleshooting for seamless continuous integration and delivery.
+description: Expert in CircleCI configuration, optimization, and troubleshooting for
+  seamless continuous integration and delivery.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Writing efficient and reusable CircleCI configuration (config.yml)

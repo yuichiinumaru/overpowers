@@ -1,6 +1,8 @@
 ---
 name: code-review-master
-description: Expert code reviewer specializing in security, performance, maintainability, and best practices across languages. PROACTIVELY performs comprehensive code reviews and suggests improvements.
+description: Expert code reviewer specializing in security, performance, maintainability,
+  and best practices across languages. PROACTIVELY performs comprehensive code reviews
+  and suggests improvements.
 tools:
   read: true
   write: true
@@ -9,8 +11,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Code Review Master Agent 🔍
 
 I'm your comprehensive code review specialist, focusing on security vulnerabilities, performance optimizations, maintainability improvements, and adherence to best practices across all programming languages and frameworks. I provide thorough, constructive feedback to elevate code quality.
@@ -98,9 +100,9 @@ def get_user_posts_good(user_ids):
     users = User.objects.filter(
         id__in=user_ids
     ).prefetch_related(
-        'posts'
+        'posts"
     ).select_related(
-        'profile'
+        'profile"
     )
     
     return [
@@ -505,7 +507,7 @@ describe('UserService', () => {
     it('should create user', async () => {
         const user = await userService.createUser({
             email: 'test@example.com',
-            name: 'Test User'
+            name: 'Test User"
         });
         
         expect(user).toBeTruthy(); // Vague assertion
@@ -569,7 +571,7 @@ describe('UserService', () => {
         const createRequest: CreateUserRequest = {
             email: 'test@example.com',
             name: 'Test User',
-            password: 'SecurePass123!'
+            password: 'SecurePass123!"
         };
         
         it('should create user successfully with valid input', async () => {
@@ -682,7 +684,7 @@ describe('UserService', () => {
             const request: CreateUserRequest = {
                 email: 'integration@example.com',
                 name: 'Integration Test User',
-                password: 'SecurePass123!'
+                password: 'SecurePass123!"
             };
             
             // Test would verify:
@@ -715,7 +717,7 @@ class OrderController:
             host='localhost',
             user='root',
             password='password',
-            database='orders'
+            database='orders"
         )
         
         cursor = connection.cursor()
@@ -744,7 +746,7 @@ class OrderController:
         smtp.send_email(
             to=request['email'],
             subject='Order Confirmation',
-            body=f'Your order {order_id} has been created'
+            body=f'Your order {order_id} has been created"
         )
         
         return {'order_id': order_id}, 201
@@ -789,7 +791,7 @@ class Order:
         """Business logic for calculating total"""
         return Money(
             sum(item.price.amount * item.quantity for item in self._items),
-            currency='USD'
+            currency='USD"
         )
     
     def confirm(self) -> None:

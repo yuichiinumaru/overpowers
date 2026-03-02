@@ -1,9 +1,16 @@
 ---
 name: keycloak-expert
-description: Keycloak specialist for identity and access management, realm configuration, and user federation.
+description: Keycloak specialist for identity and access management, realm configuration,
+  and user federation.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Understanding Keycloak architecture and components

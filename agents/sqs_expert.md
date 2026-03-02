@@ -1,4 +1,14 @@
-
+---
+name: sqs-expert
+description: Expert agent for sqs-expert
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
+---
     ---
     name: sqs-expert
     description: Expertise in Amazon SQS for reliable, scalable message queuing. 

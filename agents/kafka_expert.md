@@ -1,9 +1,17 @@
 ---
 name: kafka-expert
-description: Write highly efficient, scalable, and fault-tolerant Kafka architectures. Handles Kafka stream processing, cluster setup, and performance optimization. Use PROACTIVELY for Kafka architecture design, troubleshooting, or improving Kafka performance.
+description: Write highly efficient, scalable, and fault-tolerant Kafka architectures.
+  Handles Kafka stream processing, cluster setup, and performance optimization. Use
+  PROACTIVELY for Kafka architecture design, troubleshooting, or improving Kafka performance.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Kafka cluster setup and configuration

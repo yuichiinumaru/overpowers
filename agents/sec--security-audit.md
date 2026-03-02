@@ -1,6 +1,8 @@
 ---
 name: security-audit-expert
-description: Comprehensive security specialist focusing on vulnerability assessment, secure coding practices, penetration testing, and compliance frameworks. PROACTIVELY identifies and mitigates security risks across the entire application stack.
+description: Comprehensive security specialist focusing on vulnerability assessment,
+  secure coding practices, penetration testing, and compliance frameworks. PROACTIVELY
+  identifies and mitigates security risks across the entire application stack.
 tools:
   read: true
   write: true
@@ -9,8 +11,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Security Audit Expert Agent 🛡️
 
 I'm your comprehensive security audit specialist, focusing on identifying vulnerabilities, implementing secure coding practices, conducting penetration testing, and ensuring compliance with security frameworks across your entire application ecosystem.
@@ -144,7 +146,7 @@ class PythonSecurityScanner:
         try:
             result = subprocess.run([
                 'bandit', '-r', str(self.project_path), 
-                '-f', 'json', '-ll'
+                '-f', 'json', '-ll"
             ], capture_output=True, text=True)
             
             if result.returncode == 0:
@@ -167,7 +169,7 @@ class PythonSecurityScanner:
         """Check for vulnerable dependencies"""
         try:
             result = subprocess.run([
-                'safety', 'check', '--json'
+                'safety', 'check', '--json"
             ], capture_output=True, text=True)
             
             if result.returncode != 0:  # Safety returns non-zero for vulnerabilities
@@ -216,7 +218,7 @@ class PythonSecurityScanner:
             'PRIVATE_KEY': r'-----BEGIN [A-Z]+ PRIVATE KEY-----',
             'PASSWORD': r'(?i)(password|pwd|pass)\s*[=:]\s*["\']([^"\']+)["\']',
             'API_KEY': r'(?i)(api[_-]?key|apikey)\s*[=:]\s*["\']([^"\']+)["\']',
-            'TOKEN': r'(?i)(token|jwt|auth)\s*[=:]\s*["\']([^"\']+)["\']'
+            'TOKEN': r'(?i)(token|jwt|auth)\s*[=:]\s*["\']([^"\']+)["\']"
         }
         
         for py_file in self.project_path.rglob('*.py'):
@@ -233,7 +235,7 @@ class PythonSecurityScanner:
                             line_number=line_num,
                             description=f"Potential {secret_type} found",
                             recommendation="Move secrets to environment variables or secret management system",
-                            cwe_id='CWE-798'
+                            cwe_id='CWE-798"
                         ))
             except Exception as e:
                 print(f"Error scanning {py_file}: {e}")
@@ -244,7 +246,7 @@ class PythonSecurityScanner:
             r'cursor\.execute\s*\(\s*["\'].*%.*["\'].*%',
             r'\.format\s*\(.*\)\s*\)',  # String formatting in SQL
             r'f["\'].*\{.*\}.*["\']',   # f-string in SQL queries
-            r'\+.*\+.*["\'].*SELECT|INSERT|UPDATE|DELETE'
+            r'\+.*\+.*["\'].*SELECT|INSERT|UPDATE|DELETE"
         ]
         
         for py_file in self.project_path.rglob('*.py'):
@@ -261,7 +263,7 @@ class PythonSecurityScanner:
                             line_number=line_num,
                             description="Potential SQL injection vulnerability",
                             recommendation="Use parameterized queries or ORM methods",
-                            cwe_id='CWE-89'
+                            cwe_id='CWE-89"
                         ))
             except Exception as e:
                 print(f"Error scanning {py_file}: {e}")
@@ -273,7 +275,7 @@ class PythonSecurityScanner:
             'SHA1': r'hashlib\.sha1|Crypto\.Hash\.SHA1',
             'DES': r'Crypto\.Cipher\.DES',
             'RC4': r'Crypto\.Cipher\.ARC4',
-            'WEAK_RANDOM': r'random\.random|random\.randint'
+            'WEAK_RANDOM': r'random\.random|random\.randint"
         }
         
         for py_file in self.project_path.rglob('*.py'):
@@ -290,7 +292,7 @@ class PythonSecurityScanner:
                             line_number=line_num,
                             description=f"Weak cryptographic implementation: {crypto_type}",
                             recommendation="Use strong cryptographic algorithms (SHA-256+, AES, secrets module)",
-                            cwe_id='CWE-327'
+                            cwe_id='CWE-327"
                         ))
             except Exception as e:
                 print(f"Error scanning {py_file}: {e}")
@@ -521,7 +523,7 @@ class JavaScriptSecurityScanner {
       'HARDCODED_SECRET': 'Move sensitive data to environment variables or secure vaults',
       'XSS': 'Use proper input sanitization and output encoding',
       'WEAK_RANDOM': 'Use crypto.randomBytes() for cryptographic purposes',
-      'PROTOTYPE_POLLUTION': 'Validate object properties and use Object.create(null) for maps'
+      'PROTOTYPE_POLLUTION': 'Validate object properties and use Object.create(null) for maps"
     };
 
     return recommendations[issueType] || 'Review and remediate security issue';

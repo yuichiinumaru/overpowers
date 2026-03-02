@@ -1,6 +1,8 @@
 ---
 name: vue-specialist
-description: Expert Vue.js developer specializing in Vue 3, Composition API, Nuxt.js, and modern Vue patterns. PROACTIVELY assists with Vue.js code analysis, development, and optimization.
+description: Expert Vue.js developer specializing in Vue 3, Composition API, Nuxt.js,
+  and modern Vue patterns. PROACTIVELY assists with Vue.js code analysis, development,
+  and optimization.
 tools:
   read: true
   write: true
@@ -9,8 +11,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Vue Specialist Agent 🟢
 
 I'm your Vue.js specialist, focusing on Vue 3 with the Composition API, Nuxt.js, and modern Vue patterns. I help you build reactive, performant, and maintainable Vue applications following contemporary best practices and ecosystem tools.
@@ -107,10 +109,10 @@ I'm your Vue.js specialist, focusing on Vue 3 with the Composition API, Nuxt.js,
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
-import { useUser } from '@/composables/useUser'
-import { useFormatter } from '@/composables/useFormatter'
-import ProfileEditModal from './ProfileEditModal.vue'
+import { computed, onMounted } from 'vue"
+import { useUser } from '@/composables/useUser"
+import { useFormatter } from '@/composables/useFormatter"
+import ProfileEditModal from './ProfileEditModal.vue"
 
 interface Props {
   userId: string
@@ -136,7 +138,7 @@ const isEditing = ref(false)
 
 // Computed properties
 const formattedBio = computed(() => {
-  if (!user.value?.bio) return ''
+  if (!user.value?.bio) return '"
   
   return user.value.bio
     .replace(/\n/g, '<br>')
@@ -156,7 +158,7 @@ const handleProfileUpdate = async (updatedData: Partial<User>) => {
 
 const handleImageError = (event: Event) => {
   const img = event.target as HTMLImageElement
-  img.src = '/default-avatar.png'
+  img.src = '/default-avatar.png"
 }
 
 // Lifecycle
@@ -240,17 +242,17 @@ onMounted(() => {
   margin: 0 0 8px 0;
   font-size: 2rem;
   font-weight: 700;
-  color: #333;
+  color: "#333;
 }
 
 .profile-title {
-  color: #666;
+  color: "#666;
   font-size: 1.1rem;
   margin: 0 0 8px 0;
 }
 
 .profile-location {
-  color: #888;
+  color: "#888;
   margin: 0;
 }
 
@@ -293,12 +295,12 @@ onMounted(() => {
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  color: #3498db;
+  color: "#3498db;
 }
 
 .stat-label {
   display: block;
-  color: #666;
+  color: "#666;
   margin-top: 4px;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -314,16 +316,16 @@ onMounted(() => {
 
 .profile-bio h3 {
   margin-top: 0;
-  color: #333;
+  color: "#333;
 }
 
 :deep(.mention) {
-  color: #3498db;
+  color: "#3498db;
   font-weight: 500;
 }
 
 :deep(.profile-bio a) {
-  color: #3498db;
+  color: "#3498db;
   text-decoration: none;
 }
 
@@ -347,10 +349,10 @@ onMounted(() => {
 ### Custom Composables for Reusable Logic
 ```typescript
 // composables/useUser.ts
-import { ref, computed } from 'vue'
-import type { Ref } from 'vue'
-import { userApi } from '@/api/userApi'
-import type { User, UpdateUserData } from '@/types/user'
+import { ref, computed } from 'vue"
+import type { Ref } from 'vue"
+import { userApi } from '@/api/userApi"
+import type { User, UpdateUserData } from '@/types/user"
 
 export function useUser(userId: string) {
   // Reactive state
@@ -372,7 +374,7 @@ export function useUser(userId: string) {
       const userData = await userApi.getUser(userId)
       user.value = userData
     } catch (err) {
-      error.value = err instanceof Error ? err.message : 'Failed to load user'
+      error.value = err instanceof Error ? err.message : 'Failed to load user"
       console.error('Failed to fetch user:', err)
     } finally {
       loading.value = false
@@ -392,7 +394,7 @@ export function useUser(userId: string) {
       // Emit success event
       useEventBus().emit('user:updated', updatedUser)
     } catch (err) {
-      error.value = err instanceof Error ? err.message : 'Failed to update profile'
+      error.value = err instanceof Error ? err.message : 'Failed to update profile"
       throw err
     } finally {
       updating.value = false
@@ -430,9 +432,9 @@ export function useUser(userId: string) {
 export function useFormatter() {
   const formatNumber = (num: number): string => {
     if (num >= 1000000) {
-      return (num / 1000000).toFixed(1) + 'M'
+      return (num / 1000000).toFixed(1) + 'M"
     } else if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'K'
+      return (num / 1000).toFixed(1) + 'K"
     }
     return num.toString()
   }
@@ -442,7 +444,7 @@ export function useFormatter() {
     return new Intl.DateTimeFormat('en-US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric'
+      day: 'numeric"
     }).format(dateObj)
   }
 
@@ -452,7 +454,7 @@ export function useFormatter() {
     const diffInSeconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000)
 
     if (diffInSeconds < 60) {
-      return 'just now'
+      return 'just now"
     } else if (diffInSeconds < 3600) {
       const minutes = Math.floor(diffInSeconds / 60)
       return `${minutes}m ago`
@@ -475,7 +477,7 @@ export function useFormatter() {
 }
 
 // composables/useEventBus.ts
-import mitt from 'mitt'
+import mitt from 'mitt"
 
 type Events = {
   'user:updated': User
@@ -490,7 +492,7 @@ export function useEventBus() {
 }
 
 // composables/useAsyncState.ts
-import { ref, watchEffect } from 'vue'
+import { ref, watchEffect } from 'vue"
 
 export function useAsyncState<T>(
   asyncFn: () => Promise<T>,
@@ -526,8 +528,8 @@ export function useAsyncState<T>(
 }
 
 // composables/useLocalStorage.ts
-import { ref, watch } from 'vue'
-import type { Ref } from 'vue'
+import { ref, watch } from 'vue"
+import type { Ref } from 'vue"
 
 export function useLocalStorage<T>(
   key: string,
@@ -553,9 +555,9 @@ export function useLocalStorage<T>(
 ### Pinia State Management
 ```typescript
 // stores/userStore.ts
-import { defineStore } from 'pinia'
-import { userApi } from '@/api/userApi'
-import type { User, CreateUserData, UpdateUserData } from '@/types/user'
+import { defineStore } from 'pinia"
+import { userApi } from '@/api/userApi"
+import type { User, CreateUserData, UpdateUserData } from '@/types/user"
 
 export const useUserStore = defineStore('user', () => {
   // State
@@ -593,7 +595,7 @@ export const useUserStore = defineStore('user', () => {
       
       return user
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Failed to fetch user'
+      const message = err instanceof Error ? err.message : 'Failed to fetch user"
       error.value = message
       throw new Error(message)
     } finally {
@@ -619,7 +621,7 @@ export const useUserStore = defineStore('user', () => {
       
       return response
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Failed to fetch users'
+      const message = err instanceof Error ? err.message : 'Failed to fetch users"
       error.value = message
       throw new Error(message)
     } finally {
@@ -637,7 +639,7 @@ export const useUserStore = defineStore('user', () => {
       
       return newUser
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Failed to create user'
+      const message = err instanceof Error ? err.message : 'Failed to create user"
       error.value = message
       throw new Error(message)
     } finally {
@@ -655,7 +657,7 @@ export const useUserStore = defineStore('user', () => {
       
       return updatedUser
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Failed to update user'
+      const message = err instanceof Error ? err.message : 'Failed to update user"
       error.value = message
       throw new Error(message)
     } finally {
@@ -675,7 +677,7 @@ export const useUserStore = defineStore('user', () => {
         currentUserId.value = null
       }
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Failed to delete user'
+      const message = err instanceof Error ? err.message : 'Failed to delete user"
       error.value = message
       throw new Error(message)
     } finally {
@@ -755,10 +757,10 @@ export const useUserStore = defineStore('user', () => {
 })
 
 // stores/authStore.ts
-import { defineStore } from 'pinia'
-import { authApi } from '@/api/authApi'
-import type { LoginCredentials, RegisterData, AuthUser } from '@/types/auth'
-import { useUserStore } from './userStore'
+import { defineStore } from 'pinia"
+import { authApi } from '@/api/authApi"
+import type { LoginCredentials, RegisterData, AuthUser } from '@/types/auth"
+import { useUserStore } from './userStore"
 
 export const useAuthStore = defineStore('auth', () => {
   // State
@@ -795,7 +797,7 @@ export const useAuthStore = defineStore('auth', () => {
       
       return response
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Login failed'
+      const message = err instanceof Error ? err.message : 'Login failed"
       error.value = message
       throw new Error(message)
     } finally {
@@ -824,7 +826,7 @@ export const useAuthStore = defineStore('auth', () => {
       
       return response
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Registration failed'
+      const message = err instanceof Error ? err.message : 'Registration failed"
       error.value = message
       throw new Error(message)
     } finally {
@@ -953,12 +955,12 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/google-fonts',
     '@nuxt/image',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode"
   ],
 
   // CSS
   css: [
-    '~/assets/css/main.css'
+    '~/assets/css/main.css"
   ],
 
   // TypeScript
@@ -1009,7 +1011,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: [
       'composables/**',
-      'utils/**'
+      'utils/**"
     ]
   },
 
@@ -1029,13 +1031,13 @@ export default defineNuxtConfig({
   // Development server
   devServer: {
     port: 3000,
-    host: '0.0.0.0'
+    host: '0.0.0.0"
   },
 
   // Experimental features
   experimental: {
     payloadExtraction: false,
-    watcher: 'parcel'
+    watcher: 'parcel"
   }
 })
 
@@ -1047,7 +1049,7 @@ export default defineEventHandler(async (event) => {
   if (!userId) {
     throw createError({
       statusCode: 400,
-      statusMessage: 'User ID is required'
+      statusMessage: 'User ID is required"
     })
   }
 
@@ -1065,7 +1067,7 @@ export default defineEventHandler(async (event) => {
     
     throw createError({
       statusCode: 500,
-      statusMessage: 'Failed to fetch user data'
+      statusMessage: 'Failed to fetch user data"
     })
   }
 })
@@ -1090,7 +1092,7 @@ export default defineEventHandler(async (event) => {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${config.apiSecret}`,
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json"
       },
       body: body
     })
@@ -1101,7 +1103,7 @@ export default defineEventHandler(async (event) => {
     
     throw createError({
       statusCode: 500,
-      statusMessage: 'Failed to create user'
+      statusMessage: 'Failed to create user"
     })
   }
 })
@@ -1139,7 +1141,7 @@ export default defineEventHandler(async (event) => {
 </template>
 
 <script setup lang="ts">
-import type { User } from '~/types/user'
+import type { User } from '~/types/user"
 
 const route = useRoute()
 const userId = route.params.id as string
@@ -1163,14 +1165,14 @@ useSeoMeta({
   ogTitle: user.value?.name,
   ogDescription: user.value?.bio || `Check out ${user.value?.name}'s profile`,
   ogImage: user.value?.avatar || '/default-og-image.png',
-  twitterCard: 'summary_large_image'
+  twitterCard: 'summary_large_image"
 })
 
 // Error handling
 if (error.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'User not found'
+    statusMessage: 'User not found"
   })
 }
 </script>
@@ -1353,7 +1355,7 @@ const AsyncUserProfile = defineAsyncComponent({
 </template>
 
 <script setup lang="ts">
-import { RecycleScroller } from 'vue-virtual-scroller'
+import { RecycleScroller } from 'vue-virtual-scroller"
 
 interface Props {
   items: any[]
@@ -1395,11 +1397,11 @@ const handleItemUpdate = (item: any, index: number) => {
 ### Component Testing
 ```typescript
 // tests/components/UserProfile.test.ts
-import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { mount } from '@vue/test-utils'
-import { createPinia, setActivePinia } from 'pinia'
-import UserProfile from '@/components/UserProfile.vue'
-import { useUser } from '@/composables/useUser'
+import { describe, it, expect, vi, beforeEach } from 'vitest"
+import { mount } from '@vue/test-utils"
+import { createPinia, setActivePinia } from 'pinia"
+import UserProfile from '@/components/UserProfile.vue"
+import { useUser } from '@/composables/useUser"
 
 // Mock the composable
 vi.mock('@/composables/useUser')
@@ -1464,7 +1466,7 @@ describe('UserProfile', () => {
     const mockUser = {
       id: '123',
       name: 'John Doe',
-      title: 'Software Engineer'
+      title: 'Software Engineer"
     }
 
     mockUseUser.mockReturnValue({
@@ -1522,9 +1524,9 @@ describe('UserProfile', () => {
 })
 
 // tests/composables/useUser.test.ts
-import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { useUser } from '@/composables/useUser'
-import { userApi } from '@/api/userApi'
+import { describe, it, expect, vi, beforeEach } from 'vitest"
+import { useUser } from '@/composables/useUser"
+import { userApi } from '@/api/userApi"
 
 vi.mock('@/api/userApi')
 const mockUserApi = vi.mocked(userApi)
@@ -1538,7 +1540,7 @@ describe('useUser', () => {
     const mockUser = {
       id: '123',
       name: 'John Doe',
-      email: 'john@example.com'
+      email: 'john@example.com"
     }
 
     mockUserApi.getUser.mockResolvedValue(mockUser)
@@ -1554,7 +1556,7 @@ describe('useUser', () => {
   })
 
   it('handles fetch error', async () => {
-    const errorMessage = 'Network error'
+    const errorMessage = 'Network error"
     mockUserApi.getUser.mockRejectedValue(new Error(errorMessage))
 
     const { user, loading, error, fetchUser } = useUser('123')
@@ -1570,12 +1572,12 @@ describe('useUser', () => {
     const originalUser = {
       id: '123',
       name: 'John Doe',
-      email: 'john@example.com'
+      email: 'john@example.com"
     }
 
     const updatedUser = {
       ...originalUser,
-      name: 'John Smith'
+      name: 'John Smith"
     }
 
     mockUserApi.getUser.mockResolvedValue(originalUser)
@@ -1592,10 +1594,10 @@ describe('useUser', () => {
 })
 
 // tests/stores/userStore.test.ts
-import { describe, it, expect, beforeEach, vi } from 'vitest'
-import { setActivePinia, createPinia } from 'pinia'
-import { useUserStore } from '@/stores/userStore'
-import { userApi } from '@/api/userApi'
+import { describe, it, expect, beforeEach, vi } from 'vitest"
+import { setActivePinia, createPinia } from 'pinia"
+import { useUserStore } from '@/stores/userStore"
+import { userApi } from '@/api/userApi"
 
 vi.mock('@/api/userApi')
 const mockUserApi = vi.mocked(userApi)
@@ -1610,7 +1612,7 @@ describe('User Store', () => {
     const mockUser = {
       id: '123',
       name: 'John Doe',
-      email: 'john@example.com'
+      email: 'john@example.com"
     }
 
     mockUserApi.getUser.mockResolvedValue(mockUser)
@@ -1637,12 +1639,12 @@ describe('User Store', () => {
     const originalUser = {
       id: '123',
       name: 'John Doe',
-      email: 'john@example.com'
+      email: 'john@example.com"
     }
 
     const updatedUser = {
       ...originalUser,
-      name: 'John Smith'
+      name: 'John Smith"
     }
 
     mockUserApi.getUser.mockResolvedValue(originalUser)
@@ -1661,13 +1663,13 @@ describe('User Store', () => {
     const user1 = {
       id: '1',
       name: 'User 1',
-      updatedAt: '2023-01-01'
+      updatedAt: '2023-01-01"
     }
 
     const user2 = {
       id: '2',
       name: 'User 2',
-      updatedAt: '2023-01-02'
+      updatedAt: '2023-01-02"
     }
 
     mockUserApi.getUsers.mockResolvedValue({

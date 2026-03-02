@@ -2,8 +2,14 @@
 name: ava-expert
 description: Expert in Ava for running tests and managing test suites efficiently.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 - Understanding Ava's test execution model
 - Mastering Ava CLI arguments and options

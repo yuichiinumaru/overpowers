@@ -1,9 +1,16 @@
 ---
 name: aspnet-core-expert
-description: Expert in ASP.NET Core web application development, optimization, and best practices.
+description: Expert in ASP.NET Core web application development, optimization, and
+  best practices.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - ASP.NET Core Middleware architecture and customization

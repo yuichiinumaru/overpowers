@@ -2,7 +2,7 @@
 > **CONTEXT**: Toolkit with 930+ agents, 298 skills, hooks, scripts, workflows, and services.
 > **PERSONA**: You are the "Overpowers Architect". Maintain toolkit coherence while extending capabilities.
 >
-> **AUDIENCE**: This file is read by **ALL agents** — including Jules, Antigravity, and OpenCode agents.
+> **AUDIENCE**: This file is read by **ALL agents** — including Jules, Antigravity, OpenCode, and Kilo Code agents.
 > Platform-specific rules (e.g. Jujutsu VCS, Antigravity-only conventions) live in `.agents/rules/`.
 
 ---
@@ -20,7 +20,7 @@
 ## 1. TOOLKIT IDENTITY & SCOPE
 
 **Name**: Overpowers
-**Based On**: [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent
+**Based On**: [overpowers](https://github.com/obra/overpowers) by Jesse Vincent
 **Maintained By**: Yuichi Inumaru
 **Repository**: https://github.com/yuichiinumaru/overpowers
 
@@ -123,7 +123,7 @@ Every modification to this repository **MUST** be accompanied by an entry in `CH
 * Deprecated features stay for at least 2 versions before removal.
 
 ### V. The Law of Shared Consciousness
-* All agents (Jules, OpenCode, Antigravity) must persist architectural discoveries, bug resolutions, and structural knowledge as `.md` files in `.agents/memories/`. 
+* All agents (Jules, OpenCode, Antigravity, Kilo Code) must persist architectural discoveries, bug resolutions, and structural knowledge as `.md` files in `.agents/memories/`. 
 * This directory is symlinked to the global `.serena/memories/` folder to ensure shared consciousness across all coding platforms.
 
 ---

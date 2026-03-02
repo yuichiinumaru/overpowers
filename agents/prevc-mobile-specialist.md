@@ -2,8 +2,14 @@
 name: prevc-mobile-specialist
 description: Develops mobile applications
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Mobile Specialist Agent Playbook
 
 ## Mission

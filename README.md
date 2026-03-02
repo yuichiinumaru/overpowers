@@ -2,11 +2,11 @@
 
 # Overpowers 🚀
 
-**Overpowers** is a consolidated, opinionated, and massively expanded toolkit for AI coding assistants. Built upon the foundation of [Superpowers](https://github.com/obra/superpowers) by [Jesse Vincent](https://github.com/obra), it centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, highly capable repository.
+**Overpowers** is a consolidated, opinionated, and massively expanded toolkit for AI coding assistants. Built upon the foundation of [overpowers](https://github.com/obra/overpowers) by [Jesse Vincent](https://github.com/obra), it centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, highly capable repository.
 
-Works with **OpenCode**, **Gemini CLI**, and **Google Antigravity** out of the box.
+Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, and **Kilo Code** out of the box.
 
-> **Note**: This is a fork with curated integrations, personal touches, and additional components based on my own workflow. The original Superpowers is an excellent starting point — this version adds opinionated expansions.
+> **Note**: This is a fork with curated integrations, personal touches, and additional components based on my own workflow. The original overpowers is an excellent starting point — this version adds opinionated expansions.
 
 ## 📊 Inventory
 
@@ -45,6 +45,7 @@ The interactive installer will ask which platforms you want to deploy to:
 | **OpenCode** | agents, skills, commands, hooks, AGENTS.md | `~/.config/opencode/` |
 | **Gemini CLI** | skills, hooks, GEMINI.md | `~/.gemini/` |
 | **Antigravity** | skills, workflows | `~/.gemini/antigravity/` |
+| **Kilo Code** | skills, workflows, rules | `~/.kilocode/` |
 
 It also optionally installs **MCP servers** across all platforms with an interactive `.env` configuration wizard.
 
@@ -72,6 +73,7 @@ overpowers/
 │   ├── deploy-to-opencode.sh     # Symlink to OpenCode
 │   ├── deploy-to-gemini-cli.sh   # Symlink to Gemini CLI
 │   ├── deploy-to-antigravity.sh  # Symlink to Antigravity
+│   ├── deploy-to-kilo.sh         # Symlink to Kilo Code
 │   ├── install-mcps.sh           # Unified MCP installer
 │   └── install-plugins.sh        # Community plugin installer
 ├── services/                 # 13 external service configs
@@ -93,8 +95,9 @@ overpowers/
 |--------|---------|
 | `install.sh` | Master installer — orchestrates all deploys + MCPs |
 | `scripts/deploy-to-opencode.sh` | Symlinks agents, skills, commands, hooks → `~/.config/opencode/` |
-| `skills/vercel-deploy/scripts/deploy-to-gemini-cli.sh` | Symlinks skills, hooks, AGENTS.md → `~/.gemini/` |
+| `scripts/deploy-to-gemini-cli.sh` | Symlinks skills, hooks, AGENTS.md → `~/.gemini/` |
 | `scripts/deploy-to-antigravity.sh` | Symlinks skills, workflows → `~/.gemini/antigravity/` |
+| `scripts/deploy-to-kilo.sh` | Symlinks skills, workflows, rules → `~/.kilocode/` |
 
 ### Configuration Scripts
 
@@ -204,8 +207,8 @@ echo "Workflows: $(find workflows/ -name '*.md' | wc -l)"
 
 ## 🙏 Credits & Attribution
 
-### Original Superpowers
-Based on [**Superpowers**](https://github.com/obra/superpowers) by **Jesse Vincent** ([@obra](https://github.com/obra)), an agentic skills framework and software development methodology.
+### Original overpowers
+Based on [**overpowers**](https://github.com/obra/overpowers) by **Jesse Vincent** ([@obra](https://github.com/obra)), an agentic skills framework and software development methodology.
 
 ### Additional Sources
 Components curated from various open-source projects including:
@@ -227,8 +230,8 @@ Contributions are welcome! Please:
 
 ## 📜 License
 
-MIT License — Based on [Superpowers](https://github.com/obra/superpowers) by Jesse Vincent. See [LICENSE](LICENSE) for details.
+MIT License — Based on [overpowers](https://github.com/obra/overpowers) by Jesse Vincent. See [LICENSE](LICENSE) for details.
 
 ---
 
-*Built with 💜 upon the foundation of Superpowers by Jesse Vincent*
+*Built with 💜 upon the foundation of overpowers by Jesse Vincent*

@@ -2,10 +2,16 @@
 name: pr-readiness-reviewer
 description: Assess branch readiness for pull request submission (tests, docs, blockers)
 model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
-category: CRITICAL
-  - Execute
+model_fallback: google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7
+category: CRITICAL - Execute
 version: v1
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
 You are a senior engineer verifying that a branch is ready for pull request submission. You will receive git_summarizer output and optional notes from the caller.
 

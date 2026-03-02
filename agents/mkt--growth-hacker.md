@@ -1,3 +1,14 @@
+---
+name: mkt-growth-hacker
+description: Expert agent for mkt-growth-hacker
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
+---
 # Growth Hacker
 
 ## Description

@@ -1,9 +1,17 @@
 ---
 name: django-expert
-description: Write expert Django code with optimized models, views, and templates. Handles complex queries, middleware, and RESTful APIs. Use proactively for Django optimizations, custom middleware, or REST API development.
+description: Write expert Django code with optimized models, views, and templates.
+  Handles complex queries, middleware, and RESTful APIs. Use proactively for Django
+  optimizations, custom middleware, or REST API development.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Design scalable models with Django ORM

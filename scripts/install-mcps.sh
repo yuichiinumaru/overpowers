@@ -24,16 +24,32 @@ ENV_FILE=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
+    -f|--fast)
+      FAST_MODE=1
+      shift
+      ;;
     --env)
       ENV_FILE="$2"
       shift 2
       ;;
     *)
-      # Ignore other args for now, let install.sh handle them primarily
       shift
       ;;
   esac
 done
+
+# --- Helper: expand relative paths to absolute ---
+expand_path() {
+  local p="$1"
+  # Expand ~ to $HOME
+  p="${p/#\~/$HOME}"
+  # Expand ./ to REPO_ROOT (set later, but called after)
+  if [[ "$p" == ./* ]]; then
+    p="${REPO_ROOT}${p:1}"
+  fi
+  echo "$p"
+}
+
 
 # --- Colors ---
 RED='\033[0;31m'
@@ -57,6 +73,18 @@ GEMINI_DIR="${HOME}/.gemini"
 GEMINI_SETTINGS="${GEMINI_DIR}/settings.json"
 ANTIGRAVITY_DIR="${HOME}/.gemini/antigravity"
 ANTIGRAVITY_MCP="${ANTIGRAVITY_DIR}/mcp_config.json"
+CURSOR_DIR="${HOME}/.cursor"
+CURSOR_MCP="${CURSOR_DIR}/mcp.json"
+WINDSURF_DIR="${HOME}/.codeium/windsurf"
+WINDSURF_MCP="${WINDSURF_DIR}/mcp_config.json"
+CLAUDE_CODE_JSON="${HOME}/.claude.json"
+CODEX_DIR="${HOME}/.codex"
+CODEX_TOML="${CODEX_DIR}/config.toml"
+KILO_DIR="${HOME}/.config/kilo"
+KILO_JSON="${KILO_DIR}/kilo.json"
+FACTORY_DIR="${HOME}/.factory"
+FACTORY_MCP="${FACTORY_DIR}/mcp.json"
+TEMPLATES_DIR="${REPO_ROOT}/scripts/templates"
 
 # Centralized .env location
 CENTRAL_ENV="${REPO_ROOT}/.env"
@@ -65,36 +93,65 @@ CENTRAL_ENV="${REPO_ROOT}/.env"
 # Banner
 # =============================================================================
 echo ""
-echo -e "${CYAN}╔═══════════════════════════════════════════════════════╗${NC}"
-echo -e "${CYAN}║  ${BOLD}Overpowers Unified MCP Server Installer${NC}${CYAN}              ║${NC}"
-echo -e "${CYAN}║  Installs MCPs to: OpenCode • Gemini CLI • Antigravity${NC}${CYAN}║${NC}"
-echo -e "${CYAN}╚═══════════════════════════════════════════════════════╝${NC}"
+echo -e "${CYAN}╔══════════════════════════════════════════════════════════════════╗${NC}"
+echo -e "${CYAN}║  ${BOLD}Overpowers Unified MCP Server Installer${NC}${CYAN}                         ║${NC}"
+echo -e "${CYAN}║  Supports: OpenCode • Antigravity • Cursor • Windsurf          ${CYAN}║${NC}"
+echo -e "${CYAN}║           Gemini CLI • Codex CLI • Claude Code • Kilo • Factory ${CYAN}║${NC}"
+echo -e "${CYAN}╚══════════════════════════════════════════════════════════════════╝${NC}"
 echo ""
 
 # =============================================================================
 # Step 1: Choose platforms
 # =============================================================================
+ALL_PLATFORMS=("opencode" "antigravity" "cursor" "windsurf" "gemini-cli" "codex" "claude-code" "kilo" "factory")
 declare -a PLATFORMS=()
 
 if [[ "${FAST_MODE:-0}" == "1" ]]; then
     echo -e "  ${CYAN}Running in FAST MODE. Auto-selecting all platforms.${NC}"
-    PLATFORMS=("opencode" "antigravity")
+    PLATFORMS=("${ALL_PLATFORMS[@]}")
 else
     echo -e "  ${BOLD}Which platforms do you want to install MCPs into?${NC}"
     echo ""
     echo -e "    ${GREEN}1)${NC} OpenCode       (${DIM}${OPENCODE_JSON}${NC})"
     echo -e "    ${GREEN}2)${NC} Antigravity    (${DIM}${ANTIGRAVITY_MCP}${NC})"
-    echo -e "    ${GREEN}3)${NC} All platforms"
+    echo -e "    ${GREEN}3)${NC} Cursor         (${DIM}${CURSOR_MCP}${NC})"
+    echo -e "    ${GREEN}4)${NC} Windsurf       (${DIM}${WINDSURF_MCP}${NC})"
+    echo -e "    ${GREEN}5)${NC} Gemini CLI     (${DIM}${GEMINI_SETTINGS}${NC})"
+    echo -e "    ${GREEN}6)${NC} Codex CLI      (${DIM}${CODEX_TOML}${NC}) ${DIM}[TOML]${NC}"
+    echo -e "    ${GREEN}7)${NC} Claude Code    (${DIM}${CLAUDE_CODE_JSON}${NC})"
+    echo -e "    ${GREEN}8)${NC} Kilo Code      (${DIM}${KILO_JSON}${NC})"
+    echo -e "    ${GREEN}9)${NC} Factory Droid  (${DIM}${FACTORY_MCP}${NC})"
+    echo -e "    ${GREEN}a)${NC} All platforms"
     echo -e "    ${GREEN}q)${NC} Quit"
     echo ""
-    read -rp "  Choose [1/2/3/q]: " platform_choice
+    read -rp "  Choose [1-9/a/q] (comma-separated for multiple): " platform_choice
 
     case "${platform_choice}" in
         1) PLATFORMS=("opencode") ;;
         2) PLATFORMS=("antigravity") ;;
-        3) PLATFORMS=("opencode" "antigravity") ;;
+        3) PLATFORMS=("cursor") ;;
+        4) PLATFORMS=("windsurf") ;;
+        5) PLATFORMS=("gemini-cli") ;;
+        6) PLATFORMS=("codex") ;;
+        7) PLATFORMS=("claude-code") ;;
+        8) PLATFORMS=("kilo") ;;
+        9) PLATFORMS=("factory") ;;
+        a|A) PLATFORMS=("${ALL_PLATFORMS[@]}") ;;
         q|Q) echo "Bye!"; exit 0 ;;
-        *) echo "Invalid choice"; exit 1 ;;
+        *)
+            # Parse comma-separated choices
+            IFS=',' read -ra choices <<< "${platform_choice}"
+            for c in "${choices[@]}"; do
+                c="$(echo "$c" | xargs)"  # trim whitespace
+                idx=$((c - 1))
+                if [[ $idx -ge 0 && $idx -lt ${#ALL_PLATFORMS[@]} ]]; then
+                    PLATFORMS+=("${ALL_PLATFORMS[$idx]}")
+                fi
+            done
+            if [[ ${#PLATFORMS[@]} -eq 0 ]]; then
+                echo "Invalid choice"; exit 1
+            fi
+            ;;
     esac
 fi
 
@@ -239,7 +296,7 @@ if [[ "${FAST_MODE:-0}" == "0" && ( "${env_choice}" == "2" || ( ! -f "${CENTRAL_
         echo "# ============================================================================="
         echo ""
         for key in "${ALL_KEYS[@]}"; do
-            echo "${key}='${ENV_VALUES[${key}]:-}'"
+            echo "${key}=${ENV_VALUES[${key}]:-}"
         done
     } > "${CENTRAL_ENV}"
 
@@ -257,6 +314,10 @@ if [[ -f "${CENTRAL_ENV}" ]]; then
         key="${line%%=*}"
         val="${line#*=}"
         val="${val//\'/}"
+        # Expand relative paths (./packages/...) to absolute paths
+        if [[ "$val" == ./* ]]; then
+            val=$(expand_path "$val")
+        fi
         ENV_LOADED["${key}"]="${val}"
     done < "${CENTRAL_ENV}"
 fi
@@ -323,87 +384,153 @@ PYEOF
 
 # ========== ANTIGRAVITY ==========
 install_antigravity() {
-    echo -e "  ${CYAN}━━━ Antigravity ━━━${NC}"
-    mkdir -p "${ANTIGRAVITY_DIR}"
+    install_mcpservers_platform "Antigravity" "${ANTIGRAVITY_DIR}" "${ANTIGRAVITY_MCP}" "${TEMPLATES_DIR}/mcp-antigravity.json"
+}
 
-    if [[ ! -f "${ANTIGRAVITY_MCP}" ]]; then
-        echo '{"mcpServers": {}}' > "${ANTIGRAVITY_MCP}"
-        echo -e "  ${YELLOW}[!]${NC} Created new mcp_config.json"
+# ========== CURSOR ==========
+install_cursor() {
+    install_mcpservers_platform "Cursor" "${CURSOR_DIR}" "${CURSOR_MCP}" "${TEMPLATES_DIR}/mcp-cursor.json"
+}
+
+# ========== WINDSURF ==========
+install_windsurf() {
+    install_mcpservers_platform "Windsurf" "${WINDSURF_DIR}" "${WINDSURF_MCP}" "${TEMPLATES_DIR}/mcp-windsurf.json"
+}
+
+# ========== GEMINI CLI ==========
+install_gemini_cli() {
+    install_mcpservers_platform "Gemini CLI" "${GEMINI_DIR}" "${GEMINI_SETTINGS}" "${TEMPLATES_DIR}/mcp-gemini-cli.json"
+}
+
+# ========== CLAUDE CODE ==========
+install_claude_code() {
+    install_mcpservers_platform "Claude Code" "${HOME}" "${CLAUDE_CODE_JSON}" "${TEMPLATES_DIR}/mcp-claude-code.json"
+}
+
+# ========== KILO CODE ==========
+install_kilo() {
+    install_mcpservers_platform "Kilo Code" "${KILO_DIR}" "${KILO_JSON}" "${TEMPLATES_DIR}/mcp-kilo.json"
+}
+
+# ========== FACTORY DROID ==========
+install_factory() {
+    install_mcpservers_platform "Factory Droid" "${FACTORY_DIR}" "${FACTORY_MCP}" "${TEMPLATES_DIR}/mcp-factory.json"
+}
+
+# ========== CODEX CLI (TOML) ==========
+install_codex() {
+    echo -e "  ${CYAN}━━━ Codex CLI ━━━${NC}"
+    mkdir -p "${CODEX_DIR}"
+    if [[ ! -f "${CODEX_TOML}" ]]; then
+        touch "${CODEX_TOML}"
+        echo -e "  ${YELLOW}[!]${NC} Created new config.toml"
     fi
+    # Codex uses TOML — expand env vars in template and append new servers
+    python3 - "${TEMPLATES_DIR}/mcp-codex.toml" "${CODEX_TOML}" "${CENTRAL_ENV}" << 'PYEOF'
+import sys, os, re
 
-    # Antigravity uses standard MCP format: command (string), args (array), env (object)
-    # OpenCode uses: command (array), environment (object)
-    # We need to translate from our opencode-example.json format
-    python3 - "${EXAMPLE_JSON}" "${ANTIGRAVITY_MCP}" "${CENTRAL_ENV}" << 'PYEOF'
-import json, sys, os
-
-with open(sys.argv[1]) as f:
-    example = json.load(f)
-
-with open(sys.argv[2]) as f:
-    target = json.load(f)
-
-src_mcps = example.get("mcp", {})
-
-extracted_path = os.path.join(os.path.dirname(sys.argv[1]), "extracted_user_mcps.json")
-if os.path.exists(extracted_path):
-    with open(extracted_path) as f:
-        user_mcps = json.load(f).get("mcp", {})
-        for name, config in user_mcps.items():
-            if name not in src_mcps:
-                src_mcps[name] = config
-
-# Load .env for resolving {env:VAR}
 env_vals = {}
 env_path = sys.argv[3]
 if os.path.exists(env_path):
     with open(env_path) as f:
         for line in f:
             line = line.strip()
-            if not line or line.startswith('#'):
-                continue
+            if not line or line.startswith('#'): continue
             key, _, val = line.partition('=')
-            env_vals[key] = val.strip("'\"")
+            env_vals[key.strip()] = val.strip("'\"")
 
 def resolve(val):
-    """Replace {env:VAR} with actual values."""
-    import re
-    def repl(m):
-        return env_vals.get(m.group(1), m.group(0))
-    return re.sub(r'\{env:(\w+)\}', repl, str(val))
+    return re.sub(r'\$\{(\w+)\}', lambda m: env_vals.get(m.group(1), m.group(0)), str(val))
 
-tgt_mcps = target.get("mcpServers", {})
+with open(sys.argv[1]) as f:
+    template = f.read()
 
-for name, config in src_mcps.items():
-    if name in tgt_mcps:
+with open(sys.argv[2]) as f:
+    existing = f.read()
+
+# Find which servers already exist
+existing_servers = set(re.findall(r'\[mcp_servers\.(\w[\w-]*)\]', existing))
+template_blocks = re.split(r'(?=^\[mcp_servers\.)', template, flags=re.MULTILINE)
+
+added = []
+for block in template_blocks:
+    m = re.match(r'\[mcp_servers\.(\w[\w-]*)\]', block)
+    if not m: continue
+    name = m.group(1)
+    if name in existing_servers:
         print(f"SKIP:{name}")
-        continue
+    else:
+        resolved_block = resolve(block)
+        existing += "\n" + resolved_block
+        print(f"ADD:{name}")
+        added.append(name)
 
-    # Translate OpenCode format -> standard MCP format
-    entry = {}
+if added:
+    with open(sys.argv[2], 'w') as f:
+        f.write(existing)
+PYEOF
+}
 
-    cmd_list = config.get("command", [])
-    if isinstance(cmd_list, list) and len(cmd_list) > 0:
-        entry["command"] = resolve(cmd_list[0])
-        if len(cmd_list) > 1:
-            entry["args"] = [resolve(a) for a in cmd_list[1:]]
-    elif isinstance(cmd_list, str):
-        entry["command"] = resolve(cmd_list)
+# ========== GENERIC mcpServers INSTALLER ==========
+# Used by: Antigravity, Cursor, Windsurf, Gemini CLI, Claude Code, Kilo, Factory
+install_mcpservers_platform() {
+    local label="$1" dir="$2" target_file="$3" template="$4"
+    echo -e "  ${CYAN}━━━ ${label} ━━━${NC}"
+    
+    if [[ ! -d "${dir}" ]]; then
+        mkdir -p "${dir}"
+        echo -e "  ${YELLOW}[!]${NC} Created directory: ${dir}"
+    fi
 
-    # Environment -> env
-    env_data = config.get("environment", {})
-    if env_data:
-        resolved_env = {}
-        for k, v in env_data.items():
-            resolved_env[k] = resolve(v)
-        entry["env"] = resolved_env
+    if [[ ! -f "${target_file}" ]]; then
+        echo '{"mcpServers": {}}' > "${target_file}"
+        echo -e "  ${YELLOW}[!]${NC} Created new $(basename "${target_file}")"
+    fi
 
-    tgt_mcps[name] = entry
-    print(f"ADD:{name}")
+    python3 - "${template}" "${target_file}" "${CENTRAL_ENV}" << 'PYEOF'
+import json, sys, os, re
 
-target["mcpServers"] = tgt_mcps
-with open(sys.argv[2], "w") as f:
-    json.dump(target, f, indent=2)
+try:
+    env_vals = {}
+    env_path = sys.argv[3]
+    if os.path.exists(env_path):
+        with open(env_path) as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith('#'): continue
+                key, _, val = line.partition('=')
+                env_vals[key.strip()] = val.strip("'\"")
+
+    def resolve(val):
+        return re.sub(r'\$\{(\w+)\}', lambda m: env_vals.get(m.group(1), m.group(0)), str(val))
+
+    def resolve_deep(obj):
+        if isinstance(obj, str): return resolve(obj)
+        if isinstance(obj, list): return [resolve_deep(i) for i in obj]
+        if isinstance(obj, dict): return {k: resolve_deep(v) for k, v in obj.items()}
+        return obj
+
+    with open(sys.argv[1]) as f:
+        template = json.load(f)
+    with open(sys.argv[2]) as f:
+        target = json.load(f)
+
+    src = template.get("mcpServers", {})
+    tgt = target.get("mcpServers", {})
+
+    for name, config in src.items():
+        if name in tgt:
+            print(f"SKIP:{name}")
+        else:
+            tgt[name] = resolve_deep(config)
+            print(f"ADD:{name}")
+
+    target["mcpServers"] = tgt
+    with open(sys.argv[2], "w") as f:
+        json.dump(target, f, indent=2)
+except Exception as e:
+    print(f"ERROR:{str(e)}")
+    sys.exit(1)
 PYEOF
 }
 
@@ -413,6 +540,13 @@ for platform in "${PLATFORMS[@]}"; do
     case "${platform}" in
         opencode)    RESULT="$(install_opencode 2>&1)" ;;
         antigravity) RESULT="$(install_antigravity 2>&1)" ;;
+        cursor)      RESULT="$(install_cursor 2>&1)" ;;
+        windsurf)    RESULT="$(install_windsurf 2>&1)" ;;
+        gemini-cli)  RESULT="$(install_gemini_cli 2>&1)" ;;
+        codex)       RESULT="$(install_codex 2>&1)" ;;
+        claude-code) RESULT="$(install_claude_code 2>&1)" ;;
+        kilo)        RESULT="$(install_kilo 2>&1)" ;;
+        factory)     RESULT="$(install_factory 2>&1)" ;;
     esac
 
     while IFS= read -r line; do
@@ -461,8 +595,15 @@ echo ""
 echo -e "  ${BOLD}Platform configs updated:${NC}"
 for platform in "${PLATFORMS[@]}"; do
     case "${platform}" in
-        opencode)    echo -e "    ${GREEN}✓${NC} OpenCode:    ${DIM}${OPENCODE_JSON}${NC}" ;;
-        antigravity) echo -e "    ${GREEN}✓${NC} Antigravity: ${DIM}${ANTIGRAVITY_MCP}${NC}" ;;
+        opencode)    echo -e "    ${GREEN}✓${NC} OpenCode:      ${DIM}${OPENCODE_JSON}${NC}" ;;
+        antigravity) echo -e "    ${GREEN}✓${NC} Antigravity:   ${DIM}${ANTIGRAVITY_MCP}${NC}" ;;
+        cursor)      echo -e "    ${GREEN}✓${NC} Cursor:        ${DIM}${CURSOR_MCP}${NC}" ;;
+        windsurf)    echo -e "    ${GREEN}✓${NC} Windsurf:      ${DIM}${WINDSURF_MCP}${NC}" ;;
+        gemini-cli)  echo -e "    ${GREEN}✓${NC} Gemini CLI:    ${DIM}${GEMINI_SETTINGS}${NC}" ;;
+        codex)       echo -e "    ${GREEN}✓${NC} Codex CLI:     ${DIM}${CODEX_TOML}${NC}" ;;
+        claude-code) echo -e "    ${GREEN}✓${NC} Claude Code:   ${DIM}${CLAUDE_CODE_JSON}${NC}" ;;
+        kilo)        echo -e "    ${GREEN}✓${NC} Kilo Code:     ${DIM}${KILO_JSON}${NC}" ;;
+        factory)     echo -e "    ${GREEN}✓${NC} Factory Droid: ${DIM}${FACTORY_MCP}${NC}" ;;
     esac
 done
 

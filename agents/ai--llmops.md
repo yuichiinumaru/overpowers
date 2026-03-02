@@ -1,3 +1,14 @@
+---
+name: ai-llmops
+description: Expert agent for ai-llmops
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
+---
 # LLMOps Engineer Agent
 
 ```yaml

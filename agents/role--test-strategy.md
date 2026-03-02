@@ -1,6 +1,8 @@
 ---
 name: test-strategy-architect
-description: Comprehensive testing expert specializing in test pyramid design, automation strategies, coverage analysis, and quality assurance frameworks. PROACTIVELY designs and implements testing strategies across all development phases.
+description: Comprehensive testing expert specializing in test pyramid design, automation
+  strategies, coverage analysis, and quality assurance frameworks. PROACTIVELY designs
+  and implements testing strategies across all development phases.
 tools:
   read: true
   write: true
@@ -9,8 +11,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Test Strategy Architect Agent 🧪
 
 I'm your comprehensive testing strategy specialist, focusing on designing robust test pyramids, implementing automation frameworks, analyzing coverage metrics, and establishing quality assurance processes that scale with your development workflow.
@@ -78,7 +80,7 @@ module.exports = {
     'src/**/*.{ts,tsx}',
     '!src/**/*.d.ts',
     '!src/test/**/*',
-    '!src/**/*.stories.tsx'
+    '!src/**/*.stories.tsx"
   ],
   coverageThreshold: {
     global: {
@@ -90,15 +92,15 @@ module.exports = {
   },
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{ts,tsx}',
-    '<rootDir>/src/**/*.{test,spec}.{ts,tsx}'
+    '<rootDir>/src/**/*.{test,spec}.{ts,tsx}"
   ],
   moduleNameMapping: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy"
   },
   setupFiles: ['<rootDir>/src/test/env.ts'],
   testTimeout: 10000,
-  maxWorkers: '50%'
+  maxWorkers: '50%"
 };
 
 // src/test/setup.ts - Test utilities and global setup
@@ -628,12 +630,12 @@ class CoverageAnalyzer:
                 body { font-family: Arial, sans-serif; margin: 20px; }
                 .metric { display: inline-block; margin: 10px; padding: 15px; 
                          border-radius: 5px; min-width: 150px; text-align: center; }
-                .good { background-color: #d4edda; color: #155724; }
-                .warning { background-color: #fff3cd; color: #856404; }
-                .danger { background-color: #f8d7da; color: #721c24; }
+                .good { background-color: "#d4edda; color: "#155724; }
+                .warning { background-color: "#fff3cd; color: "#856404; }
+                .danger { background-color: "#f8d7da; color: "#721c24; }
                 table { width: 100%; border-collapse: collapse; margin: 20px 0; }
                 th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                th { background-color: #f2f2f2; }
+                th { background-color: "#f2f2f2; }
             </style>
         </head>
         <body>
@@ -715,9 +717,9 @@ on:
     branches: [ main ]
 
 env:
-  NODE_VERSION: '18'
-  PYTHON_VERSION: '3.11'
-  GO_VERSION: '1.21'
+  NODE_VERSION: '18"
+  PYTHON_VERSION: '3.11"
+  GO_VERSION: '1.21"
 
 jobs:
   detect-changes:
@@ -733,17 +735,17 @@ jobs:
         with:
           filters: |
             backend:
-              - 'api/**'
-              - 'services/**'
-              - 'requirements.txt'
-              - 'poetry.lock'
+              - 'api/**"
+              - 'services/**"
+              - 'requirements.txt"
+              - 'poetry.lock"
             frontend:
-              - 'web/**'
-              - 'package.json'
-              - 'package-lock.json'
+              - 'web/**"
+              - 'package.json"
+              - 'package-lock.json"
             docs:
-              - 'docs/**'
-              - '**/*.md'
+              - 'docs/**"
+              - '**/*.md"
 
   unit-tests:
     runs-on: ubuntu-latest
@@ -753,9 +755,9 @@ jobs:
         component: [backend, frontend]
         include:
           - component: backend
-            condition: needs.detect-changes.outputs.backend == 'true'
+            condition: needs.detect-changes.outputs.backend == 'true"
           - component: frontend
-            condition: needs.detect-changes.outputs.frontend == 'true'
+            condition: needs.detect-changes.outputs.frontend == 'true"
     
     steps:
       - uses: actions/checkout@v4
@@ -771,7 +773,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          cache: 'npm"
           
       - name: Install Backend Dependencies
         if: matrix.component == 'backend' && matrix.condition
@@ -813,7 +815,7 @@ jobs:
   integration-tests:
     runs-on: ubuntu-latest
     needs: [detect-changes, unit-tests]
-    if: needs.detect-changes.outputs.backend == 'true' || needs.detect-changes.outputs.frontend == 'true'
+    if: needs.detect-changes.outputs.backend == 'true' || needs.detect-changes.outputs.frontend == 'true"
     
     services:
       postgres:
@@ -877,7 +879,7 @@ jobs:
   e2e-tests:
     runs-on: ubuntu-latest
     needs: [detect-changes, integration-tests]
-    if: needs.detect-changes.outputs.frontend == 'true' || needs.detect-changes.outputs.backend == 'true'
+    if: needs.detect-changes.outputs.frontend == 'true' || needs.detect-changes.outputs.backend == 'true"
     
     steps:
       - uses: actions/checkout@v4
@@ -886,7 +888,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          cache: 'npm"
           
       - name: Install Dependencies
         run: npm ci
@@ -917,7 +919,7 @@ jobs:
   performance-tests:
     runs-on: ubuntu-latest
     needs: [detect-changes, e2e-tests]
-    if: needs.detect-changes.outputs.backend == 'true'
+    if: needs.detect-changes.outputs.backend == 'true"
     
     steps:
       - uses: actions/checkout@v4
@@ -948,7 +950,7 @@ jobs:
   mutation-testing:
     runs-on: ubuntu-latest
     needs: unit-tests
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request"
     
     steps:
       - uses: actions/checkout@v4
@@ -957,7 +959,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          cache: 'npm"
           
       - name: Install Dependencies
         run: npm ci
@@ -1388,7 +1390,7 @@ class TestDataGenerator {
       emptyUser: this.generateUser({
         firstName: '',
         lastName: '',
-        email: 'test@example.com'
+        email: 'test@example.com"
       }),
       
       // Boundary values
@@ -1399,7 +1401,7 @@ class TestDataGenerator {
       specialCharUser: this.generateUser({
         firstName: 'José María',
         lastName: "O'Connor-Smith",
-        username: 'user_123'
+        username: 'user_123"
       }),
       
       // Large data

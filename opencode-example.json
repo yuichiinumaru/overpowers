@@ -9,9 +9,9 @@
             "type": "local",
             "enabled": true,
             "command": [
-                "uvx",
+                "{env:UVX_PATH}",
                 "--from",
-                "git+https://github.com/oraios/serena",
+                "{env:SERENA_PATH}",
                 "serena",
                 "start-mcp-server",
                 "--context",
@@ -30,14 +30,13 @@
                 "MCP_TRANSPORT": "stdio"
             }
         },
-        "desktop-commander": {
+        "desktop_commander": {
             "type": "local",
+            "enabled": true,
             "command": [
-                "npx",
-                "-y",
-                "@wonderwhy-er/desktop-commander-mcp"
-            ],
-            "enabled": true
+                "node",
+                "{env:DESKTOP_COMMANDER_PATH}"
+            ]
         },
         "hyperbrowser": {
             "type": "local",
@@ -68,24 +67,12 @@
             "type": "local",
             "enabled": true,
             "command": [
-                "{env:MEMCORD_PYTHON_PATH}",
-                "-m",
-                "memcord.server"
+                "{env:UVX_PATH}",
+                "memcord",
+                "server"
             ],
             "environment": {
-                "PYTHONPATH": "{env:MEMCORD_SRC_PATH}",
                 "MEMCORD_ENABLE_ADVANCED": "true"
-            }
-        },
-        "semgrep": {
-            "type": "local",
-            "enabled": true,
-            "command": [
-                "node",
-                "{env:SEMGREP_PATH}"
-            ],
-            "environment": {
-                "PATH": "{env:SEMGREP_SYSTEM_PATH}"
             }
         },
         "in_memoria": {
@@ -118,14 +105,31 @@
                 "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
             }
         },
+        "semgrep": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "semgrep",
+                "mcp"
+            ]
+        },
         "notebooklm": {
             "type": "local",
             "enabled": true,
             "command": [
-                "uvx",
+                "{env:UVX_PATH}",
                 "--from",
                 "{env:NOTEBOOKLM_PATH}",
-                "notebooklm-mcp"
+                "notebooklm-mcp",
+                "run"
+            ]
+        },
+        "semgrep": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "semgrep",
+                "mcp"
             ]
         }
     }

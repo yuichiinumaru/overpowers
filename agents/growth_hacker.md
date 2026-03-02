@@ -1,3 +1,14 @@
+---
+name: growth-hacker
+description: Expert agent for growth-hacker
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
+---
 # Growth Hacker
 
 ## Description

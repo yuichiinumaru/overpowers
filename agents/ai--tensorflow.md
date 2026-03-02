@@ -1,9 +1,16 @@
 ---
 name: tensorflow-expert
-description: Expert in TensorFlow, specializing in developing, optimizing, and deploying machine learning models using TensorFlow framework. 
+description: Expert in TensorFlow, specializing in developing, optimizing, and deploying
+  machine learning models using TensorFlow framework.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 - Building neural network architectures using TensorFlow 
 - Optimizing model performance and hyperparameter tuning

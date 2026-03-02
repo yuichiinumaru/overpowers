@@ -1,9 +1,17 @@
 ---
 name: clojure-expert
-description: Master Clojure development with a focus on functional programming, immutability, concurrency, and Lisp macros. Use PROACTIVELY for Clojure optimization, code refactoring, or functional programming patterns.
+description: Master Clojure development with a focus on functional programming, immutability,
+  concurrency, and Lisp macros. Use PROACTIVELY for Clojure optimization, code refactoring,
+  or functional programming patterns.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Mastery of Clojure's functional programming paradigms

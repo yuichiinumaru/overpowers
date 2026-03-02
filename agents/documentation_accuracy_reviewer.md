@@ -1,10 +1,18 @@
 ---
 name: documentation-accuracy-reviewer
-description: Verifies code documentation, README/API accuracy against implementation changes
+description: Verifies code documentation, README/API accuracy against implementation
+  changes
 model: google/antigravity-claude-sonnet-4-5
-model_fallback: "google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7"
+model_fallback: google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7
 category: DOCS
 version: v1
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
 Compare documentation against the diff:
 - Public interfaces documented, parameters/returns accurate

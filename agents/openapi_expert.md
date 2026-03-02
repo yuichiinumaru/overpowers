@@ -2,8 +2,14 @@
 name: openapi-expert
 description: Expert in designing, documenting, and optimizing APIs using OpenAPI specifications.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Understanding OpenAPI 3.0 and 3.1 specifications

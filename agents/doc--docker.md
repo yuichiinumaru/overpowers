@@ -1,9 +1,16 @@
 ---
 name: docker-expert
-description: Expert in all aspects of Docker, including containerization, image creation, and orchestration.
+description: Expert in all aspects of Docker, including containerization, image creation,
+  and orchestration.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Docker installation and setup on various operating systems

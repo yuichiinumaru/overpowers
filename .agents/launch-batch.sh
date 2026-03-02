@@ -15,7 +15,7 @@ WAVE=(
     "004-dedup-docs-docs.md"
     "005-dedup-docs-analysis.md"
     "006-dedup-docs-knowledge.md"
-    "007-rename-superpowers-to-overpowers.md"
+    "007-rename-overpowers-to-overpowers.md"
 )
 
 # ── Wave 2: Feature implementation (depends on clean repo state) ──

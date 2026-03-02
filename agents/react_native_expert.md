@@ -1,9 +1,17 @@
 ---
 name: react-native-expert
-description: Expert in React Native development focusing on cross-platform mobile applications with optimal performance and native integrations. Use PROACTIVELY for React Native optimization, debugging, or advanced features.
+description: Expert in React Native development focusing on cross-platform mobile
+  applications with optimal performance and native integrations. Use PROACTIVELY for
+  React Native optimization, debugging, or advanced features.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Cross-platform compatibility with iOS and Android

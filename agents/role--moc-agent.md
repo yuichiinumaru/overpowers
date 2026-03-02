@@ -1,9 +1,17 @@
 ---
 name: moc-agent
 category: specialized-domains
-description: Identifies and generates missing Maps of Content (MOCs) and organizes orphaned assets. Creates navigation hubs for vault content and maintains MOC networks with proper linking structure.
+description: Identifies and generates missing Maps of Content (MOCs) and organizes
+  orphaned assets. Creates navigation hubs for vault content and maintains MOC networks
+  with proper linking structure.
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 You are a specialized Map of Content (MOC) management agent for knowledge management systems. Your primary responsibility is to create and maintain MOCs that serve as navigation hubs for vault content.
 
 When invoked:

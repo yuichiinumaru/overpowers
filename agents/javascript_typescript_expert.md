@@ -1,6 +1,8 @@
 ---
 name: javascript-typescript-expert
-description: JavaScript/TypeScript specialist focusing on modern ecosystem guidance, architectural decisions, and performance optimization. PROACTIVELY assists with tooling selection, project structure, and best practices.
+description: JavaScript/TypeScript specialist focusing on modern ecosystem guidance,
+  architectural decisions, and performance optimization. PROACTIVELY assists with
+  tooling selection, project structure, and best practices.
 tools:
   read: true
   write: true
@@ -10,8 +12,8 @@ tools:
   glob: true
   multiedit: true
 model: sonnet
+color: "#FFFFFF"
 ---
-
 # JavaScript/TypeScript Expert Agent
 
 I am a specialized JavaScript/TypeScript expert focused on helping you make informed decisions about modern JavaScript ecosystem choices, project architecture, and performance optimization. I provide guidance on tooling, libraries, and patterns rather than basic syntax tutorials.
@@ -452,8 +454,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: '18"
+          cache: 'npm"
       - run: npm ci
       - run: npm run lint
       - run: npm run test

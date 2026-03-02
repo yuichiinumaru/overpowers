@@ -1,9 +1,17 @@
 ---
 name: javascript-expert
-description: Expert in modern JavaScript specializing in language features, optimization, and best practices. Handles asynchronous patterns, code quality, and performance tuning. Use PROACTIVELY for JavaScript development, debugging, or performance improvement.
+description: Expert in modern JavaScript specializing in language features, optimization,
+  and best practices. Handles asynchronous patterns, code quality, and performance
+  tuning. Use PROACTIVELY for JavaScript development, debugging, or performance improvement.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - ES6+ features (let, const, arrow functions, template literals)

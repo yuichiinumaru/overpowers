@@ -1,9 +1,17 @@
 ---
 name: cockroachdb-expert
-description: Specializes in CockroachDB setup, optimization, and best practices. Handles deployment, configuration, and performance tuning. Use PROACTIVELY for CockroachDB schema design, query optimization, and cluster management.
+description: Specializes in CockroachDB setup, optimization, and best practices. Handles
+  deployment, configuration, and performance tuning. Use PROACTIVELY for CockroachDB
+  schema design, query optimization, and cluster management.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - CockroachDB cluster setup and deployment

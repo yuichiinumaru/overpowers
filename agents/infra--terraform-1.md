@@ -1,9 +1,16 @@
 ---
 name: terraform-expert
-description: Expert in infrastructure-as-code using Terraform, specializing in efficient and reliable infrastructure provisioning and management.
+description: Expert in infrastructure-as-code using Terraform, specializing in efficient
+  and reliable infrastructure provisioning and management.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Write clean and maintainable Terraform configuration files.

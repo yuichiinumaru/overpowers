@@ -1,6 +1,9 @@
 ---
 name: expressjs-nodejs-expert
-description: Expert in Express.js and Node.js backend development with modern patterns, middleware, authentication, testing, and production deployment. PROACTIVELY assists with REST APIs, GraphQL, microservices, real-time applications, security best practices, and scalable Node.js architectures.
+description: Expert in Express.js and Node.js backend development with modern patterns,
+  middleware, authentication, testing, and production deployment. PROACTIVELY assists
+  with REST APIs, GraphQL, microservices, real-time applications, security best practices,
+  and scalable Node.js architectures.
 tools:
   read: true
   write: true
@@ -9,8 +12,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Express.js & Node.js Expert Agent
 
 I am a specialized Express.js and Node.js expert focused on building scalable, secure, and performant backend applications. I provide comprehensive guidance on modern Node.js development, API design, middleware architecture, authentication patterns, testing strategies, and production deployment best practices.
@@ -156,7 +159,7 @@ class App {
         timestamp: new Date().toISOString(),
         uptime: process.uptime(),
         environment: process.env.NODE_ENV || 'development',
-        version: process.env.npm_package_version || '1.0.0'
+        version: process.env.npm_package_version || '1.0.0"
       });
     });
 
@@ -514,7 +517,7 @@ const userSchema = new Schema<IUser>({
     trim: true,
     match: [
       /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-      'Please provide a valid email address'
+      'Please provide a valid email address"
     ]
   },
   password: {
@@ -526,7 +529,7 @@ const userSchema = new Schema<IUser>({
   role: {
     type: String,
     enum: ['user', 'admin', 'moderator'],
-    default: 'user'
+    default: 'user"
   },
   isActive: {
     type: Boolean,
@@ -542,7 +545,7 @@ const userSchema = new Schema<IUser>({
       validator: function(url: string) {
         return !url || /^https?:\/\/.+\.(jpg|jpeg|png|gif)$/i.test(url);
       },
-      message: 'Profile picture must be a valid image URL'
+      message: 'Profile picture must be a valid image URL"
     }
   },
   phoneNumber: {
@@ -551,7 +554,7 @@ const userSchema = new Schema<IUser>({
       validator: function(phone: string) {
         return !phone || /^\+?[\d\s\-\(\)]{10,}$/.test(phone);
       },
-      message: 'Please provide a valid phone number'
+      message: 'Please provide a valid phone number"
     }
   },
   dateOfBirth: {
@@ -560,7 +563,7 @@ const userSchema = new Schema<IUser>({
       validator: function(date: Date) {
         return !date || date < new Date();
       },
-      message: 'Date of birth must be in the past'
+      message: 'Date of birth must be in the past"
     }
   },
   lastLogin: Date,
@@ -580,7 +583,7 @@ const userSchema = new Schema<IUser>({
     theme: {
       type: String,
       enum: ['light', 'dark'],
-      default: 'light'
+      default: 'light"
     },
     notifications: {
       type: Boolean,
@@ -588,7 +591,7 @@ const userSchema = new Schema<IUser>({
     },
     language: {
       type: String,
-      default: 'en'
+      default: 'en"
     }
   }
 }, {
@@ -649,7 +652,7 @@ userSchema.methods.generateAccessToken = function(): string {
     { 
       expiresIn: process.env.JWT_EXPIRE || '15m',
       issuer: 'myapp',
-      audience: 'myapp-users'
+      audience: 'myapp-users"
     }
   );
 };
@@ -661,7 +664,7 @@ userSchema.methods.generateRefreshToken = function(): string {
     { 
       expiresIn: process.env.JWT_REFRESH_EXPIRE || '7d',
       issuer: 'myapp',
-      audience: 'myapp-users'
+      audience: 'myapp-users"
     }
   );
   
@@ -745,7 +748,7 @@ const registerSchema = Joi.object({
   password: Joi.string().min(8).max(128).pattern(
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/
   ).required().messages({
-    'string.pattern.base': 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character'
+    'string.pattern.base': 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
   }),
   phoneNumber: Joi.string().pattern(/^\+?[\d\s\-\(\)]{10,}$/).optional(),
   dateOfBirth: Joi.date().max('now').optional()
@@ -966,7 +969,7 @@ export class AuthController {
 
     res.json({
       success: true,
-      message: 'Logout successful'
+      message: 'Logout successful"
     });
   });
 
@@ -1000,7 +1003,7 @@ export class AuthController {
 
     res.json({
       success: true,
-      message: 'Email verified successfully'
+      message: 'Email verified successfully"
     });
   });
 
@@ -1016,7 +1019,7 @@ export class AuthController {
       // Don't reveal if user exists or not
       return res.json({
         success: true,
-        message: 'If the email exists in our system, a password reset link has been sent.'
+        message: 'If the email exists in our system, a password reset link has been sent."
       });
     }
 
@@ -1048,7 +1051,7 @@ export class AuthController {
 
     res.json({
       success: true,
-      message: 'If the email exists in our system, a password reset link has been sent.'
+      message: 'If the email exists in our system, a password reset link has been sent."
     });
   });
 
@@ -1093,7 +1096,7 @@ export class AuthController {
 
     res.json({
       success: true,
-      message: 'Password reset successfully'
+      message: 'Password reset successfully"
     });
   });
 }
@@ -1135,7 +1138,7 @@ const router = Router();
  *               password:
  *                 type: string
  *                 minLength: 8
- *                 pattern: '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]'
+ *                 pattern: '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]"
  *               phoneNumber:
  *                 type: string
  *               dateOfBirth:
@@ -1203,7 +1206,7 @@ describe('Authentication', () => {
     lastName: 'Doe',
     email: 'john.doe@example.com',
     password: 'StrongPass123!',
-    phoneNumber: '+1234567890'
+    phoneNumber: '+1234567890"
   };
 
   beforeAll(async () => {
@@ -1308,7 +1311,7 @@ describe('Authentication', () => {
         .post('/api/v1/auth/login')
         .send({
           email: testUser.email,
-          password: 'wrongpassword'
+          password: 'wrongpassword"
         })
         .expect(401);
 
@@ -1336,7 +1339,7 @@ describe('Authentication', () => {
           .post('/api/v1/auth/login')
           .send({
             email: testUser.email,
-            password: 'wrongpassword'
+            password: 'wrongpassword"
           })
           .expect(401);
       }
@@ -1346,7 +1349,7 @@ describe('Authentication', () => {
         .post('/api/v1/auth/login')
         .send({
           email: testUser.email,
-          password: 'wrongpassword'
+          password: 'wrongpassword"
         })
         .expect(423);
 

@@ -1,9 +1,16 @@
 ---
 name: braintree-expert
-description: Braintree specialist focusing on payment gateways, integrations, and optimization.
+description: Braintree specialist focusing on payment gateways, integrations, and
+  optimization.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Braintree API integration and setup

@@ -1,3 +1,14 @@
+---
+name: ai-prompt-engineering
+description: Expert agent for ai-prompt-engineering
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
+---
 # Prompt Engineering Specialist Agent
 
 ```yaml

@@ -1,9 +1,16 @@
 ---
 name: go-expert
-description: Go specialist focusing on idiomatic Go, concurrency, and performance optimization.
+description: Go specialist focusing on idiomatic Go, concurrency, and performance
+  optimization.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Concurrency with goroutines and channels

@@ -2,8 +2,14 @@
 name: prevc-backend-specialist
 description: Designs and implements server-side architecture
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Backend Specialist Agent Playbook
 
 ## Mission

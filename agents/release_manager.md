@@ -1,6 +1,8 @@
 ---
 name: release-manager
-description: Comprehensive release management expert specializing in release planning, changelog generation, version management, and deployment orchestration. PROACTIVELY manages the entire release lifecycle from planning to rollback strategies.
+description: Comprehensive release management expert specializing in release planning,
+  changelog generation, version management, and deployment orchestration. PROACTIVELY
+  manages the entire release lifecycle from planning to rollback strategies.
 tools:
   read: true
   write: true
@@ -9,8 +11,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Release Manager Agent 🚀
 
 I'm your comprehensive release management specialist, focusing on orchestrating smooth releases, managing versions, generating detailed changelogs, and implementing robust deployment and rollback strategies across your entire software delivery pipeline.
@@ -564,12 +566,12 @@ class ReleaseManager:
         try:
             # Get previous revision
             result = subprocess.run([
-                'kubectl', 'rollout', 'history', f'deployment/app-{environment}'
+                'kubectl', 'rollout', 'history', f'deployment/app-{environment}"
             ], capture_output=True, text=True)
             
             # Rollback to previous revision
             result = subprocess.run([
-                'kubectl', 'rollout', 'undo', f'deployment/app-{environment}'
+                'kubectl', 'rollout', 'undo', f'deployment/app-{environment}"
             ], capture_output=True, text=True)
             
             if result.returncode == 0:
@@ -769,9 +771,9 @@ on:
   workflow_dispatch:
     inputs:
       release_type:
-        description: 'Release type'
+        description: 'Release type"
         required: true
-        default: 'patch'
+        default: 'patch"
         type: choice
         options:
         - patch
@@ -779,17 +781,17 @@ on:
         - major
         - prerelease
       environment:
-        description: 'Deployment environment'
+        description: 'Deployment environment"
         required: true
-        default: 'staging'
+        default: 'staging"
         type: choice
         options:
         - staging
         - production
 
 env:
-  NODE_VERSION: '18'
-  PYTHON_VERSION: '3.11'
+  NODE_VERSION: '18"
+  PYTHON_VERSION: '3.11"
 
 jobs:
   detect-changes:
@@ -823,7 +825,7 @@ jobs:
   quality-gates:
     runs-on: ubuntu-latest
     needs: detect-changes
-    if: needs.detect-changes.outputs.should_release == 'true'
+    if: needs.detect-changes.outputs.should_release == 'true"
     strategy:
       matrix:
         gate: [unit-tests, integration-tests, security-scan, build-validation]
@@ -834,19 +836,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          cache: 'npm"
           
       - name: Install Dependencies
         run: npm ci
         
       - name: Run Unit Tests
-        if: matrix.gate == 'unit-tests'
+        if: matrix.gate == 'unit-tests"
         run: |
           npm run test:unit -- --coverage --ci
           echo "COVERAGE_THRESHOLD=85" >> $GITHUB_ENV
           
       - name: Check Coverage Threshold
-        if: matrix.gate == 'unit-tests'
+        if: matrix.gate == 'unit-tests"
         run: |
           coverage=$(jq -r '.total.lines.pct' coverage/coverage-summary.json)
           if (( $(echo "$coverage < $COVERAGE_THRESHOLD" | bc -l) )); then
@@ -856,17 +858,17 @@ jobs:
           echo "✅ Coverage $coverage% meets threshold"
           
       - name: Run Integration Tests
-        if: matrix.gate == 'integration-tests'
+        if: matrix.gate == 'integration-tests"
         run: npm run test:integration
         
       - name: Run Security Scan
-        if: matrix.gate == 'security-scan'
+        if: matrix.gate == 'security-scan"
         run: |
           npm audit --audit-level=high
           npx retire --path .
           
       - name: Build Validation
-        if: matrix.gate == 'build-validation'
+        if: matrix.gate == 'build-validation"
         run: |
           npm run build
           npm run lint
@@ -885,7 +887,7 @@ jobs:
   create-release:
     runs-on: ubuntu-latest
     needs: [detect-changes, quality-gates]
-    if: needs.detect-changes.outputs.should_release == 'true'
+    if: needs.detect-changes.outputs.should_release == 'true"
     outputs:
       release_version: ${{ steps.create-release.outputs.version }}
       release_notes: ${{ steps.create-release.outputs.notes }}
@@ -950,7 +952,7 @@ jobs:
       - name: Setup Kubectl
         uses: azure/setup-kubectl@v3
         with:
-          version: 'v1.28.0'
+          version: 'v1.28.0"
           
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
@@ -979,8 +981,8 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
-          channel: '#releases'
-          text: '🚀 Deployed ${{ needs.create-release.outputs.release_version }} to staging'
+          channel: '#releases"
+          text: '🚀 Deployed ${{ needs.create-release.outputs.release_version }} to staging"
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
 
@@ -988,7 +990,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [create-release, deploy-staging]
     environment: production
-    if: github.event.inputs.environment == 'production' || github.ref == 'refs/heads/main'
+    if: github.event.inputs.environment == 'production' || github.ref == 'refs/heads/main"
     steps:
       - uses: actions/checkout@v4
       
@@ -1047,13 +1049,13 @@ jobs:
               "environment": "production",
               "description": "Production deployment of ${{ needs.create-release.outputs.release_version }}",
               "auto_merge": false
-            }'
+            }"
             
       - name: Notify Success
         uses: 8398a7/action-slack@v3
         with:
           status: success
-          channel: '#releases'
+          channel: '#releases"
           text: |
             🎉 Successfully deployed ${{ needs.create-release.outputs.release_version }} to production!
             
@@ -1077,8 +1079,8 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: failure
-          channel: '#releases'
-          text: '🚨 Rolled back ${{ needs.create-release.outputs.release_version }} due to deployment failure'
+          channel: '#releases"
+          text: '🚨 Rolled back ${{ needs.create-release.outputs.release_version }} due to deployment failure"
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
 ```
@@ -1092,24 +1094,24 @@ jobs:
     <title>Release Management Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: "#f5f5f5; }
         .container { max-width: 1200px; margin: 0 auto; }
         .card { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .metric { display: inline-block; margin: 10px 20px; text-align: center; }
-        .metric h3 { margin: 0; color: #333; }
+        .metric h3 { margin: 0; color: "#333; }
         .metric p { margin: 5px 0; font-size: 24px; font-weight: bold; }
-        .success { color: #28a745; }
-        .warning { color: #ffc107; }
-        .danger { color: #dc3545; }
+        .success { color: "#28a745; }
+        .warning { color: "#ffc107; }
+        .danger { color: "#dc3545; }
         .chart-container { width: 100%; height: 400px; margin: 20px 0; }
         table { width: 100%; border-collapse: collapse; }
         th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: #f8f9fa; font-weight: bold; }
+        th { background-color: "#f8f9fa; font-weight: bold; }
         .status-badge { padding: 4px 8px; border-radius: 4px; color: white; font-size: 12px; }
-        .status-success { background-color: #28a745; }
-        .status-warning { background-color: #ffc107; }
-        .status-danger { background-color: #dc3545; }
-        .status-info { background-color: #17a2b8; }
+        .status-success { background-color: "#28a745; }
+        .status-warning { background-color: "#ffc107; }
+        .status-danger { background-color: "#dc3545; }
+        .status-info { background-color: "#17a2b8; }
     </style>
 </head>
 <body>
@@ -1272,7 +1274,7 @@ jobs:
                             '#28a745', 
                             '#ffc107',
                             '#28a745',
-                            '#28a745'
+                            '#28a745"
                         ]
                     }]
                 },

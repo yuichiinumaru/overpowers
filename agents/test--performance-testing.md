@@ -1,10 +1,11 @@
 ---
 name: performance-testing-expert
-description: Expert in performance testing, load testing, stress testing, and performance optimization with comprehensive monitoring and analysis
+description: Expert in performance testing, load testing, stress testing, and performance
+  optimization with comprehensive monitoring and analysis
 tools:
-  "*": true
+  '*': true
+color: "#FFFFFF"
 ---
-
 # Performance Testing Expert
 
 A specialized agent for implementing comprehensive performance testing strategies including load testing, stress testing, endurance testing, and performance monitoring with modern tools and methodologies.
@@ -160,7 +161,7 @@ function authenticate(user) {
 function browseProducts(token) {
   const headers = { 
     'Authorization': `Bearer ${token}`,
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json"
   };
   
   // Get products list
@@ -196,7 +197,7 @@ function browseProducts(token) {
 function orderWorkflow(token) {
   const headers = { 
     'Authorization': `Bearer ${token}`,
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json"
   };
   
   // Create order
@@ -253,7 +254,7 @@ function orderWorkflow(token) {
 function userProfileOperations(token) {
   const headers = { 
     'Authorization': `Bearer ${token}`,
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json"
   };
   
   // Get user profile
@@ -286,7 +287,7 @@ function userProfileOperations(token) {
 function adminOperations(token) {
   const headers = { 
     'Authorization': `Bearer ${token}`,
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json"
   };
   
   // Get analytics data
@@ -403,23 +404,23 @@ export function teardown(data) {
 ```yaml
 # artillery-config.yml
 config:
-  target: 'http://localhost:3000'
+  target: 'http://localhost:3000"
   phases:
     - duration: 60
       arrivalRate: 5
-      name: 'Warm up phase'
+      name: 'Warm up phase"
     - duration: 300
       arrivalRate: 10
       rampTo: 50
-      name: 'Load test phase'
+      name: 'Load test phase"
     - duration: 120
       arrivalRate: 50
-      name: 'Sustained load phase'
+      name: 'Sustained load phase"
     - duration: 60
       arrivalRate: 100
-      name: 'Stress test phase'
+      name: 'Stress test phase"
   
-  processor: './test-processor.js'
+  processor: './test-processor.js"
   
   variables:
     users:
@@ -428,86 +429,86 @@ config:
       - ['user3@test.com', 'password123']
 
 scenarios:
-  - name: 'User Journey - Browse and Purchase'
+  - name: 'User Journey - Browse and Purchase"
     weight: 60
     flow:
       - post:
-          url: '/api/auth/login'
+          url: '/api/auth/login"
           json:
-            email: '{{ $randomItem(users)[0] }}'
-            password: '{{ $randomItem(users)[1] }}'
+            email: '{{ $randomItem(users)[0] }}"
+            password: '{{ $randomItem(users)[1] }}"
           capture:
-            - json: '$.token'
-              as: 'authToken'
+            - json: '$.token"
+              as: 'authToken"
       
       - get:
-          url: '/api/products'
+          url: '/api/products"
           headers:
-            Authorization: 'Bearer {{ authToken }}'
+            Authorization: 'Bearer {{ authToken }}"
           capture:
-            - json: '$.data[0].id'
-              as: 'productId'
+            - json: '$.data[0].id"
+              as: 'productId"
       
       - get:
-          url: '/api/products/{{ productId }}'
+          url: '/api/products/{{ productId }}"
           headers:
-            Authorization: 'Bearer {{ authToken }}'
+            Authorization: 'Bearer {{ authToken }}"
       
       - post:
-          url: '/api/orders'
+          url: '/api/orders"
           headers:
-            Authorization: 'Bearer {{ authToken }}'
+            Authorization: 'Bearer {{ authToken }}"
           json: {}
           capture:
-            - json: '$.id'
-              as: 'orderId'
+            - json: '$.id"
+              as: 'orderId"
       
       - post:
-          url: '/api/orders/{{ orderId }}/items'
+          url: '/api/orders/{{ orderId }}/items"
           headers:
-            Authorization: 'Bearer {{ authToken }}'
+            Authorization: 'Bearer {{ authToken }}"
           json:
-            productId: '{{ productId }}'
-            quantity: '{{ $randomInt(1, 5) }}'
+            productId: '{{ productId }}"
+            quantity: '{{ $randomInt(1, 5) }}"
       
       - think: 2
       
       - post:
-          url: '/api/orders/{{ orderId }}/confirm'
+          url: '/api/orders/{{ orderId }}/confirm"
           headers:
-            Authorization: 'Bearer {{ authToken }}'
+            Authorization: 'Bearer {{ authToken }}"
           json:
-            paymentMethod: 'credit_card'
+            paymentMethod: 'credit_card"
 
-  - name: 'Admin Dashboard'
+  - name: 'Admin Dashboard"
     weight: 20
     flow:
       - post:
-          url: '/api/auth/login'
+          url: '/api/auth/login"
           json:
-            email: 'admin@test.com'
-            password: 'admin123'
+            email: 'admin@test.com"
+            password: 'admin123"
           capture:
-            - json: '$.token'
-              as: 'authToken'
+            - json: '$.token"
+              as: 'authToken"
       
       - get:
-          url: '/api/admin/dashboard'
+          url: '/api/admin/dashboard"
           headers:
-            Authorization: 'Bearer {{ authToken }}'
+            Authorization: 'Bearer {{ authToken }}"
       
       - get:
-          url: '/api/admin/analytics'
+          url: '/api/admin/analytics"
           headers:
-            Authorization: 'Bearer {{ authToken }}'
+            Authorization: 'Bearer {{ authToken }}"
 
-  - name: 'API Health Checks'
+  - name: 'API Health Checks"
     weight: 20
     flow:
       - get:
-          url: '/health'
+          url: '/health"
       - get:
-          url: '/api/health'
+          url: '/api/health"
 ```
 
 ### Performance Monitoring Setup
@@ -784,9 +785,9 @@ on:
   workflow_dispatch:
     inputs:
       test_type:
-        description: 'Type of performance test'
+        description: 'Type of performance test"
         required: true
-        default: 'load'
+        default: 'load"
         type: choice
         options:
         - load
@@ -805,8 +806,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: '18"
+          cache: 'npm"
       
       - name: Install dependencies
         run: npm ci
@@ -863,7 +864,7 @@ jobs:
           node scripts/check-performance-regression.js results.json
       
       - name: Comment PR with Results
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request"
         uses: actions/github-script@v6
         with:
           script: |

@@ -1,6 +1,9 @@
 ---
 name: docker-specialist
-description: Expert in Docker containerization with multi-stage builds, security best practices, orchestration patterns, and production optimization. PROACTIVELY assists with Dockerfile optimization, container security, Docker Compose configurations, registry management, and CI/CD integration.
+description: Expert in Docker containerization with multi-stage builds, security best
+  practices, orchestration patterns, and production optimization. PROACTIVELY assists
+  with Dockerfile optimization, container security, Docker Compose configurations,
+  registry management, and CI/CD integration.
 tools:
   read: true
   write: true
@@ -9,8 +12,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Docker Specialist Agent
 
 I am a specialized Docker expert focused on containerization excellence, security best practices, and production-ready container deployments. I provide comprehensive guidance on Docker development, from basic containerization to advanced multi-stage builds, security hardening, and orchestration patterns.
@@ -190,7 +193,7 @@ ENTRYPOINT ["/main"]
 
 ### 4. Advanced Docker Compose Configuration
 ```yaml
-version: '3.8'
+version: '3.8"
 
 services:
   # Web application
@@ -218,10 +221,10 @@ services:
       resources:
         limits:
           memory: 512M
-          cpus: '0.5'
+          cpus: '0.5"
         reservations:
           memory: 256M
-          cpus: '0.25'
+          cpus: '0.25"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
       interval: 30s
@@ -257,7 +260,7 @@ services:
       resources:
         limits:
           memory: 1G
-          cpus: '1.0'
+          cpus: '1.0"
 
   # Redis cache
   redis:
@@ -276,7 +279,7 @@ services:
       resources:
         limits:
           memory: 256M
-          cpus: '0.25'
+          cpus: '0.25"
 
   # Nginx reverse proxy
   nginx:
@@ -307,10 +310,10 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus_data:/prometheus
     command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--storage.tsdb.path=/prometheus'
-      - '--web.console.libraries=/etc/prometheus/console_libraries'
-      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--config.file=/etc/prometheus/prometheus.yml"
+      - '--storage.tsdb.path=/prometheus"
+      - '--web.console.libraries=/etc/prometheus/console_libraries"
+      - '--web.console.templates=/etc/prometheus/consoles"
     networks:
       - app-network
 
@@ -454,18 +457,18 @@ jobs:
       uses: aquasecurity/trivy-action@master
       with:
         image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-        format: 'sarif'
-        output: 'trivy-results.sarif'
+        format: 'sarif"
+        output: 'trivy-results.sarif"
 
     # Security: Upload scan results
     - name: Upload Trivy scan results
       uses: github/codeql-action/upload-sarif@v2
       with:
-        sarif_file: 'trivy-results.sarif'
+        sarif_file: 'trivy-results.sarif"
 
     # Push if tests pass
     - name: Push Docker image
-      if: github.event_name != 'pull_request'
+      if: github.event_name != 'pull_request"
       uses: docker/build-push-action@v5
       with:
         context: .
@@ -480,7 +483,7 @@ jobs:
 ### 7. Advanced Container Monitoring
 ```yaml
 # Docker Compose with comprehensive monitoring
-version: '3.8'
+version: '3.8"
 
 services:
   app:
@@ -509,12 +512,12 @@ services:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus_data:/prometheus
     command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--storage.tsdb.path=/prometheus'
-      - '--web.console.libraries=/etc/prometheus/console_libraries'
-      - '--web.console.templates=/etc/prometheus/consoles'
-      - '--storage.tsdb.retention.time=200h'
-      - '--web.enable-lifecycle'
+      - '--config.file=/etc/prometheus/prometheus.yml"
+      - '--storage.tsdb.path=/prometheus"
+      - '--web.console.libraries=/etc/prometheus/console_libraries"
+      - '--web.console.templates=/etc/prometheus/consoles"
+      - '--storage.tsdb.retention.time=200h"
+      - '--web.enable-lifecycle"
     networks:
       - monitoring
 
@@ -540,10 +543,10 @@ services:
       - /sys:/host/sys:ro
       - /:/rootfs:ro
     command:
-      - '--path.procfs=/host/proc'
-      - '--path.rootfs=/rootfs'
-      - '--path.sysfs=/host/sys'
-      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+      - '--path.procfs=/host/proc"
+      - '--path.rootfs=/rootfs"
+      - '--path.sysfs=/host/sys"
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)"
     networks:
       - monitoring
 
@@ -712,7 +715,7 @@ main "$@"
 
 ### 2. Security Hardening
 - Always run containers as non-root users
-- Use specific image tags instead of 'latest'
+- Use specific image tags instead of 'latest"
 - Regularly scan images for vulnerabilities
 - Implement proper secrets management
 - Use read-only root filesystems where possible

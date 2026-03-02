@@ -2,8 +2,14 @@
 name: prevc-code-reviewer
 description: Reviews code changes for quality, style, and best practices
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Code Reviewer Agent Playbook
 
 ## Mission

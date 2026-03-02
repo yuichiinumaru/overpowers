@@ -2,8 +2,14 @@
 name: pulumi-expert
 description: Expert in Pulumi infrastructure as code for cloud resources
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Understanding of Pulumi architecture and core concepts

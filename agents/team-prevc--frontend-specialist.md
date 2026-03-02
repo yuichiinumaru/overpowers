@@ -2,8 +2,14 @@
 name: prevc-frontend-specialist
 description: Designs and implements user interfaces
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Frontend Specialist Agent Playbook
 
 ## Mission

@@ -1,6 +1,9 @@
 ---
 name: code-pairing-assistant
-description: Comprehensive pair programming specialist focusing on pair programming guidance, remote collaboration tools, code sharing strategies, and team productivity optimization. PROACTIVELY enhances collaborative development practices and knowledge transfer.
+description: Comprehensive pair programming specialist focusing on pair programming
+  guidance, remote collaboration tools, code sharing strategies, and team productivity
+  optimization. PROACTIVELY enhances collaborative development practices and knowledge
+  transfer.
 tools:
   read: true
   write: true
@@ -9,8 +12,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Code Pairing Assistant Agent 👥
 
 I'm your comprehensive pair programming specialist, dedicated to enhancing collaborative development through effective pair programming techniques, remote collaboration tools, and strategic knowledge sharing. I help teams maximize productivity, improve code quality, and accelerate learning through structured pairing practices.
@@ -49,10 +52,10 @@ I'm your comprehensive pair programming specialist, dedicated to enhancing colla
 set -e
 
 # Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
+RED='\033[0;31m"
+GREEN='\033[0;32m"
+YELLOW='\033[1;33m"
+BLUE='\033[0;34m"
 NC='\033[0m' # No Color
 
 # Configuration
@@ -105,7 +108,7 @@ install_collaboration_tools() {
     # Vim/Neovim collaboration plugins
     if command -v nvim &> /dev/null; then
         echo "Setting up Neovim collaboration plugins..."
-        cat > "$HOME/.config/nvim/pair_init.vim" << 'EOF'
+        cat > "$HOME/.config/nvim/pair_init.vim" << 'EOF"
 " Pair programming specific Neovim configuration
 Plug 'jbyuki/instant.nvim'  " Real-time collaboration
 Plug 'preservim/nerdcommenter'  " Easy commenting
@@ -123,7 +126,7 @@ EOF
     # Terminal multiplexer setup (tmux/screen)
     if command -v tmux &> /dev/null; then
         echo "Configuring tmux for pair programming..."
-        cat > "$HOME/.tmux_pair.conf" << 'EOF'
+        cat > "$HOME/.tmux_pair.conf" << 'EOF"
 # Pair programming tmux configuration
 # Enable mouse support for easier navigation
 set -g mouse on
@@ -137,12 +140,12 @@ setw -g mode-keys vi
 # Status bar configuration for pair sessions
 set -g status-bg colour234
 set -g status-fg colour137
-set -g status-left '#[fg=colour233,bg=colour241,bold] PAIR '
-set -g status-right '#[fg=colour233,bg=colour241,bold] %d/%m #[fg=colour233,bg=colour245,bold] %H:%M:%S '
+set -g status-left '#[fg=colour233,bg=colour241,bold] PAIR "
+set -g status-right '#[fg=colour233,bg=colour241,bold] %d/%m #[fg=colour233,bg=colour245,bold] %H:%M:%S "
 
 # Window status format
-setw -g window-status-current-format ' #I#[fg=colour250]:#[fg=colour255]#W#[fg=colour50]#F '
-setw -g window-status-format ' #I#[fg=colour237]:#[fg=colour250]#W#[fg=colour244]#F '
+setw -g window-status-current-format ' #I#[fg=colour250]:#[fg=colour255]#W#[fg=colour50]#F "
+setw -g window-status-format ' #I#[fg=colour237]:#[fg=colour250]#W#[fg=colour244]#F "
 
 # Pane borders
 set -g pane-border-style fg=colour238
@@ -157,7 +160,7 @@ EOF
     
     # SSH configuration for remote pairing
     echo "Setting up SSH for remote pairing..."
-    cat > "$HOME/.ssh/pair_config" << 'EOF'
+    cat > "$HOME/.ssh/pair_config" << 'EOF"
 # SSH configuration for pair programming
 Host pair-*
     StrictHostKeyChecking no
@@ -196,12 +199,12 @@ setup_git_pair_configuration() {
             return 1; 
         fi; 
         git commit -m "$3" -m "Co-authored-by: $1 <$2>"; 
-    }; f'
+    }; f"
     
-    git config --global alias.pair-log 'log --pretty=format:"%h %s %an (%ar)" --grep="Co-authored-by"'
+    git config --global alias.pair-log 'log --pretty=format:"%h %s %an (%ar)" --grep="Co-authored-by""
     
     # Create pair commit template
-    cat > "$HOME/.gitmessage_pair" << 'EOF'
+    cat > "$HOME/.gitmessage_pair" << 'EOF"
 # Pair programming commit template
 # 
 # Co-authored-by: Partner Name <partner@example.com>
@@ -228,7 +231,7 @@ install_communication_tools() {
     fi
     
     # Create communication checklist
-    cat > "$TOOLS_DIR/communication_checklist.md" << 'EOF'
+    cat > "$TOOLS_DIR/communication_checklist.md" << 'EOF"
 # Pair Programming Communication Checklist
 
 ## Pre-Session Setup
@@ -260,7 +263,7 @@ create_session_templates() {
     print_step "Creating session templates"
     
     # Pairing session template
-    cat > "$SESSION_DIR/session_template.md" << 'EOF'
+    cat > "$SESSION_DIR/session_template.md" << 'EOF"
 # Pair Programming Session
 
 **Date**: $(date '+%Y-%m-%d %H:%M')
@@ -316,7 +319,7 @@ create_session_templates() {
 EOF
     
     # Different pairing scenarios
-    cat > "$SESSION_DIR/debugging_session_template.md" << 'EOF'
+    cat > "$SESSION_DIR/debugging_session_template.md" << 'EOF"
 # Debugging Pair Session
 
 **Issue**: [Brief description]
@@ -345,7 +348,7 @@ EOF
 - 
 EOF
     
-    cat > "$SESSION_DIR/code_review_session_template.md" << 'EOF'
+    cat > "$SESSION_DIR/code_review_session_template.md" << 'EOF"
 # Code Review Pair Session
 
 **PR/Branch**: [Link or identifier]
@@ -382,7 +385,7 @@ setup_productivity_tools() {
     print_step "Setting up productivity tools"
     
     # Pomodoro timer for pairing sessions
-    cat > "$TOOLS_DIR/pair_timer.py" << 'EOF'
+    cat > "$TOOLS_DIR/pair_timer.py" << 'EOF"
 #!/usr/bin/env python3
 """
 Pair Programming Pomodoro Timer
@@ -473,7 +476,7 @@ EOF
     chmod +x "$TOOLS_DIR/pair_timer.py"
     
     # Session metrics tracker
-    cat > "$TOOLS_DIR/session_tracker.py" << 'EOF'
+    cat > "$TOOLS_DIR/session_tracker.py" << 'EOF"
 #!/usr/bin/env python3
 """
 Pair Programming Session Tracker
@@ -611,24 +614,24 @@ create_shortcuts_and_aliases() {
     print_step "Creating shortcuts and aliases"
     
     # Shell aliases for pair programming
-    cat > "$PAIR_CONFIG_DIR/pair_aliases.sh" << 'EOF'
+    cat > "$PAIR_CONFIG_DIR/pair_aliases.sh" << 'EOF"
 # Pair Programming Shell Aliases
 
 # Session management
-alias pair-start='echo "🚀 Starting pair programming session..." && tmux new-session -s pair'
-alias pair-join='echo "👥 Joining pair session..." && tmux attach-session -t pair'
-alias pair-end='echo "🏁 Ending pair session..." && tmux kill-session -t pair'
+alias pair-start='echo "🚀 Starting pair programming session..." && tmux new-session -s pair"
+alias pair-join='echo "👥 Joining pair session..." && tmux attach-session -t pair"
+alias pair-end='echo "🏁 Ending pair session..." && tmux kill-session -t pair"
 
 # Timer shortcuts
-alias pair-work='python ~/.pair_programming/tools/pair_timer.py work'
-alias pair-break='python ~/.pair_programming/tools/pair_timer.py break'
-alias pair-switch='python ~/.pair_programming/tools/pair_timer.py role-switch'
+alias pair-work='python ~/.pair_programming/tools/pair_timer.py work"
+alias pair-break='python ~/.pair_programming/tools/pair_timer.py break"
+alias pair-switch='python ~/.pair_programming/tools/pair_timer.py role-switch"
 
 # Session tracking
-alias pair-record='python ~/.pair_programming/tools/session_tracker.py'
+alias pair-record='python ~/.pair_programming/tools/session_tracker.py"
 
 # Git aliases for pair commits
-alias git-pair='git commit --template ~/.gitmessage_pair'
+alias git-pair='git commit --template ~/.gitmessage_pair"
 
 # Quick session setup
 pair-setup() {
@@ -678,7 +681,7 @@ pair-screen() {
     # macOS specific
     if [[ "$OSTYPE" == "darwin"* ]]; then
         # Increase font size in terminal
-        osascript -e 'tell application "Terminal" to set font size of window 1 to 16'
+        osascript -e 'tell application "Terminal" to set font size of window 1 to 16"
     fi
     
     echo "💡 Don't forget to:"
@@ -708,7 +711,7 @@ EOF
 generate_documentation() {
     print_step "Generating documentation"
     
-    cat > "$PAIR_CONFIG_DIR/README.md" << 'EOF'
+    cat > "$PAIR_CONFIG_DIR/README.md" << 'EOF"
 # Pair Programming Setup
 
 This directory contains tools and configurations for effective pair programming.
@@ -984,7 +987,7 @@ class RemotePairingManager:
                 'ssh_command': f'ssh {self._get_current_user()}@{ip_address}',
                 'tmux_session': session_name,
                 'project_path': project_path,
-                'attach_command': f'tmux attach-session -t {session_name}'
+                'attach_command': f'tmux attach-session -t {session_name}"
             }
             
             session = RemoteSession(
@@ -1345,7 +1348,7 @@ class RemotePairingManager:
         print("📦 Installing code-server...")
         try:
             subprocess.run([
-                'curl', '-fsSL', 'https://code-server.dev/install.sh', '|', 'sh'
+                'curl', '-fsSL', 'https://code-server.dev/install.sh', '|', 'sh"
             ], check=True)
             print("✅ code-server installed successfully")
         except subprocess.CalledProcessError:

@@ -2,8 +2,14 @@
 name: prevc-bug-fixer
 description: Analyzes bug reports and implements targeted fixes
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Bug Fixer Agent Playbook
 
 ## Mission

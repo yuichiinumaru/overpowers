@@ -1,6 +1,8 @@
 ---
 name: project-setup-wizard
-description: Project setup wizard for initializing new development projects with best practices. PROACTIVELY assists with project initialization, boilerplate generation, tooling configuration, and development environment setup.
+description: Project setup wizard for initializing new development projects with best
+  practices. PROACTIVELY assists with project initialization, boilerplate generation,
+  tooling configuration, and development environment setup.
 tools:
   read: true
   write: true
@@ -9,8 +11,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Project Setup Wizard Agent
 
 I am a project setup wizard specializing in rapid initialization of development projects with industry best practices. I focus on automated project scaffolding, tooling configuration, development environment setup, and establishing proper project structure for teams of all sizes.
@@ -217,7 +219,7 @@ setup_nodejs_tooling() {
     
     # TypeScript configuration
     if [ "$template" = "typescript" ]; then
-        cat > tsconfig.json << 'EOF'
+        cat > tsconfig.json << 'EOF"
 {
   "compilerOptions": {
     "target": "ES2022",
@@ -262,7 +264,7 @@ EOF
     fi
     
     # ESLint configuration
-    cat > .eslintrc.js << 'EOF'
+    cat > .eslintrc.js << 'EOF"
 module.exports = {
   root: true,
   env: {
@@ -309,7 +311,7 @@ module.exports = {
 EOF
     
     # Prettier configuration
-    cat > .prettierrc << 'EOF'
+    cat > .prettierrc << 'EOF"
 {
   "semi": true,
   "trailingComma": "es5",
@@ -324,7 +326,7 @@ EOF
 EOF
     
     # Jest configuration
-    cat > jest.config.js << 'EOF'
+    cat > jest.config.js << 'EOF"
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
@@ -369,7 +371,7 @@ EOF
     npx husky add .husky/commit-msg "commitlint --edit \$1"
     
     # Lint-staged configuration
-    cat > .lintstagedrc << 'EOF'
+    cat > .lintstagedrc << 'EOF"
 {
   "*.{ts,tsx,js,jsx}": [
     "eslint --fix",
@@ -382,7 +384,7 @@ EOF
 EOF
     
     # Commitlint configuration
-    cat > .commitlintrc << 'EOF'
+    cat > .commitlintrc << 'EOF"
 {
   "extends": ["@commitlint/config-conventional"],
   "rules": {
@@ -551,8 +553,8 @@ where = ["src"]
 [tool.black]
 line-length = 100
 target-version = ['py39', 'py310', 'py311']
-include = '\.pyi?$'
-exclude = '''
+include = '\.pyi?$"
+exclude = ''"
 /(
     \.git
     | \.mypy_cache
@@ -563,7 +565,7 @@ exclude = '''
     | build
     | dist
 )/
-'''
+''"
 
 [tool.isort]
 profile = "black"
@@ -624,7 +626,7 @@ exclude_lines = [
 EOF
 
     # .pre-commit-config.yaml
-    cat > .pre-commit-config.yaml << 'EOF'
+    cat > .pre-commit-config.yaml << 'EOF"
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
@@ -671,19 +673,19 @@ EOF
 get_python_dependencies() {
     case "$1" in
         "web-app")
-            echo '"fastapi>=0.100", "uvicorn>=0.23", "jinja2>=3.1", "python-multipart>=0.0.6",'
+            echo '"fastapi>=0.100", "uvicorn>=0.23", "jinja2>=3.1", "python-multipart>=0.0.6","
             ;;
         "api")
-            echo '"fastapi>=0.100", "uvicorn>=0.23", "sqlalchemy>=2.0", "pydantic>=2.0",'
+            echo '"fastapi>=0.100", "uvicorn>=0.23", "sqlalchemy>=2.0", "pydantic>=2.0","
             ;;
         "cli")
-            echo '"click>=8.1", "rich>=13.0", "typer>=0.9",'
+            echo '"click>=8.1", "rich>=13.0", "typer>=0.9","
             ;;
         "data-science")
-            echo '"pandas>=2.0", "numpy>=1.24", "matplotlib>=3.7", "jupyter>=1.0",'
+            echo '"pandas>=2.0", "numpy>=1.24", "matplotlib>=3.7", "jupyter>=1.0","
             ;;
         *)
-            echo '"requests>=2.31",'
+            echo '"requests>=2.31","
             ;;
     esac
 }

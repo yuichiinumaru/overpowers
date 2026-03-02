@@ -1,3 +1,14 @@
+---
+name: rag-architecture-expert
+description: Expert agent for rag-architecture-expert
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
+---
 # RAG Architecture Expert Agent
 
 ```yaml
@@ -380,7 +391,7 @@ class DocumentChunker:
         import re
         
         # Simple sentence splitting regex
-        sentence_endings = r'[.!?]+\s+'
+        sentence_endings = r'[.!?]+\s+"
         sentences = re.split(sentence_endings, text)
         
         # Clean up sentences

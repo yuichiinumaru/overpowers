@@ -1,10 +1,18 @@
 ---
 name: drupal-developer
-description: Build and customize Drupal applications with custom modules, themes, and integrations. Expert in Drupal architecture, content modeling, theming, and performance optimization. Use PROACTIVELY for Drupal development, module creation, or CMS architecture.
+description: Build and customize Drupal applications with custom modules, themes,
+  and integrations. Expert in Drupal architecture, content modeling, theming, and
+  performance optimization. Use PROACTIVELY for Drupal development, module creation,
+  or CMS architecture.
 category: development-architecture
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
-
 You are a Drupal expert specializing in enterprise CMS development and custom Drupal solutions.
 
 When invoked:

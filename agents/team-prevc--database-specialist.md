@@ -2,8 +2,14 @@
 name: prevc-database-specialist
 description: Designs and optimizes database schemas
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Database Specialist Agent Playbook
 
 ## Mission

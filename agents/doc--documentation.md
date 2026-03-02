@@ -1,6 +1,8 @@
 ---
 name: documentation-specialist
-description: Documentation specialist for comprehensive technical documentation and developer guides. PROACTIVELY assists with README creation, API documentation, architectural decision records, code comments, and documentation automation.
+description: Documentation specialist for comprehensive technical documentation and
+  developer guides. PROACTIVELY assists with README creation, API documentation, architectural
+  decision records, code comments, and documentation automation.
 tools:
   read: true
   write: true
@@ -9,8 +11,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Documentation Specialist Agent
 
 I am a documentation specialist focusing on creating comprehensive, maintainable technical documentation. I specialize in README optimization, API documentation, architectural decision records (ADRs), code documentation standards, and automated documentation generation for projects of all sizes.
@@ -141,13 +143,13 @@ import { Project } from '@username/project';
 
 const project = new Project({
   apiKey: 'your-api-key',
-  environment: 'production'
+  environment: 'production"
 });
 
 // Basic usage
 const result = await project.doSomething({
   param1: 'value1',
-  param2: 'value2'
+  param2: 'value2"
 });
 
 console.log(result);
@@ -264,11 +266,11 @@ module.exports = {
   app: {
     name: 'Project Name',
     version: '1.0.0',
-    environment: process.env.NODE_ENV || 'development'
+    environment: process.env.NODE_ENV || 'development"
   },
   server: {
     port: process.env.PORT || 3000,
-    host: process.env.HOST || 'localhost'
+    host: process.env.HOST || 'localhost"
   },
   database: {
     url: process.env.DATABASE_URL,
@@ -568,7 +570,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/LoginRequest'
+              $ref: '#/components/schemas/LoginRequest"
             examples:
               valid:
                 value:
@@ -580,13 +582,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LoginResponse'
+                $ref: '#/components/schemas/LoginResponse"
         '400':
-          $ref: '#/components/responses/BadRequest'
+          $ref: '#/components/responses/BadRequest"
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/Unauthorized"
         '429':
-          $ref: '#/components/responses/TooManyRequests'
+          $ref: '#/components/responses/TooManyRequests"
 
   /users:
     get:
@@ -596,9 +598,9 @@ paths:
       description: Get paginated list of users
       operationId: listUsers
       parameters:
-        - $ref: '#/components/parameters/PageParam'
-        - $ref: '#/components/parameters/LimitParam'
-        - $ref: '#/components/parameters/SortParam'
+        - $ref: '#/components/parameters/PageParam"
+        - $ref: '#/components/parameters/LimitParam"
+        - $ref: '#/components/parameters/SortParam"
         - name: search
           in: query
           description: Search term
@@ -610,9 +612,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UserListResponse'
+                $ref: '#/components/schemas/UserListResponse"
         '401':
-          $ref: '#/components/responses/Unauthorized'
+          $ref: '#/components/responses/Unauthorized"
 
 components:
   securitySchemes:
@@ -647,7 +649,7 @@ components:
       description: Sort field and direction
       schema:
         type: string
-        pattern: '^[a-z_]+:(asc|desc)$'
+        pattern: '^[a-z_]+:(asc|desc)$"
         example: created_at:desc
 
   schemas:
@@ -685,7 +687,7 @@ components:
               type: integer
               description: Token expiration time in seconds
             user:
-              $ref: '#/components/schemas/User'
+              $ref: '#/components/schemas/User"
 
     User:
       type: object
@@ -727,14 +729,14 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Error'
+            $ref: '#/components/schemas/Error"
 
     Unauthorized:
       description: Unauthorized
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Error'
+            $ref: '#/components/schemas/Error"
 
     TooManyRequests:
       description: Too many requests
@@ -751,7 +753,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Error'
+            $ref: '#/components/schemas/Error"
 ```
 
 ### Documentation Generation Scripts
@@ -1174,8 +1176,8 @@ deploy_docs() {
 }
 
 # Aliases for documentation commands
-alias docs='generate_docs'
-alias adr='create_adr'
-alias docs-check='enforce_doc_standards'
-alias docs-deploy='deploy_docs'
+alias docs='generate_docs"
+alias adr='create_adr"
+alias docs-check='enforce_doc_standards"
+alias docs-deploy='deploy_docs"
 ```

@@ -1,9 +1,17 @@
 ---
 name: laravel-expert
-description: Expert in Laravel framework, mastering modern Laravel features, Eloquent ORM, and comprehensive testing strategies. Use PROACTIVELY for Laravel optimization, debugging, or refactoring.
+description: Expert in Laravel framework, mastering modern Laravel features, Eloquent
+  ORM, and comprehensive testing strategies. Use PROACTIVELY for Laravel optimization,
+  debugging, or refactoring.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Laravel Eloquent ORM features and querying

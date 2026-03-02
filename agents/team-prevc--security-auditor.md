@@ -2,8 +2,14 @@
 name: prevc-security-auditor
 description: Identifies security vulnerabilities and implements best practices
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Security Auditor Agent Playbook
 
 ## Mission

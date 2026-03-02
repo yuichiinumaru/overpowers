@@ -695,8 +695,8 @@ https://github.com/nkwesi/minimal.so
 https://github.com/nordnet/cordova-hot-code-push-cli
 https://github.com/numman-ali/opencode-openai-codex-auth
 https://github.com/nyu-mll/quality
-https://github.com/obra/superpowers
-https://github.com/obra/superpowers-marketplace
+https://github.com/obra/overpowers
+https://github.com/obra/overpowers-marketplace
 https://github.com/ocean-luna/HMRAG
 https://github.com/odoo/owl
 https://github.com/ofirpress/self-ask
@@ -3039,9 +3039,9 @@ https://github.com/nzrsky/xctools-mcp-server
 https://github.com/oaimli/HGSum
 https://github.com/oatpp/oatpp-mcp
 https://github.com/obie/claude-on-rails
-https://github.com/obra/superpowers
-https://github.com/obra/superpowers-marketplace
-https://github.com/obra/superpowers-skills
+https://github.com/obra/overpowers
+https://github.com/obra/overpowers-marketplace
+https://github.com/obra/overpowers-skills
 https://github.com/obsidianmd/jsoncanvas
 https://github.com/obsidianmd/obsidian-api
 https://github.com/obsidianmd/obsidian-developer-docs

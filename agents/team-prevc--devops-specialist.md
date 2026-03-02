@@ -2,8 +2,14 @@
 name: prevc-devops-specialist
 description: Designs CI/CD pipelines and infrastructure
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # DevOps Specialist Agent Playbook
 
 ## Mission

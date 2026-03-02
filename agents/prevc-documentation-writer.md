@@ -2,8 +2,14 @@
 name: prevc-documentation-writer
 description: Creates and maintains documentation
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Documentation Writer Agent Playbook
 
 ## Mission

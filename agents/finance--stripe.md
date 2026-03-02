@@ -1,9 +1,16 @@
 ---
 name: stripe-expert
-description: This agent specializes in managing and optimizing Stripe integrations, handling payments, managing subscriptions, and utilizing Stripe APIs.
+description: This agent specializes in managing and optimizing Stripe integrations,
+  handling payments, managing subscriptions, and utilizing Stripe APIs.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Stripe API integration

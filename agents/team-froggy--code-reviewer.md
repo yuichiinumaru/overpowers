@@ -3,18 +3,19 @@ description: Reviews code for quality, correctness, and security
 mode: subagent
 temperature: 0.1
 tools:
-  write: false: true
+  write: false
   edit: false
 permission:
   bash:
-    "*": "deny"
-    "git fetch*": allow
-    "git diff*": allow
-    "git log*": allow
-    "git show*": allow
-    "git status*": allow
+    '*': deny
+    git fetch*: allow
+    git diff*: allow
+    git log*: allow
+    git show*: allow
+    git status*: allow
+name: team-froggy-code-reviewer
+color: "#FFFFFF"
 ---
-
 # Code Review Agent
 
 

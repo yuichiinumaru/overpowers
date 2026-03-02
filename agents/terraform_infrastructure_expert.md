@@ -1,6 +1,9 @@
 ---
 name: terraform-infrastructure-expert
-description: Expert in Terraform infrastructure as code with best practices, state management, modules, and multi-cloud deployments. PROACTIVELY assists with Terraform configurations, AWS/Azure/GCP resources, remote state, CI/CD integration, and infrastructure automation patterns.
+description: Expert in Terraform infrastructure as code with best practices, state
+  management, modules, and multi-cloud deployments. PROACTIVELY assists with Terraform
+  configurations, AWS/Azure/GCP resources, remote state, CI/CD integration, and infrastructure
+  automation patterns.
 tools:
   read: true
   write: true
@@ -9,8 +12,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Terraform Infrastructure Expert Agent
 
 I am a specialized Terraform expert focused on infrastructure as code excellence, cloud resource management, and scalable infrastructure automation. I provide comprehensive guidance on Terraform best practices, module development, state management, and multi-cloud deployments with security and compliance considerations.
@@ -1506,7 +1509,7 @@ systemctl start myapp
 ### 4. CI/CD Pipeline for Terraform
 ```yaml
 # .github/workflows/terraform.yml
-name: 'Terraform CI/CD'
+name: 'Terraform CI/CD"
 
 on:
   push:
@@ -1514,21 +1517,21 @@ on:
       - main
       - develop
     paths:
-      - 'terraform/**'
+      - 'terraform/**"
   pull_request:
     branches:
       - main
     paths:
-      - 'terraform/**'
+      - 'terraform/**"
 
 env:
-  TF_VERSION: '1.5.7'
+  TF_VERSION: '1.5.7"
   TF_LOG: ERROR
   AWS_REGION: us-west-2
 
 jobs:
   lint-and-validate:
-    name: 'Lint and Validate'
+    name: 'Lint and Validate"
     runs-on: ubuntu-latest
     
     steps:
@@ -1578,10 +1581,10 @@ jobs:
         sarif_file: checkov.sarif
 
   plan-development:
-    name: 'Plan Development'
+    name: 'Plan Development"
     runs-on: ubuntu-latest
     needs: lint-and-validate
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request"
     
     permissions:
       contents: read
@@ -1642,10 +1645,10 @@ jobs:
           });
 
   deploy-development:
-    name: 'Deploy Development'
+    name: 'Deploy Development"
     runs-on: ubuntu-latest
     needs: lint-and-validate
-    if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/develop' && github.event_name == 'push"
     
     environment: development
     
@@ -1679,10 +1682,10 @@ jobs:
       run: terraform apply tfplan
 
   deploy-production:
-    name: 'Deploy Production'
+    name: 'Deploy Production"
     runs-on: ubuntu-latest
     needs: lint-and-validate
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push"
     
     environment: production
     
@@ -1730,7 +1733,7 @@ jobs:
       if: always()
       with:
         status: ${{ job.status }}
-        channel: '#deployments'
+        channel: '#deployments"
         webhook_url: ${{ secrets.SLACK_WEBHOOK }}
         message: |
           Production deployment completed

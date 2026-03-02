@@ -2,8 +2,14 @@
 name: prevc-architect-specialist
 description: Designs overall system architecture and patterns
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Architect Specialist Agent Playbook
 
 ## Mission

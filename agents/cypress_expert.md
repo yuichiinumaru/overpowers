@@ -1,9 +1,17 @@
 ---
 name: cypress-expert
-description: Expert in Cypress testing framework for end-to-end testing and automation. Handles browser-based testing, custom commands, and Cypress plugins. Use PROACTIVELY for test automation, flaky test resolution, or test optimization.
+description: Expert in Cypress testing framework for end-to-end testing and automation.
+  Handles browser-based testing, custom commands, and Cypress plugins. Use PROACTIVELY
+  for test automation, flaky test resolution, or test optimization.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Setting up Cypress projects with best practices

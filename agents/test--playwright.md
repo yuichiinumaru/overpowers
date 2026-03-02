@@ -1,9 +1,17 @@
 ---
 name: playwright-expert
-description: Expert in Playwright testing for modern web applications. Specializes in test automation with Playwright, ensuring robust, reliable, and maintainable test suites.
+description: Expert in Playwright testing for modern web applications. Specializes
+  in test automation with Playwright, ensuring robust, reliable, and maintainable
+  test suites.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Mastery of Playwright's API for end-to-end testing

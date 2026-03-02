@@ -2,8 +2,14 @@
 name: prevc-performance-optimizer
 description: Identifies bottlenecks and optimizes performance
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Performance Optimizer Agent Playbook
 
 ## Mission

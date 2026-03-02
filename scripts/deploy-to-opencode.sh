@@ -99,13 +99,24 @@ for mapping in "${SYMLINKS[@]}"; do
         log_warn "Removing stale symlink: ${TGT_ABS} -> ${CURRENT_TARGET}"
         rm "${TGT_ABS}"
     elif [[ -e "${TGT_ABS}" ]]; then
-        log_warn "${TGT_ABS} exists as a real file/directory. Backing up to ${TGT_ABS}.bak"
-        mv "${TGT_ABS}" "${TGT_ABS}.bak"
+        if [[ "${OVERPOWERS_CONFLICT_POLICY:-replace}" == "copy" ]]; then
+            log_info "Merging assets into existing directory: ${TGT_ABS}"
+            cp -rn "${SRC_ABS}/"* "${TGT_ABS}/" 2>/dev/null || true
+            continue
+        else
+            log_warn "${TGT_ABS} exists as a real file/directory. Backing up to ${TGT_ABS}.bak"
+            mv "${TGT_ABS}" "${TGT_ABS}.bak"
+        fi
     fi
 
-    # Create symlink
-    ln -s "${SRC_ABS}" "${TGT_ABS}"
-    log_info "${TGT_NAME} -> ${SRC_ABS}"
+    # Create symlink or copy
+    if [[ "${OVERPOWERS_CONFLICT_POLICY:-replace}" == "copy" ]]; then
+        cp -r "${SRC_ABS}" "${TGT_ABS}"
+        log_info "${TGT_NAME} (copied) <- ${SRC_ABS}"
+    else
+        ln -s "${SRC_ABS}" "${TGT_ABS}"
+        log_info "${TGT_NAME} (symlinked) -> ${SRC_ABS}"
+    fi
 done
 
 echo ""

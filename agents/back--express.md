@@ -1,9 +1,16 @@
 ---
 name: express-expert
-description: Specializes in building performant and scalable web applications using Express.js.
+description: Specializes in building performant and scalable web applications using
+  Express.js.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Middleware design and pipeline management

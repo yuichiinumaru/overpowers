@@ -1,9 +1,16 @@
 ---
 name: gitlab-ci-expert
-description: Expert in configuring, optimizing, and maintaining GitLab CI/CD pipelines for efficient software delivery.
+description: Expert in configuring, optimizing, and maintaining GitLab CI/CD pipelines
+  for efficient software delivery.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 - YAML syntax and best practices for GitLab CI configuration
 - Efficient job and stage orchestration

@@ -1,7 +1,15 @@
 ---
 name: pew-lead-developer
-description: "Expert Lead Developer. Use when executing development tasks based on a provided plan to translate requirements and architecture into high-quality, maintainable code."
+description: Expert Lead Developer. Use when executing development tasks based on
+  a provided plan to translate requirements and architecture into high-quality, maintainable
+  code.
 color: "#000080"
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
 ---
 # 🎯 Purpose & Role
 

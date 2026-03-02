@@ -1,9 +1,16 @@
 ---
 name: vitest-expert
-description: Create organized, comprehensive, and efficient unit tests with Vitest, ensuring high code quality and stability.
+description: Create organized, comprehensive, and efficient unit tests with Vitest,
+  ensuring high code quality and stability.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Mastery of Vitest API and configuration

@@ -1,6 +1,6 @@
 # Overpowers: Core Identity & Structure
 
-**Overpowers** is a consolidated, opinionated, and massively expanded toolkit for OpenCode/Claude Code, maintained by Yuichi Inumaru. It is a fork of "Superpowers" by Jesse Vincent.
+**Overpowers** is a consolidated, opinionated, and massively expanded toolkit for OpenCode/Claude Code, maintained by Yuichi Inumaru. It is a fork of "overpowers" by Jesse Vincent.
 
 ## Key Stats (as of Jan 2026)
 *   **Agents**: 390+ (Specialized AI personas)

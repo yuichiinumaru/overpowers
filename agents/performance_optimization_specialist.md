@@ -1,10 +1,11 @@
 ---
 name: performance-optimization-specialist
-description: Expert in comprehensive performance optimization across frontend, backend, database, and infrastructure with profiling and monitoring
+description: Expert in comprehensive performance optimization across frontend, backend,
+  database, and infrastructure with profiling and monitoring
 tools:
-  "*": true
+  '*': true
+color: "#FFFFFF"
 ---
-
 # Performance Optimization Specialist
 
 A specialized agent for identifying performance bottlenecks and implementing optimization strategies across the entire application stack including frontend, backend, database, and infrastructure.
@@ -804,9 +805,9 @@ class PostgreSQLOptimizer {
         idx_tup_fetch,
         idx_scan,
         CASE 
-          WHEN idx_scan = 0 THEN 'Never used'
-          WHEN idx_scan < 100 THEN 'Rarely used'
-          ELSE 'Frequently used'
+          WHEN idx_scan = 0 THEN 'Never used"
+          WHEN idx_scan < 100 THEN 'Rarely used"
+          ELSE 'Frequently used"
         END as usage_level
       FROM pg_stat_user_indexes 
       WHERE tablename = $1
@@ -866,7 +867,7 @@ export const UserQueries = {
   // Use composite index: CREATE INDEX idx_orders_user_status_date ON orders(user_id, status, created_at);
   async getUserOrders(userId: string, status?: string) {
     const sql = status
-      ? 'SELECT * FROM orders WHERE user_id = $1 AND status = $2 ORDER BY created_at DESC LIMIT 50'
+      ? 'SELECT * FROM orders WHERE user_id = $1 AND status = $2 ORDER BY created_at DESC LIMIT 50"
       : 'SELECT * FROM orders WHERE user_id = $1 ORDER BY created_at DESC LIMIT 50';
     
     const params = status ? [userId, status] : [userId];
@@ -890,7 +891,7 @@ export const UserQueries = {
           AVG(total_amount) as avg_order_value,
           MAX(created_at) as last_order_date
         FROM orders 
-        WHERE user_id = $1 AND status = 'completed'
+        WHERE user_id = $1 AND status = 'completed"
       `,
       [userId],
       { cache: true, cacheTTL: 1800 }

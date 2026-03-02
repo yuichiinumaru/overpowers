@@ -89,6 +89,9 @@ declare -a CATALOG=(
     # === THEMES ===
     "opencode-ayu-theme|Ayu Theme|Ayu color scheme|theme"
     "opencode-ai-poimandres-theme|Poimandres Theme|Poimandres dark theme|theme"
+    # === CLI TOOLS ===
+    "semgrep|Semgrep CLI|Semgrep security scanner|cli"
+    "vibe-kanban|Vibe Kanban|Visual dashboard for agent tasks|cli"
 )
 
 # =============================================================================
@@ -167,7 +170,15 @@ main() {
         names+=("${name}")
         descriptions+=("${desc}")
         types+=("${type}")
-        if plugin_is_installed "${pkg}"; then
+        if [[ "${type}" == "cli" ]]; then
+            if [[ "${pkg}" == "semgrep" ]] && command -v semgrep >/dev/null 2>&1; then
+                statuses+=("installed")
+            elif [[ "${pkg}" == "vibe-kanban" ]] && [[ -d "${REPO_ROOT}/packages/vibe-kanban" ]]; then
+                statuses+=("installed")
+            else
+                statuses+=("")
+            fi
+        elif plugin_is_installed "${pkg}"; then
             statuses+=("installed")
         else
             statuses+=("")
@@ -178,16 +189,18 @@ main() {
     echo -e "  ${BOLD}Categories:${NC}"
     echo -e "    ${GREEN}1)${NC} Plugins"
     echo -e "    ${GREEN}2)${NC} Themes"
-    echo -e "    ${GREEN}3)${NC} Show all"
+    echo -e "    ${GREEN}3)${NC} CLI Tools"
+    echo -e "    ${GREEN}4)${NC} Show all"
     echo -e "    ${GREEN}q)${NC} Quit"
     echo ""
-    read -rp "  Choose category [1/2/3/q]: " category_choice
+    read -rp "  Choose category [1/2/3/4/q]: " category_choice
 
     local filter_type=""
     case "${category_choice}" in
         1) filter_type="plugin" ;;
         2) filter_type="theme" ;;
-        3) filter_type="" ;;
+        3) filter_type="cli" ;;
+        4) filter_type="" ;;
         q|Q) echo "Bye!"; exit 0 ;;
         *) echo "Invalid choice"; exit 1 ;;
     esac
@@ -212,6 +225,8 @@ main() {
         local type_badge=""
         if [[ "${types[$i]}" == "theme" ]]; then
             type_badge="${YELLOW}[T]${NC} "
+        elif [[ "${types[$i]}" == "cli" ]]; then
+            type_badge="${CYAN}[C]${NC} "
         fi
 
         printf "    ${GREEN}%2d)${NC} %b%b%-30s ${CYAN}%s${NC}\n" \
@@ -264,26 +279,43 @@ main() {
             continue
         fi
 
-        # npm install
-        echo -e "    ${CYAN}[~]${NC} npm install..."
-        if npm install --save "${pkg}" --prefix "${OPENCODE_DIR}" 2>/dev/null; then
-            echo -e "    ${GREEN}[✓]${NC} npm install OK"
-        else
-            echo -e "    ${YELLOW}[!]${NC} npm install failed (may be a GitHub-only package)."
-            echo -e "    ${YELLOW}[!]${NC} You may need to install manually: npm install ${pkg}"
-        fi
-
-        # Inject into opencode.json
-        if [[ "${type}" == "plugin" ]]; then
-            local result
-            result="$(inject_plugin "${pkg}")"
-            if [[ "${result}" == "injected" ]]; then
-                echo -e "    ${GREEN}[✓]${NC} Added to opencode.json plugin list"
-            else
-                echo -e "    ${CYAN}[~]${NC} Already in opencode.json"
+        if [[ "${type}" == "cli" ]]; then
+            echo -e "    ${CYAN}[~]${NC} Installing CLI tool..."
+            if [[ "${pkg}" == "semgrep" ]]; then
+                if command -v pipx >/dev/null 2>&1; then
+                    pipx install semgrep
+                elif command -v uv >/dev/null 2>&1; then
+                    uv tool install semgrep
+                else
+                    python3 -m pip install --user semgrep
+                fi
+                echo -e "    ${GREEN}[✓]${NC} Installed semgrep"
+            elif [[ "${pkg}" == "vibe-kanban" ]]; then
+                bash "${REPO_ROOT}/scripts/setup-vibe-kanban.sh"
+                echo -e "    ${GREEN}[✓]${NC} Installed Vibe Kanban"
             fi
-        elif [[ "${type}" == "theme" ]]; then
-            install_theme "${pkg}"
+        else
+            # npm install
+            echo -e "    ${CYAN}[~]${NC} npm install..."
+            if npm install --save "${pkg}" --prefix "${OPENCODE_DIR}" 2>/dev/null; then
+                echo -e "    ${GREEN}[✓]${NC} npm install OK"
+            else
+                echo -e "    ${YELLOW}[!]${NC} npm install failed (may be a GitHub-only package)."
+                echo -e "    ${YELLOW}[!]${NC} You may need to install manually: npm install ${pkg}"
+            fi
+
+            # Inject into opencode.json
+            if [[ "${type}" == "plugin" ]]; then
+                local result
+                result="$(inject_plugin "${pkg}")"
+                if [[ "${result}" == "injected" ]]; then
+                    echo -e "    ${GREEN}[✓]${NC} Added to opencode.json plugin list"
+                else
+                    echo -e "    ${CYAN}[~]${NC} Already in opencode.json"
+                fi
+            elif [[ "${type}" == "theme" ]]; then
+                install_theme "${pkg}"
+            fi
         fi
 
         echo ""

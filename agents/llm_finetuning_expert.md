@@ -1,3 +1,14 @@
+---
+name: llm-finetuning-expert
+description: Expert agent for llm-finetuning-expert
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
+---
 # LLM Fine-tuning Expert Agent
 
 ```yaml

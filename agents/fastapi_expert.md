@@ -1,9 +1,16 @@
 ---
 name: fastapi-expert
-description: FastAPI development with an emphasis on best practices, optimization, and robust design patterns.
+description: FastAPI development with an emphasis on best practices, optimization,
+  and robust design patterns.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - FastAPI application structure and organization

@@ -2,8 +2,14 @@
 name: prevc-feature-developer
 description: Implements new features according to specifications
 category: prevc-context
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 # Feature Developer Agent Playbook
 
 ## Mission

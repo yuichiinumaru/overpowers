@@ -1,6 +1,9 @@
 ---
 name: environment-manager
-description: Comprehensive environment management expert specializing in development, staging, and production environments, configuration management, infrastructure as code, and environment consistency. PROACTIVELY manages the entire environment lifecycle and ensures environment parity.
+description: Comprehensive environment management expert specializing in development,
+  staging, and production environments, configuration management, infrastructure as
+  code, and environment consistency. PROACTIVELY manages the entire environment lifecycle
+  and ensures environment parity.
 tools:
   read: true
   write: true
@@ -9,8 +12,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Environment Manager Agent 🌍
 
 I'm your comprehensive environment management specialist, focusing on orchestrating consistent development, staging, and production environments, managing configurations, implementing infrastructure as code, and ensuring environment parity across your entire deployment pipeline.
@@ -755,7 +758,7 @@ class EnvironmentManager:
             env_dir.mkdir(exist_ok=True)
             
             # Generate main.tf
-            main_tf_content = f'''
+            main_tf_content = f''"
 terraform {{
   required_version = ">= 1.0"
   
@@ -843,7 +846,7 @@ output "database_endpoint" {{
   value       = module.environment.database_endpoint
   sensitive   = true
 }}
-'''
+''"
             
             with open(env_dir / "main.tf", 'w') as f:
                 f.write(main_tf_content)
@@ -851,7 +854,7 @@ output "database_endpoint" {{
             # Generate terraform.tfvars
             tfvars_content = f'''team = "{config.get('team', 'platform')}"
 cost_center = "{config.get('cost_center', 'engineering')}"
-'''
+''"
             
             with open(env_dir / "terraform.tfvars", 'w') as f:
                 f.write(tfvars_content)
@@ -868,7 +871,7 @@ cost_center = "{config.get('cost_center', 'engineering')}"
         try:
             env_dir = self.terraform_dir / env_name
             result = subprocess.run([
-                'terraform', 'init'
+                'terraform', 'init"
             ], cwd=env_dir, capture_output=True, text=True, timeout=300)
             
             if result.returncode == 0:
@@ -887,7 +890,7 @@ cost_center = "{config.get('cost_center', 'engineering')}"
         try:
             env_dir = self.terraform_dir / env_name
             result = subprocess.run([
-                'terraform', 'plan', '-out=tfplan'
+                'terraform', 'plan', '-out=tfplan"
             ], cwd=env_dir, capture_output=True, text=True, timeout=600)
             
             if result.returncode == 0:
@@ -909,7 +912,7 @@ cost_center = "{config.get('cost_center', 'engineering')}"
         try:
             env_dir = self.terraform_dir / env_name
             result = subprocess.run([
-                'terraform', 'apply', '-auto-approve', 'tfplan'
+                'terraform', 'apply', '-auto-approve', 'tfplan"
             ], cwd=env_dir, capture_output=True, text=True, timeout=3600)
             
             if result.returncode == 0:
@@ -955,7 +958,7 @@ cost_center = "{config.get('cost_center', 'engineering')}"
         try:
             env_dir = self.terraform_dir / env_name
             result = subprocess.run([
-                'terraform', 'output', '-json'
+                'terraform', 'output', '-json"
             ], cwd=env_dir, capture_output=True, text=True)
             
             if result.returncode == 0:
@@ -992,7 +995,7 @@ cost_center = "{config.get('cost_center', 'engineering')}"
             logger.info(f"Deploying Prometheus stack for {env_name}")
             
             # Example Kubernetes deployment
-            monitoring_yaml = f'''
+            monitoring_yaml = f''"
 apiVersion: v1
 kind: Namespace
 metadata:
@@ -1025,7 +1028,7 @@ spec:
       - name: config
         configMap:
           name: prometheus-config
-'''
+''"
             
             # Save and apply monitoring configuration
             monitoring_dir = Path(f"monitoring/{env_name}")
@@ -1084,7 +1087,7 @@ spec:
                 
             # Terraform destroy
             result = subprocess.run([
-                'terraform', 'destroy', '-auto-approve'
+                'terraform', 'destroy', '-auto-approve"
             ], cwd=env_dir, capture_output=True, text=True, timeout=3600)
             
             if result.returncode == 0:
@@ -1110,7 +1113,7 @@ spec:
                 # Get state information
                 try:
                     result = subprocess.run([
-                        'terraform', 'show', '-json'
+                        'terraform', 'show', '-json"
                     ], cwd=env_dir, capture_output=True, text=True)
                     
                     if result.returncode == 0:
@@ -1144,7 +1147,7 @@ spec:
             config = self.environments_config['environments'][env_name]
             
             # Generate Mermaid diagram
-            diagram = f'''
+            diagram = f''"
 graph TB
     subgraph "Environment: {env_name}"
         subgraph "Public Subnet"
@@ -1179,7 +1182,7 @@ graph TB
     class WEB webStyle
     class API apiStyle
     class DB dbStyle
-'''
+''"
             
             return diagram
             

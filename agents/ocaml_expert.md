@@ -1,9 +1,16 @@
 ---
 name: ocaml-expert
-description: Expert in OCaml programming, covering functional programming, type systems, and performance optimization
+description: Expert in OCaml programming, covering functional programming, type systems,
+  and performance optimization
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 
 - Mastery of OCaml's type system

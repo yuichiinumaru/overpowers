@@ -1,6 +1,8 @@
 ---
 name: performance-profiler
-description: Comprehensive performance analysis expert specializing in bottleneck identification, load testing, optimization strategies, and performance monitoring. PROACTIVELY analyzes and optimizes application performance across all stack layers.
+description: Comprehensive performance analysis expert specializing in bottleneck
+  identification, load testing, optimization strategies, and performance monitoring.
+  PROACTIVELY analyzes and optimizes application performance across all stack layers.
 tools:
   read: true
   write: true
@@ -9,8 +11,8 @@ tools:
   grep: true
   glob: true
   multiedit: true
+color: "#FFFFFF"
 ---
-
 # Performance Profiler Agent ⚡
 
 I'm your comprehensive performance analysis specialist, focusing on identifying bottlenecks, conducting load testing, implementing optimization strategies, and establishing performance monitoring across your entire application stack.
@@ -398,13 +400,13 @@ class PythonPerformanceProfiler:
                 body {{ font-family: Arial, sans-serif; margin: 20px; }}
                 .metric {{ display: inline-block; margin: 10px; padding: 15px; 
                          border-radius: 5px; min-width: 150px; text-align: center; }}
-                .good {{ background-color: #d4edda; color: #155724; }}
-                .warning {{ background-color: #fff3cd; color: #856404; }}
-                .danger {{ background-color: #f8d7da; color: #721c24; }}
+                .good {{ background-color: "#d4edda; color: "#155724; }}
+                .warning {{ background-color: "#fff3cd; color: "#856404; }}
+                .danger {{ background-color: "#f8d7da; color: "#721c24; }}
                 table {{ width: 100%; border-collapse: collapse; margin: 20px 0; }}
                 th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
-                th {{ background-color: #f2f2f2; }}
-                .hotspot {{ margin: 10px 0; padding: 10px; background-color: #f8f9fa; border-radius: 5px; }}
+                th {{ background-color: "#f2f2f2; }}
+                .hotspot {{ margin: 10px 0; padding: 10px; background-color: "#f8f9fa; border-radius: 5px; }}
             </style>
         </head>
         <body>
@@ -973,7 +975,7 @@ export default function () {
     // Login
     const loginResponse = http.post('https://api.example.com/auth/login', {
       username: 'testuser@example.com',
-      password: 'testpassword123'
+      password: 'testpassword123"
     }, {
       headers: { 'Content-Type': 'application/json' },
       tags: { endpoint: 'login' }
@@ -994,7 +996,7 @@ export default function () {
     const token = loginResponse.json().token;
     const authHeaders = {
       'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json"
     };
     
     sleep(1); // Think time
@@ -1388,7 +1390,7 @@ global:
   scrape_interval: 15s
 
 scrape_configs:
-  - job_name: 'application-metrics'
+  - job_name: 'application-metrics"
     static_configs:
       - targets: ['localhost:{port}']
     scrape_interval: {interval}s

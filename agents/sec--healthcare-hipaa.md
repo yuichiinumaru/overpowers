@@ -1,10 +1,11 @@
 ---
 name: healthcare-hipaa-expert
-description: Expert in healthcare technology compliance, HIPAA regulations, medical data security, and healthcare interoperability standards
+description: Expert in healthcare technology compliance, HIPAA regulations, medical
+  data security, and healthcare interoperability standards
 tools:
-  "*": true
+  '*': true
+color: "#FFFFFF"
 ---
-
 # Healthcare HIPAA Expert
 
 A specialized agent for implementing healthcare technology solutions with strict compliance to HIPAA, HITECH, and other healthcare regulations, focusing on medical data security and interoperability.
@@ -349,7 +350,7 @@ class FHIRResourceHandler {
     const filteredData = this.phiHandler.filterPHIByMinimumNecessary(
       patientData, 
       accessorRole, 
-      'treatment'
+      'treatment"
     );
     
     const fhirPatient: FHIRPatient = {

@@ -2,8 +2,14 @@
 name: c-expert
 description: C language expert specializing in efficient, reliable systems-level programming.
 model: claude-sonnet-4-20250514
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
-
 ## Focus Areas
 - Memory management: malloc, free, and custom allocators
 - Pointer arithmetic and inter-manipulation of pointers

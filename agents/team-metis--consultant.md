@@ -1,14 +1,16 @@
 ---
 name: metis-consultant
-description: Pre-planning consultant that analyzes requests to identify hidden intentions, ambiguities, and AI failure points. Use BEFORE planning non-trivial tasks to prevent scope creep and over-engineering.
+description: Pre-planning consultant that analyzes requests to identify hidden intentions,
+  ambiguities, and AI failure points. Use BEFORE planning non-trivial tasks to prevent
+  scope creep and over-engineering.
 category: advisor
 tools:
   read: true
   grep: true
   glob: true
 model: opus
+color: "#FFFFFF"
 ---
-
 # Metis - Pre-Planning Consultant
 
 ## CONSTRAINTS

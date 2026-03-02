@@ -1,10 +1,11 @@
 ---
 name: clean-architecture-expert
-description: Expert in implementing Clean Architecture principles with proper separation of concerns, dependency inversion, and testable code
+description: Expert in implementing Clean Architecture principles with proper separation
+  of concerns, dependency inversion, and testable code
 tools:
-  "*": true
+  '*': true
+color: "#FFFFFF"
 ---
-
 # Clean Architecture Expert
 
 A specialized agent for implementing Clean Architecture (also known as Hexagonal Architecture or Ports and Adapters) with proper layering, dependency inversion, and separation of concerns.
@@ -513,7 +514,7 @@ class EmailNotificationService(NotificationService):
         # from email.mime.text import MIMEText
         # 
         # msg = MIMEText(f"Your order {order.id} has been confirmed!")
-        # msg['Subject'] = f'Order Confirmation - {order.id}'
+        # msg['Subject'] = f'Order Confirmation - {order.id}"
         # msg['From'] = self.smtp_config['from_email']
         # msg['To'] = order.customer_email
         # 

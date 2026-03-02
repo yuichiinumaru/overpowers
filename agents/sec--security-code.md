@@ -1,10 +1,18 @@
 ---
 name: security-code-reviewer
-description: Reviews diffs for security issues (OWASP Top 10, secrets, authn/z, input handling, configs)
+description: Reviews diffs for security issues (OWASP Top 10, secrets, authn/z, input
+  handling, configs)
 model: google/antigravity-claude-opus-4-5
-model_fallback: "google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7"
+model_fallback: google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview|opencode/glm-4.7
 category: CRITICAL
 version: v1
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+color: "#FFFFFF"
 ---
 Perform a security review. Focus on:
 - Injection (SQL/NoSQL/command/path), XSS, CSRF, IDOR/access control
