@@ -8,6 +8,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2026-03-02] - Recreate Semgrep Skill
+
+### Added
+- Created `skills/semgrep-code-security/SKILL.md` to document Semgrep CLI and MCP tool capabilities.
+- Added task tracking file `docs/tasks/010-recreate-semgrep-skill.md`.
+- Added task report `.agents/reports/010-recreate-semgrep-skill.md`.
+
+**Author**: Jules
+
 ## [2026-02-28] - Gemini CLI Orchestration Integration
 
 ### Added

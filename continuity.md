@@ -298,6 +298,21 @@
 1.  **Continue**: Select next batch of 5 repositories from `docs/references.md`.
 2.  **Refine**: Test `pocket-universe` commands with `browser-use` skill (potential synergy).
 
+## Session: 2026-03-02 - Recreate Semgrep Skill
+**Operator**: Jules (Agent)
+**Focus**: Recreating missing semgrep-code-security skill file
+
+### 🟢 Global State
+- **Skills**: Recreated `skills/semgrep-code-security/SKILL.md`
+
+### 🔄 Active Contexts
+| Component | Status | Notes |
+|:----------|:-------|:------|
+| **Semgrep Skill** | 🟢 Deployed | Restored with CLI, MCP, and token usage documentation |
+
+### ⏭️ Next Actions
+1.  **Continue**: Address remaining open tasks in `docs/tasklist.md`
+
 ### 📋 Session History
 | Date | Focus | Outcome |
 |:-----|:------|:--------|
