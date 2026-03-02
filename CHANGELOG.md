@@ -8,6 +8,64 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2026-03-02] - Merge PRs #45 and #46 via jj
+
+### Added
+- Integrated PR #46: feat: add skills extracted from Unsupervised Learning channel (Batch 1 & 2).
+- Integrated PR #45: YouTube Ripper: Processes batch 7 for @fernandobrasao.
+
+### Fixed
+- Resolved merge conflicts in `CHANGELOG.md`, `.agents/reports/youtube-mining-notes.md`, and `docs/youtube/fernando-brasao.md`.
+
+**Author**: Overpowers Architect (Gemini CLI)
+
+
+## [2026-03-02] - YouTube Skill Mining: Unsupervised Learning Channel (Batch 1 & 2)
+
+### Added
+- **Skills**: `fabric-ai-evaluator` extracted from 'Using the Smartest AI to Rate Other AI' video.
+- **Skills**: `nano-banana-art-generator` extracted from 'My Art Skill With Nano Banana 3' video.
+- **Skills**: `claude-code-neovim-ghostty` extracted from 'Claude Code + Neovim via Ghostty Panes' video.
+- **Skills**: `fabric-raycast-integration` extracted from 'Fabric New Integration with Raycast' video.
+- **Reports**: Appended notes to `youtube-mining-notes.md` for batch 1 & 2 analysis.
+- **Reports**: Added `docs/tasks/youtube-mining-video-analysis-report.md`.
+- **Data**: Initial raw list of videos in `docs/youtube/unsupervised-learning.md`.
+- **Data**: Subtitle and info files for processed videos in `docs/youtube/`.
+
+**Author**: youtube-ripper
+
+## [2026-03-02] - YouTube Ripper: Batch 6 & 7 (fernando-brasao)
+
+### Changed
+- Processed Batch 6 and 7 for @fernandobrasao.
+- Handled HTTP 429 errors from YouTube during transcript extraction.
+- Updated `docs/youtube/fernando-brasao.md` with processing status.
+- Appended evaluation notes to `.agents/reports/youtube-mining-notes.md`.
+
+**Author**: youtube-ripper
+
+## [2026-03-02] - Docs Directory Reorganization
+
+### Added
+- New directory structure for `docs/`: `architecture/`, `guides/`, `tasks/planning/`.
+- `archives/` directory for historical and obsolete documentation.
+- Naming convention `nnn-type-name.md` applied to all core documentation files.
+
+### Changed
+- Reorganized `docs/` root into subdirectories.
+- Moved testing patterns to `docs/guides/testing/`.
+- Moved external service documentation to `docs/guides/services/`.
+- Moved architectural concepts and codebase maps to `docs/architecture/`.
+- Updated `docs/README.md` with new structure and fixed navigation links.
+- Updated `docs/guides/004-guide-services.md` with correct internal paths.
+- Updated `docs/architecture/codemaps/000-arch-index.md` with current file names.
+
+### Fixed
+- Resolved merge conflicts in `docs/README.md`.
+- Completed documentation deduplication tasks (004, 005, 006).
+
+**Author**: Overpowers Architect (Gemini CLI)
+
 ## [2026-03-02] - Second Pass Audit and Agent Standardization
 
 ### Added
