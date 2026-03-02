@@ -73,6 +73,7 @@ for mapping in "${SYMLINKS[@]}"; do
         continue
     fi
 
+
     if [[ -L "${TGT_ABS}" ]]; then
         CURRENT_TARGET="$(readlink -f "${TGT_ABS}" 2>/dev/null || echo '<broken>')"
         if [[ "${CURRENT_TARGET}" == "${SRC_ABS}" ]]; then
@@ -81,13 +82,51 @@ for mapping in "${SYMLINKS[@]}"; do
         fi
         log_warn "Removing stale symlink: ${TGT_ABS} -> ${CURRENT_TARGET}"
         rm "${TGT_ABS}"
+        ln -s "${SRC_ABS}" "${TGT_ABS}"
+        log_info "${TGT_NAME} -> ${SRC_ABS}"
     elif [[ -e "${TGT_ABS}" ]]; then
-        log_warn "${TGT_ABS} exists as a real file/directory. Backing up to ${TGT_ABS}.bak"
-        mv "${TGT_ABS}" "${TGT_ABS}.bak"
-    fi
+        if [[ "${FAST_MODE:-0}" == "1" ]]; then
+            log_warn "${TGT_ABS} exists as a real file/directory. Fast mode: Backing up to ${TGT_ABS}.bak"
+            mv "${TGT_ABS}" "${TGT_ABS}.bak"
+            ln -s "${SRC_ABS}" "${TGT_ABS}"
+            log_info "${TGT_NAME} -> ${SRC_ABS}"
+        else
+            echo -e "  ${YELLOW}Conflict detected:${NC} ${TGT_ABS} already exists."
+            echo -e "  How would you like to handle this?"
+            echo -e "    ${GREEN}m)${NC} Merge    (Copy your existing assets to Overpowers, then symlink)"
+            echo -e "    ${GREEN}r)${NC} Replace  (Backup existing to .bak, then symlink Overpowers)"
+            echo -e "    ${GREEN}c)${NC} Copy     (Copy Overpowers to your directory, no symlink)"
+            echo -e "    ${GREEN}s)${NC} Skip     (Leave existing untouched)"
+            read -rp "  Choose [m/r/c/s]: " conflict_choice
 
-    ln -s "${SRC_ABS}" "${TGT_ABS}"
-    log_info "${TGT_NAME} -> ${SRC_ABS}"
+            case "${conflict_choice}" in
+                m|M)
+                    log_info "Merging existing contents into ${SRC_ABS}..."
+                    cp -R "${TGT_ABS}"/* "${SRC_ABS}"/ 2>/dev/null || true
+                    rm -rf "${TGT_ABS}"
+                    ln -s "${SRC_ABS}" "${TGT_ABS}"
+                    log_info "${TGT_NAME} merged and symlinked."
+                    ;;
+                r|R)
+                    log_warn "Backing up to ${TGT_ABS}.bak"
+                    mv "${TGT_ABS}" "${TGT_ABS}.bak"
+                    ln -s "${SRC_ABS}" "${TGT_ABS}"
+                    log_info "${TGT_NAME} -> ${SRC_ABS}"
+                    ;;
+                c|C)
+                    log_info "Copying Overpowers contents into ${TGT_ABS}..."
+                    cp -R "${SRC_ABS}"/* "${TGT_ABS}"/ 2>/dev/null || true
+                    log_info "${TGT_NAME} updated via copy."
+                    ;;
+                *)
+                    log_skip "Skipping ${TGT_NAME}."
+                    ;;
+            esac
+        fi
+    else
+        ln -s "${SRC_ABS}" "${TGT_ABS}"
+        log_info "${TGT_NAME} -> ${SRC_ABS}"
+    fi
 done
 
 # --- GEMINI.md (special handling) ---
