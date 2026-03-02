@@ -11,7 +11,7 @@
             "command": [
                 "uvx",
                 "--from",
-                "git+https://github.com/oraios/serena",
+                "{env:SERENA_PATH}",
                 "serena",
                 "start-mcp-server",
                 "--context",
@@ -33,9 +33,8 @@
         "desktop-commander": {
             "type": "local",
             "command": [
-                "npx",
-                "-y",
-                "@wonderwhy-er/desktop-commander-mcp"
+                "node",
+                "{env:DESKTOP_COMMANDER_PATH}"
             ],
             "enabled": true
         },
@@ -81,12 +80,9 @@
             "type": "local",
             "enabled": true,
             "command": [
-                "node",
-                "{env:SEMGREP_PATH}"
-            ],
-            "environment": {
-                "PATH": "{env:SEMGREP_SYSTEM_PATH}"
-            }
+                "semgrep",
+                "mcp"
+            ]
         },
         "in_memoria": {
             "type": "local",

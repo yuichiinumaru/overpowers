@@ -1,5 +1,22 @@
 # overpowers Continuity Ledger
 
+## Session: 2026-03-02 - MCP Configurations Path Resolution Fix
+**Operator**: Jules (Agent)
+**Focus**: Resolving unresolvable $\{env:VAR\} references inside `mcp_config.json` for Serena, Desktop Commander, and Semgrep.
+
+### 🟢 Global State
+- **MCPs**: 🟢 Restored completely. Unified `{env:SERENA_PATH}`, `{env:DESKTOP_COMMANDER_PATH}`, and updated standard `semgrep mcp` parameters in `opencode-example.json` and `.env.example`.
+- **Docs**: 🟢 Verified tracking updates inside `docs/tasks/014-fix-antigravity-mcp-config.md`.
+
+### 🔄 Active Contexts
+| Component | Status | Notes |
+|:----------|:-------|:------|
+| **Install** | 🟢 Fixed | Re-running `install-mcps.sh` reliably generates functional antigravity configs without stranding $\{env:VAR\} bindings. |
+
+### ⏭️ Next Actions
+1. **Monitor**: Check subsequent `antigravity` startup to confirm tools register properly.
+
+---
 ## Session: 2026-02-28 - Gemini CLI Orchestration Integration
 **Operator**: Antigravity (Agent)
 **Focus**: Creating skills, agents, and workflows for headless subagent delegation via Gemini CLI.
