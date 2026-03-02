@@ -2,7 +2,7 @@
 
 ## Objective
 
-Deduplicate and consolidate the `docs/analysis/` directory (13 files). Contains overlapping extraction plans (V1 + V2), multiple harvest reports from the same date, and a massive 2.3MB diff file.
+Deduplicate and consolidate the analysis files in `archives/` directory. Contains overlapping extraction plans (V1 + V2), multiple harvest reports from the same date, and a massive 2.3MB diff file.
 
 ## Test Requirements
 
@@ -35,7 +35,7 @@ Subtasks:
 
 ### Where
 
-`docs/analysis/`
+`archives/`
 
 ### How
 

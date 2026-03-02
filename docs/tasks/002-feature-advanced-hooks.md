@@ -10,7 +10,7 @@ Hooks must execute without errors in both OpenCode and Gemini CLI environments.
 
 ## Exit Conditions (GDD/TDD)
 
-- [ ] Review `docs/tasks/planning/advanced-hooks.md` for requirements.
+- [ ] Review `docs/tasks/planning/004-plan-advanced-hooks.md` for requirements.
 - [ ] Implement or scaffold the proposed hooks.
 - [ ] Verify hooks fire correctly in at least one platform.
 
@@ -22,11 +22,11 @@ Create new hook scripts or enhance existing ones based on the advanced patterns 
 
 ### Where
 
-`hooks/` directory and related documentation in `docs/hooks-guide.md`.
+`hooks/` directory and related documentation in `docs/guides/001-guide-hooks.md`.
 
 ### How
 
-Follow existing hook conventions in `hooks/` and reference `docs/hooks-guide.md`.
+Follow existing hook conventions in `hooks/` and reference `docs/guides/001-guide-hooks.md`.
 
 ### Why
 

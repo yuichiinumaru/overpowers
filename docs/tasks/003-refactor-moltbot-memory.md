@@ -10,7 +10,7 @@ Memory persistence must survive session restarts and be queryable via AgentDB or
 
 ## Exit Conditions (GDD/TDD)
 
-- [ ] Review `docs/tasks/planning/moltbot-memory.md` for requirements.
+- [ ] Review `docs/tasks/planning/008-plan-moltbot-memory.md` for requirements.
 - [ ] Implement or update memory persistence patterns.
 - [ ] Verify cross-session memory retrieval works.
 
@@ -26,7 +26,7 @@ Skills and services related to memory (`skills/memory-systems/`, `services/`).
 
 ### How
 
-Align with patterns in `docs/tasks/planning/moltbot-memory.md` and existing AgentDB skills.
+Align with patterns in `docs/tasks/planning/008-plan-moltbot-memory.md` and existing AgentDB skills.
 
 ### Why
 

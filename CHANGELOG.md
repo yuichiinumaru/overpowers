@@ -466,6 +466,22 @@ Unified multi-provider authentication with quota-optimized load balancing. Suppo
 - OpenCode and Claude Code plugin support
 
 **Author**: Yuichi Inumaru
+## [2026-03-02] - Docs Reorganization (Task 012)
+
+### Changed
+- Reorganized `docs/` hierarchy and categorized loose markdown files
+- Created `docs/architecture/`, `docs/guides/`, and `docs/tasks/planning/`
+- Applied `nnn-type-name.md` numbering convention to guides and architecture docs
+- Updated internal references across codebase to reflect new documentation paths
+
+### Added
+- `.agents/reports/012-reorganize-docs-directory.md` with progress report
+- Added `archives/` directory for deprecated docs, scans, and reports
+
+**Author**: Jules (Agent)
+
+---
+
 ## [Unreleased]
 - Resolved "Mega-Merge" conflicts across all configuration files.
 - Unified MCP server configurations in `opencode-example.json`.

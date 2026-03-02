@@ -17,7 +17,7 @@ Automated CLI verification or integration test script outputs.
 
 ### What
 
-Implement features or config structures discussed in `docs/tasks/planning/mcp-integrations.md`.
+Implement features or config structures discussed in `docs/tasks/planning/007-plan-mcp-integrations.md`.
 
 ### Where
 

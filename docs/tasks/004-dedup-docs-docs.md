@@ -2,7 +2,7 @@
 
 ## Objective
 
-Deduplicate and consolidate the `docs/docs/` directory (62 files). Many files are duplicate scan/compare reports from Jules harvest batches that exist in both short-form (`00026-*`) and long-form (`26-*`) versions.
+Deduplicate and consolidate the `archives/` directory (formerly `docs/docs/`). Many files are duplicate scan/compare reports from Jules harvest batches that exist in both short-form (`00026-*`) and long-form (`26-*`) versions.
 
 ## Test Requirements
 
@@ -21,7 +21,7 @@ Deduplicate and consolidate the `docs/docs/` directory (62 files). Many files ar
 
 ### What
 
-The `docs/docs/` folder contains 62 files, many of which are duplicated scan/compare reports from different Jules harvesting runs. For example:
+The `archives/` folder contains many duplicated scan/compare reports from different Jules harvesting runs. For example:
 - `00026-dudqks0319-cpu-antigravity-skills-scan.md` (1.8KB)
 - `26-dudqks0319-cpu-antigravity-skills-scan.md` (14KB)
 
@@ -36,7 +36,7 @@ Subtasks:
 
 ### Where
 
-`docs/docs/`
+`archives/`
 
 ### How
 

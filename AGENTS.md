@@ -113,10 +113,10 @@ Every modification to this repository **MUST** be accompanied by an entry in `CH
 
 ### III. The Law of Documentation
 * All new features must be documented in the appropriate guide:
-  - `docs/hooks_guide.md`
-  - `docs/scripts-guide.md`
-  - `docs/workflows-guide.md`
-  - `docs/services-guide.md`
+  - `docs/guides/001-guide-hooks.md`
+  - `docs/guides/002-guide-scripts.md`
+  - `docs/guides/003-guide-workflows.md`
+  - `docs/guides/004-guide-services.md`
 
 ### IV. The Law of Backward Compatibility
 * Do not break existing agent/skill interfaces without versioning.

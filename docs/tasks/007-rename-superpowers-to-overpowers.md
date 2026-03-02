@@ -25,11 +25,11 @@ This project is a heavily modified fork of "superpowers" but has its own identit
 Files to update (17 found):
 - `install.sh`, `README.md`, `AGENTS.md`
 - `skills/using-superpowers/SKILL.md` → rename directory
-- `docs/docs/references-cloned.sh`, `docs/docs/references-list.md`
-- `docs/docs/26-dudqks0319-*`, `docs/docs/skill-vs-agent-*.md`
-- `docs/README.md`, `docs/analysis/EXTRACTION_MASTER_PLAN.md`
-- `docs/JULES_ARCHITECTURAL_DIGEST.md`, `docs/raw_analysis_notes.md`
-- `docs/project_structure_map.md`, `docs/SYSTEM_KNOWLEDGE_GRAPH.md`
+- `archives/references-cloned.sh`, `archives/references-list.md`
+- `archives/26-dudqks0319-*`, `archives/skill-vs-agent-*.md`
+- `docs/README.md`, `archives/EXTRACTION_MASTER_PLAN.md`
+- `docs/architecture/003-arch-jules-digest.md`, `archives/004-archive-raw-analysis-notes.md`
+- `docs/architecture/001-arch-project-structure-map.md`, `docs/architecture/002-arch-system-knowledge-graph.md`
 
 Subtasks:
 - [ ] Update text references in each file (not attribution links)

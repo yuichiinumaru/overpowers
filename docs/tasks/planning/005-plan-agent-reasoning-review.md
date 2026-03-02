@@ -45,7 +45,7 @@ During the Overpowers Repository Recycling project (Phase 2), we encountered adv
 When ready to tackle this:
 1. Create benchmark suite for agent reasoning quality
 2. A/B test BDI vs current patterns on diverse tasks
-3. Document findings in `Overpowers/docs/research/`
+3. Document findings in `Overpowers/docs/tasks/planning/`
 4. If BDI proves superior, propose migration path
 
 ## Dependencies
