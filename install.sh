@@ -143,6 +143,12 @@ for platform in "${SELECTED_PLATFORMS[@]}"; do
 done
 
 # =============================================================================
+# Local MCP Packages Build
+# =============================================================================
+echo ""
+bash "${SCRIPT_DIR}/scripts/setup/build-packages.sh"
+
+# =============================================================================
 # MCP installation prompt
 # =============================================================================
 echo ""
@@ -154,9 +160,9 @@ if [[ "${FAST_MODE}" == "1" ]]; then
     echo -e "  ${CYAN}Fast mode: Auto-installing MCPs.${NC}"
     export FAST_MODE=1
     if [[ -n "${ENV_FILE}" ]]; then
-        bash "${SCRIPT_DIR}/scripts/install-mcps.sh" --env "${ENV_FILE}"
+        bash "${SCRIPT_DIR}/scripts/install-mcps.sh" --fast --env "${ENV_FILE}"
     else
-        bash "${SCRIPT_DIR}/scripts/install-mcps.sh"
+        bash "${SCRIPT_DIR}/scripts/install-mcps.sh" --fast
     fi
 else
     echo -e "  Do you also want to install ${BOLD}MCP servers${NC} (model context protocol)"

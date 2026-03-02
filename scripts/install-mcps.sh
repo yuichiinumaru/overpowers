@@ -28,6 +28,10 @@ while [[ $# -gt 0 ]]; do
       ENV_FILE="$2"
       shift 2
       ;;
+    -f|--fast)
+      FAST_MODE=1
+      shift
+      ;;
     *)
       # Ignore other args for now, let install.sh handle them primarily
       shift
@@ -257,6 +261,10 @@ if [[ -f "${CENTRAL_ENV}" ]]; then
         key="${line%%=*}"
         val="${line#*=}"
         val="${val//\'/}"
+        # Relative-to-absolute path expansion
+        if [[ "${val}" == "./packages/"* ]]; then
+            val="${REPO_ROOT}/${val#./}"
+        fi
         ENV_LOADED["${key}"]="${val}"
     done < "${CENTRAL_ENV}"
 fi
@@ -356,6 +364,7 @@ if os.path.exists(extracted_path):
 # Load .env for resolving {env:VAR}
 env_vals = {}
 env_path = sys.argv[3]
+repo_root = os.path.dirname(os.path.dirname(os.path.abspath(sys.argv[1])))
 if os.path.exists(env_path):
     with open(env_path) as f:
         for line in f:
@@ -363,7 +372,10 @@ if os.path.exists(env_path):
             if not line or line.startswith('#'):
                 continue
             key, _, val = line.partition('=')
-            env_vals[key] = val.strip("'\"")
+            val = val.strip("'\"")
+            if val.startswith("./packages/"):
+                val = os.path.join(repo_root, val[2:])
+            env_vals[key] = val
 
 def resolve(val):
     """Replace {env:VAR} with actual values."""
