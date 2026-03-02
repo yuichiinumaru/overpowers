@@ -8,6 +8,17 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2026-03-02] - YouTube Skill Mining: Unsupervised Learning Channel
+
+### Added
+- **Skills**: `claude-code-neovim-ghostty` extracted from 'Claude Code + Neovim via Ghostty Panes' video.
+- **Skills**: `fabric-raycast-integration` extracted from 'Fabric New Integration with Raycast' video.
+- **Reports**: Added `youtube-mining-notes.md` with rejected video analysis.
+- **Reports**: Added `youtube-mining-video-analysis-report.md` with final skill creation outcomes.
+- **Data**: Initial raw list of videos in `docs/youtube/unsupervised-learning.md`.
+
+**Author**: youtube-ripper
+
 ## [2026-02-28] - Gemini CLI Orchestration Integration
 
 ### Added
