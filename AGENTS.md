@@ -69,25 +69,29 @@ Every modification to this repository **MUST** be accompanied by an entry in `CH
 ---
 
 ## 4. THE OPERATIONAL LAWS
-### I. The Law of Explicit Declaration
-* Local Agents must be explicitly declared in `opencode.json` for optimal performance.
-### II. The Law of Modular Extension
+### I. The Law of Modular Extension
 * New agents go in `agents/` with proper frontmatter. New skills go in `skills/` with a `SKILL.md`. New workflows go in `workflows/`.
-### III. The Law of Documentation
+### II. The Law of Documentation
 * All new features must be documented in the appropriate guide (`docs/hooks_guide.md`, etc.).
-### IV. The Law of Shared Consciousness
-* All agents must persist architectural discoveries, resolutions, and knowledge as `.md` files in `.agents/memories/` (symlinked to `.serena/memories/`).
-### V. The Law of Thought Offloading
+### III. The Law of Shared Consciousness
+* All agents must persist architectural discoveries, resolutions, and knowledge as `.md` files in `.agents/memories/` (bidirectional symlinked to `.serena/memories/`).
+### IV. The Law of Thought Offloading
 * During long, demanding, or complex operations, ALL agents MUST offload their reasoning, context, and intermediate thoughts to `.agents/thoughts/<agent-name>/` (e.g., `.agents/thoughts/jules/`) using HEX tag naming conventions to prevent context degradation and maintain chain-of-thought.
 
 ---
 
 ## 5. FILENAME & NAMING CONVENTIONS
 Strict adherence to filename conventions ensures files are easily sortable and discoverable.
-1. **General Files**: `type-nnnn-names.md` (e.g., `analysis-0042-memory-systems-audit.md`)
-2. **Tasks (`docs/tasks/`)**: `nnnn-type-names.md` (e.g., `024-plan-research-librarian-nlm.md`)
-3. **Scavenge Tasks**: `reponame-nnnn-names.md` (e.g., `langchain-0012-memory-extraction.md`)
-4. **General Guidelines**: Always use lowercase, hyphens `-` for separation, and appropriate extensions. NEVER use spaces, underscores, or camelCase.
+1. **General Files**: `type-subtype-nnnn-names.md` format. Subtype is optional.
+   * Example: `scavenge-report-0023-agno-agent-framework.md`
+2. **Tasks (`docs/tasks/`)**: `nnnn-type-subtype-names.md` format.
+   * The `nnnn` prefix follows a specific rule:
+     * **First 3 digits**: chronological planning order.
+     * **Last digit**: `0` = blocker (sequential), `1-9` = parallelizable tasks.
+     * *Example*: `0010` is a blocker. `0021`, `0022`, `0023` are parallelizable.
+   * **Subtype**: Optional, but preferred next to the type if used.
+   * *Example*: `0111-scavenge-memory-repos.md` (11th planned chunk, non-blocker/parallelizable 1, type: scavenge, no subtype).
+3. **General Guidelines**: Always use lowercase, hyphens `-` for separation, and appropriate extensions. NEVER use spaces, underscores, or camelCase.
 
 ---
 
@@ -132,11 +136,11 @@ We adhere to Karpathy-Inspired Guidelines and strict Agile structures to prevent
 * Strong success criteria let you loop independently.
 
 ### 7.5. Specification-First Development (SDD)
-When starting a new feature:
-1. Create `FEATURE_PLAN.md` (vertical slices).
-2. Create `TECHNICAL_DESIGN.md` (dependencies, API signatures).
-3. Create `TASKS.md` (step-by-step).
-* Nested in `.feature/{feature-name}/` directory. Only begin implementation after specs are reviewed.
+When a task is of type `feature` (e.g., `0020-feature-auth-system.md`), it must be accompanied by detailed specs rather than nested in separate feature folders:
+1. **Feature Plan**: Create `nnnn-type-subtype-names-feature-plan.md` alongside it in `docs/tasks/`. (follow the template docs/tasks/000-template-feature-plan.md)
+2. **Technical Design**: Create `nnnn-type-subtype-names-technical-design.md` alongside it in `docs/tasks/`. (follow the template docs/tasks/000-template-technical-design.md)
+
+* *Note*: The main task file `nnnn-type-subtype-names.md` must link/reference these documents. This naming ensures all 3 files sort alphabetically together. Do not begin implementation until technical design and feature plan are reviewed. SDD rules are subordinate to overall task management protocols (Section 5 and 8 precedence).
 
 ### 7.6. Test-Driven Development (TDD)
 * Always write a failing test before writing production code.
@@ -147,7 +151,7 @@ When starting a new feature:
 
 ## 8. TASK MANAGEMENT PROTOCOLS
 1. **Proposal** → `docs/tasks/planning/` (no code generated)
-2. **Approved Task** → `docs/tasks/nnn-type-name.md` (with Exit Conditions)
+2. **Approved Task** → `docs/tasks/nnnn-type-subtype-names.md` (with Exit Conditions). **All tasks MUST follow the standard task template.**
 3. **In Progress / Complete** → Mark `[/]` or `[x]` in `docs/tasklist.md`.
 * **Important:** Jules agents **NEVER** modify `docs/tasklist.md` to prevent merge conflicts in concurrent swarms. They only modify their specific task file.
 
@@ -181,6 +185,14 @@ While Jules relies on the platform native submit tool, Antigravity, Gemini-CLI a
 ### 10.2. Concurrency Protection & Conflict Resolution
 * Agents running in parallel MUST operate in isolated `jj workspaces` to avoid snapshot corruption.
 * **Jujutsu Merging & Operations**: For branch hierarchy, merging rules, conflict resolution, or cleanup sequences, **REFER** to the `harmonious-jujutsu-merge` skill and workflow. Auto-merge (`gh pr merge`) is ONLY valid for the "Happy Path" without conflicts.
+
+### 10.3. Branching & Pushing Strategy
+* **NEVER** push directly to shared/mainline branches like `main`, `development`, or `staging`.
+* **ALWAYS** push your changes to a **new branch** with a descriptive name. This ensures history is safely preserved on the remote (GitHub) in case of local Jujutsu errors or snapshot corruption.
+* Example: `jj bookmark create docs/update-vcs-rules` followed by `jj git push --bookmark docs/update-vcs-rules --allow-new`.
+* **Important Notes:**
+  * New bookmarks require `--allow-new` flag on the first push.
+  * Commits **must have a description** (`jj describe -m "..."`) before pushing, or `jj git push` will refuse.
 
 ---
 
