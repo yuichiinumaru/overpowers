@@ -1,0 +1,24 @@
+---
+description: Create a technical design document specifically for a single feature.
+argument-hint: Path to the feature-plan.md document
+---
+
+# /02-plan-feature (Feature Technical Design)
+
+**Context**: Use this workflow after `/01-specify-feature` to design the technical implementation of one specific feature within an existing architecture.
+
+**Goal**: Generate the accompanying `nnnn-type-subtype-[name]-technical-design.md` for a single feature.
+
+## Actions
+
+1. **Consume Plan**: Read the specific `docs/tasks/nnnn-...-feature-plan.md`.
+
+2. **Consult Architecture**: Read `AGENTS.md` and any global technical designs to ensure this feature adheres to the system's established patterns.
+
+3. **Design Architecture (Feature Level)**:
+   - Detail the specific components, files, and functions that need to be created or modified.
+   - Detail local logic flows, localized DB schema updates, and specific API endpoints.
+
+4. **Verify Alignment**: Ensure the proposed design does not violate existing architectural rules.
+
+5. **Output Design**: Generate the structural definition inside `docs/tasks/nnnn-type-subtype-[name]-technical-design.md`.

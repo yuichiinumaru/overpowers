@@ -1,12 +1,10 @@
 [<img width="3168" height="1344" alt="Gemini_Generated_Image_e9pigpe9pigpe9pi" src="https://github.com/user-attachments/assets/0ebf9eaa-3226-4be3-b012-589f6d5ea6e0" />](https://www.youtube.com/watch?v=M_XwzBMTJaM)
 
-# Overpowers 🚀
+# Overpowers 
 
-**Overpowers** is a consolidated, opinionated, and massively expanded toolkit for AI coding assistants. Built upon the foundation of [overpowers](https://github.com/obra/overpowers) by [Jesse Vincent](https://github.com/obra), it centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, highly capable repository.
+**Overpowers** is a consolidated, opinionated, and massively expanded toolkit for AI coding assistants. It centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, highly capable repository. It's "Power Overwhelming".
 
-Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, and **Kilo Code** out of the box.
-
-> **Note**: This is a fork with curated integrations, personal touches, and additional components based on my own workflow. The original overpowers is an excellent starting point — this version adds opinionated expansions.
+Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, and **Kilo Code** out of the box. Planning to expand to Codex-CLI, Claude-Code, Cursor, and more.
 
 ## 📊 Inventory
 
@@ -236,8 +234,4 @@ Contributions are welcome! Please:
 
 ## 📜 License
 
-MIT License — Based on [overpowers](https://github.com/obra/overpowers) by Jesse Vincent. See [LICENSE](LICENSE) for details.
-
----
-
-*Built with 💜 upon the foundation of overpowers by Jesse Vincent*
+MIT License — See [LICENSE](LICENSE) for details.

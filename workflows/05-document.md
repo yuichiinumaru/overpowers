@@ -1,64 +1,23 @@
 ---
-description: Document completed feature implementation with API guides, architecture updates, and lessons learned
-argument-hint: Optional documentation focus areas or specific sections to update
+description: Finalize a completed task, audit changes, update memories, and close bookmarks.
+argument-hint: Path to the master task file completing the lifecycle
 ---
 
-## User Input
+# /05-document (Knowledge Closure)
 
-```text
-$ARGUMENTS
-```
+**Goal**: Provide the perfect algorithmic closure to a task by rendering its legacy into persistent memory, auditing the VCS trail, and signaling final completion.
 
-You **MUST** consider the user input before proceeding (if not empty).
+## Actions
 
-# Document Feature
+1. **Audit Changelog**: Execute the `/14-changelog-audit` workflow. This guarantees that all Jujutsu operations or Git commits forged during execution are mirrored in the centralized `CHANGELOG.md`.
 
-## Outline
+2. **Sync Short-to-Long Memory**: Execute the `/11-sync-memory` workflow.
+   - Aggregate the contextual discoveries and decisions compiled along the `01` through `04` pipeline.
+   - Force an update into the `.archive/SYSTEM_KNOWLEDGE_GRAPH.json` (or central repo if relocated) to ensure all agents share real-time cognizance of the new integrations.
+   - Propagate artifacts logically into `.agents/memories/` (Serena/Memcord).
 
-1. **Setup**: Get the current git branch, if it written in format `feature/<number-padded-to-3-digits>-<kebab-case-title>`, part after `feature/` is defined as FEATURE_NAME. Consuquently, FEATURE_DIR is defined as `specs/FEATURE_NAME`, TASKS_FILE is defined as `specs/FEATURE_NAME/tasks.md`.
+3. **Mark Complete**: 
+   - Access `docs/tasklist.md`.
+   - Re-mark the master task corresponding to this cycle from `[/]` to `[x]` indicating absolute resolution.
 
-2. **Load context**: Load and analyze the implementation context from FEATURE_DIR:
-   - **REQUIRED**: Read tasks.md to verify task completion
-   - **IF EXISTS**: Read plan.md for architecture and file structure
-   - **IF EXISTS**: Read spec.md for feature requirements
-   - **IF EXISTS**: Read contracts.md for API specifications
-   - **IF EXISTS**: Read data-model.md for entities and relationships
-   - Note: These files were written during previous stages of SDD workflow (Discovery, Research, Planning, etc.).
-
-3. Continue with Stage 10
-
-## Stage 10: Document Feature
-
-**Goal**: Document feature completion based on implementation results and update project documentation.
-
-### Actions
-
-**Implementation Verification**:
-
-1. Verify implementation status:
-   - Review tasks.md to confirm all tasks are marked as completed [X]
-   - Identify any incomplete or partially implemented tasks
-   - Review codebase for any missing or incomplete functionality
-
-2. **Present to user** any missing or incomplete functionality:
-   - List incomplete tasks and their status
-   - **Ask if they want to fix it now or later**
-   - If user chooses to fix now, launch `developer` agent to address issues before proceeding
-   - If there are no issues or user accepts the results as-is, proceed to documentation
-
-**Documentation Update**:
-
-3. Launch `tech-writer` agent to update documentation, using provided prompt exactly, while prefiling required variables:
-
-   ```markdown
-   **Goal**: Document feature implementation with API guides, architecture updates, and lessons learned, by following Documentation Update Workflow.
-
-   User Input: {provide user input here if it exists}
-
-   FEATURE_NAME: {FEATURE_NAME}
-   FEATURE_DIR: {FEATURE_DIR}
-   TASKS_FILE: {TASKS_FILE}
-
-   ```
-
-4. Present agent output to user with summary of documentation updates
+4. **Close VCS**: Facilitate the architectural closure of the working branch/bookmark. Provide guidance corresponding to the `AGENTS.md` parameters such as `harmonious-jujutsu-merge` to ensure the code ascends cleanly into staging/development or awaits human PR approval structure.

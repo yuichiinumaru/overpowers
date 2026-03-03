@@ -53,49 +53,8 @@ declare -a SYMLINKS=(
     "workflows:global_workflows"
 )
 
-for mapping in "${SYMLINKS[@]}"; do
-    SRC_REL="${mapping%%:*}"
-    TGT_NAME="${mapping##*:}"
-    SRC_ABS="${REPO_ROOT}/${SRC_REL}"
-    TGT_ABS="${ANTIGRAVITY_DIR}/${TGT_NAME}"
-
-    if [[ ! -e "${SRC_ABS}" ]]; then
-        log_warn "Source not found: ${SRC_ABS}. Skipping."
-        continue
-    fi
-
-    if [[ -L "${TGT_ABS}" ]]; then
-        CURRENT="$(readlink -f "${TGT_ABS}" 2>/dev/null || echo '<broken>')"
-        if [[ "${CURRENT}" == "${SRC_ABS}" ]]; then
-            log_skip "${TGT_NAME} already correct."
-            continue
-        fi
-        log_warn "Removing stale symlink: ${TGT_ABS}"
-        rm "${TGT_ABS}"
-    elif [[ -e "${TGT_ABS}" ]]; then
-        if [[ "${OVERPOWERS_CONFLICT_POLICY:-replace}" == "copy" ]]; then
-            if [[ -d "${SRC_ABS}" ]]; then
-                log_info "Merging assets into existing directory: ${TGT_ABS}"
-                mkdir -p "${TGT_ABS}"
-                cp -rn "${SRC_ABS}/"* "${TGT_ABS}/" 2>/dev/null || true
-            else
-                log_info "File already exists, skipping: ${TGT_ABS}"
-            fi
-            continue
-        else
-            log_warn "${TGT_ABS} exists. Backing up to ${TGT_ABS}.bak"
-            mv "${TGT_ABS}" "${TGT_ABS}.bak"
-        fi
-    fi
-
-    if [[ "${OVERPOWERS_CONFLICT_POLICY:-replace}" == "copy" ]]; then
-        cp -r "${SRC_ABS}" "${TGT_ABS}"
-        log_info "${TGT_NAME} (copied) <- ${SRC_ABS}"
-    else
-        ln -s "${SRC_ABS}" "${TGT_ABS}"
-        log_info "${TGT_NAME} (symlinked) -> ${SRC_ABS}"
-    fi
-done
+source "${SCRIPT_DIR}/utils/create-symlinks.sh"
+create_symlinks "${ANTIGRAVITY_DIR}" "${SYMLINKS[@]}"
 
 echo ""
 echo -e "${GREEN}═══════════════════════════════════════════════════════${NC}"

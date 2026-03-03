@@ -1,0 +1,50 @@
+# Task 0300: Skill Scripts Batch 005
+
+**Status**: [ ]
+**Priority**: LOW
+**Type**: ops
+
+## Objective
+Analyze each skill in this batch and create helper scripts inside their `scripts/` subdirectory where it makes sense, based on the `SKILL.md` instructions.
+
+## Sub-tasks
+- [ ] `ai-llm-0086-ai-llm-0237-comfyui-aep-music-generator`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0086-ai-llm-0237-comfyui-aep-music-generator`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0087-ai-llm-0238-comfyui-cache-dit`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0087-ai-llm-0238-comfyui-cache-dit`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0088-ai-llm-0239-comfyui-wan22-svi20-long-video`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0088-ai-llm-0239-comfyui-wan22-svi20-long-video`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0089-ai-llm-0240-comfyui-z-image-turbo-inpaint`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0089-ai-llm-0240-comfyui-z-image-turbo-inpaint`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0090-ai-llm-0241-comfyui-z-image-turbo-setup`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0090-ai-llm-0241-comfyui-z-image-turbo-setup`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0091-ai-llm-0242-comfyui-z-image-turbo-union-depth`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0091-ai-llm-0242-comfyui-z-image-turbo-union-depth`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0092-ai-llm-0243-compactness`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0092-ai-llm-0243-compactness`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0093-ai-llm-0245-competitive-analysis`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0093-ai-llm-0245-competitive-analysis`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0094-ai-llm-0246-competitive-intelligence`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0094-ai-llm-0246-competitive-intelligence`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0095-ai-llm-0248-competitor-alternatives`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0095-ai-llm-0248-competitor-alternatives`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0096-ai-llm-0249-component-refactoring`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0096-ai-llm-0249-component-refactoring`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0097-ai-llm-0256-conductor-new-track`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0097-ai-llm-0256-conductor-new-track`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0098-ai-llm-0259-content-creator`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0098-ai-llm-0259-content-creator`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0099-ai-llm-0260-content-marketer`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0099-ai-llm-0260-content-marketer`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0100-ai-llm-0261-content-research-writer`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0100-ai-llm-0261-content-research-writer`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0101-ai-llm-0263-content-strategy`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0101-ai-llm-0263-content-strategy`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0107-ai-llm-0273-copy-editing`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0107-ai-llm-0273-copy-editing`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0108-ai-llm-0280-create-handoff`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0108-ai-llm-0280-create-handoff`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0109-ai-llm-0283-create-plan`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0109-ai-llm-0283-create-plan`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [ ] `ai-llm-0110-ai-llm-0289-csv-data-summarizer`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [ ] `ai-llm-0110-ai-llm-0289-csv-data-summarizer`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)

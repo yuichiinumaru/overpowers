@@ -8,6 +8,65 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+
+## [2026-03-05] - Skill Scripts Batch 011 Deployment
+### Added
+- Implemented and deployed helper scripts for 20 skills in Batch 011 (`ai-llm-0220` to `ai-llm-0241`).
+- Created standardized Python and Bash utilities for market sizing, marketing CAC, A/B testing, MCP interactions, regulatory gap analysis, and more.
+**Author**: Overpowers Architect (Gemini CLI)
+
+## [2026-03-05] - Skill Scripts Batch 005 Deployment
+### Added
+- Commenced analysis and deployment of helper scripts for Skill Batch 005.
+**Author**: Overpowers Architect (Gemini CLI)
+
+## [2026-03-04] - Advanced Hooks Implementation
+### Added
+- Implemented robust `hooks/runtime/todo_enforcer.py` to auto-detect pending tasks from `tasklist.md` and `continuity.md`.
+- Implemented intelligent `hooks/runtime/dir_injector.py` for automated context enrichment during directory navigation.
+- Implemented `hooks/runtime/edit_guard.py` middleware providing actionable self-recovery hints for agent tool failures.
+**Author**: Overpowers Architect (Gemini CLI)
+
+## [2026-03-04] - External Skill Extraction and Integration
+
+### Added
+- Integrated 31 new 🟢 Green skills from external repositories (Anthropics, OpenAI, Vercel, Google Labs).
+- Created `media-content-0571-media-content-1246-stitch-remotion-walkthrough` (Differentiated from Remotion hub).
+- Created `ops-infra-0739-desktop-screenshot` (Differentiated from marketing screenshots).
+- Created `ai-llm-1247-openai-imagegen` (Differentiated from Gemini imagegen).
+- Created `ai-llm-1248-openai-speech` (Differentiated from Azure speech-to-text).
+- New sequence of skills added to categories: `ai-llm` (1234-1246), `ops-infra` (0733-0738), `web-frontend` (1233-1238), `dev-code` (1144), `data-sci` (0481), `ux-design` (1194), `sec-safety` (1143-1144), `tool-general` (1154).
+
+### Changed
+- **Merged and Enriched**: `algorithmic-art`, `brand-guidelines`, `canvas-design`, `react-best-practices` (58 rules), `skill-creator`, `vercel-deploy`, and `web-design-guidelines` with superior official content.
+- Updated `continuity.md` to reflect skill mining completion.
+**Author**: Overpowers Architect (Gemini CLI)
+
+
+### Added
+- Created `scripts/utils/jj-commit-push.sh` to automate the local JuJutsu staging/commit/push lifecycle.
+- Modified `workflows/00-setup.md` to establish global `$OVERPOWERS_PATH` capability to let users execute the setup sequence seamlessly anywhere.
+- Added `10.4. Routine State Commits` requirement inside `AGENTS.md` (and template).
+
+## [2026-03-04] - Constitution Template Hardening
+### Changed
+- Updated `AGENTS.md` and `templates/rules/AGENTS.md` Section 6 to formally enforce templates (`agent.md`, `skill-template/SKILL.md`, `workflow.md`) and mandate the `md-to-toml.py` conversion script for workflows.
+- Renamed `docs/guides/` files to strictly follow the standard `type-[subtype]-nnnn-names.md` document convention.
+**Author**: Antigravity
+
+## [2026-03-04] - Massive Operation Framework Stress Test
+### Added
+- Created `.agents/thoughts/massive-operation-framework-stress-test.md` containing analysis and 30 stress-test questions for the universal transformation framework.
+**Author**: Overpowers Architect (Gemini CLI)
+
+## [2026-03-04] - Skill Reorganization
+### Changed
+- Created `scripts/install-skills.py` for skill integrity verification and local setup.
+- Updated `AGENTS.md` and templates with memory management guidelines and terminology clarity.
+- Renamed 1237 skill folders following the `type-subtype-nnnn-name` convention for better organization and discovery.
+### Added
+- Created `docs/tasks/planning/2026-03-04-skill-improvements-plan.md` for future standardization tasks.
+**Author**: Overpowers Architect
 ## [2026-03-03] - System Recovery & Workflow Enhancements
 
 ### Added

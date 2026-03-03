@@ -76,48 +76,8 @@ else
 fi
 
 # --- Process each symlink ---
-for mapping in "${SYMLINKS[@]}"; do
-    SRC_REL="${mapping%%:*}"
-    TGT_NAME="${mapping##*:}"
-
-    SRC_ABS="${REPO_ROOT}/${SRC_REL}"
-    TGT_ABS="${OPENCODE_DIR}/${TGT_NAME}"
-
-    # Check if source exists
-    if [[ ! -e "${SRC_ABS}" ]]; then
-        log_warn "Source not found: ${SRC_ABS}. Skipping ${TGT_NAME}."
-        continue
-    fi
-
-    # Remove existing symlink or warn about existing real dir
-    if [[ -L "${TGT_ABS}" ]]; then
-        CURRENT_TARGET="$(readlink -f "${TGT_ABS}" 2>/dev/null || echo '<broken>')"
-        if [[ "${CURRENT_TARGET}" == "${SRC_ABS}" ]]; then
-            log_skip "${TGT_NAME} already points to the correct source. Skipping."
-            continue
-        fi
-        log_warn "Removing stale symlink: ${TGT_ABS} -> ${CURRENT_TARGET}"
-        rm "${TGT_ABS}"
-    elif [[ -e "${TGT_ABS}" ]]; then
-        if [[ "${OVERPOWERS_CONFLICT_POLICY:-replace}" == "copy" ]]; then
-            log_info "Merging assets into existing directory: ${TGT_ABS}"
-            cp -rn "${SRC_ABS}/"* "${TGT_ABS}/" 2>/dev/null || true
-            continue
-        else
-            log_warn "${TGT_ABS} exists as a real file/directory. Backing up to ${TGT_ABS}.bak"
-            mv "${TGT_ABS}" "${TGT_ABS}.bak"
-        fi
-    fi
-
-    # Create symlink or copy
-    if [[ "${OVERPOWERS_CONFLICT_POLICY:-replace}" == "copy" ]]; then
-        cp -r "${SRC_ABS}" "${TGT_ABS}"
-        log_info "${TGT_NAME} (copied) <- ${SRC_ABS}"
-    else
-        ln -s "${SRC_ABS}" "${TGT_ABS}"
-        log_info "${TGT_NAME} (symlinked) -> ${SRC_ABS}"
-    fi
-done
+source "${SCRIPT_DIR}/utils/create-symlinks.sh"
+create_symlinks "${OPENCODE_DIR}" "${SYMLINKS[@]}"
 
 echo ""
 echo -e "${GREEN}═══════════════════════════════════════════════════════${NC}"
