@@ -15,6 +15,20 @@ This skill is designed to guide AI agents through the process of resolving merge
 - When a `jj rebase` or `jj merge` results in a conflict.
 - When you need to resolve conflicts while preserving the integrity of both branches.
 - When you want to avoid manual marker editing and use Jujutsu's built-in resolution tools.
+- **Auto-Merge Failures**: When GitHub's `gh pr merge` alerts a conflict, use this skill as the essential fallback to gracefully resolve without exposing git markers.
+
+## The Hierarchical Flow (Sprint -> Task)
+When managing the lifecycle of features and fixes, follow this strict mapped process using Jujutsu:
+
+1. **Task Completa:** Snapshot the working copy. `jj commit -m "feat/fix: task desc"`
+2. **Story Completa (Nova Branch):** Task is complete, assign it to a development branch. `jj bookmark set development -r @` then `jj new development`
+3. **Epic Completo (Merge para Staging):** Story complete, merge to staging. `jj new staging development -m "merge..."` then `jj bookmark set staging -r @`
+4. **Sprint Completa (Merge para Main):** Epic complete, merge to main. `jj new main staging -m "merge..."` then `jj bookmark set main -r @`
+*Note: The backup branch MUST remain completely untouched.*
+
+## Cleanup & Prevention
+- Merge operations must be followed by cleanup (`git branch -D` and remote branch deletion) to maintain a clean repo.
+- Ensure no isolated artifacts in Jujutsu virtual workspaces leak into the main branch without resolution.
 
 ## The Harmonious Protocol
 

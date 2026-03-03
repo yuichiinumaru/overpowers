@@ -3,14 +3,14 @@
 
 set -e
 
-cd ~/.config/opencode/Overpowers
+cd ~/.config/opencode/Overpowers || cd "$(dirname "$0")/.."
 
 echo "🔧 Step 1: Generating modular agent configs..."
-python3 generate-agent-configs.py
+python3 scripts/generators/generate-agent-configs.py
 
 echo ""
 echo "💉 Step 2: Injecting agents into opencode.json..."
-python3 inject-agents-to-config.py
+python3 scripts/utils/inject-agents-to-config.py
 
 echo ""
 echo "✅ Done! Check ~/.config/opencode/opencode.json"

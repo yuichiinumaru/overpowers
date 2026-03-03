@@ -19,14 +19,14 @@ Ask the user where they want to store the configuration:
 **Options:**
 
 1. **Project level (shared via git)** - Configuration tracked in version control, shared with team
-   - CLAUDE.md updates go to: `./CLAUDE.md`
+   - AGENTS.md updates go to: `./AGENTS.md`
 
 2. **Project level (personal preferences)** - Configuration stays local, not tracked in git
-   - CLAUDE.md updates go to: `./CLAUDE.local.md`
+   - AGENTS.md updates go to: `./CLAUDE.local.md`
    - Verify these files are listed in `.gitignore`, add them if not
 
 3. **User level (global)** - Configuration applies to all projects for this user
-   - CLAUDE.md updates go to: `~/.claude/CLAUDE.md`
+   - AGENTS.md updates go to: `~/.claude/AGENTS.md`
 
 Store the user's choice and use the appropriate paths in subsequent steps.
 
@@ -76,9 +76,9 @@ You must restart Claude Code to load the new MCP server:
 
 ```
 
-## 5. Update CLAUDE.md file
+## 5. Update AGENTS.md file
 
-Use the path determined in step 1. Once Serena is successfully set up, update the appropriate CLAUDE.md file with the following content EXACTLY:
+Use the path determined in step 1. Once Serena is successfully set up, update the appropriate AGENTS.md file with the following content EXACTLY:
 
 ```markdown
 ### Use Serena MCP for Semantic Code Analysis instead of regular code search and editing

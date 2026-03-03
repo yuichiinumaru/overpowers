@@ -19,5 +19,7 @@ The Overpowers repository operates under strict protocols to ensure maintainabil
 *   **Recovery**: Scripts like `revert-skills-to-kebab.py` exist to fix accidental `snake_case` conversions in skills.
 
 ## 4. Operational Laws
+*   **The Archive Protocol**: NEVER delete deprecated files, folders, or rules. Move them to `.archive/` to clear context while preserving history.
+*   **The Law of Shared Consciousness**: All agents must persist discoveries using `workflows/memory-sync-protocol.md` to Memcord, Serena, and `.agents/memories/`.
 *   **Explicit Declaration**: Agents must be registered in `opencode.json` (helper: `inject-agents-to-config.py`).
 *   **Modular Extension**: usage of `generate-agent-configs.py` to maintain the registry.

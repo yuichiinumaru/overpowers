@@ -94,6 +94,7 @@ overpowers/
 | Script | Purpose |
 |--------|---------|
 | `install.sh` | Master installer — orchestrates all deploys + MCPs |
+| `scripts/deploy-agent-army.sh` | Automatically generates configs and injects hundreds of agents |
 | `scripts/deploy-to-opencode.sh` | Symlinks agents, skills, commands, hooks → `~/.config/opencode/` |
 | `scripts/deploy-to-gemini-cli.sh` | Symlinks skills, hooks, AGENTS.md → `~/.gemini/` |
 | `scripts/deploy-to-antigravity.sh` | Symlinks skills, workflows → `~/.gemini/antigravity/` |
@@ -103,8 +104,13 @@ overpowers/
 
 | Script | Purpose |
 |--------|---------|
-| `scripts/install-mcps.sh` | Unified MCP installer for OpenCode + Antigravity |
+| `scripts/install-mcps.sh` | Unified MCP installer across platforms |
 | `scripts/install-plugins.sh` | Interactive community plugin/theme installer |
+| `scripts/install-personas.sh` | Installs system personas |
+| `scripts/install-antigravity-skills.sh` | Installs specific Antigravity skills |
+| `scripts/setup-browser-use.sh` | Sets up browser automation |
+| `scripts/setup-local-api-keys.sh` | Sets up local API keys safely |
+| `scripts/setup-vibe-kanban.sh` | Sets up Vibe Kanban board |
 
 ### How the symlinks work
 

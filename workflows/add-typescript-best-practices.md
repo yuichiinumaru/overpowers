@@ -1,11 +1,11 @@
 ---
-description: Setup TypeScript best practices and code style rules in CLAUDE.md
+description: Setup TypeScript best practices and code style rules in AGENTS.md
 argument-hint: Optional argument which practices to add or avoid
 ---
 
 # Setup TypeScript Best Practices
 
-Create or update CLAUDE.md in with following content, <critical>write it strictly as it is<critical>, do not summaraise or introduce and new additional information:
+Create or update AGENTS.md in with following content, <critical>write it strictly as it is<critical>, do not summaraise or introduce and new additional information:
 
 ```markdown
 ## Code Style Rules

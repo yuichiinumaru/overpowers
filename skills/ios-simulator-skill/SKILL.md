@@ -204,7 +204,7 @@ All scripts support `--help` for detailed options and `--json` for machine-reada
 
 - **SKILL.md** (this file) - Script reference and quick start
 - **README.md** - Installation and examples
-- **CLAUDE.md** - Architecture and implementation details
+- **AGENTS.md** - Architecture and implementation details
 - **references/** - Deep documentation on specific topics
 - **examples/** - Complete automation workflows
 

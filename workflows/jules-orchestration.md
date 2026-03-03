@@ -38,9 +38,9 @@ Break work into Jules-compatible chunks:
 /skill jules-dispatch
 
 For each task:
-1. Select optimal Jules account (rotation)
-2. Prepare context-rich prompt
-3. Submit with tracking ID
+1. Select optimal Jules account (rotation every 7 tasks).
+2. Prepare context-rich prompt (Strictly anti-git to avoid empty PRs).
+3. Submit using wrapper script `skills/jules-dispatch-login/scripts/jules-launcher.sh` (launches 2 parallel duplicate sessions for redundancy).
 4. Log to .jules/tracking.md
 ```
 

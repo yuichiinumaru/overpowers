@@ -21,6 +21,8 @@ pnpm-lock.yaml
 .env
 .env.*
 !.env.example
+userenv
+*userenv*
 
 # OS Files
 .DS_Store
@@ -32,3 +34,5 @@ coverage/
 __pycache__/
 *.log
 .venv
+userenv
+*userenv*

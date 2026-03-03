@@ -57,7 +57,7 @@ Skills are:
 - Summary documents (*_SUMMARY.md)
 - Internal documentation
 - Backup files
-- ANY .md files except CLAUDE.md
+- ANY .md files except AGENTS.md
 
 **Cleanup Process (MANDATORY):**
 1. Remove ALL backup files created during editing
@@ -1000,7 +1000,7 @@ Before completing skill generation, you MUST perform these validation steps:
 ### 6. No Artifacts in generated-skills/ Root
 - [ ] No `*_SUMMARY.md` files
 - [ ] No backup or temp files
-- [ ] Only `CLAUDE.md` and skill folders/ZIPs
+- [ ] Only `AGENTS.md` and skill folders/ZIPs
 
 **Why this matters**: Users receive skills as-is. Any inconsistencies, backup files, or errors reflect poorly on quality.
 

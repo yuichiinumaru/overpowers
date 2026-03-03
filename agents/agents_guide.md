@@ -570,14 +570,14 @@ At the end, write to codebase_analysis.md
 **update-docs:**
 ```yaml
 ---
-description: Automatically update CLAUDE.md and documentation files based on recent code changes
+description: Automatically update AGENTS.md and documentation files based on recent code changes
 allowed-tools: Read, Write, Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(find:*), Bash(grep:*)
 ---
 
 # Update Documentation
 
 ## Current State
-@CLAUDE.md
+@AGENTS.md
 @README.md
 
 ## Git Analysis

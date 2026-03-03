@@ -20,32 +20,32 @@ Capture and document session learnings
 
 2. **Determine Appropriate File**
    - Choose the right file for the information:
-     - `CLAUDE.md` for shared context that should be version controlled
+     - `AGENTS.md` for shared context that should be version controlled
      - `CLAUDE.local.md` for private notes and developer-specific settings
-     - Subdirectory `CLAUDE.md` for component-specific information
+     - Subdirectory `AGENTS.md` for component-specific information
 
 3. **Memory File Types Summary**
-   - **Shared Project Memory (`CLAUDE.md`):**
+   - **Shared Project Memory (`AGENTS.md`):**
      - Located in the repository root or any working directory
      - Checked into version control for team-wide context sharing
      - Loaded recursively from the current directory up to the root
    - **Local, Non-Shared Memory (`CLAUDE.local.md`):**
      - Placed alongside or above working files, excluded from version control
      - Stores private, developer-specific notes and settings
-     - Loaded recursively like `CLAUDE.md`
+     - Loaded recursively like `AGENTS.md`
    - **On-Demand Subdirectory Loading:**
-     - `CLAUDE.md` files in child folders are loaded only when editing files in those subfolders
+     - `AGENTS.md` files in child folders are loaded only when editing files in those subfolders
      - Prevents unnecessary context bloat
-   - **Global User Memory (`~/.claude/CLAUDE.md`):**
+   - **Global User Memory (`~/.claude/AGENTS.md`):**
      - Acts as a personal, cross-project memory
      - Automatically merged into sessions under your home directory
 
 4. **Update Memory Files**
    - Add relevant, non-obvious information that should be persisted
    - Ensure proper placement based on component relevance:
-     - UI-specific information → `apps/[project]-ui/CLAUDE.md`
-     - API-specific information → `apps/[project]-api/CLAUDE.md`
-     - Infrastructure information → `cdk/CLAUDE.md` or `infrastructure/CLAUDE.md`
+     - UI-specific information → `apps/[project]-ui/AGENTS.md`
+     - API-specific information → `apps/[project]-api/AGENTS.md`
+     - Infrastructure information → `cdk/AGENTS.md` or `infrastructure/AGENTS.md`
    - This ensures important knowledge is retained and available in future sessions
 
 ## Credit

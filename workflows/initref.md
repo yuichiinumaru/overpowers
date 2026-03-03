@@ -1,5 +1,5 @@
 ---
-description: Build reference documentation by creating markdown files and updating CLAUDE.md
+description: Build reference documentation by creating markdown files and updating AGENTS.md
 category: context-loading-priming
 allowed-tools: Read, Write, LS, Glob
 ---
@@ -8,4 +8,4 @@ Build the reference docs. Run /summarize on files to get summaries, don't read t
 
 Create reference markdown files in `/ref` directory.
 
-Update `CLAUDE.md` file with pointers to important documentation files.
+Update `AGENTS.md` file with pointers to important documentation files.

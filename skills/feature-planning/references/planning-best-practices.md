@@ -377,5 +377,5 @@ Before handing off to plan-implementer, verify:
 - [ ] File paths and code references are included
 - [ ] Edge cases and error handling are addressed
 - [ ] Testing strategy is defined
-- [ ] Follows existing project patterns (checked CLAUDE.md)
+- [ ] Follows existing project patterns (checked AGENTS.md)
 - [ ] User has reviewed and approved the plan

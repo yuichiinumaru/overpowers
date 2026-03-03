@@ -42,7 +42,7 @@ Use Task tool with `subagent_type='Explore'` and `thoroughness='medium'` to unde
 - Documentation updates
 
 **Consider architecture:**
-- Follow existing patterns (check CLAUDE.md)
+- Follow existing patterns (check AGENTS.md)
 - Identify reusable components
 - Plan error handling and edge cases
 - Consider performance implications

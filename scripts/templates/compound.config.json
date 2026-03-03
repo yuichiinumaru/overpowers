@@ -1,8 +1,0 @@
-{
-  "tool": "claude",
-  "reportsDir": "./reports",
-  "outputDir": "./scripts/compound",
-  "qualityChecks": ["npm test", "npm run lint"],
-  "maxIterations": 10,
-  "branchPrefix": "compound/"
-}
