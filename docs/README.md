@@ -11,4 +11,4 @@ Welcome to the documentation for **Overpowers**, a consolidated toolkit for AI c
 
 ---
 
-*Built with 💜 — Based on overpowers by Jesse Vincent*
+*Built with 💜 — Based on the original toolkit by Jesse Vincent*
