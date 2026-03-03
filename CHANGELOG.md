@@ -8,6 +8,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2026-03-03] - Consolidated Generic AGENTS.md Template
+
+### Added
+- New `scripts/templates/AGENTS.md` — a comprehensive generic template (~550 lines) consolidating all rules from `AGENTS.md`, `AGENTS copy.md`, `AGENTS copy 2.md`, and all 14 `.agents/rules/` files.
+- Template covers: session initialization, core philosophy, changelog protocol, knowledge routing, operational laws, security boundaries, conventions, task system, cognitive workflow & memory management, engineering standards, development practices (TDD, SDD, spec-first), multi-agent safety, VCS rules (Git + Jujutsu), Jules agent rules, delegation strategy, behavioral guidelines, forbidden actions, environment/tooling, and platform-specific rules.
+
+**Author**: Overpowers Architect (Antigravity)
+
 ## [2026-03-02] - Merge PRs #45 and #46 via jj
 
 ### Added
