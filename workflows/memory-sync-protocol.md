@@ -1,0 +1,43 @@
+---
+description: Synchronize memories and knowledge across Serena, Memcord, Antigravity Knowledge Base, and global Agent memories.
+category: orchestration
+allowed-tools: Bash, Memcord, Serena
+---
+
+# Shared Consciousness Memory Sync
+
+This workflow guides agents (or the user) through the process of synchronizing architectural discoveries, session logic, and important context across the diverse memory systems in the Overpowers ecosystem. This enforces the **Law of Shared Consciousness** defined in `AGENTS.md`.
+
+Our ecosystem uses three primary memory stores:
+1. **Memcord MCP**: Short-term session memory, chat histories, temporary context retention.
+2. **Serena MCP**: Semantic long-term codebase architectural memory.
+3. **Agent Global Memories**: Pure markdown files living in `.agents/memories/` read by OpenCode & Jules.
+4. **Antigravity Knowledge Base**: Centralized knowledge items (KIs) curated by Antigravity's internal subagents.
+
+## Core Sync Routine
+
+When executing `/sync-memory` or invoking this workflow manually after a major shift, follow these steps:
+
+### 1. Extract from Memcord (Short-Term -> Mid-Term)
+If coming from a heavy session (e.g. Gemini CLI / Antigravity with Memcord):
+- Run the Memcord tool to export the current session memory.
+- Ask the agent to summarize the key technical/architecture decisions made in the active slot.
+- Save this summary markdown into `.agents/memories/` using the standard hex tag naming convention, e.g. `architecture-0001-ui-redesign.md`.
+
+### 2. Sync to Serena (Mid-Term -> Semantic Long-Term)
+- If the changes affect the underlying architecture of a specific sub-project, structure, or core utility, use the `serena` MCP.
+- Use `serena_write_memory` to write the new rules or discoveries into the Serena knowledge graph. Use topic tags (e.g. "auth/google/oauth" or "frontend/components").
+- *Note:* The `.agents/memories/` directory is ideally symlinked to `.serena/memories/`. If it is, writing to one automatically updates the other. Verify the symlink exists.
+
+### 3. Update Antigravity Knowledge Base (Deep Synthesis)
+- Check the Antigravity `knowledge_discovery` component. If the knowledge generated is a fundamental shift in how the ecosystem operates, explicitly direct Antigravity to write an artifact capturing this info. The Knowledge Subagent will later ingest this artifact naturally to distill new KIs for persistent context.
+
+### 4. Cleanup & Archive
+- If the new knowledge overrides previous rules or concepts, identify the stale markdown files in `.agents/memories/`.
+- **DO NOT DELETE THEM**. Move them to `.archive/` following the root constitution protocol.
+- Use `serena_delete_memory` or `serena_edit_memory` as appropriate if a Serena memory requires deprecation.
+
+## Success Criteria
+- [ ] New architectural decisions are saved as `.md` in `.agents/memories/`.
+- [ ] Serena has an updated and tagged topic memory for the new discovery.
+- [ ] Outdated or deprecated memories are pushed to the `.archive/` directory.

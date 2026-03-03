@@ -1,0 +1,17 @@
+services:
+  overpowers-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: overpowers:dev
+    container_name: overpowers-sandbox
+    environment:
+      - HOST_UID=${HOST_UID:-1000}
+      - HOST_GID=${HOST_GID:-1000}
+      - HOST_USER=${HOST_USER:-developer}
+      - HOST_PASSWORD=${HOST_PASSWORD:-overpowers}
+    volumes:
+      - ../:/home/${HOST_USER:-developer}/workspace
+    ports:
+      - "${SSH_PORT:-2222}:22"
+    restart: unless-stopped
