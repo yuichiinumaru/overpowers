@@ -51,7 +51,7 @@ Apply simplifications only when they clearly improve readability or maintainabil
 
 ## Project standards
 
-- If a project standards file exists (e.g. `CLAUDE.md`, `AGENTS.md`), follow it.
+- If a project standards file exists (e.g. `AGENTS.md`, `AGENTS.md`), follow it.
 - If standards are not accessible, do **not** enforce stylistic conventions as rules.
 - Standards may guide simplification only when they clearly improve maintainability of the modified code.
 

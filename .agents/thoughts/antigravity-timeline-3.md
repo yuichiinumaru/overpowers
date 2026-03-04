@@ -1,0 +1,17 @@
+- **Phase: Addressing 512 Tools Limit (Agent Frontmatter)**
+  - Confirmed 914 agents were deployed to `~/.gemini/agents/`.
+  - The combination of 914 subagents + MCP tools exceeded the 512 limit for the `GenerateContentRequest`.
+  - Wrote a Python script to categorize, prioritize, and select the top 150 most useful agents (Tier 1 keywords: coding, security, devops, architecture, tier 2 categories, then general).
+  - Updated deploy script to only copy these 150 top agents to the global `~/.gemini/agents/` to stay under the 512 tools limit.
+- **Phase: Fixing Agent Definitions (Schema Validation)**
+  - Encountered `Validation failed` errors for several agents (e.g., bad slug names with dots or underscores, `tools` defined as object instead of array, unrecognized keys like `category`, `model_fallback`).
+  - Agent wrote a Python script to batch sanitize all 150 selected agents: stripping invalid keys, converting tools object to array, removing OpenCode-specific tool names (which caused "Invalid tool name" errors in Gemini), and ensuring valid slug names.
+  - Added this sanitization step to the Gemini deploy script for future proofing.
+- **Phase: Testing In-Memoria MCP**
+  - Ran a manual test of the In-Memoria MCP on the large Overpowers repo.
+  - `auto_learn_if_needed` timed out (expected due to 5000+ files) but basic queries functioned.
+  - Successfully persisted 3 insights about the Gemini CLI setup discovering from earlier phases using `contribute_insights`.
+- **Phase: Final MCP Cleanup**
+  - User requested removing `in_memoria` and `semgrep` from configs entirely and adding `StitchMCP`.
+  - Updated `mcp_config.json` (Antigravity), `settings.json` (Gemini CLI), and the Python setup script to reflect these final 10 MCPs.
+  - Identified missing API keys (Hyperbrowser, Vibe Check, Context7, Stitch). User requested script to pull them from `.env` and run a fresh absolute installation across all 9 coding agent platforms.

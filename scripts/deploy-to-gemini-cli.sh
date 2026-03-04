@@ -110,8 +110,8 @@ done
 # The Gemini API enforces a max of 512 function declarations per request.
 # Each subagent counts as one function declaration. With 900+ agents + ~100 MCP
 # tools, the limit is exceeded. We deploy only a curated subset (~150 agents)
-# from scripts/gemini-cli-agents.txt.
-AGENTS_LIST="${REPO_ROOT}/scripts/gemini-cli-agents.txt"
+# from scripts/config/gemini-cli-agents.txt.
+AGENTS_LIST="${REPO_ROOT}/scripts/config/gemini-cli-agents.txt"
 AGENTS_TGT="${GEMINI_DIR}/agents"
 
 if [[ -f "${AGENTS_LIST}" ]]; then
@@ -132,7 +132,7 @@ if [[ -f "${AGENTS_LIST}" ]]; then
     done < "${AGENTS_LIST}"
     log_info "Deployed ${agent_count} curated agents (of $(wc -l < "${AGENTS_LIST}") in list)"
     log_warn "Gemini API limit: 512 function declarations. Full roster (900+) exceeds this."
-    log_warn "Edit scripts/gemini-cli-agents.txt to customize which agents are deployed."
+    log_warn "Edit scripts/config/gemini-cli-agents.txt to customize which agents are deployed."
 
     # Sanitize agent frontmatter for Gemini CLI compatibility
     # Valid keys: name, description, kind, tools, model, temperature, max_turns, timeout_mins

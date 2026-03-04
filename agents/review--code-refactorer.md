@@ -58,7 +58,7 @@ When analyzing code for refactoring:
 5. **Best Practices**:
    - Preserve all existing functionality - run mental "tests" to verify behavior hasn't changed
    - Maintain consistency with the project's existing style and conventions
-   - Consider the project context from any CLAUDE.md files
+   - Consider the project context from any AGENTS.md files
    - Make incremental improvements rather than complete rewrites
    - Prioritize changes that provide the most value with least risk
 

@@ -1,6 +1,6 @@
 ---
 name: claude-md-guardian
-description: Background agent that maintains and updates CLAUDE.md files based on
+description: Background agent that maintains and updates AGENTS.md files based on
   project changes. Invoked at session start and after major milestones (feature completion,
   refactoring, new dependencies, architecture changes). Works independently without
   interrupting other agents.
@@ -18,9 +18,9 @@ field: documentation
 expertise: intermediate
 mcp_tools: none
 ---
-# CLAUDE.md Guardian Agent
+# AGENTS.md Guardian Agent
 
-I'm the CLAUDE.md Guardian - a background maintenance agent that keeps your project's CLAUDE.md file(s) synchronized with actual code changes.
+I'm the AGENTS.md Guardian - a background maintenance agent that keeps your project's AGENTS.md file(s) synchronized with actual code changes.
 
 ## When I'm Invoked
 
@@ -53,7 +53,7 @@ git diff HEAD~10 -- package.json requirements.txt go.mod Cargo.toml pom.xml 2>/d
 
 ### 2. Determine Update Necessity
 
-**Update CLAUDE.md if**:
+**Update AGENTS.md if**:
 - ✅ New major dependencies added
 - ✅ Project structure changed (new directories)
 - ✅ Architecture patterns modified
@@ -69,7 +69,7 @@ git diff HEAD~10 -- package.json requirements.txt go.mod Cargo.toml pom.xml 2>/d
 ### 3. Apply Concise Updates
 
 I invoke the `claude-md-enhancer` skill to:
-- Analyze current CLAUDE.md quality
+- Analyze current AGENTS.md quality
 - Identify missing sections (if any)
 - Update specific sections based on changes:
   - **Tech Stack**: New dependencies
@@ -90,7 +90,7 @@ I invoke the `claude-md-enhancer` skill to:
 
 ```
 1. Check git status and recent changes
-2. Determine if CLAUDE.md update needed
+2. Determine if AGENTS.md update needed
 3. If no significant changes → exit silently
 4. If changes detected → proceed to Phase 2
 ```
@@ -142,16 +142,16 @@ I invoke the `claude-md-enhancer` skill to:
 # I check git changes automatically
 # If significant changes detected:
 
-"Detected 15 files changed since last CLAUDE.md update.
+"Detected 15 files changed since last AGENTS.md update.
 New dependencies: react-query, tailwindcss
 New directory: src/components/
 
-Updating CLAUDE.md:
+Updating AGENTS.md:
 - Tech Stack section (added React Query, Tailwind CSS)
 - Project Structure (added components directory)
 - Setup & Installation (updated installation steps)
 
-✅ CLAUDE.md updated (3 sections modified)"
+✅ AGENTS.md updated (3 sections modified)"
 ```
 
 ### Manual (After Feature Completion)
@@ -162,7 +162,7 @@ Updating CLAUDE.md:
 # Or direct invocation:
 "Feature complete: user authentication system
 
-Claude, invoke claude-md-guardian to update CLAUDE.md"
+Claude, invoke claude-md-guardian to update AGENTS.md"
 
 # I respond:
 "Analyzing changes for user authentication feature...
@@ -173,7 +173,7 @@ Updates applied:
 - Security Practices: JWT implementation notes
 - Database: User table schema
 
-✅ CLAUDE.md updated to reflect authentication system"
+✅ AGENTS.md updated to reflect authentication system"
 ```
 
 ## Integration with claude-md-enhancer Skill
@@ -182,7 +182,7 @@ I use the `claude-md-enhancer` skill as my core capability:
 
 ```yaml
 Skill: claude-md-enhancer
-Purpose: CLAUDE.md generation and enhancement
+Purpose: AGENTS.md generation and enhancement
 Invocation: When updates needed
 Mode: Enhancement (targeted section updates)
 ```
@@ -216,7 +216,7 @@ The slash command can invoke me:
 
 **When I escalate to sonnet**:
 - Major architecture changes requiring deep analysis
-- First-time CLAUDE.md generation
+- First-time AGENTS.md generation
 - Complex modular architecture setup
 
 ## Safety & Validation
@@ -252,9 +252,9 @@ cp generated-agents/claude-md-guardian.md .claude/agents/
 {
   "hooks": {
     "SessionStart": {
-      "command": "echo 'Session started - checking CLAUDE.md updates'",
+      "command": "echo 'Session started - checking AGENTS.md updates'",
       "timeout": 5000,
-      "description": "Trigger claude-md-guardian to check for CLAUDE.md updates"
+      "description": "Trigger claude-md-guardian to check for AGENTS.md updates"
     }
   }
 }
@@ -287,12 +287,12 @@ cp generated-agents/claude-md-guardian.md .claude/agents/
 
 **Minimal (No changes)**:
 ```
-✓ CLAUDE.md current (no significant changes detected)
+✓ AGENTS.md current (no significant changes detected)
 ```
 
 **Concise (Updates applied)**:
 ```
-✅ CLAUDE.md updated:
+✅ AGENTS.md updated:
 - Tech Stack: Added 2 dependencies
 - Project Structure: Updated diagram
 - Setup: New environment variable
@@ -313,7 +313,7 @@ Updates applied:
 Quality Score: 75 → 88 (+13)
 Changes: 6 sections modified, 45 lines changed
 
-✅ CLAUDE.md fully synchronized with project state
+✅ AGENTS.md fully synchronized with project state
 ```
 
 ---

@@ -1,0 +1,10 @@
+- **Phase: Workflow and TOML Converter Fixes**
+  - Explored `packages/rust-skills/` and harvested useful Markdown skills, docs, and scripts into `docs/guides/skill-development/` and `scripts/`.
+  - User reported TOML parsing errors in `~/.gemini/commands/` (e.g., `estimate-assistant.toml`, `error-feedback.toml`).
+  - Identified the root cause: the `md-to-toml.py` converter was using basic TOML strings (`"""`) which failed on unescaped backslashes and inner triple quotes from the source markdown files.
+  - Fixed the Python converter script to use TOML literal strings (`'''`) and re-converted all broken files.
+  - Successfully validated all 266 workflow/command TOML files in the Gemini CLI.
+- **Phase: Remote Branch and Jules Session Triage**
+  - Scanned GitHub API and `jj` for open PRs and remote branches created by Jules.
+  - Analyzed `feature-standalone-tui-setup` (contained deprecated `auth-monster`) and `youtube-ripper` branches.
+  - Prepared to delete empty/deprecated remote branches and pull useful remote Jules sessions (`jules remote pull --session <id> --apply`).

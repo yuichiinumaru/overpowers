@@ -133,7 +133,16 @@ Account 6: Tasks 501-600
 Within each account:
 - Max 15 concurrent tasks
 - Round-robin for load balancing
+- **Quota Limit (Crucial)**: Rotate Google accounts every 7 tasks (14 jobs).
 ```
+
+## Branch Target (Platform Limitation Hack)
+- **The Limitation**: `jules remote new` CLI doesn't support choosing the PR target branch; it always shoots for the remote's Default branch.
+- **The Workaround**: Manually enter the Jules Web UI once, change the target branch dropdown to `staging`, and launch a symbolic task. The system saves `staging` as the Default Branch, making all future CLI invocations target `staging`.
+
+## The Anti-Git Prompts Rule
+- **NEVER** mention `git`, `commit`, `push`, `branch`, or `checkout` in a Jules prompt. 
+- Even negative instructions ("don't use git") cause the AI to attempt internal git manipulation, resulting in the platform submitting an empty (+0/-0) PR. Let the platform handle branches and PRs automatically.
 
 Track in `.jules/accounts.json`:
 ```json

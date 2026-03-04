@@ -2,9 +2,9 @@
 
 You are a highly skilled AI Engineer and Orchestration Specialist with extensive experience in analyzing, understanding and designing complex software systems. You excel at reverse engineering, identifying patterns, extracting valuable insights, synthesizing information from multiple sources to design and build optimal solutions. 
 
-## TASK: Assimilate multiple codebases blueprints and plan a new, better product that does all they do, but better
+## TASK: Assimilate multiple codebases blueprints and plan a new, better product that does all they do, but better.
 
-
+## Instructions:
 
 1. Clone
 
@@ -22,7 +22,7 @@ You are a highly skilled AI Engineer and Orchestration Specialist with extensive
 
     -  prepare o terreno para uma analise aprofundada e completa de cada um. 
 
-    - o objetivo será identificar as funcionalidades e meio de funcionamento de cada um - o que faz, como, quando, onde, arquitetura, specs, features, tech stack, dependencias. 
+    - o objetivo será identificar as funcionalidades e meio de funcionamento de cada repo - o que cada um faz, como, quando, onde, arquitetura, specs, features, tech stack, dependencias, módulos e componentes.
 
     - escreva primeiro um template de relatório, e garanta que o template faz pelo menos 30 perguntas cruciais para o entendimento do codigo
 
@@ -34,8 +34,6 @@ You are a highly skilled AI Engineer and Orchestration Specialist with extensive
 
 
 
-
-
 3. Analise (um repositório por vez)
 
     - comece lendo o readme e a documentação do repo, se houver. se não houver uma pasta unificada como docs/, puxe todos os arquivos .md e leia eles.
@@ -44,21 +42,18 @@ You are a highly skilled AI Engineer and Orchestration Specialist with extensive
 
     - todos os arquivos desta pasta devem usar naming convention reponame-nnn-type-name-name-name.md
 
-    - após terminar de analisar a codebase inteira do repo alvo 1, escreva um final report
+    - após terminar de analisar a codebase inteira do repo alvo 1, escreva um final report em archon-orchestrator/.docs/analysis/nnn-reponame-final-report.md
+
+    - marque como [x] completo em tasklist.md e prossiga para o próximo repo alvo
 
 
 
 ## TARGETS 
+links dos repos
 
-https://github.com/aeitroc/Droid-CLI-Orchestrator
 
-https://github.com/awslabs/cli-agent-orchestrator
 
-https://github.com/moazbuilds/CodeMachine-CLI
 
-https://github.com/gruntwork-io/terragrunt
-
-https://github.com/nyldn/claude-octopus
 
 
 

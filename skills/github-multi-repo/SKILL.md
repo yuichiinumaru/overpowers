@@ -182,16 +182,16 @@ mcp__claude-flow__swarm_init({
 
 #### Documentation Synchronization
 ```javascript
-// Synchronize CLAUDE.md files across packages
+// Synchronize AGENTS.md files across packages
 [Documentation Sync]:
   // Get source documentation
-  Bash(`gh api repos/:owner/:repo/contents/ruv-swarm/docs/CLAUDE.md \
+  Bash(`gh api repos/:owner/:repo/contents/ruv-swarm/docs/AGENTS.md \
     --jq '.content' | base64 -d > /tmp/claude-source.md`)
 
   // Update target documentation
-  Bash(`gh api repos/:owner/:repo/contents/claude-code-flow/CLAUDE.md \
+  Bash(`gh api repos/:owner/:repo/contents/claude-code-flow/AGENTS.md \
     --method PUT \
-    -f message="docs: Synchronize CLAUDE.md" \
+    -f message="docs: Synchronize AGENTS.md" \
     -f branch="sync/documentation" \
     -f content="$(cat /tmp/claude-source.md | base64)"`)
 
@@ -199,7 +199,7 @@ mcp__claude-flow__swarm_init({
   mcp__claude-flow__memory_usage({
     action: "store",
     key: "sync/documentation/status",
-    value: { status: "synchronized", files: ["CLAUDE.md"] }
+    value: { status: "synchronized", files: ["AGENTS.md"] }
   })
 ```
 
@@ -310,8 +310,8 @@ mcp__claude-flow__swarm_init({
         })
       },
       {
-        path: "CLAUDE.md",
-        content: "[Standardized CLAUDE.md]"
+        path: "AGENTS.md",
+        content: "[Standardized AGENTS.md]"
       },
       {
         path: "package.json",

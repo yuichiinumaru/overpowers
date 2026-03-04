@@ -8,6 +8,73 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2026-03-03] - System Recovery & Workflow Enhancements
+
+### Added
+- **Templates**: `prompts/scavengeplanner.md` template for blueprint assimilation and orchestration planning.
+- **Workflows**: `workflows/task-grooming.md` for task extraction and decomposition.
+- **Scripts**: `scripts/md-to-toml.py` markdown to TOML workflow parser for Gemini CLI.
+- **Reports**: Post-mortem report `.agents/thoughts/jj-bookmark-regression.md` detailing the Jujutsu bookmark regression incident and the 5-stage safe restoration protocol.
+
+### Changed
+- **CLI Workflows**: Converted Markdown workflows successfully into TOML formatting for Gemini CLI.
+- **System**: Restored repository integrity via Jujutsu operation log recovering lost workflows and tools.
+- **System**: Deleted 10 stale/abandoned branches from GitHub and synchronized local repository.
+- **Security**: Added `userenv` artifacts explicitly to `.gitignore` to prevent credential leakage.
+
+**Author**: Overpowers Architect (Antigravity)
+
+
+## [2026-05-24] - Browser Automation & Cleanup
+
+### Added
+- **Skills**: `browser-use`, `playwright-skill`, `web-research` (from Moltbot).
+- **Agents**: `browser-automator.md` specialized in web interaction.
+- **Workflows**: `workflows/web-research.md`.
+
+### Changed
+- **Config**: Updated `.gitignore` to exclude build artifacts and caches.
+- **Agents**: Regenerated all agent configs.
+
+**Author**: Jules (Agent)
+
+## [2026-05-24] - BMAD Deepening Phase (Workflows)
+
+### Added
+- **Workflows**:
+  - `workflows/game-dev/dev-story.md`: Full "Dev Story" workflow for Game Dev Agent.
+  - `workflows/creative/problem-solving.md`: "Problem Solving" workflow for Creative Agent.
+- **Agents**:
+  - Updated `agents/game-dev-studio.md` with explicit workflow delegations.
+  - Updated `agents/creative-problem-solver.md` with explicit workflow delegations.
+
+### Changed
+- **Agents**: `Link Freeman` and `Dr. Quinn` now have executable `workflow="..."` parameters in their prompts.
+
+**Author**: Jules (Agent)
+
+## [2026-05-24] - BMAD & Safety Integration
+
+### Added
+- **Safety**: `hooks/safety/destructive-command-blocker.ts` - Prevents catastrophic commands (`rm -rf`, `mkfs`, `circleci context delete`).
+- **Agents**:
+  - `agents/murat-test-architect.md`: Master Test Architect (from TEA).
+  - `agents/game-dev-studio.md`: Game Development Specialist.
+  - `agents/creative-problem-solver.md`: TRIZ/Systems Thinking Expert.
+- **Knowledge Graph**: `docs/knowledge/testing/` - Massive import of testing patterns (Risk-based, ATDD, Flakiness).
+- **Workflows**: `workflows/teach-me-testing.md`.
+- **Skills**: `skills/playwright-skill/network-monitor.ts` - Network error monitoring fixture.
+
+### Changed
+- **Architecture**: Adopted "Knowledge Graph" pattern. Updated `JULES_ARCHITECTURAL_DIGEST.md`.
+
+**Author**: Jules (Agent)
+
+---
+
+## [2026-05-24] - Bonus Round: Advanced Integration
+
+
 ## [2026-03-03] - Consolidated Generic AGENTS.md Template
 
 ### Added

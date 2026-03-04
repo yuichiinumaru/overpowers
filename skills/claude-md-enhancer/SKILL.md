@@ -5,7 +5,7 @@ description: - **Conventions**: Are project-specific style rules clearly documen
 
 # claude-md-enhancer
 
-System for scoring and improving the quality of CLAUDE.md files.
+System for scoring and improving the quality of AGENTS.md files.
 
 ## Scoring Criteria
 - **Completeness**: Are all required sections present (Build, Lint, Test, Conventions)?
@@ -14,7 +14,7 @@ System for scoring and improving the quality of CLAUDE.md files.
 - **Conventions**: Are project-specific style rules clearly documented?
 
 ## Improvement Workflow
-1. Analyze existing `CLAUDE.md`.
+1. Analyze existing `AGENTS.md`.
 2. Generate a quality score.
 3. Suggest specific additions or corrections.
 4. Update the file while preserving useful existing content.

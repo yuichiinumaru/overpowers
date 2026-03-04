@@ -23,7 +23,7 @@ Run a comprehensive code review of local uncommitted changes using multiple spec
    - Get detailed diff: `git diff --name-only`
    - Parse arguments to see if user requested specific review aspects
 
-2. Use Haiku agent to give you a list of file paths to (but not the contents of) any relevant agent instruction files, if they exist: CLAUDE.md, AGENTS.md, **/constitution.md, the root README.md file, as well as any README.md files in the directories whose files were modified
+2. Use Haiku agent to give you a list of file paths to (but not the contents of) any relevant agent instruction files, if they exist: AGENTS.md, AGENTS.md, **/constitution.md, the root README.md file, as well as any README.md files in the directories whose files were modified
 
 3. Use a Haiku agent to analyze the changes and provide summary:
 
@@ -43,7 +43,7 @@ Run a comprehensive code review of local uncommitted changes using multiple spec
 
 ### Phase 2: Searching for Issues and Improvements
 
-Determine Applicable Reviews, then launch up to 6 parallel Sonnet agents to independently code review all local changes. The agents should do the following, then return a list of issues and the reason each issue was flagged (eg. CLAUDE.md or constitution.md adherence, bug, historical git context, etc.).
+Determine Applicable Reviews, then launch up to 6 parallel Sonnet agents to independently code review all local changes. The agents should do the following, then return a list of issues and the reason each issue was flagged (eg. AGENTS.md or constitution.md adherence, bug, historical git context, etc.).
 
 **Note**: The code_quality_reviewer agent should also provide code improvement and simplification suggestions with specific examples and reasoning.
 
@@ -71,16 +71,16 @@ Based on changes summary from phase 1, determine which review agents are applica
 **Parallel approach**:
 
 - Launch all agents simultaneously
-- Provide to them full list of modified files and summary of changes as context, also provide list of files with project guidelines and standards, including README.md, CLAUDE.md and constitution.md if they exist.
+- Provide to them full list of modified files and summary of changes as context, also provide list of files with project guidelines and standards, including README.md, AGENTS.md and constitution.md if they exist.
 - Results should come back together
 
 ### Phase 3: Confidence Scoring
 
-1. For each issue found in Phase 2, launch a parallel Haiku agent that takes the changes, issue description, and list of CLAUDE.md files (from step 2), and returns a score to indicate the agent's level of confidence for whether the issue is real or false positive. To do that, the agent should score each issue on a scale from 0-100, indicating its level of confidence. For issues that were flagged due to CLAUDE.md instructions, the agent should double check that the CLAUDE.md actually calls out that issue specifically. The scale is (give this rubric to the agent verbatim):
+1. For each issue found in Phase 2, launch a parallel Haiku agent that takes the changes, issue description, and list of AGENTS.md files (from step 2), and returns a score to indicate the agent's level of confidence for whether the issue is real or false positive. To do that, the agent should score each issue on a scale from 0-100, indicating its level of confidence. For issues that were flagged due to AGENTS.md instructions, the agent should double check that the AGENTS.md actually calls out that issue specifically. The scale is (give this rubric to the agent verbatim):
    a. 0: Not confident at all. This is a false positive that doesn't stand up to light scrutiny, or is a pre-existing issue.
-   b. 25: Somewhat confident. This might be a real issue, but may also be a false positive. The agent wasn't able to verify that it's a real issue. If the issue is stylistic, it is one that was not explicitly called out in the relevant CLAUDE.md.
+   b. 25: Somewhat confident. This might be a real issue, but may also be a false positive. The agent wasn't able to verify that it's a real issue. If the issue is stylistic, it is one that was not explicitly called out in the relevant AGENTS.md.
    c. 50: Moderately confident. The agent was able to verify this is a real issue, but it might be a nitpick or not happen very often in practice. Relative to the rest of the changes, it's not very important.
-   d. 75: Highly confident. The agent double checked the issue, and verified that it is very likely it is a real issue that will be hit in practice. The existing approach in the changes is insufficient. The issue is very important and will directly impact the code's functionality, or it is an issue that is directly mentioned in the relevant CLAUDE.md.
+   d. 75: Highly confident. The agent double checked the issue, and verified that it is very likely it is a real issue that will be hit in practice. The existing approach in the changes is insufficient. The issue is very important and will directly impact the code's functionality, or it is an issue that is directly mentioned in the relevant AGENTS.md.
    e. 100: Absolutely certain. The agent double checked the issue, and confirmed that it is definitely a real issue, that will happen frequently in practice. The evidence directly confirms this.
 
 2. Filter out any issues with a score less than 80.
@@ -96,8 +96,8 @@ Based on changes summary from phase 1, determine which review agents are applica
 - Something that looks like a bug but is not actually a bug
 - Pedantic nitpicks that a senior engineer wouldn't call out
 - Issues that a linter, typechecker, or compiler would catch (eg. missing or incorrect imports, type errors, broken tests, formatting issues, pedantic style issues like newlines). No need to run these build steps yourself -- it is safe to assume that they will be run separately as part of CI.
-- General code quality issues (eg. lack of test coverage, general security issues, poor documentation), unless explicitly required in CLAUDE.md
-- Issues that are called out in CLAUDE.md, but explicitly silenced in the code (eg. due to a lint ignore comment)
+- General code quality issues (eg. lack of test coverage, general security issues, poor documentation), unless explicitly required in AGENTS.md
+- Issues that are called out in AGENTS.md, but explicitly silenced in the code (eg. due to a lint ignore comment)
 - Changes in functionality that are likely intentional or are directly related to the broader change
 
 Notes:
@@ -243,11 +243,11 @@ No critical issues found. The code changes look good!
 - **Be Pragmatic**: Focus on real issues and high-impact improvements
 - **Skip Trivial Issues** in large changes (>500 lines):
   - Focus on architectural and security issues
-  - Ignore minor naming conventions unless CLAUDE.md explicitly requires them
+  - Ignore minor naming conventions unless AGENTS.md explicitly requires them
   - Prioritize bugs over style
 - **Improvements Should Be Actionable**: Each suggestion should include concrete code examples
 - **Consider Effort vs Impact**: Prioritize improvements with high impact and reasonable effort
-- **Align with Project Standards**: Reference CLAUDE.md and project guidelines when suggesting improvements
+- **Align with Project Standards**: Reference AGENTS.md and project guidelines when suggesting improvements
 
 ## Remember
 

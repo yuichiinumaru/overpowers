@@ -74,7 +74,7 @@ The entire skill creation process follows RED-GREEN-REFACTOR.
 
 - One-off solutions
 - Standard practices well-documented elsewhere
-- Project-specific conventions (put in CLAUDE.md)
+- Project-specific conventions (put in AGENTS.md)
 
 ## Skill Types
 

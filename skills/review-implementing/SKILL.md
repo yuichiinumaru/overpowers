@@ -52,7 +52,7 @@ For each todo item:
 
 **Make changes:**
 - Use Edit tool for modifications
-- Follow project conventions (CLAUDE.md)
+- Follow project conventions (AGENTS.md)
 - Preserve existing functionality unless changing behavior
 
 **Verify changes:**
@@ -132,5 +132,5 @@ Keep user informed:
 - **Don't batch completions** - update status in real-time
 - **Ask questions** for unclear feedback
 - **Run tests** if changes affect tested code
-- **Follow CLAUDE.md conventions** for all code changes
+- **Follow AGENTS.md conventions** for all code changes
 - **Use conventional commits** if creating commits afterward

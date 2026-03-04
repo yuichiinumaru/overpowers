@@ -1145,7 +1145,7 @@
     },
     {
       "name": "agents-md",
-      "description": "This skill should be used when the user asks to \"create AGENTS.md\", \"update AGENTS.md\", \"maintain agent docs\", \"set up CLAUDE.md\", or needs to keep agent instructions concise. Guides discovery of loca",
+      "description": "This skill should be used when the user asks to \"create AGENTS.md\", \"update AGENTS.md\", \"maintain agent docs\", \"set up AGENTS.md\", or needs to keep agent instructions concise. Guides discovery of loca",
       "source_dir": "/home/sephiroth/.config/opencode/skill/49/plugins/sentry-skills/skills/agents-md",
       "repo": "49",
       "has_scripts": false,

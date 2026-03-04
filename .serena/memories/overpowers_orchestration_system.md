@@ -11,6 +11,7 @@ The orchestration layer is composed of three primary agents ensuring task decomp
     *   **Medium/Specialized**: Invoke Agent (e.g., `/invoke security-auditor`).
     *   **Large/Parallel**: Jules Swarm (Remote).
 *   **Tools**: Uses `subagent-orchestration` skill and `jules-dispatch`.
+*   **Constraint**: No procedural bloat in JSONs. Anti-git commands are strictly enforced to avoid empty PR limitations on the platform endpoint.
 
 ## 2. Sisyphus (The Executor)
 *   **File**: `agents/sisyphus/sisyphus-orchestrator.md`

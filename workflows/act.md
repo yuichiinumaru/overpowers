@@ -3,7 +3,7 @@ description: Follow RED-GREEN-REFACTOR cycle approach for test-driven developmen
 category: automation-workflow
 ---
 
-Follow RED-GREEN-REFACTOR cycle approch based on @~/.claude/CLAUDE.md:
+Follow RED-GREEN-REFACTOR cycle approch based on @~/.claude/AGENTS.md:
 1. Open todo.md and select the first unchecked items to work on.
 2. Carefully plan each item, then share your plan
 3. Create a new branch and implement your plan

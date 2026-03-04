@@ -266,7 +266,7 @@ def generate_recommendations(patterns, mistakes):
         recommendations.append("   Solutions:")
         recommendations.append("   - Add linting rules to catch common errors")
         recommendations.append("   - Create test cases for frequently fixed bugs")
-        recommendations.append("   - Document common pitfalls in CLAUDE.md")
+        recommendations.append("   - Document common pitfalls in AGENTS.md")
         recommendations.append("   - Consider pre-commit hooks for validation")
         recommendations.append("")
         rec_num += 1
@@ -279,7 +279,7 @@ def generate_recommendations(patterns, mistakes):
         recommendations.append("   - Create slash commands for common tasks")
         recommendations.append("   - Add shell aliases or scripts")
         recommendations.append("   - Consider creating Claude Code skills for workflows")
-        recommendations.append("   - Document common patterns in CLAUDE.md")
+        recommendations.append("   - Document common patterns in AGENTS.md")
         recommendations.append("")
         rec_num += 1
 
@@ -288,7 +288,7 @@ def generate_recommendations(patterns, mistakes):
         recommendations.append(f"{rec_num}. IMPROVE REQUEST CLARITY")
         recommendations.append("   Problem: Many vague or unclear requests")
         recommendations.append("   Solutions:")
-        recommendations.append("   - Create request templates in CLAUDE.md")
+        recommendations.append("   - Create request templates in AGENTS.md")
         recommendations.append("   - Add examples of good vs. bad requests")
         recommendations.append("   - Use more specific language and context")
         recommendations.append("   - Break down complex requests into steps")
@@ -315,7 +315,7 @@ def generate_recommendations(patterns, mistakes):
         recommendations.append("   Solutions:")
         recommendations.append("   - Implement comprehensive testing before changes")
         recommendations.append("   - Add validation hooks (pre-commit, pre-push)")
-        recommendations.append("   - Create a testing checklist in CLAUDE.md")
+        recommendations.append("   - Create a testing checklist in AGENTS.md")
         recommendations.append("   - Consider TDD approach for new features")
         recommendations.append("")
         rec_num += 1
