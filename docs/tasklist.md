@@ -49,3 +49,4 @@ Este é o índice principal de tarefas do repositório Overpowers. Agentes Jules
 - [x] [015-update-tasklist-from-audit](tasks/015-update-tasklist-from-audit.md)
 - [x] [016-second-audit](tasks/016-second-audit.md)
 - [x] [017-update-vcs-rules](tasks/017-update-vcs-rules.md)
+- [ ] docs/tasks/022-task-json-knowledge-graph.md - Migrate knowledge graph to JSON
