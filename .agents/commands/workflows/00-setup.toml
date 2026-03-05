@@ -1,0 +1,35 @@
+description = "Master setup orchestration for new or existing projects integrating Overpowers systems. Calls sub-workflows sequentially."
+
+prompt = '''
+# /00-setup (Master Initialization)
+
+**Goal**: Sequentially orchestrate all fundamental setups (Branches, Knowledge, Scaffold, Structure) to ensure 100% compliance with Overpowers architecture.
+
+## User Input
+
+```text
+$ARGUMENTS
+```
+
+Verify if the user provided the OVERPOWERS_PATH. If it is empty, stop and ask the user to provide the absolute path to the overpowers repository.
+Store the path as `$OVERPOWERS_PATH`.
+
+## Execution Flow
+
+You **MUST** execute the following modular workflows in this exact sequence using the `view_file` tool to read them and follow their instructions. Do not skip any steps.
+
+1. **Step 1: Set up VCS and Branches**
+   - Read `$OVERPOWERS_PATH/workflows/00-setup-branches.md` and execute its actions completely.
+
+2. **Step 2: Set up Knowledge and Memory**
+   - Read `$OVERPOWERS_PATH/workflows/00-setup-knowledge.md` and execute its actions completely.
+
+3. **Step 3: Scaffold Tasks Directory**
+   - Read `$OVERPOWERS_PATH/workflows/00-setup-scaffold-tasks.md` and execute its actions completely.
+
+4. **Step 4: Set up Project Structure/Constitution**
+   - Read `$OVERPOWERS_PATH/workflows/00-setup-project-structure.md` and execute its actions completely (make sure to pass `$OVERPOWERS_PATH` down to it if needed).
+
+## Finalization
+Once all four workflows are successfully executed, output a summary indicating that the project is now fully initialized following the Overpowers architecture.
+'''

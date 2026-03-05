@@ -1,0 +1,8 @@
+description = "Custom workflow"
+
+prompt = '''
+--|--------|
+| Target Efficiency | 1 new/updated Skill every ~5 videos |
+| Noise Reduction | 0 vlogs/podcasts formalized as skills |
+| Skill Structure | 100% adherence to `skills/<name>/SKILL.md` |
+'''

@@ -8,17 +8,20 @@
 
 ## 🛑 PROTOCOL ZERO: CENTRALIZED CONTINUITY
 **EXECUTE THIS BEFORE DOING ANYTHING ELSE.**
-1.  **READ**: Open `continuity.md` in this directory.
+1. **READ**: Open `continuity.md` in this directory.
     * This is the **Session Ledger**. It tracks current focus and pending tasks.
-2.  **ALIGN**: Confirm your understanding of the "Current Focus".
-3.  **UPDATE**: At session end, update `continuity.md` with the new state.
+2. **ALIGN**: Confirm your understanding of the "Current Focus".
+3. **UPDATE**: At session end, update `continuity.md` with the new state.
+4. **TRACK**: Never start doing anything, any task, any changes to codebase without systematically documenting it in docs/tasklist.md and docs/tasks. If you are resuming work on doing something that is not already being tracked, follow this procedure '/home/sephiroth/Work/overpowers/workflows/03-task-ongoing.md' before you continue.
+5. **MEMORY**: Always use the **same slot** in Memcord for this project (Slot Name: `overpowers`). Never use slots from other projects. Memcord supports multiple entries in the same slot; use them to track the timeline of decisions.
+    * **Terminology**: Whenever the user or documentation refers to "memory" or "memories", it refers to the collective project context stored across **Memcord MCP**, **Serena MCP**, **NotebookLM**, and any other active memory MCPs. These are always project-specific.
 
 ---
 
 ## 1. TOOLKIT IDENTITY & SCOPE
 **Name**: Overpowers
-**Based On**: Superpowers by Jesse Vincent
-**Maintained By**: Yuichi Inumaru
+**Initially based on**: Superpowers by Jesse Vincent
+**Maintained by**: Yuichi Inumaru
 
 ### 📦 Core Components
 | Component | Location | Purpose |
@@ -69,38 +72,49 @@ Every modification to this repository **MUST** be accompanied by an entry in `CH
 ---
 
 ## 4. THE OPERATIONAL LAWS
-### I. The Law of Explicit Declaration
-* Local Agents must be explicitly declared in `opencode.json` for optimal performance.
-### II. The Law of Modular Extension
+### I. The Law of Modular Extension
 * New agents go in `agents/` with proper frontmatter. New skills go in `skills/` with a `SKILL.md`. New workflows go in `workflows/`.
-### III. The Law of Documentation
+### II. The Law of Documentation
 * All new features must be documented in the appropriate guide (`docs/hooks_guide.md`, etc.).
-### IV. The Law of Shared Consciousness
-* All agents must persist architectural discoveries, resolutions, and knowledge as `.md` files in `.agents/memories/` (symlinked to `.serena/memories/`).
-### V. The Law of Thought Offloading
+### III. The Law of Shared Consciousness
+* All agents must persist architectural discoveries, resolutions, and knowledge as `.md` files in `.agents/memories/` (bidirectional symlinked to `.serena/memories/`).
+### IV. The Law of Thought Offloading
 * During long, demanding, or complex operations, ALL agents MUST offload their reasoning, context, and intermediate thoughts to `.agents/thoughts/<agent-name>/` (e.g., `.agents/thoughts/jules/`) using HEX tag naming conventions to prevent context degradation and maintain chain-of-thought.
 
 ---
 
 ## 5. FILENAME & NAMING CONVENTIONS
 Strict adherence to filename conventions ensures files are easily sortable and discoverable.
-1. **General Files**: `type-nnnn-names.md` (e.g., `analysis-0042-memory-systems-audit.md`)
-2. **Tasks (`docs/tasks/`)**: `nnnn-type-names.md` (e.g., `024-plan-research-librarian-nlm.md`)
-3. **Scavenge Tasks**: `reponame-nnnn-names.md` (e.g., `langchain-0012-memory-extraction.md`)
-4. **General Guidelines**: Always use lowercase, hyphens `-` for separation, and appropriate extensions. NEVER use spaces, underscores, or camelCase.
+1. **General Documentation Files**: `type-subtype-nnnn-names.md` format is enforced across all docs/ subfolders, except tasks/. Subtype is optional.
+   * Example: `scavenge-report-0023-agno-agent-framework.md`
+2. **Tasks (`docs/tasks/` and subfolders, e.g. `docs/tasks/planning/`)**: `nnnn-type-subtype-names.md` format.
+   * The `nnnn` prefix follows a specific rule:
+     * **First 3 digits**: chronological planning order.
+     * **Last digit**: `0` = blocker (sequential), `1-9` = parallelizable tasks.
+     * *Example*: `0010` is a blocker. `0021`, `0022`, `0023` are parallelizable.
+     * Jules-Swarm: If a massive operation using a lot of parallel Jules agents is planned, consider it 1 macro task only. Example: if you plan to use 100 Jules agents to scavenge 100 different memory repos, consider it 1 macro task only. The task file should be named `0000-jules-swarm-macro-task.md` and reference the document containing the list of repos to be scavenged in the task description.
+   * **Subtype**: Optional, but preferred next to the type if used.
+   * *Example*: `0111-scavenge-memory-repos.md` (11th planned chunk, non-blocker/parallelizable 1, type: scavenge, no subtype).
+3. **General Guidelines**: Always use lowercase, hyphens `-` for separation, and appropriate extensions. NEVER use spaces, underscores, or camelCase.
 
 ---
 
 ## 6. AGENT FORMATTING & MODEL PREFERENCES
-### OpenCode/Antigravity Agent Formatting (`agents/*.md`)
-* The `tools` field in YAML frontmatter **must be a dictionary** (record), not an array or string.
-* The `color` field **must be a double-quoted valid hex code** (e.g., `"#FF0000"`).
+
+### Required Templates
+When creating or modifying components, the following canonical templates **MUST ALWAYS** be followed:
+1. **Agents**: Follow the structure in `templates/agent.md`.
+2. **Skills**: Follow the directory structure and formatting in `templates/skill-template/`, especially its `SKILL.md`.
+3. **Workflows/Commands**: Follow the format in `templates/workflow.md`.
+4. **MD to TOML Conversion**: Whenever workflows or commands (in `workflows/`) are modified, you MUST run the conversion script (`python3 scripts/generators/md-to-toml.py workflows .agents/commands/workflows`) and ensure they are deployed to your CLI environment using `./scripts/deploy-to-gemini-cli.sh`. The Gemini CLI is an exception to the Markdown rule and uses TOML; the `.md` files must be properly formatted for the converter to parse them.
+5. **Skill Parsing & Sync**: Whenever skills are added, extracted, or modified, you MUST run the parsing script (`node scripts/parse-skills.js`) to ensure the skill map is updated and synchronized.
+6. **Guides**: For any doubts or in-depth procedures, always consult the `docs/guides/` directory.
 
 ### Model Governance
 * **Allowed Logic**: `gemini-3.1-pro` / `claude-4.6-opus-thinking` (Reasoning/Coding).
 * **Fast Logic**: `gemini-3-flash` / `claude-4.6-sonnet` (Fallback/Fast Execution).
 * **Tests**: `gemini-3.1-flash-lite`.
-* **DO NOT** use deprecated Gemini 1.5, 2.0, 2.5 models or use deprecated libraries (google-generativeai instead of google-genai, etc.)
+* **DO NOT** use deprecated Gemini 1.5, 2.0, 2.5 models, or use deprecated libraries (google-generativeai instead of google-genai, etc.)
 
 ---
 
@@ -132,11 +146,11 @@ We adhere to Karpathy-Inspired Guidelines and strict Agile structures to prevent
 * Strong success criteria let you loop independently.
 
 ### 7.5. Specification-First Development (SDD)
-When starting a new feature:
-1. Create `FEATURE_PLAN.md` (vertical slices).
-2. Create `TECHNICAL_DESIGN.md` (dependencies, API signatures).
-3. Create `TASKS.md` (step-by-step).
-* Nested in `.feature/{feature-name}/` directory. Only begin implementation after specs are reviewed.
+When a task is of type `feature` (e.g., `0020-feature-auth-system.md`), it must be accompanied by detailed specs rather than nested in separate feature folders:
+1. **Feature Plan**: Create `nnnn-type-subtype-names-feature-plan.md` alongside it in `docs/tasks/`. (follow the template docs/tasks/000-template-feature-plan.md)
+2. **Technical Design**: Create `nnnn-type-subtype-names-technical-design.md` alongside it in `docs/tasks/`. (follow the template docs/tasks/000-template-technical-design.md)
+
+* *Note*: The main task file `nnnn-type-subtype-names.md` must link/reference these documents. This naming ensures all 3 files sort alphabetically together. Do not begin implementation until technical design and feature plan are reviewed. SDD rules are subordinate to overall task management protocols (Section 5 and 8 precedence).
 
 ### 7.6. Test-Driven Development (TDD)
 * Always write a failing test before writing production code.
@@ -147,7 +161,7 @@ When starting a new feature:
 
 ## 8. TASK MANAGEMENT PROTOCOLS
 1. **Proposal** → `docs/tasks/planning/` (no code generated)
-2. **Approved Task** → `docs/tasks/nnn-type-name.md` (with Exit Conditions)
+2. **Approved Task** → `docs/tasks/nnnn-type-subtype-names.md` (with Exit Conditions). **All tasks MUST follow the standard task template.**
 3. **In Progress / Complete** → Mark `[/]` or `[x]` in `docs/tasklist.md`.
 * **Important:** Jules agents **NEVER** modify `docs/tasklist.md` to prevent merge conflicts in concurrent swarms. They only modify their specific task file.
 
@@ -181,6 +195,18 @@ While Jules relies on the platform native submit tool, Antigravity, Gemini-CLI a
 ### 10.2. Concurrency Protection & Conflict Resolution
 * Agents running in parallel MUST operate in isolated `jj workspaces` to avoid snapshot corruption.
 * **Jujutsu Merging & Operations**: For branch hierarchy, merging rules, conflict resolution, or cleanup sequences, **REFER** to the `harmonious-jujutsu-merge` skill and workflow. Auto-merge (`gh pr merge`) is ONLY valid for the "Happy Path" without conflicts.
+
+### 10.3. Branching & Pushing Strategy
+* **NEVER** push directly to shared/mainline branches like `main`, `development`, or `staging`.
+* **ALWAYS** push your changes to a **new branch** with a descriptive name. This ensures history is safely preserved on the remote (GitHub) in case of local Jujutsu errors or snapshot corruption.
+* Example: `jj bookmark create docs/update-vcs-rules` followed by `jj git push --bookmark docs/update-vcs-rules --allow-new`.
+* **Important Notes:**
+  * New bookmarks require `--allow-new` flag on the first push.
+  * Commits **must have a description** (`jj describe -m "..."`) before pushing, or `jj git push` will refuse.
+
+### 10.4. Routine State Commits
+* To avoid losing work during long tasks, you MUST run the automated commit script `./scripts/utils/jj-commit-push.sh` periodically.
+* **Trigger Conditions**: Execute this script organically every 5 interaction rounds, or whenever you perform large-scale modifications (>15 files). Provide a contextual message, e.g., `./scripts/utils/jj-commit-push.sh -m "chr(wip): advancing on feature X"`.
 
 ---
 

@@ -1,0 +1,174 @@
+---
+title: "MASSOP-R3: Rust Rewrite Strategic Planning"
+description: "Protocolo de análise e planejamento para migrações massivas para Rust baseado em logística industrial."
+category: "migration"
+version: "3.5.0"
+---
+
+# 🌌 Workflow: Rust Rewrite Strategic Planning (MASSOP-R3)
+
+Este workflow governa a **Fase 0 (Descoberta)** e a **Fase 1 (Scaffolding de Planejamento)** de uma operação de reescrita massiva para Rust. Ele converte a "névoa de guerra" de um sistema legado em um Grafo de Execução (DAG) determinístico e um plano de ataque baseado em Ondas (Waves).
+
+---
+
+## 💎 0. FILOSOFIA & AXIOMAS (FIRST PRINCIPLES)
+
+Antes da execução, o enxame deve operar sob os axiomas da **Logística Industrial** e **Entropia Controlada**.
+
+### 0.1. Axiomas Fundamentais
+1. **O Axioma do Estado Externo**: Código é efêmero; o estado (dados) é a única constante. Se a lógica mudar mas o dado corromper, a operação falhou.
+2. **O Axioma da Janela de Contexto**: A informação se degrada a cada turno. Devemos garantir a **Minimal Viable Continuity (MVC)**.
+3. **O Axioma da Incerteza do Agente**: Agentes são probabilísticos. Saídas de IA são "hipóteses" até a validação mecânica (compilador/testes).
+4. **O Axioma da Termodinâmica Financeira**: O custo de tokens deve ser < o valor gerado. Revisão humana excessiva indica falha de enxame.
+5. **O Axioma da Investigação Perpétua**: O legado é um organismo vivo. A investigação é contínua e automatizada.
+
+### 0.2. Regras de Isomorfismo de Estado
+- **State Isomorphism**: Movimentação de bits entre máquinas preservando a semântica.
+- **Fundamental vs Transitory State**: Apenas o estado fundamental (ex: balances) exige isomorfismo bit-a-bit. O transitório (caches) pode ser redesenhado.
+- **Code as Codec**: Tratar a migração como a atualização de um codec de transformação de estado.
+- **Causal Consistency**: Uso de **Vector Clocks** no CDC para garantir a ordem física dos eventos de escrita.
+
+---
+
+## 🛑 FASE 0: GOVERNANÇA, DESCOBERTA & INVESTIGAÇÃO
+
+O objetivo é remover a névoa de guerra e estabelecer o mapa de território.
+
+### 0.3. Mapeamento Topológico Automático (`codebase_investigator`)
+O agente deve instanciar múltiplos **TOOL Subagents** em paralelo:
+
+1. **Alpha (Topology & Semantic Call-Graph)**:
+   - Identificar "Nós Folha" (models, utils) e "Nós Raiz" (API handlers).
+   - Detectar **Dynamic Dispatch & Reflection** (ex: `getattr` no Python) que bypassam análise estática.
+   - Mapear **Circular Dependencies** para Interface Segregation prévia.
+   - Scan de **Infrastructure as Code (IaC)** (Dockerfile, Terraform) para capturar o baseline de performance (CPU/RAM).
+
+2. **Beta (State Mesh & Event Mapping)**:
+   - Identificar todos os pontos de mutação de estado (SQL, Redis, S3).
+   - Mapear **Cross-Process Messaging** (Celery, Kafka) e seus formatos de fio (Pickle, JSON).
+   - Extrair logicamente Stored Procedures e Triggers de banco de dados.
+
+3. **Gamma (Complexity & Resource Sizing)**:
+   - Contagem de LOC e cálculo de complexidade ciclomática.
+   - Gerar **Compute Allocation Recommendation** (ex: "Necessário 20 tradutores e 1 revisor para este domínio").
+   - Identificar **Legacy Dead Code** via análise de histórico Git para poda imediata.
+
+### 0.4. Alinhamento de Stakeholders (`gepetto`)
+- **Discovery Interviews**: Entrevistas assíncronas com Tech Leads e veteranos para capturar "Shadow Requirements" e traumas históricos.
+- **The Migration Charter**: Contrato formal definindo o **Feature Freeze Treaty**, limites financeiros e autoridade de Rollback.
+- **Risk Matrix**: Manutenção dinâmica de riscos técnicos, financeiros e operacionais em `docs/plans/risk_matrix.md`.
+- **Crisis Communication**: Protocolos para `GLOBAL_PAUSE` e relatórios de status diários para a liderança.
+
+### 0.5. Tokenomics & Model Tiering
+- **Tier 1 (Architect)**: Modelos Reasoning (Pro) para design, RFAs e PRs críticos.
+- **Tier 2 (Worker)**: Modelos Fast (Flash) para tradução de lógica, boilerplate e unit tests.
+- **Tier 3 (Verifier)**: Modelos Lite ou ferramentas determinísticas para linting e formatação.
+- **Anti-Cheap Agent Paradox**: Verificação algorítmica obrigatória para código Tier 2 antes da revisão Tier 1.
+- **Financial Circuit Breakers**: Hard-stops diários por domínio e reserva de 5% de tokens para Disaster Recovery.
+
+---
+
+## 🏗️ FASE 1: SCAFFOLDING & INFRAESTRUTURA DE PLANEJAMENTO
+
+Criação da "Mente" da migração baseada em arquivos e ferramentas.
+
+### 1.1. O Triunvirato de Arquivos (`planning-with-files`)
+Cada domínio recebe arquivos em `.agents/plans/[dominio]/`:
+1. `task_plan.md`: Lista atômica de tarefas em ordem topológica, com IDs de agentes proprietários.
+2. `findings.md`: Diário cognitivo rastreando dívida técnica (ex: clones forçados) e nuances do legado.
+3. `progress.md`: Log imutável de commits, DNA de prompts, e scoreboard de testes de paridade.
+
+### 1.2. Architecture Standards (`senior-architect`)
+- **Trait Mesh Foundation**: Behavior-sharing via Traits em vez de herança. Traits obrigatórios para I/O (JIT Mocking base).
+- **Ownership & Lifetime Strategy**: Políticas globais de `String` vs `&str`. Preferência por zero-copy em hot paths.
+- **Monadic flow**: Banimento de `.unwrap()`. Uso obrigatório de `Result<T, AppError>` com crates `thiserror`/`anyhow`.
+- **Backpressure Pattern**: Uso de semáforos para proteger o banco legado da alta velocidade do Rust.
+- **DNA Pedigree**: Inclusão de metadados JSON em cada commit para rastreabilidade e recall em massa.
+
+### 1.3. Internal Tooling PRDs (`prd`)
+As ferramentas de suporte são tratadas como produtos:
+- **Shadow Router**: PRD estipulando <2ms de overhead e amostragem dinâmica (1% a 100%).
+- **Parity Diffing Engine**: Motor de comparação com **Intentionality Shift Mapping** (ex: Null == 404).
+- **CDC Reconciliation**: Worker de verificação de integridade via Checksums noturnos.
+- **Architecture Linter**: Guardião automático contra AI-Debt e violações de Bounded Context.
+- **Rollback Gateway**: Switchover sub-segundo (<500ms) baseado em health-checks automáticos.
+
+---
+
+## ⚙️ FASE 2: EXECUÇÃO & PARALELIZAÇÃO DO ENXAME
+
+A linha de montagem em ondas de tradução e validação.
+
+### 2.1. Topologia de Coordenação (`task-coordination-strategies`)
+- **Funneling (Agregação de PRs)**: Sub-agentes submetem para "Aggregation Branches" onde um **Reviewer Subagent** consolida o trabalho.
+- **Balanceamento Térmico**: Monitoramento do `Error-to-Token Ratio`. Agentes fadigados sofrem "Impeachment" e reinício de contexto.
+- **RFA Bus**: Diretório `signals/` para Requests for Amendment entre Lead Agents.
+- **Influence Graph**: Bloqueio de tarefas concorrentes que afetam os mesmos nós AST para evitar colisões semânticas.
+- **Shared Consciousness**: Summarização hierárquica periódica para manter a Minimal Viable Continuity (MVC).
+
+### 2.2. Wave-Based Vertical Slicing (`feature-planning`)
+- **Vertical Slices (Fatias de Valor)**: Migração de ponta a ponta (DB -> API) de features específicas (ex: Login) para habilitar Shadow Testing precoce.
+- **Just-In-Time (JIT) Mocking**: Geração de mocks Rust baseados em contratos para destravar Waves superiores sem esperar dependências lentas.
+- **Feature Freeze Tracks**: Bloqueio físico de escrita humana em módulos sob tradução (Wave 2+).
+- **Pivot Protocol**: Lógica de decisão para implementação de novas demandas de negócio durante a migração.
+
+### 2.3. Durable Execution Sagas (`workflow-orchestration-patterns`)
+- **Migration Sagas**: Cada tarefa do plano tem uma compensação reversa (LIFO) para manter a consistência do repositório.
+- **File State Machine**: Ciclo de vida rigoroso: `[Unmapped -> Ported -> AST-Verified -> Tested -> Shadowing -> Live]`.
+- **Resumo de AST**: Heartbeats periódicos em arquivos gigantes para permitir retomada pós-crash sem re-tradução total.
+- **Recursive Depth Circuit Breaker**: Aborto de agentes em loops de ferramentas (Tool Call Depth > 10).
+
+---
+
+## 🔬 FASE 3: VALIDAÇÃO, PARIDADE & SHADOW TESTING
+
+A prova de fogo estatística em produção.
+
+### 3.1. Rigor Científico (`scientific-critical-thinking`)
+- **Weighted Sensitivity Matrix**: Calibração de diffs (High: Financeiro, Medium: Erros, Low: Strings UI).
+- **Accumulated Mathematical Drift**: Simulações aceleradas para detectar erosão de precisão em ponto flutuante no longo prazo.
+- **Observer-Actor Bias Mitigation**: Agentes revisores devem ser independentes dos agentes tradutores.
+- **Ghost Performance Isolation**: Execução Shadow em VPCs isoladas para não canibalizar recursos de produção.
+
+### 3.2. Knowledge Recycling
+- **Swarm Memory Fusion**: Agrupamento de bugs repetitivos em uma única "Skill de Correção Global".
+- **Agent Council**: Votação entre personas (Segurança, Produto, Engenharia) para invalidar falsos positivos no Shadow Testing.
+
+---
+
+## 🚀 FASE 4: ROLLOUT & O PURGE (FINALIZAÇÃO)
+
+O descomissionamento seguro e documentado.
+
+### 4.1. Runbook Atômico (`plan-writing`)
+- **T-Minus Script**: Checklist minuto-a-minuto para o switchover do Load Balancer.
+- **Autonomous Abort Checkpoints**: Rollback mecânico se o p99 exceder o limite nos primeiros 10 minutos.
+- **Legacy Knowledge Preservation**: Digitalização de entrevistas com veteranos ("Contextual Lore") nos relatórios finais.
+
+### 4.2. The 7-Gate Purge Protocol
+1. **Gate 1 (SLA Zero Drift)**: Estabilidade por 7 dias a 100% de carga.
+2. **Gate 2 (True Silence)**: Prova criptográfica de zero tráfego na ponte FFI.
+3. **Gate 3 (Cold Snapshot)**: Snapshot OCI imutável (WORM) para auditoria futura.
+4. **Gate 4 (Cleanup Wave)**: Remoção de Mocks, flags de coexistência e comentários de agentes.
+5. **Gate 5 (Pedigree Audit)**: Confirmação de 100% do código Target com DNA validado.
+6. **Gate 6 (Signed Deletion)**: MFA duplo (Arquiteto + CFO) para o `rm -rf` das instâncias legadas.
+7. **Gate 7 (Knowledge Debt Liquidation)**: Compilação das descobertas em uma "Enciclopédia da Migração" para humanos.
+
+---
+
+## 🚀 FASE 5: REVISÃO
+### 5.1. Revisão de todos os arquivos em 'docs/tasks/planning'
+- Liste todos os arquivos presentes na pasta.
+- Para cada um, execute o command/workflow '/07-iterative-refinement'
+- 
+
+---
+
+## 🛑 CONDIÇÃO DE SAÍDA DO WORKFLOW
+O workflow de PLANNING é concluído quando:
+1. O DAG global está mapeado em `docs/plans/execution_dag.md`.
+2. A **Migration Charter** está assinada e o **Token Budget** provisionado.
+3. Todas as Waves estão populadas com fatias verticais em `docs/tasks/planning/`.
+4. Os **PRDs** das ferramentas internas (Shadow Router, Diff Engine) estão aprovados.
+
+**Nota**: Este workflow termina rigorosamente no PLANNING. Nenhuma linha de Rust funcional é produzida aqui.

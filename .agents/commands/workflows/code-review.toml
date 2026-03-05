@@ -1,0 +1,178 @@
+description = "Custom workflow"
+
+prompt = '''
+----|-------------|-----------------|
+| **Blocker** | Must be fixed before merge | Yes |
+| **Major** | Should be fixed, significant issue | Yes |
+| **Minor** | Should be fixed, small issue | Preferably |
+| **Suggestion** | Optional improvement | No |
+| **Question** | Seeking clarification | Response needed |
+
+#### Be Constructive
+
+```markdown
+# Poor feedback
+This code is bad. Fix it.
+
+# Good feedback
+The current implementation could be improved for better maintainability:
+
+Current approach:
+- Uses multiple nested callbacks
+- Hard to follow the data flow
+- Error handling is scattered
+
+Suggested improvement:
+- Refactor to use async/await
+- Centralize error handling
+- Extract helper functions for clarity
+
+Would you like me to provide a specific example?
+```
+
+### 4. Follow Up
+
+After code has been updated:
+
+- Review the changes
+- Verify issues have been addressed
+- Provide additional feedback if necessary
+- Approve when ready
+
+## Common Issues to Look For
+
+### General Issues
+
+| Issue | What to Look For |
+|-------|------------------|
+| Undefined variables | Variables used before declaration |
+| Missing error handling | Operations that can fail without try/catch |
+| Resource leaks | Unclosed connections, streams, handles |
+| Race conditions | Async operations without proper synchronization |
+| Hardcoded values | Configuration that should be externalized |
+
+### Language-Specific Issues
+
+#### JavaScript/TypeScript
+
+- Improper async/await usage
+- Missing null checks
+- Event listener memory leaks
+- Improper this binding
+- Type safety issues (TypeScript)
+
+#### Python
+
+- Mutable default arguments
+- Bare except clauses
+- Resource management (use context managers)
+- Import organization
+- Type hints missing
+
+#### Shell/Bash
+
+- Unquoted variables
+- Missing error handling (set -e)
+- Hardcoded paths
+- Not using shellcheck-compliant patterns
+- Missing input validation
+
+#### PHP
+
+- SQL injection vulnerabilities
+- Missing input sanitization
+- Output not escaped
+- Deprecated function usage
+- Missing nonces (WordPress)
+
+### Architecture Issues
+
+- Tight coupling between components
+- Circular dependencies
+- God classes/functions (doing too much)
+- Missing abstraction layers
+- Inconsistent patterns
+
+## Automated Code Review Tools
+
+Use automated tools to supplement manual review:
+
+### Quality Analysis
+
+```bash
+# Run project quality checks
+bash ~/Git/aidevops/.agent/skills/code-auditor/scripts/quality-check.sh
+
+# Use CodeRabbit for AI-powered review
+bash ~/Git/aidevops/.agent/skills/code-auditor/scripts/coderabbit-cli.sh review
+
+# Use Codacy for analysis
+bash ~/Git/aidevops/.agent/skills/code-auditor/scripts/codacy-cli.sh analyze
+
+# Use Qlty for universal checking
+bash ~/Git/aidevops/.agent/skills/code-auditor/scripts/qlty-cli.sh check
+```
+
+### Security Scanning
+
+```bash
+# Run Snyk security scan
+snyk test
+
+# Check for vulnerable dependencies
+npm audit
+composer audit
+```
+
+### Linting
+
+```bash
+# ShellCheck for bash scripts
+shellcheck script.sh
+
+# ESLint for JavaScript
+npx eslint .
+
+# Pylint for Python
+pylint module/
+```
+
+## Review Response Template
+
+```markdown
+## Code Review: PR #123 - Feature Name
+
+### Summary
+Brief overview of what was reviewed and overall assessment.
+
+### Blockers (Must Fix)
+1. **Security Issue** - `file.js:45`
+   - Description of issue
+   - Suggested fix
+
+### Major Issues (Should Fix)
+1. **Performance** - `query.js:100`
+   - Description
+   - Recommendation
+
+### Minor Issues (Nice to Fix)
+1. **Style** - `utils.js:20`
+   - Description
+
+### Suggestions (Optional)
+1. Consider using X pattern for Y
+
+### Questions
+1. Why was Z approach chosen over W?
+
+### Positive Notes
+- Good test coverage
+- Clean separation of concerns
+- Well-documented API
+
+### Recommendation
+[ ] Approve
+[x] Request changes
+[ ] Comment only
+```
+'''
