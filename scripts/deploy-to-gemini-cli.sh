@@ -58,53 +58,12 @@ mkdir -p "${GEMINI_DIR}"
 declare -a SYMLINKS=(
     "skills:skills"
     "hooks:hooks"
+    ".agents/commands/workflows:commands"
 )
 
 # --- Process main symlinks ---
-for mapping in "${SYMLINKS[@]}"; do
-    SRC_REL="${mapping%%:*}"
-    TGT_NAME="${mapping##*:}"
-
-    SRC_ABS="${REPO_ROOT}/${SRC_REL}"
-    TGT_ABS="${GEMINI_DIR}/${TGT_NAME}"
-
-    if [[ ! -e "${SRC_ABS}" ]]; then
-        log_warn "Source not found: ${SRC_ABS}. Skipping ${TGT_NAME}."
-        continue
-    fi
-
-    if [[ -L "${TGT_ABS}" ]]; then
-        CURRENT_TARGET="$(readlink -f "${TGT_ABS}" 2>/dev/null || echo '<broken>')"
-        if [[ "${CURRENT_TARGET}" == "${SRC_ABS}" ]]; then
-            log_skip "${TGT_NAME} already points to the correct source."
-            continue
-        fi
-        log_warn "Removing stale symlink: ${TGT_ABS} -> ${CURRENT_TARGET}"
-        rm "${TGT_ABS}"
-    elif [[ -e "${TGT_ABS}" ]]; then
-        if [[ "${OVERPOWERS_CONFLICT_POLICY:-replace}" == "copy" ]]; then
-            if [[ -d "${SRC_ABS}" ]]; then
-                log_info "Merging assets into existing directory: ${TGT_ABS}"
-                mkdir -p "${TGT_ABS}"
-                cp -rn "${SRC_ABS}/"* "${TGT_ABS}/" 2>/dev/null || true
-            else
-                log_info "File already exists, skipping: ${TGT_ABS}"
-            fi
-            continue
-        else
-            log_warn "${TGT_ABS} exists as a real file/directory. Backing up to ${TGT_ABS}.bak"
-            mv "${TGT_ABS}" "${TGT_ABS}.bak"
-        fi
-    fi
-
-    if [[ "${OVERPOWERS_CONFLICT_POLICY:-replace}" == "copy" ]]; then
-        cp -r "${SRC_ABS}" "${TGT_ABS}"
-        log_info "${TGT_NAME} (copied) <- ${SRC_ABS}"
-    else
-        ln -s "${SRC_ABS}" "${TGT_ABS}"
-        log_info "${TGT_NAME} (symlinked) -> ${SRC_ABS}"
-    fi
-done
+source "${SCRIPT_DIR}/utils/create-symlinks.sh"
+create_symlinks "${GEMINI_DIR}" "${SYMLINKS[@]}"
 
 # --- Deploy curated agents (NOT a symlink — limited by Gemini API 512 tool cap) ---
 # The Gemini API enforces a max of 512 function declarations per request.

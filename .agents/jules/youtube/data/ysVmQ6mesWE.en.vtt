@@ -1,0 +1,455 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:04.080 --> 00:00:06.230 align:start position:0%
+
+Hey,<00:00:04.400><c> what's</c><00:00:04.640><c> up?</c><00:00:05.200><c> So,</c><00:00:05.359><c> I</c><00:00:05.520><c> want</c><00:00:05.600><c> to</c><00:00:05.759><c> do</c><00:00:05.839><c> a</c><00:00:06.000><c> quick</c>
+
+00:00:06.230 --> 00:00:06.240 align:start position:0%
+Hey, what's up? So, I want to do a quick
+
+
+00:00:06.240 --> 00:00:08.870 align:start position:0%
+Hey, what's up? So, I want to do a quick
+video<00:00:06.480><c> for</c><00:00:06.799><c> people</c><00:00:07.120><c> who</c><00:00:07.600><c> love</c><00:00:08.000><c> Neovim</c><00:00:08.639><c> the</c><00:00:08.800><c> way</c>
+
+00:00:08.870 --> 00:00:08.880 align:start position:0%
+video for people who love Neovim the way
+
+
+00:00:08.880 --> 00:00:11.030 align:start position:0%
+video for people who love Neovim the way
+that<00:00:09.040><c> I</c><00:00:09.200><c> do</c><00:00:09.760><c> and</c><00:00:10.000><c> who</c><00:00:10.240><c> have</c><00:00:10.400><c> been</c><00:00:10.559><c> feeling</c><00:00:10.880><c> kind</c>
+
+00:00:11.030 --> 00:00:11.040 align:start position:0%
+that I do and who have been feeling kind
+
+
+00:00:11.040 --> 00:00:12.070 align:start position:0%
+that I do and who have been feeling kind
+of<00:00:11.120><c> left</c><00:00:11.360><c> out</c><00:00:11.519><c> because</c><00:00:11.679><c> they've</c><00:00:12.000><c> been</c>
+
+00:00:12.070 --> 00:00:12.080 align:start position:0%
+of left out because they've been
+
+
+00:00:12.080 --> 00:00:13.509 align:start position:0%
+of left out because they've been
+watching<00:00:12.320><c> all</c><00:00:12.480><c> these</c><00:00:12.719><c> cool</c><00:00:12.960><c> videos</c><00:00:13.200><c> of</c>
+
+00:00:13.509 --> 00:00:13.519 align:start position:0%
+watching all these cool videos of
+
+
+00:00:13.519 --> 00:00:15.669 align:start position:0%
+watching all these cool videos of
+people,<00:00:14.080><c> you</c><00:00:14.240><c> know,</c><00:00:14.480><c> in</c><00:00:14.799><c> cloud</c><00:00:15.200><c> code</c><00:00:15.440><c> and</c>
+
+00:00:15.669 --> 00:00:15.679 align:start position:0%
+people, you know, in cloud code and
+
+
+00:00:15.679 --> 00:00:17.510 align:start position:0%
+people, you know, in cloud code and
+they've<00:00:15.920><c> got</c><00:00:16.080><c> cursor</c><00:00:16.480><c> open</c><00:00:16.720><c> or</c><00:00:16.880><c> they</c><00:00:17.039><c> got</c><00:00:17.199><c> VS</c>
+
+00:00:17.510 --> 00:00:17.520 align:start position:0%
+they've got cursor open or they got VS
+
+
+00:00:17.520 --> 00:00:19.750 align:start position:0%
+they've got cursor open or they got VS
+Code<00:00:17.760><c> or</c><00:00:17.920><c> whatever</c><00:00:18.800><c> and</c><00:00:19.119><c> they're</c><00:00:19.439><c> using</c>
+
+00:00:19.750 --> 00:00:19.760 align:start position:0%
+Code or whatever and they're using
+
+
+00:00:19.760 --> 00:00:22.070 align:start position:0%
+Code or whatever and they're using
+extensions<00:00:20.320><c> and</c><00:00:20.560><c> you're</c><00:00:20.720><c> like,</c><00:00:20.880><c> "Wow,</c><00:00:21.520><c> I</c><00:00:21.920><c> need</c>
+
+00:00:22.070 --> 00:00:22.080 align:start position:0%
+extensions and you're like, "Wow, I need
+
+
+00:00:22.080 --> 00:00:24.310 align:start position:0%
+extensions and you're like, "Wow, I need
+to<00:00:22.240><c> get</c><00:00:22.400><c> this</c><00:00:22.640><c> into</c><00:00:23.119><c> Neovim."</c><00:00:23.920><c> And</c><00:00:24.080><c> there</c><00:00:24.240><c> are</c>
+
+00:00:24.310 --> 00:00:24.320 align:start position:0%
+to get this into Neovim." And there are
+
+
+00:00:24.320 --> 00:00:26.470 align:start position:0%
+to get this into Neovim." And there are
+a<00:00:24.480><c> few</c><00:00:24.640><c> extensions,</c><00:00:25.199><c> but</c><00:00:25.840><c> they</c><00:00:26.080><c> have</c><00:00:26.240><c> like</c>
+
+00:00:26.470 --> 00:00:26.480 align:start position:0%
+a few extensions, but they have like
+
+
+00:00:26.480 --> 00:00:28.470 align:start position:0%
+a few extensions, but they have like
+custom<00:00:26.800><c> bindings</c><00:00:27.359><c> and</c><00:00:27.599><c> like</c><00:00:28.000><c> I</c><00:00:28.240><c> don't</c><00:00:28.240><c> know,</c>
+
+00:00:28.470 --> 00:00:28.480 align:start position:0%
+custom bindings and like I don't know,
+
+
+00:00:28.480 --> 00:00:32.470 align:start position:0%
+custom bindings and like I don't know,
+it<00:00:28.640><c> it</c><00:00:28.960><c> seems</c><00:00:29.199><c> weird</c><00:00:29.679><c> to</c><00:00:30.720><c> be</c><00:00:31.679><c> unnaturally</c>
+
+00:00:32.470 --> 00:00:32.480 align:start position:0%
+it it seems weird to be unnaturally
+
+
+00:00:32.480 --> 00:00:34.870 align:start position:0%
+it it seems weird to be unnaturally
+spawning<00:00:32.960><c> claude</c><00:00:33.360><c> code</c><00:00:33.600><c> in</c><00:00:33.760><c> different</c><00:00:34.000><c> ways.</c>
+
+00:00:34.870 --> 00:00:34.880 align:start position:0%
+spawning claude code in different ways.
+
+
+00:00:34.880 --> 00:00:36.310 align:start position:0%
+spawning claude code in different ways.
+And<00:00:35.040><c> I'm</c><00:00:35.200><c> like,</c><00:00:35.440><c> wait</c><00:00:35.680><c> a</c><00:00:35.840><c> minute,</c><00:00:36.079><c> maybe</c>
+
+00:00:36.310 --> 00:00:36.320 align:start position:0%
+And I'm like, wait a minute, maybe
+
+
+00:00:36.320 --> 00:00:38.150 align:start position:0%
+And I'm like, wait a minute, maybe
+there's<00:00:36.559><c> an</c><00:00:36.719><c> easier</c><00:00:37.040><c> way</c><00:00:37.120><c> to</c><00:00:37.360><c> do</c><00:00:37.520><c> this.</c><00:00:37.920><c> So,</c>
+
+00:00:38.150 --> 00:00:38.160 align:start position:0%
+there's an easier way to do this. So,
+
+
+00:00:38.160 --> 00:00:40.310 align:start position:0%
+there's an easier way to do this. So,
+let<00:00:38.320><c> me</c><00:00:38.399><c> show</c><00:00:38.480><c> you</c><00:00:38.640><c> what</c><00:00:38.800><c> I'm</c><00:00:39.040><c> doing.</c><00:00:39.520><c> So,</c><00:00:40.000><c> in</c>
+
+00:00:40.310 --> 00:00:40.320 align:start position:0%
+let me show you what I'm doing. So, in
+
+
+00:00:40.320 --> 00:00:43.670 align:start position:0%
+let me show you what I'm doing. So, in
+this<00:00:40.480><c> pane</c><00:00:40.960><c> over</c><00:00:41.280><c> here,</c><00:00:41.920><c> I've</c><00:00:42.239><c> got</c><00:00:42.800><c> claw</c><00:00:43.200><c> code</c>
+
+00:00:43.670 --> 00:00:43.680 align:start position:0%
+this pane over here, I've got claw code
+
+
+00:00:43.680 --> 00:00:47.029 align:start position:0%
+this pane over here, I've got claw code
+open.<00:00:44.320><c> Okay,</c><00:00:45.120><c> this</c><00:00:45.280><c> is</c><00:00:45.440><c> a</c><00:00:45.760><c> ghosty</c><00:00:46.239><c> terminal</c>
+
+00:00:47.029 --> 00:00:47.039 align:start position:0%
+open. Okay, this is a ghosty terminal
+
+
+00:00:47.039 --> 00:00:49.910 align:start position:0%
+open. Okay, this is a ghosty terminal
+with<00:00:47.440><c> three</c><00:00:47.760><c> panes.</c><00:00:48.320><c> It's</c><00:00:48.559><c> very</c><00:00:48.879><c> simple</c><00:00:49.360><c> and</c>
+
+00:00:49.910 --> 00:00:49.920 align:start position:0%
+with three panes. It's very simple and
+
+
+00:00:49.920 --> 00:00:51.750 align:start position:0%
+with three panes. It's very simple and
+I'm<00:00:50.160><c> going</c><00:00:50.239><c> to</c><00:00:50.320><c> put</c><00:00:50.960><c> a</c><00:00:51.200><c> link</c><00:00:51.360><c> in</c><00:00:51.600><c> the</c>
+
+00:00:51.750 --> 00:00:51.760 align:start position:0%
+I'm going to put a link in the
+
+
+00:00:51.760 --> 00:00:53.590 align:start position:0%
+I'm going to put a link in the
+description<00:00:52.079><c> for</c><00:00:52.320><c> how</c><00:00:52.480><c> you</c><00:00:52.640><c> could</c><00:00:52.800><c> do</c><00:00:52.960><c> all</c><00:00:53.199><c> the</c>
+
+00:00:53.590 --> 00:00:53.600 align:start position:0%
+description for how you could do all the
+
+
+00:00:53.600 --> 00:00:54.950 align:start position:0%
+description for how you could do all the
+um<00:00:53.840><c> actually</c><00:00:54.160><c> I'm</c><00:00:54.320><c> just</c><00:00:54.480><c> going</c><00:00:54.559><c> to</c><00:00:54.640><c> put</c><00:00:54.800><c> the</c>
+
+00:00:54.950 --> 00:00:54.960 align:start position:0%
+um actually I'm just going to put the
+
+
+00:00:54.960 --> 00:00:57.029 align:start position:0%
+um actually I'm just going to put the
+command<00:00:55.199><c> in</c><00:00:55.440><c> the</c><00:00:55.600><c> description</c><00:00:56.160><c> for</c><00:00:56.640><c> how</c><00:00:56.879><c> you</c>
+
+00:00:57.029 --> 00:00:57.039 align:start position:0%
+command in the description for how you
+
+
+00:00:57.039 --> 00:01:00.150 align:start position:0%
+command in the description for how you
+could<00:00:57.199><c> do</c><00:00:57.440><c> all</c><00:00:57.600><c> these</c><00:00:58.559><c> ghosty</c><00:00:59.280><c> conf</c><00:01:00.000><c> uh</c>
+
+00:01:00.150 --> 00:01:00.160 align:start position:0%
+could do all these ghosty conf uh
+
+
+00:01:00.160 --> 00:01:02.150 align:start position:0%
+could do all these ghosty conf uh
+terminal<00:01:00.640><c> commands.</c><00:01:01.199><c> Right?</c><00:01:01.600><c> So</c><00:01:01.840><c> it's</c>
+
+00:01:02.150 --> 00:01:02.160 align:start position:0%
+terminal commands. Right? So it's
+
+
+00:01:02.160 --> 00:01:04.789 align:start position:0%
+terminal commands. Right? So it's
+basically<00:01:03.359><c> uh</c><00:01:03.600><c> control</c><00:01:04.080><c> and</c><00:01:04.320><c> the</c><00:01:04.479><c> vim</c>
+
+00:01:04.789 --> 00:01:04.799 align:start position:0%
+basically uh control and the vim
+
+
+00:01:04.799 --> 00:01:06.310 align:start position:0%
+basically uh control and the vim
+commands<00:01:05.199><c> to</c><00:01:05.439><c> move</c><00:01:05.600><c> through</c><00:01:05.840><c> these</c><00:01:06.080><c> three</c>
+
+00:01:06.310 --> 00:01:06.320 align:start position:0%
+commands to move through these three
+
+
+00:01:06.320 --> 00:01:09.510 align:start position:0%
+commands to move through these three
+panes<00:01:06.960><c> and</c><00:01:07.119><c> the</c><00:01:07.360><c> three</c><00:01:07.520><c> panes</c><00:01:07.920><c> are</c><00:01:08.960><c> cloud</c><00:01:09.280><c> code</c>
+
+00:01:09.510 --> 00:01:09.520 align:start position:0%
+panes and the three panes are cloud code
+
+
+00:01:09.520 --> 00:01:11.590 align:start position:0%
+panes and the three panes are cloud code
+on<00:01:09.680><c> the</c><00:01:09.840><c> left</c>
+
+00:01:11.590 --> 00:01:11.600 align:start position:0%
+on the left
+
+
+00:01:11.600 --> 00:01:14.230 align:start position:0%
+on the left
+your<00:01:11.920><c> vim</c><00:01:12.320><c> environment</c><00:01:12.960><c> on</c><00:01:13.200><c> the</c><00:01:13.360><c> right</c><00:01:14.000><c> and</c>
+
+00:01:14.230 --> 00:01:14.240 align:start position:0%
+your vim environment on the right and
+
+
+00:01:14.240 --> 00:01:17.270 align:start position:0%
+your vim environment on the right and
+right<00:01:14.560><c> so</c><00:01:14.720><c> I</c><00:01:14.960><c> could</c><00:01:15.119><c> go</c><00:01:16.479><c> you</c><00:01:16.640><c> know</c><00:01:16.799><c> I</c><00:01:16.960><c> can</c><00:01:17.119><c> move</c>
+
+00:01:17.270 --> 00:01:17.280 align:start position:0%
+right so I could go you know I can move
+
+
+00:01:17.280 --> 00:01:20.149 align:start position:0%
+right so I could go you know I can move
+between<00:01:17.600><c> my</c><00:01:17.840><c> buffers</c><00:01:18.479><c> I</c><00:01:18.720><c> could</c><00:01:18.880><c> do</c><00:01:19.840><c> file</c>
+
+00:01:20.149 --> 00:01:20.159 align:start position:0%
+between my buffers I could do file
+
+
+00:01:20.159 --> 00:01:22.230 align:start position:0%
+between my buffers I could do file
+search<00:01:20.880><c> I</c><00:01:21.119><c> could</c><00:01:21.200><c> do</c><00:01:21.360><c> whatever</c><00:01:21.680><c> I</c><00:01:21.840><c> need</c><00:01:21.920><c> to</c><00:01:22.080><c> do</c>
+
+00:01:22.230 --> 00:01:22.240 align:start position:0%
+search I could do whatever I need to do
+
+
+00:01:22.240 --> 00:01:24.310 align:start position:0%
+search I could do whatever I need to do
+from<00:01:22.479><c> here</c><00:01:23.439><c> that's</c><00:01:23.759><c> why</c><00:01:23.920><c> I</c><00:01:24.080><c> don't</c><00:01:24.240><c> have</c>
+
+00:01:24.310 --> 00:01:24.320 align:start position:0%
+from here that's why I don't have
+
+
+00:01:24.320 --> 00:01:26.710 align:start position:0%
+from here that's why I don't have
+another<00:01:24.640><c> pane</c><00:01:24.960><c> open</c><00:01:25.360><c> with</c><00:01:25.600><c> the</c><00:01:25.759><c> file</c><00:01:26.000><c> tree</c><00:01:26.479><c> why</c>
+
+00:01:26.710 --> 00:01:26.720 align:start position:0%
+another pane open with the file tree why
+
+
+00:01:26.720 --> 00:01:28.230 align:start position:0%
+another pane open with the file tree why
+do<00:01:26.799><c> you</c><00:01:26.880><c> need</c><00:01:26.960><c> a</c><00:01:27.119><c> file</c><00:01:27.360><c> tree</c><00:01:27.600><c> open</c><00:01:27.920><c> you</c><00:01:28.080><c> could</c>
+
+00:01:28.230 --> 00:01:28.240 align:start position:0%
+do you need a file tree open you could
+
+
+00:01:28.240 --> 00:01:30.070 align:start position:0%
+do you need a file tree open you could
+just<00:01:28.320><c> go</c><00:01:28.479><c> and</c><00:01:28.640><c> get</c><00:01:28.880><c> anything</c><00:01:29.200><c> you</c><00:01:29.520><c> want</c><00:01:29.920><c> the</c>
+
+00:01:30.070 --> 00:01:30.080 align:start position:0%
+just go and get anything you want the
+
+
+00:01:30.080 --> 00:01:31.910 align:start position:0%
+just go and get anything you want the
+buffer<00:01:30.479><c> is</c><00:01:30.640><c> right</c><00:01:30.720><c> there</c><00:01:30.960><c> you</c><00:01:31.119><c> can</c><00:01:31.280><c> go</c><00:01:31.680><c> select</c>
+
+00:01:31.910 --> 00:01:31.920 align:start position:0%
+buffer is right there you can go select
+
+
+00:01:31.920 --> 00:01:34.950 align:start position:0%
+buffer is right there you can go select
+the<00:01:32.159><c> buffer,</c><00:01:33.040><c> right?</c><00:01:33.520><c> But</c><00:01:33.680><c> I</c><00:01:33.920><c> also</c><00:01:34.560><c> always</c>
+
+00:01:34.950 --> 00:01:34.960 align:start position:0%
+the buffer, right? But I also always
+
+
+00:01:34.960 --> 00:01:37.670 align:start position:0%
+the buffer, right? But I also always
+want<00:01:35.200><c> a</c><00:01:35.439><c> terminal</c><00:01:35.840><c> available.</c><00:01:36.960><c> So</c><00:01:37.200><c> I</c><00:01:37.439><c> just</c><00:01:37.600><c> go</c>
+
+00:01:37.670 --> 00:01:37.680 align:start position:0%
+want a terminal available. So I just go
+
+
+00:01:37.680 --> 00:01:39.350 align:start position:0%
+want a terminal available. So I just go
+down.<00:01:37.920><c> I</c><00:01:38.079><c> have</c><00:01:38.240><c> my</c><00:01:38.400><c> terminal</c><00:01:38.720><c> right</c><00:01:38.960><c> there,</c>
+
+00:01:39.350 --> 00:01:39.360 align:start position:0%
+down. I have my terminal right there,
+
+
+00:01:39.360 --> 00:01:41.910 align:start position:0%
+down. I have my terminal right there,
+right?<00:01:39.680><c> So</c><00:01:39.840><c> I</c><00:01:40.079><c> come</c><00:01:40.240><c> up</c><00:01:40.400><c> here,</c><00:01:41.280><c> you</c><00:01:41.439><c> know,</c><00:01:41.680><c> and</c>
+
+00:01:41.910 --> 00:01:41.920 align:start position:0%
+right? So I come up here, you know, and
+
+
+00:01:41.920 --> 00:01:43.510 align:start position:0%
+right? So I come up here, you know, and
+I've<00:01:42.079><c> got</c><00:01:42.240><c> my</c><00:01:42.400><c> live</c><00:01:42.640><c> site</c><00:01:42.960><c> over</c><00:01:43.119><c> here</c><00:01:43.200><c> on</c><00:01:43.360><c> the</c>
+
+00:01:43.510 --> 00:01:43.520 align:start position:0%
+I've got my live site over here on the
+
+
+00:01:43.520 --> 00:01:47.030 align:start position:0%
+I've got my live site over here on the
+side.<00:01:43.759><c> So</c><00:01:43.920><c> I</c><00:01:44.159><c> say</c><00:01:44.479><c> testing.</c><00:01:45.920><c> Boom.</c><00:01:46.640><c> And</c><00:01:46.880><c> look</c>
+
+00:01:47.030 --> 00:01:47.040 align:start position:0%
+side. So I say testing. Boom. And look
+
+
+00:01:47.040 --> 00:01:50.389 align:start position:0%
+side. So I say testing. Boom. And look
+at<00:01:47.200><c> this</c><00:01:47.360><c> over</c><00:01:47.600><c> here.</c><00:01:48.399><c> Boom.</c><00:01:48.880><c> Testing.</c><00:01:50.159><c> I'm</c>
+
+00:01:50.389 --> 00:01:50.399 align:start position:0%
+at this over here. Boom. Testing. I'm
+
+
+00:01:50.399 --> 00:01:51.830 align:start position:0%
+at this over here. Boom. Testing. I'm
+live.<00:01:50.720><c> I'm</c><00:01:50.960><c> over</c><00:01:51.119><c> here</c><00:01:51.280><c> editing.</c>
+
+00:01:51.830 --> 00:01:51.840 align:start position:0%
+live. I'm over here editing.
+
+
+00:01:51.840 --> 00:01:54.550 align:start position:0%
+live. I'm over here editing.
+Everything's<00:01:52.240><c> fine,</c><00:01:53.280><c> right?</c><00:01:53.840><c> What</c><00:01:54.079><c> why</c><00:01:54.320><c> why</c>
+
+00:01:54.550 --> 00:01:54.560 align:start position:0%
+Everything's fine, right? What why why
+
+
+00:01:54.560 --> 00:01:57.190 align:start position:0%
+Everything's fine, right? What why why
+do<00:01:54.640><c> we</c><00:01:54.799><c> need</c><00:01:54.880><c> an</c><00:01:55.040><c> editor?</c><00:01:55.520><c> Why</c><00:01:56.240><c> why</c><00:01:56.479><c> do</c><00:01:56.640><c> we</c><00:01:56.799><c> need</c>
+
+00:01:57.190 --> 00:01:57.200 align:start position:0%
+do we need an editor? Why why do we need
+
+
+00:01:57.200 --> 00:02:00.389 align:start position:0%
+do we need an editor? Why why do we need
+uh<00:01:57.439><c> cursor</c><00:01:57.920><c> or</c><00:01:58.159><c> why</c><00:01:58.320><c> do</c><00:01:58.479><c> we</c><00:01:58.640><c> need</c><00:01:58.960><c> VS</c><00:01:59.280><c> Code?</c><00:02:00.159><c> We</c>
+
+00:02:00.389 --> 00:02:00.399 align:start position:0%
+uh cursor or why do we need VS Code? We
+
+
+00:02:00.399 --> 00:02:02.469 align:start position:0%
+uh cursor or why do we need VS Code? We
+don't<00:02:00.960><c> get</c><00:02:01.200><c> out</c><00:02:01.360><c> of</c><00:02:01.439><c> this,</c><00:02:01.920><c> that's</c><00:02:02.240><c> going</c><00:02:02.320><c> to</c>
+
+00:02:02.469 --> 00:02:02.479 align:start position:0%
+don't get out of this, that's going to
+
+
+00:02:02.479 --> 00:02:06.310 align:start position:0%
+don't get out of this, that's going to
+disappear.<00:02:03.840><c> So,</c><00:02:05.200><c> this</c><00:02:05.360><c> is</c><00:02:05.520><c> for</c><00:02:05.759><c> somebody</c>
+
+00:02:06.310 --> 00:02:06.320 align:start position:0%
+disappear. So, this is for somebody
+
+
+00:02:06.320 --> 00:02:08.630 align:start position:0%
+disappear. So, this is for somebody
+hopefully<00:02:06.880><c> who's</c><00:02:07.600><c> feeling</c><00:02:07.920><c> kind</c><00:02:08.080><c> of</c><00:02:08.160><c> left</c><00:02:08.399><c> out</c>
+
+00:02:08.630 --> 00:02:08.640 align:start position:0%
+hopefully who's feeling kind of left out
+
+
+00:02:08.640 --> 00:02:11.350 align:start position:0%
+hopefully who's feeling kind of left out
+about<00:02:08.800><c> the</c><00:02:09.039><c> cloud</c><00:02:09.360><c> code</c><00:02:09.599><c> thing</c><00:02:10.000><c> in</c><00:02:10.239><c> Vim.</c><00:02:11.120><c> We</c>
+
+00:02:11.350 --> 00:02:11.360 align:start position:0%
+about the cloud code thing in Vim. We
+
+
+00:02:11.360 --> 00:02:13.270 align:start position:0%
+about the cloud code thing in Vim. We
+don't<00:02:11.440><c> have</c><00:02:11.599><c> to</c><00:02:11.760><c> over</c><00:02:12.000><c> complicate</c><00:02:12.400><c> it.</c><00:02:13.040><c> A</c>
+
+00:02:13.270 --> 00:02:13.280 align:start position:0%
+don't have to over complicate it. A
+
+
+00:02:13.280 --> 00:02:16.150 align:start position:0%
+don't have to over complicate it. A
+ghosty<00:02:13.760><c> window</c><00:02:14.239><c> with</c><00:02:14.480><c> three</c><00:02:14.720><c> panes.</c><00:02:15.920><c> See</c><00:02:16.080><c> you</c>
+
+00:02:16.150 --> 00:02:16.160 align:start position:0%
+ghosty window with three panes. See you
+
+
+00:02:16.160 --> 00:02:19.640 align:start position:0%
+ghosty window with three panes. See you
+in<00:02:16.319><c> the</c><00:02:16.480><c> next</c><00:02:16.640><c> one.</c>
