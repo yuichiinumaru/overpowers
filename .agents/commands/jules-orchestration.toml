@@ -1,0 +1,72 @@
+description = "Custom workflow"
+
+prompt = '''
+-|--------|
+| A | Direct integration |
+| B | Minor fixes needed |
+| C | Needs rework |
+| D | Reject |
+
+### 5. Selective Integration
+
+```
+/skill jules-integrate
+
+For Grade A/B branches:
+1. Create integration branch
+2. Cherry-pick or merge changes
+3. Resolve conflicts
+4. Add attribution comments
+5. Run verification
+```
+
+### 6. Cleanup & Attribution
+
+```
+After integration:
+- Delete completed worktrees
+- Archive branch catalog
+- Update changelog with Jules credits
+- Push integrated changes
+```
+
+## Jules Account Rotation
+
+Distribute work across accounts to maximize parallelism:
+
+```
+Account 1 → Infrastructure tasks
+Account 2 → Feature work
+Account 3 → Testing & documentation
+```
+
+## Related Skills
+
+| Skill | Purpose |
+|-------|---------|
+| `jules-dispatch` | Send tasks |
+| `jules-harvest` | Fetch branches |
+| `jules-triage` | Rate branches |
+| `jules-integrate` | Merge work |
+| `swarm-orchestration` | Agent coordination |
+
+## Directory Structure
+
+```
+.jules/
+├── tracking.md      # Dispatched task tracking
+├── branches.md      # Harvested branch catalog
+├── triage-report.md # Quality ratings
+├── worktrees/       # Local working copies
+└── archive/         # Completed work logs
+```
+
+## Success Metrics
+
+| Metric | Target |
+|--------|--------|
+| Parallel utilization | 3+ streams |
+| Accept rate | >70% A/B grades |
+| Integration conflicts | <10% |
+| Turnaround time | <24h dispatch-to-merge |
+'''
