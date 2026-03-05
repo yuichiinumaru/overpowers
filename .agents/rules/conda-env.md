@@ -1,0 +1,2 @@
+- For this project Mothership, we will always use conda env 'mothership' to run python code for this project (python 3.13). I created it specifically for this project.
+- Try to use the latest versions of the dependencies, and keep all python dependencies in a requirements.txt file in the root directory of the project.

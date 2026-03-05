@@ -19,7 +19,7 @@ What tests must pass for this task to be complete.
 
 Brief description of what needs to be done.
 
-Subtasks:
+Subtasks (mandatory):
 - [ ] Subtask 1
 - [ ] Subtask 2
 

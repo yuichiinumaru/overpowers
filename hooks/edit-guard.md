@@ -1,0 +1,16 @@
+---
+name: edit-guard
+description: Catches common tool errors and injects specific hints for agent self-recovery.
+trigger: PostToolUse
+matcher: (replace_file_content|write_to_file|multi_replace_file_content)
+---
+
+# Edit Guard
+
+## Implementation
+
+```bash
+#!/bin/bash
+# Assuming the tool error output is piped here via stdin or as an environment variable by the orchestrator.
+python3 "${OVERPOWERS_PATH:-$(pwd)}/hooks/runtime/edit_guard.py"
+```
