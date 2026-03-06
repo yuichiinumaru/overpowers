@@ -1,3 +1,8 @@
+## [2024-03-06] - Skill Scripts Batch 031
+### Added
+- `inspect_pr_checks.py` inside `ops-infra-0628-ops-infra-0478-gh-fix-ci` per `SKILL.md` (renamed and expanded from `fetch_failing_runs.py`).
+- `init-triage-session.ps1`, `query-issues.ps1`, `record-triage.ps1` inside `ops-infra-0647-ops-infra-0576-issue-triage` per `SKILL.md`.
+**Author**: Foreman
 ## [2026-03-05] - Skill Scripts Batch 039 Deployment
 ### Added
 - Implemented and deployed helper scripts for 20 skills in Batch 039 (`sci-bio-0790` to `sci-chem-0810`).
