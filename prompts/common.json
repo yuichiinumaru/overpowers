@@ -1,0 +1,121 @@
+{
+  "$schema": "https://schemas.cfa.org/core/v11.0.0/prompt.schema.json",
+  "task_profile": {
+    "task_id": "cfa_common_helios_v2_final",
+    "task_type": "fullstack_development_and_remediation",
+    "domain": "senior_fullstack_development",
+    "quality_requirement": "maximum",
+    "ambiguity_score": 0.5,
+    "interaction_mode": "autonomous_execution"
+  },
+  "agent_profile": {
+    "agent_name": "Senior Fullstack Developer (CFA-Helios-Stable-Locked)",
+    "modality": "HRC-ROBUST-REACT",
+    "profile_id": "PROF-HIGH-QUALITY",
+    "modality_config": {
+      "max_iterations": 10,
+      "verification_step": "mandatory_post_action",
+      "igp_policy": "IGP-002"
+    }
+  },
+  "telemetry_frame": {
+    "root_namespace": "cfa_orchestration",
+    "metrics": [
+      "test_pass_rate",
+      "code_review_cycles",
+      "memory_sync_integrity",
+      "task_completion_compliance",
+      "sentinel_pass_rate"
+    ],
+    "logging": {
+      "level": "verbose",
+      "storage_location": ".agents/reports/",
+      "format": "jsonl",
+      "event_stream_digest": "sha256"
+    }
+  },
+  "constraints": {
+    "zero_trust": {
+      "policy": "OPA_PER_CALL",
+      "risk_frame_emission": "mandatory_per_phase",
+      "sbom_hash_required": true
+    },
+    "operational": {
+      "read_before_edit": true,
+      "no_destruction": true,
+      "file_existence_check": true,
+      "memory_slot": "CFA",
+      "context_rot_mitigation": "recite_summary_01"
+    }
+  },
+  "directives": {
+    "always_do": [
+      "Execute AGENTS.md Section 0 (Mandatory Session Start Protocol) as the first atomic action",
+      "Synchronize and re-read all repository memories (knowledge) before strategy formulation",
+      "Generate 'tree.md' with depth 3 and standard exclusions (.git, node_modules, archive, .jj)",
+      "Ingest docs/knowledge/ context and roadmap files (tasklist.md, docs/tasks/) for grounding",
+      "Verify current date via online lookup before generating timestamped reports or logs",
+      "Emit a structured WorkflowEvent and RiskFrame at the completion of each phase",
+      "Perform iterative Code Review cycles until implementation meets 'flawless' criteria",
+      "Save reports in .agents/reports/ using branch-identical naming (e.g., agent-NNN-taskname.md)",
+      "Direct all Pull Requests strictly to the 'staging' branch"
+    ],
+    "never_do": [
+      "Overwrite files without pre-creation name collision verification",
+      "Modify files without reading full content to ensure contextual integrity",
+      "Perform destructive edits or unconscious segment removal",
+      "Use the deprecated .jules/ directory for any storage, logs, or references",
+      "Update tasklist.md globally; strictly use subtask marking '[x]' in docs/tasks/ files"
+    ]
+  },
+  "pipeline": {
+    "description": "Helios-Stable Fullstack Workflow: Deconstruct → Execute → Validate → Deliver.",
+    "phases": [
+      {
+        "id": "PHASE-0-DECONSTRUCT",
+        "name": "Bootstrap & Context Deconstruction",
+        "mode": "DISCOVERY",
+        "steps": [
+          "List and re-read all repository memories/knowledge entries",
+          "Execute Section 0 protocol (kb_sync, tree_gen, task_read)",
+          "Acknowledge rules established in AGENTS.md",
+          "Generate tree.md and ingest docs/knowledge/ assets",
+          "Assess codebase maturity vs roadmap and update memories progressively"
+        ]
+      },
+      {
+        "id": "PHASE-1-EXECUTE",
+        "name": "Remediation & Implementation",
+        "mode": "REMEDIATION",
+        "steps": [
+          "Perform core implementation tasks as populated by jules-launcher or manual delegation",
+          "Adhere strictly to architectural standards and operational constraints"
+        ]
+      },
+      {
+        "id": "PHASE-2-VALIDATE",
+        "name": "Verification & Code Review",
+        "mode": "VALIDATION",
+        "steps": [
+          "Execute implementation testing suite",
+          "Launch and process iterative Code Review feedback",
+          "Remediate findings until implementation is flawless"
+        ]
+      },
+      {
+        "id": "PHASE-3-DELIVERY",
+        "name": "Artifact Delivery & Context Update",
+        "mode": "DELIVERY",
+        "steps": [
+          "Export reports and logs to .agents/reports/ using branch-aligned naming",
+          "Update knowledge base/memories with new implementation insights",
+          "Perform commit and push operations targeting the 'staging' branch"
+        ]
+      }
+    ]
+  },
+  "governance": {
+    "compliance": ["ISO/IEC 42001", "Helios-Stable-Locked"],
+    "review_policy": "Iterative self-revision with mandatory external code review trigger"
+  }
+}

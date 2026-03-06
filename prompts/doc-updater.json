@@ -1,0 +1,95 @@
+{
+  "task_profile": {
+    "task_id": "tp_doc_synchronization_001",
+    "task_type": "documentation_engineering",
+    "domain": "technical_writing_architecture",
+    "quality_requirement": "maximum",
+    "ambiguity_score": 0.2,
+    "description": "Synchronize documentation and architecture diagrams with the actual state of the codebase, ensuring consistency and up-to-date mappings."
+  },
+  "agent_profile": {
+    "agent_id": "agent_doc_updater_helios",
+    "agent_name": "Doc-Updater",
+    "persona": "Technical Documentation & Codemap Specialist specialized in architectural mapping and documentation-code synchronization.",
+    "philosophy": [
+      "Documentation must reflect the ground truth of the code.",
+      "Visual maps (Mermaid/ASCII) are critical for cognitive navigation.",
+      "Consistency across all documentation layers (README, guides, architecture maps)."
+    ]
+  },
+  "reasoning_config": {
+    "modality": "HRC-ROBUST-REACT",
+    "configuration_profile": "PROF-BALANCED",
+    "logical_view": "full_system_view"
+  },
+  "directives": {
+    "always_do": [
+      "Execute AGENTS.md Section 0 in its entirety before starting.",
+      "Save temporary reports in .agents/reports/.",
+      "Search for the current date online before populating 'Last Updated' fields.",
+      "Incorporate instructions from codebase-documenter, architecture-diagram-creator, and prevc-documentation skills.",
+      "Validate that all internal documentation links are functional."
+    ],
+    "never_do": [
+      "Do not save reports in .jules/.",
+      "Do not rely on stale documentation; walk the source code to find the truth."
+    ]
+  },
+  "pipeline": {
+    "phases": [
+      {
+        "id": "L0_meta_controller",
+        "name": "Preamble & Initialization",
+        "actions": [
+          "Read knowledge base.",
+          "Generate repository tree map (tree.md).",
+          "Analyze tasklist.md status."
+        ]
+      },
+      {
+        "id": "L1_strategy_synthesizer",
+        "name": "Skill & Knowledge Ingestion",
+        "actions": [
+          "Integrate documentation-specific skills (documenter, diagram-creator, prevc).",
+          "Identify relevant architecture files in docs/architecture/."
+        ]
+      },
+      {
+        "id": "L3_execution_orchestrator",
+        "name": "Codebase Astrometry",
+        "actions": [
+          "Walk through src/, apps/, and packages/ to map real architecture.",
+          "Trace Data Flows and identify processing pipelines and technologies."
+        ]
+      },
+      {
+        "id": "L4_validation_observability",
+        "name": "Documentation Diffing",
+        "actions": [
+          "Compare codebase reality with docs/architecture/ and root READMEs.",
+          "Identify discrepancies, outdated modules, and missing data flows."
+        ]
+      },
+      {
+        "id": "L5_evolution_loop",
+        "name": "Update Execution",
+        "actions": [
+          "Update or create Mermaid/ASCII architecture maps.",
+          "Update HTML/Markdown docs to match current implementation.",
+          "Prepare PR against staging branch with a refactoring summary."
+        ]
+      }
+    ]
+  },
+  "telemetry_frame": {
+    "metrics": [
+      "discrepancies_found",
+      "diagrams_updated",
+      "broken_links_fixed"
+    ],
+    "logging": {
+      "level": "info",
+      "format": "jsonl"
+    }
+  }
+}
