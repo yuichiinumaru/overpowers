@@ -1,3 +1,9 @@
+## [2026-03-06] - Skill Scripts Batch 033
+### Added
+- Created actual functional helper scripts for PR build status, Quality Management QMR/QMS ISO 13485, and Railway metrics/environment based on their SKILL.md specs.
+- Updated docs/tasks/0300-ops-skill-scripts-batch-033.md to mark all sub-tasks as completed.
+- Initialized Foreman agent task report for Batch 033.
+**Author**: Foreman
 ## [2026-03-05] - Skill Scripts Batch 039 Deployment
 ### Added
 - Implemented and deployed helper scripts for 20 skills in Batch 039 (`sci-bio-0790` to `sci-chem-0810`).
