@@ -5,10 +5,10 @@
 Execution of Skill Scripts Batch tasks. Currently working on Batch 002.
 %%%%%%% Changes from base to side #2
 -PRs #45 and #46 merged via `jj`. Repository recovered after severe corruption during merge of large PR files. Docs reorganization preserved.
-+Execution of Skill Scripts Batch tasks. Completed Batch 039.
+Execution of Skill Scripts Batch tasks. Completed Batch 039 and Batch 027.
 
 ## Active Branch
-`ops/skill-scripts-batch-010` (bookmark at `osstvwox c3b3a168`)
+`ops/skill-scripts-batch-027` (bookmark at `osstvwox c3b3a168`)
 
 ## Pending Tasks (Priority Order)
 1. **001** - Remote MCP integrations
