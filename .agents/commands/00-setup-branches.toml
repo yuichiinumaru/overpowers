@@ -1,0 +1,17 @@
+description = "Initialize and verify VCS conventions for an agentic project, including Jujutsu (jj), staging, and development branches."
+
+prompt = '''
+# /00-setup-branches (VCS Architecture Initialization)
+
+**Goal**: Ensure the exact version control boundaries mandated by the Overpowers constitution are properly scaffolded.
+
+## Actions
+
+1. **Verify Jujutsu (jj)**: Check if `jj` is installed in the system. If not, advise the user that Jujutsu should be installed according to the project's documentation.
+2. **Repository Integrity**: Ensure the repository is tracking correctly. If `jj` is used, verify if the repo is a `jj` workspace.
+3. **Core Branches Creation**:
+    - Identify the default or principal branch (`main` or `master`). If it's `master` or anything else, rename or configure the main bookmark to `main`.
+    - Check if the `staging` branch (bookmark) exists. If not, create it branching off `main`.
+    - Check if the `development` branch (bookmark) exists. If not, create it branching off `staging`.
+4. **Validation**: Validate that the branch structure is `main` <- `staging` <- `development` without conflicts.
+'''

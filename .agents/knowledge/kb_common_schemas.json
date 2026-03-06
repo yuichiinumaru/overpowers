@@ -57,17 +57,17 @@
   "definitions": {
     "TaskProfile": {
       "type": "object",
-      "properties": {/* existing definition */},
-      "required": [/* existing fields */]
+      "properties": {},
+      "required": []
     },
-    "ContextManifest": {/* existing */},
-    "ProblemSpec": {/* existing */},
-    "SolutionArtifact": {/* existing */},
-    "TelemetryFrame": {/* existing */},
-    "RiskFrame": {/* existing */},
-    "WorkflowEvent": {/* existing */},
-    "HRM_TaskProfile": {/* existing */},
-    "HRM_SolutionArtifact": {/* existing */},
+    "ContextManifest": {},
+    "ProblemSpec": {},
+    "SolutionArtifact": {},
+    "TelemetryFrame": {},
+    "RiskFrame": {},
+    "WorkflowEvent": {},
+    "HRM_TaskProfile": {},
+    "HRM_SolutionArtifact": {},
     "GraphSpec": {
       "$id": "https://schemas.cfa.org/common/GraphSpec.v2.2.json",
       "schema_version": "2.2.0",
