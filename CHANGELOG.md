@@ -1,3 +1,44 @@
+## [2026-03-06] - Skill Scripts Batch 032 Helper Scripts
+### Added
+- Added `scripts/transcribe.py` for `local-asr-transcription` skill to perform inference with Qwen/Vibe ASR models via `transformers`.
+- Added `scripts/merge-pr.sh` for `merge-pr` skill to handle squash merges with worktree cleanup logic.
+- Added `scripts/render.ts` for `mermaid` skill to process `.mmd` files into SVG/ASCII via `beautiful-mermaid`.
+- Added `scripts/monitor-experiment.sh` for `monitor-experiment` skill to poll and fetch logs for Beaker experiments.
+- Added `scripts/nx-explore.sh` for `nx-workspace` skill to wrap common `nx show` exploration commands.
+### Changed
+- Marked all subtasks as completed in `docs/tasks/0300-ops-skill-scripts-batch-032.md`.
+**Author**: Foreman
+
+## [2026-03-05] - Skill Scripts Batch 045 Deployment
+### Added
+- Implemented and deployed helper scripts for 20 skills in Batch 045 (`sec-safety-0925` to `sec-safety-0946`).
+- Developed specialized scripts for:
+  - `attack-tree-construction`: Comprehensive attack path visualization and analysis tool.
+  - `aubrai-longevity`: Research tool for automated API interaction and polling.
+  - `audit-context-building`: Template generator for ultra-granular code micro-analysis.
+  - `audit-prep-assistant`: Preparation package checklist manager.
+  - `authentication`: Hybrid browser-state/cookie-injection authentication manager.
+  - `aws-cost-operations` & `aws-serverless-eda`: Readiness checklist for AWS MCP servers.
+  - `azure-devops-cli`: Command generation helper for pipeline and repo management.
+  - `bamboohr-automation`: HR workflow sequence reference tool.
+  - `benchling-integration`: Code snippet generator for biological R&D automation.
+  - `biomni`: Biomedical agent initialization and example generator.
+  - `brand-voice-consistency`: Automatic checker for brand identity and tone.
+  - `broken-authentication`: Testing payload and checklist generator.
+  - `burp-suite-testing`: Manual testing shortcut and payload reference.
+  - `c4-architecture`: Mermaid-based C4 diagram template generator.
+  - `cal-com-automation` & `calcom-api`: Scheduling workflow and API example tools.
+**Author**: Overpowers Architect
+## [2026-03-06] - Skill Scripts Batch 032 Helper Scripts
+### Added
+- Added `scripts/transcribe.py` for `local-asr-transcription` skill to perform inference with Qwen/Vibe ASR models via `transformers`.
+- Added `scripts/merge-pr.sh` for `merge-pr` skill to handle squash merges with worktree cleanup logic.
+- Added `scripts/render.ts` for `mermaid` skill to process `.mmd` files into SVG/ASCII via `beautiful-mermaid`.
+- Added `scripts/monitor-experiment.sh` for `monitor-experiment` skill to poll and fetch logs for Beaker experiments.
+- Added `scripts/nx-explore.sh` for `nx-workspace` skill to wrap common `nx show` exploration commands.
+### Changed
+- Marked all subtasks as completed in `docs/tasks/0300-ops-skill-scripts-batch-032.md`.
+**Author**: Foreman
 ## [2026-03-05] - Skill Scripts Batch 039 Deployment
 ### Added
 - Implemented and deployed helper scripts for 20 skills in Batch 039 (`sci-bio-0790` to `sci-chem-0810`).
