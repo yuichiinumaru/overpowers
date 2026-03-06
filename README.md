@@ -4,20 +4,19 @@
 
 **Overpowers** is a consolidated, opinionated, and massively expanded toolkit for AI coding assistants. It centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, highly capable repository. It's "Power Overwhelming".
 
-Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, and **Kilo Code** out of the box. Planning to expand to Codex-CLI, Claude-Code, Cursor, and more.
+Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, **Kilo Code**, and **Jules Async Protocol** natively out of the box. Planning to expand to Codex-CLI, Claude-Code, Cursor, and more.
 
 ## 📊 Inventory
 
 | Component | Count | Description |
 |-----------|-------|-------------|
-| **Agents** | 467+ | Specialized AI personas for every task |
-| **Skills** | 333+ | Complex workflow automation (SKILL.md) |
-| **Workflows** | 263+ | Complete process guides (also serve as commands) |
-| **Scripts** | 110+ | DevOps, automation & setup helpers |
-| **Hooks** | 29 | Pre/post action notifications |
-| **Services** | 13 | External service integrations |
+| **Agents** | 937+ | Specialized AI personas for every task |
+| **Skills** | 1289+ | Complex workflow automation (SKILL.md) |
+| **Workflows** | 304+ | Complete process guides (also serve as commands) |
+| **Scripts** | 28+ | DevOps, automation & setup helpers |
+| **Hooks** | 43+ | Pre/post action notifications |
 
-**Total: 1200+ components!**
+**Total: 2600+ components!**
 
 ---
 
@@ -133,31 +132,17 @@ The `opencode-example.json` contains pre-configured MCP servers. The `install-mc
 
 | Server | Description |
 |--------|-------------|
-| Serena | Semantic code analysis |
-| Vibe Check | Code quality assessment |
-| Hyperbrowser | Browser automation |
+| Serena | Semantic code analysis and manipulation |
+| Vibe Check | Code quality, constitution enforcement, safety |
+| Desktop Commander | Local system and CLI operations |
+| Hyperbrowser | Powerful browser automation |
 | Genkit | Firebase AI toolkit |
-| Memcord | Memory coordination |
-| Semgrep | Static analysis |
-| In Memoria | Persistent memory |
-| Playwright | Browser testing |
-| Context7 | Documentation lookup |
-| NotebookLM | Google NotebookLM integration |
-
----
-
-## 🔀 Jules Swarm Integration
-
-The [jules-swarm](https://github.com/yuichiinumaru/jules-swarm) enables parallel task processing with multiple Google Jules accounts.
-
-### 4-Stage Workflow
-
-1. **`/skill jules-dispatch`** — Send tasks to Jules with prompt optimization
-2. **`/skill jules-harvest`** — Fetch completed branches into local worktrees
-3. **`/skill jules-triage`** — Parallel review and rating of branches
-4. **`/skill jules-integrate`** — Selective merge with attribution
-
-See `workflows/jules-orchestration.md` for the complete guide.
+| Memcord | Active memory slots |
+| In Memoria | General persistent memory |
+| Playwright | E2E browser testing & validation |
+| Context7 | Realtime documentation retrieval |
+| Semgrep | Deep static code analysis & security |
+| NotebookLM | Google NotebookLM API integration |
 
 ---
 

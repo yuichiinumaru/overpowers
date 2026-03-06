@@ -1,285 +1,80 @@
 {
-  "repo": "",
+  "repo": "overpowers",
   "tasks": [
     {
       "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0001-ops-mcp-integrations.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0003-ops-moltbot-memory.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0020-ai-ralph-loop-recursion.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0022-data-json-knowledge-graph.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0024-ai-agent-reasoning-bdi.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0025-dev-evaluation-driven-dev.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0026-ops-moltbot-memory-integration.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0027-ops-skill-decision-trees.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0028-ops-memory-lifecycle-updates.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0029-ai-harvest-claude-templates.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0030-ai-harvest-omnara-monitoring.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0031-ai-micode-mindmodel-context.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0035-ops-containerized-sandbox.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0036-ops-integrated-swarm-roadmap.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0170-ops-skill-reorganization.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0180-ops-skill-metadata-standardization.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0190-ops-skill-consolidation.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0200-dev-skill-localization.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0210-sec-skill-integrity-fix.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/022-task-json-knowledge-graph.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0220-ops-skill-knowledge-base.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-001.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-002.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-003.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-008.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-009.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-012.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-013.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-014.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-015.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-016.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-017.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-018.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-019.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-020.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-021.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-022.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-023.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-024.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-025.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-026.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-027.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-028.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-029.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-030.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-031.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-032.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-033.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-034.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-037.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-039.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-040.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-041.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-042.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-043.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-044.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-045.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-046.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-047.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-048.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-049.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-050.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-051.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-052.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-053.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-054.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-056.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-057.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-058.md"
-    },
-    {
-      "prompt": "prompts/foreman.json",
-      "task": "docs/tasks/0300-ops-skill-scripts-batch-059.md"
+      "tasks": [
+        "docs/tasks/0001-ops-mcp-integrations.md",
+        "docs/tasks/0003-ops-moltbot-memory.md",
+        "docs/tasks/0020-ai-ralph-loop-recursion.md",
+        "docs/tasks/0022-data-json-knowledge-graph.md",
+        "docs/tasks/0024-ai-agent-reasoning-bdi.md",
+        "docs/tasks/0025-dev-evaluation-driven-dev.md",
+        "docs/tasks/0026-ops-moltbot-memory-integration.md",
+        "docs/tasks/0027-ops-skill-decision-trees.md",
+        "docs/tasks/0028-ops-memory-lifecycle-updates.md",
+        "docs/tasks/0029-ai-harvest-claude-templates.md",
+        "docs/tasks/0030-ai-harvest-omnara-monitoring.md",
+        "docs/tasks/0031-ai-micode-mindmodel-context.md",
+        "docs/tasks/0035-ops-containerized-sandbox.md",
+        "docs/tasks/0036-ops-integrated-swarm-roadmap.md",
+        "docs/tasks/0170-ops-skill-reorganization.md",
+        "docs/tasks/0180-ops-skill-metadata-standardization.md",
+        "docs/tasks/0190-ops-skill-consolidation.md",
+        "docs/tasks/0200-dev-skill-localization.md",
+        "docs/tasks/0210-sec-skill-integrity-fix.md",
+        "docs/tasks/022-task-json-knowledge-graph.md",
+        "docs/tasks/0220-ops-skill-knowledge-base.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-001.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-002.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-003.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-008.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-009.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-012.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-013.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-014.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-015.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-016.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-017.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-018.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-019.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-020.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-021.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-022.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-023.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-024.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-025.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-026.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-027.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-028.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-029.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-030.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-031.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-032.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-033.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-034.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-037.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-039.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-040.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-041.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-042.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-043.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-044.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-045.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-046.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-047.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-048.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-049.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-050.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-051.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-052.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-053.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-054.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-056.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-057.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-058.md",
+        "docs/tasks/0300-ops-skill-scripts-batch-059.md"
+      ]
     }
   ]
 }
