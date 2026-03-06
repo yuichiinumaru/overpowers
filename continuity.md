@@ -79,3 +79,6 @@ Execution of Skill Scripts Batch tasks. Currently working on Batch 002.
 +++++++ Contents of side #2
 ## Next Phase Goal
 Review the newly integrated skills and proceed to Task 001: Implement remote MCP integrations or initiate Phase 3 of skill standardization (Deep Audit).
+
+## ✅ Completed Tasks (Session 2026-03-05)
+- **Skill Scripts Batch 037** - Implemented helper scripts for 10 skills (`sci-bio-0761` to `sci-bio-0770`).
