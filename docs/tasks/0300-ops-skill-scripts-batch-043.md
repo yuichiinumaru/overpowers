@@ -1,6 +1,6 @@
 # Task 0300: Skill Scripts Batch 043
 
-**Status**: [ ]
+**Status**: [x]
 **Priority**: LOW
 **Type**: ops
 
@@ -30,21 +30,21 @@ Analyze each skill in this batch and create helper scripts inside their `scripts
 - [ ] `sci-sci-0888-sci-sci-0683-moltbook-search`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
 - [ ] `sci-sci-0889-sci-sci-0706-networkx`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
 - [ ] `sci-sci-0889-sci-sci-0706-networkx`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
-- [ ] `sci-sci-0890-sci-sci-0710-news-feeds`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
-- [ ] `sci-sci-0890-sci-sci-0710-news-feeds`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
-- [ ] `sci-sci-0891-sci-sci-0752-opentrons-integration`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
-- [ ] `sci-sci-0891-sci-sci-0752-opentrons-integration`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
-- [ ] `sci-sci-0892-sci-sci-0765-paper-fetcher`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
-- [ ] `sci-sci-0892-sci-sci-0765-paper-fetcher`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
-- [ ] `sci-sci-0894-sci-sci-0783-peer-review`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
-- [ ] `sci-sci-0894-sci-sci-0783-peer-review`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
-- [ ] `sci-sci-0896-sci-sci-0858-pylabrobot`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
-- [ ] `sci-sci-0896-sci-sci-0858-pylabrobot`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
-- [ ] `sci-sci-0897-sci-sci-0872-qms-audit-expert`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
-- [ ] `sci-sci-0897-sci-sci-0872-qms-audit-expert`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
-- [ ] `sci-sci-0898-sci-sci-0919-research-engineer`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
-- [ ] `sci-sci-0898-sci-sci-0919-research-engineer`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
-- [ ] `sci-sci-0899-sci-sci-0952-scientific-problem-selection`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
-- [ ] `sci-sci-0899-sci-sci-0952-scientific-problem-selection`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
-- [ ] `sci-sci-0900-sci-sci-0964-searxng`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
-- [ ] `sci-sci-0900-sci-sci-0964-searxng`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [x] `sci-sci-0890-sci-sci-0710-news-feeds`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [x] `sci-sci-0890-sci-sci-0710-news-feeds`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [x] `sci-sci-0891-sci-sci-0752-opentrons-integration`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [x] `sci-sci-0891-sci-sci-0752-opentrons-integration`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [x] `sci-sci-0892-sci-sci-0765-paper-fetcher`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [x] `sci-sci-0892-sci-sci-0765-paper-fetcher`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [x] `sci-sci-0894-sci-sci-0783-peer-review`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [x] `sci-sci-0894-sci-sci-0783-peer-review`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [x] `sci-sci-0896-sci-sci-0858-pylabrobot`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [x] `sci-sci-0896-sci-sci-0858-pylabrobot`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [x] `sci-sci-0897-sci-sci-0872-qms-audit-expert`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [x] `sci-sci-0897-sci-sci-0872-qms-audit-expert`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [x] `sci-sci-0898-sci-sci-0919-research-engineer`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [x] `sci-sci-0898-sci-sci-0919-research-engineer`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [x] `sci-sci-0899-sci-sci-0952-scientific-problem-selection`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [x] `sci-sci-0899-sci-sci-0952-scientific-problem-selection`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
+- [x] `sci-sci-0900-sci-sci-0964-searxng`: Check if any existing script inside the repository's `scripts/` subfolders would fit as a helper and copy it over (if applicable)
+- [x] `sci-sci-0900-sci-sci-0964-searxng`: Analyze and create new helper scripts inside its `scripts/` directory (if applicable)
