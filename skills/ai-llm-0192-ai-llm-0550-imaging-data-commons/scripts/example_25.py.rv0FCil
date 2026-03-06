@@ -1,0 +1,18 @@
+--- skills/ai-llm-0192-ai-llm-0550-imaging-data-commons/scripts/example_25.py
++++ skills/ai-llm-0192-ai-llm-0550-imaging-data-commons/scripts/example_25.py
+@@ -0,0 +1,15 @@
++import SimpleITK as sitk
++from pathlib import Path
++
++# Read DICOM series
++series_path = "./data/ct_series"
++reader = sitk.ImageSeriesReader()
++dicom_names = reader.GetGDCMSeriesFileNames(series_path)
++reader.SetFileNames(dicom_names)
++image = reader.Execute()
++
++# Apply processing
++smoothed = sitk.CurvatureFlow(image1=image, timeStep=0.125, numberOfIterations=5)
++
++# Save as NIfTI
++sitk.WriteImage(smoothed, "processed_volume.nii.gz")

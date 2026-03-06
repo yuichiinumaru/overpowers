@@ -1,2 +1,5 @@
-// Helper script for paste-from-clipboard
-console.log("paste-from-clipboard helper");
+async function main() {
+  console.log(`Paste from clipboard placeholder`);
+}
+
+main().catch(console.error);
