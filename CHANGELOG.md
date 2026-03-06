@@ -1,3 +1,45 @@
+## [2026-03-06] - Completed Tasks Archival
+### Changed
+- Extracted 37 completed tasks from `docs/tasklist.json` into a separate `docs/tasks/completed/tasklist-completed.json` manifest file to remove clutter.
+- Refactored `docs/tasklist.json` schema to group arrays of payload tasks under a unified `prompt` directive, drastically minimizing repetitive structure.
+- Moved the corresponding physical markdown task files from `docs/tasks/` to `docs/tasks/completed/`.
+**Author**: Overpowers Architect (Antigravity)
+
+## [2026-03-06] - CFA Helios Prompt Conversion
+### Added
+- Converted 17 Markdown prompts into structured JSON prompts adhering to the Cognitive Fusion Architecture (CFA) Helios standard.
+- Implemented `task_profile`, `agent_profile`, `reasoning_config`, `directives`, and `pipeline` structures for: `architect`, `arxiv`, `doc-updater`, `gatekeeper`, `loom`, `mcps`, `nexus`, `refactor-cleaner`, `release-notes`, `reorganize-docs-agents`, `scout`, `security-reviewer`, `sort-scripts`, `tracker`, `update-memories`, `youtube-ripper`, and `scavenge-planner`.
+### Changed
+- Standardized naming in `prompts/` directory by removing underscores from Markdown files to match JSON counterparts.
+- Aligned `scavenge-planner` naming across .md and .json versions.
+
+## [2026-03-06] - Skill Naming Convention Enforcement
+### Changed
+- Renamed 13 unnumbered skill directories in `skills/` to follow the `type-subtype-nnnn-name` convention (IDs 1249-1261).
+- Updated `name` field in `SKILL.md` for all renamed skills.
+- Renamed script utilities in `skills/` and `scripts/utils/` to remove underscores (`consolidate-skills.py`, `consolidate-additional.py`, `skills-report.json`, `analyze-skill.sh`).
+- Renamed documentation files in `docs/` to remove underscores (`agno-docs-links.txt`, `skill-creation-guide.md`).
+- Moved `lista de skills.md` to `docs/skills-sources.md`.
+### Removed
+- Archived redundant skill folders (`compound-product-cycle`, `setup-codemap-cli`) and ZIP archives in `skills/` to `.archive/`.
+**Author**: Overpowers Architect (Gemini CLI)
+
+## [2026-03-06] - Skill Directory Cleanup & README Refresh
+### Changed
+- Executed mass rename of over 1223 skill folders in `skills/` to clean duplicated prefixes.
+- Updated component inventory counts dynamically in `README.md`, now totaling 2600+ components (including 1280+ skills and 937+ agents).
+- Re-aligned the MCP server documentation in `README.md` to perfectly match `opencode-example.json`.
+### Removed
+- Removed the `Jules Swarm Integration` section from `README.md` as its capabilities have graduated to native skill status.
+**Author**: Overpowers Architect (Antigravity)
+
+## [2026-03-06] - Consolidated Parallel PRs for Jules Skill Scripts Batches
+### Added
+- Evaluated and verified parallel run outputs from Jules agents for the remaining `0300` skill batches.
+- Merged and patched the most comprehensive version of scripts generated across 43 parallel batches directly into the main `development` bookmark via Jujutsu, avoiding snapshot corruption of immutable remote branches by using patch diffing.
+- Auto-closed the corresponding Github Pull Requests associated with parallel Jules runs.
+**Author**: Overpowers Architect (Antigravity)
+
 ## [2026-03-05] - Repository Integrity Fix: Agent Syntax & Skill Conflicts
 ### Fixed
 - Resolved YAML frontmatter syntax errors in `agents/jules-orchestrator.md` and `agents/team-claude--it-ops-orchestrator.md` (mismatched quotes and redundant tool entries).

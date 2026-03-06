@@ -10,14 +10,13 @@ Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, and **Kilo Code
 
 | Component | Count | Description |
 |-----------|-------|-------------|
-| **Agents** | 467+ | Specialized AI personas for every task |
-| **Skills** | 333+ | Complex workflow automation (SKILL.md) |
-| **Workflows** | 263+ | Complete process guides (also serve as commands) |
-| **Scripts** | 110+ | DevOps, automation & setup helpers |
-| **Hooks** | 29 | Pre/post action notifications |
-| **Services** | 13 | External service integrations |
+| **Agents** | 937+ | Specialized AI personas for every task |
+| **Skills** | 1280+ | Complex workflow automation (SKILL.md) |
+| **Commands/Workflows** | 303+ | Complete process guides (also serve as commands) |
+| **Scripts** | 67+ | DevOps, automation & setup helpers |
+| **Hooks** | 44 | Pre/post action notifications |
 
-**Total: 1200+ components!**
+**Total: 2600+ components!**
 
 ---
 
@@ -26,13 +25,13 @@ Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, and **Kilo Code
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yuichiinumaru/overpowers.git ~/Work/overpowers
+git clone https://github.com/yuichiinumaru/overpowers.git ~/path/overpowers
 ```
 
 ### 2. Run the installer
 
 ```bash
-cd ~/Work/overpowers
+cd ~/path/overpowers
 ./install.sh
 ```
 
@@ -135,29 +134,14 @@ The `opencode-example.json` contains pre-configured MCP servers. The `install-mc
 |--------|-------------|
 | Serena | Semantic code analysis |
 | Vibe Check | Code quality assessment |
-| Hyperbrowser | Browser automation |
+| Desktop Commander | Local OS automation |
+| Hyperbrowser | Cloud browser automation |
 | Genkit | Firebase AI toolkit |
 | Memcord | Memory coordination |
 | Semgrep | Static analysis |
-| In Memoria | Persistent memory |
-| Playwright | Browser testing |
-| Context7 | Documentation lookup |
+| Playwright Browser | Local browser testing |
+| Context7 | Up-to-date documentation |
 | NotebookLM | Google NotebookLM integration |
-
----
-
-## 🔀 Jules Swarm Integration
-
-The [jules-swarm](https://github.com/yuichiinumaru/jules-swarm) enables parallel task processing with multiple Google Jules accounts.
-
-### 4-Stage Workflow
-
-1. **`/skill jules-dispatch`** — Send tasks to Jules with prompt optimization
-2. **`/skill jules-harvest`** — Fetch completed branches into local worktrees
-3. **`/skill jules-triage`** — Parallel review and rating of branches
-4. **`/skill jules-integrate`** — Selective merge with attribution
-
-See `workflows/jules-orchestration.md` for the complete guide.
 
 ---
 
@@ -230,7 +214,6 @@ Contributions are welcome! Please:
 1. Fork the repository
 2. Create a feature branch
 3. Submit a pull request
-4. **Always update `CHANGELOG.md`** (it's an immutable law here)
 
 ## 📜 License
 

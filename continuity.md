@@ -1,7 +1,7 @@
 # Continuity — Overpowers Session Ledger
 
 ## Current Focus
-Execution of Skill Scripts Batch tasks. Completed Batch 039.
+Execution of Skill Scripts Batch tasks. Completed Batch 039. Enforced naming conventions across `skills/` directory.
 
 ## Active Branch
 `ops/skill-scripts-batch-010` (bookmark at `osstvwox c3b3a168`)
@@ -9,10 +9,16 @@ Execution of Skill Scripts Batch tasks. Completed Batch 039.
 ## Pending Tasks (Priority Order)
 1. **001** - Remote MCP integrations
 2. **003** - Finalize persistent memory refactor
-3. **015** - Verify tasks 004-008 status (audit update needed)
-4. **Skill Improvements** - Execute standardized metadata and workflow templates across skills (see `docs/tasks/planning/2026-03-04-skill-improvements-plan.md`)
+3. **Skill Naming Enforcement (Docs/Agents)** - Review and rename agent files in `agents/` and remaining documentation in `docs/` to strictly follow `type--` and `type-subtype-nnnn` conventions.
+4. **Batch 040 Deployment** - Start Batch 040 (`sci-chem-0811` to `sci-chem-0830`).
+5. **Deep Audit Phase 3** - Initiate Phase 3 of skill standardization.
+
+## ✅ Completed Tasks (Session 2026-03-06)
+- **CFA Helios Prompt Conversion** - Converted 17 Markdown prompts to structured JSON adhering to the Helios standard. Aligned naming in `prompts/` (removed underscores).
+- **Skill Naming Convention Enforcement** - Renamed 13 unnumbered skills (IDs 1249-1261) and archived redundant folders/zips. Standardized script naming (removed underscores) and updated documentation references.
 
 ## ✅ Completed Tasks (Session 2026-03-05)
+- **Skill Scripts Batch 033** - Analyzed and created helper scripts for 21 skills (`ops-infra-0672` to `ops-infra-0692`).
 - **Skill Scripts Batch 019** - Implemented helper scripts for 20 skills (`ai-llm-0400` to `ai-llm-0617`).
 - **Skill Scripts Batch 006** - Implemented helper scripts for 21 skills (`ai-llm-0111` to `ai-llm-0132`).
 - **Skill Scripts Batch 055** - Implemented helper scripts for 20 skills (`sec-safety-1135` to `ux-design-1155`).
@@ -44,3 +50,5 @@ Execution of Skill Scripts Batch tasks. Completed Batch 039.
 
 ## Next Phase Goal
 Review the newly integrated skills and proceed to Task 001: Implement remote MCP integrations or initiate Phase 3 of skill standardization (Deep Audit).
+
+- **Skill Scripts Batch 032** - Implemented helper scripts for 20 skills (`ops-infra-0652` to `ops-infra-0671`).

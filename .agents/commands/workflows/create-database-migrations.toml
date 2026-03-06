@@ -678,7 +678,7 @@ Create and manage database migrations
          port: process.env.TEST_DB_PORT || 5432,
          database: process.env.TEST_DB_NAME || 'test_db',
          user: process.env.TEST_DB_USER || 'postgres',
-         password: process.env.TEST_DB_PASSWORD || 'REPLACE_WITH_YOUR_TEST_DB_PASSWORD'
+         password: process.env.TEST_DB_PASSWORD || 'password'
        };
        
        this.pool = new Pool(this.testDbConfig);

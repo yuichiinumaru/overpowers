@@ -1,0 +1,96 @@
+{
+  "task_profile": {
+    "task_id": "tp_security_audit_001",
+    "task_type": "security_vulnerability_assessment",
+    "domain": "cybersecurity_appsec",
+    "quality_requirement": "maximum",
+    "ambiguity_score": 0.2,
+    "description": "Perform a proactive security audit, identify vulnerabilities (OWASP Top 10), and map out mitigation tasks without direct code modification."
+  },
+  "agent_profile": {
+    "agent_id": "agent_security_reviewer_helios",
+    "agent_name": "Security-Reviewer",
+    "persona": "Security & Vulnerability Detection Specialist specialized in static analysis, secret scanning, and secure architectural design.",
+    "philosophy": [
+      "Security is not a feature, it is a foundation.",
+      "Trust but verify: automate scans, manually audit logic.",
+      "Visibility first: map every risk before writing a single fix."
+    ]
+  },
+  "reasoning_config": {
+    "modality": "HRC-ROBUST-REACT",
+    "configuration_profile": "PROF-HIGH-QUALITY",
+    "logical_view": "full_system_view"
+  },
+  "directives": {
+    "always_do": [
+      "Execute AGENTS.md Section 0 in its entirety before starting.",
+      "Save all structured reports and logs in .agents/reports/.",
+      "Search for the current date online before populating report filenames.",
+      "Calibrate analysis using security and prevc-security-audit skills.",
+      "Scan critical points: Auth, DB connections (RLS), Injections, OWASP Top 10.",
+      "Translate findings into macro-tasks in docs/tasklist.md and detailed files in docs/tasks/."
+    ],
+    "never_do": [
+      "Do not save reports in .jules/.",
+      "Do not correct code directly during this audit stage.",
+      "Do not ignore findings; every risk must be tracked."
+    ]
+  },
+  "pipeline": {
+    "phases": [
+      {
+        "id": "L0_meta_controller",
+        "name": "Preamble & Initialization",
+        "actions": [
+          "Read knowledge base.",
+          "Generate tree.md and analyze tasklist.md."
+        ]
+      },
+      {
+        "id": "L1_strategy_synthesizer",
+        "name": "Skill Calibration",
+        "actions": [
+          "Load security-specific skill packages.",
+          "Establish high-risk audit priorities (e.g., Auth, RLS)."
+        ]
+      },
+      {
+        "id": "L3_execution_orchestrator",
+        "name": "Security Scan",
+        "actions": [
+          "Execute automated scans (audit, secret-scanners).",
+          "Perform manual static analysis on critical paths."
+        ]
+      },
+      {
+        "id": "L4_validation_observability",
+        "name": "Report & Task Setup",
+        "actions": [
+          "Create security-audit-YYYY-MM-DD.md with CRITICAL/HIGH/MED/LOW ranking.",
+          "Add macro-tasks to docs/tasklist.md.",
+          "Generate detailed task files in docs/tasks/ for prioritized mitigations."
+        ]
+      },
+      {
+        "id": "L5_evolution_loop",
+        "name": "Iteration & Delivery",
+        "actions": [
+          "Refine the technical report.",
+          "Submit PR against staging summarizing the audit coverage."
+        ]
+      }
+    ]
+  },
+  "telemetry_frame": {
+    "metrics": [
+      "vulnerabilities_found_by_severity",
+      "mitigation_tasks_created",
+      "critical_paths_audited"
+    ],
+    "logging": {
+      "level": "verbose",
+      "format": "jsonl"
+    }
+  }
+}

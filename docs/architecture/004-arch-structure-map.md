@@ -370,7 +370,7 @@
 | | |____AGENTS.md
 | | |____metadata.json
 | | |____SKILL.md
-| |____skills_report.json
+| |____skills-report.json
 | |____agentdb-optimization
 | | |____SKILL.md
 | |____context-engineering
@@ -416,7 +416,7 @@
 | | |____SKILL.md
 | |____claude-settings-audit
 | | |____SKILL.md
-| |____consolidate_skills.py
+| |____consolidate-skills.py
 | |____slack-gif-creator
 | | |____requirements.txt
 | | |____LICENSE.txt
@@ -1583,7 +1583,7 @@
 | | |____SKILL.md
 | |____flow-nexus-neural
 | | |____SKILL.md
-| |____consolidate_additional.py
+| |____consolidate-additional.py
 | |____requesting-code-review
 | | |____code-reviewer.md
 | | |____SKILL.md
@@ -2056,7 +2056,7 @@
 | | |____SKILL.md
 | |____frontend-ui-ux
 | | |____SKILL.md
-| |____lista de skills.md
+| |____skills-sources.md
 | |____threejs-interaction
 | | |____SKILL.md
 |____docs

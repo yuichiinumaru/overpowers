@@ -152,6 +152,14 @@ O descomissionamento seguro e documentado.
 
 ---
 
+## 🚀 FASE 5: REVISÃO
+### 5.1. Revisão de todos os arquivos em 'docs/tasks/planning'
+- Liste todos os arquivos presentes na pasta.
+- Para cada um, execute o command/workflow '/07-iterative-refinement'
+- 
+
+---
+
 ## 🛑 CONDIÇÃO DE SAÍDA DO WORKFLOW
 O workflow de PLANNING é concluído quando:
 1. O DAG global está mapeado em `docs/plans/execution_dag.md`.
