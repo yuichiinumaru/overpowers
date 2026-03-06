@@ -1,3 +1,8 @@
+## [2026-03-06] - Skill Scripts Batch 017
+### Added
+- Added helper scripts for skills `ai-llm-0356` to `ai-llm-0376` (Batch 017).
+**Author**: Jules Agent
+
 ## [2026-03-05] - Skill Scripts Batch 039 Deployment
 ### Added
 - Implemented and deployed helper scripts for 20 skills in Batch 039 (`sci-bio-0790` to `sci-chem-0810`).
