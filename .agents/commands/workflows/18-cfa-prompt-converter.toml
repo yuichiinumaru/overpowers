@@ -1,0 +1,24 @@
+description = "Converts a markdown prompt to a CFA Helios JSON structured prompt."
+
+prompt = '''
+# CFA Prompt Converter Workflow
+
+This workflow systematically transforms a free-form Markdown (`.md`) prompt into a structured JSON prompt adhering to the Cognitive Fusion Architecture (CFA) Helios standard. It relies on the project's knowledge base and iterative self-review.
+
+Execute the following steps in EXACTLY this order:
+
+1. **Análise de Contexto**
+   - Analisa os arquivos de `.agents/knowledge` e as memórias salvas no memcord no slot "CFA".
+   - Compreenda as definições de schemas, restrições e telemetria exigidas.
+
+2. **Conversão para JSON**
+   - Para um prompt em `.md` indicado pelo usuário, crie uma versão em JSON do `.md`, usando o sistema CFA Helios.
+   - Aplique as regras de "directives" e de "pipeline" mantendo a persona e as restrições operacionais originais do prompt markdown.
+
+3. **Re-Análise de Contexto**
+   - Repete o passo 1 (analisa os arquivos de `.agents/knowledge/` e o slot "CFA" no Memcord para garantir que nada escapou da memória).
+
+4. **Revisão e Melhoria Contínua**
+   - Revisa o prompt em JSON escrito, se perguntando rigorosamente como ele pode ser melhorado do ponto de vista do framework CFA.
+   - Valide as fases (phases), as regras e corrija qualquer inconsistência. Apresente a versão final.
+'''

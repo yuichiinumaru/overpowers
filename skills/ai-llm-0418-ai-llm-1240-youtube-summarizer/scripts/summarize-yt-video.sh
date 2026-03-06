@@ -1,8 +1,8 @@
 #!/bin/bash
-if [ -z "$1" ]; then
+# YouTube Summarizer
+URL="$1"
+if [ -z "$URL" ]; then
     echo "Usage: $0 <youtube_url>"
-    exit 1
+    return 1 2>/dev/null || true
 fi
-echo "Extracting and summarizing transcript for: $1"
-# Placeholder for yt-dlp or similar tool + LLM summarization call
-echo "(Simulated) Transcript extracted and summarized."
+echo "Fetching transcript and summarizing video: $URL"

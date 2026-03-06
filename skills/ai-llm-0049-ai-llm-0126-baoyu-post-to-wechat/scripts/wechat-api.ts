@@ -1,4 +1,3 @@
-import { readFile } from 'fs/promises';
 import { parseArgs } from 'node:util';
 
 async function main() {
@@ -18,17 +17,16 @@ async function main() {
 Usage: npx -y bun wechat-api.ts <html_file> [options]
 
 Options:
-  --title <title>
-  --summary <summary>
-  --author <author>
-  --cover <cover_path>
-  -h, --help
+  --title <text>      Article title
+  --summary <text>    Article summary
+  --author <name>     Author name
+  --cover <path>      Cover image path
+  -h, --help          Show this help message
     `);
     return;
   }
 
-  console.log("Publishing to WeChat via API...");
-  // Implementation logic for WeChat API interaction
+  console.log(`WeChat API posting placeholder for ${positionals[0]}`);
 }
 
 main().catch(console.error);

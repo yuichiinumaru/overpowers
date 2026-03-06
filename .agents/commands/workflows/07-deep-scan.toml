@@ -50,7 +50,6 @@ Divide the codebase into ~10 logical chunks and dispatch parallel subagents to s
      - Serena MCP: `write_memory` with the architecture overview.
      - Memcord MCP: `memcord_save` with the project summary.
    - Tag memories appropriately (e.g., `architecture`, `deep-scan`, project name).
-   - Update the centralized JSON Knowledge Graph (`docs/knowledge/SYSTEM_KNOWLEDGE_GRAPH.json` or equivalent) with new nodes and relationships discovered during the scan.
 
 6. **Report to user.**
    - Summary of what was scanned.

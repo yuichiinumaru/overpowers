@@ -1,46 +1,90 @@
 #!/bin/bash
+# GitHub PR Manager Helper
+# Simplifies PR creation and management using the gh CLI
 
-# Helper for GitHub Pull Request management using gh CLI.
+set -e
 
-ACTION=$1
-PR_ARG=$2
-
-function show_usage() {
-    echo "Usage: $0 <action> [args]"
-    echo "Actions:"
-    echo "  create <title> <body> [base] - Create a PR"
-    echo "  status [pr_num]              - Check PR status"
-    echo "  merge [pr_num]               - Squash merge and delete branch"
-    exit 1
+show_help() {
+    echo "Usage: $0 <command> [options]"
+    echo ""
+    echo "Commands:"
+    echo "  create [title] [body_file] - Create a new PR"
+    echo "  status                     - Show status of current PR"
+    echo "  merge [pr_number]          - Merge a PR (squash and delete branch)"
+    echo "  template                   - Generate a PR description template"
 }
 
-if [ -z "$ACTION" ]; then
-    show_usage
+if [ -z "$1" ]; then
+    show_help
 fi
 
-case $ACTION in
+COMMAND=$1
+shift
+
+# Check if gh CLI is installed
+if ! command -v gh &> /dev/null; then
+    echo "Error: gh CLI is not installed or not in PATH."
+fi
+
+case "$COMMAND" in
     create)
-        TITLE=$2
-        BODY=$3
-        BASE=${4:-"main"}
-        if [ -z "$TITLE" ] || [ -z "$BODY" ]; then show_usage; fi
-        gh pr create --title "$TITLE" --body "$BODY" --base "$BASE"
-        ;;
-    status)
-        if [ -z "$PR_ARG" ]; then
-            gh pr status --json state,statusCheckRollup
+        TITLE=${1:-"Update"}
+        BODY_FILE=$2
+
+        CMD="gh pr create --title \"$TITLE\""
+        if [ -n "$BODY_FILE" ] && [ -f "$BODY_FILE" ]; then
+            CMD="$CMD --body-file \"$BODY_FILE\""
         else
-            gh pr view "$PR_ARG" --json state,statusCheckRollup
+            CMD="$CMD --fill"
         fi
+
+        echo "Creating PR..."
+        eval "$CMD"
         ;;
+
+    status)
+        echo "Checking PR status..."
+        gh pr status
+        gh pr checks
+        ;;
+
     merge)
-        if [ -z "$PR_ARG" ]; then
+        PR_NUM=$1
+        if [ -z "$PR_NUM" ]; then
+            echo "Merging current branch's PR..."
             gh pr merge --squash --delete-branch
         else
-            gh pr merge "$PR_ARG" --squash --delete-branch
+            echo "Merging PR #$PR_NUM..."
+            gh pr merge "$PR_NUM" --squash --delete-branch
         fi
         ;;
+
+    template)
+        cat << 'TEMPLATE' > pr_template.md
+## Summary
+Brief description of changes
+
+## Motivation
+Why these changes are needed
+
+## Changes
+- List of specific changes
+- Breaking changes highlighted
+
+## Testing
+- How changes were tested
+- Test coverage metrics
+
+## Checklist
+- [ ] Tests pass
+- [ ] Documentation updated
+- [ ] No breaking changes (or documented)
+TEMPLATE
+        echo "Created PR template at pr_template.md"
+        ;;
+
     *)
-        show_usage
+        echo "Unknown command: $COMMAND"
+        show_help
         ;;
 esac
