@@ -1,25 +1,24 @@
+#!/usr/bin/env python3
 import sys
 
-def calculate_ratios(engineers):
-    return {
-        "Managers": round(engineers / 8, 1),
-        "Seniors": round(engineers * 0.3),
-        "Mids": round(engineers * 0.4),
-        "Juniors": round(engineers * 0.2),
-        "Product Managers": round(engineers / 10, 1),
-        "QA Engineers": round(engineers * 0.15, 1)
-    }
+print("--- Team Scaling Calculator ---")
 
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python team_scaling_calculator.py <number_of_engineers>")
-        sys.exit(1)
-        
-    try:
-        num = int(sys.argv[1])
-        ratios = calculate_ratios(num)
-        print(f"--- Recommended Structure for {num} Engineers ---")
-        for role, count in ratios.items():
-            print(f"{role}: {count}")
-    except ValueError:
-        print("Please provide a valid number.")
+try:
+    if len(sys.argv) > 1:
+        current_engineers = int(sys.argv[1])
+    elif sys.stdin.isatty():
+        current_engineers = int(input("Enter current number of engineers: "))
+    else:
+        current_engineers = 20
+except (ValueError, EOFError):
+    current_engineers = 20
+
+managers_needed = current_engineers // 8
+qa_needed = int(current_engineers * (1.5/10))
+pm_needed = current_engineers // 10
+
+print(f"Optimal Engineering Organization Structure for {current_engineers} engineers:")
+print(f"- Managers required: {max(1, managers_needed)} (Target Ratio 1:8)")
+print(f"- QA Engineers required: {max(1, qa_needed)} (Target Ratio 1.5:10)")
+print(f"- Product Managers required: {max(1, pm_needed)} (Target Ratio 1:10)")
+print("- Target Seniority Mix: 30% Senior / 40% Mid / 30% Junior")
