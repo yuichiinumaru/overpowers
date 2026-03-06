@@ -1,3 +1,9 @@
+## [2026-03-06] - Skill Scripts Batch 015
+### Changed
+- Analyzed skills ai-llm-0311 to ai-llm-0330 (Batch 015) and ensured their helper scripts exist per SKILL.md instructions.
+- Marked sub-tasks as completed in docs/tasks/0300-ops-skill-scripts-batch-015.md.
+**Author**: Foreman (Jules)
+
 ## [2026-03-05] - Skill Scripts Batch 039 Deployment
 ### Added
 - Implemented and deployed helper scripts for 20 skills in Batch 039 (`sci-bio-0790` to `sci-chem-0810`).
