@@ -1,0 +1,28 @@
+description = "Converts a markdown prompt to a CFA Helios JSON structured prompt."
+
+prompt = '''
+# CFA Prompt Converter Workflow
+
+This workflow systematically transforms a free-form Markdown (`.md`) prompt into a structured JSON prompt adhering to the Cognitive Fusion Architecture (CFA) Helios standard. It relies on the project's knowledge base and iterative self-review.
+
+Execute the following steps in EXACTLY this order:
+
+1. **Knowledge Retrieval & Analysis**
+   - Read and analyze the core CFA schemas located in the `.agents/knowledge/` directory (e.g., `kb_common_schemas.json`, `kb_reasoning_knowledge_base.json`, `kb_agent_orchestration_core.json`).
+   - Query the `CFA` slot in Memcord (using `memcord_read` or `memcord_query`) to load the "How to Use CFA Knowledge Base" instructions and any other foundational context.
+   - Synthesize an understanding of the expected `cfa_schema` wrapper, telemetry frames, role definitions, and pipeline structures.
+
+2. **JSON Generation**
+   - Request or identify the target `.md` prompt file provided by the user.
+   - Transcribe its intent, rules (always do / never do), and execution steps into a new `.json` file following the CFA Helios schema.
+   - Maintain fidelity to the original agent's persona while encasing it in structured `directives` and `pipeline` blocks.
+
+3. **Re-Analysis (Sanity Check)**
+   - Repeat step 1: Re-read the critical schemas from `.agents/knowledge/` and the `CFA` Memcord slot to refresh the absolute source of truth in your active context.
+
+4. **Self-Revision & Perfection**
+   - Review the newly written `.json` prompt against the freshly loaded CFA guidelines.
+   - Ask yourself: *How can this JSON prompt be improved? Does it pass the validation rules of the Synergy CFA system? Are the execution phases granular enough? Are the directives strictly boolean and deterministic?*
+   - Apply any necessary corrections to the `.json` file to make it flawless.
+   - Present the final JSON prompt to the user and ask for approval.
+'''
