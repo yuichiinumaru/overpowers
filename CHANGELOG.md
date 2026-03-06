@@ -1,3 +1,10 @@
+# Changelog
+
+## [2026-03-05] - Implement helper scripts for Batch 030 skills
+### Added
+- Created 20 helper scripts in `scripts/` directories for skills `ops-infra-0604` through `ops-infra-0627`.
+- Automated script generation for Rube MCP tasks, data engineering checks, API integrations, and CI automations.
+**Author**: Foreman (Agent)
 ## [2026-03-05] - Skill Scripts Batch 039 Deployment
 ### Added
 - Implemented and deployed helper scripts for 20 skills in Batch 039 (`sci-bio-0790` to `sci-chem-0810`).
