@@ -1,69 +1,80 @@
-import re
+#!/usr/bin/env python3
+import argparse
+import sys
 import os
 
-class MarkdownRefactorHelper:
-    """Helper to analyze and refactor bloated agent instruction files."""
-    def __init__(self, file_path):
-        self.file_path = file_path
-        self.content = ""
-        if os.path.exists(file_path):
-            with open(file_path, 'r') as f:
-                self.content = f.read()
+def create_scaffold(target_dir=".claude"):
+    """Create a basic progressive disclosure scaffolding."""
+    os.makedirs(target_dir, exist_ok=True)
 
-    def get_sections(self):
-        """Split content by headers (Level 1 and 2)."""
-        sections = re.split(r'\n(?=#+ )', self.content)
-        return sections
+    # Root file template
+    root_file = "AGENTS.md" if target_dir == ".agents" else "CLAUDE.md"
+    root_content = f"""# Project Title
 
-    def analyze_redundancy(self):
-        """Identify potentially redundant phrases."""
-        redundant_patterns = [
-            r"write clean code",
-            r"don't introduce bugs",
-            r"follow best practices",
-            r"use descriptive variable names",
-            r"don't commit secrets"
-        ]
-        found = []
-        for pattern in redundant_patterns:
-            if re.search(pattern, self.content, re.IGNORECASE):
-                found.append(pattern)
-        return found
+Brief project description.
 
-    def suggest_structure(self):
-        """Suggest categories based on header names."""
-        headers = re.findall(r'^#+ (.+)$', self.content, re.MULTILINE)
-        categories = []
-        for h in headers:
-            if any(term in h.lower() for term in ['typescript', 'ts', 'javascript', 'js']):
-                categories.append('typescript.md')
-            elif 'test' in h.lower():
-                categories.append('testing.md')
-            elif any(term in h.lower() for term in ['style', 'convention', 'naming']):
-                categories.append('code-style.md')
-            elif any(term in h.lower() for term in ['git', 'pr', 'commit']):
-                categories.append('git-workflow.md')
-            elif any(term in h.lower() for term in ['architecture', 'pattern', 'structure']):
-                categories.append('architecture.md')
-        return sorted(list(set(categories)))
+## Quick Reference
+- **Package Manager:** npm/yarn/pnpm
+- **Build:** `npm run build`
+- **Test:** `npm test`
+
+## Detailed Instructions
+For specific guidelines, see:
+- [TypeScript Conventions]({target_dir}/typescript.md)
+- [Testing Guidelines]({target_dir}/testing.md)
+- [Code Style]({target_dir}/code-style.md)
+- [Git Workflow]({target_dir}/git-workflow.md)
+- [Architecture Patterns]({target_dir}/architecture.md)
+"""
+
+    if not os.path.exists(root_file):
+        with open(root_file, 'w') as f:
+            f.write(root_content)
+        print(f"Created {root_file}")
+    else:
+        print(f"{root_file} already exists. Skipping creation.")
+
+    # Topics
+    topics = [
+        "typescript", "testing", "code-style",
+        "git-workflow", "architecture"
+    ]
+
+    for topic in topics:
+        filepath = os.path.join(target_dir, f"{topic}.md")
+        if not os.path.exists(filepath):
+            with open(filepath, 'w') as f:
+                f.write(f"""# {topic.replace('-', ' ').title()} Guidelines
+
+## Overview
+Context for when these guidelines apply.
+
+## Rules
+- Specific, actionable instruction 1
+- Specific, actionable instruction 2
+
+## Examples
+
+### Good
+```
+// example
+```
+
+### Avoid
+```
+// example
+```
+""")
+            print(f"Created {filepath}")
+        else:
+            print(f"{filepath} already exists. Skipping.")
 
 if __name__ == "__main__":
-    import sys
-    if len(sys.argv) < 2:
-        print("Usage: python md_refactor_helper.py <file_path>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="Agent MD Refactor Helper")
+    parser.add_argument("command", choices=["scaffold"], help="Command to execute")
+    parser.add_argument("--dir", default=".claude", help="Target directory for linked files")
     
-    helper = MarkdownRefactorHelper(sys.argv[1])
-    print(f"Analyzing {sys.argv[1]}...")
+    args = parser.parse_args()
     
-    redundant = helper.analyze_redundancy()
-    if redundant:
-        print("\nPotentially redundant instructions found:")
-        for r in redundant:
-            print(f"- {r}")
-            
-    suggested = helper.suggest_structure()
-    if suggested:
-        print("\nSuggested linked files:")
-        for s in suggested:
-            print(f"- .claude/{s}")
+    if args.command == "scaffold":
+        create_scaffold(args.dir)
