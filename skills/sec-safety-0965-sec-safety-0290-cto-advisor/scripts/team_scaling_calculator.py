@@ -1,25 +1,29 @@
-import sys
+#!/usr/bin/env python3
 
-def calculate_ratios(engineers):
-    return {
-        "Managers": round(engineers / 8, 1),
-        "Seniors": round(engineers * 0.3),
-        "Mids": round(engineers * 0.4),
-        "Juniors": round(engineers * 0.2),
-        "Product Managers": round(engineers / 10, 1),
-        "QA Engineers": round(engineers * 0.15, 1)
-    }
+def calculate_scaling(team_size):
+    print(f"Team Scaling Calculator for {team_size} engineers\n")
+
+    managers = max(1, team_size // 8)
+    product = max(1, team_size // 10)
+    qa = max(1, int(team_size * 0.15))
+
+    print(f"Recommended Structure:")
+    print(f"- Engineers: {team_size}")
+    print(f"- Engineering Managers: {managers} (Ratio ~1:8)")
+    print(f"- Product Managers: {product} (Ratio ~1:10)")
+    print(f"- QA Engineers: {qa} (Ratio ~1.5:10)")
+    print(f"\nTotal Team Size: {team_size + managers + product + qa}")
+
+    print(f"\nEngineer Seniority Mix (3:4:2 target):")
+    total_ratio = 9
+    senior = int(team_size * (3/total_ratio))
+    mid = int(team_size * (4/total_ratio))
+    junior = team_size - senior - mid
+    print(f"- Senior: {senior}")
+    print(f"- Mid-level: {mid}")
+    print(f"- Junior: {junior}")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python team_scaling_calculator.py <number_of_engineers>")
-        sys.exit(1)
-        
-    try:
-        num = int(sys.argv[1])
-        ratios = calculate_ratios(num)
-        print(f"--- Recommended Structure for {num} Engineers ---")
-        for role, count in ratios.items():
-            print(f"{role}: {count}")
-    except ValueError:
-        print("Please provide a valid number.")
+    import sys
+    size = int(sys.argv[1]) if len(sys.argv) > 1 else 20
+    calculate_scaling(size)
