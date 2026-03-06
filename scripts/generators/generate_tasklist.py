@@ -13,7 +13,7 @@ import argparse
 
 
 def generate_tasklist(tasks_dir, output_file, prompt_path, repo_name):
-    tasks_to_add = []
+    task_list = []
     
     # We want to ignore templates and directories
     for filename in sorted(os.listdir(tasks_dir)):
@@ -27,20 +27,22 @@ def generate_tasklist(tasks_dir, output_file, prompt_path, repo_name):
         if not filename.endswith(".md") or filename.startswith("000-template"):
             continue
             
-        tasks_to_add.append({
-            "prompt": prompt_path,
-            "task": filepath
-        })
+        task_list.append(filepath)
         
     output_data = {
         "repo": repo_name,
-        "tasks": tasks_to_add
+        "tasks": [
+            {
+                "prompt": prompt_path,
+                "tasks": task_list
+            }
+        ]
     }
     
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(output_data, f, indent=2, ensure_ascii=False)
         
-    print(f"✅ Generated {output_file} with {len(tasks_to_add)} tasks.")
+    print(f"✅ Generated {output_file} with {len(task_list)} tasks grouped under {prompt_path}.")
 
 
 if __name__ == "__main__":

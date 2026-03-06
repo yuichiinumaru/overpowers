@@ -37,7 +37,7 @@ def main():
     parser.add_argument("-p", "--prompt", required=True, help="Path to the prompt JSON file")
     parser.add_argument("-t", "--task", help="Relative path to the task MD file (optional)")
     parser.add_argument("--repo", help="Target repository (e.g., owner/repo) - defaults to auto-detect", default="")
-    parser.add_argument("--redundancy", type=int, default=2, help="Number of parallel sessions (default: 2)")
+    parser.add_argument("--redundancy", type=int, default=1, help="Number of parallel sessions (default: 1)")
     
     args = parser.parse_args()
 

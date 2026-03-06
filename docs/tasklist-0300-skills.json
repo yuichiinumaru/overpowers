@@ -1,0 +1,197 @@
+{
+  "repo": "",
+  "tasks": [
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-002.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-003.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-008.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-009.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-012.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-013.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-014.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-015.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-016.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-017.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-018.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-019.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-020.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-021.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-022.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-023.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-024.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-025.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-026.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-027.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-028.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-029.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-030.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-031.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-032.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-033.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-034.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-037.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-039.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-040.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-041.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-042.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-043.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-044.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-045.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-046.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-047.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-048.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-049.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-050.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-051.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-052.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-053.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-054.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-056.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-057.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-058.md"
+    },
+    {
+      "prompt": "prompts/foreman.json",
+      "task": "docs/tasks/0300-ops-skill-scripts-batch-059.md"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+    "repo": "",
+    "tasks": [
+        {
+            "prompt": "prompts/foreman.json",
+            "task": "docs/tasks/0300-ops-skill-scripts-batch-001.md"
+        }
+    ]
+}

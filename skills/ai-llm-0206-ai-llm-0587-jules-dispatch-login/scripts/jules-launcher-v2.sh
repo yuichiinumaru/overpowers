@@ -1,12 +1,21 @@
 #!/bin/bash
 # Jules Launcher V2 — Dispatches Jules based on a JSON structural plan
-# Usage: ./jules-launcher-v2.sh <tasklist_plan.json>
+# Usage: ./jules-launcher-v2.sh [-p REPLICAS] <tasklist_plan.json>
 
 set -e
 
+PARALLEL=1
+while getopts "p:" opt; do
+  case $opt in
+    p) PARALLEL="$OPTARG" ;;
+    \?) echo "Usage: $0 [-p replicas] path/to/plan.json"; exit 1 ;;
+  esac
+done
+shift $((OPTIND-1))
+
 if [ -z "$1" ]; then
     echo "❌ Missing argument: path to JSON orchestration plan."
-    echo "Usage: $0 path/to/plan.json"
+    echo "Usage: $0 [-p replicas] path/to/plan.json"
     echo "Schema expects:"
     echo '{ "repo": "optional/repo", "tasks": [ { "prompt": "prompt.json", "task": "task.md" } ] }'
     exit 1
@@ -25,13 +34,10 @@ echo "=========================================================="
 echo "⚠️ JULES LOGIN REQUIRED"
 echo "=========================================================="
 echo "Due to multiple account management, please ensure you are"
-echo "logged into the correct account before dispatching."
+echo "logged into the correct account."
 echo ""
-echo "1. Open a new terminal tab"
-echo "2. Run: jules login"
-echo "3. Authenticate with the desired Google Account"
-echo "4. Press [ENTER] here to start the batch..."
-read -r
+echo "Launching jules login..."
+jules login
 
 # Discover the absolute path of prompt-tasker.py based on this script's directory
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
@@ -41,7 +47,14 @@ if [ ! -x "$PYTHON_EXEC" ]; then
     chmod +x "$PYTHON_EXEC"
 fi
 
-LENGTH=$(jq '.tasks | length' "$PLAN_FILE")
+# Create a flat list of tasks to support both formats securely
+# Grouped format: { "prompt": "p", "tasks": ["t1", "t2"] }
+# Flat format: { "prompt": "p", "task": "t1" }
+mapfile -t TASKS_LIST < <(
+  jq -r '.tasks[] | if has("tasks") then .prompt as $p | .tasks[] | "\($p)\t\(.)" else "\(.prompt)\t\(.task)" end' "$PLAN_FILE"
+)
+
+LENGTH=${#TASKS_LIST[@]}
 if [ "$LENGTH" -eq 0 ]; then
     echo "⚠️ No tasks found in $PLAN_FILE."
     exit 0
@@ -49,8 +62,7 @@ fi
 
 LAUNCHED=0
 for (( i=0; i<$LENGTH; i++ )); do
-    PROMPT=$(jq -r ".tasks[$i].prompt // empty" "$PLAN_FILE")
-    TASK=$(jq -r ".tasks[$i].task // empty" "$PLAN_FILE")
+    IFS=$'\t' read -r PROMPT TASK <<< "${TASKS_LIST[$i]}"
     
     if [ -z "$PROMPT" ]; then
         echo "⚠️ Skipping index $i - 'prompt' field missing."
@@ -66,23 +78,27 @@ for (( i=0; i<$LENGTH; i++ )); do
         OPTS+=("--repo" "$REPO")
     fi
     
-    # Execute the python dispatcher
-    python3 "$PYTHON_EXEC" "${OPTS[@]}"
+    # We enforce --redundancy 1 on the python script so we control it natively here.
+    OPTS+=("--redundancy" "1")
     
-    LAUNCHED=$((LAUNCHED + 1))
-    
-    # The magical rotation check (14 jobs max logic)
-    if [ $((LAUNCHED % 7)) -eq 0 ] && [ "$LAUNCHED" -lt "$LENGTH" ]; then
-        echo "=========================================================="
-        echo "⚠️ RECHED 7 TASKS DISPATCHED (~14 JOBS)."
-        echo "⚠️ JULES QUOTA LIMIT INCURSION ALERT."
-        echo "=========================================================="
-        echo "1. Run: jules login"
-        echo "2. Authenticate with a FRESH Google Account"
-        echo "3. Press [ENTER] here to continue the batch..."
-        read -r
-    fi
-    sleep 2
+    for (( r=0; r<$PARALLEL; r++ )); do
+        # Execute the python dispatcher
+        python3 "$PYTHON_EXEC" "${OPTS[@]}"
+        
+        LAUNCHED=$((LAUNCHED + 1))
+        
+        # The magical rotation check (now checks against 14 directly, max jobs per account)
+        # Using 14 as the hard limit before requiring a new account.
+        if [ $((LAUNCHED % 14)) -eq 0 ] && [ "$LAUNCHED" -lt $((LENGTH * PARALLEL)) ]; then
+            echo "=========================================================="
+            echo "⚠️ REACHED 14 JOBS DISPATCHED."
+            echo "⚠️ JULES QUOTA LIMIT INCURSION ALERT."
+            echo "=========================================================="
+            echo "Please authenticate with a FRESH Google Account."
+            jules login
+        fi
+        sleep 2
+    done
 done
 
-echo "🎉 All $LAUNCHED tasks dispatched from plan!"
+echo "🎉 All $LAUNCHED tasks dispatched from plan! ($LENGTH tasks x $PARALLEL replicas)"
