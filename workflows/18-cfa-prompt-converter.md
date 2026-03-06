@@ -7,17 +7,32 @@ This workflow systematically transforms a free-form Markdown (`.md`) prompt into
 
 Execute the following steps in EXACTLY this order:
 
-1. **Análise de Contexto**
-   - Analisa os arquivos de `.agents/knowledge` e as memórias salvas no memcord no slot "CFA".
-   - Compreenda as definições de schemas, restrições e telemetria exigidas.
+1. **Context Analysis**
+   - Analyze the following files - explain how they work individually and together as a whole (**do not skip any file**):
+   - .agents/knowledge/kb_agent_orchestration_core.json
+   - .agents/knowledge/kb_agent_reasoning_validation.json
+   - .agents/knowledge/kb_autocontinue.json
+   - .agents/knowledge/kb_cognitive_fusion_architecture_cfa.json
+   - .agents/knowledge/kb_common_schemas.json
+   - .agents/knowledge/kb_guardian_security_protocol.json
+   - .agents/knowledge/kb_optimizergpt.json
+   - .agents/knowledge/kb_problem_solving_network.json
+   - .agents/knowledge/kb_reasoning_knowledge_base.json
+   - .agents/knowledge/kb_Synergy-SE-Unified.json
+   - .agents/knowledge/synergy-cfa.json
 
-2. **Conversão para JSON**
-   - Para um prompt em `.md` indicado pelo usuário, crie uma versão em JSON do `.md`, usando o sistema CFA Helios.
-   - Aplique as regras de "directives" e de "pipeline" mantendo a persona e as restrições operacionais originais do prompt markdown.
+   - Analyze the saved memories in the memcord slot "CFA".
+   - Understand the definitions of schemas, restrictions and telemetry required.
+   - If you find there's room for improvement in the memcord CFA slot definitions, update them.
 
-3. **Re-Análise de Contexto**
-   - Repete o passo 1 (analisa os arquivos de `.agents/knowledge/` e o slot "CFA" no Memcord para garantir que nada escapou da memória).
+2. **Conversion to JSON**
+   - For a prompt in `.md` indicated by the user, create a JSON version of `.md`, using the CFA Helios system.
+   - Apply the rules of "directives" and "pipeline" maintaining the original persona and operational restrictions of the prompt markdown.
 
-4. **Revisão e Melhoria Contínua**
-   - Revisa o prompt em JSON escrito, se perguntando rigorosamente como ele pode ser melhorado do ponto de vista do framework CFA.
-   - Valide as fases (phases), as regras e corrija qualquer inconsistência. Apresente a versão final.
+3. **Re-Analysis of Context**
+   - Repeat step 1 (analyze the files in `.agents/knowledge/` and the "CFA" slot in Memcord to ensure nothing escaped memory).
+   - Choose a reasoning skill for the next step.
+
+4. **Revision and Continuous Improvement**
+   - Review the written JSON prompt, asking rigorously how it can be improved from the point of view of the CFA framework.
+   - Validate the phases (phases), rules and correct any inconsistencies. Present the final version.

@@ -34,7 +34,6 @@ Analyze the `.archive/` directory to extract actionable ideas, recover misplaced
 
 4. **Generate planning proposals.**
    - For unfinished tasks, reports with actionable findings, and relevant specs:
-     - Perform a semantic search (using codebase tools or grep) across `docs/` and `src/` to verify if the core idea hasn't already been implemented under a different name.
      - Cross-reference with the current codebase to check if the issue/feature was already addressed.
      - If NOT addressed, draft a proposal file in `docs/tasks/planning/` following the task template.
      - Include a reference to the original archived file in the proposal.
