@@ -1,3 +1,10 @@
+## [2026-03-06] - Helper Scripts for Skill Scripts Batch 048
+### Added
+- `gh_fetch.py` for `sec-safety-0993-sec-safety-0488-github-issue-triage` to fetch and filter issues/PRs from GitHub using the `gh` CLI.
+- `fuzzer.py` for `sec-safety-1006-sec-safety-0531-html-injection-testing` to automate testing HTML injection payloads on target URLs.
+- `setup.sh` for `sec-safety-1009-sec-safety-0541-hypogenic` to safely clone example datasets for Hypogenic, handling unavailable repositories gracefully.
+**Author**: Foreman (Agent ID)
+
 ## [2026-03-05] - Skill Scripts Batch 039 Deployment
 ### Added
 - Implemented and deployed helper scripts for 20 skills in Batch 039 (`sci-bio-0790` to `sci-chem-0810`).
