@@ -1,3 +1,8 @@
+## [2024-03-06] - Implement Skill Scripts Batch 008
+### Added
+- Helper scripts for `gemini-feedback`, `gemini-imagegen`, `geniml`, `geo-fundamentals`, and `gepetto`.
+**Author**: Foreman
+
 ## [2026-03-05] - Skill Scripts Batch 039 Deployment
 ### Added
 - Implemented and deployed helper scripts for 20 skills in Batch 039 (`sci-bio-0790` to `sci-chem-0810`).
