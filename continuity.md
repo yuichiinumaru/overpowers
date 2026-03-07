@@ -13,6 +13,9 @@ Execution of Skill Scripts Batch tasks. Completed Batch 039. Enforced naming con
 4. **Batch 040 Deployment** - Start Batch 040 (`sci-chem-0811` to `sci-chem-0830`).
 5. **Deep Audit Phase 3** - Initiate Phase 3 of skill standardization.
 
+## ✅ Completed Tasks (Session 2025-05-23)
+- **Skill Scripts Batch 008** - Implemented helper scripts for 21 skills (`ai-llm-0154` to `ai-llm-0174`).
+
 ## ✅ Completed Tasks (Session 2026-03-06)
 - **CFA Helios Prompt Conversion** - Converted 17 Markdown prompts to structured JSON adhering to the Helios standard. Aligned naming in `prompts/` (removed underscores).
 - **Skill Naming Convention Enforcement** - Renamed 13 unnumbered skills (IDs 1249-1261) and archived redundant folders/zips. Standardized script naming (removed underscores) and updated documentation references.

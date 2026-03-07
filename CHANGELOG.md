@@ -1,3 +1,9 @@
+## [2026-03-06] - Added helper scripts for Skill Scripts Batch 008
+### Added
+- Created bash and python helper scripts for skills `ai-llm-0154` through `ai-llm-0174`.
+- Updated task `docs/tasks/0300-ops-skill-scripts-batch-008.md` as completed.
+**Author**: Foreman (Autonomous Execution Agent)
+
 ## [2026-03-06] - Completed Tasks Archival
 ### Changed
 - Extracted 37 completed tasks from `docs/tasklist.json` into a separate `docs/tasks/completed/tasklist-completed.json` manifest file to remove clutter.
@@ -486,3 +492,9 @@ All notable changes to this project will be documented in this file.
 +**Author**: Overpowers Architect
 +
 +... [rest of file]
+
+## [2025-05-23] - Added helper scripts for Skill Scripts Batch 008
+### Added
+- Created bash and python helper scripts for skills `ai-llm-0154` through `ai-llm-0174`.
+- Updated task `docs/tasks/0300-ops-skill-scripts-batch-008.md` as completed.
+**Author**: Foreman (Autonomous Execution Agent)
