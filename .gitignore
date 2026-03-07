@@ -37,3 +37,4 @@ __pycache__/
 userenv
 *userenv*
 archive/*
+.agents/moltbot_memory.db*

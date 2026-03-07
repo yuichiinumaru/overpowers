@@ -1,5 +1,8 @@
 {
   "devDependencies": {
+    "better-sqlite3": "^12.6.2",
+    "chokidar": "^5.0.0",
+    "sqlite-vec": "^0.1.7-alpha.2",
     "ts-morph": "^27.0.2",
     "tsx": "^4.21.0"
   }
