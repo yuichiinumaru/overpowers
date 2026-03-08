@@ -10,8 +10,8 @@ Automated CLI verification or integration test script outputs.
 
 ## Exit Conditions (GDD/TDD)
 
-- [ ] Analyze the current `mcp-integrations.md` from the planning directory.
-- [ ] Produce a mapping script or config to expose more MCPs transparently.
+- [x] Analyze the current `mcp-integrations.md` from the planning directory.
+- [x] Produce a mapping script or config to expose more MCPs transparently.
 
 ## Details
 

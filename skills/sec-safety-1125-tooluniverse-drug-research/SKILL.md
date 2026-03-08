@@ -1642,3 +1642,14 @@ Based on real-world testing (elacestrant case study), these workflow improvement
 - **Tool reference**: [TOOLS_REFERENCE.md](TOOLS_REFERENCE.md) - Complete tool listing
 - **Verification checklist**: [CHECKLIST.md](CHECKLIST.md) - Pre-delivery verification
 - **Examples**: [EXAMPLES.md](EXAMPLES.md) - Detailed workflow examples
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/query_drug_db.py**: Utility script for query drug db.
+
+Usage:
+```bash
+python3 scripts/query_drug_db.py
+```

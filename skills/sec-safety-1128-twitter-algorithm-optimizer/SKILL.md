@@ -290,6 +290,18 @@ Your tweet reaches users through this pipeline:
 - SimCluster: CTOs, team leads, engineering managers will relate
 - Tweepcred: Nuanced thinking builds authority
 
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/optimize_tweet.py**: Utility script for optimize tweet.
+
+Usage:
+```bash
+python3 scripts/optimize_tweet.py
+```
+
 ## Best Practices for Algorithm Optimization
 
 1. **Quality Over Virality**: Consistent engagement from your community beats occasional viral moments

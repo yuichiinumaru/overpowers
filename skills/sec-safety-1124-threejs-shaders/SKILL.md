@@ -642,3 +642,15 @@ color = mix(colorB, colorA, step(0.5, value));
 - `threejs-materials` - Built-in material types
 - `threejs-postprocessing` - Full-screen shader effects
 - `threejs-textures` - Texture sampling in shaders
+
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/compile_shader.js**: Utility script for compile shader.
+
+Usage:
+```bash
+node scripts/compile_shader.js
+```

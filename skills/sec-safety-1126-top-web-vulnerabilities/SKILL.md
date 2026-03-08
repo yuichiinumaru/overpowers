@@ -540,3 +540,15 @@ Permissions-Policy: geolocation=(), microphone=()
 - OWASP Application Security Verification Standard (ASVS)
 - NIST Cybersecurity Framework
 - Source: Kumar MS - Top 100 Web Vulnerabilities
+
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/scan_vulnerabilities.sh**: Utility script for scan vulnerabilities.
+
+Usage:
+```bash
+./scripts/scan_vulnerabilities.sh
+```

@@ -394,3 +394,17 @@ Otherwise → not TDD
 ```
 
 No exceptions without your human partner's permission.
+
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/run_tests.sh**: Utility script for run tests.
+- **scripts/generate_test_stub.py**: Utility script for generate test stub.
+
+Usage:
+```bash
+./scripts/run_tests.sh
+python3 scripts/generate_test_stub.py
+```

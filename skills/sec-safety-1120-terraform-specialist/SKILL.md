@@ -136,3 +136,19 @@ Expert Infrastructure as Code specialist with comprehensive knowledge of Terrafo
 - "Design multi-cloud Terraform architecture with provider abstraction"
 - "Troubleshoot state corruption and implement recovery procedures"
 - "Create enterprise service catalog with approved infrastructure modules"
+
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/terraform_plan.sh**: Utility script for terraform plan.
+- **scripts/terraform_validate.sh**: Utility script for terraform validate.
+- **scripts/tf_tools.sh**: Utility script for tf tools.
+
+Usage:
+```bash
+./scripts/terraform_plan.sh
+./scripts/terraform_validate.sh
+./scripts/tf_tools.sh
+```

@@ -82,3 +82,14 @@ const { stdout } = await execFile('git', [userInput], { shell: false });
 - **CVE Resolution**: 100% of critical vulnerabilities fixed
 - **Test Coverage**: >95% security-critical code
 - **Implementation**: All secure patterns documented and tested
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/security_audit.sh**: Utility script for security audit.
+
+Usage:
+```bash
+./scripts/security_audit.sh
+```

@@ -1,22 +1,26 @@
-import subprocess
+#!/usr/bin/env python3
 import sys
+import subprocess
 import argparse
+import os
 
-def add_components(components):
-    if not components:
-        print("No components specified.")
-        return
+def main():
+    parser = argparse.ArgumentParser(description="Add shadcn/ui components.")
+    parser.add_argument('components', nargs='+', help="The components to add (e.g., button, card, dialog)")
+    args = parser.parse_args()
 
-    cmd = ["npx", "shadcn@latest", "add"] + components
-    print(f"Running: {' '.join(cmd)}")
-    try:
-        subprocess.run(cmd, check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error adding components: {e}")
-        sys.exit(1)
+    print(f"Adding shadcn components: {', '.join(args.components)}")
+    
+    # Properly escape commands for security
+    for component in args.components:
+        print(f"Installing {component}...")
+        try:
+            cmd = ["npx", "shadcn@latest", "add", component, "--yes"]
+            subprocess.run(cmd, check=True)
+            print(f"Successfully installed {component}.")
+        except subprocess.CalledProcessError as e:
+            print(f"Error installing {component}: {e}")
+            sys.exit(1)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Add shadcn/ui components.")
-    parser.add_argument("components", nargs="+", help="Components to add.")
-    args = parser.parse_args()
-    add_components(args.components)
+    main()

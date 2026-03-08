@@ -420,6 +420,18 @@ describe('Task Entity', () => {
 - [ ] **Event-Driven Communication**: Loose coupling between domains
 - [ ] **Test Coverage**: >90% domain logic coverage
 
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/generate_domain_model.py**: Utility script for generate domain model.
+
+Usage:
+```bash
+python3 scripts/generate_domain_model.py
+```
+
 ## Related V3 Skills
 
 - `v3-core-implementation` - Implementation of DDD domains

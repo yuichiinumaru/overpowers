@@ -235,6 +235,18 @@ class BackwardCompatibility {
 - **SONA**: <0.05ms adaptation time
 - **Integration**: All 213 MCP tools + 19 hook types available
 
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/test_integration.sh**: Utility script for test integration.
+
+Usage:
+```bash
+./scripts/test_integration.sh
+```
+
 ## Related V3 Skills
 
 - `v3-memory-unification` - Memory system integration

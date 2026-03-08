@@ -11,7 +11,8 @@ argument-hint: Description of what is currently being worked on
 
 ## Actions
 
-1. **Analyze Current State**: 
+1. **Analyze Current State (Explicit Memory Read)**: 
+   - Read `continuity.md` and check `.agents/memories/` for historical context on the ongoing work.
    - Review recent tool executions, edited files, and the agent's current memory/thoughts.
    - Clarify with the user what the end goal of the current unguided session is.
 
@@ -24,6 +25,8 @@ argument-hint: Description of what is currently being worked on
    - Document what has already been done, marking those subtasks as `[x]`.
    - Document what is left to do, leaving those subtasks as `[ ]`.
 
-4. **Update Status**: 
+4. **Update Status (Explicit Memory Update)**: 
    - Append this retroactive master task in `docs/tasklist.md` under the appropriate section.
-   - Mark its status as `[/]` (In Progress) and resume work systematically.
+   - Mark its status as `[/]` (In Progress).
+   - Update `continuity.md` to reflect this newly formalized task as the "Current Focus".
+   - Resume work systematically.

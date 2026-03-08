@@ -773,6 +773,18 @@ export class EntityCache<T extends Entity<any>> {
 - [ ] **Memory Efficiency**: <100MB heap usage for core domains
 - [ ] **Plugin Architecture**: Modular domain loading capability
 
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/setup_v3_core.sh**: Utility script for setup v3 core.
+
+Usage:
+```bash
+./scripts/setup_v3_core.sh
+```
+
 ## Related V3 Skills
 
 - `v3-ddd-architecture` - DDD architectural design

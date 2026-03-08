@@ -368,6 +368,18 @@ class PerformanceGates {
 - [ ] **Trend Analysis**: Performance evolution tracking
 - [ ] **Alert System**: Immediate regression notification
 
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/run_benchmarks.js**: Utility script for run benchmarks.
+
+Usage:
+```bash
+node scripts/run_benchmarks.js
+```
+
 ## Related V3 Skills
 
 - `v3-integration-deep` - Performance integration with agentic-flow

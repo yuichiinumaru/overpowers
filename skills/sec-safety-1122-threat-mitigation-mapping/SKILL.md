@@ -724,6 +724,18 @@ class ControlTester:
         return report
 ```
 
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/generate_threat_map.py**: Utility script for generate threat map.
+
+Usage:
+```bash
+python3 scripts/generate_threat_map.py
+```
+
 ## Best Practices
 
 ### Do's

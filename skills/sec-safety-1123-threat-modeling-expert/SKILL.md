@@ -51,6 +51,18 @@ Expert in threat modeling methodologies, security architecture review, and risk 
 - Avoid storing sensitive details in threat models without access controls.
 - Keep threat models updated after architecture changes.
 
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/analyze_threats.py**: Utility script for analyze threats.
+
+Usage:
+```bash
+python3 scripts/analyze_threats.py
+```
+
 ## Best Practices
 
 - Involve developers in threat modeling sessions

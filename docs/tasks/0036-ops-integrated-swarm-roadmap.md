@@ -73,7 +73,7 @@ PTY-based Flight Recorder.
 Graph-based continuity.md.
 # Task 0032: Model Fallback System (Feature)
 
-**Status**: [ ]
+**Status**: [x]
 **Priority**: HIGH
 **Type**: feature
 
@@ -81,9 +81,9 @@ Graph-based continuity.md.
 Implement automatic fallback and load balancing across model providers to ensure reliable execution when hit by rate limits.
 
 ## Sub-tasks
-- [ ] **Script Fallback**: Update `run-subagent.sh` with a fallback chain (Opus -> Sonnet -> Flash -> GLM).
-- [ ] **Health Monitor**: Implement `model_selector.py` to track rate limits and cooldowns.
-- [ ] **CEO Intelligence**: Train CEO agent to select models based on task complexity.
+- [x] **Script Fallback**: Update `run-subagent.sh` with a fallback chain (Opus -> Sonnet -> Flash -> GLM).
+- [x] **Health Monitor**: Implement `model_selector.py` to track rate limits and cooldowns.
+- [x] **CEO Intelligence**: Train CEO agent to select models based on task complexity.
 # Task 0033: Skill Standardization Phase 2
 
 **Status**: [ ]

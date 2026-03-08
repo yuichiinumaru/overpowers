@@ -1,5 +1,5 @@
 # Task 0027: Skill Decision Trees (Research)
-**Status**: [ ]
+**Status**: [x]
 **Priority**: MEDIUM
 **Type**: research
 ## Objective

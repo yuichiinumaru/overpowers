@@ -200,3 +200,14 @@ If not transferred/redirected and not flagged for review, add `triaged`.
 - Add `triaged` label when classification is complete
 
 **Note:** `bot-triaged` is automatically applied by a post-hook after any issue mutation.
+
+## Helper Scripts
+
+This skill includes helper scripts to facilitate operations:
+
+- **scripts/triage_issues.py**: Utility script for triage issues.
+
+Usage:
+```bash
+python3 scripts/triage_issues.py
+```

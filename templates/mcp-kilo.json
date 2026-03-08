@@ -101,6 +101,20 @@
                 "--config",
                 "{\"instructions\":\"\"}"
             ]
+        },
+        "grep_app": {
+            "type": "sse",
+            "url": "https://mcp.grep.app"
+        },
+        "web_search": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-brave-search"
+            ],
+            "env": {
+                "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+            }
         }
     }
 }

@@ -1,47 +1,49 @@
-import argparse
+#!/usr/bin/env python3
 import sys
+import argparse
+import json
 
-def generate_config(colors, fonts):
-    color_config = ""
-    for c in colors:
-        name, value = c.split(':')
-        color_config += f"        '{name}': '{value}',\n"
-
-    font_config = ""
-    for f in fonts:
-        name, value = f.split(':')
-        font_config += f"        '{name}': ['{value}', 'sans-serif'],\n"
-
-    config = f"""/** @type {{import('tailwindcss').Config}} */
-module.exports = {{
-  content: [
-    "./app/**/*.{{js,ts,jsx,tsx,mdx}}",
-    "./pages/**/*.{{js,ts,jsx,tsx,mdx}}",
-    "./components/**/*.{{js,ts,jsx,tsx,mdx}}",
-    "./src/**/*.{{js,ts,jsx,tsx,mdx}}",
-  ],
-  theme: {{
-    extend: {{
-      colors: {{
-{color_config}      }},
-      fontFamily: {{
-{font_config}      }},
-    }},
-  }},
-  plugins: [],
-}}
-"""
-    return config
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Generate tailwind.config.js.")
-    parser.add_argument("--colors", nargs="+", help="Colors in key:value format.")
-    parser.add_argument("--fonts", nargs="+", help="Fonts in key:value format.")
+def main():
+    parser = argparse.ArgumentParser(description="Generate tailwind.config.js with custom theme.")
+    parser.add_argument('--colors', nargs='+', help="Colors to add (e.g., brand:blue)", default=[])
+    parser.add_argument('--fonts', nargs='+', help="Fonts to add (e.g., display:Inter)", default=[])
     args = parser.parse_args()
 
-    config_content = generate_config(args.colors or [], args.fonts or [])
-    print(config_content)
-    
+    colors_dict = {}
+    for color in args.colors:
+        if ':' in color:
+            name, val = color.split(':', 1)
+            colors_dict[name] = val
+            
+    fonts_dict = {}
+    for font in args.fonts:
+        if ':' in font:
+            name, val = font.split(':', 1)
+            fonts_dict[name] = [val, 'sans-serif']
+
+    config_str = """/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: %s,
+      fontFamily: %s,
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}
+""" % (json.dumps(colors_dict, indent=6), json.dumps(fonts_dict, indent=6))
+
     with open("tailwind.config.js", "w") as f:
-        f.write(config_content)
-    print("Generated tailwind.config.js")
+        f.write(config_str)
+
+    print("Generated tailwind.config.js with specified theme options.")
+
+if __name__ == "__main__":
+    main()

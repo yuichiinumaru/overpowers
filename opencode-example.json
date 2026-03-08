@@ -124,13 +124,23 @@
                 "run"
             ]
         },
-        "semgrep": {
+        "grep_app": {
+            "type": "remote",
+            "enabled": true,
+            "url": "https://mcp.grep.app",
+            "oauth": false
+        },
+        "web_search": {
             "type": "local",
             "enabled": true,
             "command": [
-                "semgrep",
-                "mcp"
-            ]
+                "npx",
+                "-y",
+                "@modelcontextprotocol/server-brave-search"
+            ],
+            "environment": {
+                "BRAVE_API_KEY": "{env:BRAVE_API_KEY}"
+            }
         }
     }
 }
