@@ -4,7 +4,6 @@ description: Expert cloud architect specializing in multi-cloud strategies, scal
   architectures, and cost-effective solutions. Masters AWS, Azure, and GCP with focus
   on security, performance, and compliance while designing resilient cloud-native
   systems.
-model: google/antigravity-gemini-3-pro-preview
 model_fallback: google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview
 category: ARCHITECTURE
 tools:

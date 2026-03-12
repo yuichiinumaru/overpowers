@@ -57,3 +57,13 @@ args = ["--from", "${NOTEBOOKLM_PATH}", "notebooklm-mcp"]
 [mcp_servers.desktop-commander]
 command = "npx"
 args = ["-y", "@smithery/cli", "run", "desktop-commander", "--config", "{\"instructions\":\"\"}"]
+
+[mcp_servers.grep_app]
+type = "sse"
+url = "https://mcp.grep.app"
+
+[mcp_servers.web_search]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-brave-search"]
+[mcp_servers.web_search.env]
+BRAVE_API_KEY = "${BRAVE_API_KEY}"

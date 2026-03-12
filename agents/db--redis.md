@@ -1,7 +1,6 @@
 ---
 name: redis-expert
 description: Expert in Redis for in-memory data storage, caching, and real-time analytics.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

@@ -3,7 +3,6 @@ name: astro-expert
 description: Expert in Astro with deep understanding of component architecture, content
   collections, and static site optimization. Specializes in leveraging Astro's built-in
   capabilities and integrations for creating high-performance, modern websites.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

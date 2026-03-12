@@ -1,5 +1,5 @@
 # Task 0029: Claude Templates (Ops)
-**Status**: [ ]
+**Status**: [x]
 **Priority**: MEDIUM
 **Type**: ops
 ## Objective

@@ -2,7 +2,6 @@
 name: remix-expert
 description: Expert in building performant, scalable web applications using the Remix
   framework, with deep understanding of loaders, actions, and dynamic routing.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

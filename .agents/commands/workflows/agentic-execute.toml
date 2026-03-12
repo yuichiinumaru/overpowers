@@ -69,23 +69,28 @@ Remember: You're implementing a solution, not just checking boxes. Keep the end 
 
 ## Steps
 
-1. **Read the plan completely** and check for any existing checkmarks (- [x]). Only read the plan file provided as an argument.
+1. **Context Initialization (Explicit Memory Read)**: Before starting, read `continuity.md` and check `.agents/memories/` for the current strategic focus and architectural context.
 
-2. **Read the original ticket and all files mentioned in the plan**. Read files fully - never use limit/offset parameters, you need complete context. If you have trouble understanding the plan, refer to the research and ticket information.
+2. **Read the plan completely** and check for any existing checkmarks (- [x]). Only read the plan file provided as an argument.
 
-3. **Consider the steps involved in the plan**. Think deeply about how the pieces fit together and derive a detailed todo list from the plan's phases and requirements.
+3. **Read the original ticket and all files mentioned in the plan**. Read files fully - never use limit/offset parameters, you need complete context. If you have trouble understanding the plan, refer to the research and ticket information.
 
-4. **Implement each phase sequentially**, adapting to what you find while following the plan's intent.
+4. **Consider the steps involved in the plan**. Think deeply about how the pieces fit together and derive a detailed todo list from the plan's phases and requirements.
 
-5. **Verify each phase** using the success criteria checks (usually `bun run check` covers everything). Fix any issues before proceeding.
+5. **Implement each phase sequentially**, adapting to what you find while following the plan's intent.
 
-6. **Update the plan file** with checkmarks for completed items using the Edit tool.
+6. **Verify each phase** using the success criteria checks (usually `bun run check` covers everything). Fix any issues before proceeding.
 
-7. **Handle any mismatches or issues** by presenting them clearly and asking for guidance if needed.
+7. **Update the plan file** with checkmarks for completed items using the Edit tool.
 
-8. **Update ticket status** to 'implemented' by editing the ticket file's frontmatter.
+8. **Handle any mismatches or issues** by presenting them clearly and asking for guidance if needed.
 
-Use the todowrite tool to create a structured task list for the 8 steps above, marking each as pending initially. Note that Step 3 may expand into multiple implementation subtasks derived from the plan.
+9. **Update ticket status & Memory (Explicit Memory Update)**: 
+    - Update ticket status to 'implemented' by editing the ticket file's frontmatter.
+    - Read and update `continuity.md` to move the task to completed.
+    - Suggest using `/11-sync-memory` to capture any major learnings during the execution.
+
+Use the todowrite tool to create a structured task list for the 9 steps above, marking each as pending initially. Note that Step 4 may expand into multiple implementation subtasks derived from the plan.
 
 **plan**
 

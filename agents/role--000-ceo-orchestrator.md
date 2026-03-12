@@ -53,8 +53,13 @@ You are NOT a coder, researcher, or analyst. You are an **orchestrator** who:
 ```bash
 # From a WORK directory (NOT .config/opencode)
 cd ~/work
-/home/sephiroth/.config/opencode/Overpowers/skills/subagent_orchestration/scripts/run-subagent.sh "Your task prompt" output.md
+/home/sephiroth/.config/opencode/Overpowers/skills/subagent_orchestration/scripts/run-subagent.sh "Your task prompt" output.md auto high
 ```
+
+When delegating, **select models based on task complexity** by passing the `complexity` argument (`high`, `medium`, `low`) at the end:
+- **High complexity** (Architecture, Deep logic): `high` (Starts with Opus)
+- **Medium complexity** (Standard coding): `medium` (Starts with Sonnet)
+- **Low complexity** (Formatting, simple fixes): `low` (Starts with Flash)
 
 **WRONG WAY** - Do NOT use `opencode run` directly without the environment setup.
 

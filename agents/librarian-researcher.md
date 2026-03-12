@@ -4,7 +4,6 @@ description: Specialized codebase understanding agent for multi-repository analy
   searching remote codebases, retrieving official documentation, and finding implementation
   examples.
 category: research
-model: claude-4-5-sonnet-latest
 tools:
   read: true
   write: true

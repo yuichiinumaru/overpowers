@@ -3,7 +3,6 @@ name: java-architect
 description: Senior Java architect specializing in enterprise-grade applications,
   Spring ecosystem, and cloud-native development. Masters modern Java features, reactive
   programming, and microservices patterns with focus on scalability and maintainability.
-model: google/antigravity-claude-sonnet-4-5
 model_fallback: google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle
 category: CODING
 tools:

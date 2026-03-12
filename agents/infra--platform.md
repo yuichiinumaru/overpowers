@@ -4,7 +4,6 @@ description: Expert platform engineer specializing in internal developer platfor
   self-service infrastructure, and developer experience. Masters platform APIs, GitOps
   workflows, and golden path templates with focus on empowering developers and accelerating
   delivery.
-model: google/antigravity-gemini-3-pro-preview
 model_fallback: google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview
 category: ARCHITECTURE
 tools:

@@ -4,7 +4,6 @@ description: Expert LLM architect specializing in large language model architect
   deployment, and optimization. Masters LLM system design, fine-tuning strategies,
   and production serving with focus on building scalable, efficient, and safe LLM
   applications.
-model: google/antigravity-gemini-3-pro-preview
 model_fallback: google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview
 category: ARCHITECTURE
 tools:

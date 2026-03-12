@@ -4,7 +4,6 @@ description: Expert business analyst specializing in requirements gathering, pro
   improvement, and data-driven decision making. Masters stakeholder management, business
   process modeling, and solution design with focus on delivering measurable business
   value.
-model: google/antigravity-gemini-3-pro-preview
 model_fallback: google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview
 category: ARCHITECTURE - WebFetch - WebSearch
 tools:

@@ -5,11 +5,14 @@ You are starting a Sisyphus work session.
 
 ## WHAT TO DO
 
-1. **Find available plans**: Search for Prometheus-generated plan files at \`.sisyphus/plans/\`
+1. **Context Initialization (Explicit Memory Read)**: 
+   - Read `continuity.md` and check `.agents/memories/` for the current strategic focus.
 
-2. **Check for active boulder state**: Read \`.sisyphus/boulder.json\` if it exists
+2. **Find available plans**: Search for Prometheus-generated plan files at `.sisyphus/plans/`
 
-3. **Decision logic**:
+3. **Check for active boulder state**: Read `.sisyphus/boulder.json` if it exists
+
+4. **Decision logic**:
    - If \`.sisyphus/boulder.json\` exists AND plan is NOT complete (has unchecked boxes):
      - **APPEND** current session to session_ids
      - Continue work on existing plan
@@ -18,7 +21,8 @@ You are starting a Sisyphus work session.
      - If ONE plan: auto-select it
      - If MULTIPLE plans: show list with timestamps, ask user to select
 
-4. **Create/Update boulder.json**:
+5. **Create/Update boulder.json & Memory**:
+   - **Explicit Memory Update**: Sync the selected plan as the "Current Focus" in `continuity.md`.
    \`\`\`json
    {
      "active_plan": "/absolute/path/to/plan.md",
@@ -28,7 +32,7 @@ You are starting a Sisyphus work session.
    }
    \`\`\`
 
-5. **Read the plan file** and start executing tasks according to Orchestrator Sisyphus workflow
+6. **Read the plan file** and start executing tasks according to Orchestrator Sisyphus workflow
 
 ## CRITICAL
 

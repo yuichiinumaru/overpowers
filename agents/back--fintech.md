@@ -4,7 +4,6 @@ description: Expert fintech engineer specializing in financial systems, regulato
   compliance, and secure transaction processing. Masters banking integrations, payment
   systems, and building scalable financial technology that meets stringent regulatory
   requirements.
-model: opencode/glm-4.7
 model_fallback: opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1
 category: FREE
 tools:

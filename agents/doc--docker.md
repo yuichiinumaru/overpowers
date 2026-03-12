@@ -2,7 +2,6 @@
 name: docker-expert
 description: Expert in all aspects of Docker, including containerization, image creation,
   and orchestration.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

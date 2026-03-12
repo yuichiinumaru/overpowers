@@ -4,7 +4,6 @@ description: Expert Site Reliability Engineer balancing feature velocity with sy
   stability through SLOs, automation, and operational excellence. Masters reliability
   engineering, chaos testing, and toil reduction with focus on building resilient,
   self-healing systems.
-model: google/antigravity-gemini-3-flash-preview
 model_fallback: google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1
 category: PERFORMANCE
 tools:

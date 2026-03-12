@@ -2,7 +2,6 @@
 name: websocket-expert
 description: Specializes in WebSocket protocol, implementation, and application. Provides
   expertise for real-time data exchange using WebSockets.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

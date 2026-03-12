@@ -2,7 +2,6 @@
 name: dynamodb-expert
 description: Expert in DynamoDB optimization, best practices, and data modeling. Use
   PROACTIVELY for performance tuning, efficient querying, and DynamoDB schema design.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

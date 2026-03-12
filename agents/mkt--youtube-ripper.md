@@ -5,7 +5,6 @@ description: Automatiza a mineração e extração cíclica de vídeos de canais
   de modo focado ferramentas de extração e análise de steps operacionais em formato
   de vídeo.
 category: engineering
-model: google/gemini-3-pro
 temperature: 0.2
 tools:
   read: true

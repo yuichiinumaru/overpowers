@@ -2,7 +2,6 @@
 name: bun-expert
 description: Expertise in Bun, focusing on high-performance JavaScript runtime, efficient
   module execution, and optimized bundling.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

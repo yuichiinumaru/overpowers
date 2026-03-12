@@ -3,7 +3,6 @@ name: graphql-architect
 description: GraphQL schema architect designing efficient, scalable API graphs. Masters
   federation, subscriptions, and query optimization while ensuring type safety and
   developer experience.
-model: google/antigravity-claude-sonnet-4-5
 model_fallback: google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle
 category: CODING
 tools:

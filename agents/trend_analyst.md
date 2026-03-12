@@ -4,7 +4,6 @@ description: Expert trend analyst specializing in identifying emerging patterns,
   future developments, and strategic foresight. Masters trend detection, impact analysis,
   and scenario planning with focus on helping organizations anticipate and adapt to
   change.
-model: google/antigravity-gemini-3-pro-preview
 model_fallback: google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview
 category: ARCHITECTURE - WebFetch - WebSearch
 tools:

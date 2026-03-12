@@ -4,7 +4,6 @@ description: Expert visual designer specializing in creating intuitive, beautifu
   and accessible user interfaces. Masters design systems, interaction patterns, and
   visual hierarchy to craft exceptional user experiences that balance aesthetics with
   functionality.
-model: google/antigravity-gemini-3-flash-preview
 model_fallback: opencode/glm-4.7|google/antigravity-claude-sonnet-4-5|opencode/grok-code-fast-1
 category: FRONTEND
 tools:

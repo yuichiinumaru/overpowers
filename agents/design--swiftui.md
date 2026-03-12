@@ -3,7 +3,6 @@ name: swiftui-expert
 description: Expert in SwiftUI development, focusing on building dynamic, responsive,
   and maintainable applications for Apple platforms. Handles view composition, state
   management, and performance optimization in SwiftUI.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

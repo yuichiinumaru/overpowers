@@ -4,7 +4,6 @@ description: Expert prompt engineer specializing in designing, optimizing, and m
   prompts for large language models. Masters prompt architecture, evaluation frameworks,
   and production prompt systems with focus on reliability, efficiency, and measurable
   outcomes.
-model: google/antigravity-gemini-3-pro-preview
 model_fallback: google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview
 category: ARCHITECTURE
 tools:

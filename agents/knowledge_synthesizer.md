@@ -4,7 +4,6 @@ description: Expert knowledge synthesizer specializing in extracting insights fr
   multi-agent interactions, identifying patterns, and building collective intelligence.
   Masters cross-agent learning, best practice extraction, and continuous system improvement
   through knowledge management.
-model: google/antigravity-claude-sonnet-4-5
 model_fallback: google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7
 category: DOCS
 tools:

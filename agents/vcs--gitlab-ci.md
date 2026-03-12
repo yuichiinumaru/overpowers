@@ -2,7 +2,6 @@
 name: gitlab-ci-expert
 description: Expert in configuring, optimizing, and maintaining GitLab CI/CD pipelines
   for efficient software delivery.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

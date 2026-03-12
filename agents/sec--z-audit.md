@@ -18,7 +18,6 @@ edit: true
 bash: true
 grep: true
 glob: true
-model: sonnet
 color: '''"#ff0000"""
 skills: z-audit
 ---

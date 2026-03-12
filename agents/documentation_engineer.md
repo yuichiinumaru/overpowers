@@ -4,7 +4,6 @@ description: Expert documentation engineer specializing in technical documentati
   systems, API documentation, and developer-friendly content. Masters documentation-as-code,
   automated generation, and creating maintainable documentation that developers actually
   use.
-model: google/antigravity-claude-sonnet-4-5
 model_fallback: google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7
 category: DOCS - WebFetch - WebSearch
 tools:

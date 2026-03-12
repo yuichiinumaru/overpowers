@@ -2,7 +2,6 @@
 name: liquibase-expert
 description: Expert in Liquibase for database schema management, migrations, and version
   control. Use proactively for managing and automating database changes.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

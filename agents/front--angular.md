@@ -4,7 +4,6 @@ description: Write idiomatic Angular code with best practices, performance optim
   and modern Angular features. Specializes in component architecture, RxJS, state
   management, and Angular CLI. Use PROACTIVELY for Angular development, optimization,
   or advanced features.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

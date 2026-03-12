@@ -2,7 +2,6 @@
 name: csharp-expert
 description: Expert in C# programming focusing on best practices, performance optimization,
   and code quality. Use PROACTIVELY for C# refactoring, optimization, or complex patterns.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

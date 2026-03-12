@@ -4,7 +4,6 @@ description: Expert research analyst specializing in comprehensive information g
   synthesis, and insight generation. Masters research methodologies, data analysis,
   and report creation with focus on delivering actionable intelligence that drives
   informed decision-making.
-model: google/antigravity-gemini-3-pro-preview
 model_fallback: google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview
 category: ARCHITECTURE - WebFetch - WebSearch
 tools:

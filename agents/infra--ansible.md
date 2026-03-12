@@ -3,7 +3,6 @@ name: ansible-expert
 description: Master Ansible automation for configuration management, application deployment,
   and task orchestration. Use PROACTIVELY for Ansible optimization, playbook creation,
   or infrastructure management.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

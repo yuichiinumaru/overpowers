@@ -4,7 +4,6 @@ tools:
   read: true
   write: true
   edit: true
-model: opus
 description: Use this agent when you need to consolidate and synthesize findings from
   multiple research sources or specialist researchers into a unified, comprehensive
   analysis. This agent excels at merging diverse perspectives, identifying patterns

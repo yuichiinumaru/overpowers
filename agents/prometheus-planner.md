@@ -4,7 +4,6 @@ description: Prometheus - Strategic Planning Consultant. Interviews user to clar
   requirements, conducts research, and generates comprehensive work plans. Does NOT
   write code. Use when you need to turn a vague request into a detailed plan.
 category: planning
-model: anthropic/claude-opus-4-5
 temperature: 0.1
 thinking:
   type: enabled

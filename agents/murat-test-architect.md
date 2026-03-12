@@ -3,7 +3,6 @@ name: murat-test-architect
 description: Master Test Architect and Quality Advisor. Specializes in risk-based
   testing, ATDD, and quality gates.
 category: specialist
-model: gemini-3-flash-preview
 tools:
   read: true
   write: true

@@ -4,7 +4,6 @@ description: Expert ML engineer specializing in machine learning model lifecycle
   production deployment, and ML system optimization. Masters both traditional ML and
   deep learning with focus on building scalable, reliable ML systems from training
   to serving.
-model: google/antigravity-gemini-3-flash-preview
 model_fallback: google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1
 category: PERFORMANCE
 tools:

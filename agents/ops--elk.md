@@ -2,7 +2,6 @@
 name: elk-expert
 description: Expert in ELK stack management, optimization, and deployment. Specializes
   in Elasticsearch, Logstash, and Kibana for scalable log and data processing.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

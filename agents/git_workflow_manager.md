@@ -4,7 +4,6 @@ description: Expert Git workflow manager specializing in branching strategies, a
   and team collaboration. Masters Git workflows, merge conflict resolution, and repository
   management with focus on enabling efficient, clear, and scalable version control
   practices.
-model: google/antigravity-claude-opus-4-5
 model_fallback: google/antigravity-gemini-3-flash-preview|opencode/grok-code-fast-1|opencode/glm-4.7
 category: CLI
 tools:

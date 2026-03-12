@@ -23,8 +23,8 @@
             "env": {}
         },
         "memcord": {
-            "command": [
-                "uvx",
+            "command": "uvx",
+            "args": [
                 "memcord"
             ],
             "env": {
@@ -89,10 +89,7 @@
             "env": {}
         },
         "desktop_commander": {
-            "command": [
-                "node",
-                "{env:DESKTOP_COMMANDER_PATH}"
-            ],
+            "command": "npx",
             "args": [
                 "-y",
                 "@smithery/cli",
@@ -101,6 +98,20 @@
                 "--config",
                 "{\"instructions\":\"\"}"
             ]
+        },
+        "grep_app": {
+            "type": "sse",
+            "url": "https://mcp.grep.app"
+        },
+        "web_search": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-brave-search"
+            ],
+            "env": {
+                "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+            }
         }
     }
 }

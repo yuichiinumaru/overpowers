@@ -2,7 +2,6 @@
 name: mssql-expert
 description: Expert in Microsoft SQL Server handling query optimization, database
   design, and advanced T-SQL features.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

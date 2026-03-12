@@ -3,7 +3,6 @@ name: erlang-expert
 description: Expert in writing efficient, concurrent, and robust Erlang applications.
   Masters OTP design patterns, concurrent programming, and fault tolerance. Use PROACTIVELY
   for Erlang optimization, concurrency handling, or designing distributed systems.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

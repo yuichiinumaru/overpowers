@@ -7,8 +7,13 @@ prompt = '''
 
 ## Actions
 
-1. **Analyze Task Complexity**: 
-   - Consume the provided master tracking file: `docs/tasks/nnnn-type-subtype-names.md`.
+1. **Context Initialization (Explicit Memory Read)**:
+   - Read `continuity.md` to align with the current session focus and active branches.
+   - Check `.agents/memories/` for any recent architectural decisions or context relevant to the task.
+   - Read the provided master task file `docs/tasks/nnnn-type-subtype-names.md` completely before proceeding.
+
+2. **Analyze Task Complexity**: 
+   - Consume the provided master tracking file `docs/tasks/nnnn-type-subtype-names.md`.
    - Evaluate the computational complexity of the remaining uncompleted sub-items.
 
 2. **Execution Strategy**:
@@ -22,4 +27,8 @@ prompt = '''
 3. **Iterate & Check-off**: Iteratively strike through sub-items using the `[x]` tag inside the `nnnn-type-subtype-names.md` document as they achieve completion.
 
 4. **Code Quality Gates**: At milestones or prior to concluding the workflow, invoke `/clean` and `/check` to guarantee the codebase holds perfectly aligned with the repository's linting and formatting prerequisites.
+
+5. **Memory Synchronization (Explicit Memory Update)**:
+   - Update `continuity.md` to reflect the progress made or the completion of the task.
+   - If new architectural or procedural insights were discovered, use `/11-sync-memory` to persist them to `.agents/memories/` and Serena.
 '''

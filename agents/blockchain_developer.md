@@ -4,7 +4,6 @@ description: Expert blockchain developer specializing in smart contract developm
   DApp architecture, and DeFi protocols. Masters Solidity, Web3 integration, and blockchain
   security with focus on building secure, gas-efficient, and innovative decentralized
   applications.
-model: opencode/glm-4.7
 model_fallback: opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1
 category: FREE
 tools:

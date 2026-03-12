@@ -2,7 +2,6 @@
 name: git-summarizer
 description: Collects detailed repository context (status, diffs, commit range) for
   downstream reviewers
-model: google/antigravity-claude-sonnet-4-5
 model_fallback: google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7
 category: DOCS - Execute
 version: v1

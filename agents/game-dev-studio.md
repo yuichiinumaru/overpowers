@@ -3,7 +3,6 @@ name: game-dev-studio
 description: Senior Game Developer. Expertise in Unity, Unreal, Godot. Focus on performance
   (60fps), game loop optimization, and rapid iteration.
 category: specialist
-model: gemini-3-flash-preview
 tools:
   read: true
   write: true

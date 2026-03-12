@@ -11,7 +11,6 @@ tools:
   bash: true
   grep: true
   glob: true
-model: opus
 color: "#FFFFFF"
 ---
 # Documentation & Codemap Specialist

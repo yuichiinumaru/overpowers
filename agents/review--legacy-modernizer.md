@@ -4,7 +4,6 @@ description: Expert legacy system modernizer specializing in incremental migrati
   strategies and risk-free modernization. Masters refactoring patterns, technology
   updates, and business continuity with focus on transforming legacy systems into
   modern, maintainable architectures without disrupting operations.
-model: opencode/glm-4.7
 model_fallback: google/antigravity-gemini-3-flash-preview|opencode/big-pickle|opencode/grok-code-fast-1
 category: TOOLING
 tools:

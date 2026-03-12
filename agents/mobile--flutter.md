@@ -4,7 +4,6 @@ description: Expert Flutter specialist mastering Flutter 3+ with modern architec
   patterns. Specializes in cross-platform development, custom animations, native integrations,
   and performance optimization with focus on creating beautiful, native-performance
   applications.
-model: google/antigravity-claude-sonnet-4-5
 model_fallback: google/antigravity-gemini-3-flash-preview|opencode/glm-4.7|opencode/big-pickle
 category: CODING
 tools:

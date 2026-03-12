@@ -1,3 +1,90 @@
+## [2026-03-12] - Consolidate Jules Skills
+### Changed
+- Consolidated `jules-harvest`, `jules-integrate`, and `jules-triage` skills into `ai-llm-jules-dispatch-login`.
+- Renamed source `SKILL.md` files to `SKILL-harvest.md`, `SKILL-integrate.md`, and `SKILL-triage.md` during migration.
+### Removed
+- Archived `safety-sec-jules-dispatch` per Archive Protocol.
+- Archived empty source directories for consolidated Jules skills.
+**Author**: Overpowers Architect
+
+## [2026-03-12] - Add Reference Repositories
+### Added
+- Cloned 42 reference repositories into references/ using usernamereponame naming convention.
+- Created scripts/clone_references.sh for automated cloning.
+**Author**: Overpowers Architect
+## [2026-03-10] - Task 0300 Batch 058 Completion
+### Added
+- Created 9 new helper scripts for skills in Batch 058 (Web & Frontend domain).
+- Populated empty `scripts/` directories for skills such as `linear`, `bluebubbles`, `pyzotero`, etc.
+### Fixed
+- Completed audit and cleanup of 20 skills in Batch 058, removing temporary `.o*` artifacts.
+**Author**: gemini-engineer
+
+## [2026-03-10] - Task 0300 Batch 057 Completion
+### Added
+- Created 10 new helper scripts for skills in Batch 057 (Design & Frontend domain).
+- Populated empty `scripts/` directories for skills such as `wcag-audit`, `semi-design`, `figma-implement`, etc.
+### Fixed
+- Added missing `#!/usr/bin/env python3` shebangs to 7 existing Python scripts in Batch 057.
+- Completed audit and cleanup of 20 skills in Batch 057, removing temporary `.o*` artifacts.
+**Author**: gemini-engineer
+
+## [2026-03-10] - Task 0300 Batch 056 Completion
+### Added
+- Created 11 new helper scripts for skills in Batch 056 (Design & UX domain).
+- Populated empty `scripts/` directories for skills such as `gaming-ui`, `gedcom-explorer`, `gog`, `openhue`, `notion`, etc.
+### Fixed
+- Added missing `#!/usr/bin/env python3` shebangs to 7 existing Python scripts in Batch 056.
+- Completed audit and cleanup of 20 skills in Batch 056, removing temporary `.o*` artifacts.
+**Author**: gemini-engineer
+
+## [2026-03-10] - Task 0300 Batch 025 Completion
+### Added
+- Created 18 new helper scripts for skills in Batch 025 (Media & Content domain) to replace missing implementations.
+- Populated empty `scripts/` directories for skills such as `3d`, `accessibility`, `charts`, `canvas-design`, etc.
+### Changed
+- Verified and cleaned up existing scripts in Batch 025.
+**Author**: gemini-engineer
+
+## [2026-03-10] - Task 0300 Batch 017 Completion
+### Added
+- Created 10 new helper scripts for skills in Batch 017 (`strategy-advisor`, `task-plan`, `tavily-web`, `team-collaboration-standup-notes`, `technical-articles`, `transcribe-captions`, `steady-dancer-wan-ai-video`, `step-audio-editx-voice-cloning`, `subagent-driven-development`, `swarm-orchestration`).
+- Initialized missing `scripts/` directories for 4 skills in Batch 017.
+### Fixed
+- Added missing `#!/usr/bin/env python3` shebang to `ai-llm-statistical-analysis` script.
+- Completed audit and cleanup of 20 skills in Batch 017, removing temporary `.o*` artifacts.
+### Changed
+- Verified all scripts in Batch 017 follow best practices (shebang, main block, environment variables for keys).
+**Author**: gemini-engineer
+
+## [2026-03-10] - Task 0300 Batch 008 Completion
+### Fixed
+- Added missing `#!/usr/bin/env python3` shebangs to 3 scripts in Batch 008.
+- Created missing `fred_query.py` and `fred_examples.py` for `ai-llm-fred-economic-data` skill.
+### Changed
+- Completed audit and cleanup of 20 skills in Batch 008, removing temporary `.o*` artifacts.
+- Verified all scripts in Batch 008 follow best practices (shebang, main block, environment variables for keys).
+**Author**: gemini-engineer
+
+## [2026-03-08] - Semantic Namespacing and GraphRAG Migration
+### Added
+- Created Kùzu DB GraphRAG foundation (`.agents/skills_graph`) for autonomous skill clustering.
+- Extracted 90 tags and 5,115 semantic concepts from 1,277 unique skills.
+### Fixed
+- Resolved 731 skill conflicts caused by duplicate folder names sharing the same internal skill name across multiple categories.
+### Changed
+- Migrated all 1,277 `skills/` folders from sequential numbering (`0001` - `1277`) to organic Semantic Namespacing (`[domain]-[subdomain]-[slug]`) derived directly from the Knowledge Graph.
+- Re-synchronized the Gemini CLI global configuration via `scripts/deploy-to-gemini-cli.sh`.
+- Archived 731 redundant skill folders into `.archive/skills/` to clear Gemini CLI discovery warnings and optimize context usage.
+**Author**: Gemini CLI
+
+## [2026-03-07] - Consolidated Parallel PRs for Jules Skill Scripts Batches
+### Added
+- Evaluated and verified parallel run outputs from Jules agents for the remaining `0300` skill batches.
+- Merged and patched the most comprehensive version of scripts generated across 22 parallel batches directly into the main `development` bookmark via Jujutsu, avoiding snapshot corruption of immutable remote branches by using patch diffing.
+- Auto-closed the corresponding Github Pull Requests associated with parallel Jules runs.
+**Author**: Overpowers Architect (Antigravity)
+
 ## [2026-03-06] - Completed Tasks Archival
 ### Changed
 - Extracted 37 completed tasks from `docs/tasklist.json` into a separate `docs/tasks/completed/tasklist-completed.json` manifest file to remove clutter.

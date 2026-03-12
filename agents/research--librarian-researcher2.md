@@ -4,7 +4,6 @@ description: Librarian - Reference Grep. Searches EXTERNAL resources (docs, web,
   Answers 'How do I use X?', 'Best practice for Y?'. Uses web search and official
   docs.
 category: exploration
-model: google/gemini-3-flash
 temperature: 0.1
 tools:
   read: true

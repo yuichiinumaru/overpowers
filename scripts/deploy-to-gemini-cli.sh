@@ -187,6 +187,34 @@ else
     log_info "Created settings.json with experimental.enableAgents enabled"
 fi
 
+# --- Build and Link GraphRAG Extension ---
+GRAPH_EXT_DIR="${REPO_ROOT}/extensions/overpowers-graph-ext"
+if [[ -d "${GRAPH_EXT_DIR}" ]]; then
+    log_info "Building GraphRAG Extension..."
+    (cd "${GRAPH_EXT_DIR}" && npm install --silent && npx tsc)
+    
+    EXT_TARGET="${GEMINI_DIR}/extensions/overpowers-graph-ext"
+    if [[ ! -L "${EXT_TARGET}" ]]; then
+        ln -sfn "${GRAPH_EXT_DIR}" "${EXT_TARGET}"
+        log_info "Symlinked GraphRAG Extension"
+    else
+        log_skip "GraphRAG Extension already linked"
+    fi
+    
+    # Ensure it's enabled
+    python3 -c "
+import json, os
+path = '${GEMINI_DIR}/extensions/extension-enablement.json'
+if os.path.exists(path):
+    with open(path, 'r') as f: data = json.load(f)
+else:
+    data = {}
+if 'overpowers-graph-ext' not in data:
+    data['overpowers-graph-ext'] = {'overrides': ['/home/sephiroth/*']}
+    with open(path, 'w') as f: json.dump(data, f, indent=2)
+"
+fi
+
 echo ""
 echo -e "${GREEN}═══════════════════════════════════════════════════════${NC}"
 echo -e "${GREEN}  Deployment complete!${NC}"

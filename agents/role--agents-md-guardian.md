@@ -12,7 +12,6 @@ tools:
   grep: true
   glob: true
   skill: true
-model: haiku
 color: "#800080"
 field: documentation
 expertise: intermediate

@@ -7,7 +7,6 @@ category: marketing
 tools:
   read: true
   write: true
-model: opus
 color: "#FFFFFF"
 ---
 # Marketing Strategist

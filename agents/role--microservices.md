@@ -3,7 +3,6 @@ name: microservices-architect
 description: Distributed systems architect designing scalable microservice ecosystems.
   Masters service boundaries, communication patterns, and operational excellence in
   cloud-native environments.
-model: google/antigravity-gemini-3-pro-preview
 model_fallback: google/antigravity-claude-opus-4-5|google/antigravity-claude-sonnet-4-5|google/antigravity-gemini-3-flash-preview
 category: ARCHITECTURE
 tools:

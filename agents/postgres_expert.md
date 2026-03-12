@@ -2,7 +2,6 @@
 name: postgres-expert
 description: Expert in PostgreSQL database management and optimization, handling complex
   SQL queries, indexing strategies, and ensuring high-performance database systems.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

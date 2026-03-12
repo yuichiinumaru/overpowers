@@ -1,7 +1,6 @@
 ---
 name: mariadb-expert
 description: Expert in MariaDB database management, optimization, and best practices.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

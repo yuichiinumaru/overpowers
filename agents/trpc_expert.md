@@ -2,7 +2,6 @@
 name: trpc-expert
 description: Expert in building reliable, efficient, and type-safe backend services
   using tRPC.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

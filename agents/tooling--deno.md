@@ -2,7 +2,6 @@
 name: deno-expert
 description: Expert in Deno for modern JavaScript and TypeScript runtime, security,
   performance, and tooling.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

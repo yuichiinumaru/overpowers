@@ -4,7 +4,6 @@ description: Expert content marketer specializing in content strategy, SEO optim
   and engagement-driven marketing. Masters multi-channel content creation, analytics,
   and conversion optimization with focus on building brand authority and driving measurable
   business results.
-model: google/antigravity-claude-sonnet-4-5
 model_fallback: google/antigravity-gemini-3-flash-preview|google/antigravity-claude-opus-4-5|opencode/glm-4.7
 category: DOCS - WebFetch - WebSearch
 tools:

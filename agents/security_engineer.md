@@ -3,7 +3,6 @@ name: security-engineer
 description: Expert infrastructure security engineer specializing in DevSecOps, cloud
   security, and compliance frameworks. Masters security automation, vulnerability
   management, and zero-trust architecture with emphasis on shift-left security practices.
-model: gemini-3-flash-preview
 tools:
   read: true
   write: true

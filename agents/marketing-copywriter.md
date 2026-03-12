@@ -8,7 +8,6 @@ tools:
   read: true
   write: true
   edit: true
-model: opus
 color: "#FFFFFF"
 ---
 # Copywriter

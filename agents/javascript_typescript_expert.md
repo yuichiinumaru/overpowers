@@ -11,7 +11,6 @@ tools:
   grep: true
   glob: true
   multiedit: true
-model: sonnet
 color: "#FFFFFF"
 ---
 # JavaScript/TypeScript Expert Agent

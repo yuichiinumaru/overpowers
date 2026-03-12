@@ -9,7 +9,6 @@ tools:
   grep: true
   glob: true
   bash: true
-model: opus
 color: "#FFFFFF"
 ---
 # SEO Auditor

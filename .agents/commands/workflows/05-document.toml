@@ -7,16 +7,21 @@ prompt = '''
 
 ## Actions
 
-1. **Audit Changelog**: Execute the `/14-changelog-audit` workflow. This guarantees that all Jujutsu operations or Git commits forged during execution are mirrored in the centralized `CHANGELOG.md`.
+1. **Context Initialization (Explicit Memory Read)**:
+   - Read `continuity.md` and check `.agents/memories/` to ensure full context alignment before documenting closure.
+   - Cross-reference the master task file and the generated code to identify what needs to be persisted.
 
-2. **Sync Short-to-Long Memory**: Execute the `/11-sync-memory` workflow.
+2. **Audit Changelog**: Execute the `/14-changelog-audit` workflow. This guarantees that all Jujutsu operations or Git commits forged during execution are mirrored in the centralized `CHANGELOG.md`.
+
+3. **Sync Short-to-Long Memory (Explicit Memory Update)**: Execute the `/11-sync-memory` workflow.
    - Aggregate the contextual discoveries and decisions compiled along the `01` through `04` pipeline.
    - Force an update into the `.archive/SYSTEM_KNOWLEDGE_GRAPH.json` (or central repo if relocated) to ensure all agents share real-time cognizance of the new integrations.
    - Propagate artifacts logically into `.agents/memories/` (Serena/Memcord).
 
-3. **Mark Complete**: 
+4. **Mark Complete & Ledger Update**: 
    - Access `docs/tasklist.md`.
    - Re-mark the master task corresponding to this cycle from `[/]` to `[x]` indicating absolute resolution.
+   - Update the Session Ledger (`continuity.md`) to move the completed task to the "Completed Tasks" section and clear the active branch if applicable.
 
-4. **Close VCS**: Facilitate the architectural closure of the working branch/bookmark. Provide guidance corresponding to the `AGENTS.md` parameters such as `harmonious-jujutsu-merge` to ensure the code ascends cleanly into staging/development or awaits human PR approval structure.
+5. **Close VCS**: Facilitate the architectural closure of the working branch/bookmark. Provide guidance corresponding to the `AGENTS.md` parameters such as `harmonious-jujutsu-merge` to ensure the code ascends cleanly into staging/development or awaits human PR approval structure.
 '''

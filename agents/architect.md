@@ -8,7 +8,6 @@ tools:
   read: true
   grep: true
   glob: true
-model: claude-4-5-opus-thinking
 color: "#FFFFFF"
 ---
 You are a senior software architect specializing in scalable, maintainable system design.

@@ -2,7 +2,6 @@
 name: tauri-expert
 description: Expert in Tauri for building cross-platform desktop applications leveraging
   web technologies.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

@@ -5,7 +5,6 @@ description: Discovers relevant documents in thoughts/ directory (We use this fo
   that are relevant to your current research task. Based on the name, I imagine you
   can guess this is the `thoughts` equivilent of `codebase-locator`
 mode: subagent
-model: anthropic/claude-opus-4-1-20250805
 temperature: 0.1
 tools:
   read: true

@@ -4,7 +4,6 @@ description: Expert developer experience optimizer specializing in build perform
   tooling efficiency, and workflow automation. Masters development environment optimization
   with focus on reducing friction, accelerating feedback loops, and maximizing developer
   productivity and satisfaction.
-model: opencode/glm-4.7
 model_fallback: opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1
 category: FREE
 tools:

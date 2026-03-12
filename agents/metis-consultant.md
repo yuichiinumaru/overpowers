@@ -8,7 +8,6 @@ tools:
   read: true
   grep: true
   glob: true
-model: opus
 color: "#FFFFFF"
 ---
 # Metis - Pre-Planning Consultant

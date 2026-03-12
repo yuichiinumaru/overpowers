@@ -1,0 +1,14 @@
+# Template de Policy: Permitir Quase Tudo
+# Bloqueia comandos destrutivos e libera o resto.
+
+[[rule]]
+toolName = "run_shell_command"
+commandRegex = "rm\\s+-rf"
+decision = "deny"
+priority = 1000
+deny_message = "Não pode deletar caralho, mova para .archive/ em vez disso"
+
+[[rule]]
+toolName = "*"
+decision = "allow"
+priority = 999

@@ -3,7 +3,6 @@ name: ios-expert
 description: Write high-quality iOS applications using Swift and SwiftUI, ensuring
   optimal performance, user-friendly interfaces, and adherence to Apple's guidelines.
   Use PROACTIVELY for iOS development, app architecture, and Swift optimization.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

@@ -4,7 +4,6 @@ description: Locates files, directories, and components relevant to a feature or
   for. Basically a "Super Grep/Glob/LS tool" — Use it if you find yourself desiring
   to use one of these tools more than once.
 mode: subagent
-model: anthropic/claude-opus-4-1-20250805
 temperature: 0.1
 tools:
   read: false

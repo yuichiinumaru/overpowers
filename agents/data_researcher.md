@@ -4,7 +4,6 @@ description: Expert data researcher specializing in discovering, collecting, and
   diverse data sources. Masters data mining, statistical analysis, and pattern recognition
   with focus on extracting meaningful insights from complex datasets to support evidence-based
   decisions.
-model: opencode/glm-4.7
 model_fallback: opencode/big-pickle|opencode/grok-code-fast-1|opencode/minimax-m2.1
 category: FREE - WebFetch - WebSearch
 tools:

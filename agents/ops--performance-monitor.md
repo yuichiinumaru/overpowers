@@ -4,7 +4,6 @@ description: Expert performance monitor specializing in system-wide metrics coll
   analysis, and optimization. Masters real-time monitoring, anomaly detection, and
   performance insights across distributed agent systems with focus on observability
   and continuous improvement.
-model: google/antigravity-gemini-3-flash-preview
 model_fallback: google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1
 category: PERFORMANCE
 tools:

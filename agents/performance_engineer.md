@@ -4,7 +4,6 @@ description: Expert performance engineer specializing in system optimization, bo
   identification, and scalability engineering. Masters performance testing, profiling,
   and tuning across applications, databases, and infrastructure with focus on achieving
   optimal response times and resource efficiency.
-model: google/antigravity-gemini-3-flash-preview
 model_fallback: google/antigravity-claude-sonnet-4-5|opencode/glm-4.7|opencode/grok-code-fast-1
 category: PERFORMANCE
 tools:

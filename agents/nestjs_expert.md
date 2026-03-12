@@ -3,7 +3,6 @@ name: nestjs-expert
 description: Expert in building scalable and efficient applications using the NestJS
   framework. Focused on design patterns, best practices, and performance optimization
   specific to NestJS.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

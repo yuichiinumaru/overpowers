@@ -6,7 +6,6 @@ description: Sisyphus - Powerful AI orchestrator. Plans obsessively with todos, 
   external docs. Use when you need a senior engineer to manage complex multi-step
   tasks.
 category: orchestrator
-model: anthropic/claude-opus-4-5
 temperature: 0.1
 thinking:
   type: enabled

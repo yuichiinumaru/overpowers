@@ -2,7 +2,6 @@
 name: loki-expert
 description: Master in building, managing, and optimizing Loki for efficient log aggregation
   and querying.
-model: claude-sonnet-4-20250514
 tools:
   read: true
   write: true

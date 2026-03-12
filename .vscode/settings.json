@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
         "prompts"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
