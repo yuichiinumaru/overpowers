@@ -1,0 +1,26 @@
+{
+  "id": "byterover-milestone",
+  "name": "ByteRover Milestone Planning",
+  "version": "1.0.0",
+  "description": "Define project milestones with goals, scoped requirements, phased roadmaps, and implementation decisions",
+  "long_description": "A structured workflow for defining what to build next. Gathers goals through user conversation, scopes requirements with REQ-IDs for traceability, derives a phased roadmap using goal-backward analysis, and optionally captures implementation decisions for gray areas. Stores everything in the knowledge base via brv curate for downstream planning and execution.",
+  "type": "agent-skill",
+  "license": "MIT",
+  "tags": [
+    "milestone",
+    "planning",
+    "byterover",
+    "requirements",
+    "roadmap",
+    "scoping"
+  ],
+  "category": "productivity",
+  "metadata": {
+    "use_cases": [
+      "New project kickoff",
+      "Next milestone definition",
+      "Requirements scoping and prioritization",
+      "Phased roadmap creation"
+    ]
+  }
+}

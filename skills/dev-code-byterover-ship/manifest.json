@@ -1,0 +1,26 @@
+{
+  "id": "byterover-ship",
+  "name": "ByteRover Ship & Handoff",
+  "version": "1.0.0",
+  "description": "Complete milestones with retrospective and archival, or pause work with resumable handoff context",
+  "long_description": "A structured workflow for wrapping up work — either completing a milestone (shipping) or pausing work mid-phase (handoff). Shipping runs a pre-flight audit, gathers stats, produces a retrospective, evolves the project record, and optionally creates a git tag. Pausing compresses current work state into a resumable handoff stored via brv curate for seamless session continuation.",
+  "type": "agent-skill",
+  "license": "MIT",
+  "tags": [
+    "shipping",
+    "handoff",
+    "byterover",
+    "milestone",
+    "retrospective",
+    "session-management"
+  ],
+  "category": "productivity",
+  "metadata": {
+    "use_cases": [
+      "Milestone completion and archival",
+      "Sprint wrap-up with retrospective",
+      "Mid-phase work pause with handoff",
+      "Session end with resumable context"
+    ]
+  }
+}

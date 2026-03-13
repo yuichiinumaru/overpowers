@@ -1,0 +1,27 @@
+{
+  "id": "byterover-execute",
+  "name": "ByteRover Phase Execution",
+  "version": "1.0.0",
+  "description": "Execute a phase plan task by task with verification, atomic commits, and progress tracking",
+  "long_description": "A structured workflow for executing implementation plans created by byterover-plan. Works through tasks sequentially, verifies each against success criteria, creates atomic git commits, records progress in the knowledge base via brv curate, and validates the phase goal before transitioning to the next phase.",
+  "type": "agent-skill",
+  "license": "MIT",
+  "tags": [
+    "execution",
+    "implementation",
+    "byterover",
+    "planning",
+    "verification",
+    "workflow"
+  ],
+  "category": "productivity",
+  "dependencies": [],
+  "metadata": {
+    "use_cases": [
+      "Executing planned implementation phases",
+      "Resuming partially completed phases",
+      "Structured task tracking with verification",
+      "Phase transition management"
+    ]
+  }
+}

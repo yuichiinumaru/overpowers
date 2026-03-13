@@ -1,0 +1,26 @@
+{
+  "id": "byterover-audit",
+  "name": "ByteRover Knowledge Audit",
+  "version": "1.0.0",
+  "description": "Audit knowledge freshness and coverage, identify stale entries and gaps, and provide remediation commands",
+  "long_description": "A structured workflow for auditing the health of your ByteRover knowledge base. Cross-references documented knowledge against the current codebase to find stale entries, missing coverage, and knowledge drift. Produces a coverage report with prioritized, actionable brv curate commands to fix issues.",
+  "type": "agent-skill",
+  "license": "MIT",
+  "tags": [
+    "audit",
+    "knowledge",
+    "byterover",
+    "documentation",
+    "staleness",
+    "coverage"
+  ],
+  "category": "analysis",
+  "metadata": {
+    "use_cases": [
+      "Post-refactor knowledge validation",
+      "Periodic knowledge base maintenance",
+      "Knowledge drift detection",
+      "Pre-feature documentation check"
+    ]
+  }
+}

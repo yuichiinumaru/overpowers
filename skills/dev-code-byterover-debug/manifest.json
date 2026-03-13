@@ -1,0 +1,25 @@
+{
+  "id": "byterover-debug",
+  "name": "ByteRover Systematic Debugging",
+  "version": "1.0.0",
+  "description": "Investigate bugs using scientific method with persistent knowledge and hypothesis-driven analysis",
+  "long_description": "A structured workflow for investigating bugs using the scientific method, enhanced by ByteRover's knowledge of past issues and project patterns. Queries known issues, forms falsifiable hypotheses, tests one variable at a time, and stores root cause analysis via brv curate for future reference.",
+  "type": "agent-skill",
+  "license": "MIT",
+  "tags": [
+    "debugging",
+    "bug-fixing",
+    "byterover",
+    "scientific-method",
+    "root-cause-analysis"
+  ],
+  "category": "debugging",
+  "metadata": {
+    "use_cases": [
+      "Bug investigation",
+      "Test failure diagnosis",
+      "Regression debugging",
+      "Root cause analysis"
+    ]
+  }
+}

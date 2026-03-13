@@ -1,0 +1,26 @@
+{
+  "id": "byterover-onboard",
+  "name": "ByteRover Project Onboarding",
+  "version": "1.0.0",
+  "description": "Interactive knowledge-driven project onboarding with structured overview and gap identification",
+  "long_description": "A structured workflow for getting up to speed on a project using ByteRover's accumulated knowledge. Queries all major domains, assesses knowledge completeness, presents a structured onboarding guide covering architecture, conventions, testing, and concerns, then identifies gaps and suggests running byterover-explore to fill them.",
+  "type": "agent-skill",
+  "license": "MIT",
+  "tags": [
+    "onboarding",
+    "byterover",
+    "knowledge",
+    "overview",
+    "project-setup",
+    "getting-started"
+  ],
+  "category": "learning",
+  "metadata": {
+    "use_cases": [
+      "New project onboarding",
+      "Team member ramp-up",
+      "Returning to a project after a break",
+      "Quick project state overview"
+    ]
+  }
+}

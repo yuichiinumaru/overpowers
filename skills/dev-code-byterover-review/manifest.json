@@ -1,0 +1,26 @@
+{
+  "id": "byterover-review",
+  "name": "ByteRover Code Review",
+  "version": "1.0.0",
+  "description": "Review code changes against stored conventions, patterns, architecture decisions, and security standards",
+  "long_description": "A structured workflow for reviewing code changes against the project's documented conventions, patterns, and architecture decisions stored in ByteRover's knowledge base. Checks staged changes or specific files for convention violations, pattern mismatches, layer boundary issues, missing tests, and security concerns. Curates newly discovered patterns back into the knowledge base.",
+  "type": "agent-skill",
+  "license": "MIT",
+  "tags": [
+    "code-review",
+    "conventions",
+    "byterover",
+    "security",
+    "architecture",
+    "quality"
+  ],
+  "category": "code-quality",
+  "metadata": {
+    "use_cases": [
+      "Pre-commit review",
+      "Pull request review",
+      "Convention compliance check",
+      "Security review"
+    ]
+  }
+}

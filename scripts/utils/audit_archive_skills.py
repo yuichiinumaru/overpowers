@@ -6,7 +6,8 @@ from pathlib import Path
 ACTIVE_SKILLS_DIR = "/home/sephiroth/Work/overpowers/skills/"
 ARCHIVE_SESSIONS = [
     "/home/sephiroth/Work/overpowers/.archive/jules_session_8131919827456435576",
-    "/home/sephiroth/Work/overpowers/.archive/jules_session_8638764147874203649"
+    "/home/sephiroth/Work/overpowers/.archive/jules_session_8638764147874203649",
+    "/home/sephiroth/Work/overpowers/.archive/skills/"
 ]
 
 def get_skill_content(file_path):

@@ -1,0 +1,26 @@
+{
+  "id": "byterover-plan",
+  "name": "ByteRover Context-Aware Planning",
+  "version": "1.0.0",
+  "description": "Create structured implementation plans informed by existing knowledge using goal-backward analysis",
+  "long_description": "A structured workflow for creating implementation plans that leverage ByteRover's existing knowledge. Queries architecture, conventions, and related implementations, then uses goal-backward methodology to derive concrete tasks from desired outcomes. Produces a sequenced task breakdown with file paths, verification steps, and dependencies. Stores the plan via brv curate for downstream execution.",
+  "type": "agent-skill",
+  "license": "MIT",
+  "tags": [
+    "planning",
+    "implementation",
+    "byterover",
+    "goal-backward",
+    "task-breakdown",
+    "architecture"
+  ],
+  "category": "productivity",
+  "metadata": {
+    "use_cases": [
+      "Feature implementation planning",
+      "Complex task decomposition",
+      "Multi-file refactor planning",
+      "Scope analysis and task sequencing"
+    ]
+  }
+}

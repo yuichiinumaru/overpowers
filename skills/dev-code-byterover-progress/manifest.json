@@ -1,0 +1,26 @@
+{
+  "id": "byterover-progress",
+  "name": "ByteRover Project Progress",
+  "version": "1.0.0",
+  "description": "Check project progress, resume paused work, and route to the next action intelligently",
+  "long_description": "A structured workflow for understanding where a project stands and what to do next. Loads all project state from the knowledge base, presents a status report with milestone and phase progress, detects paused work or incomplete phases, and intelligently routes to the appropriate next workflow skill to invoke.",
+  "type": "agent-skill",
+  "license": "MIT",
+  "tags": [
+    "progress",
+    "status",
+    "byterover",
+    "routing",
+    "workflow",
+    "session-resume"
+  ],
+  "category": "productivity",
+  "metadata": {
+    "use_cases": [
+      "Session start and context recovery",
+      "Resuming paused work",
+      "Milestone progress overview",
+      "Deciding what to work on next"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vector DB Production Scaling"
+  short_description: "Scaling vector databases for production environments"
+  default_prompt: "Analyze my vector database architecture and apply production scaling strategies from the Grey Haven guide."

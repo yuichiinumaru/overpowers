@@ -1,0 +1,26 @@
+{
+  "id": "byterover-explore",
+  "name": "ByteRover Explore",
+  "version": "1.0.0",
+  "description": "Systematically explore a codebase and curate findings into ByteRover's context tree",
+  "long_description": "A structured workflow for systematically exploring a codebase and curating findings into ByteRover's context tree. Maps technology stack, architecture, conventions, testing patterns, integrations, and concerns via brv curate. Also assesses documentation coverage and identifies knowledge gaps.",
+  "type": "agent-skill",
+  "license": "MIT",
+  "tags": [
+    "exploration",
+    "onboarding",
+    "byterover",
+    "codebase-mapping",
+    "knowledge",
+    "documentation"
+  ],
+  "category": "analysis",
+  "metadata": {
+    "use_cases": [
+      "New codebase onboarding",
+      "Building a knowledge base from scratch",
+      "Post-refactor knowledge refresh",
+      "Documentation coverage audit"
+    ]
+  }
+}
