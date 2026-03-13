@@ -1,9 +1,0 @@
-- **Phase: Fresh MCP Config Installation**
-  - Updated API keys in `.env` and `userenv`.
-  - Analyzed 8 open Jules PRs. Instead of merging configs, cherry-picked useful content (skills like `semgrep` and `nlm-skill` references, reports) and closed the outdated PRs.
-  - Executed a script to wipe existing MCP configurations from all 9 supported clients (Antigravity, Gemini CLI, OpenCode, Cursor, Claude Code, Kilo, Factory, Windsurf, Codex CLI).
-  - Executed the `install-mcps.sh` script to perform a fresh installation of the 10 finalized MCPs.
-  - Follow-up fixes: Addressed a bug where Kilo only received `StitchMCP` and OpenCode retained `in_memoria`/`semgrep` due to relying on `opencode-example.json`. Fixed templates and ensured 9/9 clients had exactly 10 valid MCPs.
-- **Phase: Addressing Edge Cases (Playwright, Memcord, NotebookLM)**
-  - Removed `playwright_browser` from Antigravity's config since it's limited to 100 tools and has native browser subagent support.
-  - Investigated errors related to `memcord` and `notebooklm-mcp` execution parameters (e.g., `uvx memcord server` vs `npx memcord`, and removing the "run" argument from NotebookLM).

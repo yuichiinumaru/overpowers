@@ -1,5 +1,0 @@
-description = "Reproduce a specific issue by creating a failing test case"
-
-prompt = '''
-Repro issue $ARGUMENTS in a failing test
-'''

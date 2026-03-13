@@ -1,5 +1,0 @@
-description = "Fetch unresolved comments for current branch's PR and fix them"
-
-prompt = '''
-Fetch unresolved comments for this branch's PR, then fix them
-'''
