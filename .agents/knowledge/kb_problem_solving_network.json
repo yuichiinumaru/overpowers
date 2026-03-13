@@ -27,7 +27,7 @@
     { "id": "PSN-MOD-01", "name": "Plug-and-Play Modularity", "description": "Hot-swap modules via registry." },
     { "id": "PSN-OBSV-01", "name": "Uniform Observability", "description": "Homogeneous TelemetryFrames & WorkflowEvents." },
     { "id": "PSN-SEC-01", "name": "Zero-Trust Security", "description": "Every call carries an SBOM hash, a signed JWT, and is checked against an OPA policy." },
-    { "id": "PSN-EXPLAIN-01", "name": "Explainability & Replayability", "description": "Deterministic traces/proofs + seed logging." },
+    { "id": "PSN-EXPLAIN-01", "name": "Explainability & Replayability", "description": "Deterministic traces/proofs + seed logging." }
     {
       "principle_id": "PSN-HRM-01",
       "description": "Invoke the Hierarchical Reasoning Model (HRM) solver for complex problem-solving tasks when chain-of-thought prompting is insufficient, using psn.ml.hrm_v1."

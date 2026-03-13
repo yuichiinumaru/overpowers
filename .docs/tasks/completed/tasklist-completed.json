@@ -1,0 +1,47 @@
+{
+  "repo": "",
+  "tasks": [
+    {
+      "prompt": "prompts/foreman.json",
+      "task": [
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-001.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-002.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-003.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-009.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-012.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-013.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-015.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-016.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-019.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-020.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-021.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-022.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-023.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-024.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-026.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-027.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-028.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-029.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-030.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-031.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-032.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-033.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-034.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-039.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-040.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-042.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-043.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-044.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-045.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-046.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-047.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-048.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-049.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-050.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-051.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-052.md",
+        "docs/tasks/completed/0300-ops-skill-scripts-batch-059.md"
+      ]
+    }
+  ]
+}

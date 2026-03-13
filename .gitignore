@@ -39,3 +39,18 @@ userenv
 archive/*
 continuity.md
 tree.md
+.references/
+.archive/
+.agents/
+
+# Toolkit Specific Caches & Local State
+.ruff_cache/
+.genkit/
+.serena/
+.codex/
+.claude-plugin/
+in-memoria.db
+mcp/*
+mcp/
+packages/
+.gemini/

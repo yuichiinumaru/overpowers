@@ -42,7 +42,7 @@
     "evolution": "kb_model_evolution_playbook",
     "risk_frame": "kb_common_schemas#/$defs/RiskFrame",
     "context_rot": "kb_autocontinue#context_rot_mitigation",
-    "hrm_model": "kb_problem_solving_network#solver_library.psn.ml.hrm_v1",
+    "hrm_model": "kb_problem_solving_network#solver_library.psn.ml.hrm_v1"
     "hrm_model": "kb_psn_lexsupremus#definitions.HRM"
   },
   "cfa_integration_points": [
@@ -135,7 +135,7 @@
     "profiles": [
       { "profile_id": "PROF-LOW-LATENCY", "name": "Low Latency / High Speed", "settings": { "max_reasoning_steps": 3, "self_correction_loops": 0, "tree_depth": 1, "n_paths": 2, "simulation_count": 500, "exploration_factor": 2.0, "branching_factor": 2 } },
       { "profile_id": "PROF-HIGH-QUALITY", "name": "High Quality / Max Accuracy", "settings": { "max_reasoning_steps": "unlimited", "self_correction_loops": 3, "tree_depth": 3, "n_paths": 8, "simulation_count": 2000, "exploration_factor": 1.41, "branching_factor": 3 } },
-      { "profile_id": "PROF-BALANCED", "name": "Balanced", "settings": { "max_reasoning_steps": 5, "self_correction_loops": 1, "tree_depth": 2, "n_paths": 4, "simulation_count": 1000, "exploration_factor": 1.5, "branching_factor": 2 } },
+      { "profile_id": "PROF-BALANCED", "name": "Balanced", "settings": { "max_reasoning_steps": 5, "self_correction_loops": 1, "tree_depth": 2, "n_paths": 4, "simulation_count": 1000, "exploration_factor": 1.5, "branching_factor": 2 } }
       { "profile_id":"PROF-PSN-HIGH-QUALITY", "name":"PSN High Quality", "settings":{ "max_reasoning_steps":"unlimited", "self_correction_loops":3, "tree_depth":5, "simulation_count":5000, "exploration_factor":1.2, "branching_factor":4 } }
     ]
   },

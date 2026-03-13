@@ -85,7 +85,7 @@
         "rule_id": "SEL-HRM-PATTERN",
         "if": { "requires_hrm_solver": true },
         "then": { "select_pattern": "ORCH-PAT-HRM-01", "expected_latency_ms": 1000 }
-      },
+      }
       {
         "priority": 80,
         "rule_id": "SEL-FAN-OUT",
@@ -318,4 +318,4 @@
       { "term": "Error Envelope", "category": "Communication", "definition": "Standard format for inter-agent errors." }
     ]
   }
-}]}
+}

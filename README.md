@@ -10,13 +10,13 @@ Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, and **Kilo Code
 
 | Component | Count | Description |
 |-----------|-------|-------------|
-| **Agents** | 937+ | Specialized AI personas for every task |
-| **Skills** | 1280+ | Complex workflow automation (SKILL.md) |
+| **Agents** | 475+ | Specialized AI personas for every task |
+| **Skills** | 1316+ | Complex workflow automation (SKILL.md) |
 | **Commands/Workflows** | 303+ | Complete process guides (also serve as commands) |
-| **Scripts** | 67+ | DevOps, automation & setup helpers |
+| **Scripts** | 95+ | DevOps, automation & setup helpers |
 | **Hooks** | 44 | Pre/post action notifications |
 
-**Total: 2600+ components!**
+**Total: 2233+ components!**
 
 ---
 

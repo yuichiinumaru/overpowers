@@ -66,10 +66,11 @@ If a file, rule, script, or component is deprecated, outdated, or no longer need
 > [!CAUTION]
 > **THIS IS AN IMMUTABLE RULE. VIOLATION IS STRICTLY FORBIDDEN.**
 
-Every modification to this repository **MUST** be accompanied by an entry in `CHANGELOG.md`.
+Every modification to this repository **MUST** be accompanied by an entry in `CHANGELOG.md` and a README update.
 1. **ALWAYS ADD** new entries at the TOP of the changelog (descending date order).
 2. **NEVER DELETE** existing changelog entries.
 3. **NEVER MODIFY** past entries except to fix typos.
+4. **ALWAYS RUN** `python3 scripts/maintenance/update_readme_counts.py` before committing to keep the component inventory up-to-date.
 
 **Format**:
 ```markdown
@@ -206,6 +207,14 @@ While Jules relies on the platform native submit tool, Antigravity, Gemini-CLI a
 * **Important Notes:**
   * New bookmarks require `--allow-new` flag on the first push.
   * Commits **must have a description** (`jj describe -m "..."`) before pushing, or `jj git push` will refuse.
+
+### 10.4. INTERACTIVE COMMANDS & TERMINAL LIMITATIONS
+**CRITICAL**: In certain CLI environments (like Gemini CLI), agents cannot interact with TTY prompts or pagers (e.g., `less`, `more`, or interactive `jj`/`git` commands).
+* 🔴 **AVOID**: Raw interactive commands that might hang the session or require manual key presses.
+* 🟢 **PREFER**: Redirecting output to files in `.agents/thoughts/` for non-blocking analysis.
+* **Example**: Instead of `jj log`, use `jj log --no-graph > .agents/thoughts/jj-log.md`.
+* **Example**: Instead of `jj status`, use `jj status > .agents/thoughts/jj-status.md`.
+* **Efficiency**: This prevents "hanging" the agent and allows parallel work to proceed without human intervention.
 
 ---
 

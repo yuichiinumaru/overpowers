@@ -212,14 +212,14 @@
         "Ensure low-level execution trace follows the plan"
       ],
       "metrics": {
-        "plan_coverage": null, "alignment_score": null
-      },
-      "test_cases": [
-        {
-          "input": { "high_level_plan": ["step1","step2"], "execution_trace": "..." },
-          "expected": { "coverage": 1.0 }
-        }
-      ]
+        "plan_coverage": null, "alignment_score": null },
+        "alignment_score": null
+        "test_cases": [
+          {
+            "input": {
+            "high_level_plan": ["step1","step2"], "execution_trace": "..." },
+            "expected": { "coverage": 1.0 }
+            "execution_trace": "..."
     },
     {
       "module_id": "V-RAG-FACT-CHECK-01",
