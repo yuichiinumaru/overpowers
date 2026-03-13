@@ -61,12 +61,12 @@ Interactive menu with 50+ plugins and themes from the [awesome-opencode](https:/
 ```
 overpowers/
 ├── install.sh                # ⭐ Master installer
-├── agents/                   # 467+ specialized AI agents (.md)
-├── skills/                   # 333+ skills (skill-name/SKILL.md)
-├── workflows/                # 263+ process guides / commands (.md)
-├── hooks/                    # 29 notification integrations
+├── agents/                   # 475+ specialized AI agents (.md)
+├── skills/                   # 1316+ skills (skill-name/SKILL.md)
+├── workflows/                # 303+ process guides / commands (.md)
+├── hooks/                    # 44 notification integrations
 ├── commands/                 # Shorthand operations
-├── scripts/                  # 110+ DevOps/automation helpers
+├── scripts/                  # 95+ DevOps/automation helpers
 │   ├── deploy-to-opencode.sh     # Symlink to OpenCode
 │   ├── deploy-to-gemini-cli.sh   # Symlink to Gemini CLI
 │   ├── deploy-to-antigravity.sh  # Symlink to Antigravity

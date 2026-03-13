@@ -42,6 +42,13 @@ def main():
     # Update Total Count
     content = re.sub(r'\*\*Total: \d+\+? components!\*\*', f'**Total: {total_count}+ components!**', content)
 
+    # Update Structure Tree Counts
+    content = re.sub(r'├── agents/\s+# \d+\+? specialized AI agents \(\.md\)', f'├── agents/                   # {agents_count}+ specialized AI agents (.md)', content)
+    content = re.sub(r'├── skills/\s+# \d+\+? skills \(skill-name/SKILL\.md\)', f'├── skills/                   # {skills_count}+ skills (skill-name/SKILL.md)', content)
+    content = re.sub(r'├── workflows/\s+# \d+\+? process guides / commands \(\.md\)', f'├── workflows/                # {workflows_count}+ process guides / commands (.md)', content)
+    content = re.sub(r'├── hooks/\s+# \d+\+? notification integrations', f'├── hooks/                    # {hooks_count} notification integrations', content)
+    content = re.sub(r'├── scripts/\s+# \d+\+? DevOps/automation helpers', f'├── scripts/                  # {scripts_count}+ DevOps/automation helpers', content)
+
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(content)
 
