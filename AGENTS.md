@@ -37,6 +37,19 @@
 
 ---
 
+## 1.1. COMMAND & WORKFLOW MAPPING (GEMINI CLI vs ANTIGRAVITY)
+To prevent command collisions and maintain cross-agent compatibility, we enforce the following mapping:
+
+| Project Source | Deployment Target | Purpose | Agent Framework |
+|:---|:---|:---|:---|
+| `workflows/*.md` | `~/.gemini/commands/` | Human-triggerable workflows via `/` prefix. | **Gemini CLI** (via symlink) |
+| `workflows/toml/` | `~/.gemini/commands/` | Compiled TOML versions of workflows for CLI execution. | **Gemini CLI** (via symlink) |
+| `.agents/commands/` | Local `.agents/` | Project-specific command definitions. | **Antigravity** (Local Only) |
+
+**Note**: All global Overpowers workflows in `workflows/` should follow the `ovp-name.md` naming convention to avoid collisions with built-in Gemini CLI commands.
+
+---
+
 ## 2. THE ARCHIVE PROTOCOL (NEVER DELETE)
 > [!WARNING]  
 > **NEVER DELETE FILES OR FOLDERS. AVOID `rm` AND `rm -rf` AT ALL COSTS.**

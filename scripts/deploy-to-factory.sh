@@ -30,7 +30,7 @@ create_symlinks "${AGENTS_DIR}" "${SYMLINKS[@]}"
 
 # 2. Droids (Workflows) 
 # Note: map workflows to droids
-declare -a FACTORY_LINKS=(".agents/commands/workflows:droids")
+declare -a FACTORY_LINKS=("workflows/toml:droids")
 create_symlinks "${FACTORY_DIR}" "${FACTORY_LINKS[@]}"
 
 # 3. Handle AGENTS.md -> AGENTS.md

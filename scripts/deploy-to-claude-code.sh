@@ -22,7 +22,7 @@ echo ""
 mkdir -p "${CLAUDE_DIR}"
 declare -a SYMLINKS=(
     "skills:skills"
-    ".agents/commands/workflows:commands"
+    "workflows/toml:commands"
 )
 create_symlinks "${CLAUDE_DIR}" "${SYMLINKS[@]}"
 

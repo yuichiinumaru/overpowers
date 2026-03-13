@@ -1,5 +1,0 @@
-description = "Analyze code performance and propose three specific optimization improvements"
-
-prompt = '''
-Analyze the performance of this code and propose three specific optimizations.
-'''

@@ -58,7 +58,7 @@ mkdir -p "${GEMINI_DIR}"
 declare -a SYMLINKS=(
     "skills:skills"
     "hooks:hooks"
-    ".agents/commands/workflows:commands"
+    "workflows/toml:commands"
 )
 
 # --- Process main symlinks ---
