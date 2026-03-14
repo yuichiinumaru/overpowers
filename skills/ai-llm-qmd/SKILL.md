@@ -1,9 +1,13 @@
 ---
 name: qmd
-description: Search markdown knowledge bases efficiently using qmd. Use this when searching Obsidian vaults or markdown collections to find relevant content with minimal token usage.
+description: Search markdown knowledge bases efficiently using qmd. Use this when
+  searching Obsidian vaults or markdown collections to find relevant content with
+  minimal token usage.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # QMD Search Skill
 

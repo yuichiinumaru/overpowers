@@ -4,6 +4,8 @@ description: Fullscreen scene transitions for Remotion.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Transitions
 

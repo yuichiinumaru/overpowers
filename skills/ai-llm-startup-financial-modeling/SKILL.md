@@ -1,9 +1,11 @@
 ---
 name: startup-financial-modeling
-description: ''
+description: Startup Financial Modeling
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Startup Financial Modeling
 

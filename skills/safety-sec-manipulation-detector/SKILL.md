@@ -1,9 +1,11 @@
 ---
 name: manipulation-detector
-description: ''
+description: Manipulation Detector
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Manipulation Detector
 

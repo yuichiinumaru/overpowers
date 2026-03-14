@@ -1,8 +1,10 @@
 ---
 name: baoyu-infographic
-description: ''
+description: Generates infographic-ready structured content and prompts from source material using layout and style systems.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Infographic Generator
 

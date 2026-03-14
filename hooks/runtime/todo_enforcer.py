@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import os
 import sys
-import re
 
 def get_tasklist_tasks(project_root):
     tasklist_path = os.path.join(project_root, 'docs', 'tasklist.md')
@@ -18,49 +17,59 @@ def get_tasklist_tasks(project_root):
     return open_tasks
 
 def get_continuity_tasks(project_root):
-    continuity_path = os.path.join(project_root, 'continuity.md')
-    if not os.path.exists(continuity_path):
-        return []
-
-    with open(continuity_path, 'r', encoding='utf-8') as f:
-        content = f.read()
-
-    # Find the "Pending Tasks" section
-    pending_section = re.search(r'## Pending Tasks.*?\n(.*?)(?:\n##|$)', content, re.DOTALL | re.IGNORECASE)
-    if not pending_section:
-        return []
-
+    # Prefer continuity files in .agents/, with root fallback for legacy repos.
     tasks = []
-    for line in pending_section.group(1).strip().splitlines():
-        if line.strip().startswith(('1.', '2.', '3.', '4.', '5.', '-')):
-            tasks.append(line.strip())
+    candidates = []
+    agents_dir = os.path.join(project_root, '.agents')
+    if os.path.isdir(agents_dir):
+        candidates.append(agents_dir)
+    candidates.append(project_root)
+
+    seen = set()
+    for base_dir in candidates:
+        try:
+            filenames = os.listdir(base_dir)
+        except OSError:
+            continue
+        for filename in filenames:
+            if not (filename.startswith('continuity-') and filename.endswith('.md')):
+                continue
+            path = os.path.join(base_dir, filename)
+            if path in seen:
+                continue
+            seen.add(path)
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+            except OSError:
+                continue
+
+            # Look for checklists [ ] anywhere in the continuity file.
+            for line in content.splitlines():
+                if line.strip().startswith('- [ ]'):
+                    tasks.append(f"[{os.path.relpath(path, project_root)}] {line.strip()[5:].strip()}")
     return tasks
 
 def main():
     project_root = os.getenv('OVERPOWERS_PATH', os.getcwd())
-    
+
     tasklist_tasks = get_tasklist_tasks(project_root)
     continuity_tasks = get_continuity_tasks(project_root)
 
-    all_pending = []
-    if continuity_tasks:
-        all_pending.extend(continuity_tasks)
-    
-    # Avoid duplicates if they appear in both
-    for t in tasklist_tasks:
-        # Simple heuristic to avoid repeating tasks already listed in continuity
-        if not any(t[5:].strip().lower() in ct.lower() for t in [t] for ct in continuity_tasks):
-            all_pending.append(t)
+    all_pending = tasklist_tasks + continuity_tasks
 
     if all_pending:
-        print("--- PENDING TASKS DETECTED ---")
-        print("Please continue working on the remaining items to ensure the task is completed:")
-        for t in all_pending[:5]: 
-            print(f"  {t}")
-        if len(all_pending) > 5:
-            print(f"  ...and {len(all_pending) - 5} more.")
-        print("\nDO NOT STOP UNTIL ALL TASKS ARE MARKED AS COMPLETED.")
+        print("\n" + "!"*40)
+        print("🚀 PENDING TASKS DETECTED")
+        print("!"*40)
+        print("The following items require your attention to ensure task continuity:")
+        for t in all_pending[:10]: 
+            print(f"  • {t}")
+        if len(all_pending) > 10:
+            print(f"  ...and {len(all_pending) - 10} more.")
+        print("\nDO NOT STOP UNTIL ALL ITEMS ARE MARKED AS COMPLETED [x].")
         print("CONTINUE.")
+        print("!"*40 + "\n")
         sys.exit(0)
 
 if __name__ == "__main__":

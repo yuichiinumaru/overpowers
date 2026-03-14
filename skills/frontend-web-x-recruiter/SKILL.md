@@ -4,6 +4,8 @@ description: 用于在 X (x.com) 发布招聘帖子。包含文案规范、图�
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # X Recruiter (X 招聘助手)
 

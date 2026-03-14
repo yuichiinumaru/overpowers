@@ -1,9 +1,12 @@
 ---
 name: handoff
-description: Write or update a handoff document so the next agent with fresh context can continue this work.
+description: Write or update a handoff document so the next agent with fresh context
+  can continue this work.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Handoff
 

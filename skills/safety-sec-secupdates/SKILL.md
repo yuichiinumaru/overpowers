@@ -1,9 +1,13 @@
 ---
 name: secupdates
-description: Security news aggregation from tldrsec, no.security, and other sources. USE WHEN security news, security updates, what's new in security, breaches, security research, sec updates. SkillSearch('secupdates') for docs.
+description: Security news aggregation from tldrsec, no.security, and other sources.
+  USE WHEN security news, security updates, what's new in security, breaches, security
+  research, sec updates. SkillSearch('secupdates') for docs.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Secupdates
 

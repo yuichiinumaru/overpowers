@@ -1,9 +1,11 @@
 ---
 name: startup-metrics-framework
-description: ''
+description: Startup Metrics Framework
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Startup Metrics Framework
 

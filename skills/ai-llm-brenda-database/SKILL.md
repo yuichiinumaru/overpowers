@@ -1,9 +1,13 @@
 ---
 name: brenda-database
-description: Access BRENDA enzyme database via SOAP API. Retrieve kinetic parameters (Km, kcat), reaction equations, organism data, and substrate-specific enzyme information for biochemical research and metabolic pathway analysis.
+description: Access BRENDA enzyme database via SOAP API. Retrieve kinetic parameters
+  (Km, kcat), reaction equations, organism data, and substrate-specific enzyme information
+  for biochemical research and metabolic pathway analysis.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # BRENDA Database
 

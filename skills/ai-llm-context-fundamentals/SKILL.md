@@ -1,9 +1,11 @@
 ---
 name: context-fundamentals
-description: ''
+description: Context Engineering Fundamentals
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Context Engineering Fundamentals
 

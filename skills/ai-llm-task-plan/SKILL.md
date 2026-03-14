@@ -4,6 +4,8 @@ description: Automation and tasks for task-plan
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Task Plan: [Brief Description]
 <!-- 

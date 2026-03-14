@@ -1,0 +1,232 @@
+{
+  "timestamp": 1773679436.3519466,
+  "total_skills": 3361,
+  "valid_skills": 13,
+  "invalid_skills": 3348,
+  "levels_distribution": {
+    "1": 13
+  },
+  "types": {
+    "count": 4,
+    "distribution": {
+      "ai": 8,
+      "data": 1,
+      "web": 3,
+      "baidu": 1
+    },
+    "average_per_type": 840.25
+  },
+  "subtypes": {
+    "total": 0,
+    "average_per_type": 0.0,
+    "average_skills_per_subtype": 0
+  },
+  "validation_issues": [
+    {
+      "level": "L1",
+      "issue": "Muito poucos tipos",
+      "current": 4,
+      "min": 10,
+      "severity": "CRITICAL"
+    },
+    {
+      "level": "L1",
+      "category": "ai",
+      "issue": "Muito poucas skills neste tipo",
+      "current": 8,
+      "min": 50,
+      "severity": "CRITICAL"
+    },
+    {
+      "level": "L2",
+      "category": "ai",
+      "issue": "Muito poucos subtipos",
+      "current": 0,
+      "min": 4,
+      "severity": "WARNING"
+    },
+    {
+      "level": "L1",
+      "category": "data",
+      "issue": "Muito poucas skills neste tipo",
+      "current": 1,
+      "min": 50,
+      "severity": "CRITICAL"
+    },
+    {
+      "level": "L2",
+      "category": "data",
+      "issue": "Muito poucos subtipos",
+      "current": 0,
+      "min": 4,
+      "severity": "WARNING"
+    },
+    {
+      "level": "L1",
+      "category": "web",
+      "issue": "Muito poucas skills neste tipo",
+      "current": 3,
+      "min": 50,
+      "severity": "CRITICAL"
+    },
+    {
+      "level": "L2",
+      "category": "web",
+      "issue": "Muito poucos subtipos",
+      "current": 0,
+      "min": 4,
+      "severity": "WARNING"
+    },
+    {
+      "level": "L1",
+      "category": "baidu",
+      "issue": "Muito poucas skills neste tipo",
+      "current": 1,
+      "min": 50,
+      "severity": "CRITICAL"
+    },
+    {
+      "level": "L2",
+      "category": "baidu",
+      "issue": "Muito poucos subtipos",
+      "current": 0,
+      "min": 4,
+      "severity": "WARNING"
+    }
+  ],
+  "chunking_needed": [],
+  "constraints": {
+    "MIN_TYPES": 10,
+    "MAX_TYPES": 20,
+    "MIN_SKILLS_PER_TYPE": 50,
+    "MAX_SKILLS_PER_TYPE": 500,
+    "MIN_SUBTYPES_PER_TYPE": 4,
+    "MAX_SUBTYPES_PER_TYPE": 20,
+    "MIN_SKILLS_PER_SUBTYPE": 5,
+    "MAX_SKILLS_PER_SUBTYPE": 80,
+    "MAX_CHUNK_SIZE": 150,
+    "MIN_CHUNK_SIZE": 40
+  },
+  "invalid_skills_details": [
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "ai-llm-ocr-image-to-markdown",
+      "path": "/home/sephiroth/Work/overpowers/skills/ai-llm-ocr-image-to-markdown"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "ai-llm-openai-whisper",
+      "path": "/home/sephiroth/Work/overpowers/skills/ai-llm-openai-whisper"
+    },
+    {
+      "valid": false,
+      "error": "Nome muito curto (precisa de pelo menos type-subtype-nnnn-name)",
+      "original": "ai-llm-perplexity",
+      "path": "/home/sephiroth/Work/overpowers/skills/ai-llm-perplexity"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "ai-llm-tavily-web",
+      "path": "/home/sephiroth/Work/overpowers/skills/ai-llm-tavily-web"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "ai-llm-transcribe-captions",
+      "path": "/home/sephiroth/Work/overpowers/skills/ai-llm-transcribe-captions"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "ai-llm-ui-ux-pro-max",
+      "path": "/home/sephiroth/Work/overpowers/skills/ai-llm-ui-ux-pro-max"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "growth-biz-visual-design-foundations",
+      "path": "/home/sephiroth/Work/overpowers/skills/growth-biz-visual-design-foundations"
+    },
+    {
+      "valid": false,
+      "error": "Nome muito curto (precisa de pelo menos type-subtype-nnnn-name)",
+      "original": "data-sci-blucli",
+      "path": "/home/sephiroth/Work/overpowers/skills/data-sci-blucli"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "data-sci-feishu-perm",
+      "path": "/home/sephiroth/Work/overpowers/skills/data-sci-feishu-perm"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "data-sci-feishu-wiki",
+      "path": "/home/sephiroth/Work/overpowers/skills/data-sci-feishu-wiki"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "data-sci-food-order",
+      "path": "/home/sephiroth/Work/overpowers/skills/data-sci-food-order"
+    },
+    {
+      "valid": false,
+      "error": "Nome muito curto (precisa de pelo menos type-subtype-nnnn-name)",
+      "original": "data-sci-gifgrep",
+      "path": "/home/sephiroth/Work/overpowers/skills/data-sci-gifgrep"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "data-sci-pdf-processing",
+      "path": "/home/sephiroth/Work/overpowers/skills/data-sci-pdf-processing"
+    },
+    {
+      "valid": false,
+      "error": "Nome muito curto (precisa de pelo menos type-subtype-nnnn-name)",
+      "original": "data-sci-wacli",
+      "path": "/home/sephiroth/Work/overpowers/skills/data-sci-wacli"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "data-sci-workspace-data-analyst",
+      "path": "/home/sephiroth/Work/overpowers/skills/data-sci-workspace-data-analyst"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "dev-code-add-uint-support",
+      "path": "/home/sephiroth/Work/overpowers/skills/dev-code-add-uint-support"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "dev-code-doc-review",
+      "path": "/home/sephiroth/Work/overpowers/skills/dev-code-doc-review"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "dev-code-meeting-notes",
+      "path": "/home/sephiroth/Work/overpowers/skills/dev-code-meeting-notes"
+    },
+    {
+      "valid": false,
+      "error": "Sem ID numérico de 4 dígitos",
+      "original": "dev-code-translate-docs",
+      "path": "/home/sephiroth/Work/overpowers/skills/dev-code-translate-docs"
+    },
+    {
+      "valid": false,
+      "error": "Nome muito curto (precisa de pelo menos type-subtype-nnnn-name)",
+      "original": "content-media-animations",
+      "path": "/home/sephiroth/Work/overpowers/skills/content-media-animations"
+    }
+  ]
+}

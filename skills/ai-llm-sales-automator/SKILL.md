@@ -4,6 +4,8 @@ description: Draft cold emails, follow-ups, and proposal templates. Creates
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Sales Automator
 

@@ -4,6 +4,8 @@ description: Create a new track with specification and phased implementation pla
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # New Track
 

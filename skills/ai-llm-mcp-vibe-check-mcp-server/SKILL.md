@@ -8,6 +8,7 @@ category: mcp
 tools:
   read: true
   bash: true
+version: 1.0.0
 ---
 # Agent Quickstart
 

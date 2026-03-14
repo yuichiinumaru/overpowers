@@ -4,6 +4,8 @@ description: Typography and text animation patterns for Remotion.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Text Animations
 

@@ -1,0 +1,93 @@
+{
+    "mcp": {
+        "serena": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "/home/sephiroth/anaconda3/bin/uvx",
+                "--from",
+                "/home/sephiroth/Work/overpowers/packages/serena",
+                "serena",
+                "start-mcp-server",
+                "--context",
+                "ide-assistant"
+            ]
+        },
+        "context7": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "npx",
+                "-y",
+                "@upstash/context7-mcp"
+            ],
+            "environment": {
+                "CONTEXT7_API_KEY": "ctx7sk-a68e3ca3-97d4-4edb-8f9f-66a32c1c4c25"
+            }
+        },
+        "hyperbrowser": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "npx",
+                "--yes",
+                "hyperbrowser-mcp"
+            ],
+            "environment": {
+                "HYPERBROWSER_API_KEY": "hb_a914a2f6cbc7234db880516e16a3, hb_1b423bb8fe6\\be2c1851a4dbefc7f"
+            }
+        },
+        "genkit-mcp-server": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "npx",
+                "-y",
+                "genkit-cli@^1.28.0",
+                "mcp",
+                "--explicitProjectRoot",
+                "--no-update-notification",
+                "--non-interactive"
+            ]
+        },
+        "vibe_check": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "node",
+                "/home/sephiroth/Work/overpowers/packages/vibe-check-mcp-server/build/index.js"
+            ],
+            "environment": {
+                "GEMINI_API_KEY": "AIzaSyD3ZkqkCnxSqHn9s8WF0mY0WbtG1nI_-eM, AIzaSyCS8zn5JVVOhGfPTta73TGAE65vTWMHZnE, AIzaSyDSLOgeRnYOrYykHDPl1CJpV0zdAqT_36k",
+                "MCP_TRANSPORT": "stdio"
+            }
+        },
+        "playwright_browser": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "npx",
+                "-y",
+                "@playwright/mcp@latest"
+            ]
+        },
+        "notebooklm": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "uvx",
+                "--from",
+                "/home/sephiroth/Work/overpowers/packages/notebooklm-mcp-cli",
+                "notebooklm-mcp"
+            ]
+        },
+        "desktop_commander": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "node",
+                "/home/sephiroth/Work/overpowers/packages/DesktopCommanderMCP/dist/index.js"
+            ]
+        }
+    }
+}

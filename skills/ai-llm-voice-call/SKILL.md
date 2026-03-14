@@ -11,6 +11,8 @@ metadata:
     requires:
       config:
       - plugins.entries.voice-call.enabled
+version: 1.0.0
+category: general
 ---
 # Voice Call
 

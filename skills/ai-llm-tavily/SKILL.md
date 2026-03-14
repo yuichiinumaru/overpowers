@@ -1,9 +1,12 @@
 ---
 name: tavily
-description: AI-optimized web search via Tavily API. Returns concise, relevant results for AI agents.
+description: AI-optimized web search via Tavily API. Returns concise, relevant results
+  for AI agents.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Tavily Search
 

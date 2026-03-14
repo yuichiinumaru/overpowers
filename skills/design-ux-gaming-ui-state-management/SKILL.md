@@ -1,9 +1,12 @@
 ---
 name: gaming-ui-state-management
-description: Patterns for game-like interfaces - health bars, XP bars, mana bars. Apply when building RPG/retro gaming UI components with state-driven visuals.
+description: Patterns for game-like interfaces - health bars, XP bars, mana bars.
+  Apply when building RPG/retro gaming UI components with state-driven visuals.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # Gaming Ui State Management
 

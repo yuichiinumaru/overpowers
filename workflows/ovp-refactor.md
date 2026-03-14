@@ -9,19 +9,23 @@ This command executes a disciplined refactoring workflow.
 
 ## Usage
 
-\`\`\`bash
+```bash
 /invoke refactor "Extract authentication logic to a service"
 /invoke refactor "Rename User class to Customer" --scope=project
-\`\`\`
+```
 
 ## 6-Phase Workflow
+
+### Phase 0: Context Initialization (Explicit Memory Read)
+- **Goal**: Align with current architectural state.
+- **Action**: Read `.agents/continuity-<agent-name>.md` and check `.agents/memories/` to ensure the refactoring doesn't conflict with recent structural changes.
 
 ### Phase 1: Intent Analysis
 - **Goal**: Understand WHAT and WHY.
 - **Output**: Core refactoring goal defined.
 
 ### Phase 2: Code Mapping (Impact Analysis)
-- **Tools**: \`explore\`, \`lsp\`, \`ast-grep\`
+- **Tools**: `explore`, `lsp`, `ast-grep`
 - **Output**: Dependency graph, impact zones (files affected).
 
 ### Phase 3: Test Assessment
@@ -41,7 +45,11 @@ This command executes a disciplined refactoring workflow.
 - **Action**: Full regression suite run.
 - **Output**: Final summary.
 
+### Phase 7: Memory Synchronization (Explicit Memory Update)
+- **Goal**: Persist the new structure in project memory.
+- **Action**: Update `.agents/continuity-<agent-name>.md` and persist the new architectural map or changed patterns to `.agents/memories/` via Serena.
+
 ## Critical Rules
 - **Never** proceed with failing tests.
-- **Never** use \`@ts-ignore\` or \`as any\` to suppress errors.
+- **Never** use `@ts-ignore` or `as any` to suppress errors.
 - **Always** verify after every change.

@@ -1,9 +1,11 @@
 ---
 name: red-team-tools
-description: ''
+description: Red Team Tools and Methodology
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Red Team Tools and Methodology
 

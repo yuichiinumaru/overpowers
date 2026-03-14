@@ -1,9 +1,11 @@
 ---
 name: competitive-landscape
-description: ''
+description: Competitive Landscape Analysis
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Competitive Landscape Analysis
 

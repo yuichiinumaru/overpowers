@@ -4,6 +4,8 @@ description: Automation and tasks for findings
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Findings & Decisions
 <!-- 

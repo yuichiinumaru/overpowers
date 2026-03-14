@@ -9,15 +9,23 @@ prompt = '''
 
 ## Actions
 
-1. **Understand Input**: Review the raw idea or the provided document in `docs/tasks/planning/`.
+1. **Context Initialization (Explicit Memory Read)**: 
+   - Read `.agents/continuity-<agent-name>.md` and check `.agents/memories/` to align with the current project state and strategic focus.
+   - Review any existing project context or parent plans that this feature must inherit.
 
-2. **Interview User**: Ask clarifying questions to extract:
+2. **Understand Input**: Review the raw idea or the provided document in `docs/tasks/planning/`.
+
+3. **Interview User**: Ask clarifying questions to extract:
    - **Vertical Slices**: How the feature can be divided incrementally into deployable milestones.
    - **Exit Conditions / Acceptance Criteria**: What definitively constitutes the feature as "complete" and ready for testing.
    - **Jobs To Be Done (JTBD)**: The real-world objective the user is trying to accomplish.
 
-3. **Format & Save**: 
+4. **Format & Save**: 
    - Generate `docs/tasks/nnnn-type-subtype-[name]-feature-plan.md` using the standard convention.
    - Ensure the template structure (`000-template-feature-plan.md` if available) is strictly followed.
    - **CRITICAL**: No code is to be generated or modified during this stage. This is strictly for requirement clarification.
+
+5. **Memory Synchronization (Explicit Memory Update)**: 
+   - Update `.agents/continuity-<agent-name>.md` to record the creation of this new feature plan.
+   - Persist any major discovery made during the interview to `.agents/memories/` using Serena.
 '''

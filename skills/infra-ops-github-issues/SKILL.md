@@ -1,9 +1,11 @@
 ---
 name: github-issues
-description: ''
+description: GitHub Issues
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # GitHub Issues
 

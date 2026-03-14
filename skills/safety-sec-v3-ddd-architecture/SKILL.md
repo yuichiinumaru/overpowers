@@ -1,9 +1,12 @@
 ---
 name: v3-ddd-architecture
-description: Domain-Driven Design architecture for claude-flow v3. Implements modular, bounded context architecture with clean separation of concerns and microkernel pattern.
+description: Domain-Driven Design architecture for claude-flow v3. Implements modular,
+  bounded context architecture with clean separation of concerns and microkernel pattern.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # V3 DDD Architecture
 

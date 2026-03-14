@@ -4,6 +4,8 @@ description: Upscale and enhance image and video resolution using AI
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Fal Upscale
 

@@ -1,9 +1,11 @@
 ---
 name: baoyu-markdown-to-html
-description: ''
+description: Markdown to HTML Converter
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Markdown to HTML Converter
 

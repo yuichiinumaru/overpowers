@@ -1,9 +1,12 @@
 ---
 name: read-arxiv-paper
-description: Use this skill when when asked to read an arxiv paper given an arxiv URL
+description: Use this skill when when asked to read an arxiv paper given an arxiv
+  URL
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Read Arxiv Paper
 

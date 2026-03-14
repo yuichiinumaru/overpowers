@@ -1,9 +1,11 @@
 ---
 name: book-translation
-description: ''
+description: Book Translation Skill
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Book Translation Skill
 

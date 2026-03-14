@@ -1,5 +1,5 @@
 # Task 0028: Memory Lifecycle (Ops)
-**Status**: [ ]
+**Status**: [x]
 **Priority**: MEDIUM
 **Type**: ops
 ## Objective

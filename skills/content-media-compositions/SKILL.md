@@ -4,6 +4,8 @@ description: Defining compositions, stills, folders, default props and dynamic m
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Compositions
 

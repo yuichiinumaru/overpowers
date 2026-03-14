@@ -1,9 +1,13 @@
 ---
 name: git-master
-description: Git expert for atomic commits, rebase/squash, and history search. Use when you need to commit changes, clean up history, or find who wrote code/when bugs were introduced.
+description: Git expert for atomic commits, rebase/squash, and history search. Use
+  when you need to commit changes, clean up history, or find who wrote code/when bugs
+  were introduced.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Git Master Skill
 

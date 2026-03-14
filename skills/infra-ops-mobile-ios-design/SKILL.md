@@ -1,9 +1,13 @@
 ---
 name: mobile-ios-design
-description: Master iOS Human Interface Guidelines and SwiftUI patterns for building native iOS apps. Use when designing iOS interfaces, implementing SwiftUI views, or ensuring apps follow Apple's design principles.
+description: Master iOS Human Interface Guidelines and SwiftUI patterns for building
+  native iOS apps. Use when designing iOS interfaces, implementing SwiftUI views,
+  or ensuring apps follow Apple's design principles.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # iOS Mobile Design
 

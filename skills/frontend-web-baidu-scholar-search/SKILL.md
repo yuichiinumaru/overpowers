@@ -1,9 +1,13 @@
 ---
 name: baidu-scholar-search
-description: Baidu Academic Search Tool enables the retrieval of both Chinese and English literature, covering various types of literature such as academic journals, conference papers, and dissertations.
+description: Baidu Academic Search Tool enables the retrieval of both Chinese and
+  English literature, covering various types of literature such as academic journals,
+  conference papers, and dissertations.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Baidu Scholar Search
 

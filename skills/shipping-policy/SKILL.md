@@ -1,0 +1,23 @@
+---
+name: shipping-policy
+description: "Shipping Policy - Run: `npx shipping-policy`"
+metadata:
+  openclaw:
+    category: "utility"
+    tags: []
+    version: "1.0.0"
+---
+
+# 发货政策文案
+
+物流说明
+
+## Features
+
+- 电商场景优化
+- 高质量输出
+- 快速生成
+
+## Usage
+
+Run: `npx shipping-policy`

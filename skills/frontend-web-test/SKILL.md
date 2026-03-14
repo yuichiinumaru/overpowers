@@ -1,9 +1,12 @@
 ---
 name: test
-description: Use when you need to run tests for React core. Supports source, www, stable, and experimental channels.
+description: Use when you need to run tests for React core. Supports source, www,
+  stable, and experimental channels.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Test
 

@@ -1,9 +1,12 @@
 ---
 name: game-development
-description: Unity ECS, Godot GDScript, and game architecture patterns. Use when developing 2D/3D games, implementing game logic, or optimizing game performance.
+description: Unity ECS, Godot GDScript, and game architecture patterns. Use when developing
+  2D/3D games, implementing game logic, or optimizing game performance.
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Game Development
 

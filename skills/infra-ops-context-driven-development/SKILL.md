@@ -4,6 +4,8 @@ description: Use this skill when working with Conductor's context-driven
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Context-Driven Development
 

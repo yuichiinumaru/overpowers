@@ -8,7 +8,7 @@ Scans common locations for user-installed MCP configurations
 2. a consolidated JSON of all user-installed MCP plugins
 
 Usage:
-  python scripts/extract-installed-mcps.py
+  python scripts/utils/extract-installed-mcps.py
 """
 
 import os
@@ -17,7 +17,7 @@ import re
 import argparse
 
 CONFIG_LOCATIONS = [
-    os.path.expanduser("~/.opencode/opencode.json"),
+    os.path.expanduser("~/.config/opencode/opencode.json"),
     os.path.expanduser("~/.gemini/antigravity/mcp_config.json"),
     os.path.expanduser("~/.config/gemini/mcp_config.json"),
     os.path.expanduser("~/.config/gemini/mcp.json"),
@@ -69,7 +69,7 @@ def extract(env_path=None):
             # If the user-provided env doesn't exist yet, we'll create it
             open(target_env, 'w').close()
     else:
-        target_env = os.path.join(os.path.dirname(__file__), "..", ".env.example")
+        target_env = os.path.join(os.path.dirname(__file__), "..", "..", ".env.example")
     
     existing_envs = set()
     if os.path.exists(target_env):

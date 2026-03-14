@@ -4,6 +4,8 @@ description: Transcribe audio files to text using OpenAI Whisper
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Whisper Audio Transcription Skill
 

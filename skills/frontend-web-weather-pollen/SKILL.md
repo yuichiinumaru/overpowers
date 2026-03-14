@@ -1,9 +1,12 @@
 ---
 name: weather-pollen
-description: Weather and pollen reports for any location using free APIs. Get current conditions, forecasts, and pollen data.
+description: Weather and pollen reports for any location using free APIs. Get current
+  conditions, forecasts, and pollen data.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Weather and Pollen Skill
 

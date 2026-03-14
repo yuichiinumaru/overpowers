@@ -1,9 +1,11 @@
 ---
 name: project-development
-description: ''
+description: Project Development Methodology
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Project Development Methodology
 

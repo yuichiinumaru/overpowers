@@ -1,9 +1,12 @@
 ---
 name: 8-bit-pixel-art-patterns
-description: Create pixelated borders, shadows, and effects for 8-bit retro components. Apply when building 8-bit styled UI components that need authentic pixel art aesthetics.
+description: Create pixelated borders, shadows, and effects for 8-bit retro components.
+  Apply when building 8-bit styled UI components that need authentic pixel art aesthetics.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # 8 Bit Pixel Art Patterns
 

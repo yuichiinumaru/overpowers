@@ -1,6 +1,9 @@
 ---
 name: llm-powered-rag-for-bi
-description: Implementa um fluxo de Retrieval-Augmented Generation (RAG) para Business Intelligence. Lê dados corporativos ou CSV, transforma em embeddings, insere num vector database e usa LLM para responder perguntas baseadas nos dados reais da empresa, melhorando a precisão e reduzindo alucinações.
+description: Implementa um fluxo de Retrieval-Augmented Generation (RAG) para Business
+  Intelligence. Lê dados corporativos ou CSV, transforma em embeddings, insere num
+  vector database e usa LLM para responder perguntas baseadas nos dados reais da empresa,
+  melhorando a precisão e reduzindo alucinações.
 tags:
 - ai
 - llm
@@ -10,6 +13,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # LLM Powered RAG for Smarter Business Intelligence
 

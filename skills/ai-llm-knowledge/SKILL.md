@@ -1,9 +1,11 @@
 ---
 name: knowledge
-description: ''
+description: Knowledge Base Skill
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Knowledge Base Skill
 

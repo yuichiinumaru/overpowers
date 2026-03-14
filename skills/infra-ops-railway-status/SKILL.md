@@ -1,9 +1,11 @@
 ---
 name: railway-status
-description: ''
+description: Railway Status
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Railway Status
 

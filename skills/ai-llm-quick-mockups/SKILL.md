@@ -1,9 +1,13 @@
 ---
 name: quick-mockups
-description: Create multiple UI design mockups in parallel. Use when asked to create mockups, wireframes, or design variations for a feature. Creates HTML files using Mantine v7 + Tailwind following Civitai's design system.
+description: Create multiple UI design mockups in parallel. Use when asked to create
+  mockups, wireframes, or design variations for a feature. Creates HTML files using
+  Mantine v7 + Tailwind following Civitai's design system.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Quick Mockups
 

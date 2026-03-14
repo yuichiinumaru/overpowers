@@ -1,9 +1,11 @@
 ---
 name: content-strategy
-description: ''
+description: Content Strategy
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Content Strategy
 

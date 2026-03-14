@@ -4,6 +4,8 @@ description: Master Go 1.21+ with modern patterns, advanced concurrency,
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Golang Pro
 

@@ -4,6 +4,8 @@ description: Agent skill for project-board-sync - invoke with $agent-project-boa
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Agent Project Board Sync
 

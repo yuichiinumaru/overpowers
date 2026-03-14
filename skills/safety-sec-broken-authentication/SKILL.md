@@ -1,9 +1,11 @@
 ---
 name: broken-authentication
-description: ''
+description: Broken Authentication Testing
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Broken Authentication Testing
 

@@ -4,6 +4,8 @@ description: Search GIF providers with CLI/TUI, download results, and extract st
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # gifgrep
 

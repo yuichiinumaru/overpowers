@@ -1,9 +1,13 @@
 ---
 name: nia
-description: Index and search code repositories, documentation, research papers, HuggingFace datasets, local folders, and packages with Nia AI. Includes Oracle autonomous research, dependency analysis, context sharing, and code advisor.
+description: Index and search code repositories, documentation, research papers, HuggingFace
+  datasets, local folders, and packages with Nia AI. Includes Oracle autonomous research,
+  dependency analysis, context sharing, and code advisor.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Nia Skill
 

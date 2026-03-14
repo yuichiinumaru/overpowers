@@ -1,9 +1,11 @@
 ---
 name: slack-gif-creator
-description: ''
+description: Slack GIF Creator - Flexible Toolkit
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Slack GIF Creator - Flexible Toolkit
 

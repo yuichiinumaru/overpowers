@@ -1,6 +1,8 @@
 # Agent & Skill Discovery Workflow
 
-Navigate our **390+ agents and 149 skills** to find the right tool for any task.
+Navigate and discover the right agents, skills, and workflows for any task.
+
+> **Tip**: Run `uv run scripts/generators/generate-inventory.py` to get current counts and a full inventory at `.docs/inventory.md`.
 
 ## Quick Reference
 

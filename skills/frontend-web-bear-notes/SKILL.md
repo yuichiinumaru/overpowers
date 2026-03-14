@@ -4,6 +4,8 @@ description: Create, search, and manage Bear notes via grizzly CLI.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Bear Notes
 

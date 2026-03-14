@@ -1,9 +1,12 @@
 ---
 name: session-logs
-description: Search and analyze your own session logs (older/parent conversations) using jq.
+description: Search and analyze your own session logs (older/parent conversations)
+  using jq.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # session-logs
 

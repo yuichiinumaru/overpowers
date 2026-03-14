@@ -1,9 +1,12 @@
 ---
 name: google-workspace
-description: Interact with Google Workspace - create documents, spreadsheets, send emails via Gmail, and manage Google Drive files.
+description: Interact with Google Workspace - create documents, spreadsheets, send
+  emails via Gmail, and manage Google Drive files.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Google Workspace Integration
 

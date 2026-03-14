@@ -1,6 +1,14 @@
 ---
 name: tool-general-1254-search-specialist
-description: "Expert web researcher using advanced search techniques and"
+description: Expert web researcher using advanced search techniques and
+version: 1.0.0
+category: general
+tags:
+- '1254'
+- general
+- search
+- specialist
+- tool
 ---
 
 # Search Specialist

@@ -1,9 +1,11 @@
 ---
 name: context-degradation
-description: ''
+description: Context Degradation Patterns
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Context Degradation Patterns
 

@@ -1,9 +1,16 @@
 ---
 name: component-refactoring
-description: Refactor high-complexity React components in Dify frontend. Use when `pnpm analyze-component --json` shows complexity > 50 or lineCount > 300, when the user asks for code splitting, hook extraction, or complexity reduction, or when `pnpm analyze-component` warns to refactor before testing; avoid for simple/well-structured components, third-party wrappers, or when the user explicitly wants testing without refactoring.
+description: Refactor high-complexity React components in Dify frontend. Use when
+  `pnpm analyze-component --json` shows complexity > 50 or lineCount > 300, when the
+  user asks for code splitting, hook extraction, or complexity reduction, or when
+  `pnpm analyze-component` warns to refactor before testing; avoid for simple/well-structured
+  components, third-party wrappers, or when the user explicitly wants testing without
+  refactoring.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Dify Component Refactoring Skill
 

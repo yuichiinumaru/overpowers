@@ -4,6 +4,8 @@ description: Fundamental animation skills for Remotion
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Animations
 

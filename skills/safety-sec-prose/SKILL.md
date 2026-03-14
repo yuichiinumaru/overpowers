@@ -1,9 +1,12 @@
 ---
 name: prose
-description: OpenProse VM skill pack. Activate on any `prose` command, .prose files, or OpenProse mentions; orchestrates multi-agent workflows.
+description: OpenProse VM skill pack. Activate on any `prose` command, .prose files,
+  or OpenProse mentions; orchestrates multi-agent workflows.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # OpenProse Skill
 

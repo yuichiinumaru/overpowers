@@ -1,6 +1,16 @@
 ---
 name: media-content-1252-naver-news
-description: "Search Korean news articles using Naver Search API. Use when searching for Korean news, getting latest news updates, finding news about specific topics, or preparing daily news summaries. Supports relevance and date-based sorting."
+description: Search Korean news articles using Naver Search API. Use when searching
+  for Korean news, getting latest news updates, finding news about specific topics,
+  or preparing daily news summaries. Supports relevance and date-based sorting.
+version: 1.0.0
+category: general
+tags:
+- '1252'
+- content
+- general
+- media
+- naver
 ---
 
 # Naver News Search

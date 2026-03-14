@@ -1,9 +1,11 @@
 ---
 name: prompt-factory
-description: ''
+description: prompt-factory
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # prompt-factory
 

@@ -1,9 +1,11 @@
 ---
 name: competitive-intelligence
-description: ''
+description: Competitive Intelligence
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Competitive Intelligence
 

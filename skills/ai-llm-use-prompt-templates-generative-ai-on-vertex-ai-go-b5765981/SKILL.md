@@ -1,9 +1,13 @@
 ---
 name: use-prompt-templates-generative-ai-on-vertex-ai-go-b5765981
-description: '. Optional: To view different results, adjust the prompt, model, or parameters, and click Submit. Learn more about prompting strategies. Learn about responsible AI best practices and Vertex AI'
+description: '. Optional: To view different results, adjust the prompt, model, or
+  parameters, and click Submit. Learn more about prompting strategies. Learn about
+  responsible AI best practices and Vertex AI'
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Use prompt templates | Generative AI on Vertex AI | Google Cloud
 

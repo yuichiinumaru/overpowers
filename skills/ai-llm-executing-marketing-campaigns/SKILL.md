@@ -1,9 +1,13 @@
 ---
 name: executing-marketing-campaigns
-description: Plans, creates, and optimizes marketing campaigns including content strategy, social media, email, and analytics. Helps develop go-to-market strategies, campaign messaging, and performance measurement.
+description: Plans, creates, and optimizes marketing campaigns including content strategy,
+  social media, email, and analytics. Helps develop go-to-market strategies, campaign
+  messaging, and performance measurement.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Executing Marketing Campaigns
 

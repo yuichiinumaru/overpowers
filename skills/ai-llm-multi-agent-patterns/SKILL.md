@@ -1,9 +1,11 @@
 ---
 name: multi-agent-patterns
-description: ''
+description: Multi-Agent Architecture Patterns
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Multi-Agent Architecture Patterns
 

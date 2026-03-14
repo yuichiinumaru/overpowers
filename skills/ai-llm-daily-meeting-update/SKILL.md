@@ -1,9 +1,15 @@
 ---
 name: daily-meeting-update
-description: Interactive daily standup/meeting update generator. Use when user says 'daily', 'standup', 'scrum update', 'status update', 'what did I do yesterday', 'prepare for meeting', 'morning update', or 'team sync'. Pulls activity from GitHub, Jira, and Claude Code session history. Conducts 4-question interview (yesterday, today, blockers, discussion topics) and generates formatted Markdown update.
+description: Interactive daily standup/meeting update generator. Use when user says
+  'daily', 'standup', 'scrum update', 'status update', 'what did I do yesterday',
+  'prepare for meeting', 'morning update', or 'team sync'. Pulls activity from GitHub,
+  Jira, and Claude Code session history. Conducts 4-question interview (yesterday,
+  today, blockers, discussion topics) and generates formatted Markdown update.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Daily Meeting Update
 

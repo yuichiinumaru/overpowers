@@ -1,9 +1,14 @@
 ---
 name: linear-solvers
-description: Select and configure linear solvers for systems Ax=b in dense and sparse problems. Use when choosing direct vs iterative methods, diagnosing convergence issues, estimating conditioning, selecting preconditioners, or debugging stagnation in GMRES/CG/BiCGSTAB.
+description: Select and configure linear solvers for systems Ax=b in dense and sparse
+  problems. Use when choosing direct vs iterative methods, diagnosing convergence
+  issues, estimating conditioning, selecting preconditioners, or debugging stagnation
+  in GMRES/CG/BiCGSTAB.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Linear Solvers
 

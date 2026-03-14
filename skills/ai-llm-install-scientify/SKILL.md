@@ -1,9 +1,13 @@
 ---
 name: install-scientify
-description: Install Scientify - AI-powered research workflow automation plugin. Adds skills for idea-generation, literature-review, research-pipeline, arxiv search, and workspace management commands.
+description: Install Scientify - AI-powered research workflow automation plugin. Adds
+  skills for idea-generation, literature-review, research-pipeline, arxiv search,
+  and workspace management commands.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Install Scientify
 

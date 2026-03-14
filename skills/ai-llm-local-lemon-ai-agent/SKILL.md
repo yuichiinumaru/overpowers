@@ -1,6 +1,7 @@
 ---
 name: local-lemon-ai-agent
-description: Install and run the open-source Lemon AI agent locally as a general-purpose AI assistant for complex task execution.
+description: Install and run the open-source Lemon AI agent locally as a general-purpose
+  AI assistant for complex task execution.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Run Lemon AI Agent Locally
 

@@ -3,6 +3,8 @@ name: fact-checker
 description: '|'
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Fact Checker
 

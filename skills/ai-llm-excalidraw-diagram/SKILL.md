@@ -1,9 +1,11 @@
 ---
 name: excalidraw-diagram
-description: ''
+description: Excalidraw Diagram Generator
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Excalidraw Diagram Generator
 

@@ -1,0 +1,105 @@
+{
+  "mcp": {
+    "hyperbrowser": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "--yes",
+        "hyperbrowser-mcp"
+      ],
+      "environment": {
+        "HYPERBROWSER_API_KEY": "${HYPERBROWSER_API_KEY}"
+      }
+    },
+    "genkit-mcp-server": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "genkit-cli@^1.28.0",
+        "mcp",
+        "--explicitProjectRoot",
+        "--no-update-notification",
+        "--non-interactive"
+      ]
+    },
+    "memcord": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "uvx",
+        "memcord",
+        "server"
+      ],
+      "environment": {
+        "MEMCORD_ENABLE_ADVANCED": "true"
+      }
+    },
+    "vibe_check": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "node",
+        "${VIBE_CHECK_PATH}"
+      ],
+      "environment": {
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}",
+        "MCP_TRANSPORT": "stdio"
+      }
+    },
+    "context7": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "environment": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      }
+    },
+    "playwright_browser": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "serena": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "${UVX_PATH}",
+        "--from",
+        "${SERENA_PATH}",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide-assistant"
+      ]
+    },
+    "notebooklm": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "${UVX_PATH}",
+        "--from",
+        "${NOTEBOOKLM_PATH}",
+        "notebooklm-mcp"
+      ]
+    },
+    "desktop_commander": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "node",
+        "${DESKTOP_COMMANDER_PATH}"
+      ]
+    }
+  }
+}

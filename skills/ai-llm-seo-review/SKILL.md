@@ -1,9 +1,12 @@
 ---
 name: seo-review
-description: Perform a focused SEO audit on JavaScript concept pages to maximize search visibility, featured snippet optimization, and ranking potential
+description: Perform a focused SEO audit on JavaScript concept pages to maximize search
+  visibility, featured snippet optimization, and ranking potential
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Skill: SEO Audit for Concept Pages
 

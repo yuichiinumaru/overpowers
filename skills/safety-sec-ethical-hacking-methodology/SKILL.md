@@ -1,9 +1,11 @@
 ---
 name: ethical-hacking-methodology
-description: ''
+description: Ethical Hacking Methodology
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Ethical Hacking Methodology
 

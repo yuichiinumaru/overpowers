@@ -4,6 +4,8 @@ description: Agent skill for trading-predictor - invoke with $agent-trading-pred
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Agent Trading Predictor
 

@@ -1,9 +1,12 @@
 ---
 name: feature-planning
-description: Break down feature requests into detailed, implementable plans with clear tasks. Use when user requests a new feature, enhancement, or complex change.
+description: Break down feature requests into detailed, implementable plans with clear
+  tasks. Use when user requests a new feature, enhancement, or complex change.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Feature Planning
 

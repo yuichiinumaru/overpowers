@@ -1,6 +1,6 @@
 ---
 name: ai-agents-vs-llms-decision-matrix
-description: Matriz de decisão arquitetural para projetos de Inteligência Artificial. Define quando usar um Large Language Model (LLM) puro (ou com RAG) e quando é necessário adotar a complexidade de um Agente Autônomo com Tools e ReAct. Foco em evitar over-engineering e controlar custos de tokens.
+description: Architectural decision matrix for AI projects. Defines when to use a pure Large Language Model (LLM), LLM with RAG, or an Autonomous AI Agent with Tools and ReAct. Focuses on avoiding over-engineering and controlling token costs.
 tags:
 - ai
 - llm
@@ -8,6 +8,7 @@ category: engineering
 color: null
 tools:
   read: true
+version: 1.0.0
 ---
 # AI Agents vs. LLMs: Architectural Decision Matrix
 

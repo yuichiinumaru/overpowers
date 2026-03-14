@@ -1,9 +1,11 @@
 ---
 name: hackernews
-description: ''
+description: Hacker News
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Hacker News
 

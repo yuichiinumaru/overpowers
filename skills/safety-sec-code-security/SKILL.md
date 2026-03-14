@@ -1,9 +1,11 @@
 ---
 name: code-security
-description: ''
+description: Code Security Guidelines
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Code Security Guidelines
 

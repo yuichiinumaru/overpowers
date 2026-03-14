@@ -1,0 +1,35 @@
+---
+description: Retrieve, clone or scrape documentation for a given library or dependency, preparing it for NotebookLM.
+---
+# Documentation Retrieval Workflow
+
+This workflow automates the process of finding and downloading the official documentation for any given software library, framework, or dependency.
+
+**Prerequisites:** You must ask the user which dependency they want documentation for (e.g., "Agno Agent Framework", "SurrealDB").
+
+### Step 1: GitHub Investigation
+Attempt to find the official documentation repository.
+
+1. Use web search (e.g., `hyperbrowser`) to find the official GitHub repository for the dependency.
+2. Identify the author/organization username.
+3. Search the organization's repositories for a dedicated `docs` repository. 
+   - If found, check if it's recently updated and contains `.md` or `.mdx` files.
+4. If no dedicated repository exists, check the main repository for a `docs/` or `guides/` folder.
+5. If GitHub markdown documentation is found and is comprehensive, clone it to a temporary directory (e.g. `/tmp/[lib_name]_docs`) and proceed directly to **Step 3**.
+
+### Step 2: Web Scraping (Fallback)
+If the GitHub documentation is missing, sparse, or not in markdown format, use the specialized scraper skill to pull it from their official site.
+
+1. Find the official documentation URL (e.g. `https://docs.agno.com`).
+2. Run the `docs-scraper` skill recursively against the URL:
+```bash
+uv run --with playwright --with markdownify --with beautifulsoup4 python skills/data-extract-docs-scraper/scripts/scrape_docs.py "<docs_url>" "/tmp/<lib_name>_docs" --max-pages 200
+```
+3. Wait for the scraper to finish downloading the site into the output directory.
+
+### Step 3: Handoff to Chunking Workflow
+Now that the documentation is stored locally in Markdown format, hand off the process to the chunker workflow to ingest it into NotebookLM.
+
+1. Verify the `/tmp/[lib_name]_docs` directory exists and has markdown files.
+2. Ask the user: "Documentation successfully retrieved to `/tmp/[lib_name]_docs`. Would you like me to proceed with the `ovp-gitingest-notebooklm-chunker` workflow to upload this to NotebookLM?"
+3. If they agree, execute the `ovp-gitingest-notebooklm-chunker` workflow using the temporary directory as the target path.

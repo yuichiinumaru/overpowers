@@ -70,7 +70,7 @@ Remember: You're implementing a solution, not just checking boxes. Keep the end 
 
 ## Steps
 
-1. **Context Initialization (Explicit Memory Read)**: Before starting, read `continuity.md` and check `.agents/memories/` for the current strategic focus and architectural context.
+1. **Context Initialization (Explicit Memory Read)**: Before starting, read `.agents/continuity-<agent-name>.md` and check `.agents/memories/` for the current strategic focus and architectural context.
 
 2. **Read the plan completely** and check for any existing checkmarks (- [x]). Only read the plan file provided as an argument.
 
@@ -88,7 +88,7 @@ Remember: You're implementing a solution, not just checking boxes. Keep the end 
 
 9. **Update ticket status & Memory (Explicit Memory Update)**: 
     - Update ticket status to 'implemented' by editing the ticket file's frontmatter.
-    - Read and update `continuity.md` to move the task to completed.
+    - Read and update `.agents/continuity-<agent-name>.md` to move the task to completed.
     - Suggest using `/11-sync-memory` to capture any major learnings during the execution.
 
 Use the todowrite tool to create a structured task list for the 9 steps above, marking each as pending initially. Note that Step 4 may expand into multiple implementation subtasks derived from the plan.

@@ -4,6 +4,8 @@ description: Search past reasoning for relevant decisions and approaches
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Recall Past Work
 

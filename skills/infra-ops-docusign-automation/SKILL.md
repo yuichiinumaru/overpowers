@@ -1,9 +1,12 @@
 ---
 name: docusign-automation
-description: 'Automate DocuSign tasks via Rube MCP (Composio): templates, envelopes, signatures, document management. Always search tools first for current schemas.'
+description: 'Automate DocuSign tasks via Rube MCP (Composio): templates, envelopes,
+  signatures, document management. Always search tools first for current schemas.'
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # DocuSign Automation via Rube MCP
 

@@ -1,9 +1,12 @@
 ---
 name: pocket-universe
-description: Simulate multi-agent interactions, test concurrent behavior, inter-agent broadcasting, and deep nesting to validate swarm architecture health.
+description: Simulate multi-agent interactions, test concurrent behavior, inter-agent
+  broadcasting, and deep nesting to validate swarm architecture health.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # 🌌 Pocket Universe Simulator
 

@@ -1,9 +1,12 @@
 ---
 name: pyzotero-cli
-description: Command-line interface for Zotero - search your local Zotero library, list collections, and manage items from the terminal.
+description: Command-line interface for Zotero - search your local Zotero library,
+  list collections, and manage items from the terminal.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Pyzotero CLI
 

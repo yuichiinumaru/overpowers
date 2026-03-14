@@ -4,6 +4,8 @@ description: Problem-solving strategies for prime numbers in graph number theory
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Prime Numbers
 

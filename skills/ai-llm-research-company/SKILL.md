@@ -1,9 +1,14 @@
 ---
 name: research-company
-description: B2B company research producing professional PDF reports. Use when asked to research a company, analyze a business, create an account profile, or generate market intelligence from a company URL. Outputs a beautifully formatted, downloadable PDF report.
+description: B2B company research producing professional PDF reports. Use when asked
+  to research a company, analyze a business, create an account profile, or generate
+  market intelligence from a company URL. Outputs a beautifully formatted, downloadable
+  PDF report.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Company Research
 

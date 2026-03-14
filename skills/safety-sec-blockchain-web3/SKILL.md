@@ -1,9 +1,13 @@
 ---
 name: blockchain-web3
-description: DeFi protocols, NFT standards, Solidity security, and Web3 testing. Use when building decentralized applications, smart contracts, or integrating with blockchain networks.
+description: DeFi protocols, NFT standards, Solidity security, and Web3 testing. Use
+  when building decentralized applications, smart contracts, or integrating with blockchain
+  networks.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Blockchain & Web3
 

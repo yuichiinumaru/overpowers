@@ -4,6 +4,8 @@ description: Automation and tasks for python-mcp-server
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Python MCP Server Implementation Guide
 

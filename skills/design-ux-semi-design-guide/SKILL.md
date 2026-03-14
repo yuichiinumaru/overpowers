@@ -4,6 +4,8 @@ description: 使用 Semi Design 组件的完整指南，包括 MCP 工具使用�
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # Semi Design 使用指南
 

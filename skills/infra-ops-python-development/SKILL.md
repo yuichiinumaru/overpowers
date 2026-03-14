@@ -1,9 +1,13 @@
 ---
 name: python-development
-description: Modern Python development with Python 3.12+, Django, FastAPI, async patterns, and production best practices. Use for Python projects, APIs, data processing, or automation scripts.
+description: Modern Python development with Python 3.12+, Django, FastAPI, async patterns,
+  and production best practices. Use for Python projects, APIs, data processing, or
+  automation scripts.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Python Development
 

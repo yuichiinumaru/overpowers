@@ -1,9 +1,12 @@
 ---
 name: creating-articles
-description: Creates new blog posts for the Artsy Engineering blog. Use when the user wants to write, create, or start a new blog post or article.
+description: Creates new blog posts for the Artsy Engineering blog. Use when the user
+  wants to write, create, or start a new blog post or article.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Creating Articles
 

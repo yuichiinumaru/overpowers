@@ -1,11 +1,16 @@
 ---
 name: electron-chromium-upgrade
-description: Guide for performing Chromium version upgrades in the Electron project. Use when working on the roller/chromium/main branch to fix patch conflicts during `e sync --3`. Covers the patch application workflow, conflict resolution, analyzing upstream Chromium changes, and proper commit formatting for patch fixes.
+description: Guide for performing Chromium version upgrades in the Electron project.
+  Use when working on the roller/chromium/main branch to fix patch conflicts during
+  `e sync --3`. Covers the patch application workflow, conflict resolution, analyzing
+  upstream Chromium changes, and proper commit formatting for patch fixes.
 tags:
 - infra
 - ops
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Electron Chromium Upgrade: Phase One
 

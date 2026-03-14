@@ -1,9 +1,12 @@
 ---
 name: docs-changelog
-description: Provides a step-by-step procedure for generating Gemini CLI changelog files based on github release information.
+description: Provides a step-by-step procedure for generating Gemini CLI changelog
+  files based on github release information.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Procedure: Updating Changelog for New Releases
 

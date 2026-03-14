@@ -1,9 +1,11 @@
 ---
 name: code-reviewer
-description: ''
+description: Code Reviewer
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Code Reviewer
 

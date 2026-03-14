@@ -12,7 +12,7 @@ def analyze_error(error_message):
                 "STRATEGY: Read the surrounding code block first to verify exact whitespace count.")
     
     # Replacement errors (no match)
-    if "match" in error_message_lower and ("no" in error_message_lower or "zero" in error_message_lower or "found" in error_message_lower):
+    if "match" in error_message_lower and any(kw in error_message_lower for kw in ["no", "zero", "found", "fail"]):
         return ("CRITICAL: Exact match failed.\n"
                 "HINT: The 'old_string' must be a LITERAL match, including every space and newline.\n"
                 "STRATEGY: Use read_file to copy the EXACT block, then use it in replace/edit_block. Avoid hand-typing whitespace.")

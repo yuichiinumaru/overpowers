@@ -1,9 +1,12 @@
 ---
 name: searxng-search
-description: Web search using SearXNG instance via MCP. Provides web search capability for agents with configurable SearXNG endpoint.
+description: Web search using SearXNG instance via MCP. Provides web search capability
+  for agents with configurable SearXNG endpoint.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # SearXNG Search
 

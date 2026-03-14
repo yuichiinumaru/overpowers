@@ -1,9 +1,18 @@
 ---
 name: tooluniverse-literature-deep-research
-description: Conduct comprehensive literature research with target disambiguation, evidence grading, and structured theme extraction. Creates a detailed report with mandatory completeness checklist, biological model synthesis, and testable hypotheses. For biological targets, resolves official IDs (Ensembl/UniProt), synonyms, naming collisions, and gathers expression/pathway context before literature search. Default deliverable is a report file; for single factoid questions, uses a fast verification mode and may include an inline answer. Use when users need thorough literature reviews, target profiles, or to verify specific claims from the literature.
+description: Conduct comprehensive literature research with target disambiguation,
+  evidence grading, and structured theme extraction. Creates a detailed report with
+  mandatory completeness checklist, biological model synthesis, and testable hypotheses.
+  For biological targets, resolves official IDs (Ensembl/UniProt), synonyms, naming
+  collisions, and gathers expression/pathway context before literature search. Default
+  deliverable is a report file; for single factoid questions, uses a fast verification
+  mode and may include an inline answer. Use when users need thorough literature reviews,
+  target profiles, or to verify specific claims from the literature.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # Literature Deep Research Strategy (Enhanced)
 

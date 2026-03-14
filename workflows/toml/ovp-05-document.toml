@@ -8,7 +8,7 @@ prompt = '''
 ## Actions
 
 1. **Context Initialization (Explicit Memory Read)**:
-   - Read `continuity.md` and check `.agents/memories/` to ensure full context alignment before documenting closure.
+   - Read `.agents/continuity-<agent-name>.md` and check `.agents/memories/` to ensure full context alignment before documenting closure.
    - Cross-reference the master task file and the generated code to identify what needs to be persisted.
 
 2. **Audit Changelog**: Execute the `/14-changelog-audit` workflow. This guarantees that all Jujutsu operations or Git commits forged during execution are mirrored in the centralized `CHANGELOG.md`.
@@ -21,7 +21,7 @@ prompt = '''
 4. **Mark Complete & Ledger Update**: 
    - Access `docs/tasklist.md`.
    - Re-mark the master task corresponding to this cycle from `[/]` to `[x]` indicating absolute resolution.
-   - Update the Session Ledger (`continuity.md`) to move the completed task to the "Completed Tasks" section and clear the active branch if applicable.
+   - Update the Session Ledger (`.agents/continuity-<agent-name>.md`) to move the completed task to the "Completed Tasks" section and clear the active branch if applicable.
 
 5. **Close VCS**: Facilitate the architectural closure of the working branch/bookmark. Provide guidance corresponding to the `AGENTS.md` parameters such as `harmonious-jujutsu-merge` to ensure the code ascends cleanly into staging/development or awaits human PR approval structure.
 '''

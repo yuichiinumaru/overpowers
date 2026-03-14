@@ -4,6 +4,8 @@ description: Check if a video can be decoded by the browser using Mediabunny
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Checking if a video can be decoded
 

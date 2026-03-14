@@ -1,9 +1,11 @@
 ---
 name: burp-suite-testing
-description: ''
+description: Burp Suite Web Application Testing
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Burp Suite Web Application Testing
 

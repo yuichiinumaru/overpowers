@@ -1,9 +1,11 @@
 ---
 name: digital-brain
-description: ''
+description: Digital Brain
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Digital Brain
 

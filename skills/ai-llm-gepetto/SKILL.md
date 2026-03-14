@@ -1,9 +1,13 @@
 ---
 name: gepetto
-description: Creates detailed, sectionized implementation plans through research, stakeholder interviews, and multi-LLM review. Use when planning features that need thorough pre-implementation analysis.
+description: Creates detailed, sectionized implementation plans through research,
+  stakeholder interviews, and multi-LLM review. Use when planning features that need
+  thorough pre-implementation analysis.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Gepetto
 

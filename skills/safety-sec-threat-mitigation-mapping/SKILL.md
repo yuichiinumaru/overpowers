@@ -1,9 +1,13 @@
 ---
 name: threat-mitigation-mapping
-description: Map identified threats to appropriate security controls and mitigations. Use when prioritizing security investments, creating remediation plans, or validating control effectiveness.
+description: Map identified threats to appropriate security controls and mitigations.
+  Use when prioritizing security investments, creating remediation plans, or validating
+  control effectiveness.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Threat Mitigation Mapping
 

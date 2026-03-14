@@ -1,9 +1,12 @@
 ---
 name: coding-agent
-description: Run Codex CLI, Claude Code, OpenCode, or Pi Coding Agent via background process for programmatic control.
+description: Run Codex CLI, Claude Code, OpenCode, or Pi Coding Agent via background
+  process for programmatic control.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Coding Agent (bash-first)
 

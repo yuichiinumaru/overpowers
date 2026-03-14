@@ -1,8 +1,13 @@
 ---
 name: simulation-orchestrator
-description: Orchestrate multi-simulation campaigns including parameter sweeps, batch jobs, and result aggregation. Use for running parameter studies, managing simulation batches, tracking job status, combining results from multiple runs, or automating simulation workflows.
+description: Orchestrate multi-simulation campaigns including parameter sweeps, batch
+  jobs, and result aggregation. Use for running parameter studies, managing simulation
+  batches, tracking job status, combining results from multiple runs, or automating
+  simulation workflows.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Simulation Orchestrator
 

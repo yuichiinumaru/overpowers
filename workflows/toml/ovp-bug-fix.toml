@@ -1,16 +1,23 @@
 description = "Systematic workflow for fixing bugs including issue creation, branch management, and PR submission"
 
 prompt = '''
-Understand the bug: $ARGUMENTS
+1. **Context Initialization (Explicit Memory Read)**: 
+   - Read `.agents/continuity-<agent-name>.md` and check `.agents/memories/` to identify if this bug relates to recent changes or known environment issues.
 
-Before Starting:
-- GITHUB: create an issue with a short descriptive title.
-- GIT: checkout a branch and switch to it.
+2. Understand the bug: $ARGUMENTS
 
-Fix the Bug
+3. Before Starting:
+   - GITHUB: create an issue with a short descriptive title.
+   - GIT: checkout a branch and switch to it.
 
-On Completion:
-- GIT: commit with a descriptive message.
-- GIT: push the branch to the remote repository.
-- GITHUB: create a PR and link the issue.
+4. Fix the Bug
+
+5. On Completion:
+   - GIT: commit with a descriptive message.
+   - GIT: push the branch to the remote repository.
+   - GITHUB: create a PR and link the issue.
+
+6. **Memory Synchronization (Explicit Memory Update)**: 
+   - Update `.agents/continuity-<agent-name>.md` with the bug fix details and resolution.
+   - Persist any root cause discovery or environment quirk to `.agents/memories/` via Serena.
 '''

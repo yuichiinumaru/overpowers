@@ -1,8 +1,12 @@
 ---
 name: simulation-validator
-description: Validate simulations before, during, and after execution. Use for pre-flight checks, runtime monitoring, post-run validation, diagnosing failed simulations, checking convergence, detecting NaN/Inf, or verifying mass/energy conservation.
+description: Validate simulations before, during, and after execution. Use for pre-flight
+  checks, runtime monitoring, post-run validation, diagnosing failed simulations,
+  checking convergence, detecting NaN/Inf, or verifying mass/energy conservation.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Simulation Validator
 

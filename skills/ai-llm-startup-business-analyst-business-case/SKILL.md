@@ -4,6 +4,8 @@ description: Generate comprehensive investor-ready business case document with
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Business Case Generator
 

@@ -1,6 +1,7 @@
 ---
 name: github
-description: Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh run`, and `gh api` for issues, PRs, CI runs, and advanced queries.
+description: Interact with GitHub using the `gh` CLI. Use `gh issue`, `gh pr`, `gh
+  run`, and `gh api` for issues, PRs, CI runs, and advanced queries.
 tags:
 - infra
 - ops
@@ -23,6 +24,8 @@ metadata:
       bins:
       - gh
       label: Install GitHub CLI (apt)
+version: 1.0.0
+category: general
 ---
 # GitHub Skill
 

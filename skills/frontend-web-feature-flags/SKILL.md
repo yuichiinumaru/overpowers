@@ -1,9 +1,13 @@
 ---
 name: feature-flags
-description: Use when feature flag tests fail, flags need updating, understanding @gate pragmas, debugging channel-specific test failures, or adding new flags to React.
+description: Use when feature flag tests fail, flags need updating, understanding
+  @gate pragmas, debugging channel-specific test failures, or adding new flags to
+  React.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # React Feature Flags
 

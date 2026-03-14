@@ -1,9 +1,11 @@
 ---
 name: xss-html-injection
-description: ''
+description: Cross-Site Scripting and HTML Injection Testing
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Cross-Site Scripting and HTML Injection Testing
 

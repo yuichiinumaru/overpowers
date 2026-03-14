@@ -4,6 +4,8 @@ description: MUST use when creating flows.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Windmill Flow Building Guide
 

@@ -1,9 +1,13 @@
 ---
 name: reverse-engineering
-description: Binary analysis, memory forensics, and protocol reverse engineering. Use when analyzing malware, auditing closed-source software, or investigating network protocols.
+description: Binary analysis, memory forensics, and protocol reverse engineering.
+  Use when analyzing malware, auditing closed-source software, or investigating network
+  protocols.
 tags:
 - general
 - tool
+version: 1.0.0
+category: general
 ---
 # Reverse Engineering
 

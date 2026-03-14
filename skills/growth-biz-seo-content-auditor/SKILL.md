@@ -4,6 +4,8 @@ description: Analyzes provided content for quality, E-E-A-T signals, and SEO
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Seo Content Auditor
 

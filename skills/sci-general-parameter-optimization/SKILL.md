@@ -1,8 +1,13 @@
 ---
 name: parameter-optimization
-description: Explore and optimize simulation parameters via design of experiments (DOE), sensitivity analysis, and optimizer selection. Use for calibration, uncertainty studies, parameter sweeps, LHS sampling, Sobol analysis, surrogate modeling, or Bayesian optimization setup.
+description: Explore and optimize simulation parameters via design of experiments
+  (DOE), sensitivity analysis, and optimizer selection. Use for calibration, uncertainty
+  studies, parameter sweeps, LHS sampling, Sobol analysis, surrogate modeling, or
+  Bayesian optimization setup.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Parameter Optimization
 

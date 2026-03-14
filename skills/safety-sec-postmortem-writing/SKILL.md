@@ -1,9 +1,13 @@
 ---
 name: postmortem-writing
-description: Write effective blameless postmortems with root cause analysis, timelines, and action items. Use when conducting incident reviews, writing postmortem documents, or improving incident response processes.
+description: Write effective blameless postmortems with root cause analysis, timelines,
+  and action items. Use when conducting incident reviews, writing postmortem documents,
+  or improving incident response processes.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Postmortem Writing
 

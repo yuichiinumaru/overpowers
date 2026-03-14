@@ -1,9 +1,11 @@
 ---
 name: paywall-upgrade-cro
-description: ''
+description: Paywall and Upgrade Screen CRO
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Paywall and Upgrade Screen CRO
 

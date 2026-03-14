@@ -1,9 +1,13 @@
 ---
 name: benchling-integration
-description: Benchling R&D platform integration. Access registry (DNA, proteins), inventory, ELN entries, workflows via API, build Benchling Apps, query Data Warehouse, for lab data management automation.
+description: Benchling R&D platform integration. Access registry (DNA, proteins),
+  inventory, ELN entries, workflows via API, build Benchling Apps, query Data Warehouse,
+  for lab data management automation.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Benchling Integration
 

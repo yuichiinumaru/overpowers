@@ -1,9 +1,14 @@
 ---
 name: agentdb-advanced
-description: Master advanced AgentDB features including QUIC synchronization, multi-database management, custom distance metrics, hybrid search, and distributed systems integration. Use when building distributed AI systems, multi-agent coordination, or advanced vector search applications.
+description: Master advanced AgentDB features including QUIC synchronization, multi-database
+  management, custom distance metrics, hybrid search, and distributed systems integration.
+  Use when building distributed AI systems, multi-agent coordination, or advanced
+  vector search applications.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # AgentDB Advanced Features
 

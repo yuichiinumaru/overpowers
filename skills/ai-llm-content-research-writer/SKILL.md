@@ -1,9 +1,14 @@
 ---
 name: content-research-writer
-description: Assists in writing high-quality content by conducting research, adding citations, improving hooks, iterating on outlines, and providing real-time feedback on each section. Transforms your writing process from solo effort to collaborative partnership.
+description: Assists in writing high-quality content by conducting research, adding
+  citations, improving hooks, iterating on outlines, and providing real-time feedback
+  on each section. Transforms your writing process from solo effort to collaborative
+  partnership.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Content Research Writer
 

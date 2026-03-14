@@ -1,0 +1,679 @@
+{
+  "repo_path": "/home/sephiroth/Work/references/zeptoclaw",
+  "min_size_target": 20000,
+  "max_size_target": 100000,
+  "total_chunks": 72,
+  "chunks": [
+    {
+      "name": "landing-r8r-docs_part1.md",
+      "includes": [
+        "landing/r8r/docs/astro.config.mjs",
+        "landing/r8r/docs/package-lock.json"
+      ],
+      "size": 249807
+    },
+    {
+      "name": "landing-r8r-docs_part2.md",
+      "includes": [
+        "landing/r8r/docs/package.json",
+        "landing/r8r/docs/public/**",
+        "landing/r8r/docs/src/**"
+      ],
+      "size": 39896
+    },
+    {
+      "name": "landing-r8r.md",
+      "includes": [
+        "landing/r8r/index.html",
+        "landing/r8r/wrangler.toml"
+      ],
+      "size": 26094
+    },
+    {
+      "name": "landing-zeptoclaw-docs_part1.md",
+      "includes": [
+        "landing/zeptoclaw/docs/astro.config.mjs",
+        "landing/zeptoclaw/docs/package-lock.json"
+      ],
+      "size": 249912
+    },
+    {
+      "name": "landing-zeptoclaw-docs_part2.md",
+      "includes": [
+        "landing/zeptoclaw/docs/package.json",
+        "landing/zeptoclaw/docs/public/**",
+        "landing/zeptoclaw/docs/src/**"
+      ],
+      "size": 86456
+    },
+    {
+      "name": "landing-zeptoclaw.md",
+      "includes": [
+        "landing/zeptoclaw/favicon.svg",
+        "landing/zeptoclaw/index.html",
+        "landing/zeptoclaw/wrangler.toml"
+      ],
+      "size": 65121
+    },
+    {
+      "name": "panel-src_part1.md",
+      "includes": [
+        "panel/src/App.tsx",
+        "panel/src/index.css",
+        "panel/src/main.tsx",
+        "panel/src/assets/**",
+        "panel/src/components/**",
+        "panel/src/hooks/**",
+        "panel/src/lib/**"
+      ],
+      "size": 40709
+    },
+    {
+      "name": "panel-src_part2.md",
+      "includes": [
+        "panel/src/pages/**"
+      ],
+      "size": 99477
+    },
+    {
+      "name": "panel.md",
+      "includes": [
+        "panel/.gitignore",
+        "panel/README.md",
+        "panel/eslint.config.js",
+        "panel/index.html",
+        "panel/package.json",
+        "panel/pnpm-lock.yaml",
+        "panel/tsconfig.app.json",
+        "panel/tsconfig.json",
+        "panel/tsconfig.node.json",
+        "panel/vite.config.ts"
+      ],
+      "size": 96349
+    },
+    {
+      "name": "src-agent_part1.md",
+      "includes": [
+        "src/agent/budget.rs",
+        "src/agent/compaction.rs",
+        "src/agent/context.rs",
+        "src/agent/context_monitor.rs"
+      ],
+      "size": 99841
+    },
+    {
+      "name": "src-agent_part2.md",
+      "includes": [
+        "src/agent/facade.rs",
+        "src/agent/loop.rs"
+      ],
+      "size": 190277
+    },
+    {
+      "name": "src-agent_part3.md",
+      "includes": [
+        "src/agent/loop_guard.rs",
+        "src/agent/mod.rs",
+        "src/agent/scratchpad.rs",
+        "src/agent/tool_call_limit.rs"
+      ],
+      "size": 50129
+    },
+    {
+      "name": "src-api_part1.md",
+      "includes": [
+        "src/api/auth.rs",
+        "src/api/config.rs",
+        "src/api/events.rs",
+        "src/api/middleware.rs",
+        "src/api/mod.rs",
+        "src/api/openai_types.rs",
+        "src/api/server.rs",
+        "src/api/tasks.rs"
+      ],
+      "size": 86064
+    },
+    {
+      "name": "src-api_part2.md",
+      "includes": [
+        "src/api/routes/**"
+      ],
+      "size": 60143
+    },
+    {
+      "name": "src-channels_part1.md",
+      "includes": [
+        "src/channels/discord.rs"
+      ],
+      "size": 82559
+    },
+    {
+      "name": "src-channels_part2.md",
+      "includes": [
+        "src/channels/email_channel.rs",
+        "src/channels/factory.rs",
+        "src/channels/lark.rs"
+      ],
+      "size": 95728
+    },
+    {
+      "name": "src-channels_part3.md",
+      "includes": [
+        "src/channels/manager.rs",
+        "src/channels/mod.rs",
+        "src/channels/model_switch.rs",
+        "src/channels/mqtt.rs",
+        "src/channels/persona_switch.rs"
+      ],
+      "size": 87754
+    },
+    {
+      "name": "src-channels_part4.md",
+      "includes": [
+        "src/channels/plugin.rs",
+        "src/channels/serial.rs",
+        "src/channels/slack.rs"
+      ],
+      "size": 71382
+    },
+    {
+      "name": "src-channels_part5.md",
+      "includes": [
+        "src/channels/telegram.rs",
+        "src/channels/types.rs"
+      ],
+      "size": 66397
+    },
+    {
+      "name": "src-channels_part6.md",
+      "includes": [
+        "src/channels/webhook.rs"
+      ],
+      "size": 60376
+    },
+    {
+      "name": "src-channels_part7.md",
+      "includes": [
+        "src/channels/whatsapp_cloud.rs",
+        "src/channels/whatsapp_web.rs"
+      ],
+      "size": 74793
+    },
+    {
+      "name": "src-cli_part1.md",
+      "includes": [
+        "src/cli/agent.rs",
+        "src/cli/batch.rs",
+        "src/cli/channel.rs",
+        "src/cli/common.rs",
+        "src/cli/config.rs"
+      ],
+      "size": 95122
+    },
+    {
+      "name": "src-cli_part2.md",
+      "includes": [
+        "src/cli/daemon.rs",
+        "src/cli/doctor.rs",
+        "src/cli/gateway.rs",
+        "src/cli/hand.rs",
+        "src/cli/heartbeat.rs",
+        "src/cli/history.rs",
+        "src/cli/memory.rs",
+        "src/cli/migrate.rs",
+        "src/cli/mod.rs"
+      ],
+      "size": 91530
+    },
+    {
+      "name": "src-cli_part3.md",
+      "includes": [
+        "src/cli/onboard.rs",
+        "src/cli/pair.rs",
+        "src/cli/panel.rs",
+        "src/cli/provider.rs",
+        "src/cli/quota.rs",
+        "src/cli/secrets.rs",
+        "src/cli/serve.rs",
+        "src/cli/shimmer.rs"
+      ],
+      "size": 97501
+    },
+    {
+      "name": "src-cli_part4.md",
+      "includes": [
+        "src/cli/skills.rs",
+        "src/cli/slash.rs",
+        "src/cli/status.rs",
+        "src/cli/template.rs",
+        "src/cli/tools.rs",
+        "src/cli/uninstall.rs",
+        "src/cli/update.rs",
+        "src/cli/watch.rs"
+      ],
+      "size": 97635
+    },
+    {
+      "name": "src-config_part1.md",
+      "includes": [
+        "src/config/mod.rs"
+      ],
+      "size": 85630
+    },
+    {
+      "name": "src-config_part2.md",
+      "includes": [
+        "src/config/templates.rs"
+      ],
+      "size": 38649
+    },
+    {
+      "name": "src-config_part3.md",
+      "includes": [
+        "src/config/types.rs"
+      ],
+      "size": 100334
+    },
+    {
+      "name": "src-config_part4.md",
+      "includes": [
+        "src/config/validate.rs",
+        "src/config/watcher.rs"
+      ],
+      "size": 31288
+    },
+    {
+      "name": "src-memory_part1.md",
+      "includes": [
+        "src/memory/bm25_searcher.rs",
+        "src/memory/builtin_searcher.rs",
+        "src/memory/embedding_searcher.rs",
+        "src/memory/factory.rs",
+        "src/memory/hnsw_searcher.rs",
+        "src/memory/hygiene.rs"
+      ],
+      "size": 66239
+    },
+    {
+      "name": "src-memory_part2.md",
+      "includes": [
+        "src/memory/longterm.rs",
+        "src/memory/mod.rs",
+        "src/memory/snapshot.rs",
+        "src/memory/traits.rs"
+      ],
+      "size": 64414
+    },
+    {
+      "name": "src-providers_part1.md",
+      "includes": [
+        "src/providers/claude.rs",
+        "src/providers/cooldown.rs",
+        "src/providers/error_classifier.rs"
+      ],
+      "size": 63287
+    },
+    {
+      "name": "src-providers_part2.md",
+      "includes": [
+        "src/providers/fallback.rs",
+        "src/providers/gemini.rs",
+        "src/providers/mod.rs"
+      ],
+      "size": 78423
+    },
+    {
+      "name": "src-providers_part3.md",
+      "includes": [
+        "src/providers/openai.rs",
+        "src/providers/plugin.rs"
+      ],
+      "size": 94101
+    },
+    {
+      "name": "src-providers_part4.md",
+      "includes": [
+        "src/providers/quota.rs",
+        "src/providers/registry.rs"
+      ],
+      "size": 75600
+    },
+    {
+      "name": "src-providers_part5.md",
+      "includes": [
+        "src/providers/retry.rs",
+        "src/providers/rotation.rs"
+      ],
+      "size": 82650
+    },
+    {
+      "name": "src-providers_part6.md",
+      "includes": [
+        "src/providers/structured.rs",
+        "src/providers/types.rs"
+      ],
+      "size": 42187
+    },
+    {
+      "name": "src-safety_part1.md",
+      "includes": [
+        "src/safety/chain_alert.rs",
+        "src/safety/leak_detector.rs",
+        "src/safety/mod.rs",
+        "src/safety/policy.rs",
+        "src/safety/sanitizer.rs"
+      ],
+      "size": 71166
+    },
+    {
+      "name": "src-safety_part2.md",
+      "includes": [
+        "src/safety/taint.rs",
+        "src/safety/validator.rs"
+      ],
+      "size": 40755
+    },
+    {
+      "name": "src-security_part1.md",
+      "includes": [
+        "src/security/agent_mode.rs",
+        "src/security/encryption.rs",
+        "src/security/mod.rs",
+        "src/security/mount.rs",
+        "src/security/pairing.rs"
+      ],
+      "size": 80792
+    },
+    {
+      "name": "src-security_part2.md",
+      "includes": [
+        "src/security/path.rs",
+        "src/security/shell.rs"
+      ],
+      "size": 94843
+    },
+    {
+      "name": "src-tools_part1.md",
+      "includes": [
+        "src/tools/approval.rs",
+        "src/tools/binary_plugin.rs",
+        "src/tools/clarification.rs",
+        "src/tools/composed.rs"
+      ],
+      "size": 96624
+    },
+    {
+      "name": "src-tools_part2.md",
+      "includes": [
+        "src/tools/cron.rs",
+        "src/tools/custom.rs",
+        "src/tools/delegate.rs",
+        "src/tools/diff.rs"
+      ],
+      "size": 83698
+    },
+    {
+      "name": "src-tools_part3.md",
+      "includes": [
+        "src/tools/docx_read.rs",
+        "src/tools/filesystem.rs",
+        "src/tools/find.rs",
+        "src/tools/git.rs"
+      ],
+      "size": 86357
+    },
+    {
+      "name": "src-tools_part4.md",
+      "includes": [
+        "src/tools/google.rs",
+        "src/tools/grep.rs",
+        "src/tools/gsheets.rs",
+        "src/tools/hardware.rs",
+        "src/tools/http_request.rs"
+      ],
+      "size": 81780
+    },
+    {
+      "name": "src-tools_part5.md",
+      "includes": [
+        "src/tools/longterm_memory.rs",
+        "src/tools/memory.rs",
+        "src/tools/message.rs",
+        "src/tools/mod.rs",
+        "src/tools/pdf_read.rs"
+      ],
+      "size": 88538
+    },
+    {
+      "name": "src-tools_part6.md",
+      "includes": [
+        "src/tools/plugin.rs",
+        "src/tools/project.rs",
+        "src/tools/r8r.rs"
+      ],
+      "size": 87943
+    },
+    {
+      "name": "src-tools_part7.md",
+      "includes": [
+        "src/tools/registry.rs",
+        "src/tools/reminder.rs",
+        "src/tools/screenshot.rs",
+        "src/tools/shell.rs"
+      ],
+      "size": 99799
+    },
+    {
+      "name": "src-tools_part8.md",
+      "includes": [
+        "src/tools/skills_install.rs",
+        "src/tools/skills_search.rs",
+        "src/tools/spawn.rs",
+        "src/tools/stripe.rs",
+        "src/tools/task.rs",
+        "src/tools/transcribe.rs"
+      ],
+      "size": 97457
+    },
+    {
+      "name": "src-tools_part9.md",
+      "includes": [
+        "src/tools/types.rs",
+        "src/tools/web.rs"
+      ],
+      "size": 97698
+    },
+    {
+      "name": "src-tools_part10.md",
+      "includes": [
+        "src/tools/whatsapp.rs",
+        "src/tools/android/**"
+      ],
+      "size": 100307
+    },
+    {
+      "name": "src-tools_part11.md",
+      "includes": [
+        "src/tools/mcp/**"
+      ],
+      "size": 54245
+    },
+    {
+      "name": "src_part1.md",
+      "includes": [
+        "src/audit.rs",
+        "src/batch.rs",
+        "src/error.rs",
+        "src/health.rs",
+        "src/lib.rs",
+        "src/main.rs",
+        "src/transcription.rs"
+      ],
+      "size": 91455
+    },
+    {
+      "name": "src_part2.md",
+      "includes": [
+        "src/auth/**"
+      ],
+      "size": 89550
+    },
+    {
+      "name": "src_part3.md",
+      "includes": [
+        "src/bin/**",
+        "src/bus/**",
+        "src/cache/**"
+      ],
+      "size": 57607
+    },
+    {
+      "name": "src_part4.md",
+      "includes": [
+        "src/cron/**",
+        "src/deps/**"
+      ],
+      "size": 97866
+    },
+    {
+      "name": "src_part5.md",
+      "includes": [
+        "src/devices/**",
+        "src/gateway/**"
+      ],
+      "size": 95299
+    },
+    {
+      "name": "src_part6.md",
+      "includes": [
+        "src/hands/**",
+        "src/hardware/**",
+        "src/heartbeat/**",
+        "src/hooks/**"
+      ],
+      "size": 67228
+    },
+    {
+      "name": "src_part7.md",
+      "includes": [
+        "src/kernel/**"
+      ],
+      "size": 99930
+    },
+    {
+      "name": "src_part8.md",
+      "includes": [
+        "src/mcp_server/**",
+        "src/migrate/**"
+      ],
+      "size": 67223
+    },
+    {
+      "name": "src_part9.md",
+      "includes": [
+        "src/peripherals/**"
+      ],
+      "size": 95414
+    },
+    {
+      "name": "src_part10.md",
+      "includes": [
+        "src/plugins/**"
+      ],
+      "size": 88489
+    },
+    {
+      "name": "src_part11.md",
+      "includes": [
+        "src/routines/**"
+      ],
+      "size": 34492
+    },
+    {
+      "name": "src_part12.md",
+      "includes": [
+        "src/runtime/**"
+      ],
+      "size": 67429
+    },
+    {
+      "name": "src_part13.md",
+      "includes": [
+        "src/session/**"
+      ],
+      "size": 87592
+    },
+    {
+      "name": "src_part14.md",
+      "includes": [
+        "src/skills/**",
+        "src/tunnel/**"
+      ],
+      "size": 98024
+    },
+    {
+      "name": "src_part15.md",
+      "includes": [
+        "src/utils/**"
+      ],
+      "size": 68632
+    },
+    {
+      "name": "root_part1.md",
+      "includes": [
+        ".dockerignore",
+        ".gitignore",
+        ".kimiignore",
+        "AGENTS.md",
+        "CHANGELOG.md",
+        "CLAUDE.md",
+        "CONTRIBUTING.md"
+      ],
+      "size": 83632
+    },
+    {
+      "name": "root_part2.md",
+      "includes": [
+        "Cargo.lock"
+      ],
+      "size": 177522
+    },
+    {
+      "name": "root_part3.md",
+      "includes": [
+        "Cargo.toml",
+        "Dockerfile",
+        "LICENSE",
+        "Makefile",
+        "README.md",
+        "SECURITY.md",
+        "docker-compose.multi-tenant.yml",
+        "docker-entrypoint.sh",
+        "install.sh",
+        ".cargo/**",
+        ".github/**",
+        "benches/**"
+      ],
+      "size": 76125
+    },
+    {
+      "name": "root_part4.md",
+      "includes": [
+        "deploy/**",
+        "docs/**",
+        "examples/**",
+        "landing/deploy.sh",
+        "scripts/**",
+        "skills/**"
+      ],
+      "size": 85216
+    },
+    {
+      "name": "root_part5.md",
+      "includes": [
+        "tests/**"
+      ],
+      "size": 89452
+    }
+  ]
+}

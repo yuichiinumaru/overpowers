@@ -4,6 +4,8 @@ description: Refactors code to improve structure and maintainability
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Refactoring
 

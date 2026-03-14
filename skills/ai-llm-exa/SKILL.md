@@ -1,9 +1,12 @@
 ---
 name: exa
-description: Neural web search and code context via Exa AI API. Requires EXA_API_KEY. Use for finding documentation, code examples, research papers, or company info.
+description: Neural web search and code context via Exa AI API. Requires EXA_API_KEY.
+  Use for finding documentation, code examples, research papers, or company info.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Exa - Neural Web Search
 

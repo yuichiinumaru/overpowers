@@ -1,9 +1,12 @@
 ---
 name: cron
-description: Scheduled task management - create, query, delete scheduled tasks to automatically execute operations at specified times.
+description: Scheduled task management - create, query, delete scheduled tasks to
+  automatically execute operations at specified times.
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Scheduled Task Skill
 

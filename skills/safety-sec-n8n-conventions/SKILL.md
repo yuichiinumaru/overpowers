@@ -4,6 +4,8 @@ description: Quick reference for n8n patterns. Full docs /AGENTS.md
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # n8n Quick Reference
 

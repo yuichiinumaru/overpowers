@@ -1,6 +1,6 @@
 ---
 name: ai-model-selection-llm-slm-fm
-description: Diretrizes arquiteturais para a seleção eficiente de Modelos de Inteligência Artificial. Diferencia Foundation Models (FMs), Large Language Models (LLMs) e Small Language Models (SLMs) com base em restrições de latência, complexidade de hardware (cloud vs. edge), precisão e custo, prevenindo alocações orçamentárias incorretas.
+description: Architectural guidelines for the efficient selection of AI models. Differentiates between Foundation Models (FMs), Large Language Models (LLMs), and Small Language Models (SLMs) based on latency constraints, hardware complexity (cloud vs. edge), precision, and cost, preventing incorrect budget allocations.
 tags:
 - ai
 - llm
@@ -8,6 +8,7 @@ category: engineering
 color: null
 tools:
   read: true
+version: 1.0.0
 ---
 # AI Model Selection: LLMs vs. SLMs vs. FMs
 

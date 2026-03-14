@@ -1,9 +1,13 @@
 ---
 name: reactome-database
-description: Query Reactome REST API for pathway analysis, enrichment, gene-pathway mapping, disease pathways, molecular interactions, expression analysis, for systems biology studies.
+description: Query Reactome REST API for pathway analysis, enrichment, gene-pathway
+  mapping, disease pathways, molecular interactions, expression analysis, for systems
+  biology studies.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Reactome Database
 

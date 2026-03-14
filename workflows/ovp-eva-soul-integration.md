@@ -1,0 +1,13 @@
+---
+description: Integrate and activate the EVA Soul cognitive system.
+---
+
+# EVA Soul Integration Workflow
+
+Standard procedure for cognitive system activation.
+
+1. **Deployment**: Install the skill via `clawhub install eva-soul-integration`.
+2. **Standardization**: Run `bash scripts/install.sh` to update global constitutions (`AGENTS.md`, `SOUL.md`).
+3. **Verification**: Execute `python3 scripts/eva_soul_call.py --prompt` to confirm system availability.
+4. **Activation**: Send a message to confirm EVA recognizes the user and maintains session context.
+5. **Persistence Check**: Inspect `memory/self_cognition.json` to verify state saving.

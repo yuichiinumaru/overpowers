@@ -1,9 +1,13 @@
 ---
 name: create-an-asset
-description: Generate tailored sales assets (landing pages, decks, one-pagers, workflow demos) from your deal context. Describe your prospect, audience, and goal — get a polished, branded asset ready to share with customers.
+description: Generate tailored sales assets (landing pages, decks, one-pagers, workflow
+  demos) from your deal context. Describe your prospect, audience, and goal — get
+  a polished, branded asset ready to share with customers.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Create an Asset
 

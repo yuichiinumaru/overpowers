@@ -1,9 +1,15 @@
 ---
 name: podcast-generation
-description: Generate AI-powered podcast-style audio narratives using Azure OpenAI's GPT Realtime Mini model via WebSocket. Use when building text-to-speech features, audio narrative generation, podcast creation from content, or integrating with Azure OpenAI Realtime API for real audio output. Covers full-stack implementation from React frontend to Python FastAPI backend with WebSocket streaming.
+description: Generate AI-powered podcast-style audio narratives using Azure OpenAI's
+  GPT Realtime Mini model via WebSocket. Use when building text-to-speech features,
+  audio narrative generation, podcast creation from content, or integrating with Azure
+  OpenAI Realtime API for real audio output. Covers full-stack implementation from
+  React frontend to Python FastAPI backend with WebSocket streaming.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Podcast Generation with GPT Realtime Mini
 

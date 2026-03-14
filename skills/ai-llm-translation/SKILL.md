@@ -1,9 +1,12 @@
 ---
 name: translation
-description: Guidelines for translating and localizing the Kilo Code extension, including language-specific rules for German, Simplified Chinese, and Traditional Chinese.
+description: Guidelines for translating and localizing the Kilo Code extension, including
+  language-specific rules for German, Simplified Chinese, and Traditional Chinese.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Translation Guidelines
 

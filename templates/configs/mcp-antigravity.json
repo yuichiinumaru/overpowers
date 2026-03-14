@@ -1,0 +1,53 @@
+{
+  "mcpServers": {
+    "memcord": {
+      "command": "${UVX_PATH}",
+      "args": [
+        "memcord",
+        "server"
+      ],
+      "env": {
+        "MEMCORD_ENABLE_ADVANCED": "true"
+      }
+    },
+    "vibe_check": {
+      "command": "node",
+      "args": [
+        "${VIBE_CHECK_PATH}"
+      ],
+      "env": {
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}",
+        "MCP_TRANSPORT": "stdio"
+      }
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      }
+    },
+    "serena": {
+      "command": "${UVX_PATH}",
+      "args": [
+        "--from",
+        "${SERENA_PATH}",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide-assistant"
+      ],
+      "env": {}
+    },
+    "desktop_commander": {
+      "command": "node",
+      "args": [
+        "${DESKTOP_COMMANDER_PATH}"
+      ],
+      "env": {}
+    }
+  }
+}

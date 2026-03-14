@@ -1,9 +1,12 @@
 ---
 name: last30days
-description: Research any topic across Reddit, X/Twitter, and the web from the last 30 days. Synthesizes findings into actionable insights or copy-paste prompts.
+description: Research any topic across Reddit, X/Twitter, and the web from the last
+  30 days. Synthesizes findings into actionable insights or copy-paste prompts.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # last30days 📅
 

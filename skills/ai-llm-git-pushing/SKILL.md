@@ -1,9 +1,11 @@
 ---
 name: git-pushing
-description: ''
+description: Git Push Workflow
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Git Push Workflow
 

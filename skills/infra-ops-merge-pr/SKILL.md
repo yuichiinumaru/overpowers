@@ -1,9 +1,13 @@
 ---
 name: merge-pr
-description: Merge a GitHub PR via squash after /preparepr. Use when asked to merge a ready PR. Do not push to main or modify code. Ensure the PR ends in MERGED state and clean up worktrees after success.
+description: Merge a GitHub PR via squash after /preparepr. Use when asked to merge
+  a ready PR. Do not push to main or modify code. Ensure the PR ends in MERGED state
+  and clean up worktrees after success.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Merge PR
 

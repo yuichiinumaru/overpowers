@@ -4,6 +4,8 @@ description: 3D content in Remotion using Three.js and React Three Fiber.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Using Three.js and React Three Fiber in Remotion
 

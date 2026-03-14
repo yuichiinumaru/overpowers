@@ -1,9 +1,13 @@
 ---
 name: review-implementing
-description: Process and implement code review feedback systematically. Use when user provides reviewer comments, PR feedback, code review notes, or asks to implement suggestions from reviews.
+description: Process and implement code review feedback systematically. Use when user
+  provides reviewer comments, PR feedback, code review notes, or asks to implement
+  suggestions from reviews.
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Review Feedback Implementation
 

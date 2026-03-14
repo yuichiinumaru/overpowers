@@ -4,6 +4,8 @@ description: '|'
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # Data Analyst
 

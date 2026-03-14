@@ -4,6 +4,8 @@ description: Creates comprehensive content outlines and topic clusters for SEO.
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Seo Content Planner
 

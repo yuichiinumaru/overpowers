@@ -1,9 +1,12 @@
 ---
 name: miro-automation
-description: 'Automate Miro tasks via Rube MCP (Composio): boards, items, sticky notes, frames, sharing, connectors. Always search tools first for current schemas.'
+description: 'Automate Miro tasks via Rube MCP (Composio): boards, items, sticky notes,
+  frames, sharing, connectors. Always search tools first for current schemas.'
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Miro Automation via Rube MCP
 

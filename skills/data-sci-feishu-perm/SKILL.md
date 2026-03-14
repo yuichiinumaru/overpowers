@@ -4,6 +4,8 @@ description: '|'
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Feishu Permission Tool
 

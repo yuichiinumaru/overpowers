@@ -4,6 +4,8 @@ description: Use when updating Lingui catalogs or fixing translations
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # I18N
 

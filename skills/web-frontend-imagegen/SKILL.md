@@ -1,6 +1,15 @@
 ---
-name: "imagegen"
-description: "Use when the user asks to generate or edit images via the OpenAI Image API (for example: generate image, edit/inpaint/mask, background removal or replacement, transparent background, product shots, concept art, covers, or batch variants); run the bundled CLI (`scripts/image_gen.py`) and require `OPENAI_API_KEY` for live calls."
+name: imagegen
+description: 'Use when the user asks to generate or edit images via the OpenAI Image
+  API (for example: generate image, edit/inpaint/mask, background removal or replacement,
+  transparent background, product shots, concept art, covers, or batch variants);
+  run the bundled CLI (`scripts/image_gen.py`) and require `OPENAI_API_KEY` for live
+  calls.'
+version: 1.0.0
+category: general
+tags:
+- general
+- imagegen
 ---
 
 
@@ -13,10 +22,17 @@ Generates or edits images for the current project (e.g., website assets, game as
 - Edit an existing image (inpainting, masked edits, lighting or weather transformations, background replacement, object removal, compositing, transparent background)
 - Batch runs (many prompts, or many variants across prompts)
 
-## Decision tree (generate vs edit vs batch)
-- If the user provides an input image (or says “edit/retouch/inpaint/mask/translate/localize/change only X”) → **edit**
-- Else if the user needs many different prompts/assets → **generate-batch**
-- Else → **generate**
+## Decision Tree
+
+Use this matrix to select the best mode for image generation:
+
+| If [Situation] | Then [Mode] | Why? |
+| :--- | :--- | :--- |
+| Existing image provided (or says "edit/retouch") | **edit** | Preserves context/identity |
+| Many prompts or variants needed | **batch** | Efficiency & Parallelism |
+| No image, single creative request | **generate** | Default behavior |
+
+---
 
 ## Workflow
 1. Decide intent: generate vs edit vs batch (see decision tree above).

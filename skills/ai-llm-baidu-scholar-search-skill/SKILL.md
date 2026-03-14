@@ -1,9 +1,12 @@
 ---
 name: baidu-scholar-search-skill
-description: Baidu Scholar Search - Search Chinese and English academic literature (journals, conferences, papers, etc.)
+description: Baidu Scholar Search - Search Chinese and English academic literature
+  (journals, conferences, papers, etc.)
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Baidu Scholar Search Skill
 

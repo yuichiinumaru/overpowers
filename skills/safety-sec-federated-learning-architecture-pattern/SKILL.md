@@ -1,9 +1,11 @@
 ---
 name: federated-learning-architecture-pattern
-description: ''
+description: Federated Learning Architecture Pattern
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Federated Learning Architecture Pattern
 

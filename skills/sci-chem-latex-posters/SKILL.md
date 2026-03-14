@@ -1,9 +1,14 @@
 ---
 name: latex-posters
-description: Create professional research posters in LaTeX using beamerposter, tikzposter, or baposter. Support for conference presentations, academic posters, and scientific communication. Includes layout design, color schemes, multi-column formats, figure integration, and poster-specific best practices for visual communication.
+description: Create professional research posters in LaTeX using beamerposter, tikzposter,
+  or baposter. Support for conference presentations, academic posters, and scientific
+  communication. Includes layout design, color schemes, multi-column formats, figure
+  integration, and poster-specific best practices for visual communication.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # LaTeX Research Posters
 

@@ -1,9 +1,12 @@
 ---
 name: single-cell-downstream-analysis
-description: Checklist-style reference for OmicVerse downstream tutorials covering AUCell scoring, metacell DEG, and related exports.
+description: Checklist-style reference for OmicVerse downstream tutorials covering
+  AUCell scoring, metacell DEG, and related exports.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # Single-cell downstream analysis quick-reference
 

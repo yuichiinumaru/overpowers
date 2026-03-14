@@ -1,9 +1,12 @@
 ---
 name: i18n-localization
-description: Internationalization and localization patterns. Detecting hardcoded strings, managing translations, locale files, RTL support.
+description: Internationalization and localization patterns. Detecting hardcoded strings,
+  managing translations, locale files, RTL support.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # i18n & Localization
 

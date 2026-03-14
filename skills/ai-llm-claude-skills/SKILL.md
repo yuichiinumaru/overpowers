@@ -4,6 +4,8 @@ description: Automation and tasks for claude-skills
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Claude Skills
 

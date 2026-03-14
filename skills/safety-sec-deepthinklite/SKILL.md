@@ -1,9 +1,12 @@
 ---
 name: deepthinklite
-description: 'Local-first deep research like OpenAI Deep Research: generates questions.md + response.md artifacts and enforces a time budget.'
+description: 'Local-first deep research like OpenAI Deep Research: generates questions.md
+  + response.md artifacts and enforces a time budget.'
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # DeepthinkLite
 

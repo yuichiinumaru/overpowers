@@ -1,9 +1,11 @@
 ---
 name: pr-review
-description: ''
+description: PyTorch PR Review Skill
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # PyTorch PR Review Skill
 

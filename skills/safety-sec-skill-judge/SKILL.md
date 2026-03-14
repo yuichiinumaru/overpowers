@@ -1,9 +1,13 @@
 ---
 name: skill-judge
-description: Evaluate Agent Skill design quality against official specifications and best practices. Use when reviewing, auditing, or improving SKILL.md files and skill packages. Provides multi-dimensional scoring and actionable improvement suggestions.
+description: Evaluate Agent Skill design quality against official specifications and
+  best practices. Use when reviewing, auditing, or improving SKILL.md files and skill
+  packages. Provides multi-dimensional scoring and actionable improvement suggestions.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Skill Judge
 

@@ -4,6 +4,8 @@ description: Getting the duration of an audio file in seconds with Mediabunny
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Getting audio duration with Mediabunny
 

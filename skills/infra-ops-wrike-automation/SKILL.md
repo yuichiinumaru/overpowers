@@ -1,9 +1,13 @@
 ---
 name: wrike-automation
-description: 'Automate Wrike project management via Rube MCP (Composio): create tasks/folders, manage projects, assign work, and track progress. Always search tools first for current schemas.'
+description: 'Automate Wrike project management via Rube MCP (Composio): create tasks/folders,
+  manage projects, assign work, and track progress. Always search tools first for
+  current schemas.'
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Wrike Automation via Rube MCP
 

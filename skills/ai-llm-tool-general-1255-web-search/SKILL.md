@@ -1,6 +1,18 @@
 ---
 name: tool-general-1255-web-search
-description: "This skill should be used when users need to search the web for information, find current content, look up news articles, search for images, or find videos. It uses DuckDuckGo's search API to return results in clean, formatted output (text, markdown, or JSON). Use for research, fact-checking, finding recent information, or gathering web resources."
+description: This skill should be used when users need to search the web for information,
+  find current content, look up news articles, search for images, or find videos.
+  It uses DuckDuckGo's search API to return results in clean, formatted output (text,
+  markdown, or JSON). Use for research, fact-checking, finding recent information,
+  or gathering web resources.
+version: 1.0.0
+category: general
+tags:
+- '1255'
+- general
+- search
+- tool
+- web
 ---
 
 # Web Search

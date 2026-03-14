@@ -1,9 +1,12 @@
 ---
 name: pulse
-description: Access PULSE Magazine intelligence reports and real-time agentic meta-analysis. Chronicling the rise of the autonomous economy.
+description: Access PULSE Magazine intelligence reports and real-time agentic meta-analysis.
+  Chronicling the rise of the autonomous economy.
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # PULSE Magazine Skill
 

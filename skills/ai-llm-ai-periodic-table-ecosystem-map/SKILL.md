@@ -1,9 +1,11 @@
 ---
 name: ai-periodic-table-ecosystem-map
-description: ''
+description: The AI Ecosystem Map (Periodic Table)
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # The AI Ecosystem Map (Periodic Table)
 

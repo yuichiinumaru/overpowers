@@ -1,9 +1,12 @@
 ---
 name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+description: Use when creating new skills, editing existing skills, or verifying skills
+  work before deployment
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Writing Skills
 

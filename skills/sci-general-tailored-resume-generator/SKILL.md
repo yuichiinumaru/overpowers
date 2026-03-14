@@ -1,8 +1,11 @@
 ---
 name: tailored-resume-generator
-description: Analyzes job descriptions and generates tailored resumes that highlight relevant experience, skills, and achievements to maximize interview chances
+description: Analyzes job descriptions and generates tailored resumes that highlight
+  relevant experience, skills, and achievements to maximize interview chances
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Tailored Resume Generator
 

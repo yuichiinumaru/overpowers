@@ -1,9 +1,12 @@
 ---
 name: data-export-excel
-description: Export analysis results, data tables, and formatted spreadsheets to Excel files using openpyxl. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).
+description: Export analysis results, data tables, and formatted spreadsheets to Excel
+  files using openpyxl. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Excel Data Export (Universal)
 

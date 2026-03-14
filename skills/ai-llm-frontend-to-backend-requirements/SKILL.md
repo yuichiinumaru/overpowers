@@ -1,9 +1,13 @@
 ---
 name: frontend-to-backend-requirements
-description: Document frontend data needs for backend developers. Use when frontend needs to communicate API requirements to backend, or user says 'backend requirements', 'what data do I need', 'API requirements', or is describing data needs for a UI.
+description: Document frontend data needs for backend developers. Use when frontend
+  needs to communicate API requirements to backend, or user says 'backend requirements',
+  'what data do I need', 'API requirements', or is describing data needs for a UI.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Backend Requirements Mode
 

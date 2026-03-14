@@ -4,6 +4,8 @@ description: Displaying captions in Remotion with TikTok-style pages and word hi
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Displaying captions in Remotion
 

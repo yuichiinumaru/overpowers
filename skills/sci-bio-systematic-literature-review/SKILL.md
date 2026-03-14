@@ -1,9 +1,11 @@
 ---
 name: systematic-literature-review
-description: ''
+description: Systematic Literature Review
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Systematic Literature Review
 

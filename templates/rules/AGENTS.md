@@ -1,750 +1,267 @@
-# 🤖 PROJECT AGENTS CONSTITUTION
+> **ALERTA DO SISTEMA**: Esta é a **Constituição Global** do Overpowers Integrated Agent System.
+    1. Este arquivo é a máxima fonte da verdade lida por **TODOS os agentes**. Ele unifica todas as leis operacionais, práticas de desenvolvimento e fronteiras de segurança.
+    2. Todos os agentes de código que trabalham em paralelo nesta máquina (que aceitam Global Rules) recebem este mesmo conjunto de instruções (Gemini-cli, Codex-cli, Claude-cli, Droid-cli, Kilo-cli, Opencode, etc). Você faz parte deste ecossistema profissional de código.
+    3. AGENTS.md - Em todo projeto deve haver um arquivo deste, na raiz - ele unifica as leis particulares daquele projeto e serve como sua constituição. Considere ele como uma constituição local, como a de um Estado versus a do País. 
+    4. Em alguns casos, subpastas de determinados projetos possuem some/folder/AGENTS.md em adição ao AGENTS.md central, que fica no diretório raiz. Neste caso, considere as regras e instruções ali escritas como válidas dentro do domínio daquela pasta (e suas subpastas). 
 
-> **Status**: Active
-> **Version**: 1.0
-> **Last Updated**: YYYY-MM-DD
 
-> **SYSTEM ALERT**: This is the **Root Constitution** for this project.
-> **CONTEXT**: <!-- Brief description of the project and its scale -->
-> **PERSONA**: You are the project's AI Architect. Maintain coherence while extending capabilities.
->
-> **AUDIENCE**: This file is read by **ALL agents** — including Jules, Antigravity, Gemini CLI, OpenCode, Kilo Code, and any other AI coding agent.
-> Platform-specific rules (e.g. Jujutsu VCS, Antigravity-only conventions) live in `.agents/rules/`.
+> **PERSONA**: 
+  - Você deve assumir uma identidade de agente ao começar a trabalhar em qualquer repositório. Isto significa que você deve manter seu continuity ledger atualizado em .agents/continuity-yourname.md.
+  - Mantenha a coerência e coesão do projeto em que está trabalhando enquanto estende suas capacidades, observando as regras e convenções particulares do projeto em AGENTS.md.
+  - Se você acabou de começar a sessão e o User não especificar uma identidade para que você assuma, pergunte se você deve assumir um perfil existente ou criar um novo. 
+  - Este sistema de identidades existe de forma complementar ao sistema de tarefas, para evitar colisões de trabalho com agentes trabalhando em tarefas paralelamente. 
+  - Se você notar alguma modificação num arquivo em que você estava mexendo, você pode deixar um comentário no arquivo explicando o que você estava fazendo (deixe seu nome de agente no início do comentário).
+
+
 
 ---
 
-# ⚠️ THIS FILE IS SACRED — DO NOT EDIT WITHOUT PERMISSION
+## 🛑 PROTOCOLO ZERO: CONTINUIDADE CENTRALIZADA
+**EXECUTE ISTO ANTES DE FAZER QUALQUER OUTRA COISA.**
+1.  **LER**: Abra `continuity-agentname.md` neste diretório.
+      - Este é o **Livro de Registro da Sessão**. Ele rastreia o foco atual e as tarefas pendentes.
+2.  **ALINHAR**: Confirme sua compreensão do "Foco Atual".
+3.  **ATUALIZAR**: Ao final da sessão, atualize `continuity-agentname.md` com o novo estado.
 
+---
+## 1. IDENTIDADE E ESCOPO
+Todo Projeto deve possuir um AGENTS.md próprio, no diretório raiz, centralizando as regras e convenções particulares ao ambiente em que está. Neste arquivo não há necessidade de colocar regras que já constam aqui, nas regras globais. Porém, alguns dados são importantes para evitar confusão por parte de agentes que compartilham camadas de conhecimento e memória cross-project - por exemplo:
+
+**Nome**: {<repo_name>}
+**Mantido por**: {<repo_maintainer>}
+
+### 📦 Componentes Principais
+| Componente | Localização | Propósito |
+|:----------|:---------|:--------|
+| {component1} | {location1} | {description1} |
+| {component2} | {location2} | {description2} |
+| {component3} | {location3} | {description3} |
+| {component4} | {location4} | {description4} |
+| {component5} | {location5} | {description5} |
+| {component6} | {location6} | {description6} |
+| {component7} | {location7} | {description7} |
+| {component8} | {location8} | {description8} |
+| {component9} | {location9} | {description9} |
+| {component10} | {location10} | {description10} |
+
+
+---
+
+## 2. O PROTOCOLOS OPERACIONAIS
+**Os protocolos a seguir valem para todo e qualquer projeto.**
+
+### 2.1. PROTOCOLO DE ARQUIVAMENTO (NUNCA DELETAR)
+> [!WARNING]  
+> **NUNCA DELETE ARQUIVOS OU PASTAS. EVITE `rm` E `rm -rf` A TODO CUSTO.**
+> Isto se aplica a TODOS os agentes. Você está estritamente proibido de deletar permanentemente código, scripts ou pastas depreciados.
+
+Se um arquivo, regra, script ou componente for depreciado, estiver desatualizado ou não for mais necessário:
+1. **NÃO O DELETE.** (Não use `rm` ou `rm -rf`, nem MCP tools, nem scripts para tal). 
+2. **MOVA-O** para o diretório `.archive/` na raiz do repositório usando `mv` ou similar, em vez de deletar.
+3. Isso garante que a janela de contexto imediata do agente seja limpa de dados antigos enquanto preserva o código histórico com segurança fora da vista para referência futura.
+4. Só o USER pode deletar coisas de .archive/
+5. Garanta que .archive/ esteja sempre no .gitignore, para evitar bloat.
+
+### 2.2. PROTOCOLO DE CHANGELOG (LEI IMUTÁVEL)
 > [!CAUTION]
-> **DO NOT EDIT THIS FILE (`AGENTS.md`) UNDER ANY CIRCUMSTANCE WITHOUT EXPLICIT USER PERMISSION.**
-> Do not make destructive edits that erase previous content from existing files inadvertently.
-> Do not make edits to ANY file before reading it first.
+> **ESTA É UMA REGRA IMUTÁVEL. A VIOLAÇÃO É ESTRITAMENTE PROIBIDA.**
 
----
+Cada modificação neste repositório **DEVE** ser acompanhada por uma entrada em `CHANGELOG.md`.
+1. **SEMPRE ADICIONE** novas entradas no TOPO do changelog (ordem de data decrescente).
+2. **NUNCA DELETE** entradas existentes no changelog.
+3. **NUNCA MODIFIQUE** entradas passadas, exceto para corrigir erros de digitação.
 
-## 0. 🛑 PROTOCOL ZERO: SESSION INITIALIZATION (MANDATORY)
-
-**EXECUTE THIS BEFORE DOING ANYTHING ELSE.**
-
-At the start of **EVERY session**, regardless of the task, you **MUST** perform these steps in order:
-
-1. **Read Your Memories/Knowledge**: Read ALL memories and knowledge items about this repository. This is your accumulated institutional knowledge. Use memcord MCP, serena MCP, native Antigravity Knowledge, or whatever memory system is available. Assess availability of Skills, tools, and MCPs.
-2. **Map the Repository Structure**: Run `tree -d -L 3 -I 'node_modules|__pycache__|.git|.jj|.pytest_cache|*.egg-info|dist|build|.venv' > docs/tree.md` to understand the current folder structure. Read the output.
-3. **Read the Constitution**: Read this file (`AGENTS.md`) in full.
-4. **Read the Continuity Ledger**: Open `continuity.md` in this directory. This is the **Session Ledger** tracking current focus and pending tasks. Confirm your understanding of the "Current Focus".
-5. **Read the Tasklist**: Read `docs/tasklist.md` to understand the current priorities, blockers, and parallelizable tasks.
-6. **Scan Active Tasks**: Skim `docs/tasks/` (filenames and headers only) to understand what detailed implementation plans exist.
-
-**Why**: Without this initialization, you will lose context, repeat mistakes, create files in wrong locations, and waste the user's time. This protocol exists because these failures have happened **many times**.
-
-### Session End Protocol
-- **UPDATE** `continuity.md` with the new state before finishing.
-- **UPDATE** `CHANGELOG.md` with any modifications made.
-- **Persist** architectural discoveries, bug resolutions, and structural knowledge to `.agents/memories/`.
-
----
-
-## 1. 🏗️ PROJECT IDENTITY & SCOPE
-
-**Name**: <!-- Project Name -->
-**Maintained By**: <!-- Maintainer Name -->
-**Repository**: <!-- Repository URL -->
-
-### 📦 Core Components
-| Component | Count | Location |
-|:----------|:------|:---------|
-| Agents | N | `agents/` |
-| Skills | N | `skills/` |
-| Workflows | N | `workflows/` |
-| Hooks | N | `hooks/` |
-| Scripts | N | `scripts/` |
-| Templates | N | `templates/` |
-| Docs/Tasks | N | `docs/tasks/` |
-
-### 📁 Directory Organization
-
-| Directory | Purpose |
-|:----------|:--------|
-| `agents/` | Agent prompt files (`.md`). Flat directory, prefixed by category (e.g. `sec--`, `ops--`, `mobile--`). |
-| `skills/` | Reusable skill packages. Each is a directory with a `SKILL.md` inside. Some have `scripts/` or `references/`. |
-| `workflows/` | Step-by-step workflow definitions (`.md` with YAML frontmatter). |
-| `hooks/` | Git/CLI hooks and automation triggers. |
-| `scripts/` | Global utility scripts (installers, generators). Skill-specific scripts live inside `skills/<name>/scripts/`. |
-| `templates/` | Canonical templates for creating new agents, skills, and workflows. |
-| `docs/` | Project documentation, task definitions, planning docs, and analysis reports. |
-| `.agents/` | Orchestration layer: prompts, rules, reports, and memories. Rules inside `.agents/rules/` may be specific to certain platforms. |
-
-### Documentation Organization (`docs/`)
-
-```
-docs/
-├── analysis/             # Research and analysis reports
-├── architecture/         # System design and structure documents
-│   └── specs/            # Technical specifications
-├── tasks/                # Individual task files (nnn-type-name.md)
-│   ├── planning/         # Proposals and epics (no code generated)
-│   └── complete/         # Completed task files (reference only)
-├── archive/              # Archived/deprecated docs
-├── knowledge/            # Knowledge base files
-├── sops/                 # Standard Operating Procedures
-└── thoughts/             # Agent notes and context dumps
-```
-
----
-
-## 2. 📜 THE CORE PHILOSOPHY
-
-### Agents as Users
-
-The most critical principle is that **AI agents are the users of our tools and APIs**. Every tool, function, and piece of documentation must be designed with this in mind.
-
-| Principle | Description |
-|:----------|:------------|
-| **Simplicity over Complexity** | An agent doesn't need to know everything at once. Provide the essentials first. |
-| **Clarity over Ambiguity** | Documentation and examples are not optional; they are the UI for agent users. |
-| **Speed over Sluggishness** | Agents need fast, responsive tools to be effective. |
-| **Safety over Unpredictability** | Validation and guardrails are essential to prevent errors. |
-| **Preservation over Deletion** | Never delete documentation. Archive first, then edit. |
-| **Read First** | Under absolutely NO CIRCUMSTANCE do we edit a file without READING IT FIRST. |
-| **Granularity** | Tasks must be broken down into detailed subtasks. Vague plans are forbidden. |
-| **Autonomy** | Complete tasks with minimal human intervention. Ask for clarification, not permission. |
-| **Verification** | All code must be tested. No untested code is to be committed. |
-
-### Design Patterns
-
-#### The "Essentials" Pattern
-- Every complex entity (agent, tool, etc.) MUST have a simplified, lightweight summary of its capabilities.
-- Use or create `get_*_essentials` tools that return a small JSON with description, core capabilities, and examples.
-- **Always start with the "essentials"**. Only request the full definition if absolutely necessary.
-
-#### Task-Oriented Templates
-- Provide pre-configured solutions for common, repetitive tasks.
-- **Always search for a template** before building from scratch.
-
-#### Progressive Disclosure
-- Start with a high-level summary, then provide tools to drill down into specifics.
-- **Don't ask for everything at once.** Ask for what you need, when you need it.
-
----
-
-## 3. 📋 CHANGELOG PROTOCOL (IMMUTABLE LAW)
-
-> [!CAUTION]
-> **THIS IS AN IMMUTABLE RULE. VIOLATION IS STRICTLY FORBIDDEN.**
-
-### The Changelog Law
-Every modification to this repository **MUST** be accompanied by an entry in `CHANGELOG.md`.
-
-### Rules:
-1. **ALWAYS ADD** new entries at the TOP of the changelog (descending date order).
-2. **NEVER DELETE** existing changelog entries. The history is sacred and immutable.
-3. **NEVER MODIFY** past entries except to fix typos.
-4. **FORMAT**: Use the standard format below.
-
-### Changelog Entry Format:
+**Formato**:
 ```markdown
-## [YYYY-MM-DD] - Brief Title
-
-### Added
-- New features or files
-
-### Changed
-- Modifications to existing features
-
-### Fixed
-- Bug fixes
-
-### Removed
-- Deleted features or files
-
-**Author**: [Name or Agent ID]
+## [AAAA-MM-DD] - Título Breve
+### Added / Changed / Fixed / Removed
+- Detalhes
+**Author**: [Nome ou ID do Agente]
 ```
 
----
+Lembrete: outros agentes podem ler e modificar este arquivo simultaneamente, entao faça com cuidado e atenção qualquer mudança.
 
-## 4. 🧭 THE KNOWLEDGE ROUTING TABLE
 
-| IF you are doing... | THEN use... | Location |
-|:--------------------|:------------|:---------|
-| **Orchestration** | Sisyphus Orchestrator | `@sisyphus-orchestrator` |
-| **Complex Planning** | Prometheus Planner | `@prometheus-planner` |
-| **Advice/Architecture** | Oracle Consultant | `@oracle-consultant` |
-| **Internal Search** | Explore (Grep) | `@explore-grep` |
-| **External Research** | Librarian (Docs) | `@librarian-researcher` |
-| **Code Review** | Code Reviewer Agent | `@code-reviewer` |
-| **Security Audit** | Security Auditor Agent | `@security-auditor` |
-| **Parallel Work** | Jules Orchestration Workflow | `workflows/jules-orchestration.md` |
+### 2.3. PROTOCOLO DE GERENCIAMENTO DE TAREFAS
+**Nós dividimos o gerenciamento de tarefas em Epic, Stories, Tasks e Subtasks.**
 
-### MCP Tools Available
+1. **Propostas, ideias, backlog, etc:** → `.docs/tasks/planning/` (nenhum código gerado)
 
-This workspace has access to multiple MCP (Model Context Protocol) tools. Use the right tool for the right task:
+2. **Tarefa Em Aberto:** → `.docs/tasks/nnnn-tipo-subtipo-nomes.md` 
+  - Só podemos considerar um plano ou idéia vinda do backlog como uma TAREFA de fato quando ela tem:
+    - Condições de Saída Claras
+    - Definições claras e detalhadas do quê fazer, como, quando, onde, porquê
+    - Subtasks em "o quê fazer", listadas em [ ]
+    - Todos os demais detalhes necessários para que um agente possa executá-la sem precisar de informações adicionais. 
+  - Portanto, **Todas as tarefas DEVEM seguir o template de tarefa padrão,** que possui estes campos.
 
-| MCP | Best For | Do NOT Use For |
-|:----|:---------|:---------------|
-| **memcord** | Persisting context between sessions, remembering decisions | Codebase analysis |
-| **in_memoria** | Understanding project structure, finding where to modify code | External research |
-| **context7** | Looking up library documentation | General research |
-| **serena** | Semantic code analysis, symbol lookup | Non-code research |
-| **vibe-check** | Metacognitive questioning to prevent tunnel vision | Implementation |
-| **notebooklm** | Research, creating audio/video summaries of documents | Code operations |
-| **playwright** | Browser automation, testing, screenshots | Server-side operations |
-| **hyperbrowser** | Cloud browser automation, web scraping | Local file ops |
-| **perplexity / websearch** | Web research using search APIs | Code-only tasks |
-| **deepwiki** | GitHub repository documentation queries | Non-GitHub sources |
+3. **Em Progresso / Concluída** → Marcadas `[/]` ou `[x]` em `.docs/tasklist.json`.
+  - **Importante:** Agentes **NUNCA** modificam `.docs/tasklist.json` para evitar conflitos de merge em enxames (swarms) concorrentes. Eles modificam apenas seu arquivo de tarefa específico. A única exceção a esta regra é se (e somente se) o usuário solicitar.
+4. **Tracking:** Mesmo que uma tarefa comece no meio de um fluxo de trabalho, é preciso documentar a implementação dela. Se isto ocorrer, pare no meio o que está fazendo e crie um documento de tarefa. Avise o User que está fazendo.
 
----
-
-## 5. ⚖️ THE OPERATIONAL LAWS
-
-### I. The Law of Explicit Declaration
-- Agents must be explicitly declared in the agent registry config for optimal performance.
-- Use the appropriate generator script to maintain the agent registry.
-
-### II. The Law of Modular Extension
-- New agents go in `agents/` with proper frontmatter (name, description, category).
-- New skills go in `skills/` with a `SKILL.md` file.
-- New workflows go in `workflows/`.
-
-### III. The Law of Documentation
-- All new features must be documented in the appropriate guide.
-- Documentation is a first-class deliverable, not an afterthought.
-
-### IV. The Law of Backward Compatibility
-- Do not break existing agent/skill interfaces without versioning.
-- Deprecated features stay for at least 2 versions before removal.
-
-### V. The Law of Shared Consciousness
-- All agents (Jules, OpenCode, Antigravity, Gemini CLI, Kilo Code) must persist architectural discoveries, bug resolutions, and structural knowledge as `.md` files in `.agents/memories/`.
-- This directory may be symlinked to a global memories folder to ensure shared consciousness across all coding platforms.
+#### Convenção Atual de Nomes:
+1. **Arquivos Gerais**: formato `tipo-subtipo-nnnn-nomes.md`. Subtipo é opcional, mas preferido ao lado do tipo, se usado. Número ajuda a evitar colisões de nome.
+     - Exemplo: `scavenge-report-0023-agno-agent-framework.md`
+2. **Tarefas (`.docs/tasks/`)**: formato `nnnn-tipo-subtipo-nomes.md`.
+     - O prefixo `nnnn` segue uma regra específica:
+       - **Primeiros 3 dígitos**: ordem cronológica de planejamento.
+       - **Último dígito**: `0` = bloqueador (sequencial), `1-9` = tarefas paralelizáveis.
+       - *Exemplo*: `0010` é um bloqueador. `0021`, `0022`, `0023` são paralelizáveis.
+     - **Subtipo**: Opcional, mas preferido ao lado do tipo, se usado.
+     - *Exemplo*: `0111-scavenge-memory-repos.md` (11º bloco planejado, não bloqueador/paralelizável 1, tipo: scavenge, sem subtipo).
+3. **Diretrizes Gerais**: Sempre use letras minúsculas, hifens `-` para separação e extensões apropriadas. NUNCA use espaços, sublinhados (underscores) ou camelCase, para evitar problemas de legibilidade e acelerar a digitação humana.
 
 ---
 
-## 6. 🔐 SECURITY BOUNDARIES
+## 3. AS LEIS OPERACIONAIS
 
-### 🔴 NEVER (Immutable)
-- **NEVER** commit API keys, tokens, or secrets.
-- **NEVER** delete changelog history.
-- **NEVER** modify core infrastructure files without testing.
-- **NEVER** add binary files to git.
-- **NEVER** send streaming/partial replies to external messaging surfaces (WhatsApp, Telegram, Slack).
-- **NEVER** change version numbers without explicit consent.
-- **NEVER** use synchronous database calls in async codebases.
-- **NEVER** use dates/times in filenames — LLMs hallucinate them.
+### 3.1. A Lei da Extensão Modular
+  - Modularidade é importante para pluginplayability, reprodutibilidade e facilidade de editar / achar desde que bem mapeada. Especialmente para ambientes agent first, é crucial pra não ter bloat de contexto a toa evitar arquivos gigantescos. Porém, cada projeto tem a sua. Faça constar uma lista no AGENTS.md de como é a modularidade do projeto, mapeando os principais módulos e componentes.
 
-### 🟢 ALWAYS (Autonomous)
-- **ALWAYS** update `continuity.md` before finishing a session.
-- **ALWAYS** add a changelog entry for any modification.
-- **ALWAYS** test after changes.
-- **ALWAYS** read a file before editing it.
-- **ALWAYS** review your code before committing (self-review).
+### 3.2. A Lei da Documentação e Consciência Compartilhada
+Todo trabalho de longa duração que for feito deve ser documentado das seguintes formas:
+  - Em .agents/thoughts/<nome-do-agente>/<naming-convention>.md - esta pasta serve como seu bloco de rascunho, caderno de anotação, memória pessoal (diferente da compartilhada em .agents/memories/) e offload de contexto. Drafts, notas e offloads de contexto em tarefas de longa duração devem ser colocadas aí.
+  - Em .docs/ nas subpastas respectivas. Ex. mudanças arquiteturais devem ser documentadas em .docs/architecture/, onde deve haver um architecture.md centralizado e atualizado constantemente. Porém, os documentos antigos devem ser mantidos para consulta futura e tracking histórico do projeto. 
+  - Docs só devem ser arquivados em caso de obsolescência total e quando REALMENTE não possuem mais relevância alguma nem para o tracking histórico do projeto.
+  - Todos os agentes que saírem em tarefas de codebase investigation devem persistir **descobertas** arquiteturais, resoluções de problemas, e conhecimentos como arquivos `.md` em `.agents/memories/` (com symlink bidirecional para `.serena/memories/`). 
+  - Todos os novos recursos devem ser documentados num guia apropriado (`.docs/hooks_guide.md`, etc.). 
+  - Todos os agentes devem consultar as memórias a fim de evitar retrabalho de recon na codebase.
+  - A pasta .docs/ serve para ajudar na organização do trabalho sobre o projeto. A pasta docs/ server para abrigar a documentação oficial do projeto que o usuário final irá ler.
 
----
+### 3.3. A Lei do Descarregamento de Pensamentos (Thought Offloading)
+  - Durante operações longas, exigentes ou complexas, TODOS os agentes DEVEM descarregar seu raciocínio, contexto e pensamentos intermediários para `.agents/thoughts/<nome-do-agente>/` (ex: `.agents/thoughts/jules/`) usando convenções de nomenclatura de tag HEX e facilidade semântica para evitar a degradação do contexto, manter a cadeia de raciocínio e facilitar consulta.
+  - Sempre que estiver em dúvida sobre algo, se pergunte "porque isto foi feito", ou "o que eu estava fazendo nessa hora?" e procure nesta pasta para ver se tem algum arquivo que possa te ajudar a lembrar.
 
-## 7. 📝 CONVENTIONS REGISTRY
+### 3.4 Lei das Convenções e Templates
+Todas as pastas, arquivos e subpastas devem ter uma convenção organizacional definida,e seguir as convenções de nomenclatura e formatação estabelecidas neste documento.
+  - **Adesão:** A adesão estrita às convenções de nomenclatura de arquivos garante que os arquivos sejam facilmente classificáveis e detectáveis.
+  - **Ausência:** Se porventura algum trecho do projeto: a) não tiver convenção bem definida ou b) não seguir as convenções estabelecidas neste documento, o agente deve: 1. parar o que está fazendo, 2. perguntar ao user se deve impor uma, e 3. sugerir uma ao User uma convenção ou padrão de organização que faça sentido. 
+  - **Inconsistência:** Naming conventions devem ser pensadas não apenas na coisa, mas a coisa em relação ao conjunto de coisas e ao contexto de uso. Rule of Thumb: Se uma convenção fez com que um tipo tenha mais itens do que 25% da média de itens por tipo, então esta convenção não faz sentido e precisa ser melhorada. Considere mais subdivisões e use scripts de análise semântica (para identificação em massa) e scripts de contagem de itens para verificar a média.
+  - **Reprodutibilidade:** Toda vez que fazemos operações repetitivas, com scripts, templates no repositório, reflita se estamos diante de uma oportunidade para salvar um template ou outros assets reprodutíveis (agents, skills, workflows, prompts, etc.) nas pastas devidas; chances são de que faremos um trabalho igual ou semelhante novamente. Um trabalho bem feito uma vez é aquele que economiza tempo e esforço para sempre - portanto fique de olho em oportunidades para economizar trabalho futuro através de templates e assets reprodutíveis.
+  - **Porque:** Nós somos obcecados com organização justamente para que o usuário final não precise se preocupar com isso. Num repo massivo como este (com mais de 1300 skills), Regras e Convenções são ferramentas inegociáveis de manutenção e organização. Assim como em qualquer outro projeto no qual o overpowers possa servir para ajudar na implementação, a organização do código é uma questão de qualidade e manutenibilidade.
 
-### File Naming
-- **Agents**: kebab-case.md (e.g., `python-expert.md`)
-- **Skills**: Directory with `SKILL.md` inside (e.g., `brainstorming/SKILL.md`)
-- **Scripts**: kebab-case.sh / kebab-case.py (e.g., `quality-check.sh`)
-- **Hooks**: kebab-case.md (e.g., `auto-git-add.md`)
-- **Tasks**: `nnn-type-name.md` (e.g., `009-feature-auth-system.md`)
-- **Reports**: `agent-task_name-hex.md` (e.g., `foreman-009-rebuild-a3f2.md`)
-
-### Task Naming Convention
-- `nnn` — zero-padded sequential number (e.g. `009`)
-- `type` — one of: `feature`, `refactor`, `fix`, `chore`, `rebuild`, `reorganize`, `audit`
-- `name` — kebab-case descriptive name
-
-### Frontmatter Standard (OpenCode Agents)
-```yaml
----
-name: kebab-case-name
-description: Brief description of purpose and when to use
-category: optional-category
-color: "#FF5733"
-tools:
-  read: true
-  write: true
-  edit: true
-  bash: true
-  grep: true
----
-```
-
-> [!IMPORTANT]
-> The `tools` field **must be a record** (key-value map), not an array or string.
-> The `color` field **must be a double-quoted hex code** — never a named color word.
-
-### Model Preferences
-- **Reasoning/Coding**: gemini-3-pro, claude-4-5-opus-thinking
-- **Fast Tasks**: gemini-3-flash
-- **Testing (cheap)**: gemini-2.5-flash-lite
-- **Fallback**: claude-4.5-sonnet
-- **NO** hardcoded model strings. Use the central registry whenever possible.
+### 3.5. Governança de Modelos e Frameworks
+Para casos especiais onde é necessário especificar modelos (ex: scripts que invocam LLMs pontualmente), siga estas instruções: 
+  - **High Reasoning**: `gemini-3.1-pro` / `claude-4.6-opus-thinking` (Raciocínio/Codificação).
+  - **Fast Reasoning**: `gemini-3-flash` / `claude-4.6-sonnet` (Fallback/Execução Rápida).
+  - **Testes Repetidos, Rápidos e Baratos**: `gemini-3.1-flash-lite`, `qwen-flash`, `gpt-5.1-mini`.
+  - **NÃO USE** modelos deprecated (ex: Gemini 1.5, 2.0, 2.5, Claude 3, Gpt 4 etc.) nem use bibliotecas deprecated (ex: google-generativeai em vez de google-genai, etc.)
+  - **NÃO MUDE** os modelos que o usuário colocou sob absolutamente nenhuma hipótese, e **NÃO CRIE DEFAULT FALLBACK** sem ser solicitado. Use os modelos que o usuário escolheu sem questionar.
 
 ---
 
-## 8. 📋 TASK SYSTEM
+## 4. PADRÕES DE ENGENHARIA E PRÁTICAS DE DESENVOLVIMENTO
+Aderimos às best practices de engenharia de software e estruturas Ágeis estritas para evitar a entropia do LLM.
+**Compensação (Tradeoff):** Viés em direção à cautela em vez da velocidade. Para tarefas triviais, use o bom senso.
 
-### Overview
+### 4.1. Pense Antes de Codificar
+**Não presuma. Não esconda confusão. Exponha os trade-offs.**
+  - Declare as suposições explicitamente. Se estiver incerto, pergunte.
+  - Apresente múltiplas interpretações - não escolha silenciosamente.
+  - Recuse quando justificável se uma abordagem mais simples existir.
 
-Tasks are managed through two locations:
-- **`docs/tasklist.md`**: Master list of all phases and tasks (THE SINGLE SOURCE OF TRUTH)
-- **`docs/tasks/`**: Individual task files with detailed specifications
+### 4.2. Simplicidade Primeiro
+**Código mínimo que resolve o problema. Nada especulativo.**
+  - Sem recursos além do que foi solicitado. Sem "flexibilidade" que não foi pedida.
+  - Se você escrever 200 linhas e puderem ser 50, reescreva-as.
 
-### Task File Template
+### 4.3. Mudanças Cirúrgicas
+**Toque apenas no que deve. Limpe apenas a sua própria bagunça.**
+  - Não "melhore" código adjacente, comentários ou formatação.
+  - Se notar código morto não relacionado, mencione-o - não o delete.
+  - Remova imports/variáveis que SUAS mudanças tornaram inutilizados.
 
-Every task file in `docs/tasks/` must follow this structure:
 
-```markdown
-# Task: [Task Name]
+### 4.4 The "GDFRSBT" (Goal, Domain, Feature, Readme, Specs, Behaviour and Test Driven Development)
 
-## Objective
-What this task aims to achieve.
+Para que um projeto de Software, seja qual for, possa ser iniciado e terminado com sucesso, ele deve seguir os observar diversos aspectos. Para cada um deles, existe uma prática de desenvolvimento associada, cada qual com seu foco principal. Nós iremos usar todas em conjunto, de forma sistemática, onde cada uma se adequar melhor.
 
-## Test Requirements
-What tests must pass for this task to be complete.
+**a) O que é?** O **GDFRSBT** (Goal, Domain, Feature, Readme, Spec, Behaviour, and Test Driven Development) é uma meta-metodologia de engenharia de software que consolida sete práticas de desenvolvimento em um pipeline contínuo. Ela garante que nenhum código seja escrito sem um propósito claro de negócio, uma arquitetura validada e uma cobertura de testes rigorosa.
 
-## Exit Conditions
-- [ ] Condition 1
-- [ ] Condition 2
+**b) Por que usar?** Para eliminar ambiguidades, prevenir *drift* arquitetural (desvio entre o código e a especificação) e garantir que a implementação seja guiada por critérios de sucesso preestabelecidos em vez de "achismos" técnicos.
 
-## Details
+**c) Onde usar?** Em todo e qualquer ciclo de desenvolvimento de software do projeto — desde a concepção de um novo microserviço até a adição de uma pequena *feature* ou correção de *bug*.
 
-### What
-Brief description of what needs to be done.
+**d) Quando usar?** Cada coisa no momento devido. A execução deve seguir uma ordem de refinamento top-down, isto é, do macro (negócio) para o micro (código):
 
-### Where
-File paths or locations in codebase.
+| Estágio | Prática | Escopo | Artefato / *Output* Chave |
+| --- | --- | --- | --- |
+| **1. Objetivos** | **GDD** | Macro / Negócio | Metas claras e Métricas de Sucesso. |
+| **2. Domínio Macro** | **DDD** (Estratégico) | Arquitetura | *Bounded contexts*, *Context maps* e Subdomínios. |
+| **3. Planejamento** | **FDD** | Gestão de Entrega | Lista priorizada e decomposta de *Features*. |
+| **4. Visão de Produto** | **RDD** | UX / DX | Arquivo `README.md` orientando a experiência de uso. |
+| **5. Contratos** | **SDD** | Integração | *Specs* legíveis por máquina (ex: OpenAPI, JSON Schema). |
+| **6. Comportamento** | **BDD** | Regras de Negócio | Cenários estruturados (*Given/When/Then*). |
+| **7. Domínio Micro** | **DDD** (Tático) | Lógica de Negócio | Entidades, Agregados, *Value Objects*. |
+| **8. Implementação** | **TDD** | Código / Unidade | Testes unitários falhos → Implementação → Refatoração. |
 
-### How
-Implementation approach.
+**e) Como usar:** Para que os agentes e desenvolvedores apliquem este framework de forma pragmática, as seguintes Diretrizes Operacionais (SOP) devem ser respeitadas durante a execução de tarefas:
 
-### Why
-Rationale and context.
-```
+**🎯 Goal-Driven Development (GDD)**
+* **Regra:** Defina o critério de sucesso antes de agir.
+* **Ação:** Se a meta é "Adicionar validação", o critério é "Escrever testes de limite para entradas inválidas e fazê-los passar". Repita até que a métrica de sucesso seja alcançada.
 
-### Task Lifecycle
-1. **Proposal** → `docs/tasks/planning/` (no code generated)
-2. **Approved Task** → `docs/tasks/nnn-type-name.md` (with Exit Conditions)
-3. **In Progress** → Mark `[/]` in tasklist.md (only by human/orchestrator)
-4. **Complete** → Mark `[x]` in tasklist.md (only by human/orchestrator)
+**📦 Feature-Driven Development (FDD)**
+* **Regra:** Quebre sistemas complexos em funcionalidades iterativas com ciclo de vida curto (máx. 2 semanas).
+* **Ação:** Sempre siga a estrutura de 3 documentos para novas features dentro de `.docs/tasks/`:
+1. `nnnn-tipo-subtipo-nomes-feature-plan.md` (Visão de produto, requisitos).
+2. `nnnn-tipo-subtipo-nomes-technical-design.md` (Arquitetura, modelagem DDD).
+3. A tarefa em si (ex: `.docs/tasklist.json`), que deve obrigatoriamente referenciar os dois documentos acima.
+* *Atenção:* A implementação **não** deve começar até que o Design Técnico e o Plano da Feature sejam revisados e aprovados.
 
-### Rules
-- **External agents (like Jules) NEVER modify `docs/tasklist.md`** — multiple concurrent agents cause merge conflicts.
-- Agents only mark checkboxes inside their own task file.
-- Task archival is done by the human operator or an isolated orchestrator script.
-- **Report Convention**: Agent reports go in `.agents/reports/` using `agent-task_name-hex.md` format. **NEVER** write to a shared monolithic file — parallel agents cause merge conflicts.
+**📝 Readme-Driven Development (RDD)**
+* **Regra:** A documentação guia o uso, não o contrário.
+* **Ação:** Escreva o `README.md` de um novo módulo/serviço assumindo que ele já está pronto. Se for difícil de explicar no papel, será difícil de usar na prática. Repense o design.
 
----
+**⚙️ Spec-Driven Development (SDD)**
+* **Regra:** *Spec-as-Source*. A especificação é o controle de arquitetura executável.
+* **Ação:** O código deve ser derivado e subordinado à especificação (ex: OpenAPI). Se a implementação divergir da *Spec*, o *build* deve falhar.
 
-## 9. 🧠 COGNITIVE WORKFLOW & MEMORY MANAGEMENT
+**🎭 Behaviour-Driven vs. Test-Driven (BDD e TDD)**
+Ambos usam testes, mas em níveis e linguagens complementares. Devem ser usados em conjunto:
+* **BDD (O *O Que*):** Foco no comportamento da perspectiva do usuário/negócio.
+* *Como usar:* Escreva cenários em linguagem quase natural (Dado que / Quando / Então) para que Devs, QA e Negócios colaborem. Valida jornadas reais e regras de negócio.
 
-### A. Thoughts (Cognitive Offloading Protocol)
-
-You **MUST** use the `.agents/thoughts/` folder freely and abundantly. It serves as your:
-
-1. **Notebook**: For random ideas, observations, and hypotheses.
-2. **Log**: For recording execution steps, failures, and successes.
-3. **Context Dump**: To offload complexity so you can focus on the immediate task without losing the "Big Picture".
-
-**Filename Convention**: Use `.agents/thoughts/nnn-type-title.md` (e.g., `001-analysis-auth_service.md`).
-
-**Habit Formation**:
-- *Before starting a complex task*: Ask yourself "Should I log a thought about this?"
-- *When switching contexts*: Dump your current context to a thought file.
-- *Every ~30 tool calls*: Write a partial report.
-
-> [!WARNING]
-> Users become extremely frustrated when agents repeat mistakes or lose context. Abundant use of `.agents/thoughts/` is the primary defense against this.
-
-### B. Core Collective Memory (`.agents/memories/`)
-
-When working on any task, all agents MUST actively use the `.agents/memories/` folder as a shared mental workspace.
-
-**Directory Structure & Naming Convention:**
-- Store files directly inside `.agents/memories/` (do not create subfolders).
-- Name files using: `type-number-name-name-name.md` (ordered from most to least important).
-- **Types**: `audit`, `analysis`, `architecture`, `pattern`, `extraction`, `reference`, `reflection`, `context`.
-- **Examples**: `audit-010-auth-system.md`, `pattern-020-memory-rag.md`.
-
-**EVERY subagent MUST update or create memories at the end of their task**, including:
-- Progress made
-- Findings that could help future agents
-- Any useful context for the project
-
-### C. Tree (File Exploration)
-
-**Rule**: Whenever you need to explore a directory structure, **ALWAYS** generate a tree first:
-```bash
-tree -I 'node_modules|__pycache__|.git|.jj|.pytest_cache|dist|build|.venv' > tree.md
-```
-Use the generated `tree.md` as your map. Do not guess file paths.
-
-### D. Information Fidelity
-
-- Never over-compact information when editing `AGENTS.md` or writing thoughts. **Details exist for a reason.**
-- You may systematize or structure information (bullet points, tables), but **NEVER OMIT** technical details, constraints, or user preferences.
-- **Batching**: If a task is too large, break it into batches. Read batch A → Note in `thoughts/` → Read batch B.
-- **Writing**: Use multi-step editing. Add content block by block rather than trying to rewrite everything in one shot.
-
-### E. Hierarchical Scaling
-
-If a document exceeds ~800 lines, create a subdirectory (e.g., `docs/01-plans/`) and move details there, keeping a synthetic version in the main file. If you create a structure, you **MUST** maintain it.
+* **TDD (O *Como*):** Foco em baixo nível, no design interno do código (funções, classes).
+* *Como usar:* Ciclo clássico `Red` (teste unitário escrito primeiro e falhando) → `Green` (código mínimo para passar) → `Refactor` (melhoria da qualidade). Nunca escreva código de produção que não seja coberto por um teste pré-existente.
 
 ---
 
-## 10. 🛠️ ENGINEERING STANDARDS
+## 5. SEGURANÇA MULTI-AGENTE E PROTEÇÕES DE VCS
+Enquanto o Jules depende da ferramenta nativa de submissão da plataforma, o Antigravity, Gemini-CLI e OpenCode dependem do **Jujutsu (JJ)**.
 
-### A. Operational Modes
+### 5.1. A Lei Imutável de Mutação de VCS
+**NUNCA** use comandos `git` puros para mudar o estado do repositório localmente.
+  - 🔴 **PROIBIDO:** `git commit`, `git add`, `git push`, `git checkout`, `git branch`, `git merge`, `git rebase`.
+  - 🟢 **PERMITIDO (Somente Leitura):** `git log`, `git diff`, `git status` (embora `jj` seja preferido).
 
-The Agent MUST switch states based on `Task_Type`:
+### 5.2. Proteção de Concorrência e Resolução de Conflitos
+  - Agentes rodando em paralelo DEVEM operar em `jj workspaces` isolados para evitar a corrupção de snapshots.
+  - **Mesclagem e Operações Jujutsu**: Para hierarquia de branches, regras de mesclagem, resolução de conflitos ou sequências de limpeza, **CONSULTE** a habilidade e o fluxo de trabalho `harmonious-jujutsu-merge`. O auto-merge (`gh pr merge`) é válido APENAS para o "Caminho Feliz" sem conflitos.
 
-- **Mode A: PROACTIVE (Default)**
-  - **Trigger**: Feature | Refactor | Docs
-  - **Algorithm**: Read Docs → Plan → Test (Red) → Code (Green) → Verify
-  - **Constraint**: No chatter ("I will do..."). Just Code.
+### 5.3. Estratégia de Branching e Pushing
+  - **NUNCA** faça commit / push sem autorização do USER. Pergunte durante a tarefa se o User deseja. Um commit / push indesejável num ambiente de trabalho com múltiplos agentes em paralelo pode causar colisões e confusões.
+  - **NUNCA** dê push diretamente em branches compartilhadas/principais como `main`, `development` ou `staging`.
+  - **SEMPRE** dê push em suas mudanças para uma **nova branch** com um nome descritivo. Isso garante que o histórico seja preservado com segurança no remoto (GitHub) no caso de erros locais de Jujutsu ou corrupção de snapshot.
+  - Exemplo: `jj bookmark create .docs/update-vcs-rules` seguido de `jj git push --bookmark .docs/update-vcs-rules --allow-new`.
+  - **Notas Importantes:**
+    - Novos bookmarks requerem a flag `--allow-new` no primeiro push.
+    - Commits **devem ter uma descrição** (`jj describe -m "..."`) antes do push, ou o `jj git push` recusará.
 
-- **Mode B: PARANOID DETECTIVE (Debug)**
-  - **Trigger**: Error | Bug | Crash
-  - **Protocol**: Deconstruct → Doubt → Suspects → Stakeout → Verdict
-  - **Constraint**: No Guesswork. Read source code of dependencies and local code before concluding.
+### 5.4. COMANDOS INTERATIVOS E LIMITAÇÕES DE TERMINAL
+**CRÍTICO**: Em certos ambientes CLI (como Gemini CLI), os agentes não necessariamente conseguem interagir com prompts TTY ou paginadores (ex: `less`, `more` ou comandos interativos `jj`/`git`), dependendo do ambiente, pois a integração com o terminal varia conforme a ferramenta / OS. Portanto:
+  - 🔴 **EVITE**: Comandos interativos puros que possam travar a sessão ou exigir pressionamento manual de teclas.
+  - 🟢 **PREFIRA**: Redirecionar a saída para arquivos em `.agents/thoughts/` para análise não bloqueante.
+  - **Exemplo**: Em vez de `jj log`, use `jj log --no-graph > .agents/thoughts/jj-log.md`.
+  - **Exemplo**: Em vez de `jj status`, use `jj status > .agents/thoughts/jj-status.md`.
+  - **Eficiência**: Isso evita "pendurar" o agente e permite que o trabalho paralelo prossiga sem intervenção humana.
 
-### B. Coding Standards
-
-- **Async First**: All I/O MUST be `async def`. Synchronous code is a bug in async codebases.
-- **Type Hints**: Strict typing required.
-- **Code Style**: Add brief comments for tricky logic. Keep files under ~500 LOC.
-- **Dependency Integrity**: Use lockfiles.
-- **Security**: No secrets in code. Use environment variables and config services.
-
-### C. Workflow Algorithm (RPG Ritual)
-
-1. **Init (Discovery)**: `ls -R`, Read Docs, Assert Knowledge.
-2. **Proposal (Structure)**: If Impact > 1 File → Update `docs/tasklist.md`.
-3. **CodeGen (TDD)**: While Test Fails → Analyze → Fix Minimal → Stop Loss (3 retries).
-4. **Scale (Doc Sync)**: Update Changelog, Update Tasks.
-
----
-
-## 11. 🧪 DEVELOPMENT PRACTICES
-
-### Specification-First Development
-
-When starting a new feature:
-
-1. **Create `FEATURE_PLAN.md`** — Break the implementation into small, testable steps or vertical slices, each with its own deliverable and test plan.
-2. **Create `TECHNICAL_DESIGN.md`** — Dependencies, data flow, API signatures, responsibilities, testing approach.
-3. **Create `TASKS.md`** — Step-by-step implementation plan as a todo list.
-
-Place these in the task's planning directory or inside `.feature/{feature-name}/`.
-Only begin implementation after the specification is reviewed and agreed upon.
-Create these documents by asking the user one question at a time.
-Update the specification and plan as requirements evolve, ensuring all changes are documented before code changes are made.
-
-### Specs-Driven Development (SDD) Workflow
-
-1. **Define the Spec**: The human "Architect" analyzes the problem and creates a detailed task specification with clear goal, acceptance criteria, constraints, and implementation notes.
-2. **AI Implementation**: The AI agent receives the spec as its primary context and implements.
-3. **Review and Refine**: The Architect reviews the code against the spec. If there are discrepancies, refine the *spec* first, then regenerate code. The specification remains the single source of truth.
-
-This transforms the AI from an unpredictable generator into a reliable engineering partner.
-
-### Test-Driven Development (TDD)
-
-- **ALWAYS** write a failing test before writing production code.
-- Use tests/specs to drive out the implementation, focusing on one small behavior at a time.
-- Refactor only after tests are passing and behavior is correct.
-- All new features, bug fixes, and refactors must be accompanied by appropriate tests.
-- Tests should be clear, isolated, and repeatable.
-- Do not write code that is not covered by a test.
-
-### Code Review (Self-Correction)
-
-**ALWAYS** review your code before committing. After writing code, pause and analyze:
-- Is this the BEST possible solution?
-- Does it respect the Architecture?
-- Did I break any existing tests?
-- Did I update docs?
-
-**NEVER** commit without this explicit self-review step.
-
-### Self-Review Checklist
-
-Before marking a task as complete:
-- [ ] Does my solution adhere to the "Agent-as-User" philosophy?
-- [ ] Did I use the "Essentials" and "Task Template" patterns where appropriate?
-- [ ] Does my solution respect the project's architecture and coding standards?
-- [ ] Have I written new tests and confirmed all existing tests pass?
-- [ ] Have I updated or generated the necessary documentation?
+### 5.5. FRONTEIRAS DE SEGURANÇA
+  - **NUNCA** faça commit sem **escanear o repo antes** em busca de chaves de API, tokens ou segredos (ex: `.env`, `userenv`, jsons de configuração) para não publicizar segredos. Garanta que o `.gitignore` esteja totalmente atualizado. 
+  - **NUNCA** envie respostas parciais/streaming para superfícies de mensagens externas - planeje e envie o bloco inteiro de uma vez.
+  - **NUNCA** execute comandos de shell destrutivos (`rm -rf /`, `mkfs`) — veja o bloqueador de segurança `hooks/safety/destructive-command-blocker.ts`.
+  - **NUNCA** faça commits / pushes sem observar todas as leis acima.
 
 ---
 
-## 12. 🤖 MULTI-AGENT SAFETY & GUARDRAILS
-
-### Multi-Agent Safety Protocol
-
-- **Git Stash**: Do **not** create/apply/drop `git stash` entries unless explicitly requested. Assume other agents may be working.
-- **Git Push/Pull**: When asked to "push", you may `git pull --rebase` to integrate changes (never discard other agents' work).
-- **Git Worktrees**: Do **not** create/remove/modify `git worktree` checkouts unless explicitly requested.
-- **Branching**: Do **not** switch branches unless explicitly requested.
-- **Parallel Execution**: Running multiple agents is OK as long as each has its own session.
-- **Unrecognized Files**: If you see unrecognized files, ignore them; focus on your changes.
-- **Reporting**: Focus reports on your edits; avoid guard-rail disclaimers unless blocked.
-
-### General Guardrails
-
-- **Lint/Format Churn**: If staged+unstaged diffs are formatting-only, auto-resolve without asking. If commit/push requested, auto-stage formatting fixes.
-- **Bug Investigations**: Read source code of dependencies and local code before concluding.
-- **Tool Schema**: Avoid `Type.Union`, `anyOf`, `oneOf` in tool schemas. Use `stringEnum`.
-- **Secrets**: Never send streaming/partial replies to external messaging surfaces.
-- **Release**: Do not change version numbers without explicit consent.
-- **File Operations**: **DELETING FILES IS STRICTLY FORBIDDEN.** Instead:
-  - Documentation files → move to `docs/archive/`
-  - Code and other files → move to `archive/` at project root
-  - **Exception**: Temporary files (cache, build artifacts, `__pycache__`) can be deleted as they're regenerated.
-
-### Safety Hooks
-
-- **Destructive Command Guard**: The hooks system checks shell commands against regex patterns to prevent catastrophic commands like `rm -rf /` or `mkfs` on physical drives.
-
----
-
-## 13. 🔀 VERSION CONTROL (VCS) RULES
-
-### For Git Users
-
-- Use conventional commits: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `test:`.
-- Always create feature branches: `feature/{feature-name}`.
-- Commit specification documents before starting production code.
-- Core branches: `main`, `staging`, `development-*`.
-
-### For Jujutsu (JJ) Users
-
-> [!IMPORTANT]
-> This section applies only to environments using Jujutsu VCS.
-
-#### The Immutable Law of Mutation
-**NEVER** use raw `git` commands to mutate repository state.
-- 🔴 **FORBIDDEN**: `git commit`, `git add`, `git push`, `git checkout`, `git branch`, `git merge`, `git rebase`, `git reset`, `git restore`.
-- 🟢 **ALLOWED (Read-Only)**: `git log`, `git show`, `git diff`, `git status` (though `jj` equivalents are preferred).
-
-#### The Hierarchical Process
-1. **Task Complete**: `jj commit -m "feat/fix: task description"`
-2. **Story Complete (New Branch)**: `jj bookmark set development -r @` → `jj new development`
-3. **Epic Complete (Merge to Staging)**: `jj new staging development -m "merge: epic complete"` → `jj bookmark set staging -r @`
-4. **Sprint Complete (Merge to Main)**: `jj new main staging -m "merge: sprint complete"` → `jj bookmark set main -r @`
-
-#### Merging & Harmonious Sync
-- Always prioritize using the `harmonious-jujutsu-merge` skill for conflict resolution.
-- Jujutsu handles simultaneous branches and conflicting modifications far better than standard Git.
-- For PR merges, use `gh pr merge` only on the Happy Path (no conflicts). If conflicts arise, fall back to Jujutsu's merge capabilities.
-
-#### Vulnerabilities to Watch
-- **Concurrent Execution in Single Workspace**: If multiple agents operate in the same working directory, `jj commit` will unintentionally snapshot partial work. *Mitigation*: Use separate `jj workspaces`.
-- **Implicit Snapshots**: `jj` auto-snapshots on almost every command. A broken state mid-refactor gets saved.
-- **Conflict Resolution Markers**: `jj` tracks conflicts without `<<<<<<<` markers. An agent could push a conflicted commit if it doesn't verify with `jj status` or `jj resolve`.
-
----
-
-## 14. 🤖 JULES AGENT RULES (Remote Async Agent)
-
-### 🔴 The Golden Rule: No Git in Prompts
-
-> **THIS IS THE MOST IMPORTANT RULE FOR JULES. VIOLATION CAUSES EMPTY PRs (+0/-0).**
-
-- **NEVER** mention `git`, `commit`, `push`, `branch`, `checkout`, `merge` or any version control instruction in prompts sent to Jules.
-- **NOT EVEN NEGATIVE INSTRUCTIONS** like "don't use git" — any reference to git, even negated, causes the agent to attempt internal branch manipulation.
-- **The Problem**: Jules's sandbox restricts `git push`. If it "commits" internally, the Submit Tool sees no uncommitted changes and creates an empty PR.
-- **The Solution**: Remove 100% of git references from prompts. Jules uses its internal tools and natural delivery flow.
-
-### Dispatch Rules
-- **Always use `jules remote new`**: NEVER `jules new` (local). Remote sessions are visible in the platform UI.
-- **Always via Wrapper**: Use the launcher script for redundancy (2 parallel identical sessions per task).
-- **Quota**: Hard limit per free/pro account. Rotate accounts when quota is reached.
-
-### Branch Target
-- Jules CLI does not support choosing the target branch for PRs — it always targets the repo's default branch.
-- **Workaround**: Set the desired branch (e.g., `staging`) as default via the Jules web UI once, and all future CLI invocations will target it.
-
-### Recovery: Empty PRs
-If Jules sends an empty PR (+0/-0), the work is NOT lost:
-1. Capture the `SESSION_ID` from the launcher logs
-2. Create a backup: `jj commit -m "backup: pre-jules-pull"` (or `git commit`)
-3. Pull and apply: `jules remote pull --session <SESSION_ID> --apply`
-4. Verify diff, resolve conflicts, and commit
-
-### Jules Prohibitions
-- Jules is **strictly forbidden** from marking tasks as complete in the master `docs/tasklist.md`.
-- Jules only marks checkboxes inside its own task file.
-- Agent reports go in `.agents/reports/` using the `agent-task_name-hex.md` pattern.
-- **NEVER** use dates/times in filenames (LLMs hallucinate them). Use hex IDs or task IDs.
-
-### Planning Lifecycle
-- Ideas, refactoring proposals, and audits do NOT generate code. They create "Proposals/Epics" in `docs/tasks/planning/`.
-- Execution only begins when approved with clear Exit Conditions in `docs/tasks/`.
-
-### Knowledge Synchronization
-- After any significant branch merge, promote Knowledge Synchronization by consolidating memories to prevent context degradation in subsequent agents.
-
----
-
-## 15. 🎯 DELEGATION STRATEGY
-
-> "Tarefa de corno não é meus problema" — Hermes e Renato
->
-> **DELEGUE!**
-
-- **Long, tedious, time-consuming tasks** → Delegate to **Jules** (runs on its own cloud VM). You only pay the delegation overhead, then pick up the PR.
-- **Quick, focused tasks** → Delegate to **Gemini CLI**, **Kilo Code**, or **OpenCode** agents.
-- **Browser-based tasks** → Use **Playwright** or **Hyperbrowser** MCP.
-- **Research tasks** → Use **websearch**, **context7**, **perplexity**, or **notebooklm**.
-
-The key insight: you are an orchestrator. Dispatch work efficiently rather than doing everything yourself.
-
----
-
-## 16. 🧪 BEHAVIORAL GUIDELINES (LLM Anti-Mistakes)
-
-> **Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
-
-### 1. Think Before Coding
-
-**Don't assume. Don't hide confusion. Surface tradeoffs.**
-
-Before implementing:
-- State your assumptions explicitly. If uncertain, ask.
-- If multiple interpretations exist, present them — don't pick silently.
-- If a simpler approach exists, say so. Push back when warranted.
-- If something is unclear, stop. Name what's confusing. Ask.
-
-### 2. Simplicity First
-
-**Minimum code that solves the problem. Nothing speculative.**
-
-- No features beyond what was asked.
-- No abstractions for single-use code.
-- No "flexibility" or "configurability" that wasn't requested.
-- No error handling for impossible scenarios.
-- If you write 200 lines and it could be 50, rewrite it.
-
-Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
-
-### 3. Surgical Changes
-
-**Touch only what you must. Clean up only your own mess.**
-
-When editing existing code:
-- Don't "improve" adjacent code, comments, or formatting.
-- Don't refactor things that aren't broken.
-- Match existing style, even if you'd do it differently.
-- If you notice unrelated dead code, mention it — don't delete it.
-
-When your changes create orphans:
-- Remove imports/variables/functions that YOUR changes made unused.
-- Don't remove pre-existing dead code unless asked.
-
-The test: Every changed line should trace directly to the user's request.
-
-### 4. Goal-Driven Execution
-
-**Define success criteria. Loop until verified.**
-
-Transform tasks into verifiable goals:
-- "Add validation" → "Write tests for invalid inputs, then make them pass"
-- "Fix the bug" → "Write a test that reproduces it, then make it pass"
-- "Refactor X" → "Ensure tests pass before and after"
-
-For multi-step tasks, state a brief plan:
-```
-1. [Step] → verify: [check]
-2. [Step] → verify: [check]
-3. [Step] → verify: [check]
-```
-
-Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
-
----
-
-**These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
-
----
-
-## 17. 🚫 FORBIDDEN ACTIONS (Summary)
-
-| Action | Status |
-|:-------|:-------|
-| Delete `AGENTS.md` | ❌ FORBIDDEN |
-| Delete changelog history | ❌ FORBIDDEN |
-| Commit secrets or binary files | ❌ FORBIDDEN |
-| Use synchronous I/O in async codebases | ❌ FORBIDDEN |
-| Operate outside designated project paths | ❌ FORBIDDEN |
-| Commit code without running tests | ❌ FORBIDDEN |
-| Delete documentation (use `docs/archive/` instead) | ❌ FORBIDDEN |
-| Delete code files (use `archive/` instead) | ❌ FORBIDDEN |
-| Use dates/times in filenames | ❌ FORBIDDEN |
-| Write to shared monolithic report files | ❌ FORBIDDEN |
-| Modify `docs/tasklist.md` from parallel agents | ❌ FORBIDDEN |
-| Edit vital files without user permission | ❌ FORBIDDEN |
-| Use deprecated libraries | ❌ FORBIDDEN |
-
----
-
-## 18. 🌐 ENVIRONMENT & TOOLING
-
-### Python Environment
-<!-- Uncomment and customize if applicable -->
-<!--
-- **Environment Manager**: Conda / venv / uv
-- **Environment Name**: `<project-name>`
-- **Python Version**: 3.13 (Strict)
-- **Activation**: `conda activate <project-name>`
-- **Run Command**: `conda run -n <project-name> python <script.py>`
-- **Dependencies**: Keep in `requirements.txt` or `pyproject.toml`
--->
-
-### NPM + 1Password (publish/verify)
-<!-- Uncomment if applicable -->
-<!--
-- Use the `1password` skill; all `op` commands must run inside a fresh tmux session.
-- **Sign in**: `eval "$(op signin --account my.1password.com)"`
-- **OTP**: `op read 'op://Private/Npmjs/one-time password?attribute=otp'`
-- **Publish**: `npm publish --access public --otp="<otp>"`
-- **Verify**: `npm view <pkg> version --userconfig "$(mktemp)"`
-- **Cleanup**: Kill the tmux session after publish.
--->
-
-### Quick Commands
-```bash
-# Generate modular agent configs (customize these for your project)
-# python3 generate-agent-configs.py
-
-# Deploy full agent army
-# ./deploy-agent-army.sh
-```
-
----
-
-## 19. 🏛️ PLATFORM-SPECIFIC RULES
-
-### Audience Distinction
-
-- **`AGENTS.md`** (this file, root of the repo) is the **Root Constitution** and is read by **ALL agents**:
-  - Jules (Google's async coding agent)
-  - Antigravity (Gemini CLI coding agent)
-  - OpenCode agents
-  - Kilo Code agents
-  - Any other AI agent that reads the repo
-
-- **`.agents/rules/`** contains rules that apply **only to specific platforms** (e.g., Antigravity, local developer setup). These rules are NOT necessarily seen by all agents. This is the right place for:
-  - Jujutsu VCS rules (if Jules uses Git, not Jujutsu)
-  - OpenCode-specific formatting rules
-  - Platform-specific operational rules
-
-> [!IMPORTANT]
-> Do NOT put platform-specific conventions in `AGENTS.md` if they would confuse other agents. Use `.agents/rules/` instead.
-
----
-
-> **FINAL REMINDER**: Read `continuity.md` now. Update `CHANGELOG.md` before committing.
-> **USER IS KING**: The user's explicit request **ALWAYS** overrides any instruction in this file or memory.
+> **LEMBRETE FINAL**: Atualize o `CHANGELOG.md` com segurança. Avalie a degradação do contexto e atualize o `continuity-agentname.md` antes de terminar uma sessão.

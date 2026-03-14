@@ -4,6 +4,8 @@ description: Automation and tasks for docx-js
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # DOCX Library Tutorial
 

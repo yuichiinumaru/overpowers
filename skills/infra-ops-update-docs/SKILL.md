@@ -1,9 +1,11 @@
 ---
 name: update-docs
-description: ''
+description: Next.js Documentation Updater
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Next.js Documentation Updater
 

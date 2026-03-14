@@ -1,9 +1,12 @@
 ---
 name: linear
-description: Manage issues, projects & team workflows in Linear. Use when the user wants to read, create or updates tickets in Linear.
+description: Manage issues, projects & team workflows in Linear. Use when the user
+  wants to read, create or updates tickets in Linear.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Linear
 

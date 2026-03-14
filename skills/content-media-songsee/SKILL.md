@@ -1,9 +1,12 @@
 ---
 name: songsee
-description: Generate spectrograms and feature-panel visualizations from audio with the songsee CLI.
+description: Generate spectrograms and feature-panel visualizations from audio with
+  the songsee CLI.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # songsee
 

@@ -4,6 +4,8 @@ description: Problem-solving strategies for root finding in numerical methods
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Root Finding
 

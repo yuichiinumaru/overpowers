@@ -1,9 +1,15 @@
 ---
 name: tooluniverse
-description: General strategies for using ToolUniverse effectively with 10000+ scientific tools. Covers tool discovery, multi-hop queries, comprehensive research workflows, disambiguation, evidence grading, and report generation. Use when users need to research any scientific topic, find biological data, explore drug/target/disease relationships, or need guidance on how to use ToolUniverse tools wisely.
+description: General strategies for using ToolUniverse effectively with 10000+ scientific
+  tools. Covers tool discovery, multi-hop queries, comprehensive research workflows,
+  disambiguation, evidence grading, and report generation. Use when users need to
+  research any scientific topic, find biological data, explore drug/target/disease
+  relationships, or need guidance on how to use ToolUniverse tools wisely.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # ToolUniverse General Usage Strategies
 

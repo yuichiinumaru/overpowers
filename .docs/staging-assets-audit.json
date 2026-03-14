@@ -1,0 +1,589 @@
+{
+  "timestamp": "2026-03-16T09:54:24.390960",
+  "summary": {
+    "agents": {
+      "total": 27,
+      "migrated": 27,
+      "already_exists": 0,
+      "errors": 0
+    },
+    "workflows": {
+      "total": 34,
+      "migrated": 34,
+      "already_exists": 0,
+      "errors": 0
+    },
+    "hooks": {
+      "total": 1,
+      "migrated": 1,
+      "already_exists": 0,
+      "errors": 0
+    }
+  },
+  "details": {
+    "agents": [
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/default__context.md",
+        "asset_type": "agents",
+        "filename": "default__context.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/default__context.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.369922"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_architect.md",
+        "asset_type": "agents",
+        "filename": "agents_architect.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_architect.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.370363"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_build-error-resolver.md",
+        "asset_type": "agents",
+        "filename": "agents_build-error-resolver.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_build-error-resolver.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.373582"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_code-reviewer.md",
+        "asset_type": "agents",
+        "filename": "agents_code-reviewer.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_code-reviewer.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.374467"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_database-reviewer.md",
+        "asset_type": "agents",
+        "filename": "agents_database-reviewer.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_database-reviewer.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.374946"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_doc-updater.md",
+        "asset_type": "agents",
+        "filename": "agents_doc-updater.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_doc-updater.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.375409"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_e2e-runner.md",
+        "asset_type": "agents",
+        "filename": "agents_e2e-runner.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_e2e-runner.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.375906"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_go-build-resolver.md",
+        "asset_type": "agents",
+        "filename": "agents_go-build-resolver.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_go-build-resolver.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.376373"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_go-reviewer.md",
+        "asset_type": "agents",
+        "filename": "agents_go-reviewer.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_go-reviewer.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.376821"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_planner.md",
+        "asset_type": "agents",
+        "filename": "agents_planner.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_planner.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.377172"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_python-reviewer.md",
+        "asset_type": "agents",
+        "filename": "agents_python-reviewer.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_python-reviewer.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.377527"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_refactor-cleaner.md",
+        "asset_type": "agents",
+        "filename": "agents_refactor-cleaner.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_refactor-cleaner.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.377904"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_security-reviewer.md",
+        "asset_type": "agents",
+        "filename": "agents_security-reviewer.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_security-reviewer.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.378292"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_tdd-guide.md",
+        "asset_type": "agents",
+        "filename": "agents_tdd-guide.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_tdd-guide.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.378692"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_boss-qa.md",
+        "asset_type": "agents",
+        "filename": "agents_boss-qa.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_boss-qa.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.379041"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_chief-of-staff.md",
+        "asset_type": "agents",
+        "filename": "agents_chief-of-staff.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_chief-of-staff.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.379410"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_harness-optimizer.md",
+        "asset_type": "agents",
+        "filename": "agents_harness-optimizer.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_harness-optimizer.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.379750"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/agents_loop-operator.md",
+        "asset_type": "agents",
+        "filename": "agents_loop-operator.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/agents_loop-operator.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.379898"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/ui-designer.md",
+        "asset_type": "agents",
+        "filename": "ui-designer.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/ui-designer.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.380038"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/engineering_frontend-developer.md",
+        "asset_type": "agents",
+        "filename": "engineering_frontend-developer.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/engineering_frontend-developer.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.380187"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/marketing_growth-hacker.md",
+        "asset_type": "agents",
+        "filename": "marketing_growth-hacker.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/marketing_growth-hacker.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.380590"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/product_sprint-prioritizer.md",
+        "asset_type": "agents",
+        "filename": "product_sprint-prioritizer.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/product_sprint-prioritizer.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.380917"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/project-management_project-manager-senior.md",
+        "asset_type": "agents",
+        "filename": "project-management_project-manager-senior.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/project-management_project-manager-senior.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.381057"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/specialized_sales-data-extraction-agent.md",
+        "asset_type": "agents",
+        "filename": "specialized_sales-data-extraction-agent.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/specialized_sales-data-extraction-agent.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.381406"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/support_executive-summary-generator.md",
+        "asset_type": "agents",
+        "filename": "support_executive-summary-generator.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/support_executive-summary-generator.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.381559"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/testing-reality-checker.md",
+        "asset_type": "agents",
+        "filename": "testing-reality-checker.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/testing-reality-checker.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.381694"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/agents/workspace_AGENTS.md",
+        "asset_type": "agents",
+        "filename": "workspace_AGENTS.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/agents/workspace_AGENTS.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.382042"
+      }
+    ],
+    "workflows": [
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_README.md",
+        "asset_type": "workflows",
+        "filename": "commands_README.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_README.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.382231"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_build-fix.md",
+        "asset_type": "workflows",
+        "filename": "commands_build-fix.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_build-fix.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.382435"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_checkpoint.md",
+        "asset_type": "workflows",
+        "filename": "commands_checkpoint.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_checkpoint.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.382623"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_code-review.md",
+        "asset_type": "workflows",
+        "filename": "commands_code-review.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_code-review.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.382763"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_e2e.md",
+        "asset_type": "workflows",
+        "filename": "commands_e2e.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_e2e.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.382915"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_eval.md",
+        "asset_type": "workflows",
+        "filename": "commands_eval.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_eval.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.383342"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_go-build.md",
+        "asset_type": "workflows",
+        "filename": "commands_go-build.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_go-build.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.383532"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_go-review.md",
+        "asset_type": "workflows",
+        "filename": "commands_go-review.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_go-review.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.383674"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_go-test.md",
+        "asset_type": "workflows",
+        "filename": "commands_go-test.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_go-test.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.383820"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_instinct-export.md",
+        "asset_type": "workflows",
+        "filename": "commands_instinct-export.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_instinct-export.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.384155"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_learn.md",
+        "asset_type": "workflows",
+        "filename": "commands_learn.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_learn.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.384303"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_multi-frontend.md",
+        "asset_type": "workflows",
+        "filename": "commands_multi-frontend.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_multi-frontend.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.384449"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_multi-execute.md",
+        "asset_type": "workflows",
+        "filename": "commands_multi-execute.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_multi-execute.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.384795"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_multi-plan.md",
+        "asset_type": "workflows",
+        "filename": "commands_multi-plan.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_multi-plan.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.385164"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_multi-workflow.md",
+        "asset_type": "workflows",
+        "filename": "commands_multi-workflow.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_multi-workflow.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.385554"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_orchestrate.md",
+        "asset_type": "workflows",
+        "filename": "commands_orchestrate.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_orchestrate.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.385908"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_pm2.md",
+        "asset_type": "workflows",
+        "filename": "commands_pm2.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_pm2.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.386307"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_python-review.md",
+        "asset_type": "workflows",
+        "filename": "commands_python-review.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_python-review.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.386607"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_refactor-clean.md",
+        "asset_type": "workflows",
+        "filename": "commands_refactor-clean.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_refactor-clean.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.386958"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_sessions.md",
+        "asset_type": "workflows",
+        "filename": "commands_sessions.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_sessions.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.387100"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_setup-pm.md",
+        "asset_type": "workflows",
+        "filename": "commands_setup-pm.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_setup-pm.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.387477"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_skill-create.md",
+        "asset_type": "workflows",
+        "filename": "commands_skill-create.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_skill-create.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.387656"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_tdd.md",
+        "asset_type": "workflows",
+        "filename": "commands_tdd.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_tdd.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.388089"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_test-coverage.md",
+        "asset_type": "workflows",
+        "filename": "commands_test-coverage.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_test-coverage.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.388479"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_update-codemaps.md",
+        "asset_type": "workflows",
+        "filename": "commands_update-codemaps.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_update-codemaps.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.388627"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_update-docs.md",
+        "asset_type": "workflows",
+        "filename": "commands_update-docs.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_update-docs.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.388774"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_verify.md",
+        "asset_type": "workflows",
+        "filename": "commands_verify.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_verify.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.388927"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_harness-audit.md",
+        "asset_type": "workflows",
+        "filename": "commands_harness-audit.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_harness-audit.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.389067"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_learn-eval.md",
+        "asset_type": "workflows",
+        "filename": "commands_learn-eval.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_learn-eval.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.389247"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_loop-start.md",
+        "asset_type": "workflows",
+        "filename": "commands_loop-start.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_loop-start.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.389389"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_loop-status.md",
+        "asset_type": "workflows",
+        "filename": "commands_loop-status.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_loop-status.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.389535"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_model-route.md",
+        "asset_type": "workflows",
+        "filename": "commands_model-route.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_model-route.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.389679"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_plan.md",
+        "asset_type": "workflows",
+        "filename": "commands_plan.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_plan.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.389821"
+      },
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/workflows/commands_quality-gate.md",
+        "asset_type": "workflows",
+        "filename": "commands_quality-gate.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/workflows/commands_quality-gate.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.390198"
+      }
+    ],
+    "hooks": [
+      {
+        "source": "/home/sephiroth/Work/overpowers/.archive/staging/hooks/hooks_README.md",
+        "asset_type": "hooks",
+        "filename": "hooks_README.md",
+        "status": "migrated",
+        "destination": "/home/sephiroth/Work/overpowers/hooks/hooks_README.md",
+        "error": null,
+        "timestamp": "2026-03-16T09:54:24.390400"
+      }
+    ]
+  }
+}

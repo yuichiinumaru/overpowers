@@ -1,0 +1,3177 @@
+{
+  "repo_path": "/home/sephiroth/Work/references/zeptoclaw",
+  "total_files": 414,
+  "total_size": 6164033,
+  "tree": {
+    "name": "zeptoclaw",
+    "path": "",
+    "type": "directory",
+    "size": 6164033,
+    "children": [
+      {
+        "name": ".dockerignore",
+        "path": ".dockerignore",
+        "type": "file",
+        "size": 398
+      },
+      {
+        "name": ".gitignore",
+        "path": ".gitignore",
+        "type": "file",
+        "size": 920
+      },
+      {
+        "name": ".kimiignore",
+        "path": ".kimiignore",
+        "type": "file",
+        "size": 519
+      },
+      {
+        "name": "AGENTS.md",
+        "path": "AGENTS.md",
+        "type": "file",
+        "size": 11541
+      },
+      {
+        "name": "CHANGELOG.md",
+        "path": "CHANGELOG.md",
+        "type": "file",
+        "size": 15346
+      },
+      {
+        "name": "CLAUDE.md",
+        "path": "CLAUDE.md",
+        "type": "file",
+        "size": 51439
+      },
+      {
+        "name": "CONTRIBUTING.md",
+        "path": "CONTRIBUTING.md",
+        "type": "file",
+        "size": 3469
+      },
+      {
+        "name": "Cargo.lock",
+        "path": "Cargo.lock",
+        "type": "file",
+        "size": 177522
+      },
+      {
+        "name": "Cargo.toml",
+        "path": "Cargo.toml",
+        "type": "file",
+        "size": 13973
+      },
+      {
+        "name": "Dockerfile",
+        "path": "Dockerfile",
+        "type": "file",
+        "size": 2227
+      },
+      {
+        "name": "LICENSE",
+        "path": "LICENSE",
+        "type": "file",
+        "size": 11222
+      },
+      {
+        "name": "Makefile",
+        "path": "Makefile",
+        "type": "file",
+        "size": 3149
+      },
+      {
+        "name": "README.md",
+        "path": "README.md",
+        "type": "file",
+        "size": 15244
+      },
+      {
+        "name": "SECURITY.md",
+        "path": "SECURITY.md",
+        "type": "file",
+        "size": 1897
+      },
+      {
+        "name": "docker-compose.multi-tenant.yml",
+        "path": "docker-compose.multi-tenant.yml",
+        "type": "file",
+        "size": 4189
+      },
+      {
+        "name": "docker-entrypoint.sh",
+        "path": "docker-entrypoint.sh",
+        "type": "file",
+        "size": 315
+      },
+      {
+        "name": "install.sh",
+        "path": "install.sh",
+        "type": "file",
+        "size": 3473
+      },
+      {
+        "name": ".cargo",
+        "path": ".cargo",
+        "type": "directory",
+        "size": 1003,
+        "children": [
+          {
+            "name": "audit.toml",
+            "path": ".cargo/audit.toml",
+            "type": "file",
+            "size": 358
+          },
+          {
+            "name": "config.toml",
+            "path": ".cargo/config.toml",
+            "type": "file",
+            "size": 645
+          }
+        ]
+      },
+      {
+        "name": ".github",
+        "path": ".github",
+        "type": "directory",
+        "size": 16824,
+        "children": [
+          {
+            "name": "PULL_REQUEST_TEMPLATE.md",
+            "path": ".github/PULL_REQUEST_TEMPLATE.md",
+            "type": "file",
+            "size": 521
+          },
+          {
+            "name": "dependabot.yml",
+            "path": ".github/dependabot.yml",
+            "type": "file",
+            "size": 931
+          },
+          {
+            "name": "ISSUE_TEMPLATE",
+            "path": ".github/ISSUE_TEMPLATE",
+            "type": "directory",
+            "size": 1563,
+            "children": [
+              {
+                "name": "bug_report.md",
+                "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+                "type": "file",
+                "size": 660
+              },
+              {
+                "name": "config.yml",
+                "path": ".github/ISSUE_TEMPLATE/config.yml",
+                "type": "file",
+                "size": 335
+              },
+              {
+                "name": "feature_request.md",
+                "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+                "type": "file",
+                "size": 568
+              }
+            ]
+          },
+          {
+            "name": "workflows",
+            "path": ".github/workflows",
+            "type": "directory",
+            "size": 13809,
+            "children": [
+              {
+                "name": "ci.yml",
+                "path": ".github/workflows/ci.yml",
+                "type": "file",
+                "size": 5228
+              },
+              {
+                "name": "docker.yml",
+                "path": ".github/workflows/docker.yml",
+                "type": "file",
+                "size": 1106
+              },
+              {
+                "name": "e2e.yml",
+                "path": ".github/workflows/e2e.yml",
+                "type": "file",
+                "size": 1160
+              },
+              {
+                "name": "pr-hygiene.yml",
+                "path": ".github/workflows/pr-hygiene.yml",
+                "type": "file",
+                "size": 3595
+              },
+              {
+                "name": "release.yml",
+                "path": ".github/workflows/release.yml",
+                "type": "file",
+                "size": 2720
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "benches",
+        "path": "benches",
+        "type": "directory",
+        "size": 2609,
+        "children": [
+          {
+            "name": "message_bus.rs",
+            "path": "benches/message_bus.rs",
+            "type": "file",
+            "size": 2609
+          }
+        ]
+      },
+      {
+        "name": "deploy",
+        "path": "deploy",
+        "type": "directory",
+        "size": 27865,
+        "children": [
+          {
+            "name": ".env.example",
+            "path": "deploy/.env.example",
+            "type": "file",
+            "size": 2046
+          },
+          {
+            "name": "README.md",
+            "path": "deploy/README.md",
+            "type": "file",
+            "size": 4838
+          },
+          {
+            "name": "digitalocean.yaml",
+            "path": "deploy/digitalocean.yaml",
+            "type": "file",
+            "size": 1541
+          },
+          {
+            "name": "docker-compose.multi.yml",
+            "path": "deploy/docker-compose.multi.yml",
+            "type": "file",
+            "size": 4189
+          },
+          {
+            "name": "docker-compose.single.yml",
+            "path": "deploy/docker-compose.single.yml",
+            "type": "file",
+            "size": 1293
+          },
+          {
+            "name": "fly.toml",
+            "path": "deploy/fly.toml",
+            "type": "file",
+            "size": 1312
+          },
+          {
+            "name": "railway.json",
+            "path": "deploy/railway.json",
+            "type": "file",
+            "size": 311
+          },
+          {
+            "name": "render.yaml",
+            "path": "deploy/render.yaml",
+            "type": "file",
+            "size": 839
+          },
+          {
+            "name": "setup.sh",
+            "path": "deploy/setup.sh",
+            "type": "file",
+            "size": 10299
+          },
+          {
+            "name": "homebrew",
+            "path": "deploy/homebrew",
+            "type": "directory",
+            "size": 1197,
+            "children": [
+              {
+                "name": "zeptoclaw.rb",
+                "path": "deploy/homebrew/zeptoclaw.rb",
+                "type": "file",
+                "size": 1197
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "docs",
+        "path": "docs",
+        "type": "directory",
+        "size": 39389,
+        "children": [
+          {
+            "name": "BENCHMARK_RESULTS.md",
+            "path": "docs/BENCHMARK_RESULTS.md",
+            "type": "file",
+            "size": 5106
+          },
+          {
+            "name": "COMPARISON.md",
+            "path": "docs/COMPARISON.md",
+            "type": "file",
+            "size": 14621
+          },
+          {
+            "name": "HEARTBEAT.md",
+            "path": "docs/HEARTBEAT.md",
+            "type": "file",
+            "size": 668
+          },
+          {
+            "name": "MULTI-TENANT.md",
+            "path": "docs/MULTI-TENANT.md",
+            "type": "file",
+            "size": 6335
+          },
+          {
+            "name": "MULTI_TENANT_SECURITY.md",
+            "path": "docs/MULTI_TENANT_SECURITY.md",
+            "type": "file",
+            "size": 5756
+          },
+          {
+            "name": "PERFORMANCE.md",
+            "path": "docs/PERFORMANCE.md",
+            "type": "file",
+            "size": 6903
+          }
+        ]
+      },
+      {
+        "name": "examples",
+        "path": "examples",
+        "type": "directory",
+        "size": 356,
+        "children": [
+          {
+            "name": "riscv_smoke.rs",
+            "path": "examples/riscv_smoke.rs",
+            "type": "file",
+            "size": 356
+          }
+        ]
+      },
+      {
+        "name": "landing",
+        "path": "landing",
+        "type": "directory",
+        "size": 719201,
+        "children": [
+          {
+            "name": "deploy.sh",
+            "path": "landing/deploy.sh",
+            "type": "file",
+            "size": 1915
+          },
+          {
+            "name": "r8r",
+            "path": "landing/r8r",
+            "type": "directory",
+            "size": 315797,
+            "children": [
+              {
+                "name": "index.html",
+                "path": "landing/r8r/index.html",
+                "type": "file",
+                "size": 26018
+              },
+              {
+                "name": "wrangler.toml",
+                "path": "landing/r8r/wrangler.toml",
+                "type": "file",
+                "size": 76
+              },
+              {
+                "name": "docs",
+                "path": "landing/r8r/docs",
+                "type": "directory",
+                "size": 289703,
+                "children": [
+                  {
+                    "name": "astro.config.mjs",
+                    "path": "landing/r8r/docs/astro.config.mjs",
+                    "type": "file",
+                    "size": 2195
+                  },
+                  {
+                    "name": "package-lock.json",
+                    "path": "landing/r8r/docs/package-lock.json",
+                    "type": "file",
+                    "size": 247612
+                  },
+                  {
+                    "name": "package.json",
+                    "path": "landing/r8r/docs/package.json",
+                    "type": "file",
+                    "size": 326
+                  },
+                  {
+                    "name": "public",
+                    "path": "landing/r8r/docs/public",
+                    "type": "directory",
+                    "size": 252,
+                    "children": [
+                      {
+                        "name": "favicon.svg",
+                        "path": "landing/r8r/docs/public/favicon.svg",
+                        "type": "file",
+                        "size": 252
+                      }
+                    ]
+                  },
+                  {
+                    "name": "src",
+                    "path": "landing/r8r/docs/src",
+                    "type": "directory",
+                    "size": 39318,
+                    "children": [
+                      {
+                        "name": "content.config.ts",
+                        "path": "landing/r8r/docs/src/content.config.ts",
+                        "type": "file",
+                        "size": 239
+                      },
+                      {
+                        "name": "assets",
+                        "path": "landing/r8r/docs/src/assets",
+                        "type": "directory",
+                        "size": 221,
+                        "children": [
+                          {
+                            "name": "logo.svg",
+                            "path": "landing/r8r/docs/src/assets/logo.svg",
+                            "type": "file",
+                            "size": 221
+                          }
+                        ]
+                      },
+                      {
+                        "name": "content",
+                        "path": "landing/r8r/docs/src/content",
+                        "type": "directory",
+                        "size": 38347,
+                        "children": [
+                          {
+                            "name": "docs",
+                            "path": "landing/r8r/docs/src/content/docs",
+                            "type": "directory",
+                            "size": 38347,
+                            "children": [
+                              {
+                                "name": "index.mdx",
+                                "path": "landing/r8r/docs/src/content/docs/index.mdx",
+                                "type": "file",
+                                "size": 1135
+                              },
+                              {
+                                "name": "concepts",
+                                "path": "landing/r8r/docs/src/content/docs/concepts",
+                                "type": "directory",
+                                "size": 7984,
+                                "children": [
+                                  {
+                                    "name": "connections.md",
+                                    "path": "landing/r8r/docs/src/content/docs/concepts/connections.md",
+                                    "type": "file",
+                                    "size": 2057
+                                  },
+                                  {
+                                    "name": "nodes.md",
+                                    "path": "landing/r8r/docs/src/content/docs/concepts/nodes.md",
+                                    "type": "file",
+                                    "size": 2065
+                                  },
+                                  {
+                                    "name": "triggers.md",
+                                    "path": "landing/r8r/docs/src/content/docs/concepts/triggers.md",
+                                    "type": "file",
+                                    "size": 1989
+                                  },
+                                  {
+                                    "name": "workflows.md",
+                                    "path": "landing/r8r/docs/src/content/docs/concepts/workflows.md",
+                                    "type": "file",
+                                    "size": 1873
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "getting-started",
+                                "path": "landing/r8r/docs/src/content/docs/getting-started",
+                                "type": "directory",
+                                "size": 7221,
+                                "children": [
+                                  {
+                                    "name": "installation.md",
+                                    "path": "landing/r8r/docs/src/content/docs/getting-started/installation.md",
+                                    "type": "file",
+                                    "size": 2174
+                                  },
+                                  {
+                                    "name": "introduction.md",
+                                    "path": "landing/r8r/docs/src/content/docs/getting-started/introduction.md",
+                                    "type": "file",
+                                    "size": 2262
+                                  },
+                                  {
+                                    "name": "quick-start.md",
+                                    "path": "landing/r8r/docs/src/content/docs/getting-started/quick-start.md",
+                                    "type": "file",
+                                    "size": 2785
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "guides",
+                                "path": "landing/r8r/docs/src/content/docs/guides",
+                                "type": "directory",
+                                "size": 12264,
+                                "children": [
+                                  {
+                                    "name": "api-integration.md",
+                                    "path": "landing/r8r/docs/src/content/docs/guides/api-integration.md",
+                                    "type": "file",
+                                    "size": 3354
+                                  },
+                                  {
+                                    "name": "custom-nodes.md",
+                                    "path": "landing/r8r/docs/src/content/docs/guides/custom-nodes.md",
+                                    "type": "file",
+                                    "size": 2776
+                                  },
+                                  {
+                                    "name": "deployment.md",
+                                    "path": "landing/r8r/docs/src/content/docs/guides/deployment.md",
+                                    "type": "file",
+                                    "size": 3176
+                                  },
+                                  {
+                                    "name": "error-handling.md",
+                                    "path": "landing/r8r/docs/src/content/docs/guides/error-handling.md",
+                                    "type": "file",
+                                    "size": 2958
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "reference",
+                                "path": "landing/r8r/docs/src/content/docs/reference",
+                                "type": "directory",
+                                "size": 9743,
+                                "children": [
+                                  {
+                                    "name": "cli.md",
+                                    "path": "landing/r8r/docs/src/content/docs/reference/cli.md",
+                                    "type": "file",
+                                    "size": 2881
+                                  },
+                                  {
+                                    "name": "configuration.md",
+                                    "path": "landing/r8r/docs/src/content/docs/reference/configuration.md",
+                                    "type": "file",
+                                    "size": 1944
+                                  },
+                                  {
+                                    "name": "environment.md",
+                                    "path": "landing/r8r/docs/src/content/docs/reference/environment.md",
+                                    "type": "file",
+                                    "size": 2600
+                                  },
+                                  {
+                                    "name": "node-types.md",
+                                    "path": "landing/r8r/docs/src/content/docs/reference/node-types.md",
+                                    "type": "file",
+                                    "size": 2318
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "styles",
+                        "path": "landing/r8r/docs/src/styles",
+                        "type": "directory",
+                        "size": 511,
+                        "children": [
+                          {
+                            "name": "custom.css",
+                            "path": "landing/r8r/docs/src/styles/custom.css",
+                            "type": "file",
+                            "size": 511
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "zeptoclaw",
+            "path": "landing/zeptoclaw",
+            "type": "directory",
+            "size": 401489,
+            "children": [
+              {
+                "name": "favicon.svg",
+                "path": "landing/zeptoclaw/favicon.svg",
+                "type": "file",
+                "size": 1101
+              },
+              {
+                "name": "index.html",
+                "path": "landing/zeptoclaw/index.html",
+                "type": "file",
+                "size": 63938
+              },
+              {
+                "name": "wrangler.toml",
+                "path": "landing/zeptoclaw/wrangler.toml",
+                "type": "file",
+                "size": 82
+              },
+              {
+                "name": "docs",
+                "path": "landing/zeptoclaw/docs",
+                "type": "directory",
+                "size": 336368,
+                "children": [
+                  {
+                    "name": "astro.config.mjs",
+                    "path": "landing/zeptoclaw/docs/astro.config.mjs",
+                    "type": "file",
+                    "size": 2288
+                  },
+                  {
+                    "name": "package-lock.json",
+                    "path": "landing/zeptoclaw/docs/package-lock.json",
+                    "type": "file",
+                    "size": 247624
+                  },
+                  {
+                    "name": "package.json",
+                    "path": "landing/zeptoclaw/docs/package.json",
+                    "type": "file",
+                    "size": 332
+                  },
+                  {
+                    "name": "public",
+                    "path": "landing/zeptoclaw/docs/public",
+                    "type": "directory",
+                    "size": 1101,
+                    "children": [
+                      {
+                        "name": "favicon.svg",
+                        "path": "landing/zeptoclaw/docs/public/favicon.svg",
+                        "type": "file",
+                        "size": 1101
+                      }
+                    ]
+                  },
+                  {
+                    "name": "src",
+                    "path": "landing/zeptoclaw/docs/src",
+                    "type": "directory",
+                    "size": 85023,
+                    "children": [
+                      {
+                        "name": "content.config.ts",
+                        "path": "landing/zeptoclaw/docs/src/content.config.ts",
+                        "type": "file",
+                        "size": 239
+                      },
+                      {
+                        "name": "assets",
+                        "path": "landing/zeptoclaw/docs/src/assets",
+                        "type": "directory",
+                        "size": 1854,
+                        "children": [
+                          {
+                            "name": "logo.svg",
+                            "path": "landing/zeptoclaw/docs/src/assets/logo.svg",
+                            "type": "file",
+                            "size": 1854
+                          }
+                        ]
+                      },
+                      {
+                        "name": "content",
+                        "path": "landing/zeptoclaw/docs/src/content",
+                        "type": "directory",
+                        "size": 82311,
+                        "children": [
+                          {
+                            "name": "docs",
+                            "path": "landing/zeptoclaw/docs/src/content/docs",
+                            "type": "directory",
+                            "size": 82311,
+                            "children": [
+                              {
+                                "name": "index.mdx",
+                                "path": "landing/zeptoclaw/docs/src/content/docs/index.mdx",
+                                "type": "file",
+                                "size": 1206
+                              },
+                              {
+                                "name": "concepts",
+                                "path": "landing/zeptoclaw/docs/src/content/docs/concepts",
+                                "type": "directory",
+                                "size": 18034,
+                                "children": [
+                                  {
+                                    "name": "agent-loop.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/concepts/agent-loop.md",
+                                    "type": "file",
+                                    "size": 3234
+                                  },
+                                  {
+                                    "name": "channels.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/concepts/channels.md",
+                                    "type": "file",
+                                    "size": 4415
+                                  },
+                                  {
+                                    "name": "providers.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/concepts/providers.md",
+                                    "type": "file",
+                                    "size": 6399
+                                  },
+                                  {
+                                    "name": "tools.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/concepts/tools.md",
+                                    "type": "file",
+                                    "size": 3986
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "getting-started",
+                                "path": "landing/zeptoclaw/docs/src/content/docs/getting-started",
+                                "type": "directory",
+                                "size": 7792,
+                                "children": [
+                                  {
+                                    "name": "installation.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/getting-started/installation.md",
+                                    "type": "file",
+                                    "size": 2694
+                                  },
+                                  {
+                                    "name": "introduction.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/getting-started/introduction.md",
+                                    "type": "file",
+                                    "size": 2828
+                                  },
+                                  {
+                                    "name": "quick-start.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/getting-started/quick-start.md",
+                                    "type": "file",
+                                    "size": 2270
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "guides",
+                                "path": "landing/zeptoclaw/docs/src/content/docs/guides",
+                                "type": "directory",
+                                "size": 29662,
+                                "children": [
+                                  {
+                                    "name": "deployment.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/guides/deployment.md",
+                                    "type": "file",
+                                    "size": 4110
+                                  },
+                                  {
+                                    "name": "migration.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/guides/migration.md",
+                                    "type": "file",
+                                    "size": 13475
+                                  },
+                                  {
+                                    "name": "plugins.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/guides/plugins.md",
+                                    "type": "file",
+                                    "size": 3228
+                                  },
+                                  {
+                                    "name": "security.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/guides/security.md",
+                                    "type": "file",
+                                    "size": 6327
+                                  },
+                                  {
+                                    "name": "templates.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/guides/templates.md",
+                                    "type": "file",
+                                    "size": 2522
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "reference",
+                                "path": "landing/zeptoclaw/docs/src/content/docs/reference",
+                                "type": "directory",
+                                "size": 25617,
+                                "children": [
+                                  {
+                                    "name": "cli.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/reference/cli.md",
+                                    "type": "file",
+                                    "size": 6045
+                                  },
+                                  {
+                                    "name": "configuration.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/reference/configuration.md",
+                                    "type": "file",
+                                    "size": 5041
+                                  },
+                                  {
+                                    "name": "environment.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/reference/environment.md",
+                                    "type": "file",
+                                    "size": 4330
+                                  },
+                                  {
+                                    "name": "tools.md",
+                                    "path": "landing/zeptoclaw/docs/src/content/docs/reference/tools.md",
+                                    "type": "file",
+                                    "size": 10201
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "styles",
+                        "path": "landing/zeptoclaw/docs/src/styles",
+                        "type": "directory",
+                        "size": 619,
+                        "children": [
+                          {
+                            "name": "custom.css",
+                            "path": "landing/zeptoclaw/docs/src/styles/custom.css",
+                            "type": "file",
+                            "size": 619
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "panel",
+        "path": "panel",
+        "type": "directory",
+        "size": 236535,
+        "children": [
+          {
+            "name": ".gitignore",
+            "path": "panel/.gitignore",
+            "type": "file",
+            "size": 253
+          },
+          {
+            "name": "README.md",
+            "path": "panel/README.md",
+            "type": "file",
+            "size": 2555
+          },
+          {
+            "name": "eslint.config.js",
+            "path": "panel/eslint.config.js",
+            "type": "file",
+            "size": 616
+          },
+          {
+            "name": "index.html",
+            "path": "panel/index.html",
+            "type": "file",
+            "size": 354
+          },
+          {
+            "name": "package.json",
+            "path": "panel/package.json",
+            "type": "file",
+            "size": 933
+          },
+          {
+            "name": "pnpm-lock.yaml",
+            "path": "panel/pnpm-lock.yaml",
+            "type": "file",
+            "size": 89792
+          },
+          {
+            "name": "tsconfig.app.json",
+            "path": "panel/tsconfig.app.json",
+            "type": "file",
+            "size": 732
+          },
+          {
+            "name": "tsconfig.json",
+            "path": "panel/tsconfig.json",
+            "type": "file",
+            "size": 119
+          },
+          {
+            "name": "tsconfig.node.json",
+            "path": "panel/tsconfig.node.json",
+            "type": "file",
+            "size": 653
+          },
+          {
+            "name": "vite.config.ts",
+            "path": "panel/vite.config.ts",
+            "type": "file",
+            "size": 342
+          },
+          {
+            "name": "src",
+            "path": "panel/src",
+            "type": "directory",
+            "size": 140186,
+            "children": [
+              {
+                "name": "App.tsx",
+                "path": "panel/src/App.tsx",
+                "type": "file",
+                "size": 1275
+              },
+              {
+                "name": "index.css",
+                "path": "panel/src/index.css",
+                "type": "file",
+                "size": 23
+              },
+              {
+                "name": "main.tsx",
+                "path": "panel/src/main.tsx",
+                "type": "file",
+                "size": 692
+              },
+              {
+                "name": "assets",
+                "path": "panel/src/assets",
+                "type": "directory",
+                "size": 4126,
+                "children": [
+                  {
+                    "name": "react.svg",
+                    "path": "panel/src/assets/react.svg",
+                    "type": "file",
+                    "size": 4126
+                  }
+                ]
+              },
+              {
+                "name": "components",
+                "path": "panel/src/components",
+                "type": "directory",
+                "size": 27913,
+                "children": [
+                  {
+                    "name": "AgentDesk.tsx",
+                    "path": "panel/src/components/AgentDesk.tsx",
+                    "type": "file",
+                    "size": 13669
+                  },
+                  {
+                    "name": "ChatBubble.tsx",
+                    "path": "panel/src/components/ChatBubble.tsx",
+                    "type": "file",
+                    "size": 1740
+                  },
+                  {
+                    "name": "KanbanCard.tsx",
+                    "path": "panel/src/components/KanbanCard.tsx",
+                    "type": "file",
+                    "size": 3385
+                  },
+                  {
+                    "name": "KanbanColumn.tsx",
+                    "path": "panel/src/components/KanbanColumn.tsx",
+                    "type": "file",
+                    "size": 2512
+                  },
+                  {
+                    "name": "Layout.tsx",
+                    "path": "panel/src/components/Layout.tsx",
+                    "type": "file",
+                    "size": 315
+                  },
+                  {
+                    "name": "Sidebar.tsx",
+                    "path": "panel/src/components/Sidebar.tsx",
+                    "type": "file",
+                    "size": 2020
+                  },
+                  {
+                    "name": "ToolCallBlock.tsx",
+                    "path": "panel/src/components/ToolCallBlock.tsx",
+                    "type": "file",
+                    "size": 4272
+                  }
+                ]
+              },
+              {
+                "name": "hooks",
+                "path": "panel/src/hooks",
+                "type": "directory",
+                "size": 4843,
+                "children": [
+                  {
+                    "name": "useAuth.ts",
+                    "path": "panel/src/hooks/useAuth.ts",
+                    "type": "file",
+                    "size": 1398
+                  },
+                  {
+                    "name": "useHealth.ts",
+                    "path": "panel/src/hooks/useHealth.ts",
+                    "type": "file",
+                    "size": 765
+                  },
+                  {
+                    "name": "useMetrics.ts",
+                    "path": "panel/src/hooks/useMetrics.ts",
+                    "type": "file",
+                    "size": 679
+                  },
+                  {
+                    "name": "useWebSocket.ts",
+                    "path": "panel/src/hooks/useWebSocket.ts",
+                    "type": "file",
+                    "size": 2001
+                  }
+                ]
+              },
+              {
+                "name": "lib",
+                "path": "panel/src/lib",
+                "type": "directory",
+                "size": 1837,
+                "children": [
+                  {
+                    "name": "api.ts",
+                    "path": "panel/src/lib/api.ts",
+                    "type": "file",
+                    "size": 1837
+                  }
+                ]
+              },
+              {
+                "name": "pages",
+                "path": "panel/src/pages",
+                "type": "directory",
+                "size": 99477,
+                "children": [
+                  {
+                    "name": "Agents.tsx",
+                    "path": "panel/src/pages/Agents.tsx",
+                    "type": "file",
+                    "size": 9876
+                  },
+                  {
+                    "name": "CronRoutines.tsx",
+                    "path": "panel/src/pages/CronRoutines.tsx",
+                    "type": "file",
+                    "size": 30632
+                  },
+                  {
+                    "name": "Dashboard.tsx",
+                    "path": "panel/src/pages/Dashboard.tsx",
+                    "type": "file",
+                    "size": 12103
+                  },
+                  {
+                    "name": "Kanban.tsx",
+                    "path": "panel/src/pages/Kanban.tsx",
+                    "type": "file",
+                    "size": 17161
+                  },
+                  {
+                    "name": "Login.tsx",
+                    "path": "panel/src/pages/Login.tsx",
+                    "type": "file",
+                    "size": 3389
+                  },
+                  {
+                    "name": "Logs.tsx",
+                    "path": "panel/src/pages/Logs.tsx",
+                    "type": "file",
+                    "size": 13931
+                  },
+                  {
+                    "name": "Sessions.tsx",
+                    "path": "panel/src/pages/Sessions.tsx",
+                    "type": "file",
+                    "size": 12385
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "scripts",
+        "path": "scripts",
+        "type": "directory",
+        "size": 5850,
+        "children": [
+          {
+            "name": "add-tenant.sh",
+            "path": "scripts/add-tenant.sh",
+            "type": "file",
+            "size": 2789
+          },
+          {
+            "name": "backup-tenants.sh",
+            "path": "scripts/backup-tenants.sh",
+            "type": "file",
+            "size": 932
+          },
+          {
+            "name": "generate-compose.sh",
+            "path": "scripts/generate-compose.sh",
+            "type": "file",
+            "size": 2129
+          }
+        ]
+      },
+      {
+        "name": "skills",
+        "path": "skills",
+        "type": "directory",
+        "size": 9841,
+        "children": [
+          {
+            "name": "deep-research",
+            "path": "skills/deep-research",
+            "type": "directory",
+            "size": 3357,
+            "children": [
+              {
+                "name": "SKILL.md",
+                "path": "skills/deep-research/SKILL.md",
+                "type": "file",
+                "size": 3357
+              }
+            ]
+          },
+          {
+            "name": "github",
+            "path": "skills/github",
+            "type": "directory",
+            "size": 585,
+            "children": [
+              {
+                "name": "SKILL.md",
+                "path": "skills/github/SKILL.md",
+                "type": "file",
+                "size": 585
+              }
+            ]
+          },
+          {
+            "name": "skill-creator",
+            "path": "skills/skill-creator",
+            "type": "directory",
+            "size": 5899,
+            "children": [
+              {
+                "name": "SKILL.md",
+                "path": "skills/skill-creator/SKILL.md",
+                "type": "file",
+                "size": 5899
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "src",
+        "path": "src",
+        "type": "directory",
+        "size": 4698265,
+        "children": [
+          {
+            "name": "audit.rs",
+            "path": "src/audit.rs",
+            "type": "file",
+            "size": 6357
+          },
+          {
+            "name": "batch.rs",
+            "path": "src/batch.rs",
+            "type": "file",
+            "size": 15309
+          },
+          {
+            "name": "error.rs",
+            "path": "src/error.rs",
+            "type": "file",
+            "size": 13893
+          },
+          {
+            "name": "health.rs",
+            "path": "src/health.rs",
+            "type": "file",
+            "size": 44685
+          },
+          {
+            "name": "lib.rs",
+            "path": "src/lib.rs",
+            "type": "file",
+            "size": 3504
+          },
+          {
+            "name": "main.rs",
+            "path": "src/main.rs",
+            "type": "file",
+            "size": 365
+          },
+          {
+            "name": "transcription.rs",
+            "path": "src/transcription.rs",
+            "type": "file",
+            "size": 7342
+          },
+          {
+            "name": "agent",
+            "path": "src/agent",
+            "type": "directory",
+            "size": 340247,
+            "children": [
+              {
+                "name": "budget.rs",
+                "path": "src/agent/budget.rs",
+                "type": "file",
+                "size": 10971
+              },
+              {
+                "name": "compaction.rs",
+                "path": "src/agent/compaction.rs",
+                "type": "file",
+                "size": 32913
+              },
+              {
+                "name": "context.rs",
+                "path": "src/agent/context.rs",
+                "type": "file",
+                "size": 41714
+              },
+              {
+                "name": "context_monitor.rs",
+                "path": "src/agent/context_monitor.rs",
+                "type": "file",
+                "size": 14243
+              },
+              {
+                "name": "facade.rs",
+                "path": "src/agent/facade.rs",
+                "type": "file",
+                "size": 19005
+              },
+              {
+                "name": "loop.rs",
+                "path": "src/agent/loop.rs",
+                "type": "file",
+                "size": 171272
+              },
+              {
+                "name": "loop_guard.rs",
+                "path": "src/agent/loop_guard.rs",
+                "type": "file",
+                "size": 36298
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/agent/mod.rs",
+                "type": "file",
+                "size": 2926
+              },
+              {
+                "name": "scratchpad.rs",
+                "path": "src/agent/scratchpad.rs",
+                "type": "file",
+                "size": 5985
+              },
+              {
+                "name": "tool_call_limit.rs",
+                "path": "src/agent/tool_call_limit.rs",
+                "type": "file",
+                "size": 4920
+              }
+            ]
+          },
+          {
+            "name": "api",
+            "path": "src/api",
+            "type": "directory",
+            "size": 146207,
+            "children": [
+              {
+                "name": "auth.rs",
+                "path": "src/api/auth.rs",
+                "type": "file",
+                "size": 11478
+              },
+              {
+                "name": "config.rs",
+                "path": "src/api/config.rs",
+                "type": "file",
+                "size": 1333
+              },
+              {
+                "name": "events.rs",
+                "path": "src/api/events.rs",
+                "type": "file",
+                "size": 3875
+              },
+              {
+                "name": "middleware.rs",
+                "path": "src/api/middleware.rs",
+                "type": "file",
+                "size": 20142
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/api/mod.rs",
+                "type": "file",
+                "size": 253
+              },
+              {
+                "name": "openai_types.rs",
+                "path": "src/api/openai_types.rs",
+                "type": "file",
+                "size": 18137
+              },
+              {
+                "name": "server.rs",
+                "path": "src/api/server.rs",
+                "type": "file",
+                "size": 10666
+              },
+              {
+                "name": "tasks.rs",
+                "path": "src/api/tasks.rs",
+                "type": "file",
+                "size": 20180
+              },
+              {
+                "name": "routes",
+                "path": "src/api/routes",
+                "type": "directory",
+                "size": 60143,
+                "children": [
+                  {
+                    "name": "auth.rs",
+                    "path": "src/api/routes/auth.rs",
+                    "type": "file",
+                    "size": 5503
+                  },
+                  {
+                    "name": "channels.rs",
+                    "path": "src/api/routes/channels.rs",
+                    "type": "file",
+                    "size": 4561
+                  },
+                  {
+                    "name": "cron.rs",
+                    "path": "src/api/routes/cron.rs",
+                    "type": "file",
+                    "size": 1730
+                  },
+                  {
+                    "name": "health.rs",
+                    "path": "src/api/routes/health.rs",
+                    "type": "file",
+                    "size": 5157
+                  },
+                  {
+                    "name": "metrics.rs",
+                    "path": "src/api/routes/metrics.rs",
+                    "type": "file",
+                    "size": 4235
+                  },
+                  {
+                    "name": "mod.rs",
+                    "path": "src/api/routes/mod.rs",
+                    "type": "file",
+                    "size": 158
+                  },
+                  {
+                    "name": "openai.rs",
+                    "path": "src/api/routes/openai.rs",
+                    "type": "file",
+                    "size": 17204
+                  },
+                  {
+                    "name": "routines.rs",
+                    "path": "src/api/routes/routines.rs",
+                    "type": "file",
+                    "size": 1741
+                  },
+                  {
+                    "name": "sessions.rs",
+                    "path": "src/api/routes/sessions.rs",
+                    "type": "file",
+                    "size": 5502
+                  },
+                  {
+                    "name": "tasks.rs",
+                    "path": "src/api/routes/tasks.rs",
+                    "type": "file",
+                    "size": 9304
+                  },
+                  {
+                    "name": "ws.rs",
+                    "path": "src/api/routes/ws.rs",
+                    "type": "file",
+                    "size": 5048
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "auth",
+            "path": "src/auth",
+            "type": "directory",
+            "size": 89550,
+            "children": [
+              {
+                "name": "claude_import.rs",
+                "path": "src/auth/claude_import.rs",
+                "type": "file",
+                "size": 13410
+              },
+              {
+                "name": "codex_import.rs",
+                "path": "src/auth/codex_import.rs",
+                "type": "file",
+                "size": 12920
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/auth/mod.rs",
+                "type": "file",
+                "size": 14530
+              },
+              {
+                "name": "oauth.rs",
+                "path": "src/auth/oauth.rs",
+                "type": "file",
+                "size": 25428
+              },
+              {
+                "name": "refresh.rs",
+                "path": "src/auth/refresh.rs",
+                "type": "file",
+                "size": 12585
+              },
+              {
+                "name": "store.rs",
+                "path": "src/auth/store.rs",
+                "type": "file",
+                "size": 10677
+              }
+            ]
+          },
+          {
+            "name": "bin",
+            "path": "src/bin",
+            "type": "directory",
+            "size": 11473,
+            "children": [
+              {
+                "name": "benchmark.rs",
+                "path": "src/bin/benchmark.rs",
+                "type": "file",
+                "size": 11473
+              }
+            ]
+          },
+          {
+            "name": "bus",
+            "path": "src/bus",
+            "type": "directory",
+            "size": 32002,
+            "children": [
+              {
+                "name": "message.rs",
+                "path": "src/bus/message.rs",
+                "type": "file",
+                "size": 14592
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/bus/mod.rs",
+                "type": "file",
+                "size": 17410
+              }
+            ]
+          },
+          {
+            "name": "cache",
+            "path": "src/cache",
+            "type": "directory",
+            "size": 14132,
+            "children": [
+              {
+                "name": "mod.rs",
+                "path": "src/cache/mod.rs",
+                "type": "file",
+                "size": 150
+              },
+              {
+                "name": "response_cache.rs",
+                "path": "src/cache/response_cache.rs",
+                "type": "file",
+                "size": 13982
+              }
+            ]
+          },
+          {
+            "name": "channels",
+            "path": "src/channels",
+            "type": "directory",
+            "size": 538989,
+            "children": [
+              {
+                "name": "discord.rs",
+                "path": "src/channels/discord.rs",
+                "type": "file",
+                "size": 82559
+              },
+              {
+                "name": "email_channel.rs",
+                "path": "src/channels/email_channel.rs",
+                "type": "file",
+                "size": 27719
+              },
+              {
+                "name": "factory.rs",
+                "path": "src/channels/factory.rs",
+                "type": "file",
+                "size": 12738
+              },
+              {
+                "name": "lark.rs",
+                "path": "src/channels/lark.rs",
+                "type": "file",
+                "size": 55271
+              },
+              {
+                "name": "manager.rs",
+                "path": "src/channels/manager.rs",
+                "type": "file",
+                "size": 34099
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/channels/mod.rs",
+                "type": "file",
+                "size": 5243
+              },
+              {
+                "name": "model_switch.rs",
+                "path": "src/channels/model_switch.rs",
+                "type": "file",
+                "size": 17560
+              },
+              {
+                "name": "mqtt.rs",
+                "path": "src/channels/mqtt.rs",
+                "type": "file",
+                "size": 20561
+              },
+              {
+                "name": "persona_switch.rs",
+                "path": "src/channels/persona_switch.rs",
+                "type": "file",
+                "size": 10291
+              },
+              {
+                "name": "plugin.rs",
+                "path": "src/channels/plugin.rs",
+                "type": "file",
+                "size": 30233
+              },
+              {
+                "name": "serial.rs",
+                "path": "src/channels/serial.rs",
+                "type": "file",
+                "size": 12713
+              },
+              {
+                "name": "slack.rs",
+                "path": "src/channels/slack.rs",
+                "type": "file",
+                "size": 28436
+              },
+              {
+                "name": "telegram.rs",
+                "path": "src/channels/telegram.rs",
+                "type": "file",
+                "size": 55248
+              },
+              {
+                "name": "types.rs",
+                "path": "src/channels/types.rs",
+                "type": "file",
+                "size": 11149
+              },
+              {
+                "name": "webhook.rs",
+                "path": "src/channels/webhook.rs",
+                "type": "file",
+                "size": 60376
+              },
+              {
+                "name": "whatsapp_cloud.rs",
+                "path": "src/channels/whatsapp_cloud.rs",
+                "type": "file",
+                "size": 54099
+              },
+              {
+                "name": "whatsapp_web.rs",
+                "path": "src/channels/whatsapp_web.rs",
+                "type": "file",
+                "size": 20694
+              }
+            ]
+          },
+          {
+            "name": "cli",
+            "path": "src/cli",
+            "type": "directory",
+            "size": 381788,
+            "children": [
+              {
+                "name": "agent.rs",
+                "path": "src/cli/agent.rs",
+                "type": "file",
+                "size": 34405
+              },
+              {
+                "name": "batch.rs",
+                "path": "src/cli/batch.rs",
+                "type": "file",
+                "size": 3978
+              },
+              {
+                "name": "channel.rs",
+                "path": "src/cli/channel.rs",
+                "type": "file",
+                "size": 19225
+              },
+              {
+                "name": "common.rs",
+                "path": "src/cli/common.rs",
+                "type": "file",
+                "size": 31772
+              },
+              {
+                "name": "config.rs",
+                "path": "src/cli/config.rs",
+                "type": "file",
+                "size": 5742
+              },
+              {
+                "name": "daemon.rs",
+                "path": "src/cli/daemon.rs",
+                "type": "file",
+                "size": 6334
+              },
+              {
+                "name": "doctor.rs",
+                "path": "src/cli/doctor.rs",
+                "type": "file",
+                "size": 12511
+              },
+              {
+                "name": "gateway.rs",
+                "path": "src/cli/gateway.rs",
+                "type": "file",
+                "size": 25149
+              },
+              {
+                "name": "hand.rs",
+                "path": "src/cli/hand.rs",
+                "type": "file",
+                "size": 3243
+              },
+              {
+                "name": "heartbeat.rs",
+                "path": "src/cli/heartbeat.rs",
+                "type": "file",
+                "size": 2020
+              },
+              {
+                "name": "history.rs",
+                "path": "src/cli/history.rs",
+                "type": "file",
+                "size": 2643
+              },
+              {
+                "name": "memory.rs",
+                "path": "src/cli/memory.rs",
+                "type": "file",
+                "size": 8161
+              },
+              {
+                "name": "migrate.rs",
+                "path": "src/cli/migrate.rs",
+                "type": "file",
+                "size": 7461
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/cli/mod.rs",
+                "type": "file",
+                "size": 24008
+              },
+              {
+                "name": "onboard.rs",
+                "path": "src/cli/onboard.rs",
+                "type": "file",
+                "size": 40592
+              },
+              {
+                "name": "pair.rs",
+                "path": "src/cli/pair.rs",
+                "type": "file",
+                "size": 4029
+              },
+              {
+                "name": "panel.rs",
+                "path": "src/cli/panel.rs",
+                "type": "file",
+                "size": 18875
+              },
+              {
+                "name": "provider.rs",
+                "path": "src/cli/provider.rs",
+                "type": "file",
+                "size": 3339
+              },
+              {
+                "name": "quota.rs",
+                "path": "src/cli/quota.rs",
+                "type": "file",
+                "size": 3023
+              },
+              {
+                "name": "secrets.rs",
+                "path": "src/cli/secrets.rs",
+                "type": "file",
+                "size": 12917
+              },
+              {
+                "name": "serve.rs",
+                "path": "src/cli/serve.rs",
+                "type": "file",
+                "size": 2243
+              },
+              {
+                "name": "shimmer.rs",
+                "path": "src/cli/shimmer.rs",
+                "type": "file",
+                "size": 12483
+              },
+              {
+                "name": "skills.rs",
+                "path": "src/cli/skills.rs",
+                "type": "file",
+                "size": 20534
+              },
+              {
+                "name": "slash.rs",
+                "path": "src/cli/slash.rs",
+                "type": "file",
+                "size": 8374
+              },
+              {
+                "name": "status.rs",
+                "path": "src/cli/status.rs",
+                "type": "file",
+                "size": 23441
+              },
+              {
+                "name": "template.rs",
+                "path": "src/cli/template.rs",
+                "type": "file",
+                "size": 3152
+              },
+              {
+                "name": "tools.rs",
+                "path": "src/cli/tools.rs",
+                "type": "file",
+                "size": 13209
+              },
+              {
+                "name": "uninstall.rs",
+                "path": "src/cli/uninstall.rs",
+                "type": "file",
+                "size": 9175
+              },
+              {
+                "name": "update.rs",
+                "path": "src/cli/update.rs",
+                "type": "file",
+                "size": 11234
+              },
+              {
+                "name": "watch.rs",
+                "path": "src/cli/watch.rs",
+                "type": "file",
+                "size": 8516
+              }
+            ]
+          },
+          {
+            "name": "config",
+            "path": "src/config",
+            "type": "directory",
+            "size": 255901,
+            "children": [
+              {
+                "name": "mod.rs",
+                "path": "src/config/mod.rs",
+                "type": "file",
+                "size": 85630
+              },
+              {
+                "name": "templates.rs",
+                "path": "src/config/templates.rs",
+                "type": "file",
+                "size": 38649
+              },
+              {
+                "name": "types.rs",
+                "path": "src/config/types.rs",
+                "type": "file",
+                "size": 100334
+              },
+              {
+                "name": "validate.rs",
+                "path": "src/config/validate.rs",
+                "type": "file",
+                "size": 27868
+              },
+              {
+                "name": "watcher.rs",
+                "path": "src/config/watcher.rs",
+                "type": "file",
+                "size": 3420
+              }
+            ]
+          },
+          {
+            "name": "cron",
+            "path": "src/cron",
+            "type": "directory",
+            "size": 50439,
+            "children": [
+              {
+                "name": "mod.rs",
+                "path": "src/cron/mod.rs",
+                "type": "file",
+                "size": 50439
+              }
+            ]
+          },
+          {
+            "name": "deps",
+            "path": "src/deps",
+            "type": "directory",
+            "size": 47427,
+            "children": [
+              {
+                "name": "fetcher.rs",
+                "path": "src/deps/fetcher.rs",
+                "type": "file",
+                "size": 9173
+              },
+              {
+                "name": "manager.rs",
+                "path": "src/deps/manager.rs",
+                "type": "file",
+                "size": 19400
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/deps/mod.rs",
+                "type": "file",
+                "size": 386
+              },
+              {
+                "name": "registry.rs",
+                "path": "src/deps/registry.rs",
+                "type": "file",
+                "size": 8062
+              },
+              {
+                "name": "types.rs",
+                "path": "src/deps/types.rs",
+                "type": "file",
+                "size": 10406
+              }
+            ]
+          },
+          {
+            "name": "devices",
+            "path": "src/devices",
+            "type": "directory",
+            "size": 8150,
+            "children": [
+              {
+                "name": "mod.rs",
+                "path": "src/devices/mod.rs",
+                "type": "file",
+                "size": 4630
+              },
+              {
+                "name": "usb.rs",
+                "path": "src/devices/usb.rs",
+                "type": "file",
+                "size": 3520
+              }
+            ]
+          },
+          {
+            "name": "gateway",
+            "path": "src/gateway",
+            "type": "directory",
+            "size": 87149,
+            "children": [
+              {
+                "name": "container_agent.rs",
+                "path": "src/gateway/container_agent.rs",
+                "type": "file",
+                "size": 57753
+              },
+              {
+                "name": "idempotency.rs",
+                "path": "src/gateway/idempotency.rs",
+                "type": "file",
+                "size": 3341
+              },
+              {
+                "name": "ipc.rs",
+                "path": "src/gateway/ipc.rs",
+                "type": "file",
+                "size": 9547
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/gateway/mod.rs",
+                "type": "file",
+                "size": 913
+              },
+              {
+                "name": "rate_limit.rs",
+                "path": "src/gateway/rate_limit.rs",
+                "type": "file",
+                "size": 5205
+              },
+              {
+                "name": "startup_guard.rs",
+                "path": "src/gateway/startup_guard.rs",
+                "type": "file",
+                "size": 10390
+              }
+            ]
+          },
+          {
+            "name": "hands",
+            "path": "src/hands",
+            "type": "directory",
+            "size": 6141,
+            "children": [
+              {
+                "name": "mod.rs",
+                "path": "src/hands/mod.rs",
+                "type": "file",
+                "size": 6141
+              }
+            ]
+          },
+          {
+            "name": "hardware",
+            "path": "src/hardware",
+            "type": "directory",
+            "size": 19307,
+            "children": [
+              {
+                "name": "discover.rs",
+                "path": "src/hardware/discover.rs",
+                "type": "file",
+                "size": 2292
+              },
+              {
+                "name": "introspect.rs",
+                "path": "src/hardware/introspect.rs",
+                "type": "file",
+                "size": 4465
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/hardware/mod.rs",
+                "type": "file",
+                "size": 7408
+              },
+              {
+                "name": "registry.rs",
+                "path": "src/hardware/registry.rs",
+                "type": "file",
+                "size": 5142
+              }
+            ]
+          },
+          {
+            "name": "heartbeat",
+            "path": "src/heartbeat",
+            "type": "directory",
+            "size": 13598,
+            "children": [
+              {
+                "name": "mod.rs",
+                "path": "src/heartbeat/mod.rs",
+                "type": "file",
+                "size": 233
+              },
+              {
+                "name": "service.rs",
+                "path": "src/heartbeat/service.rs",
+                "type": "file",
+                "size": 11451
+              },
+              {
+                "name": "template.rs",
+                "path": "src/heartbeat/template.rs",
+                "type": "file",
+                "size": 1914
+              }
+            ]
+          },
+          {
+            "name": "hooks",
+            "path": "src/hooks",
+            "type": "directory",
+            "size": 28182,
+            "children": [
+              {
+                "name": "mod.rs",
+                "path": "src/hooks/mod.rs",
+                "type": "file",
+                "size": 28182
+              }
+            ]
+          },
+          {
+            "name": "kernel",
+            "path": "src/kernel",
+            "type": "directory",
+            "size": 99930,
+            "children": [
+              {
+                "name": "gate.rs",
+                "path": "src/kernel/gate.rs",
+                "type": "file",
+                "size": 20244
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/kernel/mod.rs",
+                "type": "file",
+                "size": 11596
+              },
+              {
+                "name": "provider.rs",
+                "path": "src/kernel/provider.rs",
+                "type": "file",
+                "size": 19860
+              },
+              {
+                "name": "registrar.rs",
+                "path": "src/kernel/registrar.rs",
+                "type": "file",
+                "size": 48230
+              }
+            ]
+          },
+          {
+            "name": "mcp_server",
+            "path": "src/mcp_server",
+            "type": "directory",
+            "size": 36131,
+            "children": [
+              {
+                "name": "handler.rs",
+                "path": "src/mcp_server/handler.rs",
+                "type": "file",
+                "size": 14165
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/mcp_server/mod.rs",
+                "type": "file",
+                "size": 9253
+              },
+              {
+                "name": "stdio.rs",
+                "path": "src/mcp_server/stdio.rs",
+                "type": "file",
+                "size": 12713
+              }
+            ]
+          },
+          {
+            "name": "memory",
+            "path": "src/memory",
+            "type": "directory",
+            "size": 130653,
+            "children": [
+              {
+                "name": "bm25_searcher.rs",
+                "path": "src/memory/bm25_searcher.rs",
+                "type": "file",
+                "size": 8212
+              },
+              {
+                "name": "builtin_searcher.rs",
+                "path": "src/memory/builtin_searcher.rs",
+                "type": "file",
+                "size": 3175
+              },
+              {
+                "name": "embedding_searcher.rs",
+                "path": "src/memory/embedding_searcher.rs",
+                "type": "file",
+                "size": 16164
+              },
+              {
+                "name": "factory.rs",
+                "path": "src/memory/factory.rs",
+                "type": "file",
+                "size": 10895
+              },
+              {
+                "name": "hnsw_searcher.rs",
+                "path": "src/memory/hnsw_searcher.rs",
+                "type": "file",
+                "size": 19725
+              },
+              {
+                "name": "hygiene.rs",
+                "path": "src/memory/hygiene.rs",
+                "type": "file",
+                "size": 8068
+              },
+              {
+                "name": "longterm.rs",
+                "path": "src/memory/longterm.rs",
+                "type": "file",
+                "size": 34307
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/memory/mod.rs",
+                "type": "file",
+                "size": 20654
+              },
+              {
+                "name": "snapshot.rs",
+                "path": "src/memory/snapshot.rs",
+                "type": "file",
+                "size": 6862
+              },
+              {
+                "name": "traits.rs",
+                "path": "src/memory/traits.rs",
+                "type": "file",
+                "size": 2591
+              }
+            ]
+          },
+          {
+            "name": "migrate",
+            "path": "src/migrate",
+            "type": "directory",
+            "size": 31092,
+            "children": [
+              {
+                "name": "config.rs",
+                "path": "src/migrate/config.rs",
+                "type": "file",
+                "size": 17984
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/migrate/mod.rs",
+                "type": "file",
+                "size": 6481
+              },
+              {
+                "name": "skills.rs",
+                "path": "src/migrate/skills.rs",
+                "type": "file",
+                "size": 6627
+              }
+            ]
+          },
+          {
+            "name": "peripherals",
+            "path": "src/peripherals",
+            "type": "directory",
+            "size": 95414,
+            "children": [
+              {
+                "name": "arduino.rs",
+                "path": "src/peripherals/arduino.rs",
+                "type": "file",
+                "size": 1964
+              },
+              {
+                "name": "board_profile.rs",
+                "path": "src/peripherals/board_profile.rs",
+                "type": "file",
+                "size": 7996
+              },
+              {
+                "name": "esp32.rs",
+                "path": "src/peripherals/esp32.rs",
+                "type": "file",
+                "size": 5165
+              },
+              {
+                "name": "i2c.rs",
+                "path": "src/peripherals/i2c.rs",
+                "type": "file",
+                "size": 18593
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/peripherals/mod.rs",
+                "type": "file",
+                "size": 4021
+              },
+              {
+                "name": "nucleo.rs",
+                "path": "src/peripherals/nucleo.rs",
+                "type": "file",
+                "size": 1954
+              },
+              {
+                "name": "nvs.rs",
+                "path": "src/peripherals/nvs.rs",
+                "type": "file",
+                "size": 19262
+              },
+              {
+                "name": "rpi.rs",
+                "path": "src/peripherals/rpi.rs",
+                "type": "file",
+                "size": 7435
+              },
+              {
+                "name": "rpi_i2c.rs",
+                "path": "src/peripherals/rpi_i2c.rs",
+                "type": "file",
+                "size": 17281
+              },
+              {
+                "name": "serial.rs",
+                "path": "src/peripherals/serial.rs",
+                "type": "file",
+                "size": 8914
+              },
+              {
+                "name": "traits.rs",
+                "path": "src/peripherals/traits.rs",
+                "type": "file",
+                "size": 2829
+              }
+            ]
+          },
+          {
+            "name": "plugins",
+            "path": "src/plugins",
+            "type": "directory",
+            "size": 88489,
+            "children": [
+              {
+                "name": "loader.rs",
+                "path": "src/plugins/loader.rs",
+                "type": "file",
+                "size": 37667
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/plugins/mod.rs",
+                "type": "file",
+                "size": 2443
+              },
+              {
+                "name": "registry.rs",
+                "path": "src/plugins/registry.rs",
+                "type": "file",
+                "size": 15016
+              },
+              {
+                "name": "types.rs",
+                "path": "src/plugins/types.rs",
+                "type": "file",
+                "size": 21145
+              },
+              {
+                "name": "watcher.rs",
+                "path": "src/plugins/watcher.rs",
+                "type": "file",
+                "size": 12218
+              }
+            ]
+          },
+          {
+            "name": "providers",
+            "path": "src/providers",
+            "type": "directory",
+            "size": 436248,
+            "children": [
+              {
+                "name": "claude.rs",
+                "path": "src/providers/claude.rs",
+                "type": "file",
+                "size": 49219
+              },
+              {
+                "name": "cooldown.rs",
+                "path": "src/providers/cooldown.rs",
+                "type": "file",
+                "size": 8722
+              },
+              {
+                "name": "error_classifier.rs",
+                "path": "src/providers/error_classifier.rs",
+                "type": "file",
+                "size": 5346
+              },
+              {
+                "name": "fallback.rs",
+                "path": "src/providers/fallback.rs",
+                "type": "file",
+                "size": 43712
+              },
+              {
+                "name": "gemini.rs",
+                "path": "src/providers/gemini.rs",
+                "type": "file",
+                "size": 28685
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/providers/mod.rs",
+                "type": "file",
+                "size": 6026
+              },
+              {
+                "name": "openai.rs",
+                "path": "src/providers/openai.rs",
+                "type": "file",
+                "size": 72063
+              },
+              {
+                "name": "plugin.rs",
+                "path": "src/providers/plugin.rs",
+                "type": "file",
+                "size": 22038
+              },
+              {
+                "name": "quota.rs",
+                "path": "src/providers/quota.rs",
+                "type": "file",
+                "size": 37149
+              },
+              {
+                "name": "registry.rs",
+                "path": "src/providers/registry.rs",
+                "type": "file",
+                "size": 38451
+              },
+              {
+                "name": "retry.rs",
+                "path": "src/providers/retry.rs",
+                "type": "file",
+                "size": 37751
+              },
+              {
+                "name": "rotation.rs",
+                "path": "src/providers/rotation.rs",
+                "type": "file",
+                "size": 44899
+              },
+              {
+                "name": "structured.rs",
+                "path": "src/providers/structured.rs",
+                "type": "file",
+                "size": 17953
+              },
+              {
+                "name": "types.rs",
+                "path": "src/providers/types.rs",
+                "type": "file",
+                "size": 24234
+              }
+            ]
+          },
+          {
+            "name": "routines",
+            "path": "src/routines",
+            "type": "directory",
+            "size": 34492,
+            "children": [
+              {
+                "name": "engine.rs",
+                "path": "src/routines/engine.rs",
+                "type": "file",
+                "size": 18332
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/routines/mod.rs",
+                "type": "file",
+                "size": 16160
+              }
+            ]
+          },
+          {
+            "name": "runtime",
+            "path": "src/runtime",
+            "type": "directory",
+            "size": 67429,
+            "children": [
+              {
+                "name": "apple.rs",
+                "path": "src/runtime/apple.rs",
+                "type": "file",
+                "size": 8152
+              },
+              {
+                "name": "bubblewrap.rs",
+                "path": "src/runtime/bubblewrap.rs",
+                "type": "file",
+                "size": 7500
+              },
+              {
+                "name": "docker.rs",
+                "path": "src/runtime/docker.rs",
+                "type": "file",
+                "size": 9235
+              },
+              {
+                "name": "factory.rs",
+                "path": "src/runtime/factory.rs",
+                "type": "file",
+                "size": 10550
+              },
+              {
+                "name": "firejail.rs",
+                "path": "src/runtime/firejail.rs",
+                "type": "file",
+                "size": 9374
+              },
+              {
+                "name": "landlock.rs",
+                "path": "src/runtime/landlock.rs",
+                "type": "file",
+                "size": 11219
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/runtime/mod.rs",
+                "type": "file",
+                "size": 1165
+              },
+              {
+                "name": "native.rs",
+                "path": "src/runtime/native.rs",
+                "type": "file",
+                "size": 4346
+              },
+              {
+                "name": "types.rs",
+                "path": "src/runtime/types.rs",
+                "type": "file",
+                "size": 5888
+              }
+            ]
+          },
+          {
+            "name": "safety",
+            "path": "src/safety",
+            "type": "directory",
+            "size": 111921,
+            "children": [
+              {
+                "name": "chain_alert.rs",
+                "path": "src/safety/chain_alert.rs",
+                "type": "file",
+                "size": 7439
+              },
+              {
+                "name": "leak_detector.rs",
+                "path": "src/safety/leak_detector.rs",
+                "type": "file",
+                "size": 19575
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/safety/mod.rs",
+                "type": "file",
+                "size": 18583
+              },
+              {
+                "name": "policy.rs",
+                "path": "src/safety/policy.rs",
+                "type": "file",
+                "size": 13397
+              },
+              {
+                "name": "sanitizer.rs",
+                "path": "src/safety/sanitizer.rs",
+                "type": "file",
+                "size": 12172
+              },
+              {
+                "name": "taint.rs",
+                "path": "src/safety/taint.rs",
+                "type": "file",
+                "size": 29021
+              },
+              {
+                "name": "validator.rs",
+                "path": "src/safety/validator.rs",
+                "type": "file",
+                "size": 11734
+              }
+            ]
+          },
+          {
+            "name": "security",
+            "path": "src/security",
+            "type": "directory",
+            "size": 175635,
+            "children": [
+              {
+                "name": "agent_mode.rs",
+                "path": "src/security/agent_mode.rs",
+                "type": "file",
+                "size": 12858
+              },
+              {
+                "name": "encryption.rs",
+                "path": "src/security/encryption.rs",
+                "type": "file",
+                "size": 20419
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/security/mod.rs",
+                "type": "file",
+                "size": 781
+              },
+              {
+                "name": "mount.rs",
+                "path": "src/security/mount.rs",
+                "type": "file",
+                "size": 19400
+              },
+              {
+                "name": "pairing.rs",
+                "path": "src/security/pairing.rs",
+                "type": "file",
+                "size": 27334
+              },
+              {
+                "name": "path.rs",
+                "path": "src/security/path.rs",
+                "type": "file",
+                "size": 35595
+              },
+              {
+                "name": "shell.rs",
+                "path": "src/security/shell.rs",
+                "type": "file",
+                "size": 59248
+              }
+            ]
+          },
+          {
+            "name": "session",
+            "path": "src/session",
+            "type": "directory",
+            "size": 87592,
+            "children": [
+              {
+                "name": "history.rs",
+                "path": "src/session/history.rs",
+                "type": "file",
+                "size": 20571
+              },
+              {
+                "name": "media.rs",
+                "path": "src/session/media.rs",
+                "type": "file",
+                "size": 8712
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/session/mod.rs",
+                "type": "file",
+                "size": 28937
+              },
+              {
+                "name": "repair.rs",
+                "path": "src/session/repair.rs",
+                "type": "file",
+                "size": 7408
+              },
+              {
+                "name": "types.rs",
+                "path": "src/session/types.rs",
+                "type": "file",
+                "size": 21964
+              }
+            ]
+          },
+          {
+            "name": "skills",
+            "path": "src/skills",
+            "type": "directory",
+            "size": 70132,
+            "children": [
+              {
+                "name": "github_source.rs",
+                "path": "src/skills/github_source.rs",
+                "type": "file",
+                "size": 10001
+              },
+              {
+                "name": "loader.rs",
+                "path": "src/skills/loader.rs",
+                "type": "file",
+                "size": 27612
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/skills/mod.rs",
+                "type": "file",
+                "size": 269
+              },
+              {
+                "name": "registry.rs",
+                "path": "src/skills/registry.rs",
+                "type": "file",
+                "size": 28387
+              },
+              {
+                "name": "types.rs",
+                "path": "src/skills/types.rs",
+                "type": "file",
+                "size": 3863
+              }
+            ]
+          },
+          {
+            "name": "tools",
+            "path": "src/tools",
+            "type": "directory",
+            "size": 974446,
+            "children": [
+              {
+                "name": "approval.rs",
+                "path": "src/tools/approval.rs",
+                "type": "file",
+                "size": 26810
+              },
+              {
+                "name": "binary_plugin.rs",
+                "path": "src/tools/binary_plugin.rs",
+                "type": "file",
+                "size": 24175
+              },
+              {
+                "name": "clarification.rs",
+                "path": "src/tools/clarification.rs",
+                "type": "file",
+                "size": 8619
+              },
+              {
+                "name": "composed.rs",
+                "path": "src/tools/composed.rs",
+                "type": "file",
+                "size": 37020
+              },
+              {
+                "name": "cron.rs",
+                "path": "src/tools/cron.rs",
+                "type": "file",
+                "size": 15470
+              },
+              {
+                "name": "custom.rs",
+                "path": "src/tools/custom.rs",
+                "type": "file",
+                "size": 15845
+              },
+              {
+                "name": "delegate.rs",
+                "path": "src/tools/delegate.rs",
+                "type": "file",
+                "size": 41281
+              },
+              {
+                "name": "diff.rs",
+                "path": "src/tools/diff.rs",
+                "type": "file",
+                "size": 11102
+              },
+              {
+                "name": "docx_read.rs",
+                "path": "src/tools/docx_read.rs",
+                "type": "file",
+                "size": 21678
+              },
+              {
+                "name": "filesystem.rs",
+                "path": "src/tools/filesystem.rs",
+                "type": "file",
+                "size": 37654
+              },
+              {
+                "name": "find.rs",
+                "path": "src/tools/find.rs",
+                "type": "file",
+                "size": 6307
+              },
+              {
+                "name": "git.rs",
+                "path": "src/tools/git.rs",
+                "type": "file",
+                "size": 20718
+              },
+              {
+                "name": "google.rs",
+                "path": "src/tools/google.rs",
+                "type": "file",
+                "size": 28356
+              },
+              {
+                "name": "grep.rs",
+                "path": "src/tools/grep.rs",
+                "type": "file",
+                "size": 8950
+              },
+              {
+                "name": "gsheets.rs",
+                "path": "src/tools/gsheets.rs",
+                "type": "file",
+                "size": 17755
+              },
+              {
+                "name": "hardware.rs",
+                "path": "src/tools/hardware.rs",
+                "type": "file",
+                "size": 13193
+              },
+              {
+                "name": "http_request.rs",
+                "path": "src/tools/http_request.rs",
+                "type": "file",
+                "size": 13526
+              },
+              {
+                "name": "longterm_memory.rs",
+                "path": "src/tools/longterm_memory.rs",
+                "type": "file",
+                "size": 27966
+              },
+              {
+                "name": "memory.rs",
+                "path": "src/tools/memory.rs",
+                "type": "file",
+                "size": 9471
+              },
+              {
+                "name": "message.rs",
+                "path": "src/tools/message.rs",
+                "type": "file",
+                "size": 31885
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/tools/mod.rs",
+                "type": "file",
+                "size": 8954
+              },
+              {
+                "name": "pdf_read.rs",
+                "path": "src/tools/pdf_read.rs",
+                "type": "file",
+                "size": 10262
+              },
+              {
+                "name": "plugin.rs",
+                "path": "src/tools/plugin.rs",
+                "type": "file",
+                "size": 13224
+              },
+              {
+                "name": "project.rs",
+                "path": "src/tools/project.rs",
+                "type": "file",
+                "size": 48304
+              },
+              {
+                "name": "r8r.rs",
+                "path": "src/tools/r8r.rs",
+                "type": "file",
+                "size": 26415
+              },
+              {
+                "name": "registry.rs",
+                "path": "src/tools/registry.rs",
+                "type": "file",
+                "size": 17348
+              },
+              {
+                "name": "reminder.rs",
+                "path": "src/tools/reminder.rs",
+                "type": "file",
+                "size": 39677
+              },
+              {
+                "name": "screenshot.rs",
+                "path": "src/tools/screenshot.rs",
+                "type": "file",
+                "size": 27953
+              },
+              {
+                "name": "shell.rs",
+                "path": "src/tools/shell.rs",
+                "type": "file",
+                "size": 14821
+              },
+              {
+                "name": "skills_install.rs",
+                "path": "src/tools/skills_install.rs",
+                "type": "file",
+                "size": 5761
+              },
+              {
+                "name": "skills_search.rs",
+                "path": "src/tools/skills_search.rs",
+                "type": "file",
+                "size": 4605
+              },
+              {
+                "name": "spawn.rs",
+                "path": "src/tools/spawn.rs",
+                "type": "file",
+                "size": 8728
+              },
+              {
+                "name": "stripe.rs",
+                "path": "src/tools/stripe.rs",
+                "type": "file",
+                "size": 46976
+              },
+              {
+                "name": "task.rs",
+                "path": "src/tools/task.rs",
+                "type": "file",
+                "size": 18182
+              },
+              {
+                "name": "transcribe.rs",
+                "path": "src/tools/transcribe.rs",
+                "type": "file",
+                "size": 13205
+              },
+              {
+                "name": "types.rs",
+                "path": "src/tools/types.rs",
+                "type": "file",
+                "size": 16746
+              },
+              {
+                "name": "web.rs",
+                "path": "src/tools/web.rs",
+                "type": "file",
+                "size": 80952
+              },
+              {
+                "name": "whatsapp.rs",
+                "path": "src/tools/whatsapp.rs",
+                "type": "file",
+                "size": 8162
+              },
+              {
+                "name": "android",
+                "path": "src/tools/android",
+                "type": "directory",
+                "size": 92145,
+                "children": [
+                  {
+                    "name": "actions.rs",
+                    "path": "src/tools/android/actions.rs",
+                    "type": "file",
+                    "size": 31623
+                  },
+                  {
+                    "name": "adb.rs",
+                    "path": "src/tools/android/adb.rs",
+                    "type": "file",
+                    "size": 9588
+                  },
+                  {
+                    "name": "mod.rs",
+                    "path": "src/tools/android/mod.rs",
+                    "type": "file",
+                    "size": 18798
+                  },
+                  {
+                    "name": "screen.rs",
+                    "path": "src/tools/android/screen.rs",
+                    "type": "file",
+                    "size": 16842
+                  },
+                  {
+                    "name": "stuck.rs",
+                    "path": "src/tools/android/stuck.rs",
+                    "type": "file",
+                    "size": 9032
+                  },
+                  {
+                    "name": "types.rs",
+                    "path": "src/tools/android/types.rs",
+                    "type": "file",
+                    "size": 6262
+                  }
+                ]
+              },
+              {
+                "name": "mcp",
+                "path": "src/tools/mcp",
+                "type": "directory",
+                "size": 54245,
+                "children": [
+                  {
+                    "name": "client.rs",
+                    "path": "src/tools/mcp/client.rs",
+                    "type": "file",
+                    "size": 10034
+                  },
+                  {
+                    "name": "discovery.rs",
+                    "path": "src/tools/mcp/discovery.rs",
+                    "type": "file",
+                    "size": 13264
+                  },
+                  {
+                    "name": "mod.rs",
+                    "path": "src/tools/mcp/mod.rs",
+                    "type": "file",
+                    "size": 238
+                  },
+                  {
+                    "name": "protocol.rs",
+                    "path": "src/tools/mcp/protocol.rs",
+                    "type": "file",
+                    "size": 11355
+                  },
+                  {
+                    "name": "transport.rs",
+                    "path": "src/tools/mcp/transport.rs",
+                    "type": "file",
+                    "size": 11838
+                  },
+                  {
+                    "name": "wrapper.rs",
+                    "path": "src/tools/mcp/wrapper.rs",
+                    "type": "file",
+                    "size": 7516
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "tunnel",
+            "path": "src/tunnel",
+            "type": "directory",
+            "size": 27892,
+            "children": [
+              {
+                "name": "cloudflare.rs",
+                "path": "src/tunnel/cloudflare.rs",
+                "type": "file",
+                "size": 8418
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/tunnel/mod.rs",
+                "type": "file",
+                "size": 6435
+              },
+              {
+                "name": "ngrok.rs",
+                "path": "src/tunnel/ngrok.rs",
+                "type": "file",
+                "size": 6238
+              },
+              {
+                "name": "tailscale.rs",
+                "path": "src/tunnel/tailscale.rs",
+                "type": "file",
+                "size": 5667
+              },
+              {
+                "name": "types.rs",
+                "path": "src/tunnel/types.rs",
+                "type": "file",
+                "size": 1134
+              }
+            ]
+          },
+          {
+            "name": "utils",
+            "path": "src/utils",
+            "type": "directory",
+            "size": 68632,
+            "children": [
+              {
+                "name": "cost.rs",
+                "path": "src/utils/cost.rs",
+                "type": "file",
+                "size": 16511
+              },
+              {
+                "name": "logging.rs",
+                "path": "src/utils/logging.rs",
+                "type": "file",
+                "size": 4676
+              },
+              {
+                "name": "metrics.rs",
+                "path": "src/utils/metrics.rs",
+                "type": "file",
+                "size": 15167
+              },
+              {
+                "name": "mod.rs",
+                "path": "src/utils/mod.rs",
+                "type": "file",
+                "size": 164
+              },
+              {
+                "name": "sanitize.rs",
+                "path": "src/utils/sanitize.rs",
+                "type": "file",
+                "size": 10008
+              },
+              {
+                "name": "slo.rs",
+                "path": "src/utils/slo.rs",
+                "type": "file",
+                "size": 5494
+              },
+              {
+                "name": "string.rs",
+                "path": "src/utils/string.rs",
+                "type": "file",
+                "size": 1581
+              },
+              {
+                "name": "telemetry.rs",
+                "path": "src/utils/telemetry.rs",
+                "type": "file",
+                "size": 15031
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "tests",
+        "path": "tests",
+        "type": "directory",
+        "size": 89452,
+        "children": [
+          {
+            "name": "cli_smoke.rs",
+            "path": "tests/cli_smoke.rs",
+            "type": "file",
+            "size": 9045
+          },
+          {
+            "name": "e2e.rs",
+            "path": "tests/e2e.rs",
+            "type": "file",
+            "size": 30086
+          },
+          {
+            "name": "integration.rs",
+            "path": "tests/integration.rs",
+            "type": "file",
+            "size": 46691
+          },
+          {
+            "name": "no_byte_slices.rs",
+            "path": "tests/no_byte_slices.rs",
+            "type": "file",
+            "size": 2209
+          },
+          {
+            "name": "e2e",
+            "path": "tests/e2e",
+            "type": "directory",
+            "size": 1421,
+            "children": [
+              {
+                "name": "docker-compose.yml",
+                "path": "tests/e2e/docker-compose.yml",
+                "type": "file",
+                "size": 1421
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

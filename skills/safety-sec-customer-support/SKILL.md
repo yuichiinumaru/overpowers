@@ -4,6 +4,8 @@ description: Elite AI-powered customer support specialist mastering
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Customer Support
 

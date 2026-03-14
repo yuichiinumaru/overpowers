@@ -1,0 +1,13 @@
+---
+description: Fetch and format real-time news from Chinese platforms.
+---
+
+# NewsNow Reader Workflow
+
+Standard procedure for real-time news aggregation.
+
+1. **Select Source**: Choose a target platform (e.g., `weibo`, `wallstreetcn`).
+2. **Fetch**: Execute `python scripts/fetch_news.py <source> [count]`.
+3. **Review**: Inspect the raw JSON output for data quality.
+4. **Format**: Execute `python scripts/format_news.py <file.json> [style]`.
+5. **Output**: Present the formatted results to the user or save to a file.

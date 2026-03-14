@@ -1,9 +1,11 @@
 ---
 name: docs-writer
-description: ''
+description: '`docs-writer` skill instructions'
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # `docs-writer` skill instructions
 

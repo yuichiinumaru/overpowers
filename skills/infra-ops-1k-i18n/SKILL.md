@@ -1,9 +1,12 @@
 ---
 name: 1k-i18n
-description: Internationalization — translations (ETranslations, useIntl, formatMessage) and locale management. NEVER modify auto-generated translation files.
+description: Internationalization — translations (ETranslations, useIntl, formatMessage)
+  and locale management. NEVER modify auto-generated translation files.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Internationalization (i18n)
 

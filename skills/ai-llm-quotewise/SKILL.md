@@ -1,9 +1,12 @@
 ---
 name: quotewise
-description: Semantic quote search with source transparency. Find quotes by meaning, not keywords.
+description: Semantic quote search with source transparency. Find quotes by meaning,
+  not keywords.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Quotewise MCP
 

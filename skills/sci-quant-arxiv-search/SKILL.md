@@ -1,9 +1,12 @@
 ---
 name: arxiv-search
-description: Search arXiv preprint repository for papers in physics, mathematics, computer science, quantitative biology, and related fields.
+description: Search arXiv preprint repository for papers in physics, mathematics,
+  computer science, quantitative biology, and related fields.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # arXiv Search Skill
 

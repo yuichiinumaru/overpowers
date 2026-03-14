@@ -1,11 +1,13 @@
 ---
 name: performance-benchmarking
-description: ''
+description: Performance Benchmarking Skill
 tags:
 - general
 - tool
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Performance Benchmarking Skill
 

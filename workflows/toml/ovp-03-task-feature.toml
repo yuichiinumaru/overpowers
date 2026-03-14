@@ -9,19 +9,25 @@ prompt = '''
 
 ## Actions
 
-1. **Read Context**: Analyze the unified SDD dual/triplet: 
+1. **Context Initialization (Explicit Memory Read)**: 
+   - Read `.agents/continuity-<agent-name>.md` and check `.agents/memories/` to ensure the task sequence is consistent with other parallel work.
+
+2. **Read Context**: Analyze the unified SDD dual/triplet: 
    - `docs/tasks/nnnn-type-subtype-[name]-feature-plan.md`
    - `docs/tasks/nnnn-type-subtype-[name]-technical-design.md`
 
-2. **Breakdown**: Decompose the feature into a detailed, granular, and sequential checklist of sub-tasks for actual implementation. Identify tasks that can be done in parallel (`01-9`) vs sequence blockers (`0`).
+3. **Breakdown**: Decompose the feature into a detailed, granular, and sequential checklist of sub-tasks for actual implementation. Identify tasks that can be done in parallel (`01-9`) vs sequence blockers (`0`).
 
-3. **Create Master Task**: 
+4. **Create Master Task**: 
    - Generate `docs/tasks/nnnn-type-subtype-[name].md`.
    - Embed links or references to the plan and design docs inside the master task.
-   - Populate the file with the sub-tasks checklist mapped out in step 2.
+   - Populate the file with the sub-tasks checklist mapped out in step 3.
 
-4. **Update Status**: 
+5. **Update Status**: 
    - Find this master task in `docs/tasklist.md` (or append it if missing).
    - Mark its status as `[/]` (In Progress).
    - **Crucial**: Reinforce the Jules constitution that Jules Agents NEVER mutate `docs/tasklist.md`.
+
+6. **Memory Synchronization (Explicit Memory Update)**: 
+   - Update the Session Ledger (`.agents/continuity-<agent-name>.md`) to reflect the new active task and implementation plan.
 '''

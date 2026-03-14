@@ -1,9 +1,11 @@
 ---
 name: claude-md-enhancer
-description: ''
+description: claude-md-enhancer
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # claude-md-enhancer
 

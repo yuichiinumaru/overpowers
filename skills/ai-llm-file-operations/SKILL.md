@@ -1,9 +1,13 @@
 ---
 name: file-operations
-description: Analyze files and get detailed metadata including size, line counts, modification times, and content statistics. Use when users request file information, statistics, or analysis without modifying files.
+description: Analyze files and get detailed metadata including size, line counts,
+  modification times, and content statistics. Use when users request file information,
+  statistics, or analysis without modifying files.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # File Operations
 

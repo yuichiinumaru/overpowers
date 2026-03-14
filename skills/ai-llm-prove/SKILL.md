@@ -4,6 +4,8 @@ description: Formal theorem proving with research, testing, and verification pha
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # /prove - Machine-Verified Proofs (5-Phase Workflow)
 

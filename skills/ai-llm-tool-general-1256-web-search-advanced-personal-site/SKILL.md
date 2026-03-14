@@ -1,6 +1,16 @@
 ---
 name: tool-general-1256-web-search-advanced-personal-site
-description: "Search personal websites and blogs using Exa advanced search. Full filter support for finding individual perspectives, portfolios, and personal blogs. Use when searching for personal sites, blog posts, or portfolio websites."
+description: Search personal websites and blogs using Exa advanced search. Full filter
+  support for finding individual perspectives, portfolios, and personal blogs. Use
+  when searching for personal sites, blog posts, or portfolio websites.
+version: 1.0.0
+category: general
+tags:
+- '1256'
+- advanced
+- general
+- personal
+- search
 ---
 
 # Web Search Advanced - Personal Site Category

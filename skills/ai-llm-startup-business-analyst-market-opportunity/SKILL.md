@@ -4,6 +4,8 @@ description: Generate comprehensive market opportunity analysis with TAM/SAM/SOM
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Market Opportunity Analysis
 

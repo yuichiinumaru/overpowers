@@ -92,6 +92,7 @@ declare -a CATALOG=(
     # === CLI TOOLS ===
     "semgrep|Semgrep CLI|Semgrep security scanner|cli"
     "vibe-kanban|Vibe Kanban|Visual dashboard for agent tasks|cli"
+    "@googleworkspace/cli|Google Workspace CLI|Google Workspace API & tools|cli"
 )
 
 # =============================================================================
@@ -174,6 +175,8 @@ main() {
             if [[ "${pkg}" == "semgrep" ]] && command -v semgrep >/dev/null 2>&1; then
                 statuses+=("installed")
             elif [[ "${pkg}" == "vibe-kanban" ]] && [[ -d "${REPO_ROOT}/packages/vibe-kanban" ]]; then
+                statuses+=("installed")
+            elif [[ "${pkg}" == "@googleworkspace/cli" ]] && command -v gws >/dev/null 2>&1; then
                 statuses+=("installed")
             else
                 statuses+=("")
@@ -293,6 +296,9 @@ main() {
             elif [[ "${pkg}" == "vibe-kanban" ]]; then
                 bash "${REPO_ROOT}/scripts/setup-vibe-kanban.sh"
                 echo -e "    ${GREEN}[✓]${NC} Installed Vibe Kanban"
+            elif [[ "${pkg}" == "@googleworkspace/cli" ]]; then
+                npm install -g @googleworkspace/cli
+                echo -e "    ${GREEN}[✓]${NC} Installed Google Workspace CLI (gws)"
             fi
         else
             # npm install

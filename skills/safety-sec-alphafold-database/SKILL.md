@@ -1,9 +1,13 @@
 ---
 name: alphafold-database
-description: Access AlphaFold 200M+ AI-predicted protein structures. Retrieve structures by UniProt ID, download PDB/mmCIF files, analyze confidence metrics (pLDDT, PAE), for drug discovery and structural biology.
+description: Access AlphaFold 200M+ AI-predicted protein structures. Retrieve structures
+  by UniProt ID, download PDB/mmCIF files, analyze confidence metrics (pLDDT, PAE),
+  for drug discovery and structural biology.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # AlphaFold Database
 

@@ -1,9 +1,11 @@
 ---
 name: market-sizing-analysis
-description: ''
+description: Market Sizing Analysis
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Market Sizing Analysis
 

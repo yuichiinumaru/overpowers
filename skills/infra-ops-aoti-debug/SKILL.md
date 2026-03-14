@@ -1,9 +1,13 @@
 ---
 name: aoti-debug
-description: Debug AOTInductor (AOTI) errors and crashes. Use when encountering AOTI segfaults, device mismatch errors, constant loading failures, or runtime errors from aot_compile, aot_load, aoti_compile_and_package, or aoti_load_package.
+description: Debug AOTInductor (AOTI) errors and crashes. Use when encountering AOTI
+  segfaults, device mismatch errors, constant loading failures, or runtime errors
+  from aot_compile, aot_load, aoti_compile_and_package, or aoti_load_package.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # AOTI Debugging Guide
 

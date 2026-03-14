@@ -1,9 +1,11 @@
 ---
 name: idor-testing
-description: ''
+description: IDOR Vulnerability Testing
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # IDOR Vulnerability Testing
 

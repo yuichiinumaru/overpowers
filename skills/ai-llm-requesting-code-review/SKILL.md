@@ -1,11 +1,14 @@
 ---
 name: requesting-code-review
-description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
+description: Use when completing tasks, implementing major features, or before merging
+  to verify work meets requirements
 tags:
 - infra
 - ops
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Requesting Code Review
 

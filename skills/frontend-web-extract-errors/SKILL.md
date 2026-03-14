@@ -1,9 +1,11 @@
 ---
 name: extract-errors
-description: ''
+description: Extract Error Codes
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Extract Error Codes
 

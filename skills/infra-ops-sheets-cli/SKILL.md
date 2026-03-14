@@ -1,9 +1,11 @@
 ---
 name: sheets-cli
-description: ''
+description: sheets-cli
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # sheets-cli
 

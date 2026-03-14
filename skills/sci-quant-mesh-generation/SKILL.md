@@ -1,9 +1,13 @@
 ---
 name: mesh-generation
-description: Plan and evaluate mesh generation for numerical simulations. Use when choosing grid resolution, checking aspect ratios/skewness, estimating mesh quality constraints, or planning adaptive mesh refinement for PDE discretization.
+description: Plan and evaluate mesh generation for numerical simulations. Use when
+  choosing grid resolution, checking aspect ratios/skewness, estimating mesh quality
+  constraints, or planning adaptive mesh refinement for PDE discretization.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Mesh Generation
 

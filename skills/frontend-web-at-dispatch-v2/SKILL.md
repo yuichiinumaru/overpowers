@@ -1,9 +1,14 @@
 ---
 name: at-dispatch-v2
-description: Convert PyTorch AT_DISPATCH macros to AT_DISPATCH_V2 format in ATen C++ code. Use when porting AT_DISPATCH_ALL_TYPES_AND*, AT_DISPATCH_FLOATING_TYPES*, or other dispatch macros to the new v2 API. For ATen kernel files, CUDA kernels, and native operator implementations.
+description: Convert PyTorch AT_DISPATCH macros to AT_DISPATCH_V2 format in ATen C++
+  code. Use when porting AT_DISPATCH_ALL_TYPES_AND*, AT_DISPATCH_FLOATING_TYPES*,
+  or other dispatch macros to the new v2 API. For ATen kernel files, CUDA kernels,
+  and native operator implementations.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # AT_DISPATCH to AT_DISPATCH_V2 Converter
 

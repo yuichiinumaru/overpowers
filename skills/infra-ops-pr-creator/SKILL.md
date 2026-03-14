@@ -1,9 +1,11 @@
 ---
 name: pr-creator
-description: ''
+description: Pull Request Creator
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Pull Request Creator
 

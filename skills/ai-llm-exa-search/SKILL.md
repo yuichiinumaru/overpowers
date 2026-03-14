@@ -1,9 +1,12 @@
 ---
 name: exa-search
-description: Semantic search, similar content discovery, and structured research using Exa API
+description: Semantic search, similar content discovery, and structured research using
+  Exa API
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # exa-search
 

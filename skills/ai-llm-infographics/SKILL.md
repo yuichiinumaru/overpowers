@@ -1,9 +1,14 @@
 ---
 name: infographics
-description: Create professional infographics using Nano Banana Pro AI with smart iterative refinement. Uses Gemini 3 Pro for quality review. Integrates research-lookup and web search for accurate data. Supports 10 infographic types, 8 industry styles, and colorblind-safe palettes.
+description: Create professional infographics using Nano Banana Pro AI with smart
+  iterative refinement. Uses Gemini 3 Pro for quality review. Integrates research-lookup
+  and web search for accurate data. Supports 10 infographic types, 8 industry styles,
+  and colorblind-safe palettes.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Infographics
 

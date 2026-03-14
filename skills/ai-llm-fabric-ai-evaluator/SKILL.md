@@ -1,6 +1,8 @@
 ---
 name: fabric-ai-evaluator
-description: A Fabric-based workflow that uses a superior AI model (e.g., o1-preview) to programmatically assess and rate the output performance of other AI models against human baselines.
+description: A Fabric-based workflow that uses a superior AI model (e.g., o1-preview)
+  to programmatically assess and rate the output performance of other AI models against
+  human baselines.
 tags:
 - ai
 - llm
@@ -10,6 +12,7 @@ tools:
   bash: true
   read: true
   write: true
+version: 1.0.0
 ---
 # Fabric AI Evaluator Pattern
 

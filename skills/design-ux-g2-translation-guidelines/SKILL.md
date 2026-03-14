@@ -1,9 +1,13 @@
 ---
 name: g2-translation-guidelines
-description: Guidelines for translating G2 documentation, including terminology consistency, hyperlink adjustments, and file naming conventions for multilingual documentation. Use when need to translate documents.
+description: Guidelines for translating G2 documentation, including terminology consistency,
+  hyperlink adjustments, and file naming conventions for multilingual documentation.
+  Use when need to translate documents.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # G2 Translation Guidelines
 

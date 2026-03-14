@@ -1,8 +1,12 @@
 ---
 name: paper-fetcher
-description: Fetch academic papers from Sci-Hub given a DOI. Automatically downloads PDFs and saves them to research/papers/ with clean filenames. Use when the user provides a DOI or requests a paper from PubMed.
+description: Fetch academic papers from Sci-Hub given a DOI. Automatically downloads
+  PDFs and saves them to research/papers/ with clean filenames. Use when the user
+  provides a DOI or requests a paper from PubMed.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Paper Fetcher
 

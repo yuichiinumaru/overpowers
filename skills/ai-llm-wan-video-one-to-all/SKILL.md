@@ -1,6 +1,7 @@
 ---
 name: wan-video-one-to-all
-description: Generate seamless 1-minute AI videos from a single image without quality degradation using Wan Video One-to-All.
+description: Generate seamless 1-minute AI videos from a single image without quality
+  degradation using Wan Video One-to-All.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Wan Video One-to-All Animation
 

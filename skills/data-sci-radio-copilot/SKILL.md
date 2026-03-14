@@ -1,9 +1,16 @@
 ---
 name: radio-copilot
-description: Predict satellite passes (NOAA APT, METEOR LRPT, ISS) for a configured latitude/longitude and send WhatsApp alerts with manual dish alignment info (AOS/LOS azimuth+elevation, track direction, inclination). Use when setting up or operating a zero-AI pass scheduler/orchestrator for SDR satellite reception, including configuring NORAD IDs, minimum elevation, alert lead time, and optional remote capture/decode hooks (Pi RTL-SDR capture + Jetson SatDump decode).
+description: Predict satellite passes (NOAA APT, METEOR LRPT, ISS) for a configured
+  latitude/longitude and send WhatsApp alerts with manual dish alignment info (AOS/LOS
+  azimuth+elevation, track direction, inclination). Use when setting up or operating
+  a zero-AI pass scheduler/orchestrator for SDR satellite reception, including configuring
+  NORAD IDs, minimum elevation, alert lead time, and optional remote capture/decode
+  hooks (Pi RTL-SDR capture + Jetson SatDump decode).
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # radio-copilot
 

@@ -4,6 +4,8 @@ description: Generate a report about a video
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Video Report
 

@@ -1,9 +1,12 @@
 ---
 name: tmux
-description: Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.
+description: Remote-control tmux sessions for interactive CLIs by sending keystrokes
+  and scraping pane output.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # tmux Skill (OpenClaw)
 

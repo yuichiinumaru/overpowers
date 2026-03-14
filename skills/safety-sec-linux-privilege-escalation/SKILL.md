@@ -1,9 +1,11 @@
 ---
 name: linux-privilege-escalation
-description: ''
+description: Linux Privilege Escalation
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Linux Privilege Escalation
 

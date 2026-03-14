@@ -1,9 +1,14 @@
 ---
 name: data-exploration
-description: Profile and explore datasets to understand their shape, quality, and patterns before analysis. Use when encountering a new dataset, assessing data quality, discovering column distributions, identifying nulls and outliers, or deciding which dimensions to analyze.
+description: Profile and explore datasets to understand their shape, quality, and
+  patterns before analysis. Use when encountering a new dataset, assessing data quality,
+  discovering column distributions, identifying nulls and outliers, or deciding which
+  dimensions to analyze.
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Data Exploration Skill
 

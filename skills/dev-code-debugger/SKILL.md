@@ -4,6 +4,8 @@ description: Debugging specialist for errors, test failures, and unexpected
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Debugger
 

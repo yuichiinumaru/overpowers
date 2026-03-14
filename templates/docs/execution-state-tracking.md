@@ -1,6 +1,6 @@
 # Feature Implementation State tracking
 
-> **Context:** Complementary to the global user session (`continuity.md`), this template tracks the state of specific isolated features, epics, or waves during multi-agent asynchronous workflows.
+> **Context:** Complementary to the global user session (`.agents/continuity-<agent-name>.md`), this template tracks the state of specific isolated features, epics, or waves during multi-agent asynchronous workflows.
 
 ## State Management
 

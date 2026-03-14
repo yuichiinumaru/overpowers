@@ -1,9 +1,12 @@
 ---
 name: pdf-processing
-description: Process and extract information from PDF documents. Use this skill when the user asks to read, analyze, or extract data from PDF files.
+description: Process and extract information from PDF documents. Use this skill when
+  the user asks to read, analyze, or extract data from PDF files.
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # PDF Processing Skill
 

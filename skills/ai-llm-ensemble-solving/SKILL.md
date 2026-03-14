@@ -1,9 +1,13 @@
 ---
 name: ensemble-solving
-description: Generate multiple diverse solutions in parallel and select the best. Use for architecture decisions, code generation with multiple valid approaches, or creative tasks where exploring alternatives improves quality.
+description: Generate multiple diverse solutions in parallel and select the best.
+  Use for architecture decisions, code generation with multiple valid approaches,
+  or creative tasks where exploring alternatives improves quality.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Ensemble Problem Solving
 

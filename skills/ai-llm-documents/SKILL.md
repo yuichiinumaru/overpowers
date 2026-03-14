@@ -1,9 +1,12 @@
 ---
 name: documents
-description: Document processing. USE WHEN document, process file. SkillSearch('documents') for docs.
+description: Document processing. USE WHEN document, process file. SkillSearch('documents')
+  for docs.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Documents
 

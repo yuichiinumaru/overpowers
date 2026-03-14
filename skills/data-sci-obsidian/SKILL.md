@@ -4,6 +4,8 @@ description: Work with Obsidian vaults (plain Markdown notes) and automate via o
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Obsidian
 

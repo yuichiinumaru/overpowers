@@ -54,3 +54,4 @@ mcp/*
 mcp/
 packages/
 .gemini/
+llm_models/

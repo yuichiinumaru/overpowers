@@ -4,6 +4,8 @@ description: Generate or edit images via Gemini 3 Pro Image (Nano Banana Pro).
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Nano Banana Pro (Gemini 3 Pro Image)
 

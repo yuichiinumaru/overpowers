@@ -1,6 +1,16 @@
 ---
 name: tool-general-1253-create-skill-file
-description: "Guides Claude in creating well-structured SKILL.md files following best practices. Provides clear guidelines for naming, structure, and content organization to make skills easy to discover and execute."
+description: Guides Claude in creating well-structured SKILL.md files following best
+  practices. Provides clear guidelines for naming, structure, and content organization
+  to make skills easy to discover and execute.
+version: 1.0.0
+category: general
+tags:
+- '1253'
+- create
+- file
+- general
+- skill
 ---
 
 # Claude Agent Skill 编写规范

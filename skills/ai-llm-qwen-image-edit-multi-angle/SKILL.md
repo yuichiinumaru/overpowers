@@ -1,6 +1,7 @@
 ---
 name: qwen-image-edit-multi-angle
-description: Use Qwen Image Edit to generate consistent multi-angle views and realistic lighting of a subject using a single prompt.
+description: Use Qwen Image Edit to generate consistent multi-angle views and realistic
+  lighting of a subject using a single prompt.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Qwen Image Edit Multi-Angle Generation
 

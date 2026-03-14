@@ -1,6 +1,7 @@
 ---
 name: comfyui-z-image-turbo-inpaint
-description: Set up and use the Z-Image Turbo ControlNet model for rapid, high-quality inpainting within ComfyUI.
+description: Set up and use the Z-Image Turbo ControlNet model for rapid, high-quality
+  inpainting within ComfyUI.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Z-Image Turbo ControlNet Inpaint in ComfyUI
 

@@ -1,9 +1,13 @@
 ---
 name: bun-file-io
-description: Use this when you are working on file operations like reading, writing, scanning, or deleting files. It summarizes the preferred file APIs and patterns used in this repo. It also notes when to use filesystem helpers for directories.
+description: Use this when you are working on file operations like reading, writing,
+  scanning, or deleting files. It summarizes the preferred file APIs and patterns
+  used in this repo. It also notes when to use filesystem helpers for directories.
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Bun File Io
 

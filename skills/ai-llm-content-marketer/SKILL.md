@@ -4,6 +4,8 @@ description: Elite content marketing strategist specializing in AI-powered
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Content Marketer
 

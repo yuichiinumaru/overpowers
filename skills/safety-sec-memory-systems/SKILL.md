@@ -1,9 +1,11 @@
 ---
 name: memory-systems
-description: ''
+description: Memory System Design
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Memory System Design
 

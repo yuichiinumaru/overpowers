@@ -1,9 +1,18 @@
 ---
 name: get-available-resources
-description: This skill should be used at the start of any computationally intensive scientific task to detect and report available system resources (CPU cores, GPUs, memory, disk space). It creates a JSON file with resource information and strategic recommendations that inform computational approach decisions such as whether to use parallel processing (joblib, multiprocessing), out-of-core computing (Dask, Zarr), GPU acceleration (PyTorch, JAX), or memory-efficient strategies. Use this skill before running analyses, training models, processing large datasets, or any task where resource constraints matter.
+description: This skill should be used at the start of any computationally intensive
+  scientific task to detect and report available system resources (CPU cores, GPUs,
+  memory, disk space). It creates a JSON file with resource information and strategic
+  recommendations that inform computational approach decisions such as whether to
+  use parallel processing (joblib, multiprocessing), out-of-core computing (Dask,
+  Zarr), GPU acceleration (PyTorch, JAX), or memory-efficient strategies. Use this
+  skill before running analyses, training models, processing large datasets, or any
+  task where resource constraints matter.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Get Available Resources
 

@@ -1,9 +1,13 @@
 ---
 name: agent-browser
-description: Browse the web for any task — research topics, read articles, interact with web apps, fill forms, take screenshots, extract data, and test web pages. Use whenever a browser would be useful, not just when the user explicitly asks.
+description: Browse the web for any task — research topics, read articles, interact
+  with web apps, fill forms, take screenshots, extract data, and test web pages. Use
+  whenever a browser would be useful, not just when the user explicitly asks.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Browser Automation with agent-browser
 

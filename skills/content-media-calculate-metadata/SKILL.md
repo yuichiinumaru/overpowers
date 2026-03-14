@@ -4,6 +4,8 @@ description: Dynamically set composition duration, dimensions, and props
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Using calculateMetadata
 

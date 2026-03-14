@@ -4,6 +4,8 @@ description: Agent skill for pagerank-analyzer - invoke with $agent-pagerank-ana
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Agent Pagerank Analyzer
 

@@ -1,9 +1,11 @@
 ---
 name: filesystem-context
-description: ''
+description: Filesystem-Based Context Engineering
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Filesystem-Based Context Engineering
 

@@ -1,10 +1,15 @@
 ---
 name: evaluate-rag
-description: >
-  Guides evaluation of RAG pipeline retrieval and generation quality.
-  Use when evaluating a retrieval-augmented generation system, measuring retrieval quality,
-  assessing generation faithfulness or relevance, generating synthetic QA pairs for retrieval
-  testing, or optimizing chunking strategies.
+description: Guides evaluation of RAG pipeline retrieval and generation quality. Use
+  when evaluating a retrieval-augmented generation system, measuring retrieval quality,
+  assessing generation faithfulness or relevance, generating synthetic QA pairs for
+  retrieval testing, or optimizing chunking strategies.
+version: 1.0.0
+category: general
+tags:
+- evaluate
+- general
+- rag
 ---
 
 # Evaluate RAG

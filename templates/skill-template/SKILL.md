@@ -1,11 +1,18 @@
 ---
 name: template-skill
 description: Brief description of what this skill enables and when to use it
+tags:
+  - category-tag
+version: 1.0.0
+category: general
 ---
 
 # Skill Name
 
 One-paragraph summary of the skill's purpose.
+
+> **IMPORTANT**: The `description` field above is **mandatory** and must NOT be empty.
+> Frameworks like Codex CLI and Gemini CLI silently skip skills with empty descriptions.
 
 ## When to Use
 

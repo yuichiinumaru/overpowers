@@ -4,6 +4,8 @@ description: Edit PDFs with natural-language instructions using the nano-pdf CLI
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # nano-pdf
 

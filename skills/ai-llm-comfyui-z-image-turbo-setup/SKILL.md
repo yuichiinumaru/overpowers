@@ -1,6 +1,7 @@
 ---
 name: comfyui-z-image-turbo-setup
-description: Install and run the distilled Z-Image Turbo model in ComfyUI for rapid, hyper-realistic image generation.
+description: Install and run the distilled Z-Image Turbo model in ComfyUI for rapid,
+  hyper-realistic image generation.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Z-Image Turbo Setup and Execution
 

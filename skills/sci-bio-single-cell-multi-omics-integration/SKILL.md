@@ -1,9 +1,12 @@
 ---
 name: single-cell-multi-omics-integration
-description: Quick-reference sheet for OmicVerse tutorials spanning MOFA, GLUE pairing, SIMBA integration, TOSICA transfer, and StaVIA cartography.
+description: Quick-reference sheet for OmicVerse tutorials spanning MOFA, GLUE pairing,
+  SIMBA integration, TOSICA transfer, and StaVIA cartography.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Single-Cell Multi-Omics Tutorials Cheat Sheet
 

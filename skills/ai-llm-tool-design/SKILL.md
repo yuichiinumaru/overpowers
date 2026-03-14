@@ -1,9 +1,11 @@
 ---
 name: tool-design
-description: ''
+description: Tool Design for Agents
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Tool Design for Agents
 

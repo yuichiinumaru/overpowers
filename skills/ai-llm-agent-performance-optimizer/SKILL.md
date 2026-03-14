@@ -4,6 +4,8 @@ description: Agent skill for performance-optimizer - invoke with $agent-performa
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Agent Performance Optimizer
 

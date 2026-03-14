@@ -1,6 +1,12 @@
 ---
 name: llmd-explained-deploying-genai-kubernetes
-description: Guia avançado de arquitetura DevOps e MLOps cobrindo o paradigma LLM-D (Deploying Large Language Models). Explora como transicionar de APIs SaaS (como OpenAI) para a hospedagem de modelos Open-Weights (como Llama 3) em clusters Kubernetes on-premises ou na nuvem corporativa (AWS EKS, GKE). Foco no uso de servidores de inferência como vLLM e implantação co-localizada de aplicações RAG e Vector Databases para minimizar latência, garantir total soberania dos dados e escalabilidade baseada no tráfego de usuários.
+description: Guia avançado de arquitetura DevOps e MLOps cobrindo o paradigma LLM-D
+  (Deploying Large Language Models). Explora como transicionar de APIs SaaS (como
+  OpenAI) para a hospedagem de modelos Open-Weights (como Llama 3) em clusters Kubernetes
+  on-premises ou na nuvem corporativa (AWS EKS, GKE). Foco no uso de servidores de
+  inferência como vLLM e implantação co-localizada de aplicações RAG e Vector Databases
+  para minimizar latência, garantir total soberania dos dados e escalabilidade baseada
+  no tráfego de usuários.
 tags:
 - ai
 - llm
@@ -10,6 +16,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # LLM-D Explained: Deploying GenAI on Kubernetes
 

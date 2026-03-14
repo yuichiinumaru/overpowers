@@ -72,6 +72,23 @@ def main():
     output_dir = sys.argv[2]
     os.makedirs(output_dir, exist_ok=True)
 
+    # --- Cleanup orphaned TOML files (from renamed/deleted .md workflows) ---
+    source_stems = {
+        pathlib.Path(f).stem
+        for f in os.listdir(input_dir)
+        if f.endswith('.md')
+    }
+    orphans_removed = 0
+    for toml_file in list(os.listdir(output_dir)):
+        if toml_file.endswith('.toml'):
+            stem = pathlib.Path(toml_file).stem
+            if stem not in source_stems:
+                os.remove(os.path.join(output_dir, toml_file))
+                print(f"🗑️  Removed orphan: {toml_file}")
+                orphans_removed += 1
+    if orphans_removed:
+        print(f"   Cleaned {orphans_removed} orphaned TOML files.\n")
+
     count = 0
     for file in sorted(os.listdir(input_dir)):
         if file.endswith('.md'):

@@ -1,9 +1,11 @@
 ---
 name: notebooklm
-description: ''
+description: NotebookLM CLI & MCP Expert
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # NotebookLM CLI & MCP Expert
 

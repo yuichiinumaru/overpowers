@@ -1,11 +1,15 @@
 ---
 name: internal-comms
-description: Write internal communications using company formats. Use when writing status reports, leadership updates, company newsletters, FAQs, incident reports, project updates, or any internal communications.
+description: Write internal communications using company formats. Use when writing
+  status reports, leadership updates, company newsletters, FAQs, incident reports,
+  project updates, or any internal communications.
 tags:
 - infra
 - ops
 source: anthropics/skills
 license: Apache-2.0
+version: 1.0.0
+category: general
 ---
 # Internal Communications
 

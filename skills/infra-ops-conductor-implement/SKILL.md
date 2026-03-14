@@ -4,6 +4,8 @@ description: Execute tasks from a track's implementation plan following TDD work
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Implement Track
 

@@ -1,9 +1,11 @@
 ---
 name: cloud-penetration-testing
-description: ''
+description: Cloud Penetration Testing
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Cloud Penetration Testing
 

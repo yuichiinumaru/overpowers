@@ -1,9 +1,12 @@
 ---
 name: youtube-summarizer
-description: Extract transcripts from YouTube videos and generate comprehensive, detailed summaries using intelligent analysis frameworks
+description: Extract transcripts from YouTube videos and generate comprehensive, detailed
+  summaries using intelligent analysis frameworks
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # youtube-summarizer
 

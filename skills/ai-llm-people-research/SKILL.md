@@ -1,9 +1,13 @@
 ---
 name: people-research
-description: People research using Exa search. Finds LinkedIn profiles, professional backgrounds, experts, team members, and public bios across the web. Use when searching for people, finding experts, or looking up professional profiles.
+description: People research using Exa search. Finds LinkedIn profiles, professional
+  backgrounds, experts, team members, and public bios across the web. Use when searching
+  for people, finding experts, or looking up professional profiles.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # People Research
 

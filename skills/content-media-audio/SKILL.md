@@ -1,9 +1,12 @@
 ---
 name: audio
-description: Using audio and sound in Remotion - importing, trimming, volume, speed, pitch
+description: Using audio and sound in Remotion - importing, trimming, volume, speed,
+  pitch
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Using audio in Remotion
 

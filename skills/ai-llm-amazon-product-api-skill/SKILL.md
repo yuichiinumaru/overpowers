@@ -1,9 +1,11 @@
 ---
 name: amazon-product-api-skill
-description: ''
+description: Amazon Product API Skill
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Amazon Product API Skill
 

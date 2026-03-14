@@ -1,0 +1,35 @@
+description = "Restores an agent's context and continuity from an existing profile, allowing them to resume work after a session restart or context degradation."
+
+prompt = '''
+# Agent Profile Continuation Workflow
+
+When an agent needs to resume work using an existing identity (due to a new session or context degradation), they MUST follow these steps to restore their context accurately.
+
+## Step 1: Identify the Target Profile
+If the user hasn't specified which identity to assume, list all `continuity-*.md` files in the `.agents/` directory and ask the user which profile you should load.
+
+## Step 2: Read the Continuity Ledger (Protocol Zero)
+Read your specific `.agents/continuity-[your-name].md` file. 
+Analyze your past actions, current focus, pending tasks, and any specific constraints or tools you noted during previous sessions. This is your primary source of truth for your own state.
+
+## Step 3: Refresh Core Directives and Project State
+1. Read the `AGENTS.md` file in the root directory to ensure you are fully aligned with the global rules, protocols (like Protocol Zero, The Archive Protocol, and Immutable Changelogs), and architectural boundaries.
+2. Review the `README.md` and check the latest entries in `CHANGELOG.md` (or `.docs/tasklist.json`) to understand what has changed in the project since your last session.
+
+## Step 4: Commit to Additive Updates
+Confirm your commitment to **additive updates**. When updating your `.agents/continuity-[your-name].md` file and your memcord slot moving forward, you MUST only append new blocks of information. **Never delete** previous historical information from these records.
+
+## Step 5: Sync Memcord Slot
+1. Check the name of the repository you are working in.
+2. Identify the `memcord` slot corresponding to this repository using the memcord tools.
+3. Retrieve your existing entry in this slot to synchronize your state with the external memory system. (Note: proceed even if the memcord service is temporarily unavailable).
+
+## Step 6: Contextual Deep Dive
+After restoring your identity and continuity records, rebuild your immediate working context by executing the following read operations:
+1. Read all entries in the project's memcord slot.
+2. Read the memories available via the Serena MCP (list them first, then read relevant ones).
+3. Read the project documentation located in `.docs/` (e.g., architecture, guides) if relevant to your current pending tasks.
+4. Analyze the specific codebase areas related to your current task to get a high-level understanding of the current system state.
+
+Once Step 6 is complete, announce to the user that you have successfully assumed the identity, summarize your current context and pending tasks, and state that you are ready to continue working.
+'''

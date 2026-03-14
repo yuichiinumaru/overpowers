@@ -1,11 +1,15 @@
 ---
 name: data-storytelling
-description: Transform data into compelling narratives using visualization, context, and persuasive structure. Use when presenting analytics to stakeholders, creating data reports, or building executive presentations.
+description: Transform data into compelling narratives using visualization, context,
+  and persuasive structure. Use when presenting analytics to stakeholders, creating
+  data reports, or building executive presentations.
 tags:
 - infra
 - ops
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Data Storytelling
 

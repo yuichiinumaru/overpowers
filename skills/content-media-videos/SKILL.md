@@ -4,6 +4,8 @@ description: Embedding videos in Remotion - trimming, volume, speed, looping, pi
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Using videos in Remotion
 

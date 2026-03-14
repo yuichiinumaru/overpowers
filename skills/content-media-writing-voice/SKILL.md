@@ -1,9 +1,12 @@
 ---
 name: writing-voice
-description: Voice and tone rules for all written content. Use when writing prose that should sound human and be suitable for reading aloud.
+description: Voice and tone rules for all written content. Use when writing prose
+  that should sound human and be suitable for reading aloud.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Writing Voice
 

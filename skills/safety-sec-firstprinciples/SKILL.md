@@ -1,9 +1,12 @@
 ---
 name: firstprinciples
-description: First principles analysis. USE WHEN first principles, fundamental, root cause, decompose. SkillSearch('firstprinciples') for docs.
+description: First principles analysis. USE WHEN first principles, fundamental, root
+  cause, decompose. SkillSearch('firstprinciples') for docs.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Firstprinciples
 

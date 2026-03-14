@@ -1,9 +1,11 @@
 ---
 name: dev-browser
-description: ''
+description: Dev Browser Skill
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Dev Browser Skill
 

@@ -4,6 +4,8 @@ description: Integrate Stripe, PayPal, and payment processors. Handles checkout
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Payment Integration
 

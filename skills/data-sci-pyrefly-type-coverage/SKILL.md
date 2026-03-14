@@ -1,9 +1,12 @@
 ---
 name: pyrefly-type-coverage
-description: Migrate a file to use stricter Pyrefly type checking with annotations required for all functions, classes, and attributes.
+description: Migrate a file to use stricter Pyrefly type checking with annotations
+  required for all functions, classes, and attributes.
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Pyrefly Type Coverage Skill
 

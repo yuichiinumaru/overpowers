@@ -4,6 +4,8 @@ description: Importing .srt subtitle files into Remotion using @remotion/caption
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Importing .srt subtitles into Remotion
 

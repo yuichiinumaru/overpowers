@@ -1,9 +1,11 @@
 ---
 name: metasploit-framework
-description: ''
+description: Metasploit Framework
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Metasploit Framework
 

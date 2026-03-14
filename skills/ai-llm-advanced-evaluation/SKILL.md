@@ -1,9 +1,11 @@
 ---
 name: advanced-evaluation
-description: ''
+description: Advanced Evaluation
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Advanced Evaluation
 

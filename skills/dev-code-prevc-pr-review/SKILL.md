@@ -4,6 +4,8 @@ description: Reviews pull requests for quality, completeness, and adherence to s
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # PR Review
 

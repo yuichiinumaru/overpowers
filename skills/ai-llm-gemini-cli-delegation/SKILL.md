@@ -4,6 +4,8 @@ description: Teaches how to delegate tasks to Gemini CLI agents in headless/YOLO
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # 🤖 Gemini CLI Delegation Skill
 

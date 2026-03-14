@@ -4,6 +4,8 @@ description: Problem-solving strategies for second order odes in odes pdes
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Second Order Odes
 

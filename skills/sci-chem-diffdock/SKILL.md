@@ -1,9 +1,13 @@
 ---
 name: diffdock
-description: Diffusion-based molecular docking. Predict protein-ligand binding poses from PDB/SMILES, confidence scores, virtual screening, for structure-based drug design. Not for affinity prediction.
+description: Diffusion-based molecular docking. Predict protein-ligand binding poses
+  from PDB/SMILES, confidence scores, virtual screening, for structure-based drug
+  design. Not for affinity prediction.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # DiffDock: Molecular Docking with Diffusion Models
 

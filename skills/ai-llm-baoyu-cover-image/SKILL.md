@@ -1,9 +1,11 @@
 ---
 name: baoyu-cover-image
-description: ''
+description: Cover Image Generator
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Cover Image Generator
 

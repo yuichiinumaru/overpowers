@@ -1,9 +1,11 @@
 ---
 name: hook-factory-v2
-description: ''
+description: hook-factory-v2
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # hook-factory-v2
 

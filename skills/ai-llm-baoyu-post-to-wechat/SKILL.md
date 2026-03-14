@@ -1,9 +1,11 @@
 ---
 name: baoyu-post-to-wechat
-description: ''
+description: Post to WeChat Official Account
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Post to WeChat Official Account
 

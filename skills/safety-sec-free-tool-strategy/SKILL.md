@@ -1,9 +1,11 @@
 ---
 name: free-tool-strategy
-description: ''
+description: Free Tool Strategy (Engineering as Marketing)
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Free Tool Strategy (Engineering as Marketing)
 

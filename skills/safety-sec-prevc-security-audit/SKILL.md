@@ -4,6 +4,8 @@ description: Audits code for security vulnerabilities
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Security Audit
 

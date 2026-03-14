@@ -17,11 +17,14 @@ Apply the **Overpowers AGENTS.md template** (`templates/rules/AGENTS.md`) to the
 
 ## Execution Flow
 
-1. **Check for existing AGENTS.md** in the project root.
-   - If it does NOT exist, copy `templates/rules/AGENTS.md` as-is to the project root.
-   - If it DOES exist, proceed to step 2.
+1. **Context Initialization (Explicit Memory Read)**: 
+   - Read any existing `.agents/continuity-<agent-name>.md` or `.agents/memories/` to understand the project's current state and if it's already an Overpowers-enabled project.
 
-2. **Merge existing rules with the template.**
+2. **Check for existing AGENTS.md** in the project root.
+   - If it does NOT exist, copy `templates/rules/AGENTS.md` as-is to the project root.
+   - If it DOES exist, proceed to step 3.
+
+3. **Merge existing rules with the template.**
    - Read the existing `AGENTS.md` and the template side by side.
    - Identify sections that are **project-specific** (e.g., project name, description, component table, model preferences).
    - Identify sections that are **universal rules** from the template (archive protocol, changelog protocol, operational laws, engineering standards, VCS guardrails, security boundaries).
@@ -30,12 +33,12 @@ Apply the **Overpowers AGENTS.md template** (`templates/rules/AGENTS.md`) to the
      - If the existing file has an equivalent that is **compatible**, keep the existing version but ensure it covers all points from the template.
      - If the existing file has an equivalent that **conflicts**, **ASK the user** which version should prevail. Present both versions clearly.
 
-3. **Update project-specific sections.**
+4. **Update project-specific sections.**
    - Replace placeholder values like `[PROJECT_NAME]`, toolkit identity, and component table with the actual project information.
    - If the project has a `README.md`, use it to derive project name, description, and tech stack.
    - If information is missing, insert `TODO: [description]` markers and flag them in the summary.
 
-4. **Propagate dependent templates.**
+5. **Propagate dependent templates.**
    - Ensure `docs/tasks/` directory exists.
    - Copy task templates from `templates/tasks/` if they don't already exist:
      - `000-template.md`
@@ -44,15 +47,19 @@ Apply the **Overpowers AGENTS.md template** (`templates/rules/AGENTS.md`) to the
    - Ensure `.agents/` directory exists with subdirectories:
      - `.agents/memories/`
      - `.agents/thoughts/`
-   - Create `continuity.md` in the project root if it doesn't exist.
+   - Create `.agents/continuity-<agent-name>.md` if it doesn't exist.
    - Create `.archive/` directory if it doesn't exist.
 
-5. **Validation.**
+6. **Validation.**
    - Verify no placeholder tokens remain (except intentional TODOs).
    - Verify all referenced directories exist.
    - Verify the AGENTS.md has all 11 sections from the template.
 
-6. **Output a summary** to the user:
+7. **Memory Synchronization (Explicit Memory Update)**: 
+   - Initialize the Session Ledger (`.agents/continuity-<agent-name>.md`) with the project setup details.
+   - Persist the finalized project constitution details to `.agents/memories/` via Serena.
+
+8. **Output a summary** to the user:
    - Sections added, modified, or left unchanged.
    - Any conflicts that were resolved (and how).
    - Any TODOs that need manual attention.

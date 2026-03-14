@@ -2,7 +2,7 @@
 name: edit-guard
 description: Catches common tool errors and injects specific hints for agent self-recovery.
 trigger: PostToolUse
-matcher: (replace_file_content|write_to_file|multi_replace_file_content)
+matcher: (replace|write_file|edit_block)
 ---
 
 # Edit Guard

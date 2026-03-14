@@ -1,9 +1,13 @@
 ---
 name: differentiation-schemes
-description: Select and apply numerical differentiation schemes for PDE/ODE discretization. Use when choosing finite difference/volume/spectral schemes, building stencils, handling boundaries, estimating truncation error, or analyzing dispersion and dissipation.
+description: Select and apply numerical differentiation schemes for PDE/ODE discretization.
+  Use when choosing finite difference/volume/spectral schemes, building stencils,
+  handling boundaries, estimating truncation error, or analyzing dispersion and dissipation.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Differentiation Schemes
 

@@ -1,9 +1,12 @@
 ---
 name: charts
-description: Chart and data visualization patterns for Remotion. Use when creating bar charts, pie charts, histograms, progress bars, or any data-driven animations.
+description: Chart and data visualization patterns for Remotion. Use when creating
+  bar charts, pie charts, histograms, progress bars, or any data-driven animations.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Charts in Remotion
 

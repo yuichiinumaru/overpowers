@@ -1,9 +1,11 @@
 ---
 name: privilege-escalation-methods
-description: ''
+description: Privilege Escalation Methods
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Privilege Escalation Methods
 

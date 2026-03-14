@@ -1,9 +1,14 @@
 ---
 name: baoyu-image-gen
-description: AI image generation with OpenAI, Google and DashScope APIs. Supports text-to-image, reference images, aspect ratios. Sequential by default; parallel generation available on request. Use when user asks to generate, create, or draw images.
+description: AI image generation with OpenAI, Google and DashScope APIs. Supports
+  text-to-image, reference images, aspect ratios. Sequential by default; parallel
+  generation available on request. Use when user asks to generate, create, or draw
+  images.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Image Generation (AI SDK)
 

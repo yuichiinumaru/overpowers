@@ -1,9 +1,11 @@
 ---
 name: gedcom-explorer
-description: ''
+description: GEDCOM Explorer
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # GEDCOM Explorer
 

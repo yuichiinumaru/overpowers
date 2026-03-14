@@ -1,9 +1,12 @@
 ---
 name: issue-triage
-description: Queries and triages open GitHub issues that need attention. Helps identify issues needing milestones, labels, or investigation.
+description: Queries and triages open GitHub issues that need attention. Helps identify
+  issues needing milestones, labels, or investigation.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Issue Triage Skill
 

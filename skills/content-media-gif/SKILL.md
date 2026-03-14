@@ -4,6 +4,8 @@ description: Displaying GIFs, APNG, AVIF and WebP in Remotion
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Using Animated images in Remotion
 

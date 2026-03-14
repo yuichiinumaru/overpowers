@@ -1,9 +1,15 @@
 ---
 name: tooluniverse-drug-research
-description: Generates comprehensive drug research reports with compound disambiguation, evidence grading, and mandatory completeness sections. Covers identity, chemistry, pharmacology, targets, clinical trials, safety, pharmacogenomics, and ADMET properties. Use when users ask about drugs, medications, therapeutics, or need drug profiling, safety assessment, or clinical development research.
+description: Generates comprehensive drug research reports with compound disambiguation,
+  evidence grading, and mandatory completeness sections. Covers identity, chemistry,
+  pharmacology, targets, clinical trials, safety, pharmacogenomics, and ADMET properties.
+  Use when users ask about drugs, medications, therapeutics, or need drug profiling,
+  safety assessment, or clinical development research.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Drug Research Strategy
 

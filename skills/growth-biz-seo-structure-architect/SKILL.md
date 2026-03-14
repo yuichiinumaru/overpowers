@@ -4,6 +4,8 @@ description: Analyzes and optimizes content structure including header
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Seo Structure Architect
 

@@ -1,9 +1,17 @@
 ---
 name: release-note-generation
-description: Toolkit for generating PowerToys release notes from GitHub milestone PRs or commit ranges. Use when asked to create release notes, summarize milestone PRs, generate changelog, prepare release documentation, request Copilot reviews for PRs, update README for a new release, manage PR milestones, or collect PRs between commits/tags. Supports PR collection by milestone or commit range, milestone assignment, grouping by label, summarization with external contributor attribution, and README version bumping.
+description: Toolkit for generating PowerToys release notes from GitHub milestone
+  PRs or commit ranges. Use when asked to create release notes, summarize milestone
+  PRs, generate changelog, prepare release documentation, request Copilot reviews
+  for PRs, update README for a new release, manage PR milestones, or collect PRs between
+  commits/tags. Supports PR collection by milestone or commit range, milestone assignment,
+  grouping by label, summarization with external contributor attribution, and README
+  version bumping.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Release Note Generation Skill
 

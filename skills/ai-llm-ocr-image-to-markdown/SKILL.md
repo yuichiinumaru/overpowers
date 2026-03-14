@@ -1,9 +1,12 @@
 ---
 name: ocr-image-to-markdown
-description: 鉴于本地 OCR 工具的缺失，本技能利用 Agent 的多模态能力来查看图像（PNG, JPG 等）并将内容（文本、表格、逻辑图）转录为格式化的 Markdown。
+description: 鉴于本地 OCR 工具的缺失，本技能利用 Agent 的多模态能力来查看图像（PNG, JPG 等）并将内容（文本、表格、逻辑图）转录为格式化的
+  Markdown。
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # OCR 图像识别转 Markdown
 

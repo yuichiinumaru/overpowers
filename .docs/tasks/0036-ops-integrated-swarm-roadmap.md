@@ -70,7 +70,7 @@ PTY-based Flight Recorder.
 **Priority**: MEDIUM
 **Type**: feature
 ## Objective
-Graph-based continuity.md.
+Graph-based .agents/continuity-<agent-name>.md.
 # Task 0032: Model Fallback System (Feature)
 
 **Status**: [ ]
@@ -131,7 +131,7 @@ The transition from a collection of scripts to an industrial-grade agentic envir
    - *Mechanism*: Advanced Hooks (0023) provide the "nervous system" for task continuation and error recovery. Model Fallback (0032) provides the "energy backup" against rate limits. Containerized Sandbox (0035) provides the "isolated laboratory" for safe execution.
 2. **High-Density Memory & Context (Tasks 0026, 0031, 0028)**: 
    - *Objective*: Solve context degradation and information loss. 
-   - *Mechanism*: Moltbot Memory (0026) introduces vector-search capabilities for long-term project knowledge. Micode Mindmodel (0031) transforms the linear `continuity.md` into a semantic graph. Standardized Memory Lifecycles (0028) ensure every agent action is recorded and retrieved correctly.
+   - *Mechanism*: Moltbot Memory (0026) introduces vector-search capabilities for long-term project knowledge. Micode Mindmodel (0031) transforms the linear `.agents/continuity-<agent-name>.md` into a semantic graph. Standardized Memory Lifecycles (0028) ensure every agent action is recorded and retrieved correctly.
 3. **Cognitive Evolution (Tasks 0024, 0027, 0029)**: 
    - *Objective*: Elevate agent reasoning from reactive to intentional.
    - *Mechanism*: BDI Paradigm (0024) moves agents to goal-oriented states. Skill Decision Trees (0027) guide model selection based on task complexity. Harvested Templates (0029) fill gaps in the orchestrator's persona library.
@@ -272,7 +272,7 @@ To implement the roadmap without human intervention at every step, we must apply
 - **Acceptance Criteria**: [ ] `install.sh` supports all 9 agents. [ ] Conflict policy is enforced via a single central flag.
 
 #### Slice 2: The Neural Knowledge Graph (Tasks 0026, 0031)
-- **Background**: `continuity.md` is too small for v3 scale. We need semantic memory.
+- **Background**: `.agents/continuity-<agent-name>.md` is too small for v3 scale. We need semantic memory.
 - **Implementation**: Initialize `sqlite-vec` in `.agents/memory.db`. Create a script `scripts/sync-mindmodel.py` that parses all `docs/tasks/` and builds a graph of dependencies.
 - **Acceptance Criteria**: [ ] Vector search returns relevant task context. [ ] Mindmodel visualizes the current "War Room" state of the project.
 
@@ -408,7 +408,7 @@ The v3 mission targets specific architectural nodes within the repository. The i
 - **Cons**: Harder to search for unstructured text or logic patterns.
 
 #### Approach 3: The Recursive Synthesizer (Focus on Compression)
-- **Mechanism**: Use a hierarchy of `continuity.md` files (root, directory, sub-directory). Agents summarize their work at each level.
+- **Mechanism**: Use a hierarchy of `.agents/continuity-<agent-name>.md` files (root, directory, sub-directory). Agents summarize their work at each level.
 - **Pros**: Zero external dependencies. Extremely context-efficient.
 - **Cons**: Information loss is inevitable over long durations.
 

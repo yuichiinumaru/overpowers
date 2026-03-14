@@ -1,9 +1,12 @@
 ---
 name: freshrss-i18n
-description: Add, move, or format translation strings in FreshRSS. Use when modifying UI text that needs translation (i18n). Handles all supported languages automatically.
+description: Add, move, or format translation strings in FreshRSS. Use when modifying
+  UI text that needs translation (i18n). Handles all supported languages automatically.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # FreshRSS translation management (i18n)
 

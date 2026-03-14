@@ -40,6 +40,9 @@ export async function buildGraph(sourceDirs: string[], outputPath: string) {
   for (const dir of sourceDirs) {
     const files = await getMarkdownFiles(dir);
     for (const filePath of files) {
+      // Only include continuity-*.md files if we are in the .agents directory
+      if (dir.endsWith('.agents') && !path.basename(filePath).startsWith('continuity')) continue;
+
       const content = await fs.readFile(filePath, 'utf-8');
       
       // Simple regex to extract YAML frontmatter
@@ -74,5 +77,10 @@ export async function buildGraph(sourceDirs: string[], outputPath: string) {
 if (require.main === module) {
   const dataDir = path.join(__dirname, '..', '..', '..');
   const outPath = path.join(__dirname, '..', 'overpowers-graph.json');
-  buildGraph([path.join(dataDir, 'skills'), path.join(dataDir, 'agents'), path.join(dataDir, 'workflows')], outPath);
+  buildGraph([
+    path.join(dataDir, '.agents'), // New location for continuity files
+    path.join(dataDir, 'skills'), 
+    path.join(dataDir, 'agents'), 
+    path.join(dataDir, 'workflows')
+  ], outPath);
 }

@@ -1,6 +1,7 @@
 ---
 name: wan-22-ffgo-video-customization
-description: Use Wan 2.2 with the FFGO LoRA model to customize video content by combining multiple subjects and backgrounds into a single scene.
+description: Use Wan 2.2 with the FFGO LoRA model to customize video content by combining
+  multiple subjects and backgrounds into a single scene.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Wan 2.2 FFGO Video Customization
 

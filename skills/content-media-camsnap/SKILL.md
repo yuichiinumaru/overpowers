@@ -4,6 +4,8 @@ description: Capture frames or clips from RTSP/ONVIF cameras.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # camsnap
 

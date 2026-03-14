@@ -4,6 +4,8 @@ description: Monitors research topics for new papers, conferences, and journals.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # ResearchMonitor
 

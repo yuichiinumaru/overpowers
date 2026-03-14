@@ -1,6 +1,9 @@
 ---
 name: securing-governing-autonomous-agents
-description: Framework e diretrizes abrangentes para garantir a segurança e governança de Agentes Autônomos de IA. Foco na mitigação de riscos críticos como Prompt Injection, Data Exfiltration e execução autônoma sem supervisão (rogue agents). Define a implementação do princípio do menor privilégio e Human-In-The-Loop.
+description: Framework e diretrizes abrangentes para garantir a segurança e governança
+  de Agentes Autônomos de IA. Foco na mitigação de riscos críticos como Prompt Injection,
+  Data Exfiltration e execução autônoma sem supervisão (rogue agents). Define a implementação
+  do princípio do menor privilégio e Human-In-The-Loop.
 tags:
 - safety
 - sec
@@ -9,6 +12,7 @@ color: null
 tools:
   read: true
   write: true
+version: 1.0.0
 ---
 # Securing & Governing Autonomous AI Agents
 

@@ -1,9 +1,14 @@
 ---
 name: kegg-database
-description: Direct REST API access to KEGG (academic use only). Pathway analysis, gene-pathway mapping, metabolic pathways, drug interactions, ID conversion. For Python workflows with multiple databases, prefer bioservices. Use this for direct HTTP/REST work or KEGG-specific control.
+description: Direct REST API access to KEGG (academic use only). Pathway analysis,
+  gene-pathway mapping, metabolic pathways, drug interactions, ID conversion. For
+  Python workflows with multiple databases, prefer bioservices. Use this for direct
+  HTTP/REST work or KEGG-specific control.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # KEGG Database
 

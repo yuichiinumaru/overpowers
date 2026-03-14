@@ -1,6 +1,7 @@
 ---
 name: scail-3d-pose-animation
-description: Implement SCAIL for AI video animation to achieve precise 3D pose control over generated characters.
+description: Implement SCAIL for AI video animation to achieve precise 3D pose control
+  over generated characters.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # SCAIL 3D Pose Control Video Animation
 

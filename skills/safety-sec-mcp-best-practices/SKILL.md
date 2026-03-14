@@ -4,6 +4,8 @@ description: Automation and tasks for mcp-best-practices
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # MCP Server Best Practices
 

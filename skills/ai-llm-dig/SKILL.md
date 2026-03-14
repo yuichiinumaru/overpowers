@@ -1,9 +1,11 @@
 ---
 name: dig
-description: ''
+description: Workflow
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Dig
 

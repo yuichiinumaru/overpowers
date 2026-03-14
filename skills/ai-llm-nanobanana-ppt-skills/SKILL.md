@@ -4,6 +4,8 @@ description: AI-powered PPT generation with document analysis and styled images
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Nanobanana Ppt Skills
 

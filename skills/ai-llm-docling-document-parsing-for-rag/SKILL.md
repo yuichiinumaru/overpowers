@@ -1,6 +1,9 @@
 ---
 name: docling-document-parsing-for-rag
-description: Utiliza a biblioteca open-source Docling da IBM para realizar o parsing de documentos corporativos complexos (PDFs, PPTXs, DOCX, Imagens) em formato Markdown ou JSON estruturado. Essencial para aumentar a precisão de pipelines RAG, preservando a hierarquia de títulos e a estrutura de tabelas que parsers tradicionais destroem.
+description: Utiliza a biblioteca open-source Docling da IBM para realizar o parsing
+  de documentos corporativos complexos (PDFs, PPTXs, DOCX, Imagens) em formato Markdown
+  ou JSON estruturado. Essencial para aumentar a precisão de pipelines RAG, preservando
+  a hierarquia de títulos e a estrutura de tabelas que parsers tradicionais destroem.
 tags:
 - ai
 - llm
@@ -10,6 +13,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Unlock Better RAG & AI Agents with Docling
 

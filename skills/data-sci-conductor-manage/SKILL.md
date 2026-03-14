@@ -4,6 +4,8 @@ description: 'Manage track lifecycle: archive, restore, delete, rename, and clea
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Track Manager
 

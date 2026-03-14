@@ -4,6 +4,8 @@ description: BluOS CLI (blu) for discovery, playback, grouping, and volume.
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # blucli (blu)
 

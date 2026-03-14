@@ -4,6 +4,8 @@ description: Breaks down features into implementable tasks
 tags:
 - general
 - tool
+version: 1.0.0
+category: general
 ---
 # Feature Breakdown
 

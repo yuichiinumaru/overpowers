@@ -1,9 +1,11 @@
 ---
 name: marp-slide
-description: ''
+description: Marp Slide Creator
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Marp Slide Creator
 

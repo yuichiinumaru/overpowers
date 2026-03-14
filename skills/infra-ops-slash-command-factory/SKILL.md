@@ -1,9 +1,12 @@
 ---
 name: slash-command-factory
-description: Methodology for generating custom CLI commands for automation and specialized tasks.
+description: Methodology for generating custom CLI commands for automation and specialized
+  tasks.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # slash-command-factory
 

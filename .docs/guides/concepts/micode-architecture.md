@@ -12,7 +12,7 @@ A structured data representation of the project context, storing:
 - **Relationships**: Graph-based links between entities.
 
 ### Ledger
-A chronological record of all actions, decisions, and outcomes. Similar to the `continuity.md` concept but automated.
+A chronological record of all actions, decisions, and outcomes. Similar to the `.agents/continuity-<agent-name>.md` concept but automated.
 - **Session Ledger**: Tracks current session activity.
 - **Global Ledger**: Tracks cross-session history.
 
@@ -38,6 +38,6 @@ Instead of linear text, context is modeled as a graph, allowing agents to traver
 *   **Ledger Creator**: Maintains the continuity of the session.
 
 ## Integration Value
-While Micode is TypeScript-based, its *concepts* are valuable for our `000_ceo_orchestrator` and `continuity.md` protocols.
-- **Adoption**: We have adopted the "Ledger" concept in our `continuity.md`.
+While Micode is TypeScript-based, its *concepts* are valuable for our `000_ceo_orchestrator` and `.agents/continuity-<agent-name>.md` protocols.
+- **Adoption**: We have adopted the "Ledger" concept in our `.agents/continuity-<agent-name>.md`.
 - **Future**: Consider implementing a "Mindmodel" MCP server for structured context.

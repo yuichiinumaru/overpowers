@@ -1,9 +1,13 @@
 ---
 name: labarchive-integration
-description: Electronic lab notebook API integration. Access notebooks, manage entries/attachments, backup notebooks, integrate with Protocols.io/Jupyter/REDCap, for programmatic ELN workflows.
+description: Electronic lab notebook API integration. Access notebooks, manage entries/attachments,
+  backup notebooks, integrate with Protocols.io/Jupyter/REDCap, for programmatic ELN
+  workflows.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # LabArchives Integration
 

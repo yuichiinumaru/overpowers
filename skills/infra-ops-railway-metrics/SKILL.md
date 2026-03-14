@@ -1,9 +1,11 @@
 ---
 name: railway-metrics
-description: ''
+description: Railway Service Metrics
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Railway Service Metrics
 

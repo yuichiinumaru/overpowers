@@ -1,0 +1,39 @@
+---
+description: Implement and run the MAKER (Massively Decomposed Agentic Processes) zero-error loop for complex tasks.
+tags: [workflow, maker, orchestration, reliable-ai]
+---
+
+# MAKER Zero-Error Pipeline
+
+This workflow implements the theoretical model proposed in the paper *Solving a Million-Step LLM Task with Zero Errors*.
+Use this for mission-critical tasks where standard monolithic LLM agents fail due to context confusion or cascading errors (`1%` step error rate leading to `100%` pipeline failure).
+
+## Prerequisites
+- The task must be decomposable into discrete steps.
+- The `ai-llm-maker-red-flag-validator` skill is available.
+- The `ai-llm-maker-consensus-voter` skill is available.
+- The `ai-llm-maker-micro-delegate` skill is available.
+
+## Workflow Execution Steps
+
+### 1. Task Decomposition & State Initialization
+Break the main goal into $S$ sequential or logical steps. Initialise a `State` object that will be mutated over time.
+Set $k_{min} = 3$ (minimum votes) and $k = 3$ (required lead).
+
+### 2. The MAKER Loop
+For each step $i$ in the task:
+
+**A. Independent Sampling:**
+Fire exactly $N$ parallel instances of `maker-micro-delegate`. Pass only the minimal `State` and the specific instruction for step $i$. *Do not provide previous history unless strictly necessary for step $i$*. Set temperature to `0.5` for diverse sampling.
+
+**B. Red Flag Validation:**
+Collect the $N$ responses and pass them through `maker-red-flag-validator`.
+- Discard any response that throws a format error or exceeds length thresholds.
+
+**C. First-to-ahead-by-K Consensus:**
+Pass the remaining valid responses to `maker-consensus-voter`.
+- If `status == "DECIDED"`: Apply the `winner` action to the `State`. Proceed to step $i+1$.
+- If `status == "UNDECIDED"`: The consensus threshold was not reached. Return to phase A to sample more `maker-micro-delegate` instances and add their votes to the pool.
+
+### 3. Loop Completion
+Once all $S$ steps have reached consensus, the task is considered complete with a theoretical error rate approaching zero.

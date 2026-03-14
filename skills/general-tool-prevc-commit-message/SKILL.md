@@ -4,6 +4,8 @@ description: Generates conventional commit messages following project convention
 tags:
 - general
 - tool
+version: 1.0.0
+category: general
 ---
 # Commit Message
 

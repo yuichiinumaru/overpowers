@@ -1,9 +1,12 @@
 ---
 name: analyze-with-file
-description: Interactive collaborative analysis with documented discussions, inline exploration, and evolving understanding. Serial execution with no agent delegation.
+description: Interactive collaborative analysis with documented discussions, inline
+  exploration, and evolving understanding. Serial execution with no agent delegation.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Codex Analyze-With-File Prompt
 

@@ -38,5 +38,5 @@ Automate the "DELEGUE!" protocol by transforming a human-readable task and its t
    - If approved, launch the command inside a terminal block formatted as `command > .agents/thoughts/jules-[task-number]-output.md &`.
 
 5. **Update Ledger.**
-   - Log the dispatch event in `continuity.md` and the relevant task file.
+   - Log the dispatch event in `.agents/continuity-<agent-name>.md` and the relevant task file.
 '''

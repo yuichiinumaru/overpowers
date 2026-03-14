@@ -4,6 +4,8 @@ description: AI-powered web search, research, and reasoning via Perplexity
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Perplexity AI Search
 

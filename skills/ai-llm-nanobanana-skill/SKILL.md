@@ -1,9 +1,11 @@
 ---
 name: nanobanana-skill
-description: ''
+description: Nanobanana Image Generation Skill
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Nanobanana Image Generation Skill
 

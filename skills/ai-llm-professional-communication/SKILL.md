@@ -1,11 +1,16 @@
 ---
 name: professional-communication
-description: Guide technical communication for software developers. Covers email structure, team messaging etiquette, meeting agendas, and adapting messages for technical vs non-technical audiences. Use when drafting professional messages, preparing meeting communications, or improving written communication.
+description: Guide technical communication for software developers. Covers email structure,
+  team messaging etiquette, meeting agendas, and adapting messages for technical vs
+  non-technical audiences. Use when drafting professional messages, preparing meeting
+  communications, or improving written communication.
 tags:
 - infra
 - ops
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Professional Communication
 

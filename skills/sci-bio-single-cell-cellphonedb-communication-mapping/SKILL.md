@@ -1,9 +1,12 @@
 ---
 name: single-cell-cellphonedb-communication-mapping
-description: Run omicverse's CellPhoneDB v5 wrapper on annotated single-cell data to infer ligand-receptor networks and produce CellChat-style visualisations.
+description: Run omicverse's CellPhoneDB v5 wrapper on annotated single-cell data
+  to infer ligand-receptor networks and produce CellChat-style visualisations.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Single-cell CellPhoneDB communication mapping
 

@@ -1,9 +1,11 @@
 ---
 name: active-directory-attacks
-description: ''
+description: Active Directory Attacks
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Active Directory Attacks
 

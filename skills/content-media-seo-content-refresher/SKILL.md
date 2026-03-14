@@ -4,6 +4,8 @@ description: Identifies outdated elements in provided content and suggests
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Seo Content Refresher
 

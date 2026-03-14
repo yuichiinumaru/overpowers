@@ -1,9 +1,14 @@
 ---
 name: content-creation
-description: Draft marketing content across channels — blog posts, social media, email newsletters, landing pages, press releases, and case studies. Use when writing any marketing content, when you need channel-specific formatting, SEO-optimized copy, headline options, or calls to action.
+description: Draft marketing content across channels — blog posts, social media, email
+  newsletters, landing pages, press releases, and case studies. Use when writing any
+  marketing content, when you need channel-specific formatting, SEO-optimized copy,
+  headline options, or calls to action.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Content Creation Skill
 

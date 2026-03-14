@@ -4,6 +4,8 @@ description: 使用实验性的产出物工作流启动一个新的 OpenSpec 变
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Openspec New Change
 

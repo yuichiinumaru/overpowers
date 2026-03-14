@@ -1,9 +1,15 @@
 ---
 name: interpreting-culture-index
-description: Use when interpreting Culture Index surveys, CI profiles, behavioral assessments, or personality data. Supports individual interpretation, team composition (gas/brake/glue), burnout detection, profile comparison, hiring profiles, manager coaching, interview transcript analysis for trait prediction, candidate debrief, onboarding planning, and conflict mediation. Handles PDF vision or JSON input.
+description: Use when interpreting Culture Index surveys, CI profiles, behavioral
+  assessments, or personality data. Supports individual interpretation, team composition
+  (gas/brake/glue), burnout detection, profile comparison, hiring profiles, manager
+  coaching, interview transcript analysis for trait prediction, candidate debrief,
+  onboarding planning, and conflict mediation. Handles PDF vision or JSON input.
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Interpreting Culture Index
 

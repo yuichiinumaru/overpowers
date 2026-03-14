@@ -1,8 +1,11 @@
 ---
 name: searxng
-description: Privacy-first web search via local SearXNG instance. Google-free meta-search using DuckDuckGo, Brave, Qwant, Startpage, and more. Use for any web search query.
+description: Privacy-first web search via local SearXNG instance. Google-free meta-search
+  using DuckDuckGo, Brave, Qwant, Startpage, and more. Use for any web search query.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # SearXNG - Private Web Search
 

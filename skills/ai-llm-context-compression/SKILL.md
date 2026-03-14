@@ -1,9 +1,11 @@
 ---
 name: context-compression
-description: ''
+description: Context Compression Strategies
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Context Compression Strategies
 

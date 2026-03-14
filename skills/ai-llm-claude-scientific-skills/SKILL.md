@@ -4,6 +4,8 @@ description: Scientific research and analysis skills
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Claude Scientific Skills
 

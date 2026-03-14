@@ -1,9 +1,11 @@
 ---
 name: file-path-traversal
-description: ''
+description: File Path Traversal Testing
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # File Path Traversal Testing
 

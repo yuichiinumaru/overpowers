@@ -1,6 +1,7 @@
 ---
 name: flux-2-comfyui-native-setup
-description: Install and run the newly released Flux 2 model natively within ComfyUI for high-quality image generation.
+description: Install and run the newly released Flux 2 model natively within ComfyUI
+  for high-quality image generation.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Flux 2 Native Setup in ComfyUI
 

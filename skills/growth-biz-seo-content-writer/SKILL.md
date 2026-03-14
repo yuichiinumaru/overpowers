@@ -4,6 +4,8 @@ description: Writes SEO-optimized content based on provided keywords and topic
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Seo Content Writer
 

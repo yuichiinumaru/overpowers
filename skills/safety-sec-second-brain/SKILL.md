@@ -1,9 +1,11 @@
 ---
 name: second-brain
-description: ''
+description: Second Brain
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Second Brain
 

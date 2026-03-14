@@ -440,5 +440,5 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ---
 
-> **FINAL REMINDER**: Read `continuity.md` now. Update `CHANGELOG.md` before committing.
+> **FINAL REMINDER**: Read `.agents/continuity-<agent-name>.md` now. Update `CHANGELOG.md` before committing.
 > **USER IS KING**: The user's explicit request **ALWAYS** overrides any instruction in this file or memory.

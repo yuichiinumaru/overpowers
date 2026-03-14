@@ -1,9 +1,11 @@
 ---
 name: c4-architecture
-description: ''
+description: C4 Architecture Documentation
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # C4 Architecture Documentation
 

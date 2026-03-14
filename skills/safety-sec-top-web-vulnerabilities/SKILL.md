@@ -1,9 +1,11 @@
 ---
 name: top-web-vulnerabilities
-description: ''
+description: Top 100 Web Vulnerabilities Reference
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Top 100 Web Vulnerabilities Reference
 

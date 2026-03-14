@@ -1,9 +1,12 @@
 ---
 name: cancel
-description: Cancel any active OMC mode (autopilot, ralph, ultrawork, ecomode, ultraqa, swarm, ultrapilot, pipeline, team)
+description: Cancel any active OMC mode (autopilot, ralph, ultrawork, ecomode, ultraqa,
+  swarm, ultrapilot, pipeline, team)
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Cancel Skill
 

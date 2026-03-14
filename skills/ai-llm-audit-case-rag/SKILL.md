@@ -1,9 +1,11 @@
 ---
 name: audit-case-rag
-description: ''
+description: audit-case-rag
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # audit-case-rag
 

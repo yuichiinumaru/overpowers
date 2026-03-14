@@ -4,6 +4,8 @@ description: Generates comprehensive tests for code
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Test Generation
 

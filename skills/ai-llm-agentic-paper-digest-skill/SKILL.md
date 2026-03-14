@@ -1,9 +1,13 @@
 ---
 name: agentic-paper-digest-skill
-description: Fetches and summarizes recent arXiv and Hugging Face papers with Agentic Paper Digest. Use when the user wants a paper digest, a JSON feed of recent papers, or to run the arXiv/HF pipeline.
+description: Fetches and summarizes recent arXiv and Hugging Face papers with Agentic
+  Paper Digest. Use when the user wants a paper digest, a JSON feed of recent papers,
+  or to run the arXiv/HF pipeline.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Agentic Paper Digest
 

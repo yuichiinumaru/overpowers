@@ -1,9 +1,13 @@
 ---
 name: deployment-pipeline-design
-description: Design multi-stage CI/CD pipelines with approval gates, security checks, and deployment orchestration. Use when architecting deployment workflows, setting up continuous delivery, or implementing GitOps practices.
+description: Design multi-stage CI/CD pipelines with approval gates, security checks,
+  and deployment orchestration. Use when architecting deployment workflows, setting
+  up continuous delivery, or implementing GitOps practices.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Deployment Pipeline Design
 

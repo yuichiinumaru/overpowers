@@ -1,9 +1,12 @@
 ---
 name: payment-processing
-description: Stripe, PayPal, PCI compliance, and billing automation. Use when implementing payment systems, managing subscriptions, or ensuring financial security compliance.
+description: Stripe, PayPal, PCI compliance, and billing automation. Use when implementing
+  payment systems, managing subscriptions, or ensuring financial security compliance.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Payment Processing
 

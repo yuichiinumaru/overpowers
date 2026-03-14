@@ -1,9 +1,11 @@
 ---
 name: context-optimization
-description: ''
+description: Context Optimization Techniques
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Context Optimization Techniques
 

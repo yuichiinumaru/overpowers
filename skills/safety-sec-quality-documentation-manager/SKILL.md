@@ -1,9 +1,15 @@
 ---
 name: quality-documentation-manager
-description: Senior Quality Documentation Manager for comprehensive documentation control and regulatory document review. Provides document management system design, change control, configuration management, and regulatory documentation oversight. Use for document control system implementation, regulatory document review, change management, and documentation compliance verification.
+description: Senior Quality Documentation Manager for comprehensive documentation
+  control and regulatory document review. Provides document management system design,
+  change control, configuration management, and regulatory documentation oversight.
+  Use for document control system implementation, regulatory document review, change
+  management, and documentation compliance verification.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Senior Quality Documentation Manager
 

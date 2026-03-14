@@ -1,9 +1,11 @@
 ---
 name: sql-injection-testing
-description: ''
+description: SQL Injection Testing
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # SQL Injection Testing
 

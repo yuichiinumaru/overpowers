@@ -1,9 +1,11 @@
 ---
 name: dcf-valuation
-description: ''
+description: DCF Valuation Skill
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # DCF Valuation Skill
 

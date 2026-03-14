@@ -1,9 +1,14 @@
 ---
 name: reasoningbank-agentdb
-description: Implement ReasoningBank adaptive learning with AgentDB's 150x faster vector database. Includes trajectory tracking, verdict judgment, memory distillation, and pattern recognition. Use when building self-learning agents, optimizing decision-making, or implementing experience replay systems.
+description: Implement ReasoningBank adaptive learning with AgentDB's 150x faster
+  vector database. Includes trajectory tracking, verdict judgment, memory distillation,
+  and pattern recognition. Use when building self-learning agents, optimizing decision-making,
+  or implementing experience replay systems.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # ReasoningBank with AgentDB
 

@@ -1,9 +1,12 @@
 ---
 name: ab-test-setup
-description: Structured guide for setting up A/B tests with mandatory gates for hypothesis, metrics, and execution readiness.
+description: Structured guide for setting up A/B tests with mandatory gates for hypothesis,
+  metrics, and execution readiness.
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # A/B Test Setup
 

@@ -1,6 +1,7 @@
 ---
 name: fabric-raycast-integration
-description: Integrates Fabric commands directly into Raycast for rapid, unified access to AI scripts and workflows from the macOS Spotlight alternative.
+description: Integrates Fabric commands directly into Raycast for rapid, unified access
+  to AI scripts and workflows from the macOS Spotlight alternative.
 tags:
 - infra
 - ops
@@ -9,6 +10,7 @@ color: null
 tools:
   bash: true
   read: true
+version: 1.0.0
 ---
 # Fabric Integration with Raycast
 

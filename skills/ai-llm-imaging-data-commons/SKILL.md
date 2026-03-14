@@ -1,9 +1,14 @@
 ---
 name: imaging-data-commons
-description: Query and download public cancer imaging data from NCI Imaging Data Commons using idc-index. Use for accessing large-scale radiology (CT, MR, PET) and pathology datasets for AI training or research. No authentication required. Query by metadata, visualize in browser, check licenses.
+description: Query and download public cancer imaging data from NCI Imaging Data Commons
+  using idc-index. Use for accessing large-scale radiology (CT, MR, PET) and pathology
+  datasets for AI training or research. No authentication required. Query by metadata,
+  visualize in browser, check licenses.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Imaging Data Commons
 

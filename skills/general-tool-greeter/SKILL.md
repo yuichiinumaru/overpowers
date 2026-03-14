@@ -4,6 +4,8 @@ description: A friendly greeter skill
 tags:
 - general
 - tool
+version: 1.0.0
+category: general
 ---
 # Greeter
 

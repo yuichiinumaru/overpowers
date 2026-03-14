@@ -9,8 +9,8 @@ import json
 from pathlib import Path
 from collections import defaultdict
 
-OVERPOWERS_ROOT = Path("/home/sephiroth/.config/opencode/Overpowers")
-DOCS_DIR = OVERPOWERS_ROOT / "docs"
+OVERPOWERS_ROOT = Path(__file__).resolve().parents[2]
+DOCS_DIR = OVERPOWERS_ROOT / ".docs"
 
 def scan_agents():
     """Scan all agents in agents/ directory."""
@@ -320,6 +320,48 @@ def generate_inventory_md():
     
     return md
 
+def update_readme_counts():
+    """Update counts in README.md based on actual directory contents."""
+    import re
+    readme_path = OVERPOWERS_ROOT / "README.md"
+    if not readme_path.exists():
+        return
+
+    content = readme_path.read_text()
+    original = content
+
+    # Count actual assets
+    agents_dir = OVERPOWERS_ROOT / "agents"
+    skills_dir = OVERPOWERS_ROOT / "skills"
+    workflows_dir = OVERPOWERS_ROOT / "workflows"
+    hooks_dir = OVERPOWERS_ROOT / "hooks"
+    scripts_dir = OVERPOWERS_ROOT / "scripts"
+
+    n_agents = len(list(agents_dir.glob("*.md"))) if agents_dir.exists() else 0
+    n_skills = sum(1 for d in skills_dir.iterdir() if d.is_dir() and (d / "SKILL.md").exists()) if skills_dir.exists() else 0
+    n_workflows = len(list(workflows_dir.glob("*.md"))) if workflows_dir.exists() else 0
+    n_hooks = len(list(hooks_dir.glob("*.md"))) if hooks_dir.exists() else 0
+    n_scripts = sum(1 for f in scripts_dir.rglob("*") if f.is_file() and f.suffix in ('.sh', '.py')) if scripts_dir.exists() else 0
+
+    # Replace counts in README — match patterns like "475+ specialized AI agents"
+    replacements = [
+        (r'\d+\+?\s+specialized AI agents', f'{n_agents}+ specialized AI agents'),
+        (r'\d+\+?\s+skills \(skill-name/SKILL\.md\)', f'{n_skills}+ skills (skill-name/SKILL.md)'),
+        (r'\d+\+?\s+process guides / commands', f'{n_workflows}+ process guides / commands'),
+        (r'\d+\s+notification integrations', f'{n_hooks} notification integrations'),
+        (r'\d+\+?\s+DevOps/automation helpers', f'{n_scripts}+ DevOps/automation helpers'),
+    ]
+
+    for pattern, replacement in replacements:
+        content = re.sub(pattern, replacement, content)
+
+    if content != original:
+        readme_path.write_text(content)
+        print(f"📝 Updated README.md counts: agents={n_agents}, skills={n_skills}, workflows={n_workflows}, hooks={n_hooks}, scripts={n_scripts}")
+    else:
+        print("📝 README.md counts already up to date.")
+
+
 def main():
     # Ensure docs directory exists
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
@@ -330,6 +372,9 @@ def main():
     inventory_file.write_text(inventory_md)
     print(f"✅ Generated {inventory_file}")
     print(f"   Size: {len(inventory_md)} bytes")
+
+    # Auto-update README.md counts
+    update_readme_counts()
 
 if __name__ == "__main__":
     main()

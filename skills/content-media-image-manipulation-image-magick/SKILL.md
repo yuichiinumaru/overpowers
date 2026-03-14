@@ -1,9 +1,13 @@
 ---
 name: image-manipulation-image-magick
-description: Process and manipulate images using ImageMagick. Supports resizing, format conversion, batch processing, and retrieving image metadata. Use when working with images, creating thumbnails, resizing wallpapers, or performing batch image operations.
+description: Process and manipulate images using ImageMagick. Supports resizing, format
+  conversion, batch processing, and retrieving image metadata. Use when working with
+  images, creating thumbnails, resizing wallpapers, or performing batch image operations.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Image Manipulation with ImageMagick
 

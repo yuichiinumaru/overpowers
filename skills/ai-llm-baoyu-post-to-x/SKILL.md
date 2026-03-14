@@ -1,9 +1,11 @@
 ---
 name: baoyu-post-to-x
-description: ''
+description: Post to X (Twitter)
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Post to X (Twitter)
 

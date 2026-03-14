@@ -1,9 +1,12 @@
 ---
 name: flow
-description: Use when you need to run Flow type checking, or when seeing Flow type errors in React code.
+description: Use when you need to run Flow type checking, or when seeing Flow type
+  errors in React code.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Flow Type Checking
 

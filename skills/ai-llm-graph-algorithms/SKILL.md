@@ -4,6 +4,8 @@ description: Problem-solving strategies for graph algorithms in graph number the
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Graph Algorithms
 

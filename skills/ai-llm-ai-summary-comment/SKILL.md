@@ -1,9 +1,15 @@
 ---
 name: ai-summary-comment
-description: Posts or updates automated progress comments on GitHub PRs. Use after completing any PR agent phase (pre-flight, tests, gate, fix, report). Triggers on 'post comment to PR', 'update PR progress', 'comment on PR with results', 'post pre-flight comment'. Creates single aggregated review comment with collapsible sections per commit.
+description: Posts or updates automated progress comments on GitHub PRs. Use after
+  completing any PR agent phase (pre-flight, tests, gate, fix, report). Triggers on
+  'post comment to PR', 'update PR progress', 'comment on PR with results', 'post
+  pre-flight comment'. Creates single aggregated review comment with collapsible sections
+  per commit.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # PR Comment Skill
 

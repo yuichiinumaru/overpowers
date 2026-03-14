@@ -1,9 +1,12 @@
 ---
 name: gemini-cli-administration
-description: Teaches how to administer Gemini CLI environments (MCPs, extensions, settings)
+description: Teaches how to administer Gemini CLI environments (MCPs, extensions,
+  settings)
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # ⚙️ Gemini CLI Administration Skill
 

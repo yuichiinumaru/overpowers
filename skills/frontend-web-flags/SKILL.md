@@ -1,9 +1,12 @@
 ---
 name: flags
-description: Use when you need to check feature flag states, compare channels, or debug why a feature behaves differently across release channels.
+description: Use when you need to check feature flag states, compare channels, or
+  debug why a feature behaves differently across release channels.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Feature Flags
 

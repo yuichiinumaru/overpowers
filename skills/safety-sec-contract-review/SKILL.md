@@ -1,9 +1,14 @@
 ---
 name: contract-review
-description: Review contracts against your organization's negotiation playbook, flagging deviations and generating redline suggestions. Use when reviewing vendor contracts, customer agreements, or any commercial agreement where you need clause-by-clause analysis against standard positions.
+description: Review contracts against your organization's negotiation playbook, flagging
+  deviations and generating redline suggestions. Use when reviewing vendor contracts,
+  customer agreements, or any commercial agreement where you need clause-by-clause
+  analysis against standard positions.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Contract Review Skill
 

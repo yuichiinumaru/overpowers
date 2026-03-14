@@ -1,9 +1,13 @@
 ---
 name: railway-projects
-description: List, switch, and configure Railway projects. Use when user wants to list all projects, switch projects, rename a project, enable/disable PR deploys, make a project public/private, or modify project settings.
+description: List, switch, and configure Railway projects. Use when user wants to
+  list all projects, switch projects, rename a project, enable/disable PR deploys,
+  make a project public/private, or modify project settings.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Railway Project Management
 

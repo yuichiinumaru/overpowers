@@ -1,9 +1,11 @@
 ---
 name: team-composition-analysis
-description: ''
+description: Team Composition Analysis
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Team Composition Analysis
 

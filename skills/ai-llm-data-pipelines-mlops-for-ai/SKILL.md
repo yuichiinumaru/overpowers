@@ -1,6 +1,9 @@
 ---
 name: data-pipelines-mlops-for-ai
-description: Estrutura arquitetural e melhores práticas para Machine Learning Operations (MLOps) focada em IA Generativa, Agentes e RAG. Aborda a ingestão contínua, transformação e orquestração de Data Pipelines que alimentam os Vector Databases e as atualizações de modelo, combatendo Data Drift e Model Decay de forma automatizada.
+description: Estrutura arquitetural e melhores práticas para Machine Learning Operations
+  (MLOps) focada em IA Generativa, Agentes e RAG. Aborda a ingestão contínua, transformação
+  e orquestração de Data Pipelines que alimentam os Vector Databases e as atualizações
+  de modelo, combatendo Data Drift e Model Decay de forma automatizada.
 tags:
 - ai
 - llm
@@ -9,6 +12,7 @@ color: null
 tools:
   read: true
   write: true
+version: 1.0.0
 ---
 # Data Pipelines & MLOps for the AI Stack
 

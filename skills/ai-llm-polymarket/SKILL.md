@@ -1,9 +1,13 @@
 ---
 name: polymarket
-description: Comprehensive Polymarket skill covering prediction markets, API, trading, market data, and real-time WebSocket data streaming. Build applications with Polymarket services, monitor live trades, and integrate market predictions.
+description: Comprehensive Polymarket skill covering prediction markets, API, trading,
+  market data, and real-time WebSocket data streaming. Build applications with Polymarket
+  services, monitor live trades, and integrate market predictions.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Polymarket Comprehensive Skill
 

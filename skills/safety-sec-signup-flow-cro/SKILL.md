@@ -1,9 +1,11 @@
 ---
 name: signup-flow-cro
-description: ''
+description: Signup Flow CRO
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Signup Flow CRO
 

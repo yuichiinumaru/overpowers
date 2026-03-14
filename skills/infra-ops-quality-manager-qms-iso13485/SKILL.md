@@ -1,9 +1,14 @@
 ---
 name: quality-manager-qms-iso13485
-description: ISO 13485 Quality Management System specialist for medical device companies. Provides QMS implementation, maintenance, process optimization, and compliance expertise. Use for QMS design, documentation control, management review, internal auditing, corrective actions, and ISO 13485 certification activities.
+description: ISO 13485 Quality Management System specialist for medical device companies.
+  Provides QMS implementation, maintenance, process optimization, and compliance expertise.
+  Use for QMS design, documentation control, management review, internal auditing,
+  corrective actions, and ISO 13485 certification activities.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Senior Quality Manager - QMS ISO 13485 Specialist
 

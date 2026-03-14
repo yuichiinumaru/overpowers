@@ -4,6 +4,8 @@ description: Control Sonos speakers (discover/status/play/volume/group).
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Sonos CLI
 

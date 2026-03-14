@@ -119,7 +119,7 @@ The system logic is driven by 5 core agents:
     ---
     ```
 *   **Changelog Law**: **MUST** update `CHANGELOG.md` for *every* modification.
-*   **Continuity**: Update `continuity.md` at session end.
+*   **Continuity**: Update `.agents/continuity-<agent-name>.md` at session end.
 
 ## 8. Operational Instructions
 

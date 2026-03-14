@@ -1,9 +1,13 @@
 ---
 name: twitter-algorithm-optimizer
-description: Analyze and optimize tweets for maximum reach using Twitter's open-source algorithm insights. Rewrite and edit user tweets to improve engagement and visibility based on how the recommendation system ranks content.
+description: Analyze and optimize tweets for maximum reach using Twitter's open-source
+  algorithm insights. Rewrite and edit user tweets to improve engagement and visibility
+  based on how the recommendation system ranks content.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Twitter Algorithm Optimizer
 

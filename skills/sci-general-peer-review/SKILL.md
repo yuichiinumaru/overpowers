@@ -1,8 +1,15 @@
 ---
 name: peer-review
-description: Structured manuscript/grant review with checklist-based evaluation. Use when writing formal peer reviews with specific criteria methodology assessment, statistical validity, reporting standards compliance (CONSORT/STROBE), and constructive feedback. Best for actual review writing, manuscript revision. For evaluating claims/evidence quality use scientific-critical-thinking; for quantitative scoring frameworks use scholar-evaluation.
+description: Structured manuscript/grant review with checklist-based evaluation. Use
+  when writing formal peer reviews with specific criteria methodology assessment,
+  statistical validity, reporting standards compliance (CONSORT/STROBE), and constructive
+  feedback. Best for actual review writing, manuscript revision. For evaluating claims/evidence
+  quality use scientific-critical-thinking; for quantitative scoring frameworks use
+  scholar-evaluation.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Scientific Critical Evaluation and Peer Review
 

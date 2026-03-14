@@ -7,35 +7,32 @@
 
 set -euo pipefail
 
-CODEX_DIR="${HOME}/.codex"
+# --- Core Setup ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+source "${SCRIPT_DIR}/utils/deploy-utils.sh"
+setup_deploy_env "Codex CLI" "${HOME}/.codex"
 
-source "${SCRIPT_DIR}/utils/create-symlinks.sh"
+# --- Deployment ---
+print_deploy_banner
 
-echo ""
-echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
-echo -e "${CYAN}  Overpowers → Codex CLI Deployment Script${NC}"
-echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
-echo ""
-
-mkdir -p "${CODEX_DIR}"
 declare -a SYMLINKS=(
     "skills:skills"
 )
-create_symlinks "${CODEX_DIR}" "${SYMLINKS[@]}"
+create_symlinks "${PLATFORM_DIR}" "${SYMLINKS[@]}"
 
-# Handle AGENTS.md -> AGENTS.MD
+# --- Special Handling: AGENTS.md -> AGENTS.MD ---
 if [[ -f "${REPO_ROOT}/AGENTS.md" ]]; then
-    if [[ -L "${CODEX_DIR}/AGENTS.MD" ]]; then
-        rm "${CODEX_DIR}/AGENTS.MD"
-    elif [[ -e "${CODEX_DIR}/AGENTS.MD" ]]; then
-        mv "${CODEX_DIR}/AGENTS.MD" "${CODEX_DIR}/AGENTS.MD.bak"
+    AGENTS_MD="${REPO_ROOT}/AGENTS.md"
+    CODEX_RULES_MD="${PLATFORM_DIR}/AGENTS.MD"
+    
+    if [[ -L "${CODEX_RULES_MD}" ]]; then
+        rm "${CODEX_RULES_MD}"
+    elif [[ -e "${CODEX_RULES_MD}" ]]; then
+        mv "${CODEX_RULES_MD}" "${CODEX_RULES_MD}.bak"
     fi
-    ln -s "${REPO_ROOT}/AGENTS.md" "${CODEX_DIR}/AGENTS.MD"
-    log_info "AGENTS.MD -> ${REPO_ROOT}/AGENTS.md"
+    ln -s "${AGENTS_MD}" "${CODEX_RULES_MD}"
+    log_info "AGENTS.MD -> ${AGENTS_MD}"
 fi
 
-echo ""
-echo -e "${GREEN}  Codex CLI Deployment complete!${NC}"
-echo ""
+# --- Summary ---
+print_deploy_summary

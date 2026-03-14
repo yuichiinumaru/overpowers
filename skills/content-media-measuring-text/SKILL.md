@@ -4,6 +4,8 @@ description: Measuring text dimensions, fitting text to containers, and checking
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Measuring text in Remotion
 

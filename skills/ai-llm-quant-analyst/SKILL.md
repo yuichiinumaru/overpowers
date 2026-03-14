@@ -4,6 +4,8 @@ description: Build financial models, backtest trading strategies, and analyze
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Quant Analyst
 

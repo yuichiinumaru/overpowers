@@ -4,6 +4,8 @@ description: Creates and updates documentation
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Documentation
 

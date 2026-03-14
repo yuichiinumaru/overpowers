@@ -4,6 +4,8 @@ description: ''
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # 科研立项依据写作器
 

@@ -1,9 +1,13 @@
 ---
 name: risk-metrics-calculation
-description: Calculate portfolio risk metrics including VaR, CVaR, Sharpe, Sortino, and drawdown analysis. Use when measuring portfolio risk, implementing risk limits, or building risk monitoring systems.
+description: Calculate portfolio risk metrics including VaR, CVaR, Sharpe, Sortino,
+  and drawdown analysis. Use when measuring portfolio risk, implementing risk limits,
+  or building risk monitoring systems.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Risk Metrics Calculation
 

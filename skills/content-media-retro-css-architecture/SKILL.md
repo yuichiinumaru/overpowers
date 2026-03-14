@@ -1,9 +1,12 @@
 ---
 name: retro-css-architecture
-description: Organize 8-bit CSS with custom properties, pixel fonts, and responsive pixel art. Apply when creating or modifying retro-styled components and their CSS.
+description: Organize 8-bit CSS with custom properties, pixel fonts, and responsive
+  pixel art. Apply when creating or modifying retro-styled components and their CSS.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Retro Css Architecture
 

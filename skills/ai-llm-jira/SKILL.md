@@ -1,9 +1,11 @@
 ---
 name: jira
-description: ''
+description: Backend Detection
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Jira
 

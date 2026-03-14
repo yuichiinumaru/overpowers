@@ -1,9 +1,11 @@
 ---
 name: baoyu-danger-gemini-web
-description: ''
+description: Gemini Web Client
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Gemini Web Client
 

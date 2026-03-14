@@ -4,6 +4,8 @@ description: Expert startup business analyst specializing in market sizing,
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Startup Analyst
 

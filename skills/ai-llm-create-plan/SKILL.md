@@ -1,9 +1,12 @@
 ---
 name: create-plan
-description: Create a concise plan. Use when a user explicitly asks for a plan related to a coding task.
+description: Create a concise plan. Use when a user explicitly asks for a plan related
+  to a coding task.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Create Plan
 

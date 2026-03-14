@@ -1,0 +1,40 @@
+---
+description: "Inget a local repository into NotebookLM using the Gitingest Chunker"
+---
+# Ingest Repository into NotebookLM
+
+This workflow automatically chunks an entire local repository into optimized Markdown files and uploads them into a new NotebookLM project, making it instantly ready for Q&A and architecture research.
+
+## Prerequisites
+
+- You must have the `ai-llm-gitingest-chunker` skill available.
+- You must be authenticated in NotebookLM (`nlm login`).
+
+## Steps
+
+1. Analyze the repository structure to generate a tree.
+```bash
+uv run skills/ai-llm-gitingest-chunker/scripts/1_analyze_tree.py <path/to/repo>
+```
+
+2. Group the files intelligently into logical Markdown chunks (aiming for ~50KB).
+```bash
+uv run skills/ai-llm-gitingest-chunker/scripts/2_plan_chunks.py tree_analysis.json --min-size 20000 --max-size 100000
+```
+
+3. Exceute the extraction and write to a temporary output folder.
+```bash
+uv run skills/ai-llm-gitingest-chunker/scripts/3_execute_ingest.py chunks_plan.json -o /tmp/notebook_chunks
+```
+
+4. Create the Notebook and push all chunks to NotebookLM.
+```bash
+uv run skills/ai-llm-notebooklm/scripts/upload_gitingest_chunks.py /tmp/notebook_chunks <Notebook_Title>
+```
+*Note: You can pass `-y` to automatically skip creating a new notebook if one with the same name already exists in your NotebookLM profile.*
+
+## Follow-up / Custom Queries
+Once the script finishes uploading the chunks and runs a quick sanity check, you can run any manual queries from your CLI:
+```bash
+nlm notebook query <Notebook_Title> "Provide an exhaustive overview of the system architecture..."
+```

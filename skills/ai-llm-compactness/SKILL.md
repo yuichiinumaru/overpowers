@@ -4,6 +4,8 @@ description: Problem-solving strategies for compactness in topology
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Compactness
 

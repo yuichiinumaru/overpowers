@@ -1,9 +1,11 @@
 ---
 name: html-injection-testing
-description: ''
+description: HTML Injection Testing
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # HTML Injection Testing
 

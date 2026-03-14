@@ -1,9 +1,13 @@
 ---
 name: youtube-link-extractor
-description: Extração eficiente de links de vídeos, shorts e transmissões ao vivo (lives) de canais do YouTube sem necessidade de API Key. Use para coletar todos os links de um canal e organizar em documentos Markdown.
+description: Extração eficiente de links de vídeos, shorts e transmissões ao vivo
+  (lives) de canais do YouTube sem necessidade de API Key. Use para coletar todos
+  os links de um canal e organizar em documentos Markdown.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # YouTube Link Extractor
 

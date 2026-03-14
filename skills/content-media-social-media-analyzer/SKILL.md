@@ -1,9 +1,14 @@
 ---
 name: social-media-analyzer
-description: Social media campaign analysis and performance tracking. Calculates engagement rates, ROI, and benchmarks across platforms. Use for analyzing social media performance, calculating engagement rate, measuring campaign ROI, comparing platform metrics, or benchmarking against industry standards.
+description: Social media campaign analysis and performance tracking. Calculates engagement
+  rates, ROI, and benchmarks across platforms. Use for analyzing social media performance,
+  calculating engagement rate, measuring campaign ROI, comparing platform metrics,
+  or benchmarking against industry standards.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Social Media Analyzer
 

@@ -1,9 +1,13 @@
 ---
 name: single-cell-clustering-and-batch-correction-with-omicverse
-description: Guide Claude through omicverse's single-cell clustering workflow, covering preprocessing, QC, multimethod clustering, topic modeling, cNMF, and cross-batch integration as demonstrated in t_cluster.ipynb and t_single_batch.ipynb.
+description: Guide Claude through omicverse's single-cell clustering workflow, covering
+  preprocessing, QC, multimethod clustering, topic modeling, cNMF, and cross-batch
+  integration as demonstrated in t_cluster.ipynb and t_single_batch.ipynb.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Single-cell clustering and batch correction with omicverse
 

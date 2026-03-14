@@ -1,9 +1,12 @@
 ---
 name: birdnet
-description: Query BirdNET-Go bird detections. View recent birds, search by species, get detection details.
+description: Query BirdNET-Go bird detections. View recent birds, search by species,
+  get detection details.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # BirdNET-Go
 

@@ -4,6 +4,8 @@ description: Formats content to be eligible for featured snippets and SERP
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Seo Snippet Hunter
 

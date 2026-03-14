@@ -1,6 +1,10 @@
 ---
 name: quantum-safe-cryptography-transition-guide
-description: Guia de arquitetura de Cibersegurança para mitigar a ameaça 'Harvest Now, Decrypt Later' (HNDL). Orienta sobre o uso de Agentes de IA Autônomos de Segurança para fazer o inventário (Cripto-Agilidade) e substituir algoritmos clássicos vulneráveis a computação quântica (RSA, ECC, Diffie-Hellman) pelos padrões de Post-Quantum Cryptography (PQC) aprovados pelo NIST (como CRYSTALS-Kyber e CRYSTALS-Dilithium).
+description: Guia de arquitetura de Cibersegurança para mitigar a ameaça 'Harvest
+  Now, Decrypt Later' (HNDL). Orienta sobre o uso de Agentes de IA Autônomos de Segurança
+  para fazer o inventário (Cripto-Agilidade) e substituir algoritmos clássicos vulneráveis
+  a computação quântica (RSA, ECC, Diffie-Hellman) pelos padrões de Post-Quantum Cryptography
+  (PQC) aprovados pelo NIST (como CRYSTALS-Kyber e CRYSTALS-Dilithium).
 tags:
 - safety
 - sec
@@ -8,6 +12,7 @@ category: security
 color: null
 tools:
   read: true
+version: 1.0.0
 ---
 # Securing AI for the Quantum Era: The CISO's Guide to PQC
 

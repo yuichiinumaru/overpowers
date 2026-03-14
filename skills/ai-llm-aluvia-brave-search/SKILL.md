@@ -1,9 +1,13 @@
 ---
 name: aluvia-brave-search
-description: Web search and content extraction via Brave Search API, with unblockable access using Aluvia mobile proxy. Use for searching documentation, facts, or any web content. No browser required; bypasses blocks and CAPTCHAs.
+description: Web search and content extraction via Brave Search API, with unblockable
+  access using Aluvia mobile proxy. Use for searching documentation, facts, or any
+  web content. No browser required; bypasses blocks and CAPTCHAs.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Aluvia Brave Search
 

@@ -1,9 +1,14 @@
 ---
 name: g2-legend-expert
-description: Expert skill for G2 legend development - provides comprehensive knowledge about legend rendering implementation, component architecture, layout algorithms, and interaction handling. Use when implementing, customizing, or debugging legend functionality in G2 visualizations.
+description: Expert skill for G2 legend development - provides comprehensive knowledge
+  about legend rendering implementation, component architecture, layout algorithms,
+  and interaction handling. Use when implementing, customizing, or debugging legend
+  functionality in G2 visualizations.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # G2 Legend Expert Skill
 

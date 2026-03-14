@@ -1,6 +1,7 @@
 ---
 name: comfyui-aep-music-generator
-description: Set up and run the AEP v1.5 diffusion-based AI music model locally within ComfyUI to generate audio tracks from text prompts.
+description: Set up and run the AEP v1.5 diffusion-based AI music model locally within
+  ComfyUI to generate audio tracks from text prompts.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # ComfyUI AEP v1.5 Music Generator
 

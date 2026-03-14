@@ -1,9 +1,11 @@
 ---
 name: semgrep-code-security
-description: ''
+description: Semgrep Code Security
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Semgrep Code Security
 

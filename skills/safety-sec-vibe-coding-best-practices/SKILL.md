@@ -1,9 +1,11 @@
 ---
 name: vibe-coding-best-practices
-description: ''
+description: Vibe Coding Best Practices
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Vibe Coding Best Practices
 

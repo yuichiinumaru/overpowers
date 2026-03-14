@@ -4,6 +4,8 @@ description: check loans and search resources from the National Library Board of
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # NLB Skill
 

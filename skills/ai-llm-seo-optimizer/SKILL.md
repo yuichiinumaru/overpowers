@@ -1,9 +1,14 @@
 ---
 name: seo-optimizer
-description: Search Engine Optimization specialist for content strategy, technical SEO, keyword research, and ranking improvements. Use when optimizing website content, improving search rankings, conducting keyword analysis, or implementing SEO best practices. Expert in on-page SEO, meta tags, schema markup, and Core Web Vitals.
+description: Search Engine Optimization specialist for content strategy, technical
+  SEO, keyword research, and ranking improvements. Use when optimizing website content,
+  improving search rankings, conducting keyword analysis, or implementing SEO best
+  practices. Expert in on-page SEO, meta tags, schema markup, and Core Web Vitals.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # SEO Optimizer
 

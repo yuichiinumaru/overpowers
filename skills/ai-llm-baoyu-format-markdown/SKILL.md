@@ -1,9 +1,11 @@
 ---
 name: baoyu-format-markdown
-description: ''
+description: Markdown Formatter
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Markdown Formatter
 

@@ -4,6 +4,8 @@ description: Get current weather and forecasts (no API key required).
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Weather
 

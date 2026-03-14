@@ -1,9 +1,13 @@
 ---
 name: threejs-textures
-description: Three.js textures - texture types, UV mapping, environment maps, texture settings. Use when working with images, UV coordinates, cubemaps, HDR environments, or texture optimization.
+description: Three.js textures - texture types, UV mapping, environment maps, texture
+  settings. Use when working with images, UV coordinates, cubemaps, HDR environments,
+  or texture optimization.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Three.js Textures
 

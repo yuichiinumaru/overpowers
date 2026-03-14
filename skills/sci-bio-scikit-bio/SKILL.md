@@ -1,9 +1,13 @@
 ---
 name: scikit-bio
-description: Biological data toolkit. Sequence analysis, alignments, phylogenetic trees, diversity metrics (alpha/beta, UniFrac), ordination (PCoA), PERMANOVA, FASTA/Newick I/O, for microbiome analysis.
+description: Biological data toolkit. Sequence analysis, alignments, phylogenetic
+  trees, diversity metrics (alpha/beta, UniFrac), ordination (PCoA), PERMANOVA, FASTA/Newick
+  I/O, for microbiome analysis.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # scikit-bio
 

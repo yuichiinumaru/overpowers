@@ -1,9 +1,11 @@
 ---
 name: aws-penetration-testing
-description: ''
+description: AWS Penetration Testing
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # AWS Penetration Testing
 

@@ -1,9 +1,11 @@
 ---
 name: baoyu-compress-image
-description: ''
+description: Image Compressor
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Image Compressor
 

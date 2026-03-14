@@ -1,6 +1,7 @@
 ---
 name: bytedance-sa2va-qwen3vl-segmentation
-description: Combine ByteDance SA2VA and Qwen3VL for highly accurate, prompt-driven image and video segmentation that outperforms standard SAM.
+description: Combine ByteDance SA2VA and Qwen3VL for highly accurate, prompt-driven
+  image and video segmentation that outperforms standard SAM.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # ByteDance SA2VA + Qwen3VL Advanced Segmentation
 

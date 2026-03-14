@@ -1,8 +1,11 @@
 ---
 name: news-feeds
-description: Fetch latest news headlines from major RSS feeds (BBC, Reuters, AP, Al Jazeera, NPR, The Guardian, DW). No API keys required.
+description: Fetch latest news headlines from major RSS feeds (BBC, Reuters, AP, Al
+  Jazeera, NPR, The Guardian, DW). No API keys required.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # News Feeds Skill
 

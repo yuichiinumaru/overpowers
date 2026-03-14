@@ -1,9 +1,11 @@
 ---
 name: evaluation
-description: ''
+description: Evaluation Methods for Agent Systems
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Evaluation Methods for Agent Systems
 

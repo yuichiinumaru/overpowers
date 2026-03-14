@@ -4,6 +4,8 @@ description: Make a video parametrizable by adding a Zod schema
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Parameters
 

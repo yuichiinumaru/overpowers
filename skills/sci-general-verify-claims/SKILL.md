@@ -1,8 +1,10 @@
 ---
 name: verify-claims
-description: ''
+description: Verifies factual claims using trusted fact-checking sources with region and language-aware validation workflow.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Fact-Checking Skill
 

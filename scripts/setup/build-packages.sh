@@ -16,7 +16,6 @@ echo ""
 
 # --- Node.js packages ---
 NODE_PACKAGES=(
-  "In-Memoria"
   "DesktopCommanderMCP"
   "vibe-check-mcp-server"
 )

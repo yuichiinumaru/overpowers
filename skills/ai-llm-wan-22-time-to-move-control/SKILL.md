@@ -1,6 +1,7 @@
 ---
 name: wan-22-time-to-move-control
-description: Implement the 'Time-To-Move' technique in ComfyUI with Wan 2.2 for precise control over AI video motion timing.
+description: Implement the 'Time-To-Move' technique in ComfyUI with Wan 2.2 for precise
+  control over AI video motion timing.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Wan 2.2 Time-To-Move Motion Control
 

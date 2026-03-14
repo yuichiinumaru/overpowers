@@ -1,10 +1,15 @@
 ---
 name: validate-evaluator
-description: >
-  Calibrate an LLM judge against human labels using data splits, TPR/TNR, and
-  bias correction. Use after writing a judge prompt (write-judge-prompt) when you
-  need to verify alignment before trusting its outputs. Do NOT use for code-based
+description: Calibrate an LLM judge against human labels using data splits, TPR/TNR,
+  and bias correction. Use after writing a judge prompt (write-judge-prompt) when
+  you need to verify alignment before trusting its outputs. Do NOT use for code-based
   evaluators (those are deterministic; test with standard unit tests).
+version: 1.0.0
+category: general
+tags:
+- evaluator
+- general
+- validate
 ---
 
 # Validate Evaluator

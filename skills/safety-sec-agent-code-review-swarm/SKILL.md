@@ -4,6 +4,8 @@ description: Agent skill for code-review-swarm - invoke with $agent-code-review-
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Agent Code Review Swarm
 

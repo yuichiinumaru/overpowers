@@ -1,9 +1,11 @@
 ---
 name: hosted-agents
-description: ''
+description: Hosted Agent Infrastructure
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Hosted Agent Infrastructure
 

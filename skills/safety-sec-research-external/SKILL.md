@@ -4,6 +4,8 @@ description: External research workflow for docs, web, APIs - NOT codebase explo
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # External Research Workflow
 

@@ -4,6 +4,8 @@ description: Expert C4 Component-level documentation specialist. Synthesizes C4
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # C4 Component Level: [Component Name]
 

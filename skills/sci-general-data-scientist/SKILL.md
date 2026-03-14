@@ -3,6 +3,8 @@ name: data-scientist
 description: Expert data scientist for advanced analytics, machine learning, and
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Data Scientist
 

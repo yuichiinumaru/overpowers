@@ -1,9 +1,11 @@
 ---
 name: performance
-description: ''
+description: Performance optimization
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Performance optimization
 

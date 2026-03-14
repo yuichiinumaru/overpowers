@@ -1,9 +1,12 @@
 ---
 name: oracle
-description: Best practices for using the oracle CLI (prompt + file bundling, engines, sessions, and file attachment patterns).
+description: Best practices for using the oracle CLI (prompt + file bundling, engines,
+  sessions, and file attachment patterns).
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # oracle — best use
 

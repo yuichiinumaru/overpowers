@@ -1,9 +1,11 @@
 ---
 name: account-research
-description: ''
+description: Account Research
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Account Research
 

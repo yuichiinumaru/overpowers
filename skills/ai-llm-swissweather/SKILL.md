@@ -1,9 +1,16 @@
 ---
 name: swissweather
-description: Get current weather and forecasts from MeteoSwiss (official Swiss weather service). Use when querying Swiss weather data, local measurements from Swiss weather stations, or Swiss-specific forecasts. Provides real-time measurements (temperature, humidity, wind, precipitation, pressure) from 100+ Swiss stations and multi-day forecasts by postal code. Ideal for Swiss locations - more accurate than generic weather services for Switzerland.
+description: Get current weather and forecasts from MeteoSwiss (official Swiss weather
+  service). Use when querying Swiss weather data, local measurements from Swiss weather
+  stations, or Swiss-specific forecasts. Provides real-time measurements (temperature,
+  humidity, wind, precipitation, pressure) from 100+ Swiss stations and multi-day
+  forecasts by postal code. Ideal for Swiss locations - more accurate than generic
+  weather services for Switzerland.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # SwissWeather
 

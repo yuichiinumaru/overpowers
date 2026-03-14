@@ -1,9 +1,15 @@
 ---
 name: data-privacy-compliance
-description: Data privacy and regulatory compliance specialist for GDPR, CCPA, HIPAA, and international data protection laws. Use when implementing privacy controls, conducting data protection impact assessments, ensuring regulatory compliance, or managing data subject rights. Expert in consent management, data minimization, and privacy-by-design principles.
+description: Data privacy and regulatory compliance specialist for GDPR, CCPA, HIPAA,
+  and international data protection laws. Use when implementing privacy controls,
+  conducting data protection impact assessments, ensuring regulatory compliance, or
+  managing data subject rights. Expert in consent management, data minimization, and
+  privacy-by-design principles.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Data Privacy Compliance
 

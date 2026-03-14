@@ -1,9 +1,12 @@
 ---
 name: create-blog-post
-description: Use this if the user wants to convert a blog post from Google Docs markdown to the format used in the Home Assistant website.
+description: Use this if the user wants to convert a blog post from Google Docs markdown
+  to the format used in the Home Assistant website.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Create Blog Post
 

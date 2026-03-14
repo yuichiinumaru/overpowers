@@ -4,6 +4,8 @@ description: Simple operations on user-provided text files including summarizati
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # User File Ops
 

@@ -1,9 +1,12 @@
 ---
 name: aws-mcp-setup
-description: Configure AWS Documentation MCP server to query up-to-date AWS knowledge, APIs, and best practices
+description: Configure AWS Documentation MCP server to query up-to-date AWS knowledge,
+  APIs, and best practices
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # AWS MCP Server Configuration Guide
 

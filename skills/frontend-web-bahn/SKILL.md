@@ -1,9 +1,11 @@
 ---
 name: bahn
-description: ''
+description: Deutsche Bahn CLI
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Deutsche Bahn CLI
 

@@ -1,9 +1,13 @@
 ---
 name: pr-build-status
-description: Retrieve Azure DevOps build information for GitHub Pull Requests, including build IDs, stage status, failed jobs, and Helix console logs for any Helix-based test failures.
+description: Retrieve Azure DevOps build information for GitHub Pull Requests, including
+  build IDs, stage status, failed jobs, and Helix console logs for any Helix-based
+  test failures.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # PR Build Status Skill
 

@@ -1,9 +1,11 @@
 ---
 name: email-sequence
-description: ''
+description: Email Sequence Design
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Email Sequence Design
 

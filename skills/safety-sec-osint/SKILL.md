@@ -1,9 +1,12 @@
 ---
 name: osint
-description: Open source intelligence gathering for people, companies, and threat intelligence. Use for due diligence, background checks, and investigations.
+description: Open source intelligence gathering for people, companies, and threat
+  intelligence. Use for due diligence, background checks, and investigations.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # OSINT (Open Source Intelligence)
 
