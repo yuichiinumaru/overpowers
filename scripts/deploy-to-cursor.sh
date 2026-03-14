@@ -2,31 +2,24 @@
 # =============================================================================
 # deploy-to-cursor.sh
 # =============================================================================
-# Creates symbolic links from the Overpowers repository into the Cursor
-# global configuration directory (~/.cursor/).
+# Creates symbolic links into Cursor configuration directory (~/.cursor/).
 # =============================================================================
 
 set -euo pipefail
 
-CURSOR_DIR="${HOME}/.cursor"
+# --- Core Setup ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+source "${SCRIPT_DIR}/utils/deploy-utils.sh"
+setup_deploy_env "Cursor" "${HOME}/.cursor"
 
-source "${SCRIPT_DIR}/utils/create-symlinks.sh"
+# --- Deployment ---
+print_deploy_banner
 
-echo ""
-echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
-echo -e "${CYAN}  Overpowers → Cursor Deployment Script${NC}"
-echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
-echo ""
-
-mkdir -p "${CURSOR_DIR}"
 declare -a SYMLINKS=(
     "skills:skills"
 )
 
-create_symlinks "${CURSOR_DIR}" "${SYMLINKS[@]}"
+create_symlinks "${PLATFORM_DIR}" "${SYMLINKS[@]}"
 
-echo ""
-echo -e "${GREEN}  Cursor Deployment complete!${NC}"
-echo ""
+# --- Summary ---
+print_deploy_summary

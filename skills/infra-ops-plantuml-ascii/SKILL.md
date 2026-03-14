@@ -1,9 +1,15 @@
 ---
 name: plantuml-ascii
-description: 'Generate ASCII art diagrams using PlantUML text mode. Use when user asks to create ASCII diagrams, text-based diagrams, terminal-friendly diagrams, or mentions plantuml ascii, text diagram, ascii art diagram. Supports: Converting PlantUML diagrams to ASCII art, Creating sequence diagrams, class diagrams, flowcharts in ASCII format, Generating Unicode-enhanced ASCII art with -utxt flag'
+description: 'Generate ASCII art diagrams using PlantUML text mode. Use when user
+  asks to create ASCII diagrams, text-based diagrams, terminal-friendly diagrams,
+  or mentions plantuml ascii, text diagram, ascii art diagram. Supports: Converting
+  PlantUML diagrams to ASCII art, Creating sequence diagrams, class diagrams, flowcharts
+  in ASCII format, Generating Unicode-enhanced ASCII art with -utxt flag'
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # PlantUML ASCII Art Diagram Generator
 

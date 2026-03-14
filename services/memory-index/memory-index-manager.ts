@@ -9,6 +9,14 @@ export interface ChunkMetadata {
   endLine?: number;
 }
 
+export interface SearchResult {
+  id: number;
+  file_path: string;
+  content: string;
+  metadata: any;
+  score?: number;
+}
+
 export class MemoryIndexManager {
   private db: Database.Database;
 
@@ -105,6 +113,48 @@ export class MemoryIndexManager {
       ORDER BY distance
     `);
     return stmt.all(new Uint8Array(embedding.buffer), limit);
+  }
+  
+  public async hybridSearch(query: string, embedding: Float32Array, limit: number = 10): Promise<SearchResult[]> {
+    const k = 60; // Constant for RRF
+    
+    // 1. Get results from Keyword Search
+    const keywordResults = this.searchKeyword(query, limit * 2) as SearchResult[];
+    
+    // 2. Get results from Vector Search
+    const vectorResults = this.searchVector(embedding, limit * 2) as SearchResult[];
+    
+    // 3. Combine using RRF
+    const combinedScores = new Map<number, { result: SearchResult, score: number }>();
+    
+    // Add keyword scores
+    keywordResults.forEach((res, index) => {
+      const score = 1.0 / (k + index + 1);
+      combinedScores.set(res.id, { result: res, score });
+    });
+    
+    // Add/Update vector scores
+    vectorResults.forEach((res, index) => {
+      const vecScore = 1.0 / (k + index + 1);
+      const existing = combinedScores.get(res.id);
+      if (existing) {
+        existing.score += vecScore;
+      } else {
+        combinedScores.set(res.id, { result: res, score: vecScore });
+      }
+    });
+    
+    // 4. Convert map to array, sort, and limit
+    const results = Array.from(combinedScores.values())
+      .map(item => ({
+        ...item.result,
+        score: item.score,
+        metadata: typeof item.result.metadata === 'string' ? JSON.parse(item.result.metadata) : item.result.metadata
+      }))
+      .sort((a, b) => (b.score || 0) - (a.score || 0))
+      .slice(0, limit);
+      
+    return results;
   }
   
   public getFile(filePath: string) {

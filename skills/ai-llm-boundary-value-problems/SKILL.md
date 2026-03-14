@@ -4,6 +4,8 @@ description: Problem-solving strategies for boundary value problems in odes pdes
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Boundary Value Problems
 

@@ -1,9 +1,12 @@
 ---
 name: web-fetch
-description: Fetch and extract readable content from web pages. Use for lightweight page access without browser automation.
+description: Fetch and extract readable content from web pages. Use for lightweight
+  page access without browser automation.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Web Fetch
 

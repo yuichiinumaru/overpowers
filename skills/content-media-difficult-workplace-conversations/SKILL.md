@@ -1,9 +1,14 @@
 ---
 name: difficult-workplace-conversations
-description: Structured approach to workplace conflicts, performance discussions, and challenging feedback using preparation-delivery-followup framework. Use when preparing for tough conversations, addressing conflicts, giving critical feedback, or navigating sensitive workplace discussions.
+description: Structured approach to workplace conflicts, performance discussions,
+  and challenging feedback using preparation-delivery-followup framework. Use when
+  preparing for tough conversations, addressing conflicts, giving critical feedback,
+  or navigating sensitive workplace discussions.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Difficult Conversations Skill
 

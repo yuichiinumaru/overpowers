@@ -1,6 +1,8 @@
 ---
 name: openclaw-for-cybersecurity
-description: Implementa um agente autônomo baseado no framework OpenClaw para triagem automatizada, enriquecimento de IOCs e integração com playbooks de segurança (Moltbook) em Centros de Operações de Segurança (SOCs).
+description: Implementa um agente autônomo baseado no framework OpenClaw para triagem
+  automatizada, enriquecimento de IOCs e integração com playbooks de segurança (Moltbook)
+  em Centros de Operações de Segurança (SOCs).
 tags:
 - safety
 - sec
@@ -9,6 +11,7 @@ color: null
 tools:
   read: true
   bash: true
+version: 1.0.0
 ---
 # OpenClaw & Moltbook for Cybersecurity Pros
 

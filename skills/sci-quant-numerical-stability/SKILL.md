@@ -1,9 +1,14 @@
 ---
 name: numerical-stability
-description: Analyze and enforce numerical stability for time-dependent PDE simulations. Use when selecting time steps, choosing explicit/implicit schemes, diagnosing numerical blow-up, checking CFL/Fourier criteria, von Neumann analysis, matrix conditioning, or detecting stiffness in advection/diffusion/reaction problems.
+description: Analyze and enforce numerical stability for time-dependent PDE simulations.
+  Use when selecting time steps, choosing explicit/implicit schemes, diagnosing numerical
+  blow-up, checking CFL/Fourier criteria, von Neumann analysis, matrix conditioning,
+  or detecting stiffness in advection/diffusion/reaction problems.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Numerical Stability
 

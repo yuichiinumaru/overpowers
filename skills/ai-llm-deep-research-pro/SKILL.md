@@ -1,9 +1,12 @@
 ---
 name: deep-research-pro
-description: Multi-source deep research agent. Searches the web, synthesizes findings, and delivers cited reports. No API keys required.
+description: Multi-source deep research agent. Searches the web, synthesizes findings,
+  and delivers cited reports. No API keys required.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Deep Research Pro 🔬
 

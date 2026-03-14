@@ -1,9 +1,15 @@
 ---
 name: build-review-interface
-description: >
-  Build a custom browser-based annotation interface tailored to your data for
-  reviewing LLM traces and collecting structured feedback. Use when you need to
+description: Build a custom browser-based annotation interface tailored to your data
+  for reviewing LLM traces and collecting structured feedback. Use when you need to
   build an annotation tool, review traces, or collect human labels.
+version: 1.0.0
+category: general
+tags:
+- build
+- general
+- interface
+- review
 ---
 
 # Build a Custom Annotation Interface

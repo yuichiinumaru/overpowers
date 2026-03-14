@@ -1,9 +1,12 @@
 ---
 name: search-x
-description: Search X/Twitter in real-time using Grok. Find tweets, trends, and discussions with citations.
+description: Search X/Twitter in real-time using Grok. Find tweets, trends, and discussions
+  with citations.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Search X
 

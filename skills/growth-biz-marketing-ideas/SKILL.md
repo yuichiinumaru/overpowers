@@ -1,9 +1,12 @@
 ---
 name: marketing-ideas
-description: Provide proven marketing strategies and growth ideas for SaaS and software products, prioritized using a marketing feasibility scoring system.
+description: Provide proven marketing strategies and growth ideas for SaaS and software
+  products, prioritized using a marketing feasibility scoring system.
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Marketing Ideas for SaaS (with Feasibility Scoring)
 

@@ -1,9 +1,15 @@
 ---
 name: generate-image
-description: Generate or edit images using AI models (FLUX, Gemini). Use for general-purpose image generation including photos, illustrations, artwork, visual assets, concept art, and any image that is not a technical diagram or schematic. For flowcharts, circuits, pathways, and technical diagrams, use the scientific-schematics skill instead.
+description: Generate or edit images using AI models (FLUX, Gemini). Use for general-purpose
+  image generation including photos, illustrations, artwork, visual assets, concept
+  art, and any image that is not a technical diagram or schematic. For flowcharts,
+  circuits, pathways, and technical diagrams, use the scientific-schematics skill
+  instead.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Generate Image
 

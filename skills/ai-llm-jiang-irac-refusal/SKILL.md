@@ -6,6 +6,8 @@ tags:
 - code
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # 蒋道理｜商标驳回复审推理引擎（SJ-IRAC）
 SJ-IRAC Trademark Refusal Reasoning Engine

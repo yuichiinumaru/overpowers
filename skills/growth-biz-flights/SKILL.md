@@ -1,9 +1,12 @@
 ---
 name: flights
-description: Search flights via Google Flights. Find nonstop/connecting flights, filter by time and cabin class, get booking links.
+description: Search flights via Google Flights. Find nonstop/connecting flights, filter
+  by time and cabin class, get booking links.
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Flight Search
 

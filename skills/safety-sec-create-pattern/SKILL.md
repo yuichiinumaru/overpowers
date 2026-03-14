@@ -1,9 +1,13 @@
 ---
 name: create-pattern
-description: Analyze sources (blog posts, PDFs, YouTube videos, codebases, pasted text) for agentic patterns, match against 105+ existing patterns, create new patterns or update existing with new sources and insights.
+description: Analyze sources (blog posts, PDFs, YouTube videos, codebases, pasted
+  text) for agentic patterns, match against 105+ existing patterns, create new patterns
+  or update existing with new sources and insights.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Pattern Ingestion Skill
 

@@ -1,12 +1,16 @@
 ---
 name: eval-audit
-description: >
-  Audit an LLM eval pipeline and surface problems: missing error analysis,
-  unvalidated judges, vanity metrics, etc. Use when
-  inheriting an eval system, when unsure whether evals are trustworthy, or as a
-  starting point when no eval infrastructure exists. Do NOT use when the goal
-  is to build a new evaluator from scratch (use error-analysis,
-  write-judge-prompt, or validate-evaluator instead).
+description: 'Audit an LLM eval pipeline and surface problems: missing error analysis,
+  unvalidated judges, vanity metrics, etc. Use when inheriting an eval system, when
+  unsure whether evals are trustworthy, or as a starting point when no eval infrastructure
+  exists. Do NOT use when the goal is to build a new evaluator from scratch (use error-analysis,
+  write-judge-prompt, or validate-evaluator instead).'
+version: 1.0.0
+category: general
+tags:
+- audit
+- eval
+- general
 ---
 
 # Eval Audit

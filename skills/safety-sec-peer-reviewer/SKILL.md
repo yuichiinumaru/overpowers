@@ -1,9 +1,13 @@
 ---
 name: peer-reviewer
-description: AI-powered academic paper reviewer. Uses a multi-agent system (Deconstructor, Devil's Advocate, Judge) to analyze papers for logical flaws, contradictions, and empirical validity.
+description: AI-powered academic paper reviewer. Uses a multi-agent system (Deconstructor,
+  Devil's Advocate, Judge) to analyze papers for logical flaws, contradictions, and
+  empirical validity.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Peer Reviewer
 

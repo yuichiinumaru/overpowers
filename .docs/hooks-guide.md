@@ -65,6 +65,9 @@ Hooks are automated actions that run when specific events occur (file changes, s
 | `file-backup.md` | Automatic file backups |
 | `performance-monitor.md` | Monitor execution performance |
 | `notify-before-bash.md` | Notification before bash commands |
+| `todo-enforcer.md` | Enforces continuation of tasks from tasklist/continuity |
+| `dir-injector.md` | Auto-injects local README/AGENTS.md on directory change |
+| `edit-guard.md` | Provides self-recovery hints for tool failures |
 
 ## Hook Structure
 

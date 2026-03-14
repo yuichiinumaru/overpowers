@@ -29,11 +29,17 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     --env)
+      if [[ $# -lt 2 ]]; then
+        echo "Error: --env requires a file path argument." >&2
+        exit 1
+      fi
       ENV_FILE="$2"
       shift 2
       ;;
     *)
-      shift
+      echo "Error: Unknown argument: $1" >&2
+      echo "Usage: $0 [-f|--fast] [--env <file>]" >&2
+      exit 1
       ;;
   esac
 done
@@ -63,7 +69,8 @@ NC='\033[0m'
 # --- Config ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-EXAMPLE_JSON="${REPO_ROOT}/opencode-example.json"
+OPENCODE_TEMPLATE_JSON="${REPO_ROOT}/templates/configs/mcp-opencode.json"
+EXTRACTED_USER_MCPS_JSON="${REPO_ROOT}/scripts/extracted_user_mcps.json"
 ENV_TEMPLATE="${REPO_ROOT}/.env.example"
 
 # Platform config paths
@@ -80,11 +87,11 @@ WINDSURF_MCP="${WINDSURF_DIR}/mcp_config.json"
 CLAUDE_CODE_JSON="${HOME}/.claude.json"
 CODEX_DIR="${HOME}/.codex"
 CODEX_TOML="${CODEX_DIR}/config.toml"
-KILO_DIR="${HOME}/.config/kilo"
-KILO_JSON="${KILO_DIR}/kilo.json"
+KILO_DIR="${HOME}/.kilocode"
+KILO_JSON="${KILO_DIR}/mcp.json"
 FACTORY_DIR="${HOME}/.factory"
 FACTORY_MCP="${FACTORY_DIR}/mcp.json"
-TEMPLATES_DIR="${REPO_ROOT}/scripts/templates"
+TEMPLATES_DIR="${REPO_ROOT}/templates/configs"
 
 # Centralized .env location
 CENTRAL_ENV="${REPO_ROOT}/.env"
@@ -175,7 +182,7 @@ if [[ "${scan_choice}" == "1" ]]; then
     echo ""
     echo -e "  ${CYAN}Scanning installed MCPs...${NC}"
     
-    EXTRACT_CMD=("python3" "${SCRIPT_DIR}/extract-installed-mcps.py")
+    EXTRACT_CMD=("python3" "${SCRIPT_DIR}/utils/extract-installed-mcps.py")
     if [[ -n "${ENV_FILE}" ]]; then
         EXTRACT_CMD+=("--env" "${ENV_FILE}")
     fi
@@ -349,8 +356,34 @@ install_opencode() {
         echo -e "  ${YELLOW}[!]${NC} Created new opencode.json"
     fi
 
-    python3 - "${EXAMPLE_JSON}" "${OPENCODE_JSON}" << 'PYEOF'
+    python3 - "${OPENCODE_TEMPLATE_JSON}" "${OPENCODE_JSON}" "${EXTRACTED_USER_MCPS_JSON}" "${CENTRAL_ENV}" << 'PYEOF'
 import json, sys, os
+import re
+
+REMOVED_SERVERS = {"grep_app", "web_search", "StitchMCP", "stitchmcp"}
+
+env_vals = {}
+env_path = sys.argv[4]
+if os.path.exists(env_path):
+    with open(env_path) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            key, _, val = line.partition("=")
+            env_vals[key.strip()] = val.strip("'\"")
+
+def resolve_env(v):
+    if isinstance(v, str):
+        return re.sub(r"\$\{(\w+)\}", lambda m: env_vals.get(m.group(1), m.group(0)), v)
+    if isinstance(v, list):
+        return [resolve_env(i) for i in v]
+    if isinstance(v, dict):
+        return {k: resolve_env(val) for k, val in v.items()}
+    return v
+
+memcord_path = env_vals.get("MEMCORD_PYTHON_PATH", "")
+memcord_available = bool(memcord_path and os.path.exists(memcord_path))
 
 with open(sys.argv[1]) as f:
     example = json.load(f)
@@ -359,21 +392,62 @@ with open(sys.argv[2]) as f:
 
 src_mcps = example.get("mcp", {})
 
-extracted_path = os.path.join(os.path.dirname(sys.argv[1]), "extracted_user_mcps.json")
+extracted_path = sys.argv[3]
 if os.path.exists(extracted_path):
     with open(extracted_path) as f:
         user_mcps = json.load(f).get("mcp", {})
         for name, config in user_mcps.items():
+            if name in REMOVED_SERVERS:
+                continue
             if name not in src_mcps:
                 src_mcps[name] = config
 
 tgt_mcps = target.get("mcp", {})
 
-for name, config in src_mcps.items():
+# Remove deprecated MCPs from target
+for name in REMOVED_SERVERS:
     if name in tgt_mcps:
-        print(f"SKIP:{name}")
+        del tgt_mcps[name]
+        print(f"REMOVE:{name}")
+
+# Normalize legacy injected schema (command+args+env) to OpenCode schema
+for name, cfg in list(tgt_mcps.items()):
+    if not isinstance(cfg, dict):
+        continue
+    if "type" in cfg and "command" in cfg and isinstance(cfg["command"], list):
+        continue
+    cmd = cfg.get("command")
+    args = cfg.get("args", [])
+    env = cfg.get("environment") or cfg.get("env") or {}
+    if isinstance(cmd, str):
+        merged_cmd = [cmd] + (args if isinstance(args, list) else [])
+        normalized = {
+            "type": "local",
+            "enabled": cfg.get("enabled", True),
+            "command": resolve_env(merged_cmd),
+        }
+        if isinstance(env, dict) and env:
+            normalized["environment"] = resolve_env(env)
+        tgt_mcps[name] = normalized
+        print(f"MIGRATE:{name}")
+
+for name, config in src_mcps.items():
+    if name in REMOVED_SERVERS:
+        continue
+    if name == "memcord" and not memcord_available:
+        if name in tgt_mcps:
+            del tgt_mcps[name]
+            print("REMOVE:memcord")
+        print("SKIP_UNAVAILABLE:memcord")
+        continue
+    if name in tgt_mcps:
+        if name == "memcord":
+            tgt_mcps[name] = resolve_env(config)
+            print("UPDATE:memcord")
+        else:
+            print(f"SKIP:{name}")
     else:
-        tgt_mcps[name] = config
+        tgt_mcps[name] = resolve_env(config)
         print(f"ADD:{name}")
 
 target["mcp"] = tgt_mcps
@@ -428,6 +502,7 @@ install_codex() {
     # Codex uses TOML — expand env vars in template and append new servers
     python3 - "${TEMPLATES_DIR}/mcp-codex.toml" "${CODEX_TOML}" "${CENTRAL_ENV}" << 'PYEOF'
 import sys, os, re
+REMOVED_SERVERS = {"grep_app", "web_search", "StitchMCP", "stitchmcp"}
 
 env_vals = {}
 env_path = sys.argv[3]
@@ -448,15 +523,28 @@ with open(sys.argv[1]) as f:
 with open(sys.argv[2]) as f:
     existing = f.read()
 
+# Remove deprecated server blocks from existing config
+for server in REMOVED_SERVERS:
+    pattern = rf'\n?\[mcp_servers\.{re.escape(server)}\][\s\S]*?(?=\n\[mcp_servers\.|\Z)'
+    if re.search(pattern, existing):
+        existing = re.sub(pattern, '\n', existing).rstrip() + '\n'
+        print(f"REMOVE:{server}")
+
 # Find which servers already exist
 existing_servers = set(re.findall(r'\[mcp_servers\.(\w[\w-]*)\]', existing))
 template_blocks = re.split(r'(?=^\[mcp_servers\.)', template, flags=re.MULTILINE)
+
+memcord_path = env_vals.get("MEMCORD_PYTHON_PATH", "")
+memcord_available = bool(memcord_path and os.path.exists(memcord_path))
 
 added = []
 for block in template_blocks:
     m = re.match(r'\[mcp_servers\.(\w[\w-]*)\]', block)
     if not m: continue
     name = m.group(1)
+    if name == "memcord" and not memcord_available:
+        print("SKIP_UNAVAILABLE:memcord")
+        continue
     if name in existing_servers:
         print(f"SKIP:{name}")
     else:
@@ -471,7 +559,7 @@ if added:
 PYEOF
 }
 
-# ========== GENERIC mcpServers INSTALLER ==========
+# ========== GENERIC JSON MCP INSTALLER ==========
 # Used by: Antigravity, Cursor, Windsurf, Gemini CLI, Claude Code, Kilo, Factory
 install_mcpservers_platform() {
     local label="$1" dir="$2" target_file="$3" template="$4"
@@ -483,7 +571,11 @@ install_mcpservers_platform() {
     fi
 
     if [[ ! -f "${target_file}" ]]; then
-        echo '{"mcpServers": {}}' > "${target_file}"
+        if [[ "$(basename "${template}")" == "mcp-kilo.json" ]]; then
+            echo '{"mcp": {}}' > "${target_file}"
+        else
+            echo '{"mcpServers": {}}' > "${target_file}"
+        fi
         echo -e "  ${YELLOW}[!]${NC} Created new $(basename "${target_file}")"
     fi
 
@@ -515,17 +607,47 @@ try:
     with open(sys.argv[2]) as f:
         target = json.load(f)
 
-    src = template.get("mcpServers", {})
-    tgt = target.get("mcpServers", {})
+    REMOVED_SERVERS = {"grep_app", "web_search", "StitchMCP", "stitchmcp"}
+
+    if "mcpServers" in template and isinstance(template["mcpServers"], dict):
+        key = "mcpServers"
+    elif "mcp" in template and isinstance(template["mcp"], dict):
+        key = "mcp"
+    else:
+        raise ValueError("Template must contain either 'mcpServers' or 'mcp' object")
+
+    src = template.get(key, {})
+    tgt = target.get(key, {})
+
+    if not isinstance(tgt, dict):
+        tgt = {}
+
+    for name in REMOVED_SERVERS:
+        if name in tgt:
+            del tgt[name]
+            print(f"REMOVE:{name}")
+
+    memcord_path = env_vals.get("MEMCORD_PYTHON_PATH", "")
+    memcord_available = bool(memcord_path and os.path.exists(memcord_path))
 
     for name, config in src.items():
+        if name == "memcord" and not memcord_available:
+            if name in tgt:
+                del tgt[name]
+                print("REMOVE:memcord")
+            print("SKIP_UNAVAILABLE:memcord")
+            continue
         if name in tgt:
-            print(f"SKIP:{name}")
+            if name == "memcord":
+                tgt[name] = resolve_deep(config)
+                print("UPDATE:memcord")
+            else:
+                print(f"SKIP:{name}")
         else:
             tgt[name] = resolve_deep(config)
             print(f"ADD:{name}")
 
-    target["mcpServers"] = tgt
+    target[key] = tgt
     with open(sys.argv[2], "w") as f:
         json.dump(target, f, indent=2)
 except Exception as e:
@@ -552,8 +674,14 @@ for platform in "${PLATFORMS[@]}"; do
     while IFS= read -r line; do
         if [[ "${line}" == ADD:* ]]; then
             echo -e "    ${GREEN}[✓]${NC} Added: ${BOLD}${line#ADD:}${NC}"
+        elif [[ "${line}" == UPDATE:* ]]; then
+            echo -e "    ${GREEN}[✓]${NC} Updated: ${BOLD}${line#UPDATE:}${NC}"
         elif [[ "${line}" == SKIP:* ]]; then
             echo -e "    ${CYAN}[~]${NC} Already exists: ${line#SKIP:}"
+        elif [[ "${line}" == REMOVE:* ]]; then
+            echo -e "    ${YELLOW}[-]${NC} Removed: ${line#REMOVE:}"
+        elif [[ "${line}" == SKIP_UNAVAILABLE:* ]]; then
+            echo -e "    ${YELLOW}[!]${NC} Skipped unavailable: ${line#SKIP_UNAVAILABLE:}"
         elif [[ -n "${line}" ]]; then
             echo -e "    ${line}"
         fi
@@ -612,3 +740,13 @@ echo -e "  ${YELLOW}LEMBRETE:${NC} Se você não preencheu as chaves de API aind
 echo -e "  edite o arquivo: ${CYAN}${CENTRAL_ENV}${NC}"
 echo -e "  ${DIM}(Ele foi gerado a partir do .env.example do repositório)${NC}"
 echo ""
+
+# =============================================================================
+# Step 6: MCP client health check
+# =============================================================================
+HEALTH_CHECK_SCRIPT="${SCRIPT_DIR}/maintenance/test-mcp-clients.sh"
+if [[ -x "${HEALTH_CHECK_SCRIPT}" ]]; then
+    echo -e "  ${BOLD}Running MCP client health check...${NC}"
+    echo ""
+    "${HEALTH_CHECK_SCRIPT}" || true
+fi

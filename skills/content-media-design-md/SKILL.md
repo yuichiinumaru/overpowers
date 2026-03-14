@@ -1,9 +1,12 @@
 ---
 name: design-md
-description: Analyze Stitch projects and synthesize a semantic design system into DESIGN.md files
+description: Analyze Stitch projects and synthesize a semantic design system into
+  DESIGN.md files
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Stitch DESIGN.md Skill
 

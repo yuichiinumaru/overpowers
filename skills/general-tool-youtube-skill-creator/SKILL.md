@@ -1,9 +1,13 @@
 ---
 name: youtube-skill-creator
-description: Analisa vídeos do YouTube sequencialmente para identificar oportunidades de criação ou atualização de skills de agentes. Use para minerar procedimentos úteis de canais de tecnologia, tutoriais e documentações em vídeo.
+description: Analisa vídeos do YouTube sequencialmente para identificar oportunidades
+  de criação ou atualização de skills de agentes. Use para minerar procedimentos úteis
+  de canais de tecnologia, tutoriais e documentações em vídeo.
 tags:
 - general
 - tool
+version: 1.0.0
+category: general
 ---
 # YouTube Skill Creator
 

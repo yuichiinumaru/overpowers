@@ -4,6 +4,8 @@ description: Develop native iOS applications with Swift/SwiftUI. Masters iOS 18,
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Ios Developer
 

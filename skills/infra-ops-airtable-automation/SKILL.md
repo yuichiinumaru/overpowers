@@ -1,9 +1,12 @@
 ---
 name: airtable-automation
-description: 'Automate Airtable tasks via Rube MCP (Composio): records, bases, tables, fields, views. Always search tools first for current schemas.'
+description: 'Automate Airtable tasks via Rube MCP (Composio): records, bases, tables,
+  fields, views. Always search tools first for current schemas.'
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Airtable Automation via Rube MCP
 

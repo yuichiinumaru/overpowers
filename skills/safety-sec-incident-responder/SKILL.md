@@ -4,6 +4,8 @@ description: Expert SRE incident responder specializing in rapid problem
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Incident Responder
 

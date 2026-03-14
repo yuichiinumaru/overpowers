@@ -1,9 +1,13 @@
 ---
 name: infographic-item-creator
-description: Generate or update infographic Item components for this repo (TypeScript/TSX in src/designs/items). Use when asked to design, implement, or modify data item visuals, layout logic, or registerItem composites.
+description: Generate or update infographic Item components for this repo (TypeScript/TSX
+  in src/designs/items). Use when asked to design, implement, or modify data item
+  visuals, layout logic, or registerItem composites.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Infographic Item Generator
 

@@ -1,9 +1,15 @@
 ---
 name: accessibility
-description: Accessibility guidelines for VS Code features — covers accessibility help dialogs, accessible views, verbosity settings, accessibility signals, ARIA alerts/status announcements, keyboard navigation, and ARIA labels/roles. Applies to both new interactive UI surfaces and updates to existing features. Use when creating new UI or updating existing UI features.
+description: Accessibility guidelines for VS Code features — covers accessibility
+  help dialogs, accessible views, verbosity settings, accessibility signals, ARIA
+  alerts/status announcements, keyboard navigation, and ARIA labels/roles. Applies
+  to both new interactive UI surfaces and updates to existing features. Use when creating
+  new UI or updating existing UI features.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Accessibility
 

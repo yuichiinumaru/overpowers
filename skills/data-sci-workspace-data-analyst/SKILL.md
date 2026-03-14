@@ -4,6 +4,8 @@ description: Analyze CSV files in the workspace and summarize insights.
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Workspace Data Analyst
 

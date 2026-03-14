@@ -1,9 +1,13 @@
 ---
 name: arxiv-pattern-discovery
-description: Search arXiv for academic papers describing agentic AI patterns. Use when user asks to find new patterns from academic literature, search arXiv, discover patterns from papers, or review academic sources for pattern extraction.
+description: Search arXiv for academic papers describing agentic AI patterns. Use
+  when user asks to find new patterns from academic literature, search arXiv, discover
+  patterns from papers, or review academic sources for pattern extraction.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # arXiv Pattern Discovery
 

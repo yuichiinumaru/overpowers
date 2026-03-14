@@ -1,6 +1,7 @@
 ---
 name: slack
-description: Use when you need to control Slack from Moltbot via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.
+description: Use when you need to control Slack from Moltbot via the slack tool, including
+  reacting to messages or pinning/unpinning items in Slack channels or DMs.
 tags:
 - frontend
 - web
@@ -10,6 +11,8 @@ metadata:
     requires:
       config:
       - channels.slack
+version: 1.0.0
+category: general
 ---
 # Slack Actions
 

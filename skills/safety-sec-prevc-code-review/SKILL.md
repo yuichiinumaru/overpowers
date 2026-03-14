@@ -4,6 +4,8 @@ description: Reviews code changes for quality and best practices
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Code Review
 

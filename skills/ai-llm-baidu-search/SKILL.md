@@ -1,9 +1,12 @@
 ---
 name: baidu-search
-description: Search the web using Baidu AI Search Engine (BDSE). Use for live information, documentation, or research topics.
+description: Search the web using Baidu AI Search Engine (BDSE). Use for live information,
+  documentation, or research topics.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Baidu Search
 

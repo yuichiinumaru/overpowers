@@ -1,10 +1,15 @@
 ---
 name: error-analysis
-description: >
-  Help the user systematically identify and categorize failure modes in an LLM
-  pipeline by reading traces. Use when starting a new eval project, after
-  significant pipeline changes (new features, model switches, prompt rewrites),
-  when production metrics drop, or after incidents.
+description: Help the user systematically identify and categorize failure modes in
+  an LLM pipeline by reading traces. Use when starting a new eval project, after significant
+  pipeline changes (new features, model switches, prompt rewrites), when production
+  metrics drop, or after incidents.
+version: 1.0.0
+category: general
+tags:
+- analysis
+- error
+- general
 ---
 
 # Error Analysis

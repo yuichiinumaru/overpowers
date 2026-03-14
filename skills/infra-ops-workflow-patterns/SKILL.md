@@ -4,6 +4,8 @@ description: Use this skill when implementing tasks according to Conductor's TDD
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Workflow Patterns
 

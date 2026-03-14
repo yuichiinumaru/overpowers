@@ -2,25 +2,22 @@
 # =============================================================================
 # deploy-to-windsurf.sh
 # =============================================================================
-# Creates symbolic links from the Overpowers repository into Windsurf
+# Creates symbolic links from the Overpowers repository into Windsurf.
 # Note: Windsurf reads skills from ~/.agents/skills
 # =============================================================================
 
 set -euo pipefail
 
-WINDSURF_DIR="${HOME}/.codeium/windsurf"
-AGENTS_DIR="${HOME}/.agents"
+# --- Core Setup ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+source "${SCRIPT_DIR}/utils/deploy-utils.sh"
+setup_deploy_env "Windsurf" "${HOME}/.codeium/windsurf"
 
-source "${SCRIPT_DIR}/utils/create-symlinks.sh"
+# --- Deployment ---
+print_deploy_banner
 
-echo ""
-echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
-echo -e "${CYAN}  Overpowers → Windsurf Deployment Script${NC}"
-echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
-echo ""
-
+# Windsurf uses ~/.agents for skills
+AGENTS_DIR="${HOME}/.agents"
 mkdir -p "${AGENTS_DIR}"
 declare -a SYMLINKS=(
     "skills:skills"
@@ -28,6 +25,5 @@ declare -a SYMLINKS=(
 
 create_symlinks "${AGENTS_DIR}" "${SYMLINKS[@]}"
 
-echo ""
-echo -e "${GREEN}  Windsurf Deployment complete! (using ~/.agents/)${NC}"
-echo ""
+# --- Summary ---
+print_deploy_summary "${AGENTS_DIR}"

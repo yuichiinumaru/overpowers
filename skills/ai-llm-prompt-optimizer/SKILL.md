@@ -1,10 +1,17 @@
 ---
 name: prompt-optimizer
-description: This skill should be used when users request help optimizing, improving, or refining their prompts or instructions for AI models. Use this skill when users provide vague, unclear, or poorly structured prompts and need assistance transforming them into clear, effective, and well-structured instructions that AI models can better understand and execute. This skill applies comprehensive prompt engineering best practices to enhance prompt quality, clarity, and effectiveness.
+description: This skill should be used when users request help optimizing, improving,
+  or refining their prompts or instructions for AI models. Use this skill when users
+  provide vague, unclear, or poorly structured prompts and need assistance transforming
+  them into clear, effective, and well-structured instructions that AI models can
+  better understand and execute. This skill applies comprehensive prompt engineering
+  best practices to enhance prompt quality, clarity, and effectiveness.
 tags:
 - ai
 - llm
 license: Complete terms in LICENSE.txt
+version: 1.0.0
+category: general
 ---
 # Prompt Optimizer
 

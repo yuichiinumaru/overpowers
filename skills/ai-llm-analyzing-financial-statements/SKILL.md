@@ -1,9 +1,12 @@
 ---
 name: analyzing-financial-statements
-description: This skill calculates key financial ratios and metrics from financial statement data for investment analysis
+description: This skill calculates key financial ratios and metrics from financial
+  statement data for investment analysis
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Financial Ratio Calculator Skill
 

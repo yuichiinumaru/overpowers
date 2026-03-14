@@ -1,6 +1,7 @@
 ---
 name: nano-banana-art-generator
-description: Integrates Nano Banana Pro (v3) as an image generation skill within Claude/Agent workspaces to create highly customized, brand-consistent graphics from text content.
+description: Integrates Nano Banana Pro (v3) as an image generation skill within Claude/Agent
+  workspaces to create highly customized, brand-consistent graphics from text content.
 tags:
 - ai
 - llm
@@ -9,6 +10,7 @@ color: null
 tools:
   bash: true
   read: true
+version: 1.0.0
 ---
 # Nano Banana Art Generator Skill
 

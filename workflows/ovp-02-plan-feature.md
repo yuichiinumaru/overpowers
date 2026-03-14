@@ -11,14 +11,21 @@ argument-hint: Path to the feature-plan.md document
 
 ## Actions
 
-1. **Consume Plan**: Read the specific `docs/tasks/nnnn-...-feature-plan.md`.
+1. **Context Initialization (Explicit Memory Read)**: 
+   - Read `.agents/continuity-<agent-name>.md` and check `.agents/memories/` to ensure alignment with the broader project direction before technical mapping.
 
-2. **Consult Architecture**: Read `AGENTS.md` and any global technical designs to ensure this feature adheres to the system's established patterns.
+2. **Consume Plan**: Read the specific `docs/tasks/nnnn-...-feature-plan.md`.
 
-3. **Design Architecture (Feature Level)**:
+3. **Consult Architecture**: Read `AGENTS.md` and any global technical designs to ensure this feature adheres to the system's established patterns.
+
+4. **Design Architecture (Feature Level)**: 
    - Detail the specific components, files, and functions that need to be created or modified.
    - Detail local logic flows, localized DB schema updates, and specific API endpoints.
 
-4. **Verify Alignment**: Ensure the proposed design does not violate existing architectural rules.
+5. **Verify Alignment**: Ensure the proposed design does not violate existing architectural rules.
 
-5. **Output Design**: Generate the structural definition inside `docs/tasks/nnnn-type-subtype-[name]-technical-design.md`.
+6. **Output Design**: Generate the structural definition inside `docs/tasks/nnnn-type-subtype-[name]-technical-design.md`.
+
+7. **Memory Synchronization (Explicit Memory Update)**: 
+   - Update `.agents/continuity-<agent-name>.md` to record the completion of the technical design.
+   - Use Serena to persist any architectural discovery to `.agents/memories/`.

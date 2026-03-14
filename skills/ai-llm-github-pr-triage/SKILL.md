@@ -1,9 +1,14 @@
 ---
 name: github-pr-triage
-description: 'Triage GitHub Pull Requests with streaming analysis. CRITICAL: 1 PR = 1 background task. Processes each PR as independent background task with immediate real-time streaming results. Conservative auto-close. Triggers: ''triage PRs'', ''analyze PRs'', ''PR cleanup''.'
+description: 'Triage GitHub Pull Requests with streaming analysis. CRITICAL: 1 PR
+  = 1 background task. Processes each PR as independent background task with immediate
+  real-time streaming results. Conservative auto-close. Triggers: ''triage PRs'',
+  ''analyze PRs'', ''PR cleanup''.'
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # GitHub PR Triage Specialist (Streaming Architecture)
 

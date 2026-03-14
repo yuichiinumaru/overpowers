@@ -1,9 +1,12 @@
 ---
 name: xiaohongshu-recruiter
-description: 用于在小红书上发布高质量的 AI 相关岗位招聘帖子。包含自动生成极客风格的招聘封面图和详情图，并提供自动化发布脚本。当用户需要发布招聘信息、寻找 Agent 设计师或其他 AI 领域人才时使用。
+description: 用于在小红书上发布高质量的 AI 相关岗位招聘帖子。包含自动生成极客风格的招聘封面图和详情图，并提供自动化发布脚本。当用户需要发布招聘信息、寻找
+  Agent 设计师或其他 AI 领域人才时使用。
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Xiaohongshu Recruiter (小红书招聘助手)
 

@@ -11,14 +11,21 @@ argument-hint: Project idea or path to a master planning document
 
 ## Actions
 
-1. **Understand Input**: Review the raw idea or initial pitch document from the user.
+1. **Context Initialization (Explicit Memory Read)**: 
+   - Read `.agents/continuity-<agent-name>.md` and check `.agents/memories/` to align with the current project state and strategic focus.
 
-2. **Interview User (Macro Level)**: Ask clarifying questions to extract:
+2. **Understand Input**: Review the raw idea or initial pitch document from the user.
+
+3. **Interview User (Macro Level)**: Ask clarifying questions to extract:
    - **Core Value Proposition**: The overarching goal of the system.
    - **Major Epics/Modules**: Identify the big moving parts of the project.
    - **Minimum Viable Product (MVP)**: What must be included in v1.0 and what can be deferred.
 
-3. **Format & Save**: 
+4. **Format & Save**: 
    - Collate the information and create a master planning document, typically `0000-project-master-plan.md` or a comprehensive feature plan.
    - Outline the distinct features that will later require their own individual `01-specify-feature` workflows.
    - **CRITICAL**: No code is to be generated or modified during this stage.
+
+5. **Memory Synchronization (Explicit Memory Update)**: 
+   - Update `.agents/continuity-<agent-name>.md` to record the start of this project and the creation of the master plan.
+   - Persist foundational insights to `.agents/memories/` via Serena.

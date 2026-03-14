@@ -1,52 +1,49 @@
 ---
 name: webinar-funnel-strategy
-description: Procedimento passo a passo para estruturar um funil de vendas baseado em Webinários (Aulas ao Vivo ou Gravadas).
+description: Step-by-step procedure to structure a sales funnel based on Webinars
+  (Live or Recorded sessions).
 tags:
 - growth
 - biz
+version: 1.0.0
+category: business
 ---
-# Estratégias Avançadas para Webinários
+# Webinar Sales Funnel
 
-Este guia documenta o workflow e técnicas de otimização de funil de vendas através de webinários.
+A webinar funnel is designed to build high authority and trust by delivering educational content before making a high-ticket offer.
 
-## Contexto
-O webinário (ou Masterclass) é um evento digital projetado para educar o lead sobre um problema e vender uma solução (infoproduto ou serviço high ticket) ao final. 
+## Workflow (Step-by-Step)
 
-## Workflow de Webinário (Passo a Passo)
+### Step 1: Lead Acquisition (Traffic)
+- **Objective:** Register users for the event.
+- **Landing Page:** Minimalist, focusing on the date, time, and the "Big Promise" of the class.
+- **Ads:** Focus on the transformation the user will experience during the free class.
 
-### Passo 1: Aquisição de Leads (Tráfego)
-- **Campanhas:** Criar anúncios focados na "Grande Promessa" (A dor principal ou o desejo).
-- **Página de Captura (Landing Page):** Deve conter Título forte, Data do evento, e um formulário simples (Nome, Email, WhatsApp).
-- **Ação Pós-Cadastro:** Redirecionar para uma Thank You Page convidando para o Grupo de WhatsApp VIP.
+### Step 2: Warm-up and Reminders (Indoctrination)
+- **Goal:** Ensure the lead actually shows up.
+- **Channels:** Email sequence and WhatsApp/Telegram groups.
+- **Content:** Send social proof, common objections, and "Save the Date" reminders.
 
-### Passo 2: Aquecimento e Lembretes (Indoctrination)
-- **Canais:** E-mail marketing e WhatsApp.
-- **Cadência:**
-  - Imediato: Confirmação e link para adicionar ao calendário.
-  - D-3 (3 dias antes): Conteúdo de antecipação (ex: estudo de caso).
-  - D-1 (1 dia antes): O que preparar para a aula.
-  - Dia do Evento: Aviso de manhã, 1h antes, 15 min antes e "Estamos ao vivo".
+### Step 3: Webinar Structure (The Pitch)
+1. **Hook (0-5 min):** Capture attention immediately.
+2. **Story (5-15 min):** Your journey and "why" you are teaching this.
+3. **Content (15-45 min):** Deliver 3 main secrets or "Aha!" moments.
+4. **Transition (45-50 min):** Link the content to your paid product.
+5. **Offer/Pitch (50-60 min):** Reveal the price, bonuses, and guarantee.
 
-### Passo 3: Estrutura do Webinário (Pitch)
-- **Abertura (10-15 min):** Boas-vindas, gancho de atenção, promessa do que será ensinado, e história de conexão do especialista.
-- **Conteúdo (30-45 min):** Entrega de valor real. Quebra de falsas crenças. Ensine o "O quê" e o "Por que", mas guarde o "Como detalhado" para o produto.
-- **Transição para Venda (5 min):** "Se você quer minha ajuda para implementar isso...".
-- **Pitch e Oferta (15-20 min):** Apresentação do produto, ancoragem de preço, bônus, garantia e call to action clara.
-- **Q&A (Perguntas e Respostas):** Quebra de objeções ao vivo.
+### Step 4: Post-Event Follow-up (Recovery)
+- Send the replay link (limited time).
+- Specific sequence for "Clicked but didn't buy".
+- Direct contact for high-ticket closing.
 
-### Passo 4: Follow-up Pós-Evento (Recuperação)
-- **Envio de Replay:** Enviar a gravação (opcional, com escassez de 24-48h).
-- **Remoção de Objeções:** Sequência de e-mails abordando Garantia, ROI, Tempo, Suporte.
-- **Fechamento do Carrinho:** Último aviso de escassez (ex: "As inscrições encerram hoje às 23h59").
-
-## Avaliação Scorecard (ROI)
-- Frequência/Volume: 1
-- Repetitividade: 2
-- Regra Clara: 2
-- Estabilidade: 1
-- Entradas Padronizadas: 2
-- Complexidade: 1
-- Testabilidade: 2
-- Reuso/Portabilidade: 2
-- Segurança/Risco: 2
-- **TOTAL:** 15 (Candidato Aprovado)
+## Scorecard Evaluation (ROI)
+- Frequency/Volume: 2
+- Repetitivity: 1
+- Clear Rule: 2
+- Stability: 2
+- Standardized Inputs: 2
+- Complexity: 2
+- Testability: 2
+- Reuse/Portability: 2
+- Security/Risk: 2
+- **TOTAL:** 17 (Approved Candidate)

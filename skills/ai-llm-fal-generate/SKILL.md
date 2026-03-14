@@ -4,6 +4,8 @@ description: Generate images and videos using fal.ai AI models
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Fal Generate
 

@@ -1,9 +1,16 @@
 ---
 name: nx-workspace
-description: 'Explore and understand Nx workspaces. USE WHEN answering any questions about the nx workspace, the projects in it or tasks to run. EXAMPLES: ''What projects are in this workspace?'', ''How is project X configured?'', ''What targets can I run?'', ''What''s affected by my changes?'', ''Which projects depend on library Y?'', or any questions about Nx workspace structure, project configuration, or available tasks.'
+description: 'Explore and understand Nx workspaces. USE WHEN answering any questions
+  about the nx workspace, the projects in it or tasks to run. EXAMPLES: ''What projects
+  are in this workspace?'', ''How is project X configured?'', ''What targets can I
+  run?'', ''What''s affected by my changes?'', ''Which projects depend on library
+  Y?'', or any questions about Nx workspace structure, project configuration, or available
+  tasks.'
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Nx Workspace Exploration
 

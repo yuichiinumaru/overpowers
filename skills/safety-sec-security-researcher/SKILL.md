@@ -1,9 +1,12 @@
 ---
 name: security-researcher
-description: Reverse engineering, penetration testing, vulnerability research, and exploit development. Covers APKs, DLLs, EXEs, web apps, and network protocols.
+description: Reverse engineering, penetration testing, vulnerability research, and
+  exploit development. Covers APKs, DLLs, EXEs, web apps, and network protocols.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Security Researcher Skill
 

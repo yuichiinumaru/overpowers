@@ -1,11 +1,17 @@
 ---
 name: write-judge-prompt
-description: >
-  Design LLM-as-Judge evaluators for subjective criteria that code-based checks
-  cannot handle. Use when a failure mode requires interpretation (tone,
-  faithfulness, relevance, completeness). Do NOT use when the failure mode can be
-  checked with code (regex, schema validation, execution tests). Do NOT use when
-  you need to validate or calibrate the judge — use validate-evaluator instead.
+description: Design LLM-as-Judge evaluators for subjective criteria that code-based
+  checks cannot handle. Use when a failure mode requires interpretation (tone, faithfulness,
+  relevance, completeness). Do NOT use when the failure mode can be checked with code
+  (regex, schema validation, execution tests). Do NOT use when you need to validate
+  or calibrate the judge — use validate-evaluator instead.
+version: 1.0.0
+category: general
+tags:
+- general
+- judge
+- prompt
+- write
 ---
 
 # Write LLM-as-Judge Prompt

@@ -4,6 +4,8 @@ description: Search Mathlib for lemmas by type signature pattern
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Loogle Search - Mathlib Type Signature Search
 

@@ -1,9 +1,12 @@
 ---
 name: blog-post
-description: Use this skill when writing long-form blog posts, tutorials, or educational articles that require structure, depth, and SEO considerations
+description: Use this skill when writing long-form blog posts, tutorials, or educational
+  articles that require structure, depth, and SEO considerations
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Blog Post Writing Skill
 

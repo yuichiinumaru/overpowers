@@ -10,10 +10,10 @@
 ## 🛑 PROTOCOL ZERO: CENTRALIZED CONTINUITY
 **EXECUTE THIS BEFORE DOING ANYTHING ELSE.**
 
-1.  **READ**: Open "continuity.md" in this directory.
+1.  **READ**: Open `.agents/continuity-<agent-name>.md` in the project root.
     * This is the **Session Ledger**. It tracks current focus and pending tasks.
 2.  **ALIGN**: Confirm your understanding of the "Current Focus".
-3.  **UPDATE**: At session end, update "continuity.md" with the new state.
+3.  **UPDATE**: At session end, update `.agents/continuity-<agent-name>.md` with the new state.
 
 ---
 
@@ -135,7 +135,7 @@ Every modification to this repository **MUST** be accompanied by an entry in "CH
 * **NEVER** modify "skills-core.js" without testing.
 
 ### 🟢 ALWAYS (Autonomous)
-* **ALWAYS** update "continuity.md" before finishing a session.
+* **ALWAYS** update `.agents/continuity-<agent-name>.md` before finishing a session.
 * **ALWAYS** add a changelog entry for any modification.
 * **ALWAYS** test plugins with "opencode --debug" after changes.
 
@@ -227,4 +227,4 @@ python3 fix-skill-names.py
 
 ---
 
-> **FINAL REMINDER**: Read "continuity.md" now. Update "CHANGELOG.md" before committing.
+> **FINAL REMINDER**: Read ".agents/continuity-<agent-name>.md" now. Update "CHANGELOG.md" before committing.

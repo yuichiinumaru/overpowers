@@ -4,6 +4,8 @@ description: Recommend a POI in a city (schema + deterministic result).
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # recommend_poi
 

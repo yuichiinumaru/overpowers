@@ -1,9 +1,13 @@
 ---
 name: test-fixing
-description: Run tests and systematically fix all failing tests using smart error grouping. Use when user asks to fix failing tests, mentions test failures, runs test suite and failures occur, or requests to make tests pass.
+description: Run tests and systematically fix all failing tests using smart error
+  grouping. Use when user asks to fix failing tests, mentions test failures, runs
+  test suite and failures occur, or requests to make tests pass.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Test Fixing
 

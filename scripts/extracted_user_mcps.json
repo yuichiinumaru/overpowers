@@ -1,0 +1,108 @@
+{
+    "mcp": {
+        "serena": {
+            "command": "/home/sephiroth/anaconda3/bin/uvx",
+            "args": [
+                "--from",
+                "/home/sephiroth/Work/overpowers/packages/serena",
+                "serena",
+                "start-mcp-server",
+                "--context",
+                "ide-assistant"
+            ],
+            "env": {}
+        },
+        "context7": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@upstash/context7-mcp"
+            ],
+            "env": {
+                "CONTEXT7_API_KEY": "ctx7sk-a68e3ca3-97d4-4edb-8f9f-66a32c1c4c25"
+            }
+        },
+        "StitchMCP": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "mcp-remote",
+                "https://stitch.googleapis.com/mcp",
+                "--header",
+                "X-Goog-Api-Key: AQ.Ab8RN6IazBJW5688d69zyHwT5dGR2vJ1Zd_vY2URG_lgfr_gGA"
+            ],
+            "env": {}
+        },
+        "memcord": {
+            "command": "/home/sephiroth/anaconda3/bin/uv",
+            "args": [
+                "--directory",
+                "/home/sephiroth/.config/opencode/mcp/memcord",
+                "run",
+                "memcord",
+                "server"
+            ],
+            "env": {
+                "MEMCORD_ENABLE_ADVANCED": "true"
+            }
+        },
+        "hyperbrowser": {
+            "command": "npx",
+            "args": [
+                "--yes",
+                "hyperbrowser-mcp"
+            ],
+            "env": {
+                "HYPERBROWSER_API_KEY": "hb_a914a2f6cbc7234db880516e16a3, hb_1b423bb8fe6\\be2c1851a4dbefc7f"
+            }
+        },
+        "genkit-mcp-server": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "genkit-cli@^1.28.0",
+                "mcp",
+                "--explicitProjectRoot",
+                "--no-update-notification",
+                "--non-interactive"
+            ],
+            "env": {}
+        },
+        "vibe_check": {
+            "command": "node",
+            "args": [
+                "/home/sephiroth/Work/overpowers/packages/vibe-check-mcp-server/build/index.js"
+            ],
+            "env": {
+                "GEMINI_API_KEY": "AIzaSyD3ZkqkCnxSqHn9s8WF0mY0WbtG1nI_-eM, AIzaSyCS8zn5JVVOhGfPTta73TGAE65vTWMHZnE, AIzaSyDSLOgeRnYOrYykHDPl1CJpV0zdAqT_36k",
+                "MCP_TRANSPORT": "stdio"
+            }
+        },
+        "playwright_browser": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "npx",
+                "-y",
+                "@playwright/mcp@latest"
+            ]
+        },
+        "notebooklm": {
+            "type": "local",
+            "enabled": true,
+            "command": [
+                "uvx",
+                "--from",
+                "/home/sephiroth/Work/overpowers/packages/notebooklm-mcp-cli",
+                "notebooklm-mcp"
+            ]
+        },
+        "desktop_commander": {
+            "command": "node",
+            "args": [
+                "/home/sephiroth/Work/overpowers/packages/DesktopCommanderMCP/dist/index.js"
+            ],
+            "env": {}
+        }
+    }
+}

@@ -4,6 +4,8 @@ description: Publish articles to X/Twitter
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # X Article Publisher Skill
 

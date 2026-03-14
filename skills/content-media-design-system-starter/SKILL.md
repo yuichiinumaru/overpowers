@@ -1,9 +1,13 @@
 ---
 name: design-system-starter
-description: Create and evolve design systems with design tokens, component architecture, accessibility guidelines, and documentation templates. Ensures consistent, scalable, and accessible UI across products.
+description: Create and evolve design systems with design tokens, component architecture,
+  accessibility guidelines, and documentation templates. Ensures consistent, scalable,
+  and accessible UI across products.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Design System Starter
 

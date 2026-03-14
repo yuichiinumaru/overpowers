@@ -1,9 +1,12 @@
 ---
 name: data-export-pdf
-description: Create professional PDF reports with text, tables, and embedded images using reportlab. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).
+description: Create professional PDF reports with text, tables, and embedded images
+  using reportlab. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # PDF Report Generation (Universal)
 

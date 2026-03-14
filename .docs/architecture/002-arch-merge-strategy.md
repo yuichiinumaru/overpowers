@@ -22,7 +22,7 @@ The following files are touched by `integrate_references.diff` and require speci
 | :--- | :--- | :--- | :--- |
 | `AGENTS.md` | Structure Fix | Low | **Apply Patch**. The changes (Title fix, moving Safety Hooks) are benign and improve organization. |
 | `CHANGELOG.md` | Content Append | **High** | **Manual Merge**. Do NOT apply diff directly. Extract the new entry (`[2026-05-24] - BMAD Deepening Phase`) and prepend it to the current file. |
-| `continuity.md` | Log Update | **High** | **Manual Merge**. Do NOT apply diff directly. Extract the new session entry (`Session: 2026-05-24 - BMAD Deepening`) and prepend it to the current file. |
+| `.agents/continuity-<agent-name>.md` | Log Update | **High** | **Manual Merge**. Do NOT apply diff directly. Extract the new session entry (`Session: 2026-05-24 - BMAD Deepening`) and prepend it to the current file. |
 | `JULES_ARCHITECTURAL_DIGEST.md` | Deduplication | Low | **Apply Patch**. The removal of duplicate sections is safe. |
 | `workflows/game-dev/dev-story.md` | New File | None | **Create File**. |
 | `workflows/creative/problem-solving.md` | New File | None | **Create File**. |
@@ -54,7 +54,7 @@ The integration will proceed in **three phases** to ensure stability:
 *   **Rationale**: `CHANGELOG` and `continuity` are append-only ledgers. Blindly applying a diff derived from an older state would overwrite recent history.
 *   **Files**:
     *   `CHANGELOG.md`
-    *   `continuity.md`
+    *   `.agents/continuity-<agent-name>.md`
 
 ## 5. Risk Assessment
 

@@ -1,9 +1,12 @@
 ---
 name: e2e-studio-tests
-description: Run e2e tests in the Studio app. Use when asked to run e2e tests, run studio tests, playwright tests, or test the feature.
+description: Run e2e tests in the Studio app. Use when asked to run e2e tests, run
+  studio tests, playwright tests, or test the feature.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # E2E Studio Tests
 

@@ -4,6 +4,8 @@ description: Rigorous visual validation expert specializing in UI testing,
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Ui Visual Validator
 

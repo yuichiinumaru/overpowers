@@ -1,44 +1,43 @@
 ---
 name: relationship-niche-funnel
-description: Estratégia de funil especializada para produtos do nicho de relacionamentos (namoro, casamento, separação, etc).
+description: Specialized funnel strategy for products in the relationship niche (dating,
+  marriage, separation, etc.).
 tags:
 - content
 - media
+version: 1.0.0
+category: marketing
 ---
-# Funil para Nicho de Relacionamento (Dating/Marriage Niche)
+# Relationship Niche Funnel
 
-Neste documento, reunimos as melhores práticas e fluxos operacionais para vender produtos voltados ao nicho de relacionamentos. 
+Funnel optimized for high emotional engagement, common in dating and relationship recovery niches.
 
-## Contexto
-O nicho de relacionamentos é altamente emocional e muitas vezes lida com dores silenciosas ou vergonhosas. Portanto, a abordagem do marketing não pode ser corporativa ou direta demais no tráfego frio. Exige conexão profunda e anonimato percebido.
+## Workflow (Step-by-Step)
 
-## Workflow de Aquisição (Passo a Passo)
+### Step 1: Creative Ads
+- Focus on the "Core Pain" (e.g., "How to get your ex back" or "Find your partner").
+- Use curiosity-driven hooks ("The 3-word text that...")
 
-### Passo 1: Anúncios (Ads) e Criativos
-- **Evite Promessas Exageradas ("Como fazer ele voltar em 2 dias"):** Podem gerar bloqueio de conta.
-- **Use Criativos do Tipo "História" ou "Artigo":** Redirecione o tráfego para um Advertorial (blog post que parece conteúdo nativo de notícia ou revista) que conta a história de alguém com uma dor semelhante.
-- **Formato:** Vídeos com voz de depoimento real relatando como superou o divórcio ou arrumou um parceiro incrível após aplicar X.
+### Step 2: Advertorial or Long VSL
+- Since this is an emotional sale, you need a long narrative.
+- Use the **Bridge Model**: Current Pain -> The Discovery -> The Mechanism -> The Solution.
 
-### Passo 2: Advertorial ou VSL (Video Sales Letter) Longa
-- O tráfego frio deve cair preferencialmente em um VSL (vídeo de vendas sem botão de compra imediato, que só aparece após X minutos de conteúdo) ou em um Advertorial.
-- **Foco da Copy:** Criar forte identificação. O lead precisa pensar "Essa pessoa me entende". Fale dos sentimentos (ansiedade, insegurança, medo do abandono).
+### Step 3: Entry Product (Front-End)
+- **Price:** Low ($17 - $47).
+- **Format:** Digital guide or video series.
 
-### Passo 3: Produto de Entrada (Front-End) - Preço Baixo
-- Use um produto que prometa um "alívio rápido" (Quick Win) a um preço barato (ex: E-book "3 Mensagens para mandar agora que ele sumiu" por R$ 27).
-- O nicho de relacionamento converte extremamente bem por impulso de dor quando a oferta é barata e entregue na hora por e-mail (PDF).
+### Step 4: Emotional Upsells
+- **Offer:** Something that accelerates the result or provides personal support.
+- **Example:** "Private community access" or "Advanced communication templates".
 
-### Passo 4: Upsells Emocionais
-- Após o pagamento do e-book barato, ofereça imediatamente o produto principal (um curso em vídeo sobre autoestima, um guia completo de como reconstruir o casamento, etc).
-- O pitch do upsell: "Agora que você sabe o que mandar, você precisa entender as raízes do problema para que ele nunca mais se afaste..."
-
-## Avaliação Scorecard (ROI)
-- Frequência/Volume: 2
-- Repetitividade: 1
-- Regra Clara: 2
-- Estabilidade: 2
-- Entradas Padronizadas: 1
-- Complexidade: 1
-- Testabilidade: 2
-- Reuso/Portabilidade: 2
-- Segurança/Risco: 2
-- **TOTAL:** 15 (Candidato Aprovado)
+## Scorecard Evaluation (ROI)
+- Frequency/Volume: 2
+- Repetitivity: 1
+- Clear Rule: 2
+- Stability: 2
+- Standardized Inputs: 2
+- Complexity: 1
+- Testability: 2
+- Reuse/Portability: 2
+- Security/Risk: 2
+- **TOTAL:** 16 (Approved Candidate)

@@ -4,6 +4,8 @@ description: Extract frames from videos at specific timestamps using Mediabunny
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Extracting frames from videos
 

@@ -1,9 +1,14 @@
 ---
 name: competitive-analysis
-description: Research competitors and compare positioning, messaging, content strategy, and market presence. Use when analyzing a competitor, building battlecards, identifying content gaps, comparing feature messaging, or preparing competitive positioning recommendations.
+description: Research competitors and compare positioning, messaging, content strategy,
+  and market presence. Use when analyzing a competitor, building battlecards, identifying
+  content gaps, comparing feature messaging, or preparing competitive positioning
+  recommendations.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Competitive Analysis Skill
 

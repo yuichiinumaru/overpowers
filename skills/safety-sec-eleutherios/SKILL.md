@@ -1,9 +1,13 @@
 ---
 name: eleutherios
-description: Epistemic analysis infrastructure - query knowledge graphs with suppression detection, coordination signatures, and multi-perspective clustering. Local-first, no cloud dependencies.
+description: Epistemic analysis infrastructure - query knowledge graphs with suppression
+  detection, coordination signatures, and multi-perspective clustering. Local-first,
+  no cloud dependencies.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Eleutherios - Epistemic Analysis Infrastructure
 

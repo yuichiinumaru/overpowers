@@ -1,9 +1,13 @@
 ---
 name: llm-application-dev
-description: Building applications with Large Language Models - prompt engineering, RAG patterns, and LLM integration. Use for AI-powered features, chatbots, or LLM-based automation. Includes Advanced RAG and Evaluation patterns.
+description: Building applications with Large Language Models - prompt engineering,
+  RAG patterns, and LLM integration. Use for AI-powered features, chatbots, or LLM-based
+  automation. Includes Advanced RAG and Evaluation patterns.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # LLM Application Development
 

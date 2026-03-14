@@ -1,3 +1,140 @@
+## [2026-03-14] - MCP Installer Hardening for Real-World Config Drift
+### Changed
+- Hardened `scripts/install-mcps.sh` to clean legacy/disconnected servers across platforms (`StitchMCP`, `grep_app`, `web_search`).
+- Added `memcord` availability checks based on `MEMCORD_PYTHON_PATH`; installer now removes stale memcord entries and skips re-adding when unavailable.
+- Updated MCP merge behavior to support in-place server updates (`UPDATE:*`) for normalized entries.
+- Improved install output with explicit statuses for removed and unavailable MCPs.
+### Fixed
+- Eliminated post-install disconnected MCP states in Gemini CLI and OpenCode by removing stale inherited servers and unavailable memcord entries.
+- Achieved clean MCP diagnostics across `gemini mcp list`, `opencode mcp list`, and `codex mcp list` via automated end-of-install health checks.
+**Author**: Codex Architect
+
+## [2026-03-14] - Gemini Tool-Cap Optimization and MCP Health Checks
+### Changed
+- Refreshed `scripts/config/gemini-cli-agents.txt` to remove stale/renamed entries and reduce the curated Gemini list from 150 to 75 valid agents.
+- Added Rust-focused specialists (`ovp-rust_expert`, `ovp-rust_engineer`, `ovp-actix_expert`) to the Gemini curated list.
+- Updated `scripts/deploy-to-gemini-cli.sh` to stop syncing `skills` into `~/.gemini/skills`, preventing conflicts with `~/.agents/skills` under Gemini's newer discovery behavior.
+### Added
+- Added `scripts/maintenance/test-mcp-clients.sh` to run and filter MCP status issues from `gemini mcp list`, `opencode mcp list`, and `codex mcp list`.
+- Integrated MCP health check execution at the end of `scripts/install-mcps.sh`.
+### Fixed
+- Removed `grep_app` and `web_search` from all active MCP templates and installer merge paths.
+- Fixed OpenCode MCP shape incompatibility by migrating legacy entries to OpenCode-native schema during install.
+**Author**: Codex Architect
+
+## [2026-03-14] - Gemini Skill Conflict and MCP Schema Remediation
+### Changed
+- Updated `scripts/deploy-to-gemini-cli.sh` to stop deploying `skills` into `~/.gemini/skills`, preventing duplicate-skill conflicts against `~/.agents/skills`.
+- Added migration behavior in Gemini deploy to move legacy `~/.gemini/skills` to a timestamped backup directory.
+- Filled non-empty `description` frontmatter fields in six skills that were producing Codex schema warnings.
+### Fixed
+- Reworked OpenCode MCP template (`templates/configs/mcp-opencode.json`) to native OpenCode schema (`type`, `enabled`, `command[]`, `environment`).
+- Enhanced `scripts/install-mcps.sh` OpenCode installer to migrate legacy invalid MCP entries (`command` + `args` + `env`) into valid OpenCode format.
+- Removed deprecated `grep_app` and `web_search` from all MCP templates and Codex TOML template.
+- Added MCP cleanup logic to remove existing `grep_app` and `web_search` entries from installed configs during install runs.
+**Author**: Codex Architect
+
+## [2026-03-14] - Installer Cleanup (No In-Memoria Build + Leaner Banner)
+### Changed
+- Removed `In-Memoria` from `scripts/setup/build-packages.sh` Node build list so the master installer no longer attempts that package in Phase 0.
+- Removed duplicated attribution line from `install.sh` banner (`Based on overpowers by Jesse Vincent • Maintained by Yuichi Inumaru`) to keep startup output cleaner.
+**Author**: Codex Architect
+
+## [2026-03-14] - MCP Installer Path and Template Governance Corrections
+### Added
+- Added `templates/configs/mcp-opencode.json` as the canonical OpenCode MCP template source.
+### Changed
+- Moved policy template `allow-all-policy.toml` to `templates/configs/` to keep reusable templates centralized.
+- Updated `scripts/install-mcps.sh` to use `templates/configs/` as the template source of truth.
+- Updated `scripts/install-mcps.sh` to read extracted MCP data from `scripts/extracted_user_mcps.json`.
+- Updated `scripts/install-mcps.sh` Kilo target paths to `~/.kilocode/mcp.json`.
+- Updated `scripts/install-mcps.sh` argument parsing to fail fast on unknown flags and missing `--env` values.
+- Updated generic MCP JSON merge logic to support both `mcpServers` and `mcp` root schemas.
+- Reduced Antigravity MCP template payload to a smaller curated set due platform MCP limits.
+- Updated `.env.example` to remove deprecated `IN_MEMORIA_PATH` and keep Semgrep as CLI-only guidance.
+- Updated `README.md` MCP docs to reference `templates/configs/` instead of legacy `opencode-example.json`.
+- Added explicit template centralization rule in `AGENTS.md`.
+### Fixed
+- Fixed extractor invocation path in `scripts/install-mcps.sh` to `scripts/utils/extract-installed-mcps.py`.
+- Fixed `scripts/utils/extract-installed-mcps.py` OpenCode config path to `~/.config/opencode/opencode.json`.
+- Fixed default `.env.example` target path resolution in `scripts/utils/extract-installed-mcps.py`.
+- Removed deprecated `in_memoria` and MCP `semgrep` entries from MCP templates, including Codex TOML.
+- Normalized `desktop_commander` template command format by removing legacy `{env:...}` placeholders.
+**Author**: Codex Architect
+
+## [2026-03-14] - Continuity Migration Sweep Across Workflows and Templates
+### Changed
+- Completed a repository-wide migration of workflow and template references from legacy `continuity.md` to `.agents/continuity-<agent-name>.md`.
+- Updated additional workflow definitions (`ovp-start-work`, `ovp-sync-memory`, `ovp-jules-dispatch`, `ovp-agentic-execute`, `ovp-execute-plan`) and their TOML counterparts to use `.agents/` continuity paths.
+- Updated template governance docs (`templates/rules/AGENTS.md`, `templates/rules/backup-agents.md`, `templates/docs/execution-state-tracking.md`) to match the `.agents` continuity model.
+- Aligned architecture/concept docs that described continuity behavior to the new ledger path conventions.
+- Refined Task 0031 objective text to explicitly reference `.agents/continuity-*.md`.
+**Author**: Codex Architect
+
+## [2026-03-14] - Cross-Project Continuity and Runtime Guardrail Fixes
+### Changed
+- Clarified cross-project intent in `AGENTS.md` and reinforced Protocol Zero to read target-project `README.md` first.
+- Expanded `README.md` positioning to explicitly frame Overpowers as a cross-project operating layer and updated platform coverage details.
+- Updated continuity references in core workflows (`ovp-00` through `ovp-05`, `ovp-bug-fix`, `ovp-refactor`) to use `.agents/continuity-<agent-name>.md`.
+- Updated `workflows/ovp-agent-profile.md` to create/read continuity ledgers in `.agents/`.
+- Aligned Task 0031 documentation with actual implementation scanning `.agents/` for `continuity-*.md`.
+- Marked Task 0027 and Task 0028 status files as completed.
+- Updated CEO orchestration guidance with corrected `run-subagent.sh` paths.
+### Fixed
+- Restored `hooks/runtime/todo_enforcer.py` to check both `docs/tasklist.md` and continuity checklists, with `.agents/` as primary continuity location and root fallback.
+- Hardened `scripts/utils/model_selector.py` with configurable and fallback status-file paths for restricted environments.
+- Added explicit `up` action and corrected helper path output in `scripts/orchestration/sandbox-launcher.sh`.
+**Author**: Codex Architect
+
+## [2026-03-13] - Task 0032: Model Fallback System
+### Added
+- Integrated `model_selector.py` and `run-subagent.sh` for automatic model fallback and rate limit handling.
+- Updated CEO agent prompt (`ovp-000_ceo_orchestrator.md`) with complexity-aware task classification (`high`, `medium`, `low`).
+- Added complexity support to subagent execution scripts.
+- Created Feature Plan and Technical Design documents for Task 0032.
+**Author**: Nova Agent
+
+## [2026-03-13] - Task 0024: Agent Reasoning BDI Evaluation
+### Added
+- Conducted in-depth research on BDI (Belief-Desire-Intention) architectures for LLM agents.
+- Proposed hybrid Neuro-Symbolic architecture for future Overpowers orchestration.
+- Saved evaluation as persistent memory: `architecture/research/0024-bdi-evaluation`.
+**Author**: Nova Agent
+
+## [2026-03-13] - Task 0028: Memory Lifecycle Integration
+### Changed
+- Standardized explicit memory read/update operations across core Overpowers workflows (`ovp-01`, `ovp-02`, `ovp-03` series, `ovp-bug-fix`, `ovp-refactor`, and `ovp-00-setup`).
+- Added explicit steps to read `continuity.md` and `.agents/memories/` at the start of workflows.
+- Added explicit steps to update memory systems at the end of workflows.
+- Created Feature Plan and Technical Design documents for Task 0028.
+**Author**: Nova Agent
+
+## [2026-03-13] - Task 0034: Installer UX and Modularity
+### Added
+- Created `scripts/utils/deploy-utils.sh` as a common engine for all deployment scripts.
+- Upgraded `install.sh` with `gum` for a modern, interactive TUI experience.
+- Added environment validation and core tool detection to the installation process.
+### Changed
+- Refactored all 9 platform deployment scripts (`deploy-to-*.sh`) to use the unified modular engine.
+- Improved consistency across all deployment banners, summaries, and symlink mappings.
+**Author**: Epsilon Agent
+
+## [2026-03-13] - Task 0030: Omnara Monitoring
+### Added
+- Implemented Omnara Flight Recorder, a generalized PTY-based session monitor.
+- Created `services/omnara-monitoring/omnara-flight-recorder.py` for binary-safe CLI interaction logging.
+- Created `scripts/record-session.sh` helper for easy session recording.
+- Added Feature Plan and Technical Design documents for Omnara Monitoring.
+**Author**: Epsilon Agent
+
+## [2026-03-13] - Task 0026: Moltbot Memory Hybrid Search
+### Added
+- Implemented `hybridSearch` method in `MemoryIndexManager` using Reciprocal Rank Fusion (RRF).
+- Integrated `sqlite-vec` and `FTS5` for semantic and keyword-based retrieval.
+- Created Feature Plan and Technical Design documents for Moltbot Memory integration.
+- Added comprehensive test suite for hybrid search verification.
+**Author**: Epsilon Agent
+
 ## [2026-03-12] - Consolidate Jules Skills
 ### Changed
 - Consolidated `jules-harvest`, `jules-integrate`, and `jules-triage` skills into `ai-llm-jules-dispatch-login`.
@@ -214,6 +351,38 @@ All notable changes to this project will be documented in this file.
 - Implemented and deployed helper scripts for 20 skills in Batch 011 (`ai-llm-0220` to `ai-llm-0241`).
 - Created standardized Python and Bash utilities for market sizing, marketing CAC, A/B testing, MCP interactions, regulatory gap analysis, and more.
 **Author**: Overpowers Architect (Gemini CLI)
+
+## [2026-03-13] - Containerized Sandbox Implementation
+### Added
+- Implemented isolated Docker execution environment for safe code execution and research.
+- Enhanced `scripts/orchestration/sandbox-launcher.sh` with `exec` support, correct project root calculation, and automatic user mapping.
+- Created `Guide 0013: Containerized Sandbox` (`.docs/guides/guide-0013-containerized-sandbox.md`).
+- Pre-configured sandbox image with Python 3.11, Node.js 20, and Playwright dependencies.
+**Author**: omega (Agent)
+
+## [2026-03-13] - Graph-based Continuity (Mindmodel Context)
+### Added
+- Integrated agent continuity logs (`continuity-*.md`) into the Overpowers Knowledge Graph.
+- Updated `overpowers-graph-ext` indexer to support root-level continuity nodes with relationship mapping.
+- Established YAML frontmatter standard for session context tracking.
+- Created `Guide 0012: Graph-based Continuity` (`.docs/guides/guide-0012-graph-based-continuity.md`).
+**Author**: omega (Agent)
+
+## [2026-03-13] - Skill Decision Trees Standardization
+### Added
+- Created `Guide 0011: Skill Decision Trees` (`.docs/guides/guide-0011-skill-decision-trees.md`) to standardize expert decision logic within skills.
+- Established Overpowers Model Heuristics for Tier-based model selection.
+- Created reusable template for decision trees in `templates/skill-decision-tree.md`.
+- Refactored `imagegen` and `speech` skills to follow the new standardized decision matrix format.
+**Author**: omega (Agent)
+
+## [2026-03-13] - Advanced Hooks Integration (Gemini CLI)
+### Added
+- Integrated Advanced Hooks suite into `hooks/hooks.json` for native Gemini CLI support.
+- Standardized `hooks/runtime/todo_enforcer.py` to support multi-agent continuity tracking (`continuity-*.md`).
+- Enhanced `hooks/runtime/edit_guard.py` with expanded error detection patterns for robust tool recovery.
+- Updated `.docs/hooks-guide.md` with advanced monitoring and utility hooks documentation.
+**Author**: omega (Agent)
 
 ## [2026-03-04] - Advanced Hooks Implementation
 ### Added
@@ -443,7 +612,7 @@ All notable changes to this project will be documented in this file.
 - Synchronized "opencode-example.json" with the latest multi-platform configuration standards.
 
 **Author**: Overpowers Architect (Gemini CLI)
-%%%%%%% Changes from base to side #2
+00p+0nges from base to side #2
 -## [2026-03-03] - Consolidated Generic AGENTS.md Template
 -
 -### Added

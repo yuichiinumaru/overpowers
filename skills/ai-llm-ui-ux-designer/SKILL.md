@@ -4,6 +4,8 @@ description: Create interface designs, wireframes, and design systems. Masters
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Ui Ux Designer
 

@@ -1,9 +1,12 @@
 ---
 name: gsea-enrichment-analysis
-description: Gene set enrichment analysis with correct geneset format handling. Critical guidance for loading pathway databases and running enrichment in OmicVerse.
+description: Gene set enrichment analysis with correct geneset format handling. Critical
+  guidance for loading pathway databases and running enrichment in OmicVerse.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # GSEA and Pathway Enrichment Analysis
 

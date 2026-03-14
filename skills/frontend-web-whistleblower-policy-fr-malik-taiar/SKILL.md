@@ -1,9 +1,15 @@
 ---
 name: whistleblower-policy-fr-malik-taiar
-description: Guide pour (a) évaluer la conformité d'un dispositif lanceur d'alerte existant ou (b) rédiger une politique de signalement conforme sur la base d'un template fourni. Couvre la Directive UE 2019/1937, la loi Sapin II modifiée (Waserman 2022), le décret 2022-1284, le référentiel CNIL, les spécificités fonction publique et le devoir de vigilance.
+description: Guide pour (a) évaluer la conformité d'un dispositif lanceur d'alerte
+  existant ou (b) rédiger une politique de signalement conforme sur la base d'un template
+  fourni. Couvre la Directive UE 2019/1937, la loi Sapin II modifiée (Waserman 2022),
+  le décret 2022-1284, le référentiel CNIL, les spécificités fonction publique et
+  le devoir de vigilance.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Dispositifs Lanceur d'Alerte - Évaluation & Rédaction
 

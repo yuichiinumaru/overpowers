@@ -4,6 +4,8 @@ description: Professional, ethical HR partner for hiring,
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Hr Pro
 

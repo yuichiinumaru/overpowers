@@ -1,9 +1,12 @@
 ---
 name: csv-data-summarizer
-description: Analyzes CSV files, generates summary stats, and plots quick visualizations using Python and pandas.
+description: Analyzes CSV files, generates summary stats, and plots quick visualizations
+  using Python and pandas.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # CSV Data Summarizer
 

@@ -1,6 +1,7 @@
 ---
 name: claude-code-neovim-ghostty
-description: Configures Ghostty panes and Neovim to seamlessly use Claude Code alongside Neovim without leaving the terminal. Focuses on setting up vim-style split navigation.
+description: Configures Ghostty panes and Neovim to seamlessly use Claude Code alongside
+  Neovim without leaving the terminal. Focuses on setting up vim-style split navigation.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   bash: true
   read: true
   write: true
+version: 1.0.0
 ---
 # Claude Code + Neovim via Ghostty Panes
 

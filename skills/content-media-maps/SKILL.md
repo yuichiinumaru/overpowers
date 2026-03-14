@@ -4,6 +4,8 @@ description: Make map animations with Mapbox
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Maps
 

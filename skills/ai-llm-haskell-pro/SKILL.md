@@ -6,6 +6,8 @@ tags:
 - ux
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Haskell Pro
 

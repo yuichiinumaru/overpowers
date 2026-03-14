@@ -6,6 +6,8 @@ tags:
 - media
 metadata:
   tags: remotion, video, react, animation, composition
+version: 1.0.0
+category: general
 ---
 ## When to use
 

@@ -1,9 +1,12 @@
 ---
 name: hubspot-automation
-description: Automate HubSpot CRM operations (contacts, companies, deals, tickets, properties) via Rube MCP using Composio integration.
+description: Automate HubSpot CRM operations (contacts, companies, deals, tickets,
+  properties) via Rube MCP using Composio integration.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # HubSpot CRM Automation via Rube MCP
 

@@ -1,6 +1,8 @@
 ---
 name: clarity-gate
-description: Pre-ingestion verification for epistemic quality in RAG systems. Ensures documents are properly qualified before entering knowledge bases. Produces CGD (Clarity-Gated Documents) and validates SOT (Source of Truth) files.
+description: Pre-ingestion verification for epistemic quality in RAG systems. Ensures
+  documents are properly qualified before entering knowledge bases. Produces CGD (Clarity-Gated
+  Documents) and validates SOT (Source of Truth) files.
 tags:
 - ai
 - llm
@@ -28,6 +30,7 @@ outputs:
   extension: .cgd.md
   spec: docs/CLARITY_GATE_FORMAT_SPEC.md
 spec_version: 2.0
+category: general
 ---
 # Clarity Gate v2.0
 

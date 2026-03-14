@@ -4,6 +4,8 @@ description: '>'
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # Beads - Persistent Task Memory for AI Agents
 

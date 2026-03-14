@@ -3,6 +3,8 @@ name: get-review-theme
 description: ''
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Get Review Theme - 结构化综述主题提取
 

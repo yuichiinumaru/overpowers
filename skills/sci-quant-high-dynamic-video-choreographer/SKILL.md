@@ -1,9 +1,13 @@
 ---
 name: high-dynamic-video-choreographer
-description: Analyzes a theme or image to design a sequence of 5 high-energy, logically connected action beats for AI video generation. Features a recursive optimization process to ensure physical momentum and visual diversity.
+description: Analyzes a theme or image to design a sequence of 5 high-energy, logically
+  connected action beats for AI video generation. Features a recursive optimization
+  process to ensure physical momentum and visual diversity.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # High-Dynamic Video Choreographer
 

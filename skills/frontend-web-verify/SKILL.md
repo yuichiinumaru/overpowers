@@ -1,9 +1,12 @@
 ---
 name: verify
-description: Use when you want to validate changes before committing, or when you need to check all React contribution requirements.
+description: Use when you want to validate changes before committing, or when you
+  need to check all React contribution requirements.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Verification
 

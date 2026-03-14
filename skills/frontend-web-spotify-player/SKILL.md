@@ -4,6 +4,8 @@ description: Terminal Spotify playback/search via spogo (preferred) or spotify_p
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # spogo / spotify_player
 

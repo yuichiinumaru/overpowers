@@ -4,6 +4,8 @@ description: Embedding images in Remotion using the <Img> component
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Using images in Remotion
 

@@ -1,9 +1,14 @@
 ---
 name: memory-lite
-description: Lightweight memory management for OpenClaw without embeddings or vector search. Use to append notes to memory/YYYY-MM-DD.md and MEMORY.md, do simple keyword search (grep) across memory files, and generate quick local summaries of recent memory. Safe, local-only, no config changes.
+description: Lightweight memory management for OpenClaw without embeddings or vector
+  search. Use to append notes to memory/YYYY-MM-DD.md and MEMORY.md, do simple keyword
+  search (grep) across memory files, and generate quick local summaries of recent
+  memory. Safe, local-only, no config changes.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Memory Lite (no memory_search)
 

@@ -4,6 +4,8 @@ description: Trimming patterns for Remotion - cut the beginning or end of animat
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Trimming
 

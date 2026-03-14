@@ -1,9 +1,12 @@
 ---
 name: write-tbp
-description: Writing technical blog posts about tldraw features and implementation details. Use when creating blog content about how tldraw solves interesting problems.
+description: Writing technical blog posts about tldraw features and implementation
+  details. Use when creating blog content about how tldraw solves interesting problems.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Write technical blog post
 

@@ -1,12 +1,15 @@
 ---
 name: harmonious-jujutsu-merge
-description: Specialized skill for resolving Jujutsu VCS conflicts harmoniously, preserving content without introducting markers or artifacts.
+description: Specialized skill for resolving Jujutsu VCS conflicts harmoniously, preserving
+  content without introducting markers or artifacts.
 tags:
 - infra
 - ops
 metadata:
   version: 1.0.0
   author: Antigravity - Overpowers
+version: 1.0.0
+category: general
 ---
 # Harmonious Jujutsu Merge Skill
 

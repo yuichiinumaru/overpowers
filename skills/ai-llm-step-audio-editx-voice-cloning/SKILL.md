@@ -1,6 +1,7 @@
 ---
 name: step-audio-editx-voice-cloning
-description: Configure and use the open-source Step Audio EditX AI voice model for highly realistic, human-sounding audio generation and editing.
+description: Configure and use the open-source Step Audio EditX AI voice model for
+  highly realistic, human-sounding audio generation and editing.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Step Audio EditX Setup
 

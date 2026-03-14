@@ -1,6 +1,7 @@
 ---
 name: ovis-image-7b-typography
-description: Deploy Ovis Image 7B locally via ComfyUI to generate precise typography, logos, and UI mockups.
+description: Deploy Ovis Image 7B locally via ComfyUI to generate precise typography,
+  logos, and UI mockups.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Ovis Image 7B Typography Generation
 

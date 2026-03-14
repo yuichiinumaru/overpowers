@@ -1,8 +1,13 @@
 ---
 name: post-processing
-description: Extract, analyze, and visualize simulation output data. Use for field extraction, time series analysis, line profiles, statistical summaries, derived quantity computation, result comparison to references, and automated report generation from simulation results.
+description: Extract, analyze, and visualize simulation output data. Use for field
+  extraction, time series analysis, line profiles, statistical summaries, derived
+  quantity computation, result comparison to references, and automated report generation
+  from simulation results.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Post-Processing Skill
 

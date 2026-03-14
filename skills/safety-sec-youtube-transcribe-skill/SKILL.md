@@ -1,9 +1,11 @@
 ---
 name: youtube-transcribe-skill
-description: ''
+description: Extracts YouTube subtitles/transcripts via yt-dlp or browser fallback and saves them as local text files.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # YouTube Transcript Extraction
 

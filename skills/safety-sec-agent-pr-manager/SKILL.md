@@ -4,6 +4,8 @@ description: Agent skill for pr-manager - invoke with $agent-pr-manager
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Agent Pr Manager
 

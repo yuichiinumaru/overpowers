@@ -1,8 +1,13 @@
 ---
 name: evaluating-llms-harness
-description: Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K, TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting academic results, or tracking training progress. Industry standard used by EleutherAI, HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs.
+description: Evaluates LLMs across 60+ academic benchmarks (MMLU, HumanEval, GSM8K,
+  TruthfulQA, HellaSwag). Use when benchmarking model quality, comparing models, reporting
+  academic results, or tracking training progress. Industry standard used by EleutherAI,
+  HuggingFace, and major labs. Supports HuggingFace, vLLM, APIs.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # lm-evaluation-harness - LLM Benchmarking
 

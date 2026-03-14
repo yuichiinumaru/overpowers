@@ -1,8 +1,13 @@
 ---
 name: ml-paper-writing
-description: Write publication-ready ML/AI papers for NeurIPS, ICML, ICLR, ACL, AAAI, COLM. Use when drafting papers from research repos, structuring arguments, verifying citations, or preparing camera-ready submissions. Includes LaTeX templates, reviewer guidelines, and citation verification workflows.
+description: Write publication-ready ML/AI papers for NeurIPS, ICML, ICLR, ACL, AAAI,
+  COLM. Use when drafting papers from research repos, structuring arguments, verifying
+  citations, or preparing camera-ready submissions. Includes LaTeX templates, reviewer
+  guidelines, and citation verification workflows.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # ML Paper Writing for Top AI Conferences
 

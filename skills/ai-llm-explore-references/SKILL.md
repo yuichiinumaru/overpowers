@@ -4,6 +4,8 @@ description: Research how a feature works in reference libraries
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Explore References
 

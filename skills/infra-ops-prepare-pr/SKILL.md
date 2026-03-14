@@ -1,9 +1,13 @@
 ---
 name: prepare-pr
-description: Prepare a GitHub PR for merge by rebasing onto main, fixing review findings, running gates, committing fixes, and pushing to the PR head branch. Use after /reviewpr. Never merge or push to main.
+description: Prepare a GitHub PR for merge by rebasing onto main, fixing review findings,
+  running gates, committing fixes, and pushing to the PR head branch. Use after /reviewpr.
+  Never merge or push to main.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Prepare PR
 

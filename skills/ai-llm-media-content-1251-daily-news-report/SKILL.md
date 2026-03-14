@@ -1,6 +1,15 @@
 ---
 name: media-content-1251-daily-news-report
-description: "Scrapes content based on a preset URL list, filters high-quality technical information, and generates daily Markdown reports."
+description: Scrapes content based on a preset URL list, filters high-quality technical
+  information, and generates daily Markdown reports.
+version: 1.0.0
+category: general
+tags:
+- '1251'
+- content
+- daily
+- general
+- media
 ---
 
 # Daily News Report v3.0

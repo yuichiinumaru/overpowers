@@ -1,9 +1,12 @@
 ---
 name: read-docs
-description: Enables efficient, accurate retrieval of content from Fumadocs-powered documentation sites.
+description: Enables efficient, accurate retrieval of content from Fumadocs-powered
+  documentation sites.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Read Docs
 

@@ -1,9 +1,13 @@
 ---
 name: incident-runbook-templates
-description: Create structured incident response runbooks with step-by-step procedures, escalation paths, and recovery actions. Use when building runbooks, responding to incidents, or establishing incident response procedures.
+description: Create structured incident response runbooks with step-by-step procedures,
+  escalation paths, and recovery actions. Use when building runbooks, responding to
+  incidents, or establishing incident response procedures.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Incident Runbook Templates
 

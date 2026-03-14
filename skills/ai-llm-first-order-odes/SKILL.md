@@ -4,6 +4,8 @@ description: Problem-solving strategies for first order odes in odes pdes
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # First Order Odes
 

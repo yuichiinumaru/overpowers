@@ -1,9 +1,13 @@
 ---
 name: clawver-reviews
-description: Handle Clawver customer reviews. Monitor ratings, craft responses, track sentiment trends. Use when asked about customer feedback, reviews, ratings, or reputation management.
+description: Handle Clawver customer reviews. Monitor ratings, craft responses, track
+  sentiment trends. Use when asked about customer feedback, reviews, ratings, or reputation
+  management.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Clawver Reviews
 

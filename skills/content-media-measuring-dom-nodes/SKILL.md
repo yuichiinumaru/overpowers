@@ -4,6 +4,8 @@ description: Measuring DOM element dimensions in Remotion
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Measuring DOM nodes in Remotion
 

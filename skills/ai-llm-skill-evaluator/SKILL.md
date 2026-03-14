@@ -1,9 +1,14 @@
 ---
 name: skill-evaluator
-description: Evaluates agent skills against Anthropic's best practices. Use when asked to review, evaluate, assess, or audit a skill for quality. Analyzes SKILL.md structure, naming conventions, description quality, content organization, and identifies anti-patterns. Produces actionable improvement recommendations.
+description: Evaluates agent skills against Anthropic's best practices. Use when asked
+  to review, evaluate, assess, or audit a skill for quality. Analyzes SKILL.md structure,
+  naming conventions, description quality, content organization, and identifies anti-patterns.
+  Produces actionable improvement recommendations.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Skill Evaluator (WIP)
 

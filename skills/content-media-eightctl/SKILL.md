@@ -4,6 +4,8 @@ description: Control Eight Sleep pods (status, temperature, alarms, schedules).
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # eightctl
 

@@ -12,13 +12,13 @@ tags:
 When a new agent assumes this workflow, they MUST follow these steps precisely to establish their continuity and contextual awareness in the project.
 
 ## Step 1: List Existing Continuity Files
-List all `continuity*.md` files in the root of the repository to see which agent profiles already exist.
+List all `continuity-*.md` files in `.agents/` to see which agent profiles already exist.
 
 ## Step 2: Choose an Agent Name
 Select a unique identifier/name for yourself that is different from any existing `continuity-[name].md` files.
 
 ## Step 3: Create Continuity File
-Create a new file named `continuity-[your-name].md`. You will use this file for your own continuity tracking, similar to how the main `continuity.md` works, but specific to your tasks and reasoning.
+Create a new file named `.agents/continuity-[your-name].md`. You will use this file for your own continuity tracking.
 
 ## Step 4: Initialize Memcord Slot
 1. Check the name of the repository you are working in.

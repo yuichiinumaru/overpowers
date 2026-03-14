@@ -1,6 +1,7 @@
 ---
 name: steady-dancer-wan-ai-video
-description: Create AI dance videos without subscriptions using the SteadyDancer implementation for Wan AI Video.
+description: Create AI dance videos without subscriptions using the SteadyDancer implementation
+  for Wan AI Video.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # SteadyDancer Wan AI Video
 

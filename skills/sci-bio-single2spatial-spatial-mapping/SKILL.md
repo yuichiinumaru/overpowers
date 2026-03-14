@@ -1,9 +1,13 @@
 ---
 name: single2spatial-spatial-mapping
-description: Map scRNA-seq atlases onto spatial transcriptomics slides using omicverse's Single2Spatial workflow for deep-forest training, spot-level assessment, and marker visualisation.
+description: Map scRNA-seq atlases onto spatial transcriptomics slides using omicverse's
+  Single2Spatial workflow for deep-forest training, spot-level assessment, and marker
+  visualisation.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Single2Spatial spatial mapping
 

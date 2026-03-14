@@ -1,6 +1,7 @@
 ---
 name: meta-ai-sam2-video-masks
-description: Utilize Meta's Segment Anything Model 2 (SAM2) to generate precise, trackable masks for images and video frames.
+description: Utilize Meta's Segment Anything Model 2 (SAM2) to generate precise, trackable
+  masks for images and video frames.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Meta AI SAM2 for Perfect Image & Video Masks
 

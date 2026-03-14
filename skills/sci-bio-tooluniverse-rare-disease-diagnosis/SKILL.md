@@ -1,9 +1,15 @@
 ---
 name: tooluniverse-rare-disease-diagnosis
-description: Provide differential diagnosis for patients with suspected rare diseases based on phenotype and genetic data. Matches symptoms to HPO terms, identifies candidate diseases from Orphanet/OMIM, prioritizes genes for testing, interprets variants of uncertain significance. Use when clinician asks about rare disease diagnosis, unexplained phenotypes, or genetic testing interpretation.
+description: Provide differential diagnosis for patients with suspected rare diseases
+  based on phenotype and genetic data. Matches symptoms to HPO terms, identifies candidate
+  diseases from Orphanet/OMIM, prioritizes genes for testing, interprets variants
+  of uncertain significance. Use when clinician asks about rare disease diagnosis,
+  unexplained phenotypes, or genetic testing interpretation.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Rare Disease Diagnosis Advisor
 

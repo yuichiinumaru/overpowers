@@ -1,6 +1,16 @@
 ---
 name: tool-general-1257-web-search-advanced-research-paper
-description: "Search for research papers and academic content using Exa advanced search. Full filter support including date ranges and text filtering. Use when searching for academic papers, arXiv preprints, or scientific research."
+description: Search for research papers and academic content using Exa advanced search.
+  Full filter support including date ranges and text filtering. Use when searching
+  for academic papers, arXiv preprints, or scientific research.
+version: 1.0.0
+category: general
+tags:
+- '1257'
+- advanced
+- general
+- paper
+- research
 ---
 
 # Web Search Advanced - Research Paper Category

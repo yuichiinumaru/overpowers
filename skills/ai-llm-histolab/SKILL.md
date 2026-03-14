@@ -1,9 +1,14 @@
 ---
 name: histolab
-description: Lightweight WSI tile extraction and preprocessing. Use for basic slide processing tissue detection, tile extraction, stain normalization for H&E images. Best for simple pipelines, dataset preparation, quick tile-based analysis. For advanced spatial proteomics, multiplexed imaging, or deep learning pipelines use pathml.
+description: Lightweight WSI tile extraction and preprocessing. Use for basic slide
+  processing tissue detection, tile extraction, stain normalization for H&E images.
+  Best for simple pipelines, dataset preparation, quick tile-based analysis. For advanced
+  spatial proteomics, multiplexed imaging, or deep learning pipelines use pathml.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Histolab
 

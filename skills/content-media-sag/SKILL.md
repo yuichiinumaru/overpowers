@@ -4,6 +4,8 @@ description: ElevenLabs text-to-speech with mac-style say UX.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # sag
 

@@ -4,6 +4,8 @@ description: ''
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # LLM Security Guidelines (OWASP Top 10 for LLM 2025)
 

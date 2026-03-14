@@ -1,9 +1,12 @@
 ---
 name: plan-converter
-description: Convert any planning/analysis/brainstorm output to unified JSONL task format. Supports roadmap.jsonl, plan.json, plan-note.md, conclusions.json, synthesis.json.
+description: Convert any planning/analysis/brainstorm output to unified JSONL task
+  format. Supports roadmap.jsonl, plan.json, plan-note.md, conclusions.json, synthesis.json.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Plan Converter
 

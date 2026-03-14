@@ -1,9 +1,12 @@
 ---
 name: review-book
-description: Review a Jupyter Book by reading its _toc.yml and all referenced files, then provide a structured analysis
+description: Review a Jupyter Book by reading its _toc.yml and all referenced files,
+  then provide a structured analysis
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Review Jupyter Book
 

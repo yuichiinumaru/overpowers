@@ -1,9 +1,13 @@
 ---
 name: time-stepping
-description: Plan and control time-step policies for simulations. Use when coupling CFL/physics limits with adaptive stepping, ramping initial transients, scheduling outputs/checkpoints, or planning restart strategies for long runs.
+description: Plan and control time-step policies for simulations. Use when coupling
+  CFL/physics limits with adaptive stepping, ramping initial transients, scheduling
+  outputs/checkpoints, or planning restart strategies for long runs.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Time Stepping
 

@@ -4,6 +4,8 @@ description: Wiring Verification
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Wiring Verification
 

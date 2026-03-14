@@ -1,10 +1,14 @@
 ---
 name: jira-issues
-description: Create, update, and manage Jira issues from natural language. Use when the user wants to log bugs, create tickets, update issue status, or manage their Jira backlog.
+description: Create, update, and manage Jira issues from natural language. Use when
+  the user wants to log bugs, create tickets, update issue status, or manage their
+  Jira backlog.
 tags:
 - safety
 - sec
 license: MIT
+version: 1.0.0
+category: general
 ---
 # Jira Issue Management
 

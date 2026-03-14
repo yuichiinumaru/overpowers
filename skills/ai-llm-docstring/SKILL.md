@@ -1,9 +1,12 @@
 ---
 name: docstring
-description: Write docstrings for PyTorch functions and methods following PyTorch conventions. Use when writing or updating docstrings in PyTorch code.
+description: Write docstrings for PyTorch functions and methods following PyTorch
+  conventions. Use when writing or updating docstrings in PyTorch code.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # PyTorch Docstring Writing Guide
 

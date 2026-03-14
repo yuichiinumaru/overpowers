@@ -1,9 +1,13 @@
 ---
 name: video-processor
-description: Process video files with audio extraction, format conversion (mp4, webm), and Whisper transcription. Use when user mentions video conversion, audio extraction, transcription, mp4, webm, ffmpeg, or whisper transcription.
+description: Process video files with audio extraction, format conversion (mp4, webm),
+  and Whisper transcription. Use when user mentions video conversion, audio extraction,
+  transcription, mp4, webm, ffmpeg, or whisper transcription.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Video Processor
 

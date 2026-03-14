@@ -4,6 +4,8 @@ description: Sequencing patterns for Remotion - delay, trim, limit duration of i
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Sequencing
 

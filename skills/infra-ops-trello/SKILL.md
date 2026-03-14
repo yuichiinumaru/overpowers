@@ -14,6 +14,8 @@ metadata:
       env:
       - TRELLO_API_KEY
       - TRELLO_TOKEN
+version: 1.0.0
+category: general
 ---
 # Trello Skill
 

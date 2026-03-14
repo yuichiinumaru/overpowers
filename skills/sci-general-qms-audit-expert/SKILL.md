@@ -1,8 +1,13 @@
 ---
 name: qms-audit-expert
-description: Senior QMS Audit Expert for internal and external quality management system auditing. Provides ISO 13485 audit expertise, audit program management, nonconformity identification, and corrective action verification. Use for internal audit planning, external audit preparation, audit execution, and audit follow-up activities.
+description: Senior QMS Audit Expert for internal and external quality management
+  system auditing. Provides ISO 13485 audit expertise, audit program management, nonconformity
+  identification, and corrective action verification. Use for internal audit planning,
+  external audit preparation, audit execution, and audit follow-up activities.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Senior QMS Audit Expert
 

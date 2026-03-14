@@ -4,6 +4,8 @@ description: Agent skill for payments - invoke with $agent-payments
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Agent Payments
 

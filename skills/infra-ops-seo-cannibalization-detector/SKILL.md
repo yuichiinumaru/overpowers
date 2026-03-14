@@ -4,6 +4,8 @@ description: Analyzes multiple provided pages to identify keyword overlap and
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Seo Cannibalization Detector
 

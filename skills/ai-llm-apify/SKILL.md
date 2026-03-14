@@ -1,9 +1,13 @@
 ---
 name: apify
-description: Social media scraping, business data, e-commerce via Apify actors. USE WHEN Twitter, Instagram, LinkedIn, TikTok, YouTube, Facebook, Google Maps, Amazon scraping.
+description: Social media scraping, business data, e-commerce via Apify actors. USE
+  WHEN Twitter, Instagram, LinkedIn, TikTok, YouTube, Facebook, Google Maps, Amazon
+  scraping.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Apify
 

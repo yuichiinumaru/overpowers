@@ -1,9 +1,13 @@
 ---
 name: javascript-typescript
-description: JavaScript and TypeScript development with ES6+, Node.js, React, and modern web frameworks. Use for frontend, backend, or full-stack JavaScript/TypeScript projects.
+description: JavaScript and TypeScript development with ES6+, Node.js, React, and
+  modern web frameworks. Use for frontend, backend, or full-stack JavaScript/TypeScript
+  projects.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # JavaScript/TypeScript Development
 

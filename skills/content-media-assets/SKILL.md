@@ -4,6 +4,8 @@ description: Importing images, videos, audio, and fonts into Remotion
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Importing assets in Remotion
 

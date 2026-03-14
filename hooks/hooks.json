@@ -10,6 +10,37 @@
           }
         ]
       }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "bash|run_shell_command|cd",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/runtime/dir_injector.py\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "replace|write_file|edit_block",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/runtime/edit_guard.py\""
+          }
+        ]
+      },
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/runtime/todo_enforcer.py\""
+          }
+        ]
+      }
     ]
   }
 }

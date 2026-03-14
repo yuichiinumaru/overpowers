@@ -4,6 +4,8 @@ description: Getting the duration of a video file in seconds with Mediabunny
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Getting video duration with Mediabunny
 

@@ -4,6 +4,8 @@ description: Getting the width and height of a video file with Mediabunny
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Getting video dimensions with Mediabunny
 

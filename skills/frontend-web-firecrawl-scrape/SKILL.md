@@ -4,6 +4,8 @@ description: Scrape web pages and extract content via Firecrawl MCP
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Firecrawl Scrape Skill
 

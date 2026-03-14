@@ -1,9 +1,12 @@
 ---
 name: z-audit
-description: Security audit for vibe-coded apps (Vercel, Supabase, Cloudflare Workers, Firebase, Lovable).
+description: Security audit for vibe-coded apps (Vercel, Supabase, Cloudflare Workers,
+  Firebase, Lovable).
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Z-Audit: Security Audit for Vibe-Coded Projects
 

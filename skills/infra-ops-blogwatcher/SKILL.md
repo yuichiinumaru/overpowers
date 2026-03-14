@@ -4,6 +4,8 @@ description: Monitor blogs and RSS/Atom feeds for updates using the blogwatcher 
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # blogwatcher
 

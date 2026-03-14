@@ -1,9 +1,11 @@
 ---
 name: baoyu-slide-deck
-description: ''
+description: Generate structured, styled slide decks from source content with configurable visual presets and outputs.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # Slide Deck Generator
 

@@ -1,6 +1,15 @@
 ---
 name: media-content-1250-cctv-news-fetcher
-description: "Fetch and parse news highlights from CCTV News Broadcast (Xinwen Lianbo) for a given date."
+description: Fetch and parse news highlights from CCTV News Broadcast (Xinwen Lianbo)
+  for a given date.
+version: 1.0.0
+category: general
+tags:
+- '1250'
+- cctv
+- content
+- fetcher
+- general
 ---
 
 # CCTV News Fetcher

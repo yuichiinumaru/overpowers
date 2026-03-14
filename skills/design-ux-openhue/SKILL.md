@@ -4,6 +4,8 @@ description: Control Philips Hue lights/scenes via the OpenHue CLI.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # OpenHue CLI
 

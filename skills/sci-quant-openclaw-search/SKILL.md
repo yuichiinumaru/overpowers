@@ -1,9 +1,12 @@
 ---
 name: openclaw-search
-description: Intelligent search for agents. Multi-source retrieval with confidence scoring - web, academic, and Tavily in one unified API.
+description: Intelligent search for agents. Multi-source retrieval with confidence
+  scoring - web, academic, and Tavily in one unified API.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # OpenClaw Search 🔍
 

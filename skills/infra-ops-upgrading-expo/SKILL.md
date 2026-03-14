@@ -9,6 +9,7 @@ tags:
 - expo
 author: expo
 category: development
+version: 1.0.0
 ---
 # Upgrading Expo
 

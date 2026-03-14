@@ -1,9 +1,13 @@
 ---
 name: rag-implementation
-description: 'Retrieval-Augmented Generation patterns including chunking, embeddings, vector stores, and retrieval optimization Use when: rag, retrieval augmented, vector search, embeddings, semantic search.'
+description: 'Retrieval-Augmented Generation patterns including chunking, embeddings,
+  vector stores, and retrieval optimization Use when: rag, retrieval augmented, vector
+  search, embeddings, semantic search.'
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # RAG Implementation
 

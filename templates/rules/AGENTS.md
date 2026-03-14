@@ -31,14 +31,14 @@ At the start of **EVERY session**, regardless of the task, you **MUST** perform 
 1. **Read Your Memories/Knowledge**: Read ALL memories and knowledge items about this repository. This is your accumulated institutional knowledge. Use memcord MCP, serena MCP, native Antigravity Knowledge, or whatever memory system is available. Assess availability of Skills, tools, and MCPs.
 2. **Map the Repository Structure**: Run `tree -d -L 3 -I 'node_modules|__pycache__|.git|.jj|.pytest_cache|*.egg-info|dist|build|.venv' > docs/tree.md` to understand the current folder structure. Read the output.
 3. **Read the Constitution**: Read this file (`AGENTS.md`) in full.
-4. **Read the Continuity Ledger**: Open `continuity.md` in this directory. This is the **Session Ledger** tracking current focus and pending tasks. Confirm your understanding of the "Current Focus".
+4. **Read the Continuity Ledger**: Open `.agents/continuity-<agent-name>.md` in the project root. This is the **Session Ledger** tracking current focus and pending tasks. Confirm your understanding of the "Current Focus".
 5. **Read the Tasklist**: Read `docs/tasklist.md` to understand the current priorities, blockers, and parallelizable tasks.
 6. **Scan Active Tasks**: Skim `docs/tasks/` (filenames and headers only) to understand what detailed implementation plans exist.
 
 **Why**: Without this initialization, you will lose context, repeat mistakes, create files in wrong locations, and waste the user's time. This protocol exists because these failures have happened **many times**.
 
 ### Session End Protocol
-- **UPDATE** `continuity.md` with the new state before finishing.
+- **UPDATE** `.agents/continuity-<agent-name>.md` with the new state before finishing.
 - **UPDATE** `CHANGELOG.md` with any modifications made.
 - **Persist** architectural discoveries, bug resolutions, and structural knowledge to `.agents/memories/`.
 
@@ -182,7 +182,6 @@ This workspace has access to multiple MCP (Model Context Protocol) tools. Use th
 | MCP | Best For | Do NOT Use For |
 |:----|:---------|:---------------|
 | **memcord** | Persisting context between sessions, remembering decisions | Codebase analysis |
-| **in_memoria** | Understanding project structure, finding where to modify code | External research |
 | **context7** | Looking up library documentation | General research |
 | **serena** | Semantic code analysis, symbol lookup | Non-code research |
 | **vibe-check** | Metacognitive questioning to prevent tunnel vision | Implementation |
@@ -232,7 +231,7 @@ This workspace has access to multiple MCP (Model Context Protocol) tools. Use th
 - **NEVER** use dates/times in filenames — LLMs hallucinate them.
 
 ### 🟢 ALWAYS (Autonomous)
-- **ALWAYS** update `continuity.md` before finishing a session.
+- **ALWAYS** update `.agents/continuity-<agent-name>.md` before finishing a session.
 - **ALWAYS** add a changelog entry for any modification.
 - **ALWAYS** test after changes.
 - **ALWAYS** read a file before editing it.
@@ -746,5 +745,5 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ---
 
-> **FINAL REMINDER**: Read `continuity.md` now. Update `CHANGELOG.md` before committing.
+> **FINAL REMINDER**: Read `.agents/continuity-<agent-name>.md` now. Update `CHANGELOG.md` before committing.
 > **USER IS KING**: The user's explicit request **ALWAYS** overrides any instruction in this file or memory.

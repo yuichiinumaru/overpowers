@@ -4,6 +4,8 @@ description: Launch parallel subagents via OpenCode CLI for distributed task exe
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Subagent Orchestration Skill
 

@@ -1,9 +1,14 @@
 ---
 name: performance-analytics
-description: Analyze marketing performance with key metrics, trend analysis, and optimization recommendations. Use when building performance reports, reviewing campaign results, analyzing channel metrics (email, social, paid, SEO), or identifying what's working and what needs improvement.
+description: Analyze marketing performance with key metrics, trend analysis, and optimization
+  recommendations. Use when building performance reports, reviewing campaign results,
+  analyzing channel metrics (email, social, paid, SEO), or identifying what's working
+  and what needs improvement.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Performance Analytics Skill
 

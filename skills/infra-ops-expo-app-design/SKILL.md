@@ -1,6 +1,7 @@
 ---
 name: expo-app-design
-description: Build beautiful cross-platform mobile apps with Expo Router, NativeWind, and React Native.
+description: Build beautiful cross-platform mobile apps with Expo Router, NativeWind,
+  and React Native.
 tags:
 - typescript
 - infra
@@ -9,6 +10,7 @@ tags:
 - expo
 author: expo
 category: development
+version: 1.0.0
 ---
 # Expo App Design
 

@@ -1,9 +1,14 @@
 ---
 name: micro-saas-launcher
-description: 'Expert in launching small, focused SaaS products fast - the indie hacker approach to building profitable software. Covers idea validation, MVP development, pricing, launch strategies, and growing to sustainable revenue. Ship in weeks, not months. Use when: micro saas, indie hacker, small saas, side project, saas mvp.'
+description: 'Expert in launching small, focused SaaS products fast - the indie hacker
+  approach to building profitable software. Covers idea validation, MVP development,
+  pricing, launch strategies, and growing to sustainable revenue. Ship in weeks, not
+  months. Use when: micro saas, indie hacker, small saas, side project, saas mvp.'
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Micro-SaaS Launcher
 

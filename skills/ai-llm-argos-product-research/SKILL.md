@@ -1,9 +1,12 @@
 ---
 name: argos-product-research
-description: Search, compare, and research products from Argos.co.uk with natural language queries
+description: Search, compare, and research products from Argos.co.uk with natural
+  language queries
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Argos Product Research Skill
 

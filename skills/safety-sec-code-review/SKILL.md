@@ -1,11 +1,15 @@
 ---
 name: code-review
-description: Automated code review for pull requests using specialized review patterns. Analyzes code for quality, security, performance, and best practices. Use when reviewing code changes, PRs, or doing code audits.
+description: Automated code review for pull requests using specialized review patterns.
+  Analyzes code for quality, security, performance, and best practices. Use when reviewing
+  code changes, PRs, or doing code audits.
 tags:
 - safety
 - sec
 source: anthropics/claude-code
 license: Apache-2.0
+version: 1.0.0
+category: general
 ---
 # Code Review
 

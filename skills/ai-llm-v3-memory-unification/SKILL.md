@@ -1,9 +1,13 @@
 ---
 name: v3-memory-unification
-description: Unify 6+ memory systems into AgentDB with HNSW indexing for 150x-12,500x search improvements. Implements ADR-006 (Unified Memory Service) and ADR-009 (Hybrid Memory Backend).
+description: Unify 6+ memory systems into AgentDB with HNSW indexing for 150x-12,500x
+  search improvements. Implements ADR-006 (Unified Memory Service) and ADR-009 (Hybrid
+  Memory Backend).
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # V3 Memory Unification
 

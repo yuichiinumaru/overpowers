@@ -4,6 +4,8 @@ description: ''
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 > **Status**: Optional/Experimental
 > **See**: Overpowers/docs/future-research/agent-reasoning-review.md

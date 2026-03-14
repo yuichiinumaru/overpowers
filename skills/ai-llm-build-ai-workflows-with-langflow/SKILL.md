@@ -1,6 +1,9 @@
 ---
 name: build-ai-workflows-with-langflow
-description: Guia de aceleração de desenvolvimento de IA Generativa. Utiliza o Langflow (uma interface visual open-source para o LangChain) para projetar, prototipar e exportar pipelines de RAG e Agentes Autônomos sem escrever o boilerplate inicial de conexão de LLMs, Vector Stores e Prompts, integrando também ferramentas MCP.
+description: Guia de aceleração de desenvolvimento de IA Generativa. Utiliza o Langflow
+  (uma interface visual open-source para o LangChain) para projetar, prototipar e
+  exportar pipelines de RAG e Agentes Autônomos sem escrever o boilerplate inicial
+  de conexão de LLMs, Vector Stores e Prompts, integrando também ferramentas MCP.
 tags:
 - ai
 - llm
@@ -10,6 +13,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Build AI Workflows with Langflow
 

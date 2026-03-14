@@ -4,6 +4,8 @@ description: '|'
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Azure AI Content Understanding SDK for Python
 

@@ -1,6 +1,10 @@
 ---
 name: state-space-models-mamba-architecture
-description: Guia de arquitetura avançada de Machine Learning explorando State Space Models (SSMs), com foco na arquitetura Mamba. Compara SSMs (custo linear) com Transformers (custo quadrático) e detalha casos de uso onde os SSMs superam o paradigma de Attention, especialmente para janelas de contexto extremamente longas como genômica, séries temporais e áudio bruto.
+description: Guia de arquitetura avançada de Machine Learning explorando State Space
+  Models (SSMs), com foco na arquitetura Mamba. Compara SSMs (custo linear) com Transformers
+  (custo quadrático) e detalha casos de uso onde os SSMs superam o paradigma de Attention,
+  especialmente para janelas de contexto extremamente longas como genômica, séries
+  temporais e áudio bruto.
 tags:
 - bio
 - sci
@@ -8,6 +12,7 @@ category: engineering
 color: null
 tools:
   read: true
+version: 1.0.0
 ---
 # State Space Models (SSMs) & The Mamba Architecture
 

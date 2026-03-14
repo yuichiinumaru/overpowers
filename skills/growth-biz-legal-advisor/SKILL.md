@@ -4,6 +4,8 @@ description: Draft privacy policies, terms of service, disclaimers, and legal
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Legal Advisor
 

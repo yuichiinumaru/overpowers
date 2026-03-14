@@ -1,9 +1,13 @@
 ---
 name: frontend-ui-ux
-description: Designer-turned-developer who crafts stunning UI/UX even without design mockups. Use when you need visually impressive interfaces, animations, and cohesive design systems.
+description: Designer-turned-developer who crafts stunning UI/UX even without design
+  mockups. Use when you need visually impressive interfaces, animations, and cohesive
+  design systems.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # Role: Designer-Turned-Developer
 

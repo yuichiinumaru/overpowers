@@ -1,9 +1,12 @@
 ---
 name: ask-questions-if-underspecified
-description: Clarify requirements before implementing. Do not use automatically, only when invoked explicitly.
+description: Clarify requirements before implementing. Do not use automatically, only
+  when invoked explicitly.
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Ask Questions If Underspecified
 

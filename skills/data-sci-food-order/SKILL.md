@@ -1,9 +1,12 @@
 ---
 name: food-order
-description: 'Reorder Foodora orders + track ETA/status with ordercli. Never confirm without explicit user approval. Triggers: order food, reorder, track ETA.'
+description: 'Reorder Foodora orders + track ETA/status with ordercli. Never confirm
+  without explicit user approval. Triggers: order food, reorder, track ETA.'
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Food order (Foodora via ordercli)
 

@@ -1,9 +1,13 @@
 ---
 name: response-drafting
-description: Draft professional, empathetic customer-facing responses adapted to the situation, urgency, and channel. Use when responding to customer tickets, escalations, outage notifications, bug reports, feature requests, or any customer-facing communication.
+description: Draft professional, empathetic customer-facing responses adapted to the
+  situation, urgency, and channel. Use when responding to customer tickets, escalations,
+  outage notifications, bug reports, feature requests, or any customer-facing communication.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Response Drafting Skill
 

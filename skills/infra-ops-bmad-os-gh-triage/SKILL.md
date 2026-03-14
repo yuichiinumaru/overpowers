@@ -1,9 +1,12 @@
 ---
 name: bmad-os-gh-triage
-description: Fetch all GitHub issues via gh CLI and use AI agents to deeply analyze, cluster, and prioritize issues
+description: Fetch all GitHub issues via gh CLI and use AI agents to deeply analyze,
+  cluster, and prioritize issues
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Bmad Os Gh Triage
 

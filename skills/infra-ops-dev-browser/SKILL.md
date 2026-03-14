@@ -4,6 +4,8 @@ description: ''
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Dev Browser Skill
 

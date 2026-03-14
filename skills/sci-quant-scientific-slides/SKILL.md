@@ -1,9 +1,15 @@
 ---
 name: scientific-slides
-description: Build slide decks and presentations for research talks. Use this for making PowerPoint slides, conference presentations, seminar talks, research presentations, thesis defense slides, or any scientific talk. Provides slide structure, design templates, timing guidance, and visual validation. Works with PowerPoint and LaTeX Beamer.
+description: Build slide decks and presentations for research talks. Use this for
+  making PowerPoint slides, conference presentations, seminar talks, research presentations,
+  thesis defense slides, or any scientific talk. Provides slide structure, design
+  templates, timing guidance, and visual validation. Works with PowerPoint and LaTeX
+  Beamer.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Scientific Slides
 

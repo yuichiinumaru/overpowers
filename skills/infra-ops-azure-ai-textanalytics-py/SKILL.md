@@ -4,6 +4,8 @@ description: '|'
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Azure AI Text Analytics SDK for Python
 

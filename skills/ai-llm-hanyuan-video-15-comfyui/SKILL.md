@@ -1,6 +1,7 @@
 ---
 name: hanyuan-video-15-comfyui
-description: Set up Hanyuan Video 1.5 in ComfyUI to generate high-definition 1080p local AI videos.
+description: Set up Hanyuan Video 1.5 in ComfyUI to generate high-definition 1080p
+  local AI videos.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Hanyuan Video 1.5 Local 1080p Generation
 

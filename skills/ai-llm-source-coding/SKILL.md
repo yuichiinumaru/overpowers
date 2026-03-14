@@ -4,6 +4,8 @@ description: Problem-solving strategies for source coding in information theory
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Source Coding
 

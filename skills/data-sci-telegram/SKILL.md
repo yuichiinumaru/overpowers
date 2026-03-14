@@ -4,6 +4,8 @@ description: Send and manage Telegram messages, monitor channels, and handle bot
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Telegram Actions
 

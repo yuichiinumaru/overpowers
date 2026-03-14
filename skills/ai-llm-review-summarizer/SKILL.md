@@ -1,9 +1,14 @@
 ---
 name: review-summarizer
-description: Scrape, analyze, and summarize product reviews from multiple platforms (Amazon, Google, Yelp, TripAdvisor). Extract key insights, sentiment analysis, pros/cons, and recommendations. Use when researching products for arbitrage, creating affiliate content, or making purchasing decisions.
+description: Scrape, analyze, and summarize product reviews from multiple platforms
+  (Amazon, Google, Yelp, TripAdvisor). Extract key insights, sentiment analysis, pros/cons,
+  and recommendations. Use when researching products for arbitrage, creating affiliate
+  content, or making purchasing decisions.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Review Summarizer
 

@@ -4,6 +4,8 @@ description: Extract frames or short clips from videos using ffmpeg.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Video Frames (ffmpeg)
 

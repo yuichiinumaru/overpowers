@@ -1,9 +1,13 @@
 ---
 name: it-operations
-description: Manages IT infrastructure, monitoring, incident response, and service reliability. Provides frameworks for ITIL service management, observability strategies, automation, backup/recovery, capacity planning, and operational excellence practices.
+description: Manages IT infrastructure, monitoring, incident response, and service
+  reliability. Provides frameworks for ITIL service management, observability strategies,
+  automation, backup/recovery, capacity planning, and operational excellence practices.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # IT Operations Expert
 

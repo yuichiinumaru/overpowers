@@ -4,6 +4,8 @@ description: Routes problems to appropriate mathematical frameworks using expert
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Math Model Selector
 

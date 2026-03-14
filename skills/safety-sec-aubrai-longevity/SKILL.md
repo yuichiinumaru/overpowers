@@ -1,9 +1,12 @@
 ---
 name: aubrai-longevity
-description: Answer questions about longevity, aging, lifespan extension, and anti-aging research using Aubrai's research engine with cited sources.
+description: Answer questions about longevity, aging, lifespan extension, and anti-aging
+  research using Aubrai's research engine with cited sources.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Aubrai Longevity Research
 

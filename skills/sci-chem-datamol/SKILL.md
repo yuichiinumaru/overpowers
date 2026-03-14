@@ -1,9 +1,15 @@
 ---
 name: datamol
-description: Pythonic wrapper around RDKit with simplified interface and sensible defaults. Preferred for standard drug discovery including SMILES parsing, standardization, descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit directly.
+description: Pythonic wrapper around RDKit with simplified interface and sensible
+  defaults. Preferred for standard drug discovery including SMILES parsing, standardization,
+  descriptors, fingerprints, clustering, 3D conformers, parallel processing. Returns
+  native rdkit.Chem.Mol objects. For advanced control or custom parameters, use rdkit
+  directly.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # Datamol Cheminformatics Skill
 

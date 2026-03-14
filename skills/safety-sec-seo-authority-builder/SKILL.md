@@ -4,6 +4,8 @@ description: Analyzes content for E-E-A-T signals and suggests improvements to
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Seo Authority Builder
 

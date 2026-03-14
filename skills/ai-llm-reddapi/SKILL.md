@@ -1,9 +1,13 @@
 ---
 name: reddapi
-description: Use this skill to access Reddit's full data archive via reddapi.dev API. Features semantic search, subreddit discovery, and real-time trend analysis. Perfect for market research, competitive analysis, and niche opportunity discovery.
+description: Use this skill to access Reddit's full data archive via reddapi.dev API.
+  Features semantic search, subreddit discovery, and real-time trend analysis. Perfect
+  for market research, competitive analysis, and niche opportunity discovery.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # reddapi.dev Skill
 

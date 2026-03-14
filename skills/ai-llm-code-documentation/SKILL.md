@@ -1,11 +1,15 @@
 ---
 name: code-documentation
-description: Writing effective code documentation - API docs, README files, inline comments, and technical guides. Use for documenting codebases, APIs, or writing developer guides.
+description: Writing effective code documentation - API docs, README files, inline
+  comments, and technical guides. Use for documenting codebases, APIs, or writing
+  developer guides.
 tags:
 - ai
 - llm
 source: wshobson/agents
 license: MIT
+version: 1.0.0
+category: general
 ---
 # Code Documentation
 

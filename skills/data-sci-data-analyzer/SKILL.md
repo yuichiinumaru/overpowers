@@ -1,9 +1,12 @@
 ---
 name: data-analyzer
-description: Analyze datasets and extract insights. Use when user needs to understand data patterns, statistics, or trends.
+description: Analyze datasets and extract insights. Use when user needs to understand
+  data patterns, statistics, or trends.
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Data Analyzer
 

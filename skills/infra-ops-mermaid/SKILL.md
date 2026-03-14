@@ -1,9 +1,14 @@
 ---
 name: mermaid
-description: Render Mermaid diagrams as SVG or ASCII art using beautiful-mermaid. Use when users need to create flowcharts, sequence diagrams, state diagrams, class diagrams, or ER diagrams. Supports both graphical SVG output and terminal-friendly ASCII/Unicode output.
+description: Render Mermaid diagrams as SVG or ASCII art using beautiful-mermaid.
+  Use when users need to create flowcharts, sequence diagrams, state diagrams, class
+  diagrams, or ER diagrams. Supports both graphical SVG output and terminal-friendly
+  ASCII/Unicode output.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Mermaid Diagram Renderer
 

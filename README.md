@@ -4,19 +4,26 @@
 
 **Overpowers** is a consolidated, opinionated, and massively expanded toolkit for AI coding assistants. It centralizes agents, skills, commands, hooks, scripts, workflows, and services into a single, highly capable repository. It's "Power Overwhelming".
 
-Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, and **Kilo Code** out of the box. Planning to expand to Codex-CLI, Claude-Code, Cursor, and more.
+Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, **Kilo Code**, **Codex CLI**, **Claude Code**, **Cursor**, **Windsurf**, and **Factory** out of the box.
+
+## What Overpowers Is (And Is Not)
+
+- **Is**: a cross-project operating layer for coding agents. Install once, then use in any repository.
+- **Is**: a safety and orchestration system for solo or parallel execution (manual multi-terminal runs, or provider-level orchestration via MCP/A2A/ACP patterns).
+- **Is not**: a single app codebase where assets are meant to be used only inside this repository.
+- **Rule of thumb**: this repo is the asset source; your target project is where agents apply those assets.
 
 ## 📊 Inventory
 
 | Component | Count | Description |
 |-----------|-------|-------------|
 | **Agents** | 475+ | Specialized AI personas for every task |
-| **Skills** | 1316+ | Complex workflow automation (SKILL.md) |
+| **Skills** | 1317+ | Complex workflow automation (SKILL.md) |
 | **Commands/Workflows** | 303+ | Complete process guides (also serve as commands) |
-| **Scripts** | 95+ | DevOps, automation & setup helpers |
-| **Hooks** | 44 | Pre/post action notifications |
+| **Scripts** | 102+ | DevOps, automation & setup helpers |
+| **Hooks** | 45 | Pre/post action notifications |
 
-**Total: 2233+ components!**
+**Total: 2242+ components!**
 
 ---
 
@@ -40,9 +47,14 @@ The interactive installer will ask which platforms you want to deploy to:
 | Platform | What gets deployed | Config directory |
 |----------|--------------------|------------------|
 | **OpenCode** | agents, skills, commands, hooks, AGENTS.md | `~/.config/opencode/` |
-| **Gemini CLI** | skills, hooks, GEMINI.md | `~/.gemini/` |
+| **Gemini CLI** | skills, hooks, commands, curated agents, GEMINI.md | `~/.gemini/` |
 | **Antigravity** | skills, workflows | `~/.gemini/antigravity/` |
 | **Kilo Code** | skills, workflows, rules | `~/.kilocode/` |
+| **Codex CLI** | skills, AGENTS.MD | `~/.codex/` |
+| **Claude Code** | skills, commands, CLAUDE.md | `~/.claude/` |
+| **Cursor** | skills | `~/.cursor/` |
+| **Windsurf** | skills (via `~/.agents/skills`) | `~/.codeium/windsurf/` |
+| **Factory** | skills + droids + AGENTS.md | `~/.factory/` |
 
 It also optionally installs **MCP servers** across all platforms with an interactive `.env` configuration wizard.
 
@@ -62,11 +74,11 @@ Interactive menu with 50+ plugins and themes from the [awesome-opencode](https:/
 overpowers/
 ├── install.sh                # ⭐ Master installer
 ├── agents/                   # 475+ specialized AI agents (.md)
-├── skills/                   # 1316+ skills (skill-name/SKILL.md)
+├── skills/                   # 1317+ skills (skill-name/SKILL.md)
 ├── workflows/                # 303+ process guides / commands (.md)
-├── hooks/                    # 44 notification integrations
+├── hooks/                    # 45 notification integrations
 ├── commands/                 # Shorthand operations
-├── scripts/                  # 95+ DevOps/automation helpers
+├── scripts/                  # 102+ DevOps/automation helpers
 │   ├── deploy-to-opencode.sh     # Symlink to OpenCode
 │   ├── deploy-to-gemini-cli.sh   # Symlink to Gemini CLI
 │   ├── deploy-to-antigravity.sh  # Symlink to Antigravity
@@ -74,9 +86,9 @@ overpowers/
 │   ├── install-mcps.sh           # Unified MCP installer
 │   └── install-plugins.sh        # Community plugin installer
 ├── services/                 # 13 external service configs
-├── templates/                # Skill/agent templates
+├── templates/                # Canonical templates (agents/skills/workflows/configs)
 ├── docs/                     # Documentation
-├── opencode-example.json     # Reference OpenCode config
+├── templates/configs/        # MCP templates + policy templates
 ├── .env.example              # API keys & paths template
 ├── AGENTS.md                 # Global rules (constitution)
 └── CHANGELOG.md              # Immutable change history
@@ -93,9 +105,14 @@ overpowers/
 | `install.sh` | Master installer — orchestrates all deploys + MCPs |
 | `scripts/deploy-agent-army.sh` | Automatically generates configs and injects hundreds of agents |
 | `scripts/deploy-to-opencode.sh` | Symlinks agents, skills, commands, hooks → `~/.config/opencode/` |
-| `scripts/deploy-to-gemini-cli.sh` | Symlinks skills, hooks, AGENTS.md → `~/.gemini/` |
+| `scripts/deploy-to-gemini-cli.sh` | Symlinks skills/hooks/commands + curated agents → `~/.gemini/` |
 | `scripts/deploy-to-antigravity.sh` | Symlinks skills, workflows → `~/.gemini/antigravity/` |
 | `scripts/deploy-to-kilo.sh` | Symlinks skills, workflows, rules → `~/.kilocode/` |
+| `scripts/deploy-to-codex.sh` | Symlinks skills + AGENTS.MD → `~/.codex/` |
+| `scripts/deploy-to-claude-code.sh` | Symlinks skills/commands + CLAUDE.md → `~/.claude/` |
+| `scripts/deploy-to-cursor.sh` | Symlinks skills → `~/.cursor/` |
+| `scripts/deploy-to-windsurf.sh` | Symlinks skills → `~/.agents/skills` (Windsurf) |
+| `scripts/deploy-to-factory.sh` | Symlinks skills + workflows/toml + AGENTS.md → `~/.factory/` |
 
 ### Configuration Scripts
 
@@ -121,7 +138,7 @@ All deploy scripts create **absolute symlinks** from the repo into each platform
 
 ## 🔗 MCP Server Configuration
 
-The `opencode-example.json` contains pre-configured MCP servers. The `install-mcps.sh` script handles:
+The MCP templates in `templates/configs/` contain pre-configured server definitions. The `install-mcps.sh` script handles:
 
 1. **Schema translation**: Converts between OpenCode format (`command` array + `environment`) and Antigravity format (`command` string + `args` array + `env`)
 2. **Non-destructive merge**: Never overwrites existing MCP entries
@@ -138,10 +155,11 @@ The `opencode-example.json` contains pre-configured MCP servers. The `install-mc
 | Hyperbrowser | Cloud browser automation |
 | Genkit | Firebase AI toolkit |
 | Memcord | Memory coordination |
-| Semgrep | Static analysis |
 | Playwright Browser | Local browser testing |
 | Context7 | Up-to-date documentation |
 | NotebookLM | Google NotebookLM integration |
+
+Semgrep is installed as a CLI tool via `scripts/install-plugins.sh` (CLI Tools category), not as an MCP server.
 
 ---
 

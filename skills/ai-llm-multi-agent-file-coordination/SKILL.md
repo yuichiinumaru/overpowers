@@ -1,9 +1,13 @@
 ---
 name: multi-agent-file-coordination
-description: Protocol for multiple agents to work on the same codebase simultaneously without conflicts using a lock-based system. Use when coordinating parallel agent work on shared files.
+description: Protocol for multiple agents to work on the same codebase simultaneously
+  without conflicts using a lock-based system. Use when coordinating parallel agent
+  work on shared files.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Multi-Agent File Coordination Protocol
 

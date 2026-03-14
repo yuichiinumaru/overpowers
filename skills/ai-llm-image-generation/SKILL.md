@@ -4,6 +4,8 @@ description: Generate images using nano banana.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Image Generation Skill
 

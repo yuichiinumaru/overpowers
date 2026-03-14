@@ -4,6 +4,8 @@ description: Project Guidelines Skill (Example)
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Project Guidelines Skill (Example)
 

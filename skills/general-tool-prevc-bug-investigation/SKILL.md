@@ -4,6 +4,8 @@ description: Investigates and diagnoses bugs
 tags:
 - general
 - tool
+version: 1.0.0
+category: general
 ---
 # Bug Investigation
 

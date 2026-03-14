@@ -1,9 +1,14 @@
 ---
 name: biopython
-description: Comprehensive molecular biology toolkit. Use for sequence manipulation, file parsing (FASTA/GenBank/PDB), phylogenetics, and programmatic NCBI/PubMed access (Bio.Entrez). Best for batch processing, custom bioinformatics pipelines, BLAST automation. For quick lookups use gget; for multi-service integration use bioservices.
+description: Comprehensive molecular biology toolkit. Use for sequence manipulation,
+  file parsing (FASTA/GenBank/PDB), phylogenetics, and programmatic NCBI/PubMed access
+  (Bio.Entrez). Best for batch processing, custom bioinformatics pipelines, BLAST
+  automation. For quick lookups use gget; for multi-service integration use bioservices.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Biopython: Computational Molecular Biology in Python
 

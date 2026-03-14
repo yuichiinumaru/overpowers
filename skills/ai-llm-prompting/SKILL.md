@@ -1,9 +1,13 @@
 ---
 name: prompting
-description: Meta-prompting system for dynamic prompt generation using templates, standards, and patterns. USE WHEN meta-prompting, template generation, prompt optimization, or programmatic prompt composition.
+description: Meta-prompting system for dynamic prompt generation using templates,
+  standards, and patterns. USE WHEN meta-prompting, template generation, prompt optimization,
+  or programmatic prompt composition.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Prompting - Meta-Prompting & Template System
 

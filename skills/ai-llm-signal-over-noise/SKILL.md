@@ -1,9 +1,13 @@
 ---
 name: signal-over-noise
-description: Maximize useful information per word by removing filler, obvious explanations, and hedging language. Use when writing documentation, error messages, code comments, or any communication where clarity and conciseness matter.
+description: Maximize useful information per word by removing filler, obvious explanations,
+  and hedging language. Use when writing documentation, error messages, code comments,
+  or any communication where clarity and conciseness matter.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Signal Over Noise
 

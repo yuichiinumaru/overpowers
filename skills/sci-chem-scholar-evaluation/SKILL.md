@@ -1,9 +1,14 @@
 ---
 name: scholar-evaluation
-description: Systematically evaluate scholarly work using the ScholarEval framework, providing structured assessment across research quality dimensions including problem formulation, methodology, analysis, and writing with quantitative scoring and actionable feedback.
+description: Systematically evaluate scholarly work using the ScholarEval framework,
+  providing structured assessment across research quality dimensions including problem
+  formulation, methodology, analysis, and writing with quantitative scoring and actionable
+  feedback.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # Scholar Evaluation
 

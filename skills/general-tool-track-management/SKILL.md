@@ -4,6 +4,8 @@ description: Use this skill when creating, managing, or working with Conductor
 tags:
 - general
 - tool
+version: 1.0.0
+category: general
 ---
 # Track Management
 

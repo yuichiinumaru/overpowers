@@ -1,9 +1,12 @@
 ---
 name: social-media
-description: Social media post guidelines for LinkedIn, Reddit, and Twitter/X. Use when drafting posts, announcements, or sharing technical content on social platforms.
+description: Social media post guidelines for LinkedIn, Reddit, and Twitter/X. Use
+  when drafting posts, announcements, or sharing technical content on social platforms.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Social Media Post Guidelines
 

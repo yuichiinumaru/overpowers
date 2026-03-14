@@ -1,9 +1,13 @@
 ---
 name: knowledge-synthesis
-description: Combines search results from multiple sources into coherent, deduplicated answers with source attribution. Handles confidence scoring based on freshness and authority, and summarizes large result sets effectively.
+description: Combines search results from multiple sources into coherent, deduplicated
+  answers with source attribution. Handles confidence scoring based on freshness and
+  authority, and summarizes large result sets effectively.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Knowledge Synthesis
 

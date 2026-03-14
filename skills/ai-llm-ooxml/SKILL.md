@@ -4,6 +4,8 @@ description: Automation and tasks for ooxml
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Office Open XML Technical Reference
 

@@ -1,9 +1,13 @@
 ---
 name: excel-analysis
-description: Analyze Excel spreadsheets, create pivot tables, generate charts, and perform data analysis. Use when analyzing Excel files, spreadsheets, tabular data, or .xlsx files.
+description: Analyze Excel spreadsheets, create pivot tables, generate charts, and
+  perform data analysis. Use when analyzing Excel files, spreadsheets, tabular data,
+  or .xlsx files.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Excel Analysis
 

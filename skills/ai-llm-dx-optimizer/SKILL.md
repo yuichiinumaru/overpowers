@@ -4,6 +4,8 @@ description: Developer Experience specialist. Improves tooling, setup, and
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Dx Optimizer
 

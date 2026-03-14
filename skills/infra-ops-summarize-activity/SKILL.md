@@ -1,9 +1,13 @@
 ---
 name: summarize-activity
-description: Summarize recent GitHub activity — discussions, PRs, issues, events, traffic — into an actionable report so you can stay on top of the project without reading everything.
+description: Summarize recent GitHub activity — discussions, PRs, issues, events,
+  traffic — into an actionable report so you can stay on top of the project without
+  reading everything.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # /summarize-activity - GitHub activity digest
 

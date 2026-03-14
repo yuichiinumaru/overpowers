@@ -1,9 +1,14 @@
 ---
 name: microcopy
-description: UI copy and microcopy guidelines. Use when writing UI text, buttons, error messages, empty states, onboarding, or any user-facing copy. Triggers on i18n translation, UI text writing, or copy improvement tasks. Supports both Chinese and English.
+description: UI copy and microcopy guidelines. Use when writing UI text, buttons,
+  error messages, empty states, onboarding, or any user-facing copy. Triggers on i18n
+  translation, UI text writing, or copy improvement tasks. Supports both Chinese and
+  English.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # LobeHub UI Microcopy Guidelines
 

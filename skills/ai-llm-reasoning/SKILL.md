@@ -4,6 +4,8 @@ description: Conceptual frameworks and reasoning patterns for advanced problem s
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Reasoning
 Advanced AI reasoning and thought process templates.

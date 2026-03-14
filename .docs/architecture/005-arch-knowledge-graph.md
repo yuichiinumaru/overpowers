@@ -104,9 +104,9 @@ graph TD
 ## 5. Operational Protocols (Must Obey)
 
 ### Protocol Zero (The Session Ledger)
-*   **Rule**: Every session MUST start by reading `continuity.md` and end by updating it.
+*   **Rule**: Every session MUST start by reading `.agents/continuity-<agent-name>.md` and end by updating it.
 *   **Purpose**: Maintains context across stateless agent sessions.
-*   **Action**: Read `continuity.md` -> Align -> Work -> Update `continuity.md`.
+*   **Action**: Read `.agents/continuity-<agent-name>.md` -> Align -> Work -> Update `.agents/continuity-<agent-name>.md`.
 
 ### The Changelog Law
 *   **Rule**: Every code modification MUST have a corresponding entry in `CHANGELOG.md`.

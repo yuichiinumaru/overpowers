@@ -1,9 +1,14 @@
 ---
 name: acestep
-description: Use ACE-Step API to generate music, edit songs, and remix music. Supports text-to-music, lyrics generation, audio continuation, and audio repainting. Use this skill when users mention generating music, creating songs, music production, remix, or audio continuation.
+description: Use ACE-Step API to generate music, edit songs, and remix music. Supports
+  text-to-music, lyrics generation, audio continuation, and audio repainting. Use
+  this skill when users mention generating music, creating songs, music production,
+  remix, or audio continuation.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # ACE-Step Music Generation Skill
 

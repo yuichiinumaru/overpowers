@@ -4,6 +4,8 @@ description: MUST use when configuring schedules.
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Windmill Schedules
 

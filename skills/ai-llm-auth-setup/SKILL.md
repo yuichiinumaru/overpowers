@@ -1,10 +1,13 @@
 ---
 name: auth-setup
-description: Interactive TUI wizard for configuring multi-provider authentication. Auto-discovers existing tokens, sets up OAuth flows, and configures quota management for optimal model rotation.
+description: Interactive TUI wizard for configuring multi-provider authentication.
+  Auto-discovers existing tokens, sets up OAuth flows, and configures quota management
+  for optimal model rotation.
 tags:
 - ai
 - llm
 category: setup
+version: 1.0.0
 ---
 # Auth Setup Wizard
 

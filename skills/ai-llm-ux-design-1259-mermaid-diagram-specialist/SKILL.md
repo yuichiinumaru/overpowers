@@ -1,6 +1,14 @@
 ---
 name: ux-design-1259-mermaid-diagram-specialist
-description: ""
+description: ''
+version: 1.0.0
+category: general
+tags:
+- '1259'
+- design
+- diagram
+- general
+- mermaid
 ---
 
 # Mermaid Diagram Specialist

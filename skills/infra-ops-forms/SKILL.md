@@ -4,6 +4,8 @@ description: Automation and tasks for forms
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Forms
 

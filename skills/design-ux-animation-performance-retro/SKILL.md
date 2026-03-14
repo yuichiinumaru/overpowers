@@ -1,9 +1,12 @@
 ---
 name: animation-performance-retro
-description: Optimize 8-bit animations for smooth performance. Apply when creating animated pixel art, game UI effects, or any retro-styled animations.
+description: Optimize 8-bit animations for smooth performance. Apply when creating
+  animated pixel art, game UI effects, or any retro-styled animations.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # Animation Performance Retro
 

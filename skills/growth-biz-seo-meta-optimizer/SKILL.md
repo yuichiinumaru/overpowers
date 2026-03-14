@@ -4,6 +4,8 @@ description: Creates optimized meta titles, descriptions, and URL suggestions
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Seo Meta Optimizer
 

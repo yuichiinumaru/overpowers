@@ -1,9 +1,13 @@
 ---
 name: doc
-description: Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks.
+description: Use when the task involves reading, creating, or editing `.docx` documents,
+  especially when formatting or layout fidelity matters; prefer `python-docx` plus
+  the bundled `scripts/render_docx.py` for visual checks.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # DOCX Skill
 

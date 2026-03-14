@@ -4,6 +4,8 @@ description: '>'
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Tavily Search 🔎
 

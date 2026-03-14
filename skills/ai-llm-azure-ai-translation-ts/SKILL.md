@@ -1,9 +1,14 @@
 ---
 name: azure-ai-translation-ts
-description: Build translation applications using Azure Translation SDKs for JavaScript (@azure-rest/ai-translation-text, @azure-rest/ai-translation-document). Use when implementing text translation, transliteration, language detection, or batch document translation.
+description: Build translation applications using Azure Translation SDKs for JavaScript
+  (@azure-rest/ai-translation-text, @azure-rest/ai-translation-document). Use when
+  implementing text translation, transliteration, language detection, or batch document
+  translation.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Azure Translation SDKs for TypeScript
 

@@ -1,9 +1,13 @@
 ---
 name: executive-briefing
-description: Transforms research findings into executive-ready briefings. Automatically activated when user mentions 'executive', 'briefing', 'C-suite', 'board', 'leadership', or 'presentation'.
+description: Transforms research findings into executive-ready briefings. Automatically
+  activated when user mentions 'executive', 'briefing', 'C-suite', 'board', 'leadership',
+  or 'presentation'.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Executive Briefing Skill
 

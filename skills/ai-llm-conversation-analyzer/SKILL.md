@@ -1,9 +1,14 @@
 ---
 name: conversation-analyzer
-description: Analyzes your Claude Code conversation history to identify patterns, common mistakes, and opportunities for workflow improvement. Use when user wants to understand usage patterns, optimize workflow, identify automation opportunities, or check if they're following best practices.
+description: Analyzes your Claude Code conversation history to identify patterns,
+  common mistakes, and opportunities for workflow improvement. Use when user wants
+  to understand usage patterns, optimize workflow, identify automation opportunities,
+  or check if they're following best practices.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Conversation Analyzer
 

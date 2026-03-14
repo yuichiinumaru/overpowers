@@ -1,9 +1,17 @@
 ---
 name: pydicom
-description: Python library for working with DICOM (Digital Imaging and Communications in Medicine) files. Use this skill when reading, writing, or modifying medical imaging data in DICOM format, extracting pixel data from medical images (CT, MRI, X-ray, ultrasound), anonymizing DICOM files, working with DICOM metadata and tags, converting DICOM images to other formats, handling compressed DICOM data, or processing medical imaging datasets. Applies to tasks involving medical image analysis, PACS systems, radiology workflows, and healthcare imaging applications.
+description: Python library for working with DICOM (Digital Imaging and Communications
+  in Medicine) files. Use this skill when reading, writing, or modifying medical imaging
+  data in DICOM format, extracting pixel data from medical images (CT, MRI, X-ray,
+  ultrasound), anonymizing DICOM files, working with DICOM metadata and tags, converting
+  DICOM images to other formats, handling compressed DICOM data, or processing medical
+  imaging datasets. Applies to tasks involving medical image analysis, PACS systems,
+  radiology workflows, and healthcare imaging applications.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Pydicom
 

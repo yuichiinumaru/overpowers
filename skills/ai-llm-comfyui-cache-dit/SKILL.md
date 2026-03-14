@@ -1,6 +1,7 @@
 ---
 name: comfyui-cache-dit
-description: Optimize Diffusion Transformer (DiT) models like Flux and SD3 in ComfyUI by caching intermediate steps into memory for significantly faster inference times.
+description: Optimize Diffusion Transformer (DiT) models like Flux and SD3 in ComfyUI
+  by caching intermediate steps into memory for significantly faster inference times.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # ComfyUI Cache DiT Optimizer
 

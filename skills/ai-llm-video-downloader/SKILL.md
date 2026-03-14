@@ -1,9 +1,12 @@
 ---
 name: video-downloader
-description: Downloads videos from YouTube and other platforms for offline viewing, editing, or archival. Handles various formats and quality options.
+description: Downloads videos from YouTube and other platforms for offline viewing,
+  editing, or archival. Handles various formats and quality options.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Video Downloader
 

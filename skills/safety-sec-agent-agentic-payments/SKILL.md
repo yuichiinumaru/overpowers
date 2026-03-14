@@ -4,6 +4,8 @@ description: Agent skill for agentic-payments - invoke with $agent-agentic-payme
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Agent Agentic Payments
 

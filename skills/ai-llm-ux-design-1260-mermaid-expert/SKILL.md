@@ -1,6 +1,14 @@
 ---
 name: ux-design-1260-mermaid-expert
-description: "Create Mermaid diagrams for flowcharts, sequences, ERDs, and"
+description: Create Mermaid diagrams for flowcharts, sequences, ERDs, and
+version: 1.0.0
+category: general
+tags:
+- '1260'
+- design
+- expert
+- general
+- mermaid
 ---
 
 # Mermaid Expert

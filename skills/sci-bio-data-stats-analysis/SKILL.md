@@ -1,9 +1,13 @@
 ---
 name: data-stats-analysis
-description: Perform statistical tests, hypothesis testing, correlation analysis, and multiple testing corrections using scipy and statsmodels. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).
+description: Perform statistical tests, hypothesis testing, correlation analysis,
+  and multiple testing corrections using scipy and statsmodels. Works with ANY LLM
+  provider (GPT, Gemini, Claude, etc.).
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Statistical Analysis (Universal)
 

@@ -1,9 +1,11 @@
 ---
 name: building-autonomous-agents-adk
-description: ''
+description: Explains architecture and workflow patterns for building autonomous agents with tools, memory, and reasoning loops.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Building Autonomous AI Agents (ADK Architecture)
 

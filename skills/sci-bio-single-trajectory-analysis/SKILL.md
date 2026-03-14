@@ -1,9 +1,12 @@
 ---
 name: single-trajectory-analysis
-description: Guide to reproducing OmicVerse trajectory workflows spanning PAGA, Palantir, VIA, velocity coupling, and fate scoring notebooks.
+description: Guide to reproducing OmicVerse trajectory workflows spanning PAGA, Palantir,
+  VIA, velocity coupling, and fate scoring notebooks.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Single-trajectory analysis skill
 

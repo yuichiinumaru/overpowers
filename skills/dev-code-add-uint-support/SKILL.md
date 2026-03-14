@@ -1,9 +1,14 @@
 ---
 name: add-uint-support
-description: Add unsigned integer (uint) type support to PyTorch operators by updating AT_DISPATCH macros. Use when adding support for uint16, uint32, uint64 types to operators, kernels, or when user mentions enabling unsigned types, barebones unsigned types, or uint support.
+description: Add unsigned integer (uint) type support to PyTorch operators by updating
+  AT_DISPATCH macros. Use when adding support for uint16, uint32, uint64 types to
+  operators, kernels, or when user mentions enabling unsigned types, barebones unsigned
+  types, or uint support.
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Add Unsigned Integer (uint) Support to Operators
 

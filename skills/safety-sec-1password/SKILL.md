@@ -1,6 +1,8 @@
 ---
 name: 1password
-description: Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in (single or multi-account), or reading/injecting/running secrets via op.
+description: Set up and use 1Password CLI (op). Use when installing the CLI, enabling
+  desktop app integration, signing in (single or multi-account), or reading/injecting/running
+  secrets via op.
 tags:
 - safety
 - sec
@@ -18,6 +20,8 @@ metadata:
       bins:
       - op
       label: Install 1Password CLI (brew)
+version: 1.0.0
+category: general
 ---
 # 1Password CLI
 

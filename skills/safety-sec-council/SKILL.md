@@ -1,9 +1,12 @@
 ---
 name: council
-description: Multi-agent debate system. USE WHEN council, debate, perspectives, agents discuss. SkillSearch('council') for docs.
+description: Multi-agent debate system. USE WHEN council, debate, perspectives, agents
+  discuss. SkillSearch('council') for docs.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Council
 

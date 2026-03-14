@@ -3,4 +3,4 @@
 **Priority**: MEDIUM
 **Type**: feature
 ## Objective
-Graph-based continuity.md.
+Graph-based continuity ledger indexing from `.agents/continuity-*.md`.

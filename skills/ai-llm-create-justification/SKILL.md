@@ -1,11 +1,14 @@
 ---
 name: create-justification
-description: Create a new justification file in .agents/justifications/ with a unique three-word ID, frontmatter, and formatted title
+description: Create a new justification file in .agents/justifications/ with a unique
+  three-word ID, frontmatter, and formatted title
 tags:
 - frontend
 - llm
 - ai
 - web
+version: 1.0.0
+category: general
 ---
 # Create Justification
 

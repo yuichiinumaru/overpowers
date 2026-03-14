@@ -1,9 +1,12 @@
 ---
 name: hn
-description: Browse Hacker News - top stories, new, best, ask, show, jobs, and story details with comments.
+description: Browse Hacker News - top stories, new, best, ask, show, jobs, and story
+  details with comments.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Hacker News
 

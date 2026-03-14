@@ -4,6 +4,8 @@ description: Fast file editing via Morph Apply API (10,500 tokens/sec, 98% accur
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Morph Fast Apply
 

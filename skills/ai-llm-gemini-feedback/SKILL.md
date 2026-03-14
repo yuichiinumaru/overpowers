@@ -1,9 +1,12 @@
 ---
 name: gemini-feedback
-description: Get feedback from Gemini API on a diagram image for textbook quality review.
+description: Get feedback from Gemini API on a diagram image for textbook quality
+  review.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Gemini Feedback
 

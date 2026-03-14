@@ -1,6 +1,7 @@
 ---
 name: vision-bridge-transformer
-description: Utilize the Vision Bridge Transformer AI model to stylize and colorize video sequences locally.
+description: Utilize the Vision Bridge Transformer AI model to stylize and colorize
+  video sequences locally.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Vision Bridge Transformer for Video Stylization
 

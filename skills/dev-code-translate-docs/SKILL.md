@@ -4,6 +4,8 @@ description: Translate and sync bilingual documentation.
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Translate Docs
 

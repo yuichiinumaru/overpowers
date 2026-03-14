@@ -1,9 +1,13 @@
 ---
-name: twitter-command-center-(search-+-post)
-description: Search X (Twitter) in real time, extract relevant posts, and publish tweets/replies instantly—perfect for social listening, engagement, and rapid content ops.
+name: twitter-command-center-search-post
+description: Search X (Twitter) in real time, extract relevant posts, and publish
+  tweets/replies instantly—perfect for social listening, engagement, and rapid content
+  ops.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # OpenClaw Twitter 🐦
 

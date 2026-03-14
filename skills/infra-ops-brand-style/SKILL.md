@@ -1,9 +1,12 @@
 ---
 name: brand-style
-description: Screenpipe brand style guide. Reference this when designing UI components, writing copy, or making visual decisions.
+description: Screenpipe brand style guide. Reference this when designing UI components,
+  writing copy, or making visual decisions.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Screenpipe Brand Style Guide
 

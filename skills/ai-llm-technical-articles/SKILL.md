@@ -1,9 +1,12 @@
 ---
 name: technical-articles
-description: Writing technical articles and blog posts. Use when creating articles in docs/articles/ or blog content explaining patterns, techniques, or lessons learned.
+description: Writing technical articles and blog posts. Use when creating articles
+  in docs/articles/ or blog content explaining patterns, techniques, or lessons learned.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Technical Articles
 

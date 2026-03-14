@@ -4,6 +4,8 @@ description: Agent skill for github-pr-manager - invoke with $agent-github-pr-ma
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Agent Github Pr Manager
 

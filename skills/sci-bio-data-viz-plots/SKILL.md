@@ -1,9 +1,12 @@
 ---
 name: data-viz-plots
-description: Create publication-quality plots and visualizations using matplotlib and seaborn. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).
+description: Create publication-quality plots and visualizations using matplotlib
+  and seaborn. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Data Visualization (Universal)
 

@@ -4,6 +4,8 @@ description: Expert C4 Context-level documentation specialist. Creates
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # C4 Context Level: System Context
 

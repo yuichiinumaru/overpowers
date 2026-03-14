@@ -1,9 +1,12 @@
 ---
 name: pr-demo
-description: Use when creating animated demos (GIFs) for pull requests or documentation. Covers terminal recording with asciinema and conversion to GIF/SVG for GitHub embedding.
+description: Use when creating animated demos (GIFs) for pull requests or documentation.
+  Covers terminal recording with asciinema and conversion to GIF/SVG for GitHub embedding.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # PR Demo Creation
 

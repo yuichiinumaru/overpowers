@@ -1,9 +1,14 @@
 ---
 name: tooluniverse-pharmacovigilance
-description: Analyze drug safety signals from FDA adverse event reports, label warnings, and pharmacogenomic data. Calculates disproportionality measures (PRR, ROR), identifies serious adverse events, assesses pharmacogenomic risk variants. Use when asked about drug safety, adverse events, post-market surveillance, or risk-benefit assessment.
+description: Analyze drug safety signals from FDA adverse event reports, label warnings,
+  and pharmacogenomic data. Calculates disproportionality measures (PRR, ROR), identifies
+  serious adverse events, assesses pharmacogenomic risk variants. Use when asked about
+  drug safety, adverse events, post-market surveillance, or risk-benefit assessment.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # Pharmacovigilance Safety Analyzer
 

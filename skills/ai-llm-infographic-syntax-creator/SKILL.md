@@ -1,9 +1,13 @@
 ---
 name: infographic-syntax-creator
-description: Generate AntV Infographic syntax outputs. Use when asked to turn user content into the Infographic DSL (template selection, data structuring, theme), or to output `infographic <template>` plain syntax.
+description: Generate AntV Infographic syntax outputs. Use when asked to turn user
+  content into the Infographic DSL (template selection, data structuring, theme),
+  or to output `infographic <template>` plain syntax.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Infographic Syntax Creator
 

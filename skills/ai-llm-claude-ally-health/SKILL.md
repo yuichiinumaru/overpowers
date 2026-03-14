@@ -1,9 +1,12 @@
 ---
 name: claude-ally-health
-description: A health assistant skill for medical information analysis, symptom tracking, and wellness guidance.
+description: A health assistant skill for medical information analysis, symptom tracking,
+  and wellness guidance.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Claude Ally Health
 

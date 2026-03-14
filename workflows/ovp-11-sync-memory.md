@@ -19,7 +19,7 @@ Prevent long-term context degradation by explicitly moving insights from short-t
 
 1. **Information Gathering.**
    - Read the recent commit history via `jj log -n 10` or `jj op log`.
-   - Read `continuity.md` to grasp the current context.
+   - Read `.agents/continuity-<agent-name>.md` to grasp the current context.
    - Review any recently generated reports in `.agents/thoughts/` or `.agents/reports/`.
 
 2. **Delta Analysis.**

@@ -4,6 +4,8 @@ description: '|'
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Feishu Document Tool
 

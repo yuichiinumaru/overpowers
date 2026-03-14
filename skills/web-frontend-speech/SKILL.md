@@ -1,6 +1,14 @@
 ---
-name: "speech"
-description: "Use when the user asks for text-to-speech narration or voiceover, accessibility reads, audio prompts, or batch speech generation via the OpenAI Audio API; run the bundled CLI (`scripts/text_to_speech.py`) with built-in voices and require `OPENAI_API_KEY` for live calls. Custom voice creation is out of scope."
+name: speech
+description: Use when the user asks for text-to-speech narration or voiceover, accessibility
+  reads, audio prompts, or batch speech generation via the OpenAI Audio API; run the
+  bundled CLI (`scripts/text_to_speech.py`) with built-in voices and require `OPENAI_API_KEY`
+  for live calls. Custom voice creation is out of scope.
+version: 1.0.0
+category: general
+tags:
+- general
+- speech
 ---
 
 
@@ -12,9 +20,16 @@ Generate spoken audio for the current project (narration, product demo voiceover
 - Generate a single spoken clip from text
 - Generate a batch of prompts (many lines, many files)
 
-## Decision tree (single vs batch)
-- If the user provides multiple lines/prompts or wants many outputs -> **batch**
-- Else -> **single**
+## Decision Tree
+
+Use this matrix to select the best mode for speech generation:
+
+| If [Situation] | Then [Mode] | Why? |
+| :--- | :--- | :--- |
+| Multiple lines or prompts provided | **batch** | Efficiency & Parallelism |
+| Single clip from text | **single** | Default behavior |
+
+---
 
 ## Workflow
 1. Decide intent: single vs batch (see decision tree above).

@@ -1,9 +1,15 @@
 ---
 name: qutip
-description: Quantum physics simulation library for open quantum systems. Use when studying master equations, Lindblad dynamics, decoherence, quantum optics, or cavity QED. Best for physics research, open system dynamics, and educational simulations. NOT for circuit-based quantum computing—use qiskit, cirq, or pennylane for quantum algorithms and hardware execution.
+description: Quantum physics simulation library for open quantum systems. Use when
+  studying master equations, Lindblad dynamics, decoherence, quantum optics, or cavity
+  QED. Best for physics research, open system dynamics, and educational simulations.
+  NOT for circuit-based quantum computing—use qiskit, cirq, or pennylane for quantum
+  algorithms and hardware execution.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # QuTiP: Quantum Toolbox in Python
 

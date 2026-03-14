@@ -4,6 +4,8 @@ description: None
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # agent-factory
 

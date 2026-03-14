@@ -4,6 +4,8 @@ description: Use when working with comprehensive review full review
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Comprehensive Review Full Review
 

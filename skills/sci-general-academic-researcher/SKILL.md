@@ -3,6 +3,8 @@ name: academic-researcher
 description: '|'
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Academic Researcher
 

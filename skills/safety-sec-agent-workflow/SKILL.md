@@ -4,6 +4,8 @@ description: Agent skill for workflow - invoke with $agent-workflow
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Agent Workflow
 

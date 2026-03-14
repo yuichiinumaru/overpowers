@@ -4,6 +4,8 @@ description: Reviews documentation for factual accuracy
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Generating Commit Messages
 

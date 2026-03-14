@@ -1,8 +1,11 @@
 ---
 name: moltbook-search
-description: Hybrid semantic search over 125k+ AI agent posts from moltbook.com with faceted filtering
+description: Hybrid semantic search over 125k+ AI agent posts from moltbook.com with
+  faceted filtering
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Moltbook Search — Agent Skill
 

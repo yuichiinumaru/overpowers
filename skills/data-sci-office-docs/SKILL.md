@@ -1,9 +1,12 @@
 ---
 name: office-docs
-description: Extract text and tables from .docx and .xlsx using local scripts (no external deps).
+description: Extract text and tables from .docx and .xlsx using local scripts (no
+  external deps).
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # Office Docs (docx + xlsx)
 

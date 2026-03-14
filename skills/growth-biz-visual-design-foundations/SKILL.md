@@ -1,9 +1,13 @@
 ---
 name: visual-design-foundations
-description: Apply typography, color theory, spacing systems, and iconography principles to create cohesive visual designs. Use when establishing design tokens, building style guides, or improving visual hierarchy and consistency.
+description: Apply typography, color theory, spacing systems, and iconography principles
+  to create cohesive visual designs. Use when establishing design tokens, building
+  style guides, or improving visual hierarchy and consistency.
 tags:
 - growth
 - biz
+version: 1.0.0
+category: general
 ---
 # Visual Design Foundations
 

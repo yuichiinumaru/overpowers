@@ -1,9 +1,13 @@
 ---
 name: academic-deep-research
-description: Transparent, rigorous research methodology using 2-cycle investigation per theme, APA 7th citations, and evidence hierarchy. Use for literature reviews, competitive intelligence, and high-stakes claim verification.
+description: Transparent, rigorous research methodology using 2-cycle investigation
+  per theme, APA 7th citations, and evidence hierarchy. Use for literature reviews,
+  competitive intelligence, and high-stakes claim verification.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Academic Deep Research
 

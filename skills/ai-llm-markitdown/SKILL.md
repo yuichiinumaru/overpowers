@@ -1,9 +1,13 @@
 ---
 name: markitdown
-description: Convert files and office documents to Markdown. Supports PDF, DOCX, PPTX, XLSX, images (with OCR), audio (with transcription), HTML, CSV, JSON, XML, ZIP, YouTube URLs, EPubs and more.
+description: Convert files and office documents to Markdown. Supports PDF, DOCX, PPTX,
+  XLSX, images (with OCR), audio (with transcription), HTML, CSV, JSON, XML, ZIP,
+  YouTube URLs, EPubs and more.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # MarkItDown - File to Markdown Conversion
 

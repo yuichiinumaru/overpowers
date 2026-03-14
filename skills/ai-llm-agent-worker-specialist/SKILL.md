@@ -4,6 +4,8 @@ description: Agent skill for worker-specialist - invoke with $agent-worker-speci
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Agent Worker Specialist
 

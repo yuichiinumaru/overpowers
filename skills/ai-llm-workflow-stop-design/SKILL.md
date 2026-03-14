@@ -4,6 +4,8 @@ description: 工作流暂停逻辑设计方案
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Workflow Stop Design
 

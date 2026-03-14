@@ -1,6 +1,7 @@
 ---
 name: unilumos-comfyui-relighting
-description: Deploy the UniLumos AI model locally in ComfyUI to seamlessly relight characters to match new backgrounds.
+description: Deploy the UniLumos AI model locally in ComfyUI to seamlessly relight
+  characters to match new backgrounds.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # UniLumos Character Relighting in ComfyUI
 

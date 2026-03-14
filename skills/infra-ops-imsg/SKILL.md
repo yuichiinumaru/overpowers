@@ -4,6 +4,8 @@ description: iMessage/SMS CLI for listing chats, history, watch, and sending.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # imsg Actions
 

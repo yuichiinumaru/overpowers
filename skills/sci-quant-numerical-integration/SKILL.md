@@ -1,9 +1,14 @@
 ---
 name: numerical-integration
-description: Select and configure time integration methods for ODE/PDE simulations. Use when choosing explicit/implicit schemes, setting error tolerances, adapting time steps, diagnosing integration accuracy, planning IMEX splitting, or handling stiff/non-stiff coupled systems.
+description: Select and configure time integration methods for ODE/PDE simulations.
+  Use when choosing explicit/implicit schemes, setting error tolerances, adapting
+  time steps, diagnosing integration accuracy, planning IMEX splitting, or handling
+  stiff/non-stiff coupled systems.
 tags:
 - sci
 - quant
+version: 1.0.0
+category: general
 ---
 # Numerical Integration
 

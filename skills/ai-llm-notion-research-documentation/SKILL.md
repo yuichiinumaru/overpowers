@@ -1,9 +1,13 @@
 ---
 name: notion-research-documentation
-description: Research across Notion and synthesize into structured documentation; use when gathering info from multiple Notion sources to produce briefs, comparisons, or reports with citations.
+description: Research across Notion and synthesize into structured documentation;
+  use when gathering info from multiple Notion sources to produce briefs, comparisons,
+  or reports with citations.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Research & Documentation
 

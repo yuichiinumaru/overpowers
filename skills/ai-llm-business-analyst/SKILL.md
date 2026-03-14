@@ -4,6 +4,8 @@ description: Master modern business analysis with AI-powered analytics,
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Business Analyst
 

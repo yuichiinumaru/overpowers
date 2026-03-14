@@ -1,9 +1,13 @@
 ---
 name: threejs-fundamentals
-description: Three.js scene setup, cameras, renderer, Object3D hierarchy, coordinate systems. Use when setting up 3D scenes, creating cameras, configuring renderers, managing object hierarchies, or working with transforms.
+description: Three.js scene setup, cameras, renderer, Object3D hierarchy, coordinate
+  systems. Use when setting up 3D scenes, creating cameras, configuring renderers,
+  managing object hierarchies, or working with transforms.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # Three.js Fundamentals
 

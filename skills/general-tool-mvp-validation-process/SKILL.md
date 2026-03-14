@@ -1,9 +1,12 @@
 ---
 name: mvp-validation-process
-description: Procedimento rápido para criação e validação de um MVP (Produto Mínimo Viável) para infoprodutos antes de gastar tempo na produção completa.
+description: Procedimento rápido para criação e validação de um MVP (Produto Mínimo
+  Viável) para infoprodutos antes de gastar tempo na produção completa.
 tags:
 - general
 - tool
+version: 1.0.0
+category: general
 ---
 # Validação de MVP (Produto Mínimo Viável) para Infoprodutos
 

@@ -1,9 +1,13 @@
 ---
-name: daily.dev
-description: Overcome LLM knowledge cutoffs with real-time developer content. daily.dev aggregates articles from thousands of sources, validated by community engagement, with structured taxonomy for precise discovery.
+name: dailydev
+description: Overcome LLM knowledge cutoffs with real-time developer content. daily.dev
+  aggregates articles from thousands of sources, validated by community engagement,
+  with structured taxonomy for precise discovery.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # daily.dev API for AI Agents
 

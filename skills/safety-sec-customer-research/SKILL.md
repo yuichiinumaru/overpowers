@@ -1,9 +1,14 @@
 ---
 name: customer-research
-description: Research customer questions by searching across documentation, knowledge bases, and connected sources, then synthesize a confidence-scored answer. Use when a customer asks a question you need to investigate, when building background on a customer situation, or when you need account context.
+description: Research customer questions by searching across documentation, knowledge
+  bases, and connected sources, then synthesize a confidence-scored answer. Use when
+  a customer asks a question you need to investigate, when building background on
+  a customer situation, or when you need account context.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Customer Research Skill
 

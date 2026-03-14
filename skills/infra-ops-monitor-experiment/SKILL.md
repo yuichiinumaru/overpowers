@@ -1,9 +1,12 @@
 ---
 name: monitor-experiment
-description: Monitor Beaker experiments until completion. Use when the user asks to monitor, check, or track a Beaker experiment.
+description: Monitor Beaker experiments until completion. Use when the user asks to
+  monitor, check, or track a Beaker experiment.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Monitor Beaker Experiment
 

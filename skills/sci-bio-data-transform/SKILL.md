@@ -1,9 +1,12 @@
 ---
 name: data-transform
-description: Transform, clean, reshape, and preprocess data using pandas and numpy. Works with ANY LLM provider (GPT, Gemini, Claude, etc.).
+description: Transform, clean, reshape, and preprocess data using pandas and numpy.
+  Works with ANY LLM provider (GPT, Gemini, Claude, etc.).
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Data Transformation (Universal)
 

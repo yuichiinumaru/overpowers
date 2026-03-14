@@ -43,7 +43,7 @@ Apply the **Overpowers AGENTS.md template** (`templates/rules/AGENTS.md`) to the
    - Ensure `.agents/` directory exists with subdirectories:
      - `.agents/memories/`
      - `.agents/thoughts/`
-   - Create `continuity.md` in the project root if it doesn't exist.
+   - Create `.agents/continuity-<agent-name>.md` if it doesn't exist.
    - Create `CHANGELOG.md` in the project root if it doesn't exist, initializing it with the standard format.
    - Create `.archive/` directory if it doesn't exist.
    - Ensure `scripts/utils/` directory exists.

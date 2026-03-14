@@ -1,6 +1,7 @@
 ---
 name: comfyui-wan22-svi20-long-video
-description: Create infinite-length AI videos without stiff motion or degradation using Wan 2.2 and SVI 2.0 in ComfyUI.
+description: Create infinite-length AI videos without stiff motion or degradation
+  using Wan 2.2 and SVI 2.0 in ComfyUI.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Wan 2.2 + SVI 2.0 Long Video Generation
 

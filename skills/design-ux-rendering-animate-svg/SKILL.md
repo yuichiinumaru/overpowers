@@ -1,9 +1,13 @@
 ---
 name: rendering-animate-svg
-description: Wrap animated SVG elements in a div to enable hardware acceleration. Apply when animating SVG icons or elements, especially in 8-bit retro components with pixel art animations.
+description: Wrap animated SVG elements in a div to enable hardware acceleration.
+  Apply when animating SVG icons or elements, especially in 8-bit retro components
+  with pixel art animations.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # Rendering Animate Svg
 

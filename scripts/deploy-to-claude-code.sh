@@ -7,35 +7,33 @@
 
 set -euo pipefail
 
-CLAUDE_DIR="${HOME}/.claude"
+# --- Core Setup ---
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+source "${SCRIPT_DIR}/utils/deploy-utils.sh"
+setup_deploy_env "Claude Code" "${HOME}/.claude"
 
-source "${SCRIPT_DIR}/utils/create-symlinks.sh"
+# --- Deployment ---
+print_deploy_banner
 
-echo ""
-echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
-echo -e "${CYAN}  Overpowers → Claude Code Deployment Script${NC}"
-echo -e "${CYAN}═══════════════════════════════════════════════════════${NC}"
-echo ""
-
-mkdir -p "${CLAUDE_DIR}"
 declare -a SYMLINKS=(
     "skills:skills"
     "workflows/toml:commands"
 )
-create_symlinks "${CLAUDE_DIR}" "${SYMLINKS[@]}"
+create_symlinks "${PLATFORM_DIR}" "${SYMLINKS[@]}"
 
+# --- Special Handling: AGENTS.md -> CLAUDE.md ---
 if [[ -f "${REPO_ROOT}/AGENTS.md" ]]; then
-    if [[ -L "${CLAUDE_DIR}/CLAUDE.md" ]]; then
-        rm "${CLAUDE_DIR}/CLAUDE.md"
-    elif [[ -e "${CLAUDE_DIR}/CLAUDE.md" ]]; then
-        mv "${CLAUDE_DIR}/CLAUDE.md" "${CLAUDE_DIR}/CLAUDE.md.bak"
+    AGENTS_MD="${REPO_ROOT}/AGENTS.md"
+    CLAUDE_MD="${PLATFORM_DIR}/CLAUDE.md"
+    
+    if [[ -L "${CLAUDE_MD}" ]]; then
+        rm "${CLAUDE_MD}"
+    elif [[ -e "${CLAUDE_MD}" ]]; then
+        mv "${CLAUDE_MD}" "${CLAUDE_MD}.bak"
     fi
-    ln -s "${REPO_ROOT}/AGENTS.md" "${CLAUDE_DIR}/CLAUDE.md"
-    log_info "CLAUDE.md -> ${REPO_ROOT}/AGENTS.md"
+    ln -s "${AGENTS_MD}" "${CLAUDE_MD}"
+    log_info "CLAUDE.md -> ${AGENTS_MD}"
 fi
 
-echo ""
-echo -e "${GREEN}  Claude Code Deployment complete!${NC}"
-echo ""
+# --- Summary ---
+print_deploy_summary

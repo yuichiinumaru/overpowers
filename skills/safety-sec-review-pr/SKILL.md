@@ -1,9 +1,13 @@
 ---
 name: review-pr
-description: Review-only GitHub pull request analysis with the gh CLI. Use when asked to review a PR, provide structured feedback, or assess readiness to land. Do not merge, push, or make code changes you intend to keep.
+description: Review-only GitHub pull request analysis with the gh CLI. Use when asked
+  to review a PR, provide structured feedback, or assess readiness to land. Do not
+  merge, push, or make code changes you intend to keep.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Review PR
 

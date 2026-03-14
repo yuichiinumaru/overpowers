@@ -1,9 +1,13 @@
 ---
 name: architecture-diagram-creator
-description: Create comprehensive HTML architecture diagrams showing data flows, business objectives, features, technical architecture, and deployment. Use when users request system architecture, project documentation, high-level overviews, or technical specifications.
+description: Create comprehensive HTML architecture diagrams showing data flows, business
+  objectives, features, technical architecture, and deployment. Use when users request
+  system architecture, project documentation, high-level overviews, or technical specifications.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Architecture Diagram Creator
 

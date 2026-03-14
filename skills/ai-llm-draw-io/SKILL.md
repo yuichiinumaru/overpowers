@@ -1,9 +1,12 @@
 ---
 name: draw-io
-description: draw.io diagram creation, editing, and review. Use for .drawio XML editing, PNG conversion, layout adjustment, and AWS icon usage.
+description: draw.io diagram creation, editing, and review. Use for .drawio XML editing,
+  PNG conversion, layout adjustment, and AWS icon usage.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # draw.io Diagram Skill
 

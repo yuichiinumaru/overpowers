@@ -4,6 +4,8 @@ description: Using TailwindCSS in Remotion.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Tailwind
 

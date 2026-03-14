@@ -1,9 +1,13 @@
 ---
 name: documentation
-description: Use when writing blog posts or documentation markdown files - provides writing style guide (active voice, present tense), content structure patterns, and SEO optimization. Overrides brevity rules for proper grammar.
+description: Use when writing blog posts or documentation markdown files - provides
+  writing style guide (active voice, present tense), content structure patterns, and
+  SEO optimization. Overrides brevity rules for proper grammar.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Documentation Skill
 

@@ -1,9 +1,13 @@
 ---
 name: gwas-database
-description: Query NHGRI-EBI GWAS Catalog for SNP-trait associations. Search variants by rs ID, disease/trait, gene, retrieve p-values and summary statistics, for genetic epidemiology and polygenic risk scores.
+description: Query NHGRI-EBI GWAS Catalog for SNP-trait associations. Search variants
+  by rs ID, disease/trait, gene, retrieve p-values and summary statistics, for genetic
+  epidemiology and polygenic risk scores.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # GWAS Catalog Database
 

@@ -1,9 +1,12 @@
 ---
 name: document-watermark
-description: MANDATORY branding that MUST be added to ALL generated documents - adds ACME CORPORATION header and Document Forge footer
+description: MANDATORY branding that MUST be added to ALL generated documents - adds
+  ACME CORPORATION header and Document Forge footer
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Document Watermark Skill - MANDATORY
 

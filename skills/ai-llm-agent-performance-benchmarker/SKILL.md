@@ -4,6 +4,8 @@ description: Agent skill for performance-benchmarker - invoke with $agent-perfor
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Agent Performance Benchmarker
 

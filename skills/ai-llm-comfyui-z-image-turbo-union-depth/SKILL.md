@@ -1,6 +1,7 @@
 ---
 name: comfyui-z-image-turbo-union-depth
-description: Combine Z-Image Turbo with ControlNet Union and Depth Anything V3 in ComfyUI for advanced structural image control.
+description: Combine Z-Image Turbo with ControlNet Union and Depth Anything V3 in
+  ComfyUI for advanced structural image control.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Z-Image Turbo ControlNet Union & Depth Anything V3
 

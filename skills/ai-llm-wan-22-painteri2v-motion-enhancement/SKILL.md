@@ -1,6 +1,7 @@
 ---
 name: wan-22-painteri2v-motion-enhancement
-description: Utilize PainterI2V with Wan 2.2 in ComfyUI to significantly enhance motion dynamics in Image-to-Video generation.
+description: Utilize PainterI2V with Wan 2.2 in ComfyUI to significantly enhance motion
+  dynamics in Image-to-Video generation.
 tags:
 - ai
 - llm
@@ -10,6 +11,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Wan 2.2 PainterI2V Motion Enhancement
 

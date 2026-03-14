@@ -4,6 +4,8 @@ description: Loading Google Fonts and local fonts in Remotion
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Using fonts in Remotion
 

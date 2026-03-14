@@ -1,9 +1,13 @@
 ---
 name: helpdesk-automation
-description: 'Automate HelpDesk tasks via Rube MCP (Composio): list tickets, manage views, use canned responses, and configure custom fields. Always search tools first for current schemas.'
+description: 'Automate HelpDesk tasks via Rube MCP (Composio): list tickets, manage
+  views, use canned responses, and configure custom fields. Always search tools first
+  for current schemas.'
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # HelpDesk Automation via Rube MCP
 

@@ -4,6 +4,8 @@ description: Agent skill for issue-tracker - invoke with $agent-issue-tracker
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Agent Issue Tracker
 

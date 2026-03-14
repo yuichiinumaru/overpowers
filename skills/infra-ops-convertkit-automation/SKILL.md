@@ -1,9 +1,12 @@
 ---
 name: convertkit-automation
-description: 'Automate ConvertKit (Kit) tasks via Rube MCP (Composio): manage subscribers, tags, broadcasts, and broadcast stats. Always search tools first for current schemas.'
+description: 'Automate ConvertKit (Kit) tasks via Rube MCP (Composio): manage subscribers,
+  tags, broadcasts, and broadcast stats. Always search tools first for current schemas.'
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # ConvertKit (Kit) Automation via Rube MCP
 

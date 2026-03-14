@@ -1,9 +1,12 @@
 ---
 name: worker-integration
-description: Worker-Agent integration for intelligent task dispatch and performance tracking
+description: Worker-Agent integration for intelligent task dispatch and performance
+  tracking
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Worker-Agent Integration Skill
 

@@ -4,6 +4,8 @@ description: Monitor portfolio risk, R-multiples, and position limits. Creates
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Risk Manager
 

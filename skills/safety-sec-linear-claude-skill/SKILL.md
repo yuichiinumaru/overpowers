@@ -4,6 +4,8 @@ description: Manage Linear issues, projects, and teams
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Linear Claude Skill
 

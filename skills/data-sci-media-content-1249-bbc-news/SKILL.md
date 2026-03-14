@@ -1,6 +1,17 @@
 ---
 name: media-content-1249-bbc-news
-description: "Fetch and display BBC News stories from various sections and regions via RSS feeds. Use when the user asks for BBC news, UK news headlines, world news from BBC, or news from specific BBC sections (technology, business, politics, science, health, entertainment, regional UK news, or world regions)."
+description: Fetch and display BBC News stories from various sections and regions
+  via RSS feeds. Use when the user asks for BBC news, UK news headlines, world news
+  from BBC, or news from specific BBC sections (technology, business, politics, science,
+  health, entertainment, regional UK news, or world regions).
+version: 1.0.0
+category: general
+tags:
+- '1249'
+- bbc
+- content
+- general
+- media
 ---
 
 # BBC News

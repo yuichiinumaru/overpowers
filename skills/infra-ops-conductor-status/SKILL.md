@@ -4,6 +4,8 @@ description: Display project status, active tracks, and next actions
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Conductor Status
 

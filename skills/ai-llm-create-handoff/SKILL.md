@@ -4,6 +4,8 @@ description: Create handoff document for transferring work to another session
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Create Handoff
 

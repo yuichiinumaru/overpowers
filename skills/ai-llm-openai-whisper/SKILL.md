@@ -4,6 +4,8 @@ description: Local speech-to-text with the Whisper CLI (no API key).
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Whisper (CLI)
 

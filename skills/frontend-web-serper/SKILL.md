@@ -1,9 +1,12 @@
 ---
 name: serper
-description: Professional search (news, places, maps, reviews, scholar, patents) and bulk scraping via Serper API.
+description: Professional search (news, places, maps, reviews, scholar, patents) and
+  bulk scraping via Serper API.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # Serper Search
 

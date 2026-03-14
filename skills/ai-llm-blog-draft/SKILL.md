@@ -1,9 +1,13 @@
 ---
 name: blog-draft
-description: Draft a blog post from ideas and resources. Use when users want to write a blog post, create content from research, or draft articles. Guides through research, brainstorming, outlining, and iterative drafting with version control.
+description: Draft a blog post from ideas and resources. Use when users want to write
+  a blog post, create content from research, or draft articles. Guides through research,
+  brainstorming, outlining, and iterative drafting with version control.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Blog Draft
 

@@ -1,6 +1,8 @@
 ---
 name: local-asr-transcription
-description: Set up state-of-the-art Automatic Speech Recognition (ASR) locally using models like Qwen 3 ASR or Microsoft Vibe Voice for robust audio transcription in complex environments.
+description: Set up state-of-the-art Automatic Speech Recognition (ASR) locally using
+  models like Qwen 3 ASR or Microsoft Vibe Voice for robust audio transcription in
+  complex environments.
 tags:
 - infra
 - ops
@@ -10,6 +12,7 @@ tools:
   read: true
   write: true
   bash: true
+version: 1.0.0
 ---
 # Local Automatic Speech Recognition (ASR)
 

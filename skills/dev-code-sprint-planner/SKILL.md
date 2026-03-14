@@ -4,6 +4,8 @@ description: '|'
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Sprint Planner
 

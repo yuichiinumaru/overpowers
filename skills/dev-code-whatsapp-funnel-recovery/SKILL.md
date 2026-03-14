@@ -1,9 +1,12 @@
 ---
 name: whatsapp-funnel-recovery
-description: Procedimento operacional para criar um funil de recuperação de vendas via WhatsApp focado em recuperar Pix e boletos gerados não pagos de infoprodutos.
+description: Procedimento operacional para criar um funil de recuperação de vendas
+  via WhatsApp focado em recuperar Pix e boletos gerados não pagos de infoprodutos.
 tags:
 - dev
 - code
+version: 1.0.0
+category: general
 ---
 # Recuperação de Vendas via WhatsApp (Funil Pix/Boleto)
 

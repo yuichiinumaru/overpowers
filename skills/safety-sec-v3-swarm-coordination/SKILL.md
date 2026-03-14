@@ -1,9 +1,13 @@
 ---
 name: v3-swarm-coordination
-description: 15-agent hierarchical mesh coordination for v3 implementation. Orchestrates parallel execution across security, core, and integration domains following 10 ADRs with 14-week timeline.
+description: 15-agent hierarchical mesh coordination for v3 implementation. Orchestrates
+  parallel execution across security, core, and integration domains following 10 ADRs
+  with 14-week timeline.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # V3 Swarm Coordination
 

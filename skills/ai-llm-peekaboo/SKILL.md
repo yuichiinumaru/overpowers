@@ -4,6 +4,8 @@ description: Capture and automate macOS UI with the Peekaboo CLI.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Peekaboo
 

@@ -1,9 +1,12 @@
 ---
 name: parallel
-description: High-accuracy web search and research via Parallel.ai API. Optimized for AI agents with rich excerpts and citations.
+description: High-accuracy web search and research via Parallel.ai API. Optimized
+  for AI agents with rich excerpts and citations.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Parallel.ai 🔬
 

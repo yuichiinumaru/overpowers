@@ -1,9 +1,14 @@
 ---
 name: feedback-mastery
-description: Navigate difficult conversations and deliver constructive feedback using structured frameworks. Covers the Preparation-Delivery-Follow-up model and Situation-Behavior-Impact (SBI) feedback technique. Use when preparing for difficult conversations, giving feedback, or managing conflicts.
+description: Navigate difficult conversations and deliver constructive feedback using
+  structured frameworks. Covers the Preparation-Delivery-Follow-up model and Situation-Behavior-Impact
+  (SBI) feedback technique. Use when preparing for difficult conversations, giving
+  feedback, or managing conflicts.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Feedback Conversations
 

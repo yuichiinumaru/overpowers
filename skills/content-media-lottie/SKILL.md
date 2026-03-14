@@ -4,6 +4,8 @@ description: Embedding Lottie animations in Remotion.
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Using Lottie Animations in Remotion
 

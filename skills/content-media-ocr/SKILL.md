@@ -4,6 +4,8 @@ description: Extract text from images using Tesseract OCR
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # OCR Image Text Extraction Skill
 

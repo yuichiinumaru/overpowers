@@ -4,6 +4,8 @@ description: Automation and tasks for examples
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Examples: Planning with Files in Action
 

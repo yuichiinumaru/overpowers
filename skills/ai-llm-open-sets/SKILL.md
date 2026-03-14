@@ -4,6 +4,8 @@ description: Problem-solving strategies for open sets in topology
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Open Sets
 

@@ -1,9 +1,12 @@
 ---
 name: data-engineering
-description: Airflow, dbt, Spark, and data quality frameworks. Use when building data pipelines, ETL processes, or optimizing data warehouse performance.
+description: Airflow, dbt, Spark, and data quality frameworks. Use when building data
+  pipelines, ETL processes, or optimizing data warehouse performance.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Data Engineering
 

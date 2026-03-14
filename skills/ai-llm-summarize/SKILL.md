@@ -1,9 +1,12 @@
 ---
 name: summarize
-description: Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).
+description: Summarize or extract text/transcripts from URLs, podcasts, and local
+  files (great fallback for “transcribe this YouTube/video”).
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Summarize
 

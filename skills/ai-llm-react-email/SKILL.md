@@ -1,9 +1,14 @@
 ---
 name: react-email
-description: Create beautiful, responsive HTML emails using React components with React Email. Build transactional emails with modern components, support internationalization, and integrate with email service providers like Resend. Use when creating welcome emails, password resets, notifications, order confirmations, or any HTML email templates.
+description: Create beautiful, responsive HTML emails using React components with
+  React Email. Build transactional emails with modern components, support internationalization,
+  and integrate with email service providers like Resend. Use when creating welcome
+  emails, password resets, notifications, order confirmations, or any HTML email templates.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # React Email
 

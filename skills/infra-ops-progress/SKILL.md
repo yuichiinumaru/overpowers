@@ -4,6 +4,8 @@ description: Automation and tasks for progress
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Progress Log
 <!-- 

@@ -4,6 +4,8 @@ description: Local text-to-speech via sherpa-onnx (offline, no cloud)
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # sherpa-onnx-tts
 

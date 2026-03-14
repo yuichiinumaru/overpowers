@@ -1,9 +1,15 @@
 ---
 name: sentencepiece
-description: Language-independent tokenizer treating text as raw Unicode. Supports BPE and Unigram algorithms. Fast (50k sentences/sec), lightweight (6MB memory), deterministic vocabulary. Used by T5, ALBERT, XLNet, mBART. Train on raw text without pre-tokenization. Use when you need multilingual support, CJK languages, or reproducible tokenization.
+description: Language-independent tokenizer treating text as raw Unicode. Supports
+  BPE and Unigram algorithms. Fast (50k sentences/sec), lightweight (6MB memory),
+  deterministic vocabulary. Used by T5, ALBERT, XLNet, mBART. Train on raw text without
+  pre-tokenization. Use when you need multilingual support, CJK languages, or reproducible
+  tokenization.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # SentencePiece - Language-Independent Tokenization
 

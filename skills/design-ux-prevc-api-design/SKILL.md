@@ -4,6 +4,8 @@ description: Designs APIs following best practices
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # API Design
 

@@ -1,9 +1,14 @@
 ---
 name: codebase-documenter
-description: Generates comprehensive documentation explaining how a codebase works, including architecture, key components, data flow, and development guidelines. Use when user wants to understand unfamiliar code, create onboarding docs, document architecture, or explain how the system works.
+description: Generates comprehensive documentation explaining how a codebase works,
+  including architecture, key components, data flow, and development guidelines. Use
+  when user wants to understand unfamiliar code, create onboarding docs, document
+  architecture, or explain how the system works.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Codebase Documenter
 

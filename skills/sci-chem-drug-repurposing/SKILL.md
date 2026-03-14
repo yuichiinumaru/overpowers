@@ -1,9 +1,16 @@
 ---
 name: drug-repurposing
-description: Identify drug repurposing candidates using ToolUniverse for target-based, compound-based, and disease-driven strategies. Searches existing drugs for new therapeutic indications by analyzing targets, bioactivity, safety profiles, and literature evidence. Use when exploring drug repurposing opportunities, finding new indications for approved drugs, or when users mention drug repositioning, off-label uses, or therapeutic alternatives.
+description: Identify drug repurposing candidates using ToolUniverse for target-based,
+  compound-based, and disease-driven strategies. Searches existing drugs for new therapeutic
+  indications by analyzing targets, bioactivity, safety profiles, and literature evidence.
+  Use when exploring drug repurposing opportunities, finding new indications for approved
+  drugs, or when users mention drug repositioning, off-label uses, or therapeutic
+  alternatives.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # Drug Repurposing with ToolUniverse
 

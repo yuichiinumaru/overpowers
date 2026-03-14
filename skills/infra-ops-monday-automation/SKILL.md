@@ -1,9 +1,13 @@
 ---
 name: monday-automation
-description: Automate Monday.com work management including boards, items, columns, groups, subitems, and updates via Rube MCP (Composio). Always search tools first for current schemas.
+description: Automate Monday.com work management including boards, items, columns,
+  groups, subitems, and updates via Rube MCP (Composio). Always search tools first
+  for current schemas.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Monday.com Automation via Rube MCP
 

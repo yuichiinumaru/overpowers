@@ -12,6 +12,8 @@ metadata:
       env:
       - NOTION_API_KEY
     primaryEnv: NOTION_API_KEY
+version: 1.0.0
+category: general
 ---
 # notion
 

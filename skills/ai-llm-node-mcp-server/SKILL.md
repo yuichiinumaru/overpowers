@@ -4,6 +4,8 @@ description: Automation and tasks for node-mcp-server
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Node/TypeScript MCP Server Implementation Guide
 

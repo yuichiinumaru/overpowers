@@ -4,6 +4,8 @@ description: Transcribe audio via OpenAI Audio Transcriptions API (Whisper).
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # OpenAI Whisper API (curl)
 

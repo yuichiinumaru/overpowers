@@ -1,9 +1,13 @@
 ---
 name: uspto-database
-description: Access USPTO APIs for patent/trademark searches, examination history (PEDS), assignments, citations, office actions, TSDR, for IP analysis and prior art searches.
+description: Access USPTO APIs for patent/trademark searches, examination history
+  (PEDS), assignments, citations, office actions, TSDR, for IP analysis and prior
+  art searches.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # USPTO Database
 

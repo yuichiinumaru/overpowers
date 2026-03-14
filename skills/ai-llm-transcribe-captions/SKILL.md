@@ -4,6 +4,8 @@ description: Transcribing audio to generate captions in Remotion
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Transcribing audio
 

@@ -1,9 +1,12 @@
 ---
 name: format-figure
-description: Reformats a figure component file to conform to the standard section order and naming conventions defined in the figure guidelines.
+description: Reformats a figure component file to conform to the standard section
+  order and naming conventions defined in the figure guidelines.
 tags:
 - design
 - ux
+version: 1.0.0
+category: general
 ---
 # Format Figure
 

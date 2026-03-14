@@ -1,9 +1,12 @@
 ---
 name: local-places
-description: Search for places (restaurants, cafes, etc.) via Google Places API proxy on localhost.
+description: Search for places (restaurants, cafes, etc.) via Google Places API proxy
+  on localhost.
 tags:
 - frontend
 - web
+version: 1.0.0
+category: general
 ---
 # 📍 Local Places
 

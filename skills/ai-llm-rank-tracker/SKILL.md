@@ -1,9 +1,13 @@
 ---
 name: rank-tracker
-description: Tracks and analyzes keyword ranking positions over time for both traditional search results and AI-generated responses. Monitors ranking changes, identifies trends, and alerts on significant movements.
+description: Tracks and analyzes keyword ranking positions over time for both traditional
+  search results and AI-generated responses. Monitors ranking changes, identifies
+  trends, and alerts on significant movements.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Rank Tracker
 

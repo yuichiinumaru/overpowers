@@ -4,6 +4,8 @@ description: Send WhatsApp messages via connected provider.
 tags:
 - data
 - sci
+version: 1.0.0
+category: general
 ---
 # WhatsApp Actions
 

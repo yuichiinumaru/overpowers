@@ -1,9 +1,12 @@
 ---
 name: mobile-developer
-description: iOS and Android development expert. Covers Swift, Kotlin, SwiftUI, Jetpack Compose, React Native, Flutter, and app store guidelines.
+description: iOS and Android development expert. Covers Swift, Kotlin, SwiftUI, Jetpack
+  Compose, React Native, Flutter, and app store guidelines.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Mobile Developer Skill
 

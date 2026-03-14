@@ -1,9 +1,15 @@
 ---
 name: railway-deployment
-description: Manage Railway deployments - view logs, redeploy, restart, or remove deployments. Use for deployment lifecycle (remove, stop, redeploy, restart), deployment visibility (list, status, history), and troubleshooting (logs, errors, failures, crashes). NOT for deleting services - use railway-environment skill with isDeleted for that.
+description: Manage Railway deployments - view logs, redeploy, restart, or remove
+  deployments. Use for deployment lifecycle (remove, stop, redeploy, restart), deployment
+  visibility (list, status, history), and troubleshooting (logs, errors, failures,
+  crashes). NOT for deleting services - use railway-environment skill with isDeleted
+  for that.
 tags:
 - infra
 - ops
+version: 1.0.0
+category: general
 ---
 # Railway Deployment Management
 

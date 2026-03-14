@@ -1,8 +1,10 @@
 ---
 name: scientific-problem-selection
-description: ''
+description: Guides scientific problem selection and troubleshooting using a decision-tree framework based on research best practices.
 tags:
 - sci
+version: 1.0.0
+category: general
 ---
 # Scientific Problem Selection Skills
 

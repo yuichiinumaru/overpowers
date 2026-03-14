@@ -4,6 +4,8 @@ description: Interpolation curves in Remotion - linear, easing, spring animation
 tags:
 - content
 - media
+version: 1.0.0
+category: general
 ---
 # Timing
 

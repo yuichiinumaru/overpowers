@@ -1,9 +1,14 @@
 ---
 name: roier-seo
-description: Technical SEO auditor and fixer. Runs Lighthouse/PageSpeed audits on websites or local dev servers, analyzes SEO/performance/accessibility scores, and automatically implements fixes for meta tags, structured data, Core Web Vitals, and accessibility issues.
+description: Technical SEO auditor and fixer. Runs Lighthouse/PageSpeed audits on
+  websites or local dev servers, analyzes SEO/performance/accessibility scores, and
+  automatically implements fixes for meta tags, structured data, Core Web Vitals,
+  and accessibility issues.
 tags:
 - safety
 - sec
+version: 1.0.0
+category: general
 ---
 # Roier SEO - Technical SEO Auditor & Fixer
 

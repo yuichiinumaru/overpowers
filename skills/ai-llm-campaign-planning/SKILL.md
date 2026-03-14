@@ -1,9 +1,14 @@
 ---
 name: campaign-planning
-description: Plan marketing campaigns with objectives, audience segmentation, channel strategy, content calendars, and success metrics. Use when launching a campaign, planning a product launch, building a content calendar, allocating budget across channels, or defining campaign KPIs.
+description: Plan marketing campaigns with objectives, audience segmentation, channel
+  strategy, content calendars, and success metrics. Use when launching a campaign,
+  planning a product launch, building a content calendar, allocating budget across
+  channels, or defining campaign KPIs.
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Campaign Planning Skill
 

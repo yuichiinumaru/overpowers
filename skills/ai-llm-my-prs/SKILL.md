@@ -1,9 +1,12 @@
 ---
 name: my-prs
-description: List PRs opened today that are assigned to me or the move-destinations team, excluding external contributors
+description: List PRs opened today that are assigned to me or the move-destinations
+  team, excluding external contributors
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # My PRs - Daily PR Review Dashboard
 

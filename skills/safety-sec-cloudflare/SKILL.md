@@ -1,6 +1,9 @@
 ---
 name: cloudflare
-description: Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), networking (Tunnel, Spectrum), security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any Cloudflare development task.
+description: Comprehensive Cloudflare platform skill covering Workers, Pages, storage
+  (KV, D1, R2), AI (Workers AI, Vectorize, Agents SDK), networking (Tunnel, Spectrum),
+  security (WAF, DDoS), and infrastructure-as-code (Terraform, Pulumi). Use for any
+  Cloudflare development task.
 tags:
 - safety
 - sec
@@ -10,6 +13,8 @@ references:
 - d1
 - durable-objects
 - workers-ai
+version: 1.0.0
+category: general
 ---
 # Cloudflare Platform Skill
 

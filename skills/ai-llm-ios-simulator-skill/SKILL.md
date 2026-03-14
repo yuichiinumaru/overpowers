@@ -1,10 +1,13 @@
 ---
 name: ios-simulator-skill
-description: 21 production-ready scripts for iOS app testing, building, and automation. Provides semantic UI navigation, build automation, accessibility testing, and simulator lifecycle management. Optimized for AI agents with minimal token output.
+description: 21 production-ready scripts for iOS app testing, building, and automation.
+  Provides semantic UI navigation, build automation, accessibility testing, and simulator
+  lifecycle management. Optimized for AI agents with minimal token output.
 tags:
 - ai
 - llm
 version: 1.3.0
+category: general
 ---
 # iOS Simulator Skill
 

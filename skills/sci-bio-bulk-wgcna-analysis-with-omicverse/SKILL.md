@@ -1,9 +1,13 @@
 ---
 name: bulk-wgcna-analysis-with-omicverse
-description: Assist Claude in running PyWGCNA through omicverse—preprocessing expression matrices, constructing co-expression modules, visualising eigengenes, and extracting hub genes.
+description: Assist Claude in running PyWGCNA through omicverse—preprocessing expression
+  matrices, constructing co-expression modules, visualising eigengenes, and extracting
+  hub genes.
 tags:
 - bio
 - sci
+version: 1.0.0
+category: general
 ---
 # Bulk WGCNA analysis with omicverse
 

@@ -1,9 +1,15 @@
 ---
 name: matchms
-description: Spectral similarity and compound identification for metabolomics. Use for comparing mass spectra, computing similarity scores (cosine, modified cosine), and identifying unknown compounds from spectral libraries. Best for metabolite identification, spectral matching, library searching. For full LC-MS/MS proteomics pipelines use pyopenms.
+description: Spectral similarity and compound identification for metabolomics. Use
+  for comparing mass spectra, computing similarity scores (cosine, modified cosine),
+  and identifying unknown compounds from spectral libraries. Best for metabolite identification,
+  spectral matching, library searching. For full LC-MS/MS proteomics pipelines use
+  pyopenms.
 tags:
 - sci
 - chem
+version: 1.0.0
+category: general
 ---
 # Matchms
 

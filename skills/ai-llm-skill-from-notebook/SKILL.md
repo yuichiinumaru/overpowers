@@ -1,9 +1,12 @@
 ---
 name: skill-from-notebook
-description: Extract methodologies from documents or examples to create executable skills
+description: Extract methodologies from documents or examples to create executable
+  skills
 tags:
 - ai
 - llm
+version: 1.0.0
+category: general
 ---
 # Skill from Notebook
 
