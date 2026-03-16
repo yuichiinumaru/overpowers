@@ -55,3 +55,7 @@ mcp/
 packages/
 .gemini/
 llm_models/
+
+# Large analysis data files
+.docs/tasks/planning/non-english-data.json
+.docs/tasks/planning/similar-skills-data.json

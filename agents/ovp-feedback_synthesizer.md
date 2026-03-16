@@ -12,7 +12,7 @@ Post-launch feedback analysis\nuser: '"Our new feature has been live for a week.
 What are users saying?"\nassistant: '"I''''ll compile and analyze user reactions to"
 and improvement.\n</commentary>\n</example>\n\n<example>\nContext: Identifying user
 pain points\nuser: '"Users seem frustrated but I can''''t pinpoint why"\nassistant:"
-color: '''"#ffa500"""
+color: "#ffa500"
 tools:
   read: true
   write: true

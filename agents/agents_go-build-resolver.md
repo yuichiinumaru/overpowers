@@ -1,7 +1,13 @@
 ---
 name: go-build-resolver
 description: Goビルド、vet、コンパイルエラー解決スペシャリスト。最小限の変更でビルドエラー、go vet問題、リンターの警告を修正します。Goビルドが失敗したときに使用してください。
-tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
+tools:
+  read: true
+  write: true
+  edit: true
+  bash: true
+  grep: true
+  glob: true
 model: opus
 ---
 

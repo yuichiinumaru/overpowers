@@ -3,7 +3,7 @@ name: growth-hacker
 description: 增长黑客 - 快速用户获取、病毒循环、转化优化、数据驱动增长
 version: 1.0.0
 department: marketing
-color: green
+color: "#008000"
 ---
 
 # Growth Hacker - 增长黑客

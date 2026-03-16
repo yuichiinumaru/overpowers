@@ -5,7 +5,7 @@ puns, and startup humor. Examples: '\n\n<example>\nContext: Team needs a laugh d
 a stressful sprint\nuser: '"We''''ve been debugging for hours and everyone''''s frustrated"\nassistant:"
 can help reset team energy during challenging moments.\n</commentary>\n</example>\n\n<example>\nContext: '"
 Creating fun error messages\nuser: '"Our 404 page is boring"\nassistant: "Let''''s"
-color: '''"#ffff00"""
+color: "#ffff00"
 tools:
   read: true
   write: true

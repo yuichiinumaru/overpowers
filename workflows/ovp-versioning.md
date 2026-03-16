@@ -4,13 +4,13 @@
 
 ## Quick Reference
 
-- **Get version**: `./.agent/skills/github-release-management/scripts/version-manager.sh get`
-- **Bump**: `./.agent/skills/github-release-management/scripts/version-manager.sh bump [major|minor|patch]`
-- **Full release**: `./.agent/skills/github-release-management/scripts/version-manager.sh release [major|minor|patch]`
-- **Validate**: `./.agent/skills/github-release-management/scripts/version-manager.sh validate`
-- **Create tag**: `./.agent/skills/github-release-management/scripts/version-manager.sh tag`
-- **GitHub release**: `./.agent/skills/github-release-management/scripts/version-manager.sh github-release`
-- **Auto-bump**: `./.agent/skills/github-release-management/scripts/auto-version-bump.sh "commit message"`
+- **Get version**: `./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh get`
+- **Bump**: `./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh bump [major|minor|patch]`
+- **Full release**: `./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh release [major|minor|patch]`
+- **Validate**: `./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh validate`
+- **Create tag**: `./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh tag`
+- **GitHub release**: `./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh github-release`
+- **Auto-bump**: `./.agent/skills/coding/review/github-release-management/scripts/auto-version-bump.sh "commit message"`
 - **Files updated**: VERSION, README.md badge, sonar-project.properties, setup.sh
 - **Commit patterns**: BREAKING/MAJOR (major), FEATURE/NEW (minor), FIX/PATCH (patch)
 - **Skip patterns**: docs, style, test, chore, ci, WIP, SKIP VERSION
@@ -26,13 +26,13 @@ The AI DevOps Framework uses professional semantic versioning with automated too
 
 ### Primary Tool: version-manager.sh
 
-- **Location**: `.agent/skills/github-release-management/scripts/version-manager.sh`
+- **Location**: `.agent/skills/coding/review/github-release-management/scripts/version-manager.sh`
 - **Purpose**: Manual version control with comprehensive features
 - **Capabilities**: Version bumping, file updates, git tagging, GitHub releases
 
 ### Automation Tool: auto-version-bump.sh
 
-- **Location**: `.agent/skills/github-release-management/scripts/auto-version-bump.sh`
+- **Location**: `.agent/skills/coding/review/github-release-management/scripts/auto-version-bump.sh`
 - **Purpose**: Intelligent version detection from commit messages
 - **Capabilities**: Automatic version bumping based on commit patterns
 
@@ -50,52 +50,52 @@ GitHub releases are created via `gh` CLI (preferred) or GitHub API fallback:
 #### **Get Current Version**
 
 ```bash
-./.agent/skills/github-release-management/scripts/version-manager.sh get
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh get
 ```
 
 #### **Bump Version**
 
 ```bash
 # Patch version (1.3.0 → 1.3.1)
-./.agent/skills/github-release-management/scripts/version-manager.sh bump patch
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh bump patch
 
 # Minor version (1.3.0 → 1.4.0)
-./.agent/skills/github-release-management/scripts/version-manager.sh bump minor
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh bump minor
 
 # Major version (1.3.0 → 2.0.0)
-./.agent/skills/github-release-management/scripts/version-manager.sh bump major
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh bump major
 ```
 
 #### **Create Git Tag**
 
 ```bash
-./.agent/skills/github-release-management/scripts/version-manager.sh tag
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh tag
 ```
 
 #### **Create GitHub Release**
 
 ```bash
-./.agent/skills/github-release-management/scripts/version-manager.sh github-release
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh github-release
 ```
 
 #### **Complete Release Process**
 
 ```bash
 # Bump version, update files, validate consistency, create tag, and create GitHub release
-./.agent/skills/github-release-management/scripts/version-manager.sh release minor
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh release minor
 ```
 
 #### **Version Validation**
 
 ```bash
 # Validate current version consistency across all files
-./.agent/skills/github-release-management/scripts/version-manager.sh validate
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh validate
 
 # Or use the standalone validator
-./.agent/skills/github-release-management/scripts/validate-version-consistency.sh
+./.agent/skills/coding/review/github-release-management/scripts/validate-version-consistency.sh
 
 # Validate specific version
-./.agent/skills/github-release-management/scripts/validate-version-consistency.sh 1.6.0
+./.agent/skills/coding/review/github-release-management/scripts/validate-version-consistency.sh 1.6.0
 ```
 
 ### **Automatic Version Detection**
@@ -125,7 +125,7 @@ GitHub releases are created via `gh` CLI (preferred) or GitHub API fallback:
 
 ```bash
 # Analyze commit message and bump version accordingly
-./.agent/skills/github-release-management/scripts/auto-version-bump.sh "🚀 FEATURE: Add new integration"
+./.agent/skills/coding/review/github-release-management/scripts/auto-version-bump.sh "🚀 FEATURE: Add new integration"
 ```
 
 ## Automated File Updates
@@ -152,13 +152,13 @@ The framework now includes comprehensive version validation to ensure all versio
 
 ```bash
 # Validate current version consistency
-./.agent/skills/github-release-management/scripts/validate-version-consistency.sh
+./.agent/skills/coding/review/github-release-management/scripts/validate-version-consistency.sh
 
 # Validate specific version
-./.agent/skills/github-release-management/scripts/validate-version-consistency.sh 1.6.0
+./.agent/skills/coding/review/github-release-management/scripts/validate-version-consistency.sh 1.6.0
 
 # Through version manager
-./.agent/skills/github-release-management/scripts/version-manager.sh validate
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh validate
 ```
 
 #### **Validation Coverage**
@@ -199,7 +199,7 @@ gh auth login
 export GITHUB_TOKEN=your_personal_access_token
 
 # Create release via version-manager
-./.agent/skills/github-release-management/scripts/version-manager.sh github-release
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh github-release
 ```
 
 #### **3. Manual Creation**
@@ -285,13 +285,13 @@ chmod +x .agent/scripts/*.sh
 
 ```bash
 # Check current version
-./.agent/skills/github-release-management/scripts/version-manager.sh get
+./.agent/skills/coding/review/github-release-management/scripts/version-manager.sh get
 
 # Verify GitHub releases
 curl -s https://api.github.com/repos/marcusquinn/aidevops/releases | jq '.[].tag_name'
 
 # Test version bump (dry run)
-./.agent/skills/github-release-management/scripts/auto-version-bump.sh "🔧 TEST: Version bump test"
+./.agent/skills/coding/review/github-release-management/scripts/auto-version-bump.sh "🔧 TEST: Version bump test"
 ```
 
 ## Best Practices

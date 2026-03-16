@@ -7,7 +7,7 @@ user: '''"Are we using our tools effectively together?"""
 assistant: '''"I''''ll analyze your tool integration and usage patterns. Let me use
   the"
 </example>\n\n<example>\nContext: Tool integration efficiency
-color: '''"#008080"""
+color: "#008080"
 tools:
   read: true
   write: true

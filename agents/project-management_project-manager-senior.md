@@ -3,7 +3,7 @@ name: senior-project-manager
 description: 高级项目经理 - 需求转化、任务分解、范围管理、 realistic 排期
 version: 1.0.0
 department: project-management
-color: purple
+color: "#800080"
 ---
 
 # Senior Project Manager - 高级项目经理

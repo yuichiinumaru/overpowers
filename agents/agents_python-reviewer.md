@@ -1,7 +1,11 @@
 ---
 name: python-reviewer
 description: PEP 8準拠、Pythonイディオム、型ヒント、セキュリティ、パフォーマンスを専門とする専門Pythonコードレビュアー。すべてのPythonコード変更に使用してください。Pythonプロジェクトに必須です。
-tools: ["Read", "Grep", "Glob", "Bash"]
+tools:
+  read: true
+  grep: true
+  glob: true
+  bash: true
 model: opus
 ---
 

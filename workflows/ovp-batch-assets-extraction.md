@@ -45,7 +45,7 @@ argument-hint: URLs de repositórios GitHub, task file, ou flags (--staging, --g
 **Ações**:
 1. **Clone Shallow** (apenas último commit):
    ```bash
-   python3 skills/ovp-extract-assets/scripts/clone-github-repos.py <urls>
+   python3 skills/data/etl/assets/scripts/clone-github-repos.py <urls>
    ```
 
 2. **Detectar Estrutura**:
@@ -91,7 +91,7 @@ argument-hint: URLs de repositórios GitHub, task file, ou flags (--staging, --g
 5. **Marcar Task File**:
    - Substituir `[ ]` por `[x]` para cada item processado
 
-**Script**: `python3 skills/ovp-extract-assets/scripts/process-all-staging.py --batch all`
+**Script**: `python3 skills/data/etl/assets/scripts/process-all-staging.py --batch all`
 
 **Output**: Assets padronizados em `skills/`, `agents/`, `workflows/`, `hooks/`.
 
@@ -104,7 +104,7 @@ argument-hint: URLs de repositórios GitHub, task file, ou flags (--staging, --g
 **Ações**:
 1. **Auditoria de Origem**:
    ```bash
-   python3 skills/ovp-extract-assets/scripts/skill-origins-tracker.py
+   python3 skills/data/etl/assets/scripts/skill-origins-tracker.py
    ```
    - Lê `.docs/batch-processing-log.json`
    - Rastreia origens via `.archive/staging/manifest.json`
@@ -118,7 +118,7 @@ argument-hint: URLs de repositórios GitHub, task file, ou flags (--staging, --g
 
 3. **Migrar Assets** (após aprovação):
    ```bash
-   python3 skills/ovp-extract-assets/scripts/migrate-auxiliary-assets.py
+   python3 skills/data/etl/assets/scripts/migrate-auxiliary-assets.py
    ```
    - Copia scripts/ para `skills/<name>/scripts/`
    - Copia references/ para `skills/<name>/references/`
@@ -168,7 +168,7 @@ argument-hint: URLs de repositórios GitHub, task file, ou flags (--staging, --g
 
 2. **Cleanup Staging**:
    ```bash
-   python3 skills/ovp-extract-assets/scripts/mass-cleanup-staging.py
+   python3 skills/data/etl/assets/scripts/mass-cleanup-staging.py
    ```
    - Deletar arquivos processados de `.archive/staging/`
    - Preservar duplicados (11 skills que já existiam)
@@ -292,7 +292,7 @@ argument-hint: URLs de repositórios GitHub, task file, ou flags (--staging, --g
 
 ## 📚 Scripts Utilizados
 
-Todos os scripts estão em `skills/ovp-extract-assets/scripts/`:
+Todos os scripts estão em `skills/data/etl/assets/scripts/`:
 
 - `clone-github-repos.py` - Fase 1
 - `process-all-staging.py` - Fase 2

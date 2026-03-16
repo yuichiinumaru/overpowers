@@ -9,7 +9,7 @@ Making feature trade-offs\nuser: '"Should we build AI chat or improve onboarding
 ? requires analyzing user impact, development effort, and strategic alignment.\n</commentary>\n</example>\n\n<example>\nContext
 : '"
 Mid-sprint scope changes\nuser: '"The CEO wants us to add video calling to this sprint"\nassistant:"
-color: '''"#4b0082"""
+color: "#4b0082"
 tools:
   read: true
   write: true

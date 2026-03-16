@@ -1,0 +1,14 @@
+description = "Monitor and provide feedback for Feishu tasks."
+
+prompt = '''
+# Feishu Process Feedback Workflow
+
+Standard procedure for background task monitoring and feedback.
+
+1. **Deploy**: Install the skill via `clawhub install feishu-process-feedback`.
+2. **Configure**: Set environment variables (`FEISHU_MAX_CONCURRENT`, `FEISHU_POLL_INTERVAL`).
+3. **Launch**: Start the listener process using `screen` or `systemd`.
+4. **Test**: Send a test message (e.g., "帮我分析这个 Excel") to Feishu.
+5. **Monitor**: Verify the agent sends a confirmation card and subsequent progress updates.
+6. **Maintenance**: Check `.listener_state.json` to ensure persistence is working.
+'''

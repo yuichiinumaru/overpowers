@@ -1,0 +1,146 @@
+description = "Download arXiv papers as markdown via ar5iv, audit quality, fix issues, and prepare for NotebookLM ingestion"
+
+prompt = '''
+# ArXiv Mining Pipeline
+
+Download, convert, audit, and chunk arXiv papers for research knowledge base ingestion.
+
+## Prerequisites
+
+- `uv` available (typically at `~/anaconda3/bin/uv` or system PATH)
+- Internet access to `ar5iv.labs.arxiv.org`
+- Input file with arXiv URLs (e.g., `.agents/arxiv-list.md`)
+
+## Skills Used
+
+- `skills/data/etl/arxiv-to-markdown/` — download and audit scripts
+- `skills/coding/review/gitingest/` — chunking scripts (optional, for NotebookLM prep)
+
+## Workflow Steps
+
+### Phase 1: Download Papers
+
+// turbo-all
+
+1. **Verify input file exists** and count URLs:
+
+```bash
+wc -l .agents/arxiv-list.md
+grep -cE '^https://arxiv\.org' .agents/arxiv-list.md
+```
+
+2. **Run the download script**. This is a long-running process (~1.5s per paper). For ~1500 papers expect ~37 minutes:
+
+```bash
+uv run --with html2text skills/data/etl/arxiv-to-markdown/scripts/download.py \
+  --input .agents/arxiv-list.md \
+  --output .archive/arxiv \
+  --delay 1.5
+```
+
+> **NOTE:** The script is resumable. If interrupted, re-run the same command and it will skip already-downloaded papers.
+
+3. **Verify download results**:
+
+```bash
+ls .archive/arxiv/*.md | wc -l
+du -sh .archive/arxiv/
+```
+
+### Phase 2: Audit and Fix
+
+4. **Run the audit+fix script** to detect problematic downloads and auto-fix titles:
+
+```bash
+python3 skills/data/etl/arxiv-to-markdown/scripts/audit-fix.py \
+  --dir .archive/arxiv \
+  --fix
+```
+
+5. **Review the report**:
+
+```bash
+cat .archive/arxiv/audit-report.json | python3 -m json.tool | head -20
+```
+
+6. **Check critical failures** (papers where ar5iv could not convert the LaTeX):
+
+```bash
+wc -l .archive/arxiv/critical-ids.txt
+cat .archive/arxiv/critical-ids.txt
+```
+
+### Phase 3: Handle Critical Papers (optional)
+
+For papers that failed ar5iv conversion (~9%), you have three options:
+
+**Option A: Skip them** (recommended for most use cases — 87%+ coverage is sufficient)
+
+**Option B: Download PDFs as fallback**
+
+```bash
+mkdir -p .archive/arxiv-pdf
+while read id; do
+  curl -L -o ".archive/arxiv-pdf/${id}.pdf" "https://arxiv.org/pdf/${id}" 
+  sleep 1
+done < .archive/arxiv/critical-ids.txt
+```
+
+**Option C: Remove failed files**
+
+```bash
+while read id; do
+  mv ".archive/arxiv/${id}.md" ".archive/arxiv-failed/"
+done < .archive/arxiv/critical-ids.txt
+```
+
+### Phase 4: Chunk for NotebookLM (optional)
+
+If preparing for NotebookLM ingestion, use the gitingest chunking scripts:
+
+7. **Analyze the corpus**:
+
+```bash
+python3 skills/coding/review/gitingest/scripts/1_analyze_tree.py \
+  --input .archive/arxiv \
+  --output /tmp/arxiv-analysis
+```
+
+8. **Plan chunks** (~50KB per chunk for NotebookLM):
+
+```bash
+python3 skills/coding/review/gitingest/scripts/2_plan_chunks.py \
+  --input /tmp/arxiv-analysis \
+  --target-size 50000 \
+  --output /tmp/arxiv-chunks-plan
+```
+
+9. **Execute chunking**:
+
+```bash
+python3 skills/coding/review/gitingest/scripts/3_execute_ingest.py \
+  --plan /tmp/arxiv-chunks-plan \
+  --output .archive/arxiv-chunks
+```
+
+## Expected Results
+
+| Metric | Typical Value |
+|:-------|:-------------|
+| Download success rate | ~87-91% |
+| Average paper size | ~77 KB markdown |
+| Total corpus size (1500 papers) | ~98 MB |
+| Critical failures | ~9% (ar5iv LaTeX conversion) |
+| Auto-fixed titles | ~3-5% of total |
+| Download time (1500 papers) | ~37 minutes |
+
+## Troubleshooting
+
+| Problem | Solution |
+|:--------|:---------|
+| `uv` not found | Try `~/anaconda3/bin/uv` or install via `curl -LsSf https://astral.sh/uv/install.sh \| sh` |
+| Rate limited by ar5iv | Increase `--delay` to 3-5 seconds |
+| Many 404s | Some papers are too new for ar5iv; wait or use PDF fallback |
+| `html2text` import error | `uv run --with html2text` handles this automatically |
+| Script interrupted | Re-run same command; it resumes from where it stopped |
+'''

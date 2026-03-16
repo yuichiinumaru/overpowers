@@ -97,7 +97,21 @@ Lembrete: outros agentes podem ler e modificar este arquivo simultaneamente, ent
 
 3. **Em Progresso / Concluída** → Marcadas `[/]` ou `[x]` em `.docs/tasklist.json`.
   - **Importante:** Agentes **NUNCA** modificam `.docs/tasklist.json` para evitar conflitos de merge em enxames (swarms) concorrentes. Eles modificam apenas seu arquivo de tarefa específico. A única exceção a esta regra é se (e somente se) o usuário solicitar.
+  
 4. **Tracking:** Mesmo que uma tarefa comece no meio de um fluxo de trabalho, é preciso documentar a implementação dela. Se isto ocorrer, pare no meio o que está fazendo e crie um documento de tarefa. Avise o User que está fazendo.
+
+5. **ZERO GUESSWORK:** Sempre opere sob a premissa rígida de tolerância ZERO a guesswork. Investigue e tenha certeza. **Sempre:**
+    - Verifique o arquivo a ser editado antes de escrever
+    - Verifique a documentação completa da task antes de implementar
+    - Analise o código a ser modificado e o código vizinho antes de planejar as implementações
+    - Verifique quais tools, skills, subagents, MCPs e documentação você possui acesso antes
+    - Reaproveite trabalho através de templates e scripts previamente feitos e mantidos listados e documentados
+    - Planeje e reflita antes de implementar
+    - Implemente a melhor versão possível da ideia, mirando no longo prazo
+    - Faça o melhor uso possível dos recursos que tem disponível
+    - Lembre-se: Trabalho mal feito é retrabalho = trabalho dobrado. 
+
+6. **CODE REVIEW:** Uma tarefa só está completa quando o código é revisado e aprovado por outro agente (ou pelo usuário). Nunca marque uma tarefa como terminada SEM code review - lance sempre um subagent especializado em code review.
 
 #### Convenção Atual de Nomes:
 1. **Arquivos Gerais**: formato `tipo-subtipo-nnnn-nomes.md`. Subtipo é opcional, mas preferido ao lado do tipo, se usado. Número ajuda a evitar colisões de nome.
@@ -144,7 +158,7 @@ Todas as pastas, arquivos e subpastas devem ter uma convenção organizacional d
 Para casos especiais onde é necessário especificar modelos (ex: scripts que invocam LLMs pontualmente), siga estas instruções: 
   - **High Reasoning**: `gemini-3.1-pro` / `claude-4.6-opus-thinking` (Raciocínio/Codificação).
   - **Fast Reasoning**: `gemini-3-flash` / `claude-4.6-sonnet` (Fallback/Execução Rápida).
-  - **Testes Repetidos, Rápidos e Baratos**: `gemini-3.1-flash-lite`, `qwen-flash`, `gpt-5.1-mini`.
+  - **Testes Repetidos, Rápidos e Baratos**: `gemini-3.1-flash-lite`, `qwen-flash`, `gpt-5.1-mini`.\
   - **NÃO USE** modelos deprecated (ex: Gemini 1.5, 2.0, 2.5, Claude 3, Gpt 4 etc.) nem use bibliotecas deprecated (ex: google-generativeai em vez de google-genai, etc.)
   - **NÃO MUDE** os modelos que o usuário colocou sob absolutamente nenhuma hipótese, e **NÃO CRIE DEFAULT FALLBACK** sem ser solicitado. Use os modelos que o usuário escolheu sem questionar.
 

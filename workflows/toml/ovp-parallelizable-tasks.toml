@@ -1,0 +1,128 @@
+description = "Analyze the roadmap and open tasks, identify blockers and requirements, and list all tasks immediately parallelizable."
+
+prompt = '''
+# /ovp-parallelizable-tasks — Parallel Task Triage
+
+**Goal**: Produce a ready-to-act report of every task that can begin **right now** in parallel, based on current completion status, dependency chains, and blocker analysis.
+
+## Steps
+
+### 1. Load Current State
+
+Read the following files to build a complete picture of the project:
+
+```
+docs/roadmap.md          — Wave-based execution plan with dependency graph
+docs/tasklist.md         — Single source of truth for task status ([x] / [ ])
+```
+
+From `docs/tasklist.md`, extract:
+- **Completed tasks** (marked `[x]`) — these are satisfied dependencies.
+- **Open tasks** (marked `[ ]`) — candidates for execution.
+
+From `docs/roadmap.md`, extract:
+- **Wave assignments** — which wave each task belongs to.
+- **Dependency declarations** — the "Deps" column for each task.
+- **Blocker flags** — tasks marked 🔴 Blocker.
+- **Deferred / Archived** — tasks explicitly excluded from execution.
+
+### 2. Build the Dependency Graph
+
+For each open task, resolve its dependency chain:
+
+1. List all declared dependencies (the "After XXXX" entries in `docs/roadmap.md`).
+2. Check if each dependency is marked `[x]` in `docs/tasklist.md`.
+3. Classify the task:
+   - **READY** = All dependencies are completed (`[x]`) or the task has zero dependencies.
+   - **BLOCKED** = At least one dependency is still open (`[ ]`).
+   - **DEFERRED** = Explicitly listed in the "Deferred" or "Archived" section of `docs/roadmap.md`.
+
+### 3. Identify Blockers
+
+For each **BLOCKED** task, identify:
+- Which specific dependency is blocking it.
+- Whether that blocking dependency is itself READY (i.e., it could unblock others if prioritized).
+
+Produce a **Blocker Chain** showing transitive dependencies:
+```
+Task 2530 (Native Graph RAG) ← blocked by 2510 (Schema Unification) ← blocked by 1930 (VFS) [COMPLETED ✅]
+  → Therefore: 2510 is READY and is a critical-path blocker.
+```
+
+### 4. Cross-Reference with Task Files
+
+For each READY task, verify the task file exists and has sufficient detail:
+
+```bash
+# Check if task file exists in docs/tasks/ or docs/tasks/planning/
+ls docs/tasks/<task-id>-*.md docs/tasks/planning/<task-id>-*.md 2>/dev/null
+```
+
+If the task file is missing or in `planning/`, note it — the task may need formalization before execution.
+
+### 5. Generate the Report
+
+Output a structured report to `.agents/thoughts/<agent-name>/triage-parallelizable-<YYYY-MM-DD>.md` with the following sections:
+
+---
+
+#### Section A: Summary
+- Total open tasks
+- Total READY (parallelizable now)
+- Total BLOCKED (with blocker count)
+- Total DEFERRED
+
+#### Section B: READY — Execute Immediately (Parallel)
+
+Table format:
+```markdown
+| Task ID | Name | Wave | Task File Status | Notes |
+|---------|------|------|-----------------|-------|
+| 1920 | CascadeRouter Intent | W2 | ✅ Formalized | — |
+| 2510 | Schema Unification | W7 | 📝 Planning | Needs formalization |
+```
+
+Group by wave for clarity.
+
+#### Section C: Critical-Path Blockers
+
+List tasks that, once completed, would **unlock the most downstream work**:
+```markdown
+| Blocker Task | Unlocks | Impact |
+|-------------|---------|--------|
+| 2510 | 2530, 2540, 2210, 2310, 2320, 2330, 2340, 2350, 2410, 2630 | 10 tasks |
+```
+
+#### Section D: Blocked Tasks (with Reason)
+
+```markdown
+| Task ID | Name | Blocked By | Blocker Status |
+|---------|------|-----------|---------------|
+| 2530 | Native Graph RAG | 2510 | [ ] Open |
+```
+
+#### Section E: Deferred Tasks (Excluded)
+
+Simple list of deferred tasks and deferral reason from roadmap.
+
+---
+
+### 6. Actionable Recommendations
+
+Based on the triage, suggest:
+1. **Immediate parallel batch** — all READY tasks that agents can start now.
+2. **Priority unblock targets** — blocker tasks that should be prioritized to unlock the most downstream work.
+3. **Formalization needed** — tasks that are READY but still in `planning/` and need full task specs.
+
+## Verification
+
+The report is valid when:
+- Every open task from `docs/tasklist.md` appears in exactly one section (READY, BLOCKED, or DEFERRED).
+- No READY task has an unsatisfied dependency.
+- Blocker impact counts are accurate (verified against `docs/roadmap.md`).
+- The report is saved to `.agents/thoughts/` for future reference.
+
+> [!TIP]
+> Run this workflow periodically (e.g., at the start of each session) to keep the parallel execution pipeline fresh.
+> Wave 6 (Research Harvesting) tasks are always READY and can fill idle agent slots.
+'''

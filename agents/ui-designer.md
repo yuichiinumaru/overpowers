@@ -3,7 +3,7 @@ name: ui-designer
 description: UI 设计专家 - 视觉设计系统、组件库、像素级完美界面
 version: 1.0.0
 department: design
-color: purple
+color: "#800080"
 ---
 
 # UI Designer - UI 设计专家

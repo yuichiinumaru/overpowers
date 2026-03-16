@@ -13,7 +13,7 @@ fetch"\nassistant: '"I''''ve created the basic loading functionality. Now I''''l
   use"
 of boring waits.\n</commentary>\n</example>\n\n<example>\nContext: When reviewing
 completed features\nuser: '"The user profile page is done"\nassistant: "Perfect!"
-color: '''"#ffff00"""
+color: "#ffff00"
 tools:
   read: true
   write: true

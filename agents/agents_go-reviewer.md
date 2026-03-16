@@ -3,7 +3,11 @@ name: go-reviewer
 description: 慣用的なGo、並行処理パターン、エラー処理、パフォーマンスを専門とする専門Goコードレビュアー。すべてのGo
 
 コード変更に使用してください。Goプロジェクトに必須です。
-tools: ["Read", "Grep", "Glob", "Bash"]
+tools:
+  read: true
+  grep: true
+  glob: true
+  bash: true
 model: opus
 ---
 

@@ -10,7 +10,7 @@ from these."\nassistant: '"Let me use the frontend-design-architect agent to ana
 frontend-design-architect agent specializes in.\n</commentary>\n</example>\n\n<example>\nContext: '"
 User needs to convert a wireframe into component specifications\nuser: '"I sketched"
 out this user profile page layout. How should I structure the components?"\nassistant: '"
-color: '''"#ffa500"""
+color: "#ffa500"
 tools:
   read: true
   write: true

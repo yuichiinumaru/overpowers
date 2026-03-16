@@ -14,7 +14,7 @@ Should we care?"\nassistant: '"I''''ll analyze the market impact and user recept
 : '"
 Finding viral mechanics for existing apps\nuser: '"How can we make our habit tracker"
 more shareable?"\nassistant: '"I''''ll research viral sharing mechanics in successful"
-color: '''"#800080"""
+color: "#800080"
 tools:
   read: true
   write: true

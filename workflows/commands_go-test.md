@@ -270,5 +270,5 @@ go test -race -cover ./...
 
 ## 相关
 
-* 技能：`skills/golang-testing/`
-* 技能：`skills/tdd-workflow/`
+* 技能：`skills/coding/testing/golang-testing/`
+* 技能：`skills/coding/testing/tdd-workflow/`

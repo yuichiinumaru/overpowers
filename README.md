@@ -17,13 +17,13 @@ Works with **OpenCode**, **Gemini CLI**, **Google Antigravity**, **Kilo Code**, 
 
 | Component | Count | Description |
 |-----------|-------|-------------|
-| **Agents** | 475+ | Specialized AI personas for every task |
-| **Skills** | 1317+ | Complex workflow automation (SKILL.md) |
-| **Commands/Workflows** | 303+ | Complete process guides (also serve as commands) |
-| **Scripts** | 102+ | DevOps, automation & setup helpers |
-| **Hooks** | 45 | Pre/post action notifications |
+| **Agents** | 509+ | Specialized AI personas for every task |
+| **Skills** | 3293+ | Complex workflow automation (SKILL.md), organized by type/subtype |
+| **Commands/Workflows** | 351+ | Complete process guides (also serve as commands) |
+| **Scripts** | 143+ | DevOps, automation & setup helpers |
+| **Hooks** | 32 | Pre/post action notifications |
 
-**Total: 2242+ components!**
+**Total: 4328+ components!**
 
 ---
 
@@ -61,7 +61,7 @@ It also optionally installs **MCP servers** across all platforms with an interac
 ### 3. (Optional) Install community plugins
 
 ```bash
-./scripts/install-plugins.sh
+./scripts/install-plugins-opencode.sh
 ```
 
 Interactive menu with 50+ plugins and themes from the [awesome-opencode](https://github.com/awesome-opencode/awesome-opencode) community list.
@@ -73,22 +73,27 @@ Interactive menu with 50+ plugins and themes from the [awesome-opencode](https:/
 ```
 overpowers/
 ├── install.sh                # ⭐ Master installer
-├── agents/                   # 475+ specialized AI agents (.md)
-├── skills/                   # 1370+ skills (skill-name/SKILL.md)
-├── workflows/                # 309+ process guides / commands (.md)
-├── hooks/                    # 31 notification integrations
+├── agents/                   # 509+ specialized AI agents (.md)
+├── skills/                   # 3293+ skills organized by type/subtype
+│   ├── agent/                #   Autonomous agents, multi-agent, reasoning
+│   ├── automation/           #   Browser, scraping, search, integration
+│   ├── coding/               #   Code generation, review, testing, debugging
+│   ├── content/              #   Writing, docs, media, translation, social
+│   ├── data/                 #   Analytics, ETL, databases, visualization
+│   ├── devops/               #   CI/CD, containers, cloud, monitoring
+│   ├── growth/               #   Marketing, SEO, sales, e-commerce
+│   ├── ml/                   #   Training, serving, prompting, RAG
+│   ├── product/              #   Planning, specs, research, strategy
+│   ├── research/             #   Papers, literature, experiments
+│   ├── security/             #   Appsec, auditing, compliance, auth
+│   ├── tools/                #   CLI, files, personal, office, hardware
+│   └── webdesign/            #   Frontend, backend, UI/UX, graphics
+├── workflows/                # 351+ process guides / commands (.md)
+├── hooks/                    # 32 notification integrations
 ├── commands/                 # Shorthand operations
-├── scripts/                  # 93+ DevOps/automation helpers
-│   ├── deploy-to-opencode.sh     # Symlink to OpenCode
-│   ├── deploy-to-gemini.sh       # Symlink to Gemini CLI
-│   ├── deploy-to-antigravity.sh  # Symlink to Antigravity
-│   ├── deploy-to-kilo.sh         # Symlink to Kilo Code
-│   ├── install-mcps.sh           # Unified MCP installer
-│   └── install-plugins.sh        # Community plugin installer
+├── scripts/                  # 143+ DevOps/automation helpers
 ├── services/                 # 13 external service configs
-├── templates/                # Canonical templates (agents/skills/workflows/configs)
-├── docs/                     # Documentation
-├── templates/configs/        # MCP templates + policy templates
+├── templates/                # Canonical templates
 ├── .env.example              # API keys & paths template
 ├── AGENTS.md                 # Global rules (constitution)
 └── CHANGELOG.md              # Immutable change history
@@ -119,7 +124,7 @@ overpowers/
 | Script | Purpose |
 |--------|---------|
 | `scripts/install-mcps.sh` | Unified MCP installer across platforms |
-| `scripts/install-plugins.sh` | Interactive community plugin/theme installer |
+| `scripts/install-plugins-opencode.sh` | Interactive community plugin/theme installer |
 | `scripts/install-personas.sh` | Installs system personas |
 | `scripts/install-antigravity-skills.sh` | Installs specific Antigravity skills |
 | `scripts/setup-browser-use.sh` | Sets up browser automation |
@@ -159,7 +164,7 @@ The MCP templates in `templates/configs/` contain pre-configured server definiti
 | Context7 | Up-to-date documentation |
 | NotebookLM | Google NotebookLM integration |
 
-Semgrep is installed as a CLI tool via `scripts/install-plugins.sh` (CLI Tools category), not as an MCP server.
+Semgrep is installed as a CLI tool via `scripts/install-plugins-opencode.sh` (CLI Tools category), not as an MCP server.
 
 ---
 
@@ -200,8 +205,12 @@ Full Stack Feature:
 # Search agents by name
 ls agents/ | grep "security"
 
-# Search skills
-ls skills/ | grep "aws"
+# Search skills by type
+ls skills/coding/       # All coding skills
+ls skills/ml/rag/       # RAG-specific ML skills
+
+# Search skills by keyword
+find skills/ -name 'SKILL.md' -exec grep -l 'kubernetes' {} \;
 
 # Count totals
 echo "Agents: $(find agents/ -name '*.md' | wc -l)"

@@ -1,9 +1,14 @@
 ---
 name: harness-optimizer
 description: 分析并改进本地代理工具配置以提高可靠性、降低成本并增加吞吐量。
-tools: ["Read", "Grep", "Glob", "Bash", "Edit"]
+tools:
+  read: true
+  grep: true
+  glob: true
+  bash: true
+  edit: true
 model: sonnet
-color: teal
+color: '#008080'
 ---
 
 你是线束优化器。

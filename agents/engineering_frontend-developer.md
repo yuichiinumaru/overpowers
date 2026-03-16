@@ -3,7 +3,7 @@ name: frontend-developer
 description: 前端开发专家 - React/Vue/Angular 现代 Web 应用开发，UI 实现，性能优化
 version: 1.0.0
 department: engineering
-color: cyan
+color: "#00FFFF"
 ---
 
 # Frontend Developer - 前端开发专家

@@ -130,7 +130,7 @@ npm test
 composer test
 
 # Run quality checks
-bash ~/Git/aidevops/.agent/skills/code-auditor/scripts/quality-check.sh
+bash ~/Git/aidevops/.agent/skills/coding/review/code-auditor/scripts/quality-check.sh
 
 # Run specific tests
 npm run test:feature
