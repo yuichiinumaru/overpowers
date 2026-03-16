@@ -1,0 +1,21 @@
+{
+  "models": [
+    "sorc/qwen3.5-claude-4.6-opus-q4:4b",
+    "carstenuhlig/omnicoder-9b:q4_k_m",
+    "granite4:latest",
+    "jewelzufo/granite4-350m-h-Distill-Gemini-Thinking",
+    "kwangsuklee/Qwen3.5-2B-Claude-4.6-Opus-Reasoning-Distilled-GGUF",
+    "sorc/qwen3.5-claude-4.6-opus-q4:9b",
+    "sorc/qwen3.5-claude-4.6-opus:0.8b",
+    "sorc/qwen3.5-claude-4.6-opus:2b",
+    "sorc/qwen3.5-claude-4.6-opus:4b",
+    "lfm2.5-thinking",
+    "qwen3.5:2b",
+    "qwen3.5:4b",
+    "qwen3.5:0.8b",
+    "nemotron-3-nano:4b",
+    "huihui_ai/qwen3.5-abliterated:2B",
+    "huihui_ai/qwen3.5-abliterated:4B",
+    "coney_/gemma3_claude-sonnet4.6"
+  ]
+}

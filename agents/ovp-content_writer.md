@@ -8,7 +8,7 @@ article about how blockchain technology works" assistant: '"I''''ll use the cont
 use the content-marketer-writer agent in outline mode.</commentary></example> <example>Context: '"
 User has an outline and needs to write the full article. user: '"Now write the full"
 article based on the blockchain outline" assistant: '"I''''ll use the content-marketer-writer"
-color: '''"#00ffff"""
+color: "#00ffff"
 tools:
   read: true
   write: true

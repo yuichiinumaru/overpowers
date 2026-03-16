@@ -1,0 +1,12 @@
+{
+  "completed": [
+    "skills/tools/personal/study-buddy/SKILL.md",
+    "skills/tools/personal/journal/SKILL.md"
+  ],
+  "failed": [],
+  "skipped": [
+    "skills/webdesign/backend/harmonyos-sdk/SKILL.md",
+    "skills/tools/personal/zhichu-tracker/SKILL.md",
+    "skills/tools/personal/logger/SKILL.md"
+  ]
+}

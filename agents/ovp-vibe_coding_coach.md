@@ -8,7 +8,7 @@ application.</commentary></example> <example>Context: User has sketches or scree
 of what they want to build.\nuser: '"Here''''s a screenshot of an app I like. Can
   we"
 build something similar but for tracking workouts?"\nassistant: '"Let me engage the"
-color: '''"#ffc0cb"""
+color: "#ffc0cb"
 tools:
   read: true
   write: true

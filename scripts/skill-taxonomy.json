@@ -1,0 +1,172 @@
+{
+  "_meta": {
+    "version": "2.2",
+    "created": "2026-03-16",
+    "notes": "v2.2: Merged design+web into webdesign (67 combined), raised type cap to 600, adjusted floor to 30",
+    "constraints": {
+      "min_skills_per_type": 30,
+      "max_skills_per_type": 600,
+      "min_skills_per_subtype": 3,
+      "max_skills_per_subtype": 80,
+      "max_subtypes_per_type": 15
+    }
+  },
+  "types": {
+    "agent": {
+      "description": "Autonomous agents, multi-agent systems, orchestration, reasoning, self-improvement",
+      "keywords": ["agent", "multi-agent", "swarm", "orchestration", "autonomous", "reasoning", "self-driven", "persona", "planner", "character", "roleplay"],
+      "subtypes": {
+        "multi-agent": "Multi-agent coordination, swarms, team-based systems",
+        "reasoning": "BDI, chain-of-thought, decision trees, problem solving",
+        "memory": "Agent memory, RAG for agents, context management, knowledge persistence",
+        "autonomy": "Self-driven loops, autonomous execution, self-improvement, continuous evolution",
+        "persona": "Agent personalities, character design, role-playing, assistants",
+        "orchestration": "Agent workflow coordination, task delegation, pipelines"
+      }
+    },
+    "automation": {
+      "description": "Browser automation, scraping, search, API integration, external service interaction",
+      "keywords": ["browser", "scraping", "search", "automation", "Playwright", "Puppeteer", "crawl", "scrape", "fetch", "API", "webhook", "integration", "bot", "notification"],
+      "subtypes": {
+        "browser": "Browser automation, Playwright, Puppeteer, headless browsers",
+        "search": "Web search, information retrieval, knowledge lookup, academic search",
+        "scraping": "Web scraping, data extraction from websites, content harvesting",
+        "notification": "Alerts, notifications, messaging bots, chat bots, email automation",
+        "integration": "API integration, webhooks, third-party services, SaaS connectors",
+        "scheduling": "Cron jobs, scheduled tasks, periodic automation, monitoring"
+      }
+    },
+    "coding": {
+      "description": "Code generation, review, refactoring, testing, debugging, IDE tooling",
+      "keywords": ["code", "programming", "refactor", "debug", "test", "IDE", "linter", "compiler", "typescript", "python", "rust", "go", "java"],
+      "subtypes": {
+        "generation": "Code generation, scaffolding, boilerplate, templates",
+        "review": "Code review, PR review, quality analysis, static analysis",
+        "refactoring": "Code refactoring, modernization, migration, cleanup",
+        "testing": "Test generation, TDD, coverage analysis, mutation testing",
+        "debugging": "Bug fixing, error tracing, diagnostics, troubleshooting",
+        "languages": "Language-specific patterns (Rust, Go, Python, etc.)",
+        "tooling": "IDE extensions, linters, formatters, build tools, dev environment"
+      }
+    },
+    "content": {
+      "description": "Writing, translation, copywriting, documentation, media production, social media",
+      "keywords": ["writing", "content", "blog", "article", "copywriting", "translation", "documentation", "media", "video", "audio", "podcast", "social media"],
+      "subtypes": {
+        "writing": "Blog posts, articles, creative writing, storytelling",
+        "copywriting": "Marketing copy, ad copy, sales pages, landing pages",
+        "documentation": "Technical docs, API docs, guides, manuals, README",
+        "translation": "Language translation, localization, i18n",
+        "video": "Video production, editing, transcription, YouTube",
+        "audio": "Audio, music, podcast, voice, TTS",
+        "social": "Social media content, posts, engagement, influencer",
+        "publishing": "Publishing pipelines, CMS, blog management, newsletters"
+      }
+    },
+    "data": {
+      "description": "ETL, analytics, databases, visualization, data processing, documents, financial data, health data",
+      "keywords": ["data", "analytics", "database", "SQL", "ETL", "visualization", "chart", "dashboard", "csv", "excel", "pandas", "statistics"],
+      "subtypes": {
+        "analytics": "Data analysis, statistics, insights, BI",
+        "etl": "Data extraction, transformation, loading, pipelines",
+        "databases": "SQL, NoSQL, database management, migrations, schemas",
+        "visualization": "Charts, dashboards, reports, graphs, maps",
+        "processing": "File conversion, parsing, data cleaning, normalization",
+        "documents": "PDF, DOCX, spreadsheet processing, OCR",
+        "finance": "Financial data, trading analytics, portfolio, stock market, crypto",
+        "health": "Health data, medical records, fitness tracking, sleep analysis"
+      }
+    },
+    "devops": {
+      "description": "CI/CD, infrastructure, monitoring, containers, cloud, deployment, networking",
+      "keywords": ["devops", "CI/CD", "docker", "kubernetes", "terraform", "AWS", "GCP", "Azure", "monitoring", "deploy", "infra", "cloud", "nginx", "server"],
+      "subtypes": {
+        "cicd": "CI/CD pipelines, GitHub Actions, Jenkins, GitLab CI",
+        "containers": "Docker, Kubernetes, container orchestration, Helm",
+        "cloud": "AWS, GCP, Azure, cloud services, serverless",
+        "monitoring": "Logging, alerting, observability, APM, health checks",
+        "deployment": "Deployment strategies, rollback, blue-green, release management",
+        "infrastructure": "Terraform, Ansible, server management, networking, DNS"
+      }
+    },
+    "growth": {
+      "description": "Marketing, SEO, sales, advertising, social media marketing, CRM, e-commerce",
+      "keywords": ["marketing", "SEO", "growth", "sales", "outreach", "advertising", "campaign", "newsletter", "funnel", "CRM", "lead", "e-commerce"],
+      "subtypes": {
+        "seo": "Search engine optimization, keyword research, SERP",
+        "marketing": "Campaign management, ads, email marketing, brand",
+        "sales": "Lead generation, outreach, CRM, prospecting, invoicing",
+        "analytics": "Marketing analytics, conversion tracking, A/B testing",
+        "ecommerce": "E-commerce, product listings, marketplace, pricing"
+      }
+    },
+    "ml": {
+      "description": "Machine learning: training, fine-tuning, model serving, embeddings, LLM integration, prompting",
+      "keywords": ["model", "training", "fine-tune", "embedding", "LLM", "GPT", "Claude", "Gemini", "inference", "RAG", "prompt", "tokenizer", "GGUF", "LoRA", "NLP"],
+      "subtypes": {
+        "training": "Model training, fine-tuning, LoRA, datasets, annotations",
+        "serving": "Model deployment, inference, API serving, optimization",
+        "prompting": "Prompt engineering, templates, chain-of-thought, system prompts",
+        "rag": "Retrieval-augmented generation, vector stores, knowledge bases, semantic search",
+        "integration": "LLM API integration, OpenAI, Anthropic, Google AI, MCP servers",
+        "evaluation": "Model evaluation, benchmarks, quality assessment, safety"
+      }
+    },
+    "product": {
+      "description": "Product management, planning, roadmaps, specs, user research, project management, education",
+      "keywords": ["product", "PRD", "roadmap", "spec", "JTBD", "user story", "feature", "backlog", "sprint", "requirement", "project management", "education"],
+      "subtypes": {
+        "planning": "Roadmaps, sprint planning, backlog management, task tracking",
+        "specs": "PRDs, technical specs, requirements, documentation",
+        "research": "User research, interviews, surveys, JTBD, competitive analysis",
+        "strategy": "Product strategy, OKRs, market fit, business models",
+        "education": "Learning, tutoring, course creation, training materials"
+      }
+    },
+    "research": {
+      "description": "Academic research, paper analysis, literature review, experimentation, knowledge management",
+      "keywords": ["research", "paper", "arxiv", "academic", "literature", "experiment", "hypothesis", "citation", "scholar", "survey"],
+      "subtypes": {
+        "papers": "Paper reading, summarization, arxiv analysis, citations",
+        "literature": "Literature review, survey, systematic review, meta-analysis",
+        "experiments": "Experiment design, hypothesis testing, methodology, simulations",
+        "knowledge": "Knowledge management, ontologies, taxonomy, graph"
+      }
+    },
+    "security": {
+      "description": "Application security, auditing, compliance, vulnerability scanning, authentication, legal",
+      "keywords": ["security", "audit", "vulnerability", "penetration", "compliance", "OWASP", "CVE", "encryption", "authentication", "authorization", "legal", "privacy"],
+      "subtypes": {
+        "appsec": "Application security, OWASP, secure coding, scanning",
+        "auditing": "Security audits, code scanning, SAST/DAST, pen testing",
+        "compliance": "Regulatory compliance, GDPR, SOC2, privacy, legal",
+        "auth": "Authentication, authorization, OAuth, JWT, SSO"
+      }
+    },
+    "tools": {
+      "description": "CLI utilities, file operations, system tools, productivity apps, personal management, hardware",
+      "keywords": ["CLI", "tool", "script", "utility", "file", "conversion", "calendar", "notes", "shortcut", "terminal", "shell", "system"],
+      "subtypes": {
+        "cli": "Command-line tools, shell scripts, terminal utilities",
+        "files": "File management, conversion, backup, sync, cloud storage",
+        "personal": "Note-taking, diary, journaling, reminders, personal management",
+        "office": "Calendar, email, contacts, office suite, Feishu, WeChat Work",
+        "hardware": "IoT, Raspberry Pi, GPIO, hardware control, home automation",
+        "math": "Mathematical computation, solvers, scientific computing"
+      }
+    },
+    "webdesign": {
+      "description": "Web development, mobile development, UI/UX design, frontend, backend, graphics, design systems",
+      "keywords": ["frontend", "backend", "React", "Vue", "Svelte", "Next.js", "API", "REST", "GraphQL", "HTML", "CSS", "JavaScript", "web app", "mobile", "Flutter", "Swift", "design", "UI", "UX", "figma", "prototype", "wireframe", "graphics"],
+      "subtypes": {
+        "frontend": "React, Vue, Svelte, HTML/CSS, responsive design, Three.js",
+        "backend": "APIs, REST, GraphQL, server frameworks, Express, FastAPI",
+        "fullstack": "Full-stack patterns, monorepos, deployment, auth flows",
+        "mobile": "iOS, Android, Flutter, React Native, Swift, Kotlin",
+        "ui-ux": "User interface and experience design, wireframes, prototypes",
+        "graphics": "Graphic design, illustrations, icons, assets, image editing",
+        "systems": "Design systems, component libraries, style guides, tokens"
+      }
+    }
+  }
+}

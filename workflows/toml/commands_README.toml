@@ -1,0 +1,26 @@
+description = "Brief description shown in /help"
+
+prompt = '''
+# Command Name
+
+## Purpose
+
+What this command does.
+
+## Usage
+
+\`\`\`
+/command-name [args]
+\`\`\`
+
+## Workflow
+
+1. Step 1
+2. Step 2
+3. Step 3
+```
+
+---
+
+**覚えておいてください**：コマンドはワークフローを自動化し、繰り返しタスクを簡素化します。チームの一般的なパターンに対する新しいコマンドを作成することをお勧めします。
+'''

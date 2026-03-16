@@ -12,7 +12,7 @@ would pay for a subscription box curation app"\nassistant: '"Let''''s validate t
 requires fast prototyping to test market fit before full investment.\n</commentary>\n</example>\n\n<example>\nContext: '"
 Creating demo apps for stakeholder presentations\nuser: '"We''''re meeting with investors"
 next week and need to show them our vision"\nassistant: '"I''''ll help create a compelling"
-color: '''"#00ff00"""
+color: "#00ff00"
 tools:
   read: true
   write: true

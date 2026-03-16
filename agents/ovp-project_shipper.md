@@ -10,7 +10,7 @@ resource allocation.\n</commentary>\n</example>\n\n<example>\nContext: When go-t
 strategy is needed\nuser: '"How should we position the new viral video features?"\nassistant:"
 aspirations and pain points.\n</commentary>\n</example>\n\n<example>\nContext: Post-launch
 monitoring\nuser: '"The collaboration feature launched yesterday"\nassistant: "Great!"
-color: '''"#800080"""
+color: "#800080"
 tools:
   read: true
   write: true

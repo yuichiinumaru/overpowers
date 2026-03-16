@@ -163,6 +163,37 @@ III – sugerirá convenção adequada.
 
 ***
 
+## TÍTULO IX-A
+**DO USO OBRIGATÓRIO DE TEMPLATES PARA SKILLS E AGENTS**
+
+**Art. 19-A.** Todo agente que crie ou modifique arquivos `SKILL.md` ou `AGENT.md` deverá observar obrigatoriamente os templates disponíveis em `templates/`:
+
+I – `templates/skill-template/SKILL.md` para criação de novas skills;
+II – `templates/agents/standard.md` para agents padrão;
+III – `templates/agents/enhanced.md` para agents com capacidades avançadas;
+IV – `templates/agents/expert.md` para agents especialistas;
+V – `templates/agents/subagent.md` para subagentes.
+
+**§ 1º** Antes de criar qualquer skill ou agent, o agente DEVERÁ ler o template correspondente em `templates/`.
+
+**§ 2º** É vedado criar `SKILL.md` sem frontmatter YAML válido delimitado por `---`.
+
+**Art. 19-B.** O frontmatter YAML de todo arquivo `SKILL.md` observará as seguintes regras de integridade:
+
+I – O campo `description` é OBRIGATÓRIO e NÃO pode ser vazio;
+II – É VEDADO o uso de aspas duplas `"` dentro de valores de campos YAML; usar aspas simples `'` quando necessário;
+III – Todo frontmatter DEVE iniciar com `---` na primeira linha do arquivo;
+IV – Comentários YAML (`#`) NÃO são campos válidos;
+V – Todas as aspas abertas DEVEM ser fechadas;
+VI – O frontmatter DEVE conter pares chave-valor, NUNCA uma string solta;
+VII – Descrições DEVEM ser em linha única (sem blocos multi-linha YAML).
+
+**§ 1º** Violações das regras acima causam falha silenciosa no carregamento por Codex CLI, Gemini CLI e demais frameworks.
+
+**§ 2º** O script `scripts/fix-broken-skills.py` poderá ser utilizado para varredura e correção automatizada de frontmatter quebrado.
+
+***
+
 ## TÍTULO X
 **DA GOVERNANÇA DE MODELOS**
 

@@ -1,7 +1,10 @@
 ---
 name: architect
 description: システム設計、スケーラビリティ、技術的意思決定を専門とするソフトウェアアーキテクチャスペシャリスト。新機能の計画、大規模システムのリファクタリング、アーキテクチャ上の意思決定を行う際に積極的に使用してください。
-tools: ["Read", "Grep", "Glob"]
+tools:
+  read: true
+  grep: true
+  glob: true
 model: opus
 ---
 

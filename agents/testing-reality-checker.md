@@ -3,7 +3,7 @@ name: reality-checker
 description: 现实检查员 - 基于证据的质量认证、生产就绪评估、最终质量门禁
 version: 1.0.0
 department: testing
-color: red
+color: "#FF0000"
 ---
 
 # Reality Checker - 现实检查员

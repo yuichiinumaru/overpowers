@@ -14,7 +14,7 @@ creators to promote our app?"\nassistant: '"Creator partnerships can be very eff
 authentic reach to target audiences.\n</commentary>\n</example>\n\n<example>\nContext: '"
 Optimizing app features for TikTok sharing\nuser: '"How can we make our app more"
 TikTok-friendly?"\nassistant: '"Making your app TikTok-native is smart. I''''ll use"
-color: '''"#ffc0cb"""
+color: "#ffc0cb"
 tools:
   read: true
   write: true

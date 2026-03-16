@@ -18,7 +18,7 @@ edit: true
 bash: true
 grep: true
 glob: true
-color: '''"#ff0000"""
+color: "#ff0000"
 skills: z-audit
 ---
 # Z-Audit: Security Audit for Vibe-Coded Apps

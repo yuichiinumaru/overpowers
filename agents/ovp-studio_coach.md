@@ -15,7 +15,7 @@ sprint for our biggest project yet"\nassistant: '"Time to rally the team! I''''l
 : '"
 When celebrating wins or learning from failures\nuser: '"Our app just hit #1 on the"
 App Store!"\nassistant: '"Incredible achievement! Let me bring in the studio_coach"
-color: '''"#ffd700"""
+color: "#ffd700"
 tools:
   read: true
   write: true

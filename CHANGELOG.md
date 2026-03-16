@@ -1,5 +1,67 @@
 ---
 
+## [2026-03-18] - Codex Config Fix & Template Reinforcement
+### Fixed
+- `~/.codex/config.toml` — Removed duplicate `desktop-commander` entry (Smithery wrapper vs local build)
+- `~/.codex/config.toml` — Removed broken `web_search` entry (missing `BRAVE_API_KEY` env var)
+### Changed
+- `templates/skill-template/SKILL.md` — Added YAML frontmatter safety rules, forbidden patterns table, and safe description writing guidelines
+- `AGENTS.md` — Added TÍTULO IX-A: mandatory template usage for skills and agents with 7-point YAML integrity rules
+**Author**: Antigravity
+
+## [2026-03-17] - Fix 117 Broken SKILL.md Frontmatter Files
+### Fixed
+- Fixed 117 SKILL.md files with invalid YAML frontmatter that caused Codex CLI parsing errors
+- Error categories: nested unescaped quotes in descriptions (103), empty files (5), missing `---` delimiters (5), plain-string frontmatter (2), YAML comments as fields (2), broken quoting (1), empty description (1)
+- All internal double-quotes in description fields replaced with single quotes
+- Missing frontmatter reconstructed from body content or directory name
+### Added
+- `scripts/fix-broken-skills.py` — Automated scanner and fixer for broken YAML frontmatter in SKILL.md files
+**Author**: Antigravity
+
+## [2026-03-17] - Add ast-grep Skill & Gemini Key Tools
+### Added
+- `skills/coding/review/ast-grep/SKILL.md` — New skill for structural code search, linting, and refactoring using Abstract Syntax Trees (AST).
+- `scripts/utils/extract-gemini-keys.py` — Utility to scan, clean, and deduplicate Gemini API keys from a target file.
+- `scripts/utils/verify-gemini-keys.py` — Utility to verify the validity of Gemini API keys via the Google API.
+- Support for `ast-grep` (sg) patterns, structural wildcards, and YAML-based linting rules.
+**Author**: Nova
+
+## [2026-03-16] - Skill Taxonomy Reorganization v2.2
+### Changed
+- Reorganized all 3253 skills into a 13-type hierarchical folder structure: `skills/<type>/<subtype>/<name>/`
+- Types: agent, automation, coding, content, data, devops, growth, ml, product, research, security, tools, webdesign
+- Classification powered by Qwen3-Embedding-0.6B embeddings against taxonomy reference vectors
+- Stripped Qwen agent's broken naming convention (chunk prefixes, duplicated type-subtype)
+- Updated README.md with accurate counts (3293 skills, 509 agents, 351 workflows, 143 scripts)
+### Added
+- `scripts/skill-taxonomy.json` — 13-type taxonomy definition with keywords and subtype descriptions (v2.2)
+- `scripts/skill-reclassify.py` — Embedding-based skill classifier using Qwen3-Embedding-0.6B
+- `scripts/skill-restructure-execute.py` — Folder restructuring executor with dry-run and collision handling
+- `.docs/tasks/planning/skill-reclassification-plan.json` — Full mapping of 3253 skills old→new paths
+- `.docs/tasks/planning/skill-reclassification-report.md` — Distribution analysis and constraint validation
+### Removed
+- Archived 152 orphaned skill directories (no SKILL.md) to `.archive/orphaned-skills-2026-03-16/`
+- Moved 5 stray root scripts (fix_*.py) to `scripts/`
+**Author**: Antigravity
+
+## [2026-03-16] - Prune Duplicate & Translated Skills
+### Changed
+- Ran `detect-similar-skills.py` (Qwen3-Embedding-0.6B, GPU) across 4384 skills, identifying 449 high-similarity pairs (≥80%)
+- Created `scripts/prune-duplicate-skills.py` with dry-run/execute modes and heuristic-based deduplication
+- Archived 323 duplicate files (378 total including non-md) across 147 skill directories to `.archive/pruned-skills/`
+  - 104 full skill directories archived (all files were duplicates)
+  - 43 partial directories pruned (individual duplicate files removed)
+- Skills remaining after pruning: 3405 directories
+### Added
+- `scripts/prune-duplicate-skills.py` — Automated skill deduplication tool
+- `.docs/tasks/planning/prune-report.md` — Detailed report of all archived items with reasons
+- `.docs/tasks/planning/similar-skills-report.md` — Similarity analysis report
+- `.docs/tasks/planning/similar-skills-data.json` — Raw similarity data
+### Removed
+- Moved to `.archive/pruned-skills/`: rules/ subfolder copies, CJK-named duplicates, language-variant suffixes (_EN, _CN), and longer-path fragments
+**Author**: Antigravity
+
 ## [2026-03-16] - Complete Uninstall System Implementation
 ### Added
 - **Master Uninstaller** (`uninstall.sh`): Complete uninstall orchestration for all 10 platforms

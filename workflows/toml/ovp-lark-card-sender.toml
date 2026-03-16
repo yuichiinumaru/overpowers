@@ -1,0 +1,14 @@
+description = "Send a professional interactive card via Feishu/Lark."
+
+prompt = '''
+# Send Lark Card Workflow
+
+Standard procedure for sending interactive card messages.
+
+1. **Setup**: Verify `FEISHU_APP_ID` and `FEISHU_APP_SECRET` are set.
+2. **Template**: Choose a card template from the template library.
+3. **Draft**: Populate the template with content (title, markdown text, buttons).
+4. **Target**: Identify the target recipient ID and type.
+5. **Execute**: Call the sender script to deliver the message.
+6. **Verify**: Confirm the message was delivered and note the `message_id`.
+'''

@@ -5,7 +5,7 @@ engage users and stakeholders. Examples: '\n\n<example>\nContext: Creating app o
 user: '''"Users don''''t understand how our recommendation algorithm works"""
 assistant: '''"Complex systems need simple visual explanations. I''''ll use the visual_storyteller"
 </example>\n\n<example>\nContext: Explaining complex features
-color: '''"#00ffff"""
+color: "#00ffff"
 tools:
   read: true
   write: true

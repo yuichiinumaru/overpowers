@@ -1,0 +1,209 @@
+---
+description: Mine ~1500 arXiv papers from the curated list, batch them into tasks, and dispatch agents to extract ideas relevant to the codebase.
+argument-hint: Optional depth level (shallow|medium|deep) to skip the interactive prompt
+---
+
+## User Input
+
+```text
+$ARGUMENTS
+```
+
+You **MUST** consider the user input before proceeding (if not empty).
+
+## Objective
+
+Transform the curated arXiv paper list into actionable idea-mining tasks by:
+1. Counting the papers in the list.
+2. Letting the user choose a depth level that controls batch granularity.
+3. Generating one task file per batch.
+4. Offering dispatch options (parallel sub-agents, Jules, or defer).
+
+---
+
+## Execution Flow
+
+### Phase 1 — Superficial Analysis
+
+1. Read `$OVERPOWERS_PATH/.agents/arxiv-list.md` (where `$OVERPOWERS_PATH` is the project root, e.g. the repository working directory).
+2. Count the total number of URLs (one per line, ignore blank lines).
+3. Present a summary to the user:
+
+```
+📚 ArXiv Paper List Analysis
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total papers found: {COUNT}
+Date range: {OLDEST_YEAR} – {LATEST_YEAR}  (inferred from arXiv IDs)
+```
+
+### Phase 2 — Depth Selection
+
+If `$ARGUMENTS` already contains a valid depth level (`shallow`, `medium`, `deep`), use it directly. Otherwise, ask the user:
+
+```
+🔍 Select Mining Depth
+━━━━━━━━━━━━━━━━━━━━━
+
+┌──────────┬───────────────────┬───────────────┬──────────────────────────────────────┐
+│ Level    │ Batch Size        │ Total Batches │ Description                          │
+├──────────┼───────────────────┼───────────────┼──────────────────────────────────────┤
+│ shallow  │ ~50 papers/batch  │ ~30 batches   │ Quick scan. Fast overview, broad     │
+│          │                   │               │ strokes. Best for first pass.        │
+├──────────┼───────────────────┼───────────────┼──────────────────────────────────────┤
+│ medium   │ ~25 papers/batch  │ ~60 batches   │ Balanced. Good detail per paper,     │
+│          │                   │               │ moderate number of tasks.            │
+├──────────┼───────────────────┼───────────────┼──────────────────────────────────────┤
+│ deep     │ ~15 papers/batch  │ ~100 batches  │ Thorough analysis. Each paper gets   │
+│          │                   │               │ deep attention. Most tasks.          │
+└──────────┴───────────────────┴───────────────┴──────────────────────────────────────┘
+
+Which level do you prefer? (shallow / medium / deep)
+```
+
+**Wait for user response before proceeding.**
+
+### Phase 3 — Batch Task Generation
+
+Based on the chosen depth, split the paper list into sequential batches and create one task file per batch.
+
+#### 3.1 Calculate batches
+
+```python
+# Pseudocode
+BATCH_SIZES = { "shallow": 50, "medium": 25, "deep": 15 }
+batch_size = BATCH_SIZES[chosen_level]
+total_batches = ceil(total_papers / batch_size)
+```
+
+#### 3.2 Ensure task infrastructure
+
+- Verify `docs/tasks/` exists. If not, reference `/ovp-06-scaffold-tasks` to scaffold it.
+
+#### 3.3 Create batch task files
+
+For each batch `i` (1..total_batches), create:
+
+**File:** `docs/tasks/planning/9{i:03d}-research-arxiv-mining-batch-{i}.md`
+
+> **Naming:** Uses the `9xxx` prefix range to avoid collision with regular project tasks.
+
+**Template per task file:**
+
+```markdown
+# ArXiv Mining — Batch {i}/{total_batches}
+
+## Metadata
+- **Type:** research
+- **Subtype:** arxiv-mining
+- **Depth Level:** {chosen_level}
+- **Batch:** {i} of {total_batches}
+- **Papers in batch:** {actual_count_in_this_batch}
+
+## Objective
+
+Read each of the arXiv papers listed below (via their HTML URLs), extract key ideas, techniques, architectures, and patterns, then compare them against the current codebase to identify:
+
+1. **Directly applicable ideas** — techniques that could improve existing modules.
+2. **Inspiration for new features** — novel capabilities suggested by the research.
+3. **Architectural patterns** — design patterns or system architectures worth adopting.
+4. **Theoretical foundations** — mathematical or algorithmic insights relevant to the project.
+
+## Papers
+
+{list of URLs for this batch, one per line, numbered}
+
+## Instructions
+
+1. For each paper URL, fetch the HTML content and read the **Abstract**, **Introduction**, and **Conclusion** at minimum.
+2. If the paper seems highly relevant, read **Methodology** and **Results** as well.
+3. After reading all papers in this batch, produce a **Batch Report** with:
+   - A table summarizing each paper (ID, Title, Relevance Score 1-5, Key Ideas).
+   - A section listing **Actionable Ideas** with references to specific codebase modules.
+   - A section listing **Papers to Deep-Dive** (relevance ≥ 4) for future focused analysis.
+4. Save the report to `.agents/thoughts/arxiv-mining/batch-{i}-report.md`.
+
+## Exit Conditions
+
+- [ ] All {actual_count_in_this_batch} papers have been scanned.
+- [ ] Batch report saved to `.agents/thoughts/arxiv-mining/batch-{i}-report.md`.
+- [ ] At least one actionable idea documented (or explicitly stated "no relevant ideas found").
+```
+
+#### 3.4 Summary
+
+After creating all task files, present:
+
+```
+✅ Task Generation Complete
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Level:         {chosen_level}
+Batch size:    {batch_size} papers
+Total batches: {total_batches}
+Task files:    docs/tasks/planning/9001-research-arxiv-mining-batch-1.md
+               ...
+               docs/tasks/planning/9{total_batches:03d}-research-arxiv-mining-batch-{total_batches}.md
+Reports dir:   .agents/thoughts/arxiv-mining/
+```
+
+### Phase 4 — Dispatch Options
+
+Present the user with three options for executing the generated tasks:
+
+```
+🚀 How would you like to dispatch these {total_batches} tasks?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  Parallel Sub-Agents (immediate, local)
+    Uses /ovp-do-in-parallel to launch sub-agents that process
+    batches concurrently. Fast but uses local compute.
+    → Recommended for: shallow/medium depth, quick results.
+
+2️⃣  Jules Dispatch (background, cloud)
+    Uses /ovp-13-jules-dispatch to send batches to Jules agents
+    running in their own cloud VMs. Slower to start but offloads
+    work entirely.
+    → Recommended for: deep depth, large batch counts.
+
+3️⃣  Defer (save for later)
+    Tasks are already saved in docs/tasks/planning/.
+    Pick them up manually or dispatch later.
+    → Recommended for: reviewing tasks before execution.
+
+Which option? (1 / 2 / 3)
+```
+
+**Wait for user response.**
+
+#### Option 1 — Parallel Sub-Agents
+
+1. Use the `/ovp-do-in-parallel` workflow.
+2. Set `--targets` to the list of batch task file paths.
+3. Task description: "Read the arXiv papers listed in the task file, scan them, compare with the codebase, and produce a batch report."
+4. Model recommendation: `sonnet` (balanced for reading + analysis).
+5. Launch in groups of 10 batches at a time to avoid overwhelming the system.
+
+#### Option 2 — Jules Dispatch
+
+1. Use the `/ovp-13-jules-dispatch` workflow.
+2. For each batch task, synthesize a Jules-compatible JSON prompt.
+3. Dispatch sequentially (Jules handles its own parallelism in cloud).
+4. The dispatch script is at `skills/ai-llm-jules-dispatch/` — reference it for the JSON format.
+
+#### Option 3 — Defer
+
+1. Confirm tasks are saved.
+2. Remind user they can dispatch later with:
+   - `/ovp-do-in-parallel` for local parallel execution.
+   - `/ovp-13-jules-dispatch` for cloud delegation.
+3. End workflow.
+
+---
+
+## References
+
+- **Paper list:** `.agents/arxiv-list.md`
+- **Scaffold tasks:** `/ovp-06-scaffold-tasks` — creates `docs/tasks/` structure if missing.
+- **Parallel dispatch:** `/ovp-do-in-parallel` — launches sub-agents concurrently.
+- **Jules dispatch:** `/ovp-13-jules-dispatch` — delegates to Jules cloud agents.
+- **Batch extraction:** `/ovp-batch-assets-extraction` — reference for batch processing patterns.
+- **TOML conversion:** After creating this workflow, run `scripts/generators/md-to-toml.py` to generate the Gemini-CLI TOML variant.

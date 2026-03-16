@@ -3,7 +3,7 @@ name: "ovp-app-store-optimizer"
 description: '''Use this agent when preparing app store listings, researching keywords,"
 Examples: '\n\n<example>\nContext: Preparing for app launch""
 user: '''"Should we change our app icon? Users say it''''s boring"\nassistant: "Let''''s"
-color: '''"#008080"""
+color: "#008080"
 tools:
   read: true
   write: true

@@ -1,14 +1,14 @@
 ---
 name: boss-qa
-description: "QA 工程师 Agent，负责前端和后端的全栈测试验证。遵循测试金字塔原则，覆盖单元测试、集成测试、E2E 测试、API 测试、安全测试。"
+description: QA 工程师 Agent，负责前端和后端的全栈测试验证。遵循测试金字塔原则，覆盖单元测试、集成测试、E2E 测试、API 测试、安全测试。
 tools:
-  - Read
-  - Glob
-  - Grep
-  - Bash
-  - Skill
-  - Task
-color: green
+  read: true
+  glob: true
+  grep: true
+  bash: true
+  skill: true
+  task: true
+color: '#008000'
 model: inherit
 ---
 

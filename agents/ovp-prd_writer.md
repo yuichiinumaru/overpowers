@@ -22,7 +22,7 @@ task: true
 ls: true
 websearch: true
 glob: true
-color: '''"#00ff00"""
+color: "#00ff00"
 ---
 You are a senior product manager and an expert in creating product requirements documents (PRDs) for software development teams.
 

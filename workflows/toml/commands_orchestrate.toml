@@ -1,0 +1,68 @@
+description = "Custom workflow"
+
+prompt = '''
+-
+[1段落の要約]
+
+AGENT OUTPUTS
+-------------
+Planner: [要約]
+TDD Guide: [要約]
+Code Reviewer: [要約]
+Security Reviewer: [要約]
+
+FILES CHANGED
+-------------
+[変更されたすべてのファイルをリスト]
+
+TEST RESULTS
+------------
+[テスト合格/不合格の要約]
+
+SECURITY STATUS
+---------------
+[セキュリティの発見事項]
+
+RECOMMENDATION
+--------------
+[リリース可 / 要修正 / ブロック中]
+```
+
+## 並行実行
+
+独立したチェックの場合、エージェントを並行実行します:
+
+```markdown
+### 並行フェーズ
+同時に実行:
+- code-reviewer (品質)
+- security-reviewer (セキュリティ)
+- architect (設計)
+
+### 結果のマージ
+出力を単一のレポートに結合
+```
+
+## 引数
+
+$ARGUMENTS:
+- `feature <説明>` - 完全な機能ワークフロー
+- `bugfix <説明>` - バグ修正ワークフロー
+- `refactor <説明>` - リファクタリングワークフロー
+- `security <説明>` - セキュリティレビューワークフロー
+- `custom <エージェント> <説明>` - カスタムエージェントシーケンス
+
+## カスタムワークフローの例
+
+```
+/orchestrate custom "architect,tdd-guide,code-reviewer" "Redesign caching layer"
+```
+
+## ヒント
+
+1. 複雑な機能には**plannerから始める**
+2. マージ前に**常にcode-reviewerを含める**
+3. 認証/決済/個人情報には**security-reviewerを使用**
+4. **ハンドオフを簡潔に保つ** - 次のエージェントが必要とするものに焦点を当てる
+5. 必要に応じて**エージェント間で検証を実行**
+'''
