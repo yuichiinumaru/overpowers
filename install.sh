@@ -122,5 +122,26 @@ if [[ "${FAST_MODE}" == "1" ]] || (command -v gum >/dev/null 2>&1 && gum confirm
     bash "${SCRIPT_DIR}/scripts/install-mcps.sh" ${ENV_FILE:+--env "${ENV_FILE}"}
 fi
 
+# --- Phase 4: Plugins ---
+echo -e "\n${CYAN}Phase 4: Plugins & Themes Installation...${NC}"
+if [[ "${FAST_MODE}" == "1" ]] || (command -v gum >/dev/null 2>&1 && gum confirm "Install additional context plugins or themes?"); then
+    if command -v gum >/dev/null 2>&1; then
+        echo -e "${BOLD}Select platforms for plugin installation:${NC}"
+        p_choices=$(gum choose --no-limit --selected "OpenCode" "OpenCode")
+        
+        for choice in $p_choices; do
+            if [[ "$choice" == "OpenCode" ]]; then
+                bash "${SCRIPT_DIR}/scripts/install-plugins-opencode.sh"
+            fi
+        done
+    else
+        read -rp "Install plugins for OpenCode? [Y/n]: " p_choice
+        p_choice=${p_choice:-Y}
+        if [[ "$p_choice" =~ ^[Yy] ]]; then
+            bash "${SCRIPT_DIR}/scripts/install-plugins-opencode.sh"
+        fi
+    fi
+fi
+
 echo -e "\n${GREEN}${BOLD}✅ Overpowers Installation Complete!${NC}"
 echo -e "${DIM}  Happy coding! 🚀${NC}\n"

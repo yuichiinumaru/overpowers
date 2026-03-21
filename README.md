@@ -61,7 +61,7 @@ It also optionally installs **MCP servers** across all platforms with an interac
 ### 3. (Optional) Install community plugins
 
 ```bash
-./scripts/install-plugins.sh
+./scripts/install-plugins-opencode.sh
 ```
 
 Interactive menu with 50+ plugins and themes from the [awesome-opencode](https://github.com/awesome-opencode/awesome-opencode) community list.
@@ -124,7 +124,7 @@ overpowers/
 | Script | Purpose |
 |--------|---------|
 | `scripts/install-mcps.sh` | Unified MCP installer across platforms |
-| `scripts/install-plugins.sh` | Interactive community plugin/theme installer |
+| `scripts/install-plugins-opencode.sh` | Interactive community plugin/theme installer |
 | `scripts/install-personas.sh` | Installs system personas |
 | `scripts/install-antigravity-skills.sh` | Installs specific Antigravity skills |
 | `scripts/setup-browser-use.sh` | Sets up browser automation |
@@ -164,7 +164,7 @@ The MCP templates in `templates/configs/` contain pre-configured server definiti
 | Context7 | Up-to-date documentation |
 | NotebookLM | Google NotebookLM integration |
 
-Semgrep is installed as a CLI tool via `scripts/install-plugins.sh` (CLI Tools category), not as an MCP server.
+Semgrep is installed as a CLI tool via `scripts/install-plugins-opencode.sh` (CLI Tools category), not as an MCP server.
 
 ---
 

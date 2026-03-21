@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # =============================================================================
-# install-plugins.sh
+# install-plugins-opencode.sh
 # =============================================================================
 # Interactive installer for OpenCode plugins and themes from the
 # awesome-opencode community list.
 #
 # Usage:
-#   ./scripts/install-plugins.sh
+#   ./scripts/install-plugins-opencode.sh
 #
 # What it does:
 #   1. Presents a menu of curated plugins and themes.

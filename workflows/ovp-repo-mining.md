@@ -273,7 +273,7 @@ Which option? (1 / 2 / 3)
 2. For each batch task, synthesize a Jules-compatible JSON prompt.
 3. Include the clone step and analysis instructions in the prompt.
 4. Dispatch sequentially (Jules handles its own parallelism in cloud).
-5. Reference the skill at `skills/ai-llm-jules-dispatch/` for the JSON format.
+5. Reference the skill at `skills/agent/orchestration/team-dispatch/` for the JSON format.
 
 #### Option 3 — Defer
 
@@ -292,7 +292,7 @@ Which option? (1 / 2 / 3)
 - **Deep scan:** `/ovp-07-deep-scan` — parallel codebase scanning with subagents.
 - **Scavenge planner:** `prompts/scavenge-planner.md` — reverse engineering and asset extraction prompt.
 - **Batch extraction pipeline:** `/ovp-batch-assets-extraction` — full pipeline for extracting skills, agents, workflows, hooks.
-- **Clone script:** `skills/ovp-extract-assets/scripts/clone-github-repos.py` — shallow clone utility.
+- **Clone script:** `skills/data/etl/assets/scripts/clone-github-repos.py` — shallow clone utility.
 - **Scaffold tasks:** `/ovp-06-scaffold-tasks` — creates `docs/tasks/` structure if missing.
 - **Parallel dispatch:** `/ovp-do-in-parallel` — launches sub-agents concurrently.
 - **Jules dispatch:** `/ovp-13-jules-dispatch` — delegates to Jules cloud agents.

@@ -40,7 +40,7 @@ Break work into Jules-compatible chunks:
 For each task:
 1. Select optimal Jules account (rotation every 7 tasks).
 2. Prepare context-rich prompt (Strictly anti-git to avoid empty PRs).
-3. Submit using wrapper script `skills/jules-dispatch-login/scripts/jules-launcher.sh` (launches 2 parallel duplicate sessions for redundancy).
+3. Submit using wrapper script `skills/fleet/jules/dispatch/scripts/jules-launcher-v2.sh` (launches 2 parallel duplicate sessions for redundancy).
 4. Log to .jules/tracking.md
 ```
 
@@ -124,11 +124,10 @@ Account 3 → Testing & documentation
 
 | Skill | Purpose |
 |-------|---------|
-| `jules-dispatch` | Send tasks |
-| `jules-harvest` | Fetch branches |
-| `jules-triage` | Rate branches |
-| `jules-integrate` | Merge work |
-| `swarm-orchestration` | Agent coordination |
+| [`dispatch`](../skills/fleet/jules/dispatch/) | Prepare prompts and send tasks |
+| [`harvest`](../skills/fleet/jules/harvest/) | Fetch branches and pull diffs |
+| [`triage`](../skills/fleet/jules/triage/) | Rate and prioritize branches |
+| [`integrate`](../skills/fleet/jules/integrate/) | Selectively merge work |
 
 ## Directory Structure
 

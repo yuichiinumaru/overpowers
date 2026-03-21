@@ -23,7 +23,7 @@ If the GitHub documentation is missing, sparse, or not in markdown format, use t
 1. Find the official documentation URL (e.g. `https://docs.agno.com`).
 2. Run the `docs-scraper` skill recursively against the URL:
 ```bash
-uv run --with playwright --with markdownify --with beautifulsoup4 python skills/data-extract-docs-scraper/scripts/scrape_docs.py "<docs_url>" "/tmp/<lib_name>_docs" --max-pages 200
+uv run --with playwright --with markdownify --with beautifulsoup4 python skills/automation/search/docs-scraper/scripts/scrape_docs.py "<docs_url>" "/tmp/<lib_name>_docs" --max-pages 200
 ```
 3. Wait for the scraper to finish downloading the site into the output directory.
 

@@ -1,5 +1,120 @@
 ---
 
+## [2026-03-21] - Gemini CLI Tool Selector TUI & Rust Agent Fix
+
+### Added
+- **Script** `scripts/gemini-tool-selector.py` — Interactive TUI (InquirerPy) for managing Gemini CLI's 512-tool budget: MCP server selection, agent categories with checkbox toggle, budget bar visualization, profile save/load, dry-run mode
+- **Profile system** `scripts/config/gemini-profiles/` — Save/load named tool configurations (e.g. `rust-dev`, `full-stack`, `minimal`)
+- **Agent** `ovp-rust-code-reviewer.md` added to `scripts/config/gemini-cli-agents.txt` and deployed to `~/.gemini/agents/`
+
+### Fixed
+- Fixed `ovp-rust-code-reviewer.md` Gemini CLI validation error — converted OpenCode-style frontmatter (`tools` as object, `category`, `color` keys) to Gemini CLI format (`tools` as array, no extra keys)
+
+*Author: Antigravity*
+
+---
+
+## [2026-03-20] - Jules Skills Reorganization & Cross-References
+
+### Changed
+- **Archived** `jules-launcher-v1.sh` and `jules-retriever-v1.py` to `.archive/jules-dispatch-legacy/` (superseded by v2 equivalents)
+- **Moved** `jules-harvester.py` from `dispatch/scripts/` → `harvest/scripts/` (better organizational fit)
+- **Moved** `jj-jules-apply.sh` from `dispatch/scripts/` → `integrate/scripts/` (integration concern, not dispatch)
+- **Updated** cross-references in all 4 Jules SKILL.md files with consistent `Related Skills` tables
+- **Fixed** stale paths in `ovp-jules-orchestration.md` (old `skills/automation/scheduling/` → new `skills/fleet/jules/`)
+
+*Author: Antigravity*
+
+---
+
+## [2026-03-20] - Jules Fleet Skills Restored
+
+### Added
+- **Skill** `skills/fleet/jules/dispatch/` — Consolidated dispatch skill (login/CLI only, 4-stage pipeline, 7 scripts, GUIDE.md)
+- **Skill** `skills/fleet/jules/harvest/` — Fetch and catalog completed Jules branches
+- **Skill** `skills/fleet/jules/integrate/` — Selectively integrate triaged Jules work
+- **Skill** `skills/fleet/jules/triage/` — Analyze harvested branches in parallel
+
+### Fixed
+- Recovered 7 accidentally deleted Jules skills from git history (commit `20655e70~1`)
+- Consolidated 3 duplicate dispatch variants into one unified skill
+
+*Author: Antigravity*
+
+---
+
+## [2026-03-20] - Rust Review Assets v2.0 Rewrite
+### Changed
+- **Skill** `skills/coding/review/rust-review/SKILL.md` — Major expansion (42→180 lines): added concrete `ast-grep` patterns for Rust, phase-based review with checklists, async cancellation audit template, Proof of Soundness template, 0-100 scoring rubric with 6 tiers, standardized output format, tool integration section
+- **Agent** `agents/ovp-rust-code-reviewer.md` — Rewritten: removed hardcoded parent name, added explicit skill reference, 5-step audit protocol (Context→Adversarial→Invariants→Score→Report), concrete operational directives replacing vague instructions
+- **Workflow** `workflows/ovp-rust-review.md` — Rewritten: added concrete `ast-grep`/`cargo-geiger`/`cargo-expand` commands per tier, Hotspot output format for Tier 2→3 handoff, 3-iteration perfection loop limit with plateau detection, clear exit conditions
+**Author**: Antigravity Agent
+
+## [2026-03-20] - Adversarial Refinement Workflow Hardening & Claw Skill Reorganization
+### Added
+- **Skill** `skills/reasoning/first-principles/SKILL.md` — Clean first-principles reasoning skill (Deconstruct → Challenge → Reconstruct), no PAI/claw dependencies
+- **Directory** `skills/fleet/claw/` — Dedicated subfolder for autonomous fleet coordination skills (claw-like, localhost:8888/notify pattern)
+### Changed
+- **Workflow** `ovp-07-adversarial-refinement` — Hardened with 5 mandatory rules: subagent identity enforcement (`ovp-adversarial-critic` only), `write_file` prohibition, append-only enforcement, expansion history preservation, no external HTTP calls
+- **Workflow** `ovp-07-iterative-refinement` — Same hardening: `write_file` prohibition, append-only, history preservation, no curl
+- **Agent** `ovp-adversarial-critic` — Updated skill reference from `skills/tools/math/firstprinciples` to `skills/reasoning/first-principles`
+### Moved (to `skills/fleet/claw/`)
+- `skills/tools/math/firstprinciples/` → `skills/fleet/claw/firstprinciples/`
+- `skills/tools/personal/council/` → `skills/fleet/claw/council/`
+- `skills/tools/files/documents/` → `skills/fleet/claw/documents/`
+- `skills/automation/search/research/` → `skills/fleet/claw/research/`
+- `skills/automation/notification/apify/` → `skills/fleet/claw/apify/`
+- `skills/security/auth/secupdates/` → `skills/fleet/claw/secupdates/`
+- `skills/content/audio/art/` → `skills/fleet/claw/art/`
+**Author**: Antigravity Agent
+
+## [2026-03-19] - Adversarial Refinement Rework
+### Added
+- **Agent** `ovp-adversarial-critic` — dedicated critic subagent with DAQS protocol (Decompose, Attack, Question, Synthesize)
+### Changed
+- **Workflow** `ovp-07-adversarial-refinement` — complete rewrite: explicit subagent protocol, expansion+critique cycle, flow diagram, updated skill library from expanded taxonomy
+- **Workflow** `ovp-07-iterative-refinement` — updated skill library paths, parameterized N rounds, cross-reference to adversarial variant, fixed step numbering
+**Author**: Antigravity Agent
+
+## [2026-03-19] - Claude Code Blueprint Asset Extraction
+### Added
+- **Skills** (3 adapted from Claude Code Blueprint, Apache 2.0):
+  - `skills/anti-hallucination/SKILL.md` — Decision tree, confidence levels, verification workflow for claim validation
+  - `skills/research-protocol/SKILL.md` — Source hierarchy, citation formats, SOTA search strategy
+  - `skills/security/appsec/blueprint-security-audit/SKILL.md` — OWASP Top 10 checklist, 4-phase scan, report template
+- **Hooks** (2 fail-closed security hooks):
+  - `hooks/safety/bash-guard.sh` — Blocks privilege escalation, destructive patterns, obfuscation, and Git state-altering commands (Art. 24)
+  - `hooks/safety/write-guard.sh` — Protects sensitive file paths, detects hardcoded secrets, blocks tasklist.json writes (Art. 11 §2)
+- **Task**: `.docs/tasks/0041-ops-blueprint-extraction.md` — Full inventory triage of 8 skills, 11 hooks, 4 agents, and architecture patterns
+### Changed
+- All Blueprint assets adapted to Overpowers conventions (frontmatter, naming, tool references)
+- Triaged remaining 5 hooks: `bash-vuln` (niche), `permission-git` (redundant), `session-end`/`stop` (low-value), `user-prompt-secrets` (deferred)
+**Author**: Antigravity
+
+## [2026-03-18] - ArXiv to Markdown Pipeline
+### Added
+- New skill `skills/data/etl/arxiv-to-markdown/` with SKILL.md, `download.py` and `audit-fix.py` scripts
+- `download.py`: batch downloads arXiv papers as markdown via ar5iv HTML conversion (resumable, rate-limited)
+- `audit-fix.py`: detects 9 issue types (fatal conversion, missing titles, LuaTeX garbage, etc.) and auto-fixes titles using 5 extraction strategies
+- New workflow `workflows/ovp-arxiv-mining.md` — full pipeline from URL list to chunked corpus
+- Tested with ~1500 papers: 90% success rate (1347/1486 OK), 49 titles auto-fixed, 98 MB clean markdown
+**Author**: Antigravity
+
+## [2026-03-18] - Fix Stale Skill References in Workflows
+### Fixed
+- Audited all workflow files for stale `skills/` paths after taxonomy reorganization
+- **Phase 1**: Remapped 63 lines across 16 workflows from old flat paths to new taxonomy (e.g. `skills/code-auditor` → `skills/coding/review/code-auditor`)
+- **Phase 2**: Fixed 5 more lines across 2 workflows for near-match skills (gitingest-chunker, docs-scraper, notebooklm)
+- **Phase 3**: Used semantic search via Ollama `nomic-embed-text` embeddings to resolve 12 remaining references across 6 workflows (python-patterns→python-testing-patterns, ai-llm-jules-dispatch→team-dispatch, ovp-extract-assets→asset-extraction, writing_skills→writing-skills, jules-dispatch-login→authentication)
+- **Total: 80 lines fixed across 20 workflow files**, all skill references now point to valid taxonomy paths
+**Author**: Antigravity
+
+## [2026-03-18] - Install Plugins Script Refactor
+### Changed
+- `scripts/install-plugins.sh` renamed to `scripts/install-plugins-opencode.sh` to clarify its scope.
+- `install.sh` updated with a new *Phase 4* that interactively prompts the user before installing plugins/themes, offering OpenCode as the initial supported platform.
+- `README.md` updated to reflect the new script name.
+**Author**: Antigravity
 ## [2026-03-18] - Codex Config Fix & Template Reinforcement
 ### Fixed
 - `~/.codex/config.toml` — Removed duplicate `desktop-commander` entry (Smithery wrapper vs local build)

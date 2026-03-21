@@ -23,8 +23,8 @@ This workflow leverages the `youtube-ripper` agent combined with two specialized
 /invoke youtube-ripper
 
 Define the target list of videos. You may start with testing references already available in the repo:
-- skills/youtube-skill-creator/references/benji-ai-playground.md
-- skills/youtube-skill-creator/references/ibm-channels.md
+- skills/automation/search/youtube-skill-creator/references/benji-ai-playground.md
+- skills/automation/search/youtube-skill-creator/references/ibm-channels.md
 ```
 
 ### 2. Extraction Phase (If needed)

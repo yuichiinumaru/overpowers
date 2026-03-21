@@ -155,7 +155,7 @@ return fmt.Errorf("get user %s: %w", userID, err)
 ## Related
 
 - Agent: `agents/go-reviewer.md`
-- Skills: `skills/golang-patterns/`, `skills/golang-testing/`
+- Skills: `skills/coding/languages/golang-patterns/`, `skills/coding/testing/golang-testing/`
 
 ```
 '''

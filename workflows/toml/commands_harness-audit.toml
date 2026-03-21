@@ -50,7 +50,7 @@ Harness Audit (repo): 52/70
 
 Top 3 Actions:
 1) Add cost tracking hook in scripts/hooks/cost-tracker.js
-2) Add pass@k docs and templates in skills/eval-harness/SKILL.md
+2) Add pass@k docs and templates in skills/coding/testing/eval-harness/SKILL.md
 3) Add command parity for /harness-audit in .opencode/commands/
 ```
 
