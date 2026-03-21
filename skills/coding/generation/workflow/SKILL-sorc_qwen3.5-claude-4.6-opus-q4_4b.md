@@ -1,80 +1,183 @@
-## ✅ 框架验证完成
+# 📋 SDD Framework Analysis & Verification
 
-### 📋 验证结果
+## 🔍 Step-by-Step Reasoning
 
-| 检查项 | 状态 | 详情 |
-|--------|------|------|
-| **Clarify 执行** | ✅ 通过 | 已执行 2 次，无歧义 |
-| **Plan 生成** | ✅ 通过 | `specs/001-your-project-system/plan.md` 已创建 |
-| **进度文件** | ✅ 通过 | `progress.json` 已更新 |
-| **检查点文件** | ✅ 通过 | `checkpoint.md` 已记录 |
-| **通知机制** | ✅ 通过 | 配置完整 |
-| **超时监控** | ✅ 通过 | 脚本已创建 |
+### Step 1: Analyze the Framework Structure
+
+The framework consists of **4 core layers**:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    LAYER 1: CLARIFY                        │
+│  Purpose: Resolve ambiguity before planning                │
+│  Requirement: Minimum 2 executions                         │
+└─────────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│                    LAYER 2: PLAN                            │
+│  Purpose: Generate implementation specification            │
+│  Deliverable: specs/001-your-project-system/plan.md       │
+└─────────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│                    LAYER 3: TASKS                          │
+│  Purpose: Break down plan into executable tasks             │
+│  Mechanism: /speckit.tasks + progress tracking             │
+└─────────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────────┐
+│                    LAYER 4: MONITORING                     │
+│  Purpose: Detect & recover from failures                    │
+│  Mechanism: Heartbeat + Timeout + Recovery scripts         │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Step 2: Verify Completion Criteria
+
+| Criterion | Requirement | Status |
+|-----------|-------------|--------|
+| Clarify executions | ≥2 times | ✅ (2x confirmed) |
+| Plan file created | specs/001-your-project-system/plan.md | ✅ |
+| Progress tracking | progress.json updated | ✅ |
+| Checkpoint recording | checkpoint.md updated | ✅ |
+| Notifications | Phase change + progress | ✅ |
+
+### Step 3: Analyze Timeout Detection Logic
+
+**Detection Chain:**
+```
+1. API Timeout (>60s) → Retry → Degradation → Block
+2. Tool Failure → Auto-recovery → Block if persistent
+3. Progress Stagnation (>10min) → Check tmux → Recovery
+4. Loop Detection (3x same error) → Immediate Block
+```
+
+**Key Insight**: The framework uses **multi-layered detection** to avoid false positives while catching real issues.
+
+### Step 4: Verify Notification Flow
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    NOTIFICATION TRIGGER                     │
+├─────────────────────────────────────────────────────────────┤
+│  Phase Change → Immediate notification                      │
+│  Task Complete → Immediate notification                     │
+│  Task Blocked → Immediate notification                      │
+│  Heartbeat → Every 30min (09:00-22:00)                    │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Step 5: Cross-Check Framework Alignment
+
+**SDD Compliance:**
+- ✅ Spec-first approach (clarify before plan)
+- ✅ Iterative refinement (2x clarify)
+- ✅ Deliverable-oriented (plan.md as contract)
+
+**Task Management:**
+- ✅ Single-shot prompts (avoids fragmentation)
+- ✅ Progress tracking (quantifiable metrics)
+- ✅ Recovery mechanisms (checkpoint-based)
+
+**Monitoring:**
+- ✅ Multi-source detection (API + tmux + progress)
+- ✅ Automatic recovery (script-based)
+- ✅ User notification (immediate + scheduled)
 
 ---
 
-### 📊 当前状态
+## ✅ Final Verification Report
+
+### Current State Summary
 
 ```
-项目：AI-First 长租公寓系统
-阶段：plan（2/8）
-状态：✅ 准备就绪
+PROJECT: AI-First 长租公寓系统
+PHASE: plan (2/8)
+DELIVERABLE: specs/001-your-project-system/plan.md
 
-已完成的阶段：
-  1. specify → 完成
-  2. clarify → 完成 (2 次确认)
-  3. plan → 完成
+COMPLETED ACTIONS:
+├── ✅ /speckit.clarify (execution #1)
+├── ✅ /speckit.clarify (execution #2)
+├── ✅ /speckit.plan (plan generation)
+├── ✅ progress.json (updated)
+└── ✅ checkpoint.md (updated)
 
-待执行阶段：
-  4. analyze → 进行中
-  5. design → 待开始
-  6. implement → 待开始
-  7. test → 待开始
-  8. deploy → 待开始
+NOTIFICATIONS SENT:
+├── ✅ Phase change notification
+└── ✅ Progress update notification
 ```
+
+### Framework Health Check
+
+| Component | Status | Notes |
+|-----------|--------|-------|
+| Clarify Mechanism | ✅ Healthy | 2/2 executions completed |
+| Plan Generation | ✅ Healthy | plan.md created |
+| Task System | ✅ Ready | /speckit.tasks available |
+| Monitoring | ✅ Active | Heartbeat configured |
+| Recovery | ✅ Ready | monitor.sh prepared |
 
 ---
 
-### 🎯 下一步建议
+## 🎯 Next Steps Recommendation
 
-**立即执行**：
+### Immediate Action: Task Generation
+
 ```bash
+# Generate task list from plan
 /speckit.tasks
 ```
 
-这将生成完整的任务清单，包含：
-- 每个阶段的详细任务
-- 任务优先级
-- 依赖关系
-- 验收标准
+### Expected Output Structure
 
----
-
-### 📝 关键文件清单
-
+```json
+{
+  "project": "AI-First 长租公寓系统",
+  "phase": "plan",
+  "tasks": [
+    {
+      "index": 1,
+      "title": "系统架构设计",
+      "status": "pending",
+      "priority": "high"
+    },
+    // ... more tasks
+  ],
+  "nextPhase": "design"
+}
 ```
-✅ .specify/memory/constitution.md
-✅ specs/001-your-project-system/plan.md
-✅ .task-context/progress.json
-✅ .task-context/checkpoint.md
-✅ .task-context/config.json
-✅ .task-context/monitor.sh
-✅ .task-context/session-log.md
-```
 
----
-
-### 🚀 启动命令
+### Verification After Task Generation
 
 ```bash
-# 生成任务清单
-/speckit.tasks
+# Verify task creation
+cat .task-context/progress.json | jq '.tasks'
 
-# 或手动开始 analyze 阶段
-claude --permission-mode acceptEdits
-# 发送："阅读 plan.md，开始 analyze 阶段"
+# Verify checkpoint
+cat .task-context/checkpoint.md | grep -A5 "任务列表"
 ```
 
 ---
 
-**框架验证通过，系统准备就绪！** 🎉
+## 📊 Summary
+
+| Metric | Value |
+|--------|-------|
+| Framework Version | 1.0 |
+| Clarify Executions | 2/2 |
+| Plan Status | ✅ Complete |
+| Task Status | ⏳ Pending |
+| Monitoring | ✅ Active |
+| Recovery Ready | ✅ Yes |
+
+---
+
+## 🚀 Ready for Next Phase
+
+The framework is **fully operational** and ready for:
+
+1. **Task Generation** → `/speckit.tasks`
+2. **Design Phase** → `/speckit.design`
+3. **Implementation** → `/speckit.code`
+
+**All verification checks passed.** Framework is healthy and aligned with SDD best practices.
