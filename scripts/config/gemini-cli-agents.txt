@@ -72,4 +72,5 @@ ovp-go_expert.md
 ovp-golang_expert.md
 ovp-rust_expert.md
 ovp-rust_engineer.md
+ovp-rust-code-reviewer.md
 ovp-actix_expert.md
